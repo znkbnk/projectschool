@@ -6,6 +6,7 @@ import image2 from "../images/pic2.jpg";
 import image3 from "../images/pic3.jpg";
 import image4 from "../images/pic4.jpg";
 import "../styles/section1.css";
+import WelcomeWord from './WelcomeWord';
 
 function Section1() {
   useEffect(() => {
@@ -63,7 +64,7 @@ function Section1() {
   return (
     <div className='container'>
       <header>
-        <h1>Welcome</h1>
+        <WelcomeWord />
       </header>
       <main>
         <section>
@@ -82,7 +83,7 @@ function Section1() {
         <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
           <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft'>
             <div className='card'>
-              <img className='section1-image'  src={image1} alt='' />
+              <img className='section1-image' src={image1} alt='' />
             </div>
           </div>
 
@@ -118,7 +119,7 @@ function Section1() {
 
           <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight'>
             <div className='card'>
-              <img className='section1-image'  src={image2} alt='' />
+              <img className='section1-image' src={image2} alt='' />
             </div>
           </div>
         </div>
@@ -126,7 +127,7 @@ function Section1() {
         <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
           <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft'>
             <div className='card'>
-              <img className='section1-image'  src={image3} alt='' />
+              <img className='section1-image' src={image3} alt='' />
             </div>
           </div>
 
@@ -158,12 +159,12 @@ function Section1() {
 
           <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight'>
             <div className='card'>
-              <img className='section1-image'  src={image4} alt='' />
+              <img className='section1-image' src={image4} alt='' />
             </div>
           </div>
         </div>
       </div>
-      <div className="last">
+      <div className='last'>
         <h2>last</h2>
       </div>
     </div>

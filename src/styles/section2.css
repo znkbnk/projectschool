@@ -17,7 +17,7 @@
   --finish-fill: hsl(0 0% 100%);
   --accent: hsl(0 0% 100%);
   --fill: hsl(0 0% 50%);
-  --fill2: hsl(0 0% 50%);
+  --fill2: hsl(0, 0%, 20%);
   --color2: hsl(0 0% 100% / 0.1);
 }
 
@@ -31,12 +31,12 @@
 }
 
 .slide {
-  background: linear-gradient(var(--color), var(--fill));
+  background: linear-gradient(var(--color2), var(--fill2));
   color: white;
   position: relative;
   width: 75%;
-  height: 60vh; /* Adjusted the height to 80vh */
-  max-height: 80vh; /* Adjusted the maximum height to 80vh */
+  height: 60vh; 
+  max-height: 80vh;
   border-radius: 8px;
   display: grid;
   grid-template-columns: 1fr;
@@ -49,10 +49,9 @@
   font-size: 2.5rem;
   text-align: right;
   padding: 1rem 3rem;
-  border-bottom: 4px solid var(--bg);
+  border-top: 4px solid var(--fill2);
   font-family: "Geist Sans", sans-serif;
   border-radius: 8px 8px 0 0;
-  background-image: linear-gradient(45deg, var(--fill2), var(--color2));
   letter-spacing: 1rem;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
