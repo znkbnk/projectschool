@@ -96,21 +96,7 @@
   padding: 20px;
 }
 
-.slide__btn {
-  border-radius: 50%;
-  border: none;
-  font-family: monospace;
-  font-size: 3rem;
-  width: 6rem;
-  height: 6rem;
-  background-color: blue;
-  color: white;
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-  font-weight: bolder;
-  transition: background-color 0.2s;
-}
+
 
 .left {
   animation: leftAnimation 0.7s;

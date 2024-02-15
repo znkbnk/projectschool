@@ -1,6 +1,4 @@
-
 .word-container {
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,12 +22,11 @@
   transform: skew(-10deg);
   display: block;
   float: left;
-    background: linear-gradient(var(--finish-fill), var(--fill));
+  background: linear-gradient(var(--finish-fill), var(--fill));
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;}
-
-
+  color: transparent;
+}
 
 .word-title {
   transform: translateX(-50%) rotate(-10deg);
@@ -42,13 +39,11 @@
   transform: skew(-10deg);
   display: block;
   float: left;
-   background: linear-gradient(var(--finish-fill), var(--fill));
+  background: linear-gradient(var(--finish-fill), var(--fill));
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; min-width: 10px;
+  color: transparent;
+  min-width: 10px;
   min-height: 10px;
   position: relative;
 }
-
-
-
