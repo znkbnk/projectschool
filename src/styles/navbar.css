@@ -132,12 +132,12 @@ nav.scrolled-down img {
   background-color: transparent;
   z-index: 999;
   right: 5px;
-  height: 0;
-  transition: height 0.2s ease-in;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
 
 .dropdown.show {
-  height: 200px;
+  opacity: 1;
 }
 
 .dropdown-link {
