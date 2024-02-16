@@ -131,9 +131,12 @@ nav.scrolled-down img {
   top: 56px;
   background-color: transparent;
   z-index: 999;
-  right: 5px;
+  right: 0;
   opacity: 0;
   transition: opacity 0.3s ease-in;
+  background-color: var(--bg);
+  border-bottom-left-radius: 25px;
+
 }
 
 .dropdown.show {
@@ -141,6 +144,7 @@ nav.scrolled-down img {
 }
 
 .dropdown-link {
+  position: relative;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
@@ -150,8 +154,21 @@ nav.scrolled-down img {
   transition: background-color 0.3s; 
 }
 
+.dropdown-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; 
+  height: 1px;
+  background-color: #696969;
+
+}
+
 .dropdown-link:hover {
-  box-shadow: #ffffff 0 0 0 3px, transparent 0 0 0 0;
+  border: 2px solid;
+  border-color: #ffffff; 
   border-radius: 25px;
 }
 
