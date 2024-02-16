@@ -1,22 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
 import image1 from "../images/chatgpt.png";
 
 const Navbar = () => {
+ const [showDropdown, setShowDropdown] = useState(false);
+
+ const toggleDropdown = () => {
+   setShowDropdown((prevState) => !prevState);
+ };
   useEffect(() => {
     const nav = document.querySelector("#nav");
 
-    const onScroll = (event) => {
-      const scrollPosition = event.target.scrollingElement.scrollTop;
+     const onScroll = () => {
+      const scrollPosition = window.scrollY;
       if (scrollPosition > 10) {
-        if (!nav.classList.contains("scrolled-down")) {
-          nav.classList.add("scrolled-down");
-        }
+        nav.classList.add("scrolled-down");
       } else {
-        if (nav.classList.contains("scrolled-down")) {
-          nav.classList.remove("scrolled-down");
-        }
+        nav.classList.remove("scrolled-down");
       }
     };
 
@@ -74,6 +75,38 @@ const Navbar = () => {
           <button className='button-35'>Sign Up</button>
         </div>
       </div>
+      <div className='menu-icon'>
+        <div className='left'>
+          <img src={image1} alt='ChatGPT logo' />
+        </div>
+        <div className='right'>
+          <button className='button-35'>Login</button>
+          <button className='button-35'>Sign Up</button>
+        </div>
+        <div onClick={toggleDropdown}>
+          {showDropdown ? (
+            <i className='fas fa-times'></i>
+          ) : (
+            <i className='fas fa-bars'></i>
+          )}
+        </div>
+      </div>
+      {showDropdown && (
+        <div className='dropdown show'>
+          <Link to='/livechat' className='dropdown-link'>
+            LiveChat
+          </Link>
+          <Link to='/exercises' className='dropdown-link'>
+            Exercises
+          </Link>
+          <Link to='/learn' className='dropdown-link'>
+            Learn
+          </Link>
+          <Link to='/more' className='dropdown-link'>
+            More
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };
