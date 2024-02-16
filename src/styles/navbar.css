@@ -9,6 +9,7 @@
   --finish-fill: hsl(0 0% 100%);
   --accent: hsl(0 0% 100%);
   --fill: hsl(0 0% 50%);
+  --fill3: hsl(0, 0%, 75%);
 }
 
 nav {
@@ -63,6 +64,9 @@ nav {
   font-size: 1.5rem;
   text-decoration: none;
   position: relative;
+  background: linear-gradient(var(--finish-fill), var(--fill3));
+  background-clip: text;
+  color: transparent;
 }
 
 .nav-link::after {
@@ -125,12 +129,11 @@ nav.scrolled-down img {
   flex-direction: column;
   position: absolute;
   top: 56px;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 999;
-  right: 0;
-  border-bottom-left-radius: 5px;
+  right: 5px;
   height: 0;
-  transition: height .2s ease-in;
+  transition: height 0.2s ease-in;
 }
 
 .dropdown.show {
@@ -138,16 +141,18 @@ nav.scrolled-down img {
 }
 
 .dropdown-link {
-  color: #000;
+  text-align: center;
+  color: #ffffff;
   text-decoration: none;
-  padding: 16px 16px; /* Adjust padding here */
-  font-size: 16px;
-  display: block; /* Change the display property to block */
-  transition: background-color 0.3s; /* Add a transition for better user experience */
+  padding: 16px 16px; 
+  font-size: 18px;
+  display: block; 
+  transition: background-color 0.3s; 
 }
 
 .dropdown-link:hover {
-  background-color: #be1f1f; /* Change background color on hover */
+  box-shadow: #ffffff 0 0 0 3px, transparent 0 0 0 0;
+  border-radius: 25px;
 }
 
 @media (max-width: 768px) {
@@ -181,4 +186,5 @@ nav.scrolled-down img {
   nav.scrolled-down img {
     scale: 1;
   }
+  
 }
