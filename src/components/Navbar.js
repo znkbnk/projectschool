@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
-import image1 from "../images/chatgpt.png";
+import image2 from "../images/navbarlogo.png";
 
 const Navbar = () => {
  const [showDropdown, setShowDropdown] = useState(false);
@@ -54,7 +54,9 @@ const Navbar = () => {
     <nav id='nav'>
       <div className='navbar-container flex'>
         <div className='left'>
-          <img src={image1} alt='ChatGPT logo' />
+          <Link to='/projectschool'>
+            <img src={image2} alt='logo' />
+          </Link>
         </div>
         <div className='middle'>
           <Link to='/livechat' className='nav-link'>
@@ -71,17 +73,27 @@ const Navbar = () => {
           </Link>
         </div>
         <div className='right'>
-          <button className='button-35'>Login</button>
-          <button className='button-35'>Sign Up</button>
+          <Link to='/login' className='button-35'>
+            Login
+          </Link>
+          <Link to='/signup' className='button-35'>
+            Sign Up
+          </Link>
         </div>
       </div>
       <div className='menu-icon'>
         <div className='left'>
-          <img src={image1} alt='ChatGPT logo' />
+          <Link to='/projectschool'>
+            <img src={image2} alt='logo' />
+          </Link>
         </div>
         <div className='right'>
-          <button className='button-35'>Login</button>
-          <button className='button-35'>Sign Up</button>
+          <Link to='/login' className='button-35'>
+            Login
+          </Link>
+          <Link to='/signup' className='button-35'>
+            Sign Up
+          </Link>
         </div>
         <div onClick={toggleDropdown}>
           {showDropdown ? (

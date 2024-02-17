@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap, Back } from "gsap";
 import "../styles/welcomeWord.css";
+import image1 from "../images/pslogo.png";
 
 const WelcomeComponent = () => {
   const titleRef = useRef(null);
@@ -35,19 +36,27 @@ const WelcomeComponent = () => {
 
   return (
     <div className='word-container'>
-      <h1 className='word-title' ref={titleRef}>
-        <span>W</span>
-        <span>e</span>
-        <span>l</span>
-        <span>c</span>
-        <span>o</span>
-        <span>m</span>
-        <span>e</span>
-      </h1>
-      <div className='word-button' ref={buttonRef}>
-        <span>to the</span>
-        <span>project</span>
-        <span>school</span>
+      <div>
+        <h1 className='word-title' ref={titleRef}>
+          <span>W</span>
+          <span>e</span>
+          <span>l</span>
+          <span>c</span>
+          <span>o</span>
+          <span>m</span>
+          <span>e</span>
+          <span>&nbsp;</span>
+          <span>t</span>
+          <span>o</span>
+          <span>&nbsp;</span>
+          <span>t</span>
+          <span>h</span>
+          <span>e</span>
+        </h1>
+        
+      </div>
+      <div className='welcome-logo'>
+        <img src={image1} alt='logo' ref={buttonRef}></img>
       </div>
     </div>
   );

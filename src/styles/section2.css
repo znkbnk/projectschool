@@ -133,7 +133,10 @@
     justify-content: center;
     align-items: center;
   }
-  .slide__content--para {
-    padding: 40px;
+  
+  .slide__title {
+    padding: 2rem;
+    text-align: center;
+    
   }
 }

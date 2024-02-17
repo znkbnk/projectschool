@@ -85,8 +85,8 @@ nav {
 }
 
 nav img {
-  width: 24px;
-  height: 24px;
+  width: 250px;
+  height: 200px;
   transform-origin: 0% 50%;
   transition: 0.3s;
   display: flex;
@@ -114,6 +114,7 @@ nav.scrolled-down img {
   padding: 0.5rem 1rem;
   transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
   border: 0;
+  text-decoration: none;
 }
 
 .button-35:hover {
@@ -129,18 +130,20 @@ nav.scrolled-down img {
   flex-direction: column;
   position: absolute;
   top: 56px;
-  background-color: transparent;
   z-index: 999;
-  right: 5px;
-  height: 0;
-  transition: height 0.2s ease-in;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  background-color: var(--bg);
+  border-bottom-left-radius: 25px;
 }
 
 .dropdown.show {
-  height: 200px;
+  opacity: 1;
 }
 
 .dropdown-link {
+  position: relative;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
@@ -150,8 +153,21 @@ nav.scrolled-down img {
   transition: background-color 0.3s; 
 }
 
+.dropdown-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%; 
+  height: 1px;
+  background-color: #696969;
+
+}
+
 .dropdown-link:hover {
-  box-shadow: #ffffff 0 0 0 3px, transparent 0 0 0 0;
+  border: 2px solid;
+  border-color: #ffffff; 
   border-radius: 25px;
 }
 
@@ -186,5 +202,14 @@ nav.scrolled-down img {
   nav.scrolled-down img {
     scale: 1;
   }
+
+  nav img {
+  width: 150px;
+  height: 150px;
+  transform-origin: 0% 50%;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
   
 }

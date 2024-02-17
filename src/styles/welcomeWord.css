@@ -5,38 +5,23 @@
   align-items: center;
 }
 
-.word-button {
-  float: left;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%) rotate(-10deg);
-  color: #e55643;
-  text-transform: uppercase;
-  opacity: 0;
-  visibility: hidden;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
+.welcome-logo {
+  margin-top: -200px;
 }
-.word-button span {
-  transform: skew(-10deg);
-  display: block;
-  float: left;
-  background: linear-gradient(var(--finish-fill), var(--fill));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+
+.welcome-logo img {
+  width: 800px; /* You can adjust the width */
+  padding: 0;
+  margin: 0;
 }
 
 .word-title {
-  transform: translateX(-50%) rotate(-10deg);
   display: block;
-  float: left;
-  left: 50%;
   position: relative;
+  font-size: 10rem;
+  margin-top: 100px;
 }
 .word-title span {
-  transform: skew(-10deg);
   display: block;
   float: left;
   background: linear-gradient(var(--finish-fill), var(--fill));
@@ -46,4 +31,16 @@
   min-width: 10px;
   min-height: 10px;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .welcome-logo img {
+    width: 300px;
+  }
+  .word-title {
+    font-size: 5rem;
+  }
+  .welcome-logo {
+  margin-top: -100px;
+}
 }
