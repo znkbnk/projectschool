@@ -136,7 +136,6 @@ nav.scrolled-down img {
   transition: opacity 0.3s ease-in;
   background-color: var(--bg);
   border-bottom-left-radius: 25px;
-}
 
 .dropdown.show {
   opacity: 1;
