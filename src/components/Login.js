@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles/login.css";
 import Navbar from "./Navbar";
 
-
 const Login = () => {
   const [currentView, setCurrentView] = useState("logIn");
 
@@ -11,7 +10,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className='login-container'>
       <Navbar />
 
       <section id='entry-page'>
@@ -58,7 +57,13 @@ const Login = () => {
                 </li>
                 <li>
                   <i />
-                  <a onClick={() => changeView("PWReset")} href='/'>
+                  <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      changeView("PWReset");
+                    }}
+                    href='/'
+                  >
                     Forgot Password?
                   </a>
                 </li>
