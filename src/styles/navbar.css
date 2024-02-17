@@ -137,6 +137,7 @@ nav.scrolled-down img {
   background-color: var(--bg);
   border-bottom-left-radius: 25px;
 
+}
 .dropdown.show {
   opacity: 1;
 }
