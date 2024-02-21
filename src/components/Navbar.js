@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import image2 from "../images/navbarlogo.png";
 
 const Navbar = () => {
- const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
- const toggleDropdown = () => {
-   setShowDropdown((prevState) => !prevState);
- };
+  const toggleDropdown = () => {
+    setShowDropdown((prevState) => !prevState);
+  };
   useEffect(() => {
     const nav = document.querySelector("#nav");
 
-     const onScroll = () => {
+    const onScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 10) {
         nav.classList.add("scrolled-down");
@@ -53,11 +53,9 @@ const Navbar = () => {
   return (
     <nav id='nav'>
       <div className='navbar-container flex'>
-        <div className='left'>
-          <Link to='/projectschool'>
-            <img src={image2} alt='logo' />
-          </Link>
-        </div>
+        <Link to='/projectschool'>
+          <img src={image2} alt='logo' />
+        </Link>
         <div className='middle'>
           <Link to='/livechat' className='nav-link'>
             LiveChat
@@ -82,11 +80,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className='menu-icon'>
-        <div className='left'>
-          <Link to='/projectschool'>
-            <img src={image2} alt='logo' />
-          </Link>
-        </div>
+        <Link to='/projectschool'>
+          <img src={image2} alt='logo' />
+        </Link>
         <div className='right'>
           <Link to='/login' className='button-35'>
             Login

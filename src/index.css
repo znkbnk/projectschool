@@ -38,6 +38,10 @@ h1, h2 {
   background-clip: text;
   color: transparent;
 }
+h3 {
+  font-weight: 120;
+  color: #fff;
+}
 
 
 
