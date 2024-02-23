@@ -7,6 +7,7 @@ import Exercises from "./components/Exercises";
 import HtmlLessons from "./components/HtmlLessons";
 import ReactLessons from "./components/ReactLessons";
 import CssLessons from "./components/CssLessons";
+import LiveChat from "./components/LiveChat";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/htmllessons' element={<HtmlLessons />} />
         <Route path='/csslessons' element={<CssLessons />} />
         <Route path='/reactlessons' element={<ReactLessons />} />
+        <Route path='/livechat' element={<LiveChat />} />
       </Routes>
     </Router>
   );

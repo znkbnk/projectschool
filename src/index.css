@@ -27,8 +27,8 @@ header, .last {
   width: 100%;
   height: 100vh;
   color: var(--finish-fill);
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
   font-size: clamp(2rem, 4vw + 1rem, 12rem);
 }
 
