@@ -85,6 +85,10 @@ section#entry-page form button {
   background: #050505;
   box-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
 }
+.login-button {
+  
+  width: 100%;
+}
 section#entry-page form button:hover {
   background-color: #4d4d4d;
   border: 1px solid#fff;
