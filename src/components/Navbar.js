@@ -2,13 +2,43 @@ import React, { useEffect, useState } from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
 import image2 from "../images/navbarlogo.png";
+import { auth } from "./firebase";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
 
   const toggleDropdown = () => {
     setShowDropdown((prevState) => !prevState);
   };
+
+ const handleLogout = () => {
+   auth
+     .signOut()
+     .then(() => {
+       toast.success("You have been signed out successfully!"); // Show success toast
+     })
+     .catch((error) => {
+       console.log(error.message);
+     });
+ };
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setIsLoggedIn(true);
+        setUserEmail(user.email);
+      } else {
+        setIsLoggedIn(false);
+        setUserEmail("");
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   useEffect(() => {
     const nav = document.querySelector("#nav");
 
@@ -71,12 +101,23 @@ const Navbar = () => {
           </Link>
         </div>
         <div className='right'>
-          <Link to='/login' className='button-35'>
-            Login
-          </Link>
-          <Link to='/signup' className='button-35'>
-            Sign Up
-          </Link>
+          {isLoggedIn ? ( // Render Sign Out button if user is logged in
+            <>
+              <span className='userEmail'>{userEmail}</span>
+              <button onClick={handleLogout} className='button-35'>
+                Sign Out
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to='/login' className='button-35'>
+                Login
+              </Link>
+              <Link to='/signup' className='button-35'>
+                Sign Up
+              </Link>
+            </>
+          )}
         </div>
       </div>
       <div className='menu-icon'>
@@ -84,12 +125,24 @@ const Navbar = () => {
           <img src={image2} alt='logo' />
         </Link>
         <div className='right'>
-          <Link to='/login' className='button-35'>
-            Login
-          </Link>
-          <Link to='/signup' className='button-35'>
-            Sign Up
-          </Link>
+          {isLoggedIn ? (
+            <>
+              <span className='usersEmail'>{userEmail}</span>
+
+              <button onClick={handleLogout} className='button-35'>
+                Sign Out
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to='/login' className='button-35'>
+                Login
+              </Link>
+              <Link to='/signup' className='button-35'>
+                Sign Up
+              </Link>
+            </>
+          )}
         </div>
         <div onClick={toggleDropdown}>
           {showDropdown ? (

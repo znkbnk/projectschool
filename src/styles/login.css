@@ -51,6 +51,7 @@ section#entry-page form fieldset ul li {
   display: grid;
   align-items: center;
   margin: 10px;
+  text-wrap: nowrap;
 }
 section#entry-page form fieldset ul li a {
   color: rgb(255, 255, 255);
@@ -88,6 +89,15 @@ section#entry-page form button {
 .login-button {
   
   width: 100%;
+}
+
+section#entry-page form .forgot-password a{
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+section#entry-page form .forgot-password a:hover {
+  text-decoration: underline;
 }
 section#entry-page form button:hover {
   background-color: #4d4d4d;

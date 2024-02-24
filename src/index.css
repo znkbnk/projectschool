@@ -1,4 +1,8 @@
-
+.Toastify__toast-container {
+  position: fixed;
+  top: 80px !important; /* Adjust as needed */
+  z-index: 9999; /* Ensure it's above other elements */
+}
 
 :root {
   --bg: hsl(0 0% 2%);
@@ -23,7 +27,8 @@ body {
   font-weight: 120;
 }
 
-header, .last {
+header,
+.last {
   width: 100%;
   height: 100vh;
   color: var(--finish-fill);
@@ -32,7 +37,8 @@ header, .last {
   font-size: clamp(2rem, 4vw + 1rem, 12rem);
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 120;
   background: linear-gradient(var(--finish-fill), var(--fill));
   background-clip: text;
@@ -43,32 +49,32 @@ h3 {
   color: #fff;
 }
 
-
-
 p {
   max-width: 100vw;
   overflow: hidden;
   padding: 5rem;
-	margin: 0;
+  margin: 0;
   color: white;
   font-size: 1.5rem;
   text-align: center;
 }
 
 p > span {
-	outline-color: hsl(10 80% 50%);
-	outline-offset: 1ch;
-	font-size: clamp(3rem, 4vw + 1rem, 10rem);
+  outline-color: hsl(10 80% 50%);
+  outline-offset: 1ch;
+  font-size: clamp(3rem, 4vw + 1rem, 10rem);
   color: var(--color);
   text-decoration: none;
   background-image:
-		/* First one is the highlight */
-		linear-gradient(90deg, transparent calc(100% - 8ch), var(--accent) calc(100%  - 8ch)),
-  	linear-gradient(90deg, var(--fill), var(--fill)),
+		/* First one is the highlight */ linear-gradient(
+      90deg,
+      transparent calc(100% - 8ch),
+      var(--accent) calc(100% - 8ch)
+    ),
+    linear-gradient(90deg, var(--fill), var(--fill)),
     linear-gradient(90deg, var(--underline-color), var(--underline-color));
-  background-size:
-  	var(--underline-block-width) var(--underline-width),
-  	var(--underline-block-width) var(--underline-width),
+  background-size: var(--underline-block-width) var(--underline-width),
+    var(--underline-block-width) var(--underline-width),
     100% var(--underline-width);
   background-repeat: no-repeat;
   background-position-x: 0;
@@ -77,8 +83,6 @@ p > span {
   color: var(--finish-fill);
 }
 
-
-
 main {
   height: 200vh;
 }
@@ -86,39 +90,39 @@ main {
 section {
   position: sticky;
   top: 0;
-	height: 100vh;
-	width: 100vw;
+  height: 100vh;
+  width: 100vw;
   display: grid;
   place-items: center;
 }
-
 
 @supports (animation-timeline: scroll()) {
   @media (prefers-reduced-motion: no-preference) {
     main {
       view-timeline-name: --section;
     }
-    
+
     p > span {
-      background-position-x:
-        calc(var(--underline-block-width) * -1),
-        calc(var(--underline-block-width) * -1),
-        0;
+      background-position-x: calc(var(--underline-block-width) * -1),
+        calc(var(--underline-block-width) * -1), 0;
       color: transparent;
       animation-name: fill-up, color-in;
       animation-fill-mode: both;
       animation-timing-function: linear;
-    	animation-timeline: --section;
-    	animation-range: entry 100% cover 50%, cover 50% exit 0%;
+      animation-timeline: --section;
+      animation-range: entry 100% cover 50%, cover 50% exit 0%;
     }
 
     @keyframes fill-up {
-    	to { background-position-x: 0, 0, 0; }
+      to {
+        background-position-x: 0, 0, 0;
+      }
     }
 
     @keyframes color-in {
-    	to { color: var(--finish-fill); }
+      to {
+        color: var(--finish-fill);
+      }
     }
   }
 }
-

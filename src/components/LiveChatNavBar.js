@@ -4,6 +4,7 @@ import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import '../styles/livechat.css'
+import { toast } from "react-toastify";
 
 const LiveChatNavBar = () => {
   const [user] = useAuthState(auth);
@@ -13,9 +14,17 @@ const LiveChatNavBar = () => {
     signInWithPopup(auth, provider);
   };
 
-  const signOut = () => {
-    auth.signOut();
-  };
+   const signOut = () => {
+     auth
+       .signOut()
+       .then(() => {
+         toast.success("Signed out successfully");
+       })
+       .catch((error) => {
+         toast.error("Error signing out");
+         console.error(error);
+       });
+   };
 
   return (
     <nav className='nav-bar'>

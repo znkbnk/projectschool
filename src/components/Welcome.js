@@ -4,10 +4,17 @@ import Section2 from "./Section2";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
+function ScrollToTopOnNavigation() {
+  window.scrollTo(0, 0);
+  return null;
+}
+
 
 const Welcome = () => {
   return (
     <div>
+      <ScrollToTopOnNavigation />
+
       <Navbar />
       <Section1 />
       <Section2 />

@@ -58,9 +58,14 @@ nav {
 
 .right {
   display: flex;
+  align-items: center;
   white-space: nowrap;
   gap: 20px;
+  color: #fff;
+
 }
+
+
 
 .nav-link {
   color: aliceblue;

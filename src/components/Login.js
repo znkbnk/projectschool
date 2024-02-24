@@ -1,77 +1,83 @@
 import React, { useState } from "react";
 import "../styles/login.css";
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "./firebase";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import Footer from "./Footer";
 
 const Login = () => {
-  const [currentView, setCurrentView] = useState("logIn");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const changeView = (view) => {
-    setCurrentView(view);
-  };
+const onLogin = (e) => {
+  e.preventDefault();
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      navigate("/exercises");
+      toast.success("Logged in successfully");
+      console.log(user);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
+};
+
+
 
   return (
-    <div className='login-container'>
+    <div>
       <Navbar />
-
-      <section id='entry-page'>
-        <form>
-          <h2>Welcome Back!</h2>
-          <fieldset>
-            <legend>Log In</legend>
-            <ul>
-              <li>
-                <label htmlFor='email'>Email:</label>
-                <input type='email' id='email' required />
-              </li>
-              <li>
-                <label htmlFor='password'>Password:</label>
-                <input type='password' id='password' required />
-              </li>
-              <li>
-                <i />
-                <a
-                  onClick={(e) => {
-                    e.preventDefault();
-                    changeView("PWReset");
-                  }}
-                  href='/'
-                >
-                  Forgot Password?
-                </a>
-              </li>
-            </ul>
-          </fieldset>
-          <button>Login</button>
-          <Link to='/signup'>
-            <button className='login-button' type='button'>
-              Create an Account
-            </button>
-          </Link>
-        </form>
-
-        {currentView === "PWReset" && (
+      <div className='login-container'>
+        <section id='entry-page'>
           <form>
-            <h2>Reset Password</h2>
+            <h2>Welcome Back!</h2>
             <fieldset>
-              <legend>Password Reset</legend>
+              <legend>Log In</legend>
               <ul>
                 <li>
-                  <em>A reset link will be sent to your inbox!</em>
+                  <label htmlFor='email'>Email:</label>
+                  <input
+                    id='email-address'
+                    name='email'
+                    type='email'
+                    required
+                    placeholder='Email address'
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </li>
                 <li>
-                  <label htmlFor='email'>Email:</label>
-                  <input type='email' id='email' required />
+                  <label htmlFor='password'>Password:</label>
+                  <input
+                    id='password'
+                    name='password'
+                    type='password'
+                    required
+                    placeholder='Password'
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
                 </li>
               </ul>
             </fieldset>
-            <button>Send Reset Link</button>
-            <button type='button' onClick={() => changeView("logIn")}>
-              Go Back
-            </button>
+            <div className='forgot-password'>
+              <Link to='/resetPassword'>Forgot Password?</Link>
+            </div>
+            <button onClick={onLogin}>Login</button>
+            <Link to='/signup'>
+              <button className='login-button' type='button'>
+                Create an Account
+              </button>
+            </Link>
           </form>
-        )}
-      </section>
+        </section>
+      </div>
+      <Footer />
     </div>
   );
 };

@@ -12,38 +12,43 @@ import SendMessage from "./SendMessage";
 
 const ChatBox = () => {
   const [messages, setMessages] = useState([]);
-  const scroll = useRef();
+  const messagesEndRef = useRef(null);
 
   useEffect(() => {
     const q = query(
       collection(db, "messages"),
-      orderBy("createdAt", "desc"),
+      orderBy("createdAt", "asc"), // Order messages by ascending createdAt
       limit(50)
     );
 
-    const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const fetchedMessages = [];
-      QuerySnapshot.forEach((doc) => {
+      querySnapshot.forEach((doc) => {
         fetchedMessages.push({ ...doc.data(), id: doc.id });
       });
-      const sortedMessages = fetchedMessages.sort(
-        (a, b) => a.createdAt - b.createdAt
-      );
-      setMessages(sortedMessages);
+      setMessages(fetchedMessages);
     });
-    return () => unsubscribe;
+
+    return () => unsubscribe();
   }, []);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]); // Scroll whenever messages change
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <main className='chat-box'>
       <div className='messages-wrapper'>
-        {messages?.map((message) => (
+        {messages.map((message) => (
           <Message key={message.id} message={message} />
         ))}
+        <span ref={messagesEndRef}></span>
       </div>
-      {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
-      <span ref={scroll}></span>
-      <SendMessage scroll={scroll} />
+      <SendMessage />
     </main>
   );
 };
