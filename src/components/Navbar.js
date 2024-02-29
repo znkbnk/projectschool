@@ -96,8 +96,8 @@ const Navbar = () => {
           <Link to='/learn' className='nav-link'>
             Learn
           </Link>
-          <Link to='/more' className='nav-link'>
-            More
+          <Link to='/editor' className='nav-link'>
+            Live Editor
           </Link>
         </div>
         <div className='right'>

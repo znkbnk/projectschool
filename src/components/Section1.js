@@ -70,8 +70,15 @@ function Section1() {
         <section>
           <p>
             <span>
-              main section main sectionmain section main section main section
-              main section main section main section main section main section
+              In a departure from traditional courses heavy on theory, our
+              program prioritizes practical exercises. Here, you'll delve
+              straight into hands-on tasks, fostering deeper understanding and
+              real-world application. Rather than passive learning, you'll
+              actively engage in activities that cultivate tangible skills and
+              confidence. Embrace this opportunity to bridge theory with
+              practice, where your journey is defined by active participation
+              and meaningful outcomes. Join us in redefining education through
+              practical knowledge and experiential learning.
             </span>
           </p>
         </section>

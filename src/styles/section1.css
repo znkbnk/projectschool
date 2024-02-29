@@ -3,8 +3,12 @@
 .container {
   width: 100%;
   padding: 0;
+}
+p {
+  padding: 15rem;
 
 }
+
 
 .ipsType_right {
   text-align: right;
@@ -26,7 +30,8 @@
   display: flex;
   flex-wrap: wrap;
 }
-.ipsGrid::before, .ipsGrid::after {
+.ipsGrid::before,
+.ipsGrid::after {
   display: table;
   content: "";
   line-height: 0;
@@ -39,7 +44,6 @@
 }
 .ipsGrid > .ipsGrid_span5 {
   width: 40.42553191489362%;
-
 }
 .ipsGrid > .ipsGrid_span7 {
   width: 57.44680851063829%;
@@ -47,7 +51,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 .ipsGrid > [class*="ipsGrid_span"] {
   float: left;
@@ -61,21 +64,18 @@
   display: flex;
   align-items: center;
   width: 100%;
-
 }
 .card {
-  overflow: hidden;  
+  overflow: hidden;
 }
 .featured-image-container .card {
   height: 0;
   padding-bottom: calc(100% - 10px);
-  
 }
 h2.heading_large {
   font-size: 3em;
 }
 .section1-image {
-  
   width: 100%;
 }
 
@@ -87,6 +87,4 @@ h2.heading_large {
   opacity: 0;
   visibility: hidden;
   will-change: transform, opacity;
-
 }
-

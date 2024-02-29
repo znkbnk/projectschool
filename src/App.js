@@ -10,6 +10,7 @@ import ReactLessons from "./components/ReactLessons";
 import CssLessons from "./components/CssLessons";
 import LiveChat from "./components/LiveChat";
 import ResetPassword from "./components/ResetPassword";
+import LiveEditor from "./components/LiveEditor";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -32,6 +33,7 @@ function App() {
           <Route path='/reactlessons' element={<ReactLessons />} />
           <Route path='/livechat' element={<LiveChat />} />
           <Route path='/resetPassword' element={<ResetPassword />} />
+          <Route path='/editor' element={<LiveEditor />} />
         </Routes>
       </div>
     </Router>
