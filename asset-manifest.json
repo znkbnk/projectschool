@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/projectschool/static/css/main.59858ca4.css",
-    "main.js": "/projectschool/static/js/main.da957cf9.js",
-    "static/js/592.8069d5a0.chunk.js": "/projectschool/static/js/592.8069d5a0.chunk.js",
+    "main.css": "/projectschool/static/css/main.4a0feecf.css",
+    "main.js": "/projectschool/static/js/main.3dc6b69f.js",
+    "static/js/288.d617e0d7.chunk.js": "/projectschool/static/js/288.d617e0d7.chunk.js",
     "static/media/pic4.jpg": "/projectschool/static/media/pic4.8e7e5097b5907a6da713.jpg",
     "static/media/pic3.jpg": "/projectschool/static/media/pic3.1cf092a287548a4f024d.jpg",
     "static/media/pic1.jpg": "/projectschool/static/media/pic1.bc342de4e9ec9e8bfc6b.jpg",
@@ -15,17 +15,18 @@
     "static/media/pic6.png": "/projectschool/static/media/pic6.e45638344f12f3855ca0.png",
     "static/media/fa-regular-400.woff2": "/projectschool/static/media/fa-regular-400.e931bc0d14f5bbb1da22.woff2",
     "static/media/pic7.png": "/projectschool/static/media/pic7.44319306359c7112276d.png",
+    "static/media/pslogo.png": "/projectschool/static/media/pslogo.42bcbf8a3fc904339faf.png",
     "static/media/pic8.png": "/projectschool/static/media/pic8.aeb929bf2cc3ff7f32c3.png",
     "static/media/pic5.png": "/projectschool/static/media/pic5.288e509b9f471582d837.png",
     "static/media/fa-v4compatibility.ttf": "/projectschool/static/media/fa-v4compatibility.2eb7b3ef25042305f3ff.ttf",
     "static/media/fa-v4compatibility.woff2": "/projectschool/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
     "index.html": "/projectschool/index.html",
-    "main.59858ca4.css.map": "/projectschool/static/css/main.59858ca4.css.map",
-    "main.da957cf9.js.map": "/projectschool/static/js/main.da957cf9.js.map",
-    "592.8069d5a0.chunk.js.map": "/projectschool/static/js/592.8069d5a0.chunk.js.map"
+    "main.4a0feecf.css.map": "/projectschool/static/css/main.4a0feecf.css.map",
+    "main.3dc6b69f.js.map": "/projectschool/static/js/main.3dc6b69f.js.map",
+    "288.d617e0d7.chunk.js.map": "/projectschool/static/js/288.d617e0d7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59858ca4.css",
-    "static/js/main.da957cf9.js"
+    "static/css/main.4a0feecf.css",
+    "static/js/main.3dc6b69f.js"
   ]
 }
