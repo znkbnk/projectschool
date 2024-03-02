@@ -21,9 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
 .gitignore
-src/components/firebase.js
 src/components/LiveEditor copy.js
-src/components/LiveeditorCodesand.js
-src/styles/editor.css
-.gitignore
+src/components/firebase.js
+src/components/LiveEditor.js

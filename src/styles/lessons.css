@@ -52,6 +52,11 @@ h5 {
   text-transform: uppercase;
 }
 
+.lessons-card-body p {
+padding: 10px;
+color: #fff;
+}
+
 .lessons-card-body {
   padding: 1.2em;
 }

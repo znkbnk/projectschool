@@ -2,7 +2,7 @@ import React from 'react'
 import "../styles/lessons.css";
 
 
-const LessonsCards = (props) => {
+const CssLessonsCards = (props) => {
   return (
     <div className='lessons-card'>
       <h3>{props.header}</h3>
@@ -20,4 +20,4 @@ const LessonsCards = (props) => {
   );
 }
 
-export default LessonsCards;
+export default CssLessonsCards;

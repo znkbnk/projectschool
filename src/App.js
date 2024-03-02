@@ -34,6 +34,7 @@ function App() {
           <Route path='/livechat' element={<LiveChat />} />
           <Route path='/resetPassword' element={<ResetPassword />} />
           <Route path='/editor' element={<LiveEditor />} />
+          <Route path='/editor/:lessonType/:taskId' element={<LiveEditor />} />
         </Routes>
       </div>
     </Router>
