@@ -26,7 +26,9 @@
   text-align: center;
 }
 .wrapper .exercises-card__description {
-  padding: 0 1rem;
+  padding: 0 1.5rem;
+  color: #fff;
+  font-size: 1.5rem;
 }
 .wrapper .exercises-card__btn {
   cursor: pointer;
@@ -35,7 +37,7 @@
   font-size: 1rem;
   margin: 1rem;
   border: 2px solid #ffffff;
-  color: #575757;
+  color: #979797;
   border-radius: 1rem;
   text-decoration: none;
   text-align: center;
@@ -55,7 +57,7 @@
 
 
 .exercises-container {
-  height: 50vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;

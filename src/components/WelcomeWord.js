@@ -4,7 +4,8 @@ import "../styles/welcomeWord.css";
 import image1 from "../images/pslogo.png";
 
 const WelcomeComponent = () => {
-  const titleRef = useRef(null);
+  const welcomeRef = useRef(null); // Ref for the "Welcome" h1
+  const toTheRef = useRef(null); // Ref for the "to the" h1
   const pictureRef = useRef(null);
 
   useEffect(() => {
@@ -12,16 +13,18 @@ const WelcomeComponent = () => {
   }, []);
 
   const animation = () => {
-    const title = titleRef.current;
+    const welcomeTitle = welcomeRef.current;
+    const toTheTitle = toTheRef.current;
     const picture = pictureRef.current;
 
-    if (title && picture) {
-      const titleLetters = title.children;
+    if (welcomeTitle && toTheTitle && picture) {
+      const welcomeLetters = welcomeTitle.children;
+      const toTheLetters = toTheTitle.children;
 
       const tl = gsap.timeline();
-      tl.set(titleLetters, { opacity: 0 })
+      tl.set([...welcomeLetters, ...toTheLetters], { opacity: 0 })
         .to(picture, { visibility: "hidden", opacity: 0 })
-        .to(titleLetters, {
+        .to([...welcomeLetters, ...toTheLetters], {
           opacity: 1,
           duration: 0.5,
           ease: Back.easeOut.config(1.7),
@@ -34,7 +37,7 @@ const WelcomeComponent = () => {
   return (
     <div className='word-container'>
       <div>
-        <h1 className='word-title' ref={titleRef}>
+        <h1 className='word-title' ref={welcomeRef}>
           <span>W</span>
           <span>e</span>
           <span>l</span>
@@ -42,7 +45,10 @@ const WelcomeComponent = () => {
           <span>o</span>
           <span>m</span>
           <span>e</span>
-          <span>&nbsp;</span>
+        </h1>
+      </div>
+      <div>
+        <h1 className='word-title' ref={toTheRef}>
           <span>t</span>
           <span>o</span>
           <span>&nbsp;</span>

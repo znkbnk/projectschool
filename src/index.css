@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 .Toastify__toast-container {
   position: fixed;
   top: 80px !important; /* Adjust as needed */
@@ -20,11 +22,11 @@
 body {
   background-color: var(--bg);
   color: var(--color);
-  font-family: "Geist Sans", sans-serif;
-  font-weight: bold;
+    font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   accent-color: red;
   overflow-x: hidden;
-  font-weight: 120;
 }
 
 header,
@@ -39,13 +41,13 @@ header,
 
 h1,
 h2 {
-  font-weight: 120;
+  font-weight: 420;
   background: linear-gradient(var(--finish-fill), var(--fill));
   background-clip: text;
   color: transparent;
 }
 h3 {
-  font-weight: 120;
+  font-weight: 420;
   color: #fff;
 }
 
@@ -116,3 +118,87 @@ section {
     }
   }
 }
+
+
+
+/* Button 28 */
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 5px;
+  min-height: 20px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events:fill;
+}
+
+.button-28:hover {
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+   .task-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+    justify-content: space-around; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    padding: 10px; /* Add padding to the container */
+  }
+  .button-28 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0; /* Hide text on smaller screens */
+    width: 30px; /* Set the width of the buttons */
+    height: 30px; /* Set the height of the buttons */
+  }
+
+  .button-28::after {
+    font-size: 16px; /* Adjust font size of the symbols */
+  }
+
+  .button-28.previous::after {
+    content: '\2039'; /* Unicode for left-pointing angle quotation mark (<) */
+  }
+
+  .button-28.complete::after {
+    content: '\2713'; /* Unicode for check mark symbol (✓) */
+  }
+
+  .button-28.next::after {
+    content: '\203A'; /* Unicode for right-pointing angle quotation mark (>) */
+  }
+}
+

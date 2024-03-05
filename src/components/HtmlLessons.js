@@ -23,8 +23,9 @@ function HtmlLessons() {
             <HtmlCards
               header={`Lesson ${index + 1}`}
               img='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/512px-HTML5_Badge.svg.png?20110131171049'
-              title={task.taskText}
+              title={task.taskTitle}
               author={task.author}
+              introduction={task.introduction}
             />
           </Link>
         ))}

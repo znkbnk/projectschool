@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image1 from "../images/pic1.jpg";
-import image2 from "../images/pic2.jpg";
-import image3 from "../images/pic3.jpg";
-import image4 from "../images/pic4.jpg";
+import image1 from "../images/pic5.png";
+import image2 from "../images/pic6.png";
+import image3 from "../images/pic7.png";
+import image4 from "../images/pic7.png";
 import "../styles/section1.css";
 import WelcomeWord from './WelcomeWord';
+import { Link } from "react-router-dom";
 
 function Section1() {
   useEffect(() => {
@@ -84,49 +85,63 @@ function Section1() {
         </section>
       </main>
 
-      <h1 className='header-section gs_reveal ipsType_center'>Scroll down</h1>
+      <h1 className='header-section gs_reveal ipsType_center'>
+        "The only way to learn a new programming language is by writing programs
+        in it." - Dennis Ritchie
+      </h1>
 
       <div className='features'>
         <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
           <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft'>
             <div className='card'>
-              <img className='section1-image' src={image1} alt='' />
+              <div className='image-container'>
+                <img className='section1-image' src={image1} alt='' />
+              </div>
             </div>
           </div>
 
           <div className='ipsGrid_span7 ipsType_left'>
             <h2 className='heading_large gs_reveal'>
-              this is first <strong>h2</strong>
+              HTML Fundamentals and Hands-On <strong>Exercises:</strong>
             </h2>
-            <p className='gs_reveal'>
-              loads of text 1 loads of text 1 loads of text 1 loads of text 1{" "}
-              loads of text 1 loads of text 1 loads of text 1 loads of text 1
-              loads of text 1 loads of text 1 loads of text 1 loads of text 1
-              loads of text 1 loads of text 1 loads of text 1 loads of text 1
-              loads of text 1 loads of text 1 loads of text 1 loads of text 1
-              loads of text 1 loads of text 1 loads of text 1{" "}
-            </p>
+            <ul className='gs_reveal section1-list'>
+              <li>Introduction to HTML tags and elements</li>
+              <li>Creating a basic HTML document structure</li>
+              <li>
+                Hands-on exercises to build various types of web pages using
+                HTML
+              </li>
+              <li>
+                Incorporating semantic HTML for better accessibility and SEO
+              </li>
+            </ul>
           </div>
         </div>
 
         <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
           <div className='ipsGrid_span7 ipsType_right'>
             <h2 className='heading_large gs_reveal'>
-              this is second <strong>h2</strong>
+              CSS Styling and Design <strong>Challenges:</strong>
             </h2>
 
-            <p className='gs_reveal'>
-              loads of text 2222 loads of text 2222 loads of text 2222 loads of
-              text 2222 loads of text 2222 loads of text 2222 loads of text 2222
-              loads of text 2222 loads of text 2222 loads of text 2222 loads of
-              text 2222 loads of text 2222 loads of text 2222 loads of text 2222
-              loads of text 2222
-            </p>
+            <ul className='gs_reveal section1-list'>
+              <li>Understanding CSS selectors, properties, and values</li>
+              <li>Applying CSS styles to JSX elements</li>
+              <li>
+                Creating layouts and designing responsive web pages using CSS
+              </li>
+              <li>
+                Hands-on exercises to style web pages and solve design
+                challenges
+              </li>
+            </ul>
           </div>
 
           <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight'>
             <div className='card'>
-              <img className='section1-image' src={image2} alt='' />
+              <div className='image-container'>
+                <img className='section1-image' src={image2} alt='' />
+              </div>
             </div>
           </div>
         </div>
@@ -134,34 +149,50 @@ function Section1() {
         <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
           <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft'>
             <div className='card'>
-              <img className='section1-image' src={image3} alt='' />
+              <div className='image-container'>
+                <img className='section1-image' src={image3} alt='' />
+              </div>
             </div>
           </div>
 
           <div className='ipsGrid_span7 ipsType_left'>
             <h2 className='heading_large gs_reveal'>
-              this is third <strong>h2</strong>
+              Introduction to React and Building Components:
             </h2>
-            <p className='gs_reveal'>
-              loads of text 33333333 loads of text 33333333 loads of text loads
-              loads of text 33333333 loads of text 33333333 loads of text 33
-              333333 loads of text 33333333 loads of text 33333333 of text loads
-              loads of text 33333333 loads of text 33333333 of text 33333333
-              loads of text 33333333 33333333 33333333
-            </p>
+            <ul className='gs_reveal section1-list'>
+              <li>
+                Overview of React.js and its benefits for building dynamic web
+                applications
+              </li>
+              <li>Setting up a React development environment</li>
+              <li>Understanding React components and their lifecycle</li>
+              <li>
+                Hands-on exercises to build basic React components and compose
+                them into larger applications
+              </li>
+            </ul>
           </div>
         </div>
 
         <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
           <div className='ipsGrid_span7 ipsType_right'>
             <h2 className='heading_large gs_reveal'>
-              this is 4th <strong>h2</strong>
+              State Management and Interactivity with React
             </h2>
-            <p className='gs_reveal'>
-              text 4 is here text 4 is here text 4 is here text 4 is here text 4
-              is here text 4 is here text 4 is here text 4 is here text 4 is
-              here text 4 is here text 4 is here
-            </p>{" "}
+            <ul className='gs_reveal section1-list'>
+              <li>Managing state and props in React components</li>
+              <li>
+                Handling user interactions and events in React applications
+              </li>
+              <li>
+                Introduction to React hooks for functional component state
+                management
+              </li>
+              <li>
+                Hands-on exercises to create interactive user interfaces and
+                manage application state with React
+              </li>
+            </ul>
           </div>
 
           <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight'>
@@ -171,8 +202,14 @@ function Section1() {
           </div>
         </div>
       </div>
-      <div className='last'>
-        <h2>last</h2>
+      <div>
+        <h1 className='header-section gs_reveal ipsType_center'>
+          Have questions or need help?{" "}
+          <Link to='/livechat' className='section1-chat'>
+            Chat
+          </Link>{" "}
+          with us live!
+        </h1>
       </div>
     </div>
   );

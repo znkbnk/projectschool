@@ -11,7 +11,7 @@ const Card = ({ img, title, desc, to }) => {
         <p className='exercises-card__description'>{desc}</p>
       </div>
       <Link to={to} className='exercises-card__btn'>
-        Button
+        Start
       </Link>
     </div>
   );
