@@ -1,12 +1,19 @@
 // HtmlLessonsCards.js
 import React from "react";
 import "../styles/lessons.css";
-import ProgressBar from "./ProgressBar";
 
-const HtmlLessonsCards = ({ header, img, title, author, onClick, introduction }) => {
+
+
+const HtmlLessonsCards = ({
+  header,
+  img,
+  title,
+  author,
+  onClick,
+  introduction,
+}) => {
   return (
     <div>
-      <ProgressBar />
       <div className='lessons-card' onClick={onClick}>
         <h3>{header}</h3>
         <img src={img} alt={title} />

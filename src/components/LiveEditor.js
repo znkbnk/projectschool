@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import tasksData from "./tasksData";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import ProgressBar from "./ProgressBar"; // Import ProgressBar component
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -12,6 +13,7 @@ const LiveEditor = () => {
 
   const [isCompleted, setIsCompleted] = useState(false);
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
+  const [completedTasksCount, setCompletedTasksCount] = useState(0); // Track completed tasks count
 
   let task = null;
 
@@ -21,6 +23,20 @@ const LiveEditor = () => {
         (task) => task.taskId === taskId
       );
       setCurrentTaskIndex(index);
+
+      // Check if the task is completed from localStorage
+      const completedTasks =
+        JSON.parse(localStorage.getItem("completedTasks")) || {};
+      setIsCompleted(completedTasks[taskId] || false);
+
+      // Count completed tasks
+      let count = 0;
+      for (const taskId in completedTasks) {
+        if (completedTasks[taskId]) {
+          count++;
+        }
+      }
+      setCompletedTasksCount(count);
     }
   }, [lessonType, taskId]);
 
@@ -30,27 +46,25 @@ const LiveEditor = () => {
 
   const taskText = task ? task.taskText : "";
 
- const handleNext = () => {
-   if (currentTaskIndex < tasksData[lessonType].length - 1) {
-     if (!isCompleted) {
-       // Display a toast notification
-       toast.warn("Please complete the current task first.");
-     } else {
-       const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
-       window.location.href = `/editor/${lessonType}/${nextTaskId}`;
-     }
-   }
- };
+  const handleNext = () => {
+    if (currentTaskIndex < tasksData[lessonType].length - 1) {
+      if (!isCompleted) {
+        toast.warn("Please complete the current task first.");
+      } else {
+        const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
+        window.location.href = `/editor/${lessonType}/${nextTaskId}`;
+      }
+    }
+  };
 
- const handlePrevious = () => {
-   if (currentTaskIndex > 0) {
-     const previousTaskId = tasksData[lessonType][currentTaskIndex - 1].taskId;
-     window.location.href = `/editor/${lessonType}/${previousTaskId}`;
-   } else {
-     // Display a toast notification indicating that it's the first task
-     toast.info("You are on the first task.");
-   }
- };
+  const handlePrevious = () => {
+    if (currentTaskIndex > 0) {
+      const previousTaskId = tasksData[lessonType][currentTaskIndex - 1].taskId;
+      window.location.href = `/editor/${lessonType}/${previousTaskId}`;
+    } else {
+      toast.info("You are on the first task.");
+    }
+  };
 
   const handleComplete = () => {
     const taskIndex = tasksData[lessonType].findIndex(
@@ -59,11 +73,24 @@ const LiveEditor = () => {
 
     if (taskIndex !== -1) {
       const updatedTasksData = { ...tasksData };
-      updatedTasksData[lessonType][taskIndex].completed = true;
+      updatedTasksData[lessonType][taskIndex].completed = !isCompleted; // Toggle completion status
 
-      console.log(`Task ${taskId} marked as completed.`);
-      toast.success(`Lesson ${lessonType} is completed!`);
-      setIsCompleted(true);
+      // Toggle completion status in localStorage
+      const completedTasks =
+        JSON.parse(localStorage.getItem("completedTasks")) || {};
+      completedTasks[taskId] = !isCompleted;
+      localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
+
+      if (!isCompleted) {
+        console.log(`Task ${taskId} marked as completed.`);
+        toast.success(`Lesson ${lessonType} is completed!`);
+        setCompletedTasksCount(completedTasksCount + 1); // Increment completed tasks count
+      } else {
+        console.log(`Task ${taskId} marked as uncompleted.`);
+        toast.info(`Lesson ${lessonType} is uncompleted.`);
+        setCompletedTasksCount(completedTasksCount - 1); // Decrement completed tasks count
+      }
+      setIsCompleted(!isCompleted);
     } else {
       console.log(`Task ${taskId} not found.`);
     }
@@ -72,6 +99,10 @@ const LiveEditor = () => {
   return (
     <div>
       <Navbar />
+      <ProgressBar
+        numStages={tasksData[lessonType].length}
+        completedTasks={completedTasksCount}
+      />
       <div className='editor-container'>
         <div className='task-container'>
           <div className='task'>
@@ -86,29 +117,16 @@ const LiveEditor = () => {
             </div>
           </div>
           <div className='task-buttons'>
-            <button
-              className='button-28 previous' // Add class 'previous' for the previous button
-              onClick={handlePrevious}
-            >
+            <button className='button-28 previous' onClick={handlePrevious}>
               Previous
             </button>
             <button
-              className='button-28 complete' // Add class 'complete' for the complete button
+              className={`button-28 ${isCompleted ? "complete" : ""}`}
               onClick={handleComplete}
-              style={{
-                backgroundColor: isCompleted ? "#4efd54" : "",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              disabled={isCompleted}
             >
               {isCompleted ? "Completed" : "Complete"}
             </button>
-            <button
-              className='button-28 next' // Add class 'next' for the next button
-              onClick={handleNext}
-            >
+            <button className='button-28 next' onClick={handleNext}>
               Next
             </button>
           </div>

@@ -132,7 +132,7 @@ section {
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
-   font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-weight: 600;
@@ -153,7 +153,7 @@ section {
 }
 
 .button-28:disabled {
-  pointer-events:fill;
+  pointer-events: fill;
 }
 
 .button-28:hover {
@@ -166,6 +166,18 @@ section {
 .button-28:active {
   box-shadow: none;
   transform: translateY(0);
+}
+
+.button-28.complete {
+  background-color: #4efd54;
+}
+
+.button-28.complete:hover {
+  background-color: #4efd54;
+}
+
+.button-28.complete:active {
+  background-color: #4efd54;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,39 +1,179 @@
 .word-container {
+  position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+.twoWords {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+  transform: rotate(10deg);
+}
+
+.welcomeWord,
+.toTheWord {
+  position: absolute;
+  text-align: center;
 }
 
 .word-title {
-  display: block;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 2; /* Set a higher z-index for welcomeWord */
+}
+
+.toTheWord {
   position: relative;
-  font-size: 11rem;
-  text-align: center; /* Align text center for both lines */
-  line-height: 1; /* Ensures proper line spacing */
+  margin-top: 6rem;
+  z-index: 3; /* Set an even higher z-index for toTheWord */
+}
+
+.sectionImages-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .word-title span {
-  display: inline-block; /* Change display to inline-block */
+  display: inline-block;
   background: linear-gradient(var(--finish-fill), var(--fill));
-  -webkit-background-clip: text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-clip: text;
   color: transparent;
-  min-width: 10px;
-  min-height: 10px;
-  position: relative;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8rem;
+  text-align: center;
+}
+
+.sectionImg4 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.sectionImg7 {
+  position: absolute;
+  width: 10%;
+  left: 28%;
+  top: 30%;
+  z-index: 4;
+  animation: shake 3s ease infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  5% {
+    transform: rotate(15deg);
+  }
+  10% {
+    transform: rotate(-15deg);
+  }
+  15% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  30% {
+    transform: rotate(-15deg);
+  }
+  35% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  45% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  55% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: rotate(-15deg);
+  }
+  65% {
+    transform: rotate(15deg);
+  }
+  70% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(-15deg);
+  }
+  85% {
+    transform: rotate(15deg);
+  }
+  90% {
+    transform: rotate(-15deg);
+  }
+  95% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.projectschoolImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
-.welcome-logo img {
+.sectionImg3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 800px;
-  padding: 0;
-  margin: 0;
+  top: -50%;
+  left: 50%;
+  position: absolute;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+
+.sectionImg2 {
+  width: 100px;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 6;
 }
 
 @media (max-width: 768px) {
   .welcome-logo img {
-    width: 300px;
+    width: 200px;
   }
   .word-title {
     font-size: 5rem;

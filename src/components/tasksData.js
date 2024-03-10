@@ -66,6 +66,37 @@ const tasksData = {
       prerequisites: ["HTML Basics"],
       completed: false,
     },
+    {
+      taskId: "task3",
+      taskText: "HTML Task 2 Description",
+      taskType: "HTML",
+      difficulty: "Easy",
+      prerequisites: ["HTML Basics"],
+      completed: false,
+    },
+    {
+      taskId: "task4",
+      taskText: "HTML Task 2 Description",
+      taskType: "HTML",
+      difficulty: "Easy",
+      prerequisites: ["HTML Basics"],
+      completed: false,
+    },
+    {
+      taskId: "task5",
+      taskText: "HTML Task 2 Description",
+      taskType: "HTML",
+      difficulty: "Easy",
+      prerequisites: ["HTML Basics"],
+      completed: false,
+    },{
+      taskId: "task6",
+      taskText: "HTML Task 2 Description",
+      taskType: "HTML",
+      difficulty: "Easy",
+      prerequisites: ["HTML Basics"],
+      completed: false,
+    },
   ],
   CSS: [
     {
