@@ -1,16 +1,16 @@
-// HtmlLessons.js
-
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/lessons.css";
-
 import CssCards from "./CssLessonsCards";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ProgressBar from "./ProgressBar";
-import tasksData from "./tasksData";
+import { tasksData, authorsData } from "./tasksData";
 
 function CssLessons() {
+  const [showEasy, setShowEasy] = useState(false);
+  const [showHard, setShowHard] = useState(false);
+
   const numLessons = tasksData.CSS.length;
 
   const getCompletedTasksCount = () => {
@@ -25,6 +25,20 @@ function CssLessons() {
     return count;
   };
 
+  const getAuthorInfo = (authorIndex) => {
+    return authorsData[authorIndex];
+  };
+
+  const filteredCssTasks = tasksData.CSS.filter((task) => {
+    if (showEasy) {
+      return task.difficulty === "Easy";
+    }
+    if (showHard) {
+      return task.difficulty === "Hard";
+    }
+    return true;
+  });
+
   return (
     <>
       <Navbar />
@@ -35,15 +49,50 @@ function CssLessons() {
         numStages={numLessons}
         completedTasks={getCompletedTasksCount()}
       />
+      <div className='sort'>
+        <h4>Show:</h4>
+        <button
+          className='button-84'
+          onClick={() => {
+            setShowEasy(false);
+            setShowHard(false);
+          }}
+        >
+          All
+        </button>
+        <button
+          className='button-84'
+          onClick={() => {
+            setShowEasy(true);
+            setShowHard(false);
+          }}
+        >
+          Easy
+        </button>
+        <button
+          className='button-84'
+          onClick={() => {
+            setShowEasy(false);
+            setShowHard(true);
+          }}
+        >
+          Hard
+        </button>
+      </div>
       <div className='lessons-cards'>
-        {tasksData.CSS.map((task, index) => (
-          <Link to={`/editor/CSS/${task.taskId}`} key={index}>
+        {filteredCssTasks.map((task, index) => (
+          <Link
+            to={`/editor/CSS/${task.taskId}`}
+            key={index}
+            style={{ textDecoration: "none" }}
+          >
             <CssCards
               header={`Lesson ${index + 1}`}
               img='https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817'
               title={task.taskTitle}
-              author={task.author}
+              authorInfo={getAuthorInfo(task.authorIndex)}
               introduction={task.introduction}
+              difficulty={task.difficulty}
             />
           </Link>
         ))}
