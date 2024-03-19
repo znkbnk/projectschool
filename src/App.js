@@ -11,6 +11,9 @@ import CssLessons from "./components/CssLessons";
 import LiveChat from "./components/LiveChat";
 import ResetPassword from "./components/ResetPassword";
 import LiveEditor from "./components/LiveEditor";
+import AuthorList from "./components/AuthorList";
+import Faq from "./components/Faq";
+import Pricing from "./components/Pricing";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -35,6 +38,9 @@ function App() {
           <Route path='/resetPassword' element={<ResetPassword />} />
           <Route path='/editor' element={<LiveEditor />} />
           <Route path='/editor/:lessonType/:taskId' element={<LiveEditor />} />
+          <Route path='/authors' element={<AuthorList />} />
+          <Route path='/faq' element={<Faq />} />
+          <Route path='/pricing' element={<Pricing />} />
         </Routes>
       </div>
     </Router>

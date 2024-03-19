@@ -11,7 +11,7 @@ function Footer() {
         <div className='logoinfo' data-aos='fade-up'>
           <h2>Responsive Footer</h2>
           <div className='contact-details'>
-            <h1>Contact Us</h1>
+            <h1>Contact Us</h1> 
             <ul>
               <li>
                 <div className='fa fa-phone'></div>
@@ -70,7 +70,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div>© Your Copyright 2024 All Rights Reserved</div>
+      <div className="copyright">© Your Copyright 2024 All Rights Reserved</div>
     </footer>
   );
 }

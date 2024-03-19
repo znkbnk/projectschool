@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { gsap, Back } from "gsap";
+import { gsap, Back } from "gsap"; 
 import "../styles/welcomeWord.css";
 
 const WelcomeComponent = () => {

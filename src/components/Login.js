@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Footer from "./Footer";
+import Footer from "./Footer"; 
 
 const Login = () => {
   const [email, setEmail] = useState("");

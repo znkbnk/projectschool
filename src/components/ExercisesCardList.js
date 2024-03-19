@@ -14,7 +14,7 @@ const ExercisesCardList = () => {
       />
       <ExercisesCard
         img='https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg'
-        title='Styling Your Web Pagesss'
+        title='Styling Your Web Pages'
         desc='Explore the power of CSS to beautify and style your web pages. From colors and fonts to layouts and animations, master the art of visual design for the web.'
         to='/csslessons'
       />

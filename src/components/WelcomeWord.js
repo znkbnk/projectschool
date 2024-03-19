@@ -55,7 +55,6 @@ const WelcomeComponent = () => {
         }
       );
 
-      // Change opacity for sectionImg2Element to 0.7
       gsap.set(sectionImg2Element, {
         opacity: 0.7,
       });
@@ -79,12 +78,12 @@ const WelcomeComponent = () => {
           {
             visibility: "visible",
             opacity: 1,
-            top: "50%", // Adjust the final position as needed
-            duration: 1, // Adjust the duration of the animation
-            ease: "linear", // Use an easing function for a smooth effect
+            top: "50%",
+            duration: 1, 
+            ease: "linear", 
           },
           "-=1"
-        ) // Starts animation of sectionImg3Element 1 second before previous animation ends
+        ) 
         .to(
           sectionImg7Element,
           {
@@ -92,26 +91,24 @@ const WelcomeComponent = () => {
             opacity: 1,
           },
           "-=0"
-        ) // Starts animation of sectionImg7Element 1 second before previous animation ends
-        .to(
-          sectionImg2Element,
-          {
-            visibility: "visible",
-            opacity: 1,
-            x: screenWidth -110,
-            y: 260,
-            rotation: 20,
-            duration: 1.5,
-            ease: "linear",
-            onComplete: () => {
-              gsap.set(sectionImg2Element, {
-                visibility: "hidden",
-                opacity: 0,
-              });
-            },
-          },
-          "-=1.5"
-        )
+        ) 
+      .to(
+  sectionImg2Element,
+  {
+    visibility: "visible",
+    opacity: 1,
+    x: screenWidth - 100,
+    y: 260,
+    rotation: 20,
+    duration: 1.5,
+    ease: "linear",
+    onComplete: () => {
+      // After animation is complete, remove the element
+      sectionImg2Element.remove();
+    },
+  },
+  "-=1.5"
+)
         .to(
           picture,
           {
@@ -119,7 +116,7 @@ const WelcomeComponent = () => {
             opacity: 1,
           },
           "-=0.5"
-        ); // Starts animation of picture 1 second before previous animation ends
+        ); 
     }
   };
 

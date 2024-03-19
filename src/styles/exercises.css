@@ -1,13 +1,15 @@
 .wrapper {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
+  margin: 0  20px  20px;
+
 }
 
 .wrapper .exercises-card {
-  margin: 40px; 
-  width: calc(33.33% - 20px); 
-  max-width: 500px; 
+  margin: 40px;
+  width: calc(33.33% - 20px);
+  max-width: 500px;
   overflow: hidden;
   border: 2px solid #fff;
   border-radius: 1rem;
@@ -15,6 +17,7 @@
   justify-content: space-between;
   flex-direction: column;
   transition: transform 200ms ease-in;
+  
 }
 .wrapper .exercises-card__image {
   height: 12rem;
@@ -39,22 +42,19 @@
   border: 2px solid #ffffff;
   color: #979797;
   border-radius: 1rem;
-  text-decoration: none;
+  text-decoration: none !important;
   text-align: center;
 }
 .wrapper .exercises-card__btn:hover {
   background: #494949;
-
 }
 .wrapper .exercises-card:hover {
   transform: scale(1.02);
   box-shadow: 0 7px 12px #e1e5ee;
-
 }
 .wrapper .exercises-card:hover .exercises-card__btn {
   color: #fff;
 }
-
 
 .exercises-container {
   height: 40vh;
@@ -63,8 +63,16 @@
   align-items: center;
 }
 
+
 .exercises-title {
   display: block;
   position: relative;
-  font-size: 11rem;
+  font-size: 8rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .wrapper .exercises-card {
+    width: 40%;
+  }
 }

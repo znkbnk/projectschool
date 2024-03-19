@@ -6,7 +6,9 @@ const AuthorProfile = ({ author }) => {
   const { name, description, picture, position } = author;
 
   return (
+    
     <div>
+      
       <ul className='author-card-list'>
         <li className='author-card'>
           <img src={imageBackground} className='image' alt='' />

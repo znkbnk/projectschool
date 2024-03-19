@@ -13,11 +13,11 @@ const Navbar = () => {
     auth
       .signOut()
       .then(() => {
-        toast.success("You have been signed out successfully!"); // Show success toast
+        toast.success("You have been signed out successfully!");
       })
       .catch((error) => {
         console.log(error.message);
-      });
+      }); 
   };
 
   useEffect(() => {
@@ -34,46 +34,38 @@ const Navbar = () => {
     return () => unsubscribe();
   }, []);
 
-   useEffect(() => {
-     const nav = document.querySelector("#nav");
 
-     const onScroll = () => {
-       const scrollPosition = window.scrollY;
-       if (scrollPosition > 10) {
-         nav.classList.add("scrolled-down");
-       } else {
-         nav.classList.remove("scrolled-down");
-       }
-     };
 
-     document.addEventListener("scroll", onScroll);
+  useEffect(() => {
+    const createDot = () => {
+      const dot = document.createElement("div");
+      dot.className = "nav-dot";
+      document.querySelector("#nav").appendChild(dot);
 
-     return () => {
-       document.removeEventListener("scroll", onScroll);
-     };
-   }, []);
+      dot.style.left = "0";
 
-   useEffect(() => {
-     const createDot = () => {
-       const dot = document.createElement("div");
-       dot.className = "nav-dot";
-       document.querySelector("#nav").appendChild(dot);
+      setTimeout(() => {
+        dot.style.transition = "left 1.2s ease";
+        dot.style.left = "calc(100% - 5px)";
+      }, 50);
 
-       dot.style.left = "-5px";
+      setTimeout(() => {
+        dot.style.opacity = "0";
+      }, 1200 + 50);
 
-       setTimeout(() => {
-         dot.style.transition = "left 1.2s ease";
-         dot.style.left = "calc(100% + 5px)";
-       }, 50);
-     };
+      setTimeout(() => {
+        dot.remove(); 
+      }, 1200 + 50 + 500);
+    };
 
-     createDot();
-     const dotInterval = setInterval(createDot, 8000);
+    createDot(); 
 
-     return () => {
-       clearInterval(dotInterval);
-     };
-   }, []);
+    const dotInterval = setInterval(createDot, 8000);
+
+    return () => {
+      clearInterval(dotInterval);
+    };
+  }, []);
 
   return (
     <nav id='nav'>
@@ -82,19 +74,30 @@ const Navbar = () => {
           <img src={image2} alt='logo' />
         </Link>
         <div className='middle'>
-          <Link to='/livechat' className='nav-link'>
-            LiveChat
-          </Link>
-          {isLoggedIn && ( // Render Exercises link only if user is logged in
-            <Link to='/exercises' className='nav-link'>
-              Exercises
-            </Link>
+          {isLoggedIn && (
+            <div className='middle'>
+              <Link to='/exercises' className='nav-link'>
+                Exercises
+              </Link>
+              <Link to='/livechat' className='nav-link'>
+                LiveChat
+              </Link>
+              <Link to='/authors' className='nav-link'>
+                Authors
+              </Link>
+              <Link to='/editor' className='nav-link'>
+                Live Editor
+              </Link>
+            </div>
           )}
-          <Link to='/learn' className='nav-link'>
-            Learn
+          <Link to='/blog' className='nav-link'>
+            Blog
           </Link>
-          <Link to='/editor' className='nav-link'>
-            Live Editor
+          <Link to='/pricing' className='nav-link'>
+            Pricing
+          </Link>
+          <Link to='/faq' className='nav-link'>
+            FAQ
           </Link>
         </div>
         <div className='right'>
@@ -117,31 +120,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div className='menu-icon'>
-        <Link to='/projectschool'>
-          <img src={image2} alt='logo' />
-        </Link>
-        <div className='right'>
-          {isLoggedIn ? (
-            <>
-              <span className='usersEmail'>{userEmail}</span>
-
-              <button onClick={handleLogout} className='button-35'>
-                Sign Out
-              </button>
-            </>
-          ) : (
-            <>
-              <Link to='/login' className='button-35'>
-                Login
-              </Link>
-              <Link to='/signup' className='button-35'>
-                Sign Up
-              </Link>
-            </>
-          )}
-        </div>
-      </div>
+      
     </nav>
   );
 };

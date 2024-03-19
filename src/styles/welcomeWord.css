@@ -9,20 +9,21 @@
 .twoWords {
   display: flex;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
   margin-top: 3rem;
   transform: rotate(10deg);
 }
 
 .welcomeWord,
 .toTheWord {
+  width: 150%;
   position: absolute;
   text-align: center;
 }
 
 .word-title {
   position: relative; /* Ensure proper stacking context */
-  z-index: 2; /* Set a higher z-index for welcomeWord */
+  z-index: 2;
 }
 
 .toTheWord {
@@ -132,9 +133,6 @@
   95% {
     transform: rotate(15deg);
   }
-  100% {
-    transform: rotate(0);
-  }
 }
 
 .projectschoolImg {
@@ -149,7 +147,6 @@
   transform: translate(-50%, -50%);
 }
 
-
 .sectionImg3 {
   display: flex;
   justify-content: center;
@@ -162,23 +159,24 @@
   transform: translate(-50%, -50%);
 }
 
-
 .sectionImg2 {
   width: 100px;
   position: absolute;
   top: 40%;
-  left: 0;
+  left: 10%;
   z-index: 6;
 }
 
-@media (max-width: 768px) {
-  .welcome-logo img {
-    width: 200px;
+@media only screen and (max-device-width: 768px) {
+  .sectionImg4 {
+    width: 80%;
   }
-  .word-title {
-    font-size: 5rem;
-  }
-  .welcome-logo {
-    margin-top: -100px;
-  }
+  .sectionImg7 {
+  left: 15%;
+  top: 37%;
+}
+.twoWords {
+  
+  margin-top: 8rem;
+}
 }

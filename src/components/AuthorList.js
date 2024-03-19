@@ -8,7 +8,9 @@ const AuthorsList = () => {
   return (
     <div>
       <Navbar />
-
+      <div className='header'>
+        <h1>Authors</h1>
+      </div>
       <div className='author-container'>
         {authorsData.map((author, index) => (
           <AuthorProfile key={index} author={author} />
