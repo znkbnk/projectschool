@@ -74,13 +74,16 @@ const Navbar = () => {
           <img src={image2} alt='logo' />
         </Link>
         <div className='middle'>
-          {isLoggedIn && (
+          {isLoggedIn ? (
             <div className='middle'>
               <Link to='/exercises' className='nav-link'>
                 Exercises
               </Link>
               <Link to='/livechat' className='nav-link'>
                 LiveChat
+              </Link>
+              <Link to='/blog' className='nav-link'>
+                Blog
               </Link>
               <Link to='/authors' className='nav-link'>
                 Authors
@@ -89,16 +92,19 @@ const Navbar = () => {
                 Live Editor
               </Link>
             </div>
+          ) : (
+            <>
+              <Link to='/blog' className='nav-link'>
+                Blog
+              </Link>
+              <Link to='/pricing' className='nav-link'>
+                Pricing
+              </Link>
+              <Link to='/faq' className='nav-link'>
+                FAQ
+              </Link>
+            </>
           )}
-          <Link to='/blog' className='nav-link'>
-            Blog
-          </Link>
-          <Link to='/pricing' className='nav-link'>
-            Pricing
-          </Link>
-          <Link to='/faq' className='nav-link'>
-            FAQ
-          </Link>
         </div>
         <div className='right'>
           {isLoggedIn ? (
@@ -120,7 +126,6 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      
     </nav>
   );
 };

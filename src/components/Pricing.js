@@ -3,6 +3,8 @@ import "../styles/price.css";
 import Navbar from "./Navbar";
 
 function Pricing() {
+ 
+  
   return (
     <div>
       <Navbar />
@@ -18,7 +20,9 @@ function Pricing() {
             <li>Another super feature</li>
             <li>And more...</li>
           </ul>
-          <button className="button-28">Sign up</button>
+          <button className='button-28'>
+            Sign up
+          </button>
         </div>
       </div>
     </div>
@@ -26,3 +30,4 @@ function Pricing() {
 }
 
 export default Pricing;
+
