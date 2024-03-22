@@ -14,6 +14,9 @@ import LiveEditor from "./components/LiveEditor";
 import AuthorList from "./components/AuthorList";
 import Faq from "./components/Faq";
 import Pricing from "./components/Pricing";
+import Success from "./components/Success";
+import Cancel from "./components/Cancel";
+import Checkout from "./components/Checkout";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -41,6 +44,9 @@ function App() {
           <Route path='/authors' element={<AuthorList />} />
           <Route path='/faq' element={<Faq />} />
           <Route path='/pricing' element={<Pricing />} />
+          <Route index element={<Checkout />} />
+          <Route path='success' element={<Success />} />
+          <Route path='cancel' element={<Cancel />} />
         </Routes>
       </div>
     </Router>
