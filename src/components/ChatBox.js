@@ -17,7 +17,7 @@ const ChatBox = () => {
   useEffect(() => {
     const q = query(
       collection(db, "messages"),
-      orderBy("createdAt", "asc"), // Order messages by ascending createdAt
+      orderBy("createdAt", "asc"), 
       limit(50)
     );
 
