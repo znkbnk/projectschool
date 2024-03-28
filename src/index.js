@@ -1,15 +1,18 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter } from "react-router-dom";
+import { createRoot } from "react-dom/client"; // Import createRoot from the correct path
 
-ReactDOM.render(
+const rootElement = document.getElementById("root");
+
+// Use createRoot to create the root of the React tree
+const root = createRoot(rootElement);
+root.render(
   <HashRouter>
     <App />
-  </HashRouter>,
-  document.getElementById("root")
+  </HashRouter>
 );
 
 reportWebVitals();

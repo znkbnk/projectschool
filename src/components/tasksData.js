@@ -79,7 +79,7 @@ const tasksData = {
         "Creating a simple HTML page involves structuring the document with HTML tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
       taskText: (
         <div className='taskText-container'>
-          <h3>Step 1: Setting Up the HTML File</h3>
+          <h3>Step 1: Setting Up the HTML File2</h3>
           <div className='checkbox-container'>
             <input type='checkbox' id='step1' />
             <label htmlFor='step1'>

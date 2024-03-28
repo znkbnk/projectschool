@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { tasksData } from "./tasksData";
 import Navbar from "./Navbar";
@@ -13,7 +13,9 @@ const LiveEditor = () => {
   const [isCompleted, setIsCompleted] = useState(false);
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
   const [completedTasksCount, setCompletedTasksCount] = useState(0);
-  const [showContent, setShowContent] = useState(true); // New state to control content visibility
+  const [showContent, setShowContent] = useState(true); 
+
+  const navigate = useNavigate();
 
   let task = null;
 
@@ -51,22 +53,21 @@ const LiveEditor = () => {
 
   const taskText = task ? task.taskText : "";
 
-  const handleNext = () => {
-    if (currentTaskIndex < tasksData[lessonType].length - 1) {
-      if (!isCompleted) {
-        toast.warn("Please complete the current task first.");
-      } else {
-        const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
-        window.location.href = `/editor/${lessonType}/${nextTaskId}`;
-      }
+const handleNext = () => {
+  if (lessonType && currentTaskIndex < tasksData[lessonType].length - 1) {
+    if (!isCompleted) {
+      toast.warn("Please complete the current task first.");
+    } else {
+      const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
+      navigate(`/editor/${lessonType}/${nextTaskId}`);
     }
-  };
+  }
+};
 
   const handlePrevious = () => {
     if (currentTaskIndex > 0) {
       const previousTaskId = tasksData[lessonType][currentTaskIndex - 1].taskId;
-      console.log("Moving to previous task:", previousTaskId);
-      window.location.href = `/editor/${lessonType}/${previousTaskId}`;
+      navigate(`/editor/${lessonType}/${previousTaskId}`);
     } else {
       toast.info("You are on the first task.");
     }
@@ -100,6 +101,7 @@ const LiveEditor = () => {
       console.log(`Task ${taskId} not found.`);
     }
   };
+
 
   const handleResize = () => {
     setShowContent(window.innerWidth >= 768);

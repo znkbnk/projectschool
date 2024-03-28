@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Welcome from "./components/Welcome";
@@ -25,31 +26,29 @@ function ScrollToTopOnNavigation() {
 
 function App() {
   return (
-    <Router>
-      <div>
-        <ToastContainer />
-        <ScrollToTopOnNavigation />
-        <Routes>
-          <Route path='/projectschool' element={<Welcome />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/exercises' element={<Exercises />} />
-          <Route path='/htmllessons' element={<HtmlLessons />} />
-          <Route path='/csslessons' element={<CssLessons />} />
-          <Route path='/reactlessons' element={<ReactLessons />} />
-          <Route path='/livechat' element={<LiveChat />} />
-          <Route path='/resetPassword' element={<ResetPassword />} />
-          <Route path='/editor' element={<LiveEditor />} />
-          <Route path='/editor/:lessonType/:taskId' element={<LiveEditor />} />
-          <Route path='/authors' element={<AuthorList />} />
-          <Route path='/faq' element={<Faq />} />
-          <Route path='/pricing' element={<Pricing />} />
-          <Route index element={<Checkout />} />
-          <Route path='success' element={<Success />} />
-          <Route path='cancel' element={<Cancel />} />
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <ToastContainer />
+      <ScrollToTopOnNavigation />
+      <Routes>
+        <Route path='/' element={<Welcome />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/exercises' element={<Exercises />} />
+        <Route path='/htmllessons' element={<HtmlLessons />} />
+        <Route path='/csslessons' element={<CssLessons />} />
+        <Route path='/reactlessons' element={<ReactLessons />} />
+        <Route path='/livechat' element={<LiveChat />} />
+        <Route path='/resetPassword' element={<ResetPassword />} />
+        <Route path='/editor' element={<LiveEditor />} />
+        <Route path='/editor/:lessonType/:taskId' element={<LiveEditor />} />
+        <Route path='/authors' element={<AuthorList />} />
+        <Route path='/faq' element={<Faq />} />
+        <Route path='/pricing' element={<Pricing />} />
+        <Route path='success' element={<Success />} />
+        <Route path='cancel' element={<Cancel />} />
+        <Route element={<Checkout />} />
+      </Routes>
+    </div>
   );
 }
 

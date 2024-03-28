@@ -70,7 +70,7 @@ const Navbar = () => {
   return (
     <nav id='nav'>
       <div className='navbar-container flex'>
-        <Link to='/projectschool'>
+        <Link to='/'>
           <img src={image2} alt='logo' />
         </Link>
         <div className='middle'>
