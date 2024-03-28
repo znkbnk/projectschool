@@ -1,7 +1,7 @@
 const tasksData = {
   HTML: [
     {
-      taskId: "task1",
+      taskId: "htmltask1",
       taskTitle: "Simple Web Page1",
       introduction:
         "Creating a simple HTML page involves structuring the document with HTML tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
@@ -73,7 +73,7 @@ const tasksData = {
       completed: false,
     },
     {
-      taskId: "task2",
+      taskId: "htmltask2",
       taskTitle: "Simple Web Page2",
       introduction:
         "Creating a simple HTML page involves structuring the document with HTML tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
@@ -145,7 +145,7 @@ const tasksData = {
       completed: false,
     },
     {
-      taskId: "task3",
+      taskId: "htmltask3",
       taskTitle: "Simple Web Page3",
       introduction:
         "Creating a simple HTML page involves structuring the document with HTML tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
@@ -217,7 +217,7 @@ const tasksData = {
       completed: false,
     },
     {
-      taskId: "task4",
+      taskId: "htmltask4",
       taskTitle: "Simple Web Page4",
       introduction:
         "Creating a simple HTML page involves structuring the document with HTML tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
@@ -289,7 +289,7 @@ const tasksData = {
       completed: false,
     },
     {
-      taskId: "task5",
+      taskId: "htmltask5",
       taskTitle: "Simple Web Page4",
       introduction:
         "Creating a simple HTML page involves structuring the document with HTML tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
@@ -363,7 +363,7 @@ const tasksData = {
   ],
   CSS: [
     {
-      taskId: "task1",
+      taskId: "csstask1",
       taskTitle: "CSS Task 1 Description",
       introduction: "introduction/description",
       taskText: "",
@@ -374,7 +374,7 @@ const tasksData = {
       completed: false,
     },
     {
-      taskId: "task2",
+      taskId: "csstask2",
       taskTitle: "CSS Task 2 Description",
       introduction: "introduction/description",
       taskText: "",
@@ -385,7 +385,7 @@ const tasksData = {
       completed: false,
     },
     {
-      taskId: "task3",
+      taskId: "csstask3",
       taskTitle: "CSS Task 2 Description",
       introduction: "introduction/description",
       taskText: "",
@@ -396,7 +396,7 @@ const tasksData = {
       completed: false,
     },
     {
-      taskId: "task4",
+      taskId: "csstask4",
       taskTitle: "CSS Task 2 Description",
       introduction: "introduction/description",
       taskText: "",
@@ -407,7 +407,7 @@ const tasksData = {
       completed: false,
     },
     {
-      taskId: "task5",
+      taskId: "csstask5",
       taskTitle: "CSS Task 2 Description",
       introduction: "introduction/description",
       taskText: "",
@@ -417,54 +417,11 @@ const tasksData = {
       prerequisites: ["CSS Basics"],
       completed: false,
     },
-    {
-      taskId: "task6",
-      taskTitle: "CSS Task 2 Description",
-      introduction: "introduction/description",
-      taskText: "",
-      taskType: "CSS",
-      difficulty: "Hard",
-      authorIndex: 0,
-      prerequisites: ["CSS Basics"],
-      completed: false,
-    },
-    {
-      taskId: "task7",
-      taskTitle: "CSS Task 2 Description",
-      introduction: "introduction/description",
-      taskText: "",
-      taskType: "CSS",
-      difficulty: "Hard",
-      authorIndex: 0,
-      prerequisites: ["CSS Basics"],
-      completed: false,
-    },
-    {
-      taskId: "task8",
-      taskTitle: "CSS Task 2 Description",
-      introduction: "introduction/description",
-      taskText: "",
-      taskType: "CSS",
-      difficulty: "Hard",
-      authorIndex: 0,
-      prerequisites: ["CSS Basics"],
-      completed: false,
-    },
-    {
-      taskId: "task9",
-      taskTitle: "CSS Task 2 Description",
-      introduction: "introduction/description",
-      taskText: "",
-      taskType: "CSS",
-      difficulty: "Hard",
-      authorIndex: 0,
-      prerequisites: ["CSS Basics"],
-      completed: false,
-    },
+   
   ],
   React: [
     {
-      taskId: "task1",
+      taskId: "reacttask1",
       taskTitle: "React Task 1 Description",
       introduction: "introduction/description",
       taskText: "",
