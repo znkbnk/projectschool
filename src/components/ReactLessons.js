@@ -14,17 +14,18 @@ function ReactLessons() {
   const [showUncompleted, setShowUncompleted] = useState(false);
   const numLessons = tasksData.React.length;
 
-  const getCompletedTasksCount = () => {
-    let count = 0;
-    const completedTasks =
-      JSON.parse(localStorage.getItem("completedTasks")) || {};
-    for (const taskId in completedTasks) {
-      if (completedTasks[taskId]) {
-        count++;
-      }
-    }
-    return count;
-  };
+ const getCompletedTasksCount = ({ lessonType }) => {
+   let count = 0;
+   const lessonCompletedTasksKey = `${lessonType}_completedTasks`; // Generate key specific to lesson type
+   const completedTasks =
+     JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+   for (const taskId in completedTasks) {
+     if (completedTasks[taskId]) {
+       count++;
+     }
+   }
+   return count;
+ };
 
   const getAuthorInfo = (authorIndex) => {
     return authorsData[authorIndex];
@@ -59,7 +60,7 @@ function ReactLessons() {
       </div>
       <ProgressBar
         numStages={numLessons}
-        completedTasks={getCompletedTasksCount()}
+        completedTasks={getCompletedTasksCount({ lessonType: "React" })}
       />
       <div className='sort'>
         <h4>Show:</h4>

@@ -11,58 +11,42 @@ import sectionImg4 from "../images/sectionImg4.png";
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
   const [isCompleted, setIsCompleted] = useState(false);
-  const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
+  const [currentTaskIndex, setCurrentTaskIndex] = useState(0); // Track current task index
   const [completedTasksCount, setCompletedTasksCount] = useState(0);
-  const [showContent, setShowContent] = useState(true); 
+  const [showContent, setShowContent] = useState(true);
+   const [taskText, setTaskText] = useState(""); 
 
   const navigate = useNavigate();
 
-  let task = null;
 
   useEffect(() => {
-    console.log("lessonType:", lessonType);
-    console.log("taskId:", taskId);
-    if (lessonType && tasksData[lessonType]) {
-      console.log("tasksData[lessonType]:", tasksData[lessonType]);
+    // Retrieve completion status from localStorage
+    const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
+    const completedTasks =
+      JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+    setIsCompleted(completedTasks[taskId] || false);
+  }, [lessonType, taskId]);
+
+  useEffect(() => {
+    // Update currentTaskIndex when taskId changes
+    if (lessonType && taskId) {
       const index = tasksData[lessonType].findIndex(
         (task) => task.taskId === taskId
       );
-      console.log("index:", index);
       setCurrentTaskIndex(index);
-
-      // Check if the task is completed from localStorage
-      const completedTasks =
-        JSON.parse(localStorage.getItem("completedTasks")) || {};
-      setIsCompleted(completedTasks[taskId] || false);
-
-      // Count completed tasks
-      let count = 0;
-      for (const taskId in completedTasks) {
-        if (completedTasks[taskId]) {
-          count++;
-        }
-      }
-      setCompletedTasksCount(count);
     }
   }, [lessonType, taskId]);
 
-  if (lessonType && tasksData[lessonType]) {
-    task = tasksData[lessonType].find((task) => task.taskId === taskId);
-    console.log("task:", task);
-  }
-
-  const taskText = task ? task.taskText : "";
-
-const handleNext = () => {
-  if (lessonType && currentTaskIndex < tasksData[lessonType].length - 1) {
-    if (!isCompleted) {
-      toast.warn("Please complete the current task first.");
-    } else {
-      const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
-      navigate(`/editor/${lessonType}/${nextTaskId}`);
+  const handleNext = () => {
+    if (lessonType && currentTaskIndex < tasksData[lessonType].length - 1) {
+      if (!isCompleted) {
+        toast.warn("Please complete the current task first.");
+      } else {
+        const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
+        navigate(`/editor/${lessonType}/${nextTaskId}`);
+      }
     }
-  }
-};
+  };
 
   const handlePrevious = () => {
     if (currentTaskIndex > 0) {
@@ -84,13 +68,17 @@ const handleNext = () => {
     );
 
     if (taskIndex !== -1) {
+      const lessonCompletedTasksKey = `${lessonType}_completedTasks`; // Generate key specific to lesson type
       const updatedTasksData = { ...tasksData };
       updatedTasksData[lessonType][taskIndex].completed = true;
 
       const completedTasks =
-        JSON.parse(localStorage.getItem("completedTasks")) || {};
+        JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
       completedTasks[taskId] = true;
-      localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
+      localStorage.setItem(
+        lessonCompletedTasksKey,
+        JSON.stringify(completedTasks)
+      );
 
       console.log(`Task ${taskId} marked as completed.`);
       toast.success(`Lesson ${lessonType} is completed!`);
@@ -100,8 +88,6 @@ const handleNext = () => {
       console.log(`Task ${taskId} not found.`);
     }
   };
-
-
 
   const handleResize = () => {
     setShowContent(window.innerWidth >= 768);
