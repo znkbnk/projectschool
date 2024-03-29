@@ -74,33 +74,33 @@ const handleNext = () => {
   };
 
   const handleComplete = () => {
+    if (isCompleted) {
+      toast.info(`This task is already completed.`);
+      return;
+    }
+
     const taskIndex = tasksData[lessonType].findIndex(
       (task) => task.taskId === taskId
     );
 
     if (taskIndex !== -1) {
       const updatedTasksData = { ...tasksData };
-      updatedTasksData[lessonType][taskIndex].completed = !isCompleted;
+      updatedTasksData[lessonType][taskIndex].completed = true;
 
       const completedTasks =
         JSON.parse(localStorage.getItem("completedTasks")) || {};
-      completedTasks[taskId] = !isCompleted;
+      completedTasks[taskId] = true;
       localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
 
-      if (!isCompleted) {
-        console.log(`Task ${taskId} marked as completed.`);
-        toast.success(`Lesson ${lessonType} is completed!`);
-        setCompletedTasksCount(completedTasksCount + 1);
-      } else {
-        console.log(`Task ${taskId} marked as uncompleted.`);
-        toast.info(`Lesson ${lessonType} is uncompleted.`);
-        setCompletedTasksCount(completedTasksCount - 1);
-      }
-      setIsCompleted(!isCompleted);
+      console.log(`Task ${taskId} marked as completed.`);
+      toast.success(`Lesson ${lessonType} is completed!`);
+      setCompletedTasksCount(completedTasksCount + 1);
+      setIsCompleted(true);
     } else {
       console.log(`Task ${taskId} not found.`);
     }
   };
+
 
 
   const handleResize = () => {
@@ -142,7 +142,7 @@ const handleNext = () => {
                 }`}
                 onClick={handleComplete}
               >
-                {isCompleted ? "Completed" : "Complete"  }
+                {isCompleted ? "Completed" : "Complete"}
               </button>
               <button className='button-28 next' onClick={handleNext}>
                 Next
@@ -151,7 +151,7 @@ const handleNext = () => {
           )}
         </div>
         <iframe
-          src={`https://codesandbox.io/embed/jhw9jl?view=Editor+%2B+Preview&module=%2Fsrc%2Fapp.tsx&hidenavigation=1&task=${taskId}`} 
+          src={`https://codesandbox.io/embed/jhw9jl?view=Editor+%2B+Preview&module=%2Fsrc%2Fapp.tsx&hidenavigation=1&task=${taskId}`}
           title='React'
           allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
           sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'

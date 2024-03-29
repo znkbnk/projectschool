@@ -87,11 +87,10 @@ section#entry-page form button {
   box-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
 }
 .login-button {
-  
-  width: 80%;
+  width: 100%;
 }
 
-section#entry-page form .forgot-password a{
+section#entry-page form .forgot-password a {
   text-align: center;
   color: #fff;
   text-decoration: none;
@@ -128,4 +127,3 @@ section#entry-page form button:hover {
     background-position: 0% 50%;
   }
 }
-
