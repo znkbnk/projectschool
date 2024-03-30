@@ -6,34 +6,49 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ProgressBar from "./ProgressBar";
 import { tasksData, authorsData } from "./tasksData";
+import FilterSortButtons from "./FilterSortButtons";
 
 function CssLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
   const [showCompleted, setShowCompleted] = useState(false);
   const [showUncompleted, setShowUncompleted] = useState(false);
+   const [filters, setFilters] = useState([
+     "All",
+     "Easy",
+     "Hard",
+     "Completed",
+     "Uncompleted",
+   ]);
+
   const numLessons = tasksData.CSS.length;
 
- const getCompletedTasksCount = ({ lessonType }) => {
-   let count = 0;
-   const lessonCompletedTasksKey = `${lessonType}_completedTasks`; // Generate key specific to lesson type
-   const completedTasks =
-     JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
-   for (const taskId in completedTasks) {
-     if (completedTasks[taskId]) {
-       count++;
-     }
-   }
-   return count;
- };
+  const getCompletedTasksCount = () => {
+    let count = 0;
+    const completedTasks =
+      JSON.parse(localStorage.getItem("CSS_completedTasks")) || {}; // Update key to CSS_completedTasks
+    for (const taskId in completedTasks) {
+      if (completedTasks[taskId]) {
+        count++;
+      }
+    }
+    return count;
+  };
 
   const getAuthorInfo = (authorIndex) => {
     return authorsData[authorIndex];
   };
 
+    const handleFilterClick = (filterType) => {
+      setShowEasy(filterType === "Easy");
+      setShowHard(filterType === "Hard");
+      setShowCompleted(filterType === "Completed");
+      setShowUncompleted(filterType === "Uncompleted");
+    };
+
   const filteredCssTasks = tasksData.CSS.filter((task) => {
     const completedTasks =
-      JSON.parse(localStorage.getItem("completedTasks")) || {};
+      JSON.parse(localStorage.getItem("CSS_completedTasks")) || {}; 
     if (showCompleted && completedTasks[task.taskId]) {
       return true;
     }
@@ -60,66 +75,13 @@ function CssLessons() {
       </div>
       <ProgressBar
         numStages={numLessons}
-        completedTasks={getCompletedTasksCount({ lessonType: "CSS" })}
+        completedTasks={getCompletedTasksCount()}
       />
-      <div className='sort'>
-        <h4>Show:</h4>
-        <button
-          className='button-84'
-          onClick={() => {
-            setShowEasy(false);
-            setShowHard(false);
-            setShowCompleted(false);
-            setShowUncompleted(false);
-          }}
-        >
-          All
-        </button>
-        <button
-          className='button-84'
-          onClick={() => {
-            setShowEasy(true);
-            setShowHard(false);
-            setShowCompleted(false);
-            setShowUncompleted(false);
-          }}
-        >
-          Easy
-        </button>
-        <button
-          className='button-84'
-          onClick={() => {
-            setShowEasy(false);
-            setShowHard(true);
-            setShowCompleted(false);
-            setShowUncompleted(false);
-          }}
-        >
-          Hard
-        </button>
-        <button
-          className='button-84'
-          onClick={() => {
-            setShowEasy(false);
-            setShowHard(false);
-            setShowCompleted(true);
-            setShowUncompleted(false);
-          }}
-        >
-          Completed
-        </button>
-        <button
-          className='button-84'
-          onClick={() => {
-            setShowEasy(false);
-            setShowHard(false);
-            setShowCompleted(false);
-            setShowUncompleted(true);
-          }}
-        >
-          Uncompleted
-        </button>
-      </div>
+      <FilterSortButtons
+        filters={filters}
+        handleFilterClick={handleFilterClick}
+      />
+
       <div className='lessons-cards'>
         {filteredCssTasks.map((task, index) => {
           // Find the original index of the task in tasksData.CSS

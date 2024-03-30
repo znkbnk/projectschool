@@ -11,16 +11,13 @@ import sectionImg4 from "../images/sectionImg4.png";
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
   const [isCompleted, setIsCompleted] = useState(false);
-  const [currentTaskIndex, setCurrentTaskIndex] = useState(0); // Track current task index
-  const [completedTasksCount, setCompletedTasksCount] = useState(0);
+  const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
   const [showContent, setShowContent] = useState(true);
-   const [taskText, setTaskText] = useState(""); 
+  const [taskText, setTaskText] = useState("");
 
   const navigate = useNavigate();
 
-
   useEffect(() => {
-    // Retrieve completion status from localStorage
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
     const completedTasks =
       JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
@@ -28,7 +25,6 @@ const LiveEditor = () => {
   }, [lessonType, taskId]);
 
   useEffect(() => {
-    // Update currentTaskIndex when taskId changes
     if (lessonType && taskId) {
       const index = tasksData[lessonType].findIndex(
         (task) => task.taskId === taskId
@@ -68,7 +64,7 @@ const LiveEditor = () => {
     );
 
     if (taskIndex !== -1) {
-      const lessonCompletedTasksKey = `${lessonType}_completedTasks`; // Generate key specific to lesson type
+      const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
       const updatedTasksData = { ...tasksData };
       updatedTasksData[lessonType][taskIndex].completed = true;
 
@@ -82,7 +78,6 @@ const LiveEditor = () => {
 
       console.log(`Task ${taskId} marked as completed.`);
       toast.success(`Lesson ${lessonType} is completed!`);
-      setCompletedTasksCount(completedTasksCount + 1);
       setIsCompleted(true);
     } else {
       console.log(`Task ${taskId} not found.`);
@@ -95,7 +90,6 @@ const LiveEditor = () => {
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -164,3 +158,4 @@ const LiveEditor = () => {
 };
 
 export default LiveEditor;
+ 
