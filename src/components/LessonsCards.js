@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/lessons.css";
 
-const HtmlLessonsCards = ({
+const LessonsCards = ({
   header,
-  img,
+  img, 
   title,
   authorInfo,
   introduction,
@@ -15,7 +15,10 @@ const HtmlLessonsCards = ({
     <div>
       <div className='lessons-card'>
         <h3>{header}</h3>
-        <img src={img} alt={title} />
+        <img
+          src={img} // Use the img prop here
+          alt={title}
+        />
         <div className='lessons-card-body'>
           <h3>{title}</h3>
           <p>{introduction}</p>
@@ -31,4 +34,4 @@ const HtmlLessonsCards = ({
   );
 };
 
-export default HtmlLessonsCards;
+export default LessonsCards;

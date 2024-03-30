@@ -71,6 +71,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["HTML Basics"],
       completed: false,
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/512px-HTML5_Badge.svg.png?20110131171049",
     },
     {
       taskId: "htmltask2",
@@ -143,6 +144,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["HTML Basics"],
       completed: false,
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/512px-HTML5_Badge.svg.png?20110131171049",
     },
   ],
   CSS: [
@@ -156,6 +158,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["CSS Basics"],
       completed: false,
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
     },
     {
       taskId: "csstask2",
@@ -167,6 +170,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["CSS Basics"],
       completed: false,
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
     },
     {
       taskId: "csstask3",
@@ -178,6 +182,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["CSS Basics"],
       completed: false,
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
     },
     {
       taskId: "csstask4",
@@ -189,6 +194,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["CSS Basics"],
       completed: false,
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
     },
   ],
   React: [
@@ -202,6 +208,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      img: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
     },
   ],
 };

@@ -1,12 +1,13 @@
+// HtmlLessons.js
+
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "../styles/lessons.css";
-import HtmlCards from "./HtmlLessonsCards";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ProgressBar from "./ProgressBar";
 import { tasksData, authorsData } from "./tasksData";
 import FilterSortButtons from "./FilterSortButtons";
+import FilteredTasks from "./FilteredTasks";
 
 function HtmlLessons() {
   const [showEasy, setShowEasy] = useState(false);
@@ -22,11 +23,17 @@ function HtmlLessons() {
   ]);
   const numLessons = tasksData.HTML.length;
 
-  const getCompletedTasksCount = ({ lessonType }) => {
+  const handleFilterClick = (filterType) => {
+    setShowEasy(filterType === "Easy");
+    setShowHard(filterType === "Hard");
+    setShowCompleted(filterType === "Completed");
+    setShowUncompleted(filterType === "Uncompleted");
+  };
+
+  const getCompletedTasksCount = () => {
     let count = 0;
-    const lessonCompletedTasksKey = `${lessonType}_completedTasks`; // Generate key specific to lesson type
     const completedTasks =
-      JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+      JSON.parse(localStorage.getItem("HTML_completedTasks")) || {};
     for (const taskId in completedTasks) {
       if (completedTasks[taskId]) {
         count++;
@@ -39,34 +46,6 @@ function HtmlLessons() {
     return authorsData[authorIndex];
   };
 
-  const handleFilterClick = (filterType) => {
-    setShowEasy(filterType === "Easy");
-    setShowHard(filterType === "Hard");
-    setShowCompleted(filterType === "Completed");
-    setShowUncompleted(filterType === "Uncompleted");
-  };
-
-  const filteredHtmlTasks = tasksData.HTML.filter((task) => {
-    const completedTasks =
-      JSON.parse(localStorage.getItem("completedTasks")) || {};
-    if (showCompleted && completedTasks[task.taskId]) {
-      return true;
-    }
-    if (showUncompleted && !completedTasks[task.taskId]) {
-      return true;
-    }
-    if (showEasy && task.difficulty === "Easy") {
-      return true;
-    }
-    if (showHard && task.difficulty === "Hard") {
-      return true;
-    }
-    if (!showEasy && !showHard && !showCompleted && !showUncompleted) {
-      return true;
-    }
-    return false;
-  });
-
   return (
     <>
       <Navbar />
@@ -75,7 +54,7 @@ function HtmlLessons() {
       </div>
       <ProgressBar
         numStages={numLessons}
-        completedTasks={getCompletedTasksCount({ lessonType: "HTML" })}
+        completedTasks={getCompletedTasksCount()}
       />
       <FilterSortButtons
         filters={filters}
@@ -83,30 +62,17 @@ function HtmlLessons() {
       />
 
       <div className='lessons-cards'>
-        {filteredHtmlTasks.map((task, index) => {
-          // Find the original index of the task in tasksData.HTML
-          const originalIndex = tasksData.HTML.findIndex(
-            (originalTask) => originalTask.taskId === task.taskId
-          );
-          // Calculate the lesson number based on the original index
-          const lessonNumber = originalIndex + 1;
-          return (
-            <Link
-              to={`/editor/HTML/${task.taskId}`}
-              key={index}
-              style={{ textDecoration: "none" }}
-            >
-              <HtmlCards
-                header={`Lesson ${lessonNumber}`} // Use the calculated lesson number
-                img='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/512px-HTML5_Badge.svg.png?20110131171049'
-                title={task.taskTitle}
-                authorInfo={getAuthorInfo(task.authorIndex)}
-                introduction={task.introduction}
-                difficulty={task.difficulty}
-              />
-            </Link>
-          );
-        })}
+        <FilteredTasks
+          tasks={tasksData.HTML}
+          completedTasksKey='HTML_completedTasks'
+          showCompleted={showCompleted}
+          showUncompleted={showUncompleted}
+          showEasy={showEasy}
+          showHard={showHard}
+          getCompletedTasksCount={getCompletedTasksCount}
+          getAuthorInfo={getAuthorInfo}
+          lessonType='HTML'
+        />
       </div>
       <Footer />
     </>
