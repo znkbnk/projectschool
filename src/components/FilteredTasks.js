@@ -1,8 +1,8 @@
 // FilteredTasks.js
 
 import React from "react";
-import HtmlLessonsCards from "./LessonsCards";
 import { Link } from "react-router-dom";
+import LessonsCards from "./LessonsCards";
 
 const FilteredTasks = ({
   tasks,
@@ -12,7 +12,6 @@ const FilteredTasks = ({
   showEasy,
   showHard,
   getAuthorInfo,
-  lessonType, // Add lessonType prop
 }) => {
   const filteredTasks = tasks.filter((task) => {
     const completedTasks =
@@ -44,14 +43,14 @@ const FilteredTasks = ({
         const lessonNumber = originalIndex + 1;
         return (
           <div key={index}>
-            {/* Render your task component here */}
+           
             <Link
               to={`/editor/${task.taskType}/${task.taskId}`}
               style={{ textDecoration: "none" }}
             >
-              <HtmlLessonsCards
+              <LessonsCards
                 header={`Lesson ${lessonNumber}`}
-                img={task.img} // Use the img URL from task data
+                img={task.img} 
                 title={task.taskTitle}
                 authorInfo={getAuthorInfo(task.authorIndex)}
                 introduction={task.introduction}
