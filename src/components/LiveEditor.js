@@ -1,3 +1,4 @@
+// LiveEditor.js
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -5,15 +6,12 @@ import { tasksData } from "./tasksData";
 import Navbar from "./Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
-import image1 from "../images/pslogo.png";
-import sectionImg4 from "../images/sectionImg4.png";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
   const [isCompleted, setIsCompleted] = useState(false);
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
   const [showContent, setShowContent] = useState(true);
-  const [taskText, setTaskText] = useState("");
 
   const navigate = useNavigate();
 
@@ -104,7 +102,8 @@ const LiveEditor = () => {
             <div className='text-window'>
               {lessonType ? (
                 <p>
-                  {lessonType} lesson: {taskText}
+                  {lessonType} lesson:{" "}
+                  {tasksData[lessonType][currentTaskIndex].taskText}
                 </p>
               ) : (
                 <p>Start Practicing...</p>
@@ -138,21 +137,6 @@ const LiveEditor = () => {
         ></iframe>
       </div>
       <ToastContainer />
-      {showContent && (
-        <div className='continue-on-computer'>
-          <div className='word-container'>
-            <img src={sectionImg4} alt='logo' className='sectionImg4'></img>
-            <p>
-              For optimal user experience, it is recommended to utilize a
-              computer. Additionally, employing a computer can enhance
-              efficiency and productivity.
-            </p>
-            <div className='sectionImages-container'>
-              <img className='projectschoolImg' src={image1} alt='logo'></img>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

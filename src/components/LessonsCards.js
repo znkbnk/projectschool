@@ -16,7 +16,7 @@ const LessonsCards = ({
       <div className='lessons-card'>
         <h3>{header}</h3>
         <img
-          src={img} // Use the img prop here
+          src={img} 
           alt={title}
         />
         <div className='lessons-card-body'>

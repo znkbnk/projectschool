@@ -1,5 +1,3 @@
-// FilteredTasks.js
-
 import React from "react";
 import { Link } from "react-router-dom";
 import LessonsCards from "./LessonsCards";
@@ -7,56 +5,63 @@ import LessonsCards from "./LessonsCards";
 const FilteredTasks = ({
   tasks,
   completedTasksKey,
+  getAuthorInfo,
   showCompleted,
   showUncompleted,
   showEasy,
   showHard,
-  getAuthorInfo,
 }) => {
-  const filteredTasks = tasks.filter((task) => {
+  // Determine if a task is available based on completion status
+  const isTaskAvailable = (task) => {
     const completedTasks =
       JSON.parse(localStorage.getItem(completedTasksKey)) || {};
-    if (showCompleted && completedTasks[task.taskId]) {
+    const taskIndex = tasks.findIndex(
+      (originalTask) => originalTask.taskId === task.taskId
+    );
+    return taskIndex === 0 || completedTasks[tasks[taskIndex - 1].taskId];
+  };
+
+  // Filter tasks based on the selected filters
+  const filterTasks = (task) => {
+    if (
+      (showCompleted && task.completed) ||
+      (showUncompleted && !task.completed) ||
+      (showEasy && task.difficulty === "Easy") ||
+      (showHard && task.difficulty === "Hard")
+    ) {
       return true;
     }
-    if (showUncompleted && !completedTasks[task.taskId]) {
-      return true;
-    }
-    if (showEasy && task.difficulty === "Easy") {
-      return true;
-    }
-    if (showHard && task.difficulty === "Hard") {
-      return true;
-    }
-    if (!showEasy && !showHard && !showCompleted && !showUncompleted) {
-      return true;
+    if (!showCompleted && !showUncompleted && !showEasy && !showHard) {
+      return true; // Show all if no filter is applied
     }
     return false;
-  });
+  };
 
   return (
     <>
-      {filteredTasks.map((task, index) => {
+      {tasks.map((task, index) => {
+        const isAvailable = isTaskAvailable(task);
         const originalIndex = tasks.findIndex(
           (originalTask) => originalTask.taskId === task.taskId
         );
         const lessonNumber = originalIndex + 1;
         return (
           <div key={index}>
-           
-            <Link
-              to={`/editor/${task.taskType}/${task.taskId}`}
-              style={{ textDecoration: "none" }}
-            >
-              <LessonsCards
-                header={`Lesson ${lessonNumber}`}
-                img={task.img} 
-                title={task.taskTitle}
-                authorInfo={getAuthorInfo(task.authorIndex)}
-                introduction={task.introduction}
-                difficulty={task.difficulty}
-              />
-            </Link>
+            {isAvailable && filterTasks(task) && (
+              <Link
+                to={`/editor/${task.taskType}/${task.taskId}`}
+                style={{ textDecoration: "none" }}
+              >
+                <LessonsCards
+                  header={`Lesson ${lessonNumber}`}
+                  img={task.img}
+                  title={task.taskTitle}
+                  authorInfo={getAuthorInfo(task.authorIndex)}
+                  introduction={task.introduction}
+                  difficulty={task.difficulty}
+                />
+              </Link>
+            )}
           </div>
         );
       })}
