@@ -18,6 +18,7 @@ import Pricing from "./components/Pricing";
 import Success from "./components/Success";
 import Cancel from "./components/Cancel";
 import Checkout from "./components/Checkout";
+import AuthGuard from "./components/AuthGuard";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -33,20 +34,22 @@ function App() {
         <Route path='/' element={<Welcome />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='/exercises' element={<Exercises />} />
-        <Route path='/htmllessons' element={<HtmlLessons />} />
-        <Route path='/csslessons' element={<CssLessons />} />
-        <Route path='/reactlessons' element={<ReactLessons />} />
-        <Route path='/livechat' element={<LiveChat />} />
-        <Route path='/resetPassword' element={<ResetPassword />} />
-        <Route path='/editor' element={<LiveEditor />} />
-        <Route path='/editor/:lessonType/:taskId' element={<LiveEditor />} />
-        <Route path='/authors' element={<AuthorList />} />
-        <Route path='/faq' element={<Faq />} />
         <Route path='/pricing' element={<Pricing />} />
-        <Route path='success' element={<Success />} />
-        <Route path='cancel' element={<Cancel />} />
-        <Route element={<Checkout />} />
+        <Route path='/faq' element={<Faq />} />
+        <Route element={<AuthGuard />}>
+          <Route path='/exercises' element={<Exercises />} />
+          <Route path='/htmllessons' element={<HtmlLessons />} />
+          <Route path='/csslessons' element={<CssLessons />} />
+          <Route path='/reactlessons' element={<ReactLessons />} />
+          <Route path='/livechat' element={<LiveChat />} />
+          <Route path='/resetPassword' element={<ResetPassword />} />
+          <Route path='/editor' element={<LiveEditor />} />
+          <Route path='/editor/:lessonType/:taskId' element={<LiveEditor />} />
+          <Route path='/authors' element={<AuthorList />} />
+          <Route path='success' element={<Success />} />
+          <Route path='cancel' element={<Cancel />} />
+          <Route element={<Checkout />} />
+        </Route>
       </Routes>
     </div>
   );
