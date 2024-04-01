@@ -10,22 +10,13 @@ import FilteredTasks from "./FilteredTasks";
 function ReactLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
-  const [showCompleted, setShowCompleted] = useState(false);
-  const [showUncompleted, setShowUncompleted] = useState(false);
-  const [filters, setFilters] = useState([
-    "All",
-    "Easy",
-    "Hard",
-    "Completed",
-    "Uncompleted",
-  ]);
+
+  const [filters, setFilters] = useState(["All", "Easy", "Hard"]);
   const numLessons = tasksData.React.length;
 
   const handleFilterClick = (filterType) => {
     setShowEasy(filterType === "Easy");
     setShowHard(filterType === "Hard");
-    setShowCompleted(filterType === "Completed");
-    setShowUncompleted(filterType === "Uncompleted");
   };
 
   const getCompletedTasksCount = () => {
@@ -63,8 +54,6 @@ function ReactLessons() {
         <FilteredTasks
           tasks={tasksData.React}
           completedTasksKey='CSS_completedTasks'
-          showCompleted={showCompleted}
-          showUncompleted={showUncompleted}
           showEasy={showEasy}
           showHard={showHard}
           getCompletedTasksCount={getCompletedTasksCount}

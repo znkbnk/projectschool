@@ -12,22 +12,19 @@ import FilteredTasks from "./FilteredTasks";
 function HtmlLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
-  const [showCompleted, setShowCompleted] = useState(false);
-  const [showUncompleted, setShowUncompleted] = useState(false);
+  
   const [filters, setFilters] = useState([
     "All",
     "Easy",
     "Hard",
-    "Completed",
-    "Uncompleted",
+   
   ]);
   const numLessons = tasksData.HTML.length;
 
   const handleFilterClick = (filterType) => {
     setShowEasy(filterType === "Easy");
     setShowHard(filterType === "Hard");
-    setShowCompleted(filterType === "Completed");
-    setShowUncompleted(filterType === "Uncompleted");
+    
   };
 
   const getCompletedTasksCount = () => {
@@ -65,8 +62,7 @@ function HtmlLessons() {
         <FilteredTasks
           tasks={tasksData.HTML}
           completedTasksKey='HTML_completedTasks'
-          showCompleted={showCompleted}
-          showUncompleted={showUncompleted}
+          
           showEasy={showEasy}
           showHard={showHard}
           getCompletedTasksCount={getCompletedTasksCount}
