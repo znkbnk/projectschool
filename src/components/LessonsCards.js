@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const LessonsCards = ({
   header,
@@ -7,13 +7,24 @@ const LessonsCards = ({
   authorInfo,
   introduction,
   difficulty,
+  taskId,
+  completedTasksKey, 
 }) => {
   const { name } = authorInfo;
+  const [isCompleted, setIsCompleted] = useState(false);
+
+  useEffect(() => {
+    const completedTasks =
+      JSON.parse(localStorage.getItem(completedTasksKey)) || {}; // Use completedTasksKey dynamically
+    setIsCompleted(completedTasks[taskId] || false);
+  }, [taskId, completedTasksKey]); // Include completedTasksKey in dependencies
 
   return (
     <div>
       <div className='lessons-card'>
-        <h3>{header}</h3>
+        <h3>
+          {header} {isCompleted ? " ✅" : " ⚙️"}
+        </h3>
         <img src={img} alt={title} />
         <div className='lessons-card-body'>
           <h3>{title}</h3>

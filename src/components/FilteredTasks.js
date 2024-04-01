@@ -9,7 +9,6 @@ const FilteredTasks = ({
   showEasy,
   showHard,
 }) => {
-  // Determine if a task is available based on completion status
   const isTaskAvailable = (task) => {
     const completedTasks =
       JSON.parse(localStorage.getItem(completedTasksKey)) || {};
@@ -31,11 +30,12 @@ const FilteredTasks = ({
     }
 
     if (!showEasy && !showHard) {
-      return isAvailable; // Return true only if the task is available
+      return isAvailable; 
     }
 
     return false;
   };
+  
 
   return (
     <>
@@ -58,6 +58,8 @@ const FilteredTasks = ({
                   authorInfo={getAuthorInfo(task.authorIndex)}
                   introduction={task.introduction}
                   difficulty={task.difficulty}
+                  taskId={task.taskId}
+                  completedTasksKey={completedTasksKey}
                 />
               </div>
             ) : (
@@ -78,6 +80,8 @@ const FilteredTasks = ({
                       authorInfo={getAuthorInfo(task.authorIndex)}
                       introduction={task.introduction}
                       difficulty={task.difficulty}
+                      taskId={task.taskId}
+                      completedTasksKey={completedTasksKey}
                     />
                   )}
                 </div>
