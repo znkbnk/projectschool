@@ -34,8 +34,9 @@ h5 {
   cursor: pointer;
   transition: all ease 200ms;
   text-decoration: none;
-  filter: blur(0);
 }
+
+
 
 .lessons-card:hover {
   transform: scale(1.03);
@@ -78,6 +79,6 @@ h5 {
   align-items: center;
 }
 
-
-
-
+.lessons-card.unavailable .lessons-card-body {
+  filter: blur(5px); /* Apply blur effect to unavailable tasks */
+}

@@ -1,9 +1,8 @@
 import React from "react";
-import "../styles/lessons.css";
 
 const LessonsCards = ({
   header,
-  img, 
+  img,
   title,
   authorInfo,
   introduction,
@@ -15,10 +14,7 @@ const LessonsCards = ({
     <div>
       <div className='lessons-card'>
         <h3>{header}</h3>
-        <img
-          src={img} 
-          alt={title}
-        />
+        <img src={img} alt={title} />
         <div className='lessons-card-body'>
           <h3>{title}</h3>
           <p>{introduction}</p>
