@@ -1,0 +1,150 @@
+/* 
+==================
+==================
+Global
+==================
+==================
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  margin: 0;
+  /* Font */
+  font-family: "Montserrat", sans-serif;
+  color: #dfd3d3;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  /* Prevent horizontal scrollbar */
+  overflow-x: hidden;
+}
+
+/* Layout */
+.page-section {
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5em 0;
+}
+
+.blogPage p {
+  line-height: 1.7em;
+}
+
+/* Links */
+
+/* Buttons */
+button {
+  padding: 1.4em 2.6em;
+  letter-spacing: 0.12em;
+  background: #3b3a3a;
+  border: none;
+  outline: none;
+  transition: ease 2s;
+}
+
+button:hover {
+  background: #7c7373;
+}
+
+/* 
+==================
+==================
+Gooey Effect
+==================
+==================
+*/
+.goo-container {
+  position: relative;
+}
+
+.goo-container img {
+  width: 20%;
+}
+
+.goo-box {
+  position: absolute;
+  height: 100%;
+  width: 140%;
+  top: 0;
+  left: 0;
+  margin: auto;
+  margin-left: -20%;
+  background: linear-gradient(90deg, #444442, #a39e9c);
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+  transform: translateZ(0);
+  z-index: -1;
+}
+
+/* Remove undesired SVG space */
+svg {
+  width: 0;
+  height: 0;
+  /*display: none;*/ /* Don`t use "display none" or Firefox will omit the effect. */
+}
+
+/* 
+==================
+==================
+Cursor
+==================
+==================
+*/
+
+.true-cursor {
+  background: rgba(250, 181, 153, 0.35);
+}
+
+/* Cursor animations: True Cursor */
+@keyframes truepointeron {
+  0% {
+    transform: scale(1);
+    background: rgba(250, 181, 153, 0.35);
+  }
+  100% {
+    transform: scale(0.3);
+    background: #ef8b8b;
+  }
+}
+
+@keyframes truepointeroff {
+  0% {
+    transform: scale(0.3);
+    background: #ef8b8b;
+  }
+  100% {
+    transform: scale(1);
+    background: rgba(250, 181, 153, 0.35);
+  }
+}
+
+/* Cursor animations: Gooey Cursor */
+@keyframes goopointeron {
+  0% {
+    transform: scale(1);
+    background: #fab599;
+  }
+  100% {
+    transform: scale(0);
+    background: #ef8b8b;
+  }
+}
+
+@keyframes goopointeroff {
+  0% {
+    transform: scale(0);
+    background: #ef8b8b;
+  }
+  100% {
+    transform: scale(1);
+    background: #fab599;
+  }
+}

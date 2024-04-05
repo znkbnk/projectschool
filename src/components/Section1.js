@@ -11,7 +11,6 @@ import WelcomeWord from "./WelcomeWord";
 import { Link } from "react-router-dom";
 
 function Section1() {
-  const [scrollPosition, setScrollPosition] = useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
     const slides = [
       {
@@ -106,21 +105,8 @@ function Section1() {
       }, 700);
     };
 
-  useEffect(() => {
-    function handleScroll() {
-      const position = window.scrollY;
-      setScrollPosition(position);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  // Calculate lightness based on scroll position (limiting to 90%)
-  const lightness = Math.min((scrollPosition / 40) * 0.05, 90);
+ 
+  
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -179,10 +165,7 @@ function Section1() {
   return (
     <div
       className='container'
-      style={{
-        backgroundColor: `hsl(203, 92%, ${lightness}%)`,
-        transition: "background-color 0.3s ease-in-out",
-      }}
+    
     >
       <header>
         <WelcomeWord />
@@ -239,17 +222,25 @@ function Section1() {
 
           <div className='ipsGrid_span7 ipsType_left'>
             <h2 className='heading_large gs_reveal'>
-              HTML Fundamentals and Hands-On <strong>Exercises:</strong>
+              Dynamic Web Development with JavaScript
             </h2>
             <ul className='gs_reveal section1-list'>
-              <li>Introduction to HTML tags and elements</li>
-              <li>Creating a basic HTML document structure</li>
               <li>
-                Hands-on exercises to build various types of web pages using
-                HTML
+                Understanding functions as first-class citizens, closures, and
+                scope.
               </li>
               <li>
-                Incorporating semantic HTML for better accessibility and SEO
+                {" "}
+                Interacting with the Document Object Model (DOM) to dynamically
+                update web pages.
+              </li>
+              <li>
+                Handling asynchronous operations using callbacks, Promises, and
+                async/await.
+              </li>
+              <li>
+                Exploring JavaScript's object-oriented features like classes,
+                inheritance, and prototypes.
               </li>
             </ul>
           </div>

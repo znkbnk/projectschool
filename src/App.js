@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Welcome from "./components/Welcome";
@@ -18,41 +18,96 @@ import Pricing from "./components/Pricing";
 import Success from "./components/Success";
 import Cancel from "./components/Cancel";
 import Checkout from "./components/Checkout";
-import AuthGuard from "./components/AuthGuard";
+import Blog from "./components/Blog";
+import BlogPage from "./components/BlogPage";
+import { auth } from "./components/firebase";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
   return null;
 }
 
-function App() {
+const App = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setIsLoggedIn(!!user);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div>
       <ToastContainer />
       <ScrollToTopOnNavigation />
       <Routes>
         <Route path='/' element={<Welcome />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/signup' element={<Signup />} />
+        <Route
+          path='/login'
+          element={isLoggedIn ? <Navigate to='/' /> : <Login />}
+        />
+        <Route
+          path='/signup'
+          element={isLoggedIn ? <Navigate to='/' /> : <Signup />}
+        />
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/faq' element={<Faq />} />
-        <Route element={<AuthGuard />}>
-          <Route path='/exercises' element={<Exercises />} />
-          <Route path='/htmllessons' element={<HtmlLessons />} />
-          <Route path='/csslessons' element={<CssLessons />} />
-          <Route path='/reactlessons' element={<ReactLessons />} />
-          <Route path='/livechat' element={<LiveChat />} />
-          <Route path='/resetPassword' element={<ResetPassword />} />
-          <Route path='/editor' element={<LiveEditor />} />
-          <Route path='/editor/:lessonType/:taskId' element={<LiveEditor />} />
-          <Route path='/authors' element={<AuthorList />} />
-          <Route path='success' element={<Success />} />
-          <Route path='cancel' element={<Cancel />} />
-          <Route element={<Checkout />} />
-        </Route>
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/blog/:id' element={<BlogPage />} />
+
+        <Route
+          path='/exercises'
+          element={isLoggedIn ? <Exercises /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/htmllessons'
+          element={isLoggedIn ? <HtmlLessons /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/csslessons'
+          element={isLoggedIn ? <CssLessons /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/reactlessons'
+          element={isLoggedIn ? <ReactLessons /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/livechat'
+          element={isLoggedIn ? <LiveChat /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/resetPassword'
+          element={isLoggedIn ? <ResetPassword /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/editor'
+          element={isLoggedIn ? <LiveEditor /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/editor/:lessonType/:taskId'
+          element={isLoggedIn ? <LiveEditor /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/authors'
+          element={isLoggedIn ? <AuthorList /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/success'
+          element={isLoggedIn ? <Success /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/cancel'
+          element={isLoggedIn ? <Cancel /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/checkout'
+          element={isLoggedIn ? <Checkout /> : <Navigate to='/login' />}
+        />
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

@@ -18,7 +18,7 @@ const onLogin = (e) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      navigate("/exercises");
+      navigate("/");
       toast.success("Logged in successfully");
       console.log(user);
     })

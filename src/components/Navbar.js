@@ -19,7 +19,7 @@ const Navbar = () => {
         console.log(error.message);
       }); 
   };
-
+ 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -91,7 +91,7 @@ const Navbar = () => {
               <Link to='/editor' className='nav-link'>
                 Live Editor
               </Link>
-            </div>
+            </div> 
           ) : (
             <>
               <Link to='/blog' className='nav-link'>

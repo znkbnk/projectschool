@@ -1,26 +1,20 @@
-// AuthGuard.js
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { Navigate, useLocation } from "react-router-dom";
 import { auth } from "./firebase";
 
 const AuthGuard = ({ children }) => {
-  const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const location = useLocation();
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        setIsLoggedIn(true);
-      } else {
-        setIsLoggedIn(false);
-        navigate("/login");
-      }
-    });
+  // Check if user is authenticated
+  const isAuthenticated = auth.currentUser !== null;
 
-    return () => unsubscribe();
-  }, [navigate]);
+  // Redirect to login if not authenticated
+  if (!isAuthenticated) {
+    return <Navigate to='/login' state={{ from: location }} />;
+  }
 
-  return isLoggedIn ? <>{children}</> : null;
+  // Render children if authenticated
+  return <>{children}</>;
 };
 
 export default AuthGuard;

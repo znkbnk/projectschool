@@ -9,17 +9,12 @@ function Footer() {
     <footer id='footer'>
       <div className='main-footer'>
         <div className='logoinfo' data-aos='fade-up'>
-          <h2>Responsive Footer</h2>
           <div className='contact-details'>
-            <h1>Contact Us</h1> 
+            <h1>Contact Us</h1>
             <ul>
               <li>
-                <div className='fa fa-phone'></div>
-                <a href='tel:+91'>+44 7xxxxxxxxxx</a>
-              </li>
-              <li>
                 <div className='fa fa-envelope'></div>
-                <a href='mailto:yourmail@gmail.com'>yourmail@gmail.com</a>
+                <a href='mailto:yourmail@gmail.com'>zenikibeniki@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -28,16 +23,13 @@ function Footer() {
           <h1>About</h1>
           <ul>
             <li>
-              <Link to='/home'>Home</Link>
+              <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to='/about'>About</Link>
+              <Link to='/faq'>FAQ</Link>
             </li>
             <li>
               <Link to='/projects'>Projects</Link>
-            </li>
-            <li>
-              <Link to='/contact'>Contact</Link>
             </li>
           </ul>
         </div>
@@ -53,24 +45,17 @@ function Footer() {
                 <i className='fab fa-instagram'></i>
               </a>
               <a
-                href='your_linkedin_link_here'
+                href='https://github.com/znkbnk'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <i className='fab fa-linkedin'></i>
-              </a>
-              <a
-                href='your_youtube_link_here'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <i className='fab fa-youtube'></i>
+                <i className='fa-brands fa-github'></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div className="copyright">© Your Copyright 2024 All Rights Reserved</div>
+      <div className='copyright'>© Your Copyright 2024 All Rights Reserved</div>
     </footer>
   );
 }

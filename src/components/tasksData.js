@@ -346,5 +346,60 @@ const faqData = [
     answer: "3",
   },
 ];
+const blogCards = [
+  {
+    id: 1,
+    category: "React",
+    title: "How to create Authentication Guard Component",
+    extract:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, omnis placeat. Aut ipsum tenetur temporibus asperiores cumque, iure deserunt quis...",
+    date: "07 june 2020",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.png",
+  },
+  {
+    id: 2,
 
-export { tasksData, authorsData, faqData };
+    category: "JavaScript",
+    title: "Filtering Logic Mastery",
+    extract:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, omnis placeat. Aut ipsum tenetur temporibus asperiores cumque, iure deserunt quis...",
+    date: "07 june 2020",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png",
+  },
+  
+  
+];
+const blogTopic = [
+  {
+    id: 1,
+    paragraph1: "text1",
+    paragraph2: "text2",
+    paragraph3: "text3",
+    paragraph4: "text4",
+  },
+  {
+    id: 2,
+    paragraph1: "text10",
+    paragraph2: "text20",
+    paragraph3: "text30",
+    paragraph4: "text40",
+  },
+  {
+    id: 3,
+    paragraph1: "text100",
+    paragraph2: "text200",
+    paragraph3: "text300",
+    paragraph4: "text400",
+  },
+  {
+    id: 4,
+    paragraph1: "text10",
+    paragraph2: "text20",
+    paragraph3: "text30",
+    paragraph4: "text40",
+  },
+];
+
+export { tasksData, authorsData, faqData, blogCards, blogTopic };
