@@ -19,13 +19,10 @@ const Signup = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        // Check if the user's email is verified
         if (!user.emailVerified) {
-          // If email is not verified, sign out the user
           auth.signOut();
           toast.error("Please verify your email before logging in.");
         } else {
-          // If email is verified, set logged in state
           setLoggedIn(true);
         }
       } else {
@@ -42,28 +39,30 @@ const Signup = () => {
       toast.error("Password must be at least 6 characters long");
       return;
     }
-    await createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        sendVerificationEmail(user);
-        setIsSignUpSuccess(true); // Set signup success flag
-        toast.success("User signed up successfully! Please verify your email.");
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        console.error(errorMessage);
-        toast.error(errorMessage);
-      });
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      await sendVerificationEmail(user);
+      setIsSignUpSuccess(true); // Set signup success flag
+      toast.success("User signed up successfully! Please verify your email.");
+    } catch (error) {
+      const errorMessage = error.message;
+      console.error(errorMessage);
+      toast.error(errorMessage);
+    }
   };
 
-  const sendVerificationEmail = (user) => {
-    sendEmailVerification(user)
-      .then(() => {
-        console.log("Verification email sent");
-      })
-      .catch((error) => {
-        console.error("Error sending verification email:", error);
-      });
+  const sendVerificationEmail = async (user) => {
+    try {
+      await sendEmailVerification(user);
+      console.log("Verification email sent");
+    } catch (error) {
+      console.error("Error sending verification email:", error);
+    }
   };
 
   if (loggedIn) {
@@ -113,7 +112,7 @@ const Signup = () => {
       <Navbar />
       <div className='login-container'>
         <section id='entry-page'>
-          <form>
+          <form onSubmit={onSubmit}>
             <h2>Sign Up!</h2>
             <fieldset>
               <legend>Create Account</legend>
@@ -142,9 +141,7 @@ const Signup = () => {
                 </li>
               </ul>
             </fieldset>
-            <button type='submit' onClick={onSubmit}>
-              Sign up
-            </button>
+            <button type='submit'>Sign up</button>
             <Link to='/login'>
               <button className='login-button' type='button'>
                 Have an Account?

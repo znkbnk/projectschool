@@ -16,36 +16,34 @@ const Login = () => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
         const user = userCredential.user;
+        // Check if user's email is verified
+        if (!user.emailVerified) {
+          // If email is not verified, sign out the user and show an error message
+          auth.signOut();
+          toast.error("Please verify your email before logging in.");
+          return;
+        }
+        // If email is verified, navigate to the home page or wherever you want
         navigate("/");
         toast.success("Logged in successfully");
-        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         if (errorCode === "auth/wrong-password") {
-          // Display error message for incorrect password
           toast.error("Incorrect email/password. Please try again.");
         } else if (errorCode === "auth/user-not-found") {
-          // Display error message for user not found
           toast.error("User not found. Please check your email.");
         } else {
-          // Display generic error message for other errors
-          toast.error("Incorrect email/password. Please try again.");
+          toast.error("Error: " + errorMessage);
           console.error(errorCode, errorMessage);
         }
       });
   };
-  function ScrollToTopOnNavigation() {
-    window.scrollTo(0, 0);
-    return null;
-  }
 
   return (
     <div>
-      <ScrollToTopOnNavigation />
       <Navbar />
       <div className='login-container'>
         <section id='entry-page'>
