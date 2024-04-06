@@ -23,7 +23,7 @@ body {
 .page-section {
   width: 80%;
   margin: 0 auto;
-  padding: 5em 0;
+ 
 }
 
 .blogPage p {
@@ -54,6 +54,7 @@ body {
 .page-section button:hover {
   background: #d4cfcf;
 }
+
 
 /* 
 ==================

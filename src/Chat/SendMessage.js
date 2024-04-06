@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { auth, db } from "./firebase";
+import { auth, db } from "../components/firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-
 const SendMessage = ({ scroll }) => {
   const [message, setMessage] = useState("");
 
@@ -25,7 +24,8 @@ const SendMessage = ({ scroll }) => {
         email: currentUser ? currentUser.email : null,
       });
       setMessage("");
-      scroll.current.scrollIntoView({ behavior: "smooth" });
+      // Ensure scroll is defined before accessing current property
+      scroll?.current?.scrollIntoView({ behavior: "smooth" });
     } catch (error) {
       console.error("Error sending message: ", error);
     }
@@ -51,3 +51,4 @@ const SendMessage = ({ scroll }) => {
 };
 
 export default SendMessage;
+

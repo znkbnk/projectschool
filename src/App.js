@@ -9,7 +9,7 @@ import Exercises from "./components/Exercises";
 import HtmlLessons from "./components/HtmlLessons";
 import ReactLessons from "./components/ReactLessons";
 import CssLessons from "./components/CssLessons";
-import LiveChat from "./components/LiveChat";
+import LiveChat from "./Chat/LiveChat";
 import ResetPassword from "./components/ResetPassword";
 import LiveEditor from "./components/LiveEditor";
 import AuthorList from "./components/AuthorList";

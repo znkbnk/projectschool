@@ -1,12 +1,12 @@
 // LiveChat.js
 
 import React, { useState, useEffect } from "react";
-import { auth } from "./firebase";
+import { auth } from "../components/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import LiveChatNavBar from "./LiveChatNavBar";
 import ChatBox from "./ChatBox";
 import LiveChatWelcome from "./LiveChatWelcome";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 function LiveChat() {
   const [user] = useAuthState(auth);

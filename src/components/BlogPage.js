@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { blogTopic } from "./tasksData";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Button from "./Button";
 import authorBackground from "../images/authorBackground.jpg";
 import "../styles/blogPage.css";
 
@@ -20,13 +21,20 @@ const BlogPage = () => {
     .filter((key) => key.startsWith("paragraph"))
     .map((key) => currentBlog[key]);
 
+    function ScrollToTopOnNavigation() {
+      window.scrollTo(0, 0);
+      return null;
+    }
+
   return (
     <div className='blogPage'>
+      <ScrollToTopOnNavigation />
+
       <Navbar />
       <div key={currentBlog.id}>
         <div className='goo-container'>
           <section className='page-section'>
-            <img src={authorBackground} alt='sdf' />
+            <img src={require(`../images/${currentBlog.image}`)} alt='Author' />
             <p>{paragraphs[0]}</p>
           </section>
         </div>
@@ -51,9 +59,7 @@ const BlogPage = () => {
 
         <section className='page-section'>
           <p>{paragraphs[paragraphs.length - 1]}</p>
-          <Link to='/editor'>
-            <button>Start Practice</button>
-          </Link>
+          <Button title='Start Practicing' to='/editor' />
         </section>
       </div>
       <Footer />

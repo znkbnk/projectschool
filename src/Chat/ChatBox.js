@@ -6,7 +6,7 @@ import {
   onSnapshot,
   limit,
 } from "firebase/firestore";
-import { db } from "./firebase";
+import { db } from "../components/firebase";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
 
@@ -17,7 +17,7 @@ const ChatBox = () => {
   useEffect(() => {
     const q = query(
       collection(db, "messages"),
-      orderBy("createdAt", "asc"), 
+      orderBy("createdAt", "asc"),
       limit(50)
     );
 
