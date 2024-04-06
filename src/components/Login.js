@@ -5,31 +5,39 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import Footer from "./Footer"; 
+import Footer from "./Footer";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-const onLogin = (e) => {
-  e.preventDefault();
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
-      navigate("/");
-      toast.success("Logged in successfully");
-      console.log(user);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode, errorMessage);
-    });
-};
-
-
+  const onLogin = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        navigate("/");
+        toast.success("Logged in successfully");
+        console.log(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        if (errorCode === "auth/wrong-password") {
+          // Display error message for incorrect password
+          toast.error("Incorrect email/password. Please try again.");
+        } else if (errorCode === "auth/user-not-found") {
+          // Display error message for user not found
+          toast.error("User not found. Please check your email.");
+        } else {
+          // Display generic error message for other errors
+          toast.error("Incorrect email/password. Please try again.");
+          console.error(errorCode, errorMessage);
+        }
+      });
+  };
 
   return (
     <div>

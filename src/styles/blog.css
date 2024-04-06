@@ -34,16 +34,16 @@
 }
 
 .card-container.JavaScript {
-  border-left: 8px solid #f7df1e;
+  border-left: 8px solid #FDCC0D;
 }
 .card-container.JavaScript:hover .card-title {
-  color: #f7df1e;
+  color: #FDCC0D;
 }
 .card-container.JavaScript .card-category {
-  color: #f7df1e;
+  color: #FDCC0D;
 }
 .card-container.JavaScript .card-category::after {
-  background-color: #f7df1e;
+  background-color: #FDCC0D;
 }
 .card-container.JavaScript .card-date {
   color: #000000;
@@ -51,7 +51,7 @@
 
 .card-container {
   width: 600px;
-  height: 250px;
+  height: auto;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -114,10 +114,10 @@
 }
 
 .card-body {
-  height: 200px;
+  margin: 20px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between; /* Adjust alignment */
+  align-items: stretch; /* Stretch items vertically */
 }
 
 .card-content {
@@ -128,6 +128,7 @@
 .card-title {
   font-weight: 700;
   font-size: 1.2rem;
+  padding: 10px;
 }
 
 .card-date {
@@ -137,9 +138,11 @@
 }
 
 .card-extract {
+  flex: 1;
   color: #808080;
   font-size: 0.9rem;
   font-weight: 300;
+  padding: 0 10px; 
 }
 
 .card-thumb {

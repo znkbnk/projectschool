@@ -7,8 +7,14 @@ import Footer from "./Footer";
 import BlogTitle from './BlogTitle'
 
 function Blog() {
+  function ScrollToTopOnNavigation() {
+    window.scrollTo(0, 0);
+    return null;
+  }
   return (
     <div className='blog-container'>
+      <ScrollToTopOnNavigation />
+
       <Navbar />
 
       <div className='blog-cards'>

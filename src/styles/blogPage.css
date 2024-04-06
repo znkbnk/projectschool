@@ -15,43 +15,44 @@ html,
 body {
   position: relative;
   margin: 0;
-  /* Font */
-  font-family: "Montserrat", sans-serif;
-  color: #dfd3d3;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  /* Prevent horizontal scrollbar */
+  color: #ffffff;
   overflow-x: hidden;
 }
 
 /* Layout */
 .page-section {
   width: 80%;
-  max-width: 600px;
   margin: 0 auto;
   padding: 5em 0;
 }
 
 .blogPage p {
   line-height: 1.7em;
+  max-width: 600px; /* Set the width of paragraphs */
+  margin: 0 auto; /* Center paragraphs horizontally */
+  text-align: center; /* Justify text */
+  word-wrap: break-word;
+}
+.blogPage ul {
+  line-height: 1.7em;
+  max-width: 600px; /* Set the width of paragraphs */
+  margin: 0 auto; /* Center paragraphs horizontally */
+  text-align: justify; /* Justify text */
+  word-wrap: break-word;
 }
 
-/* Links */
-
 /* Buttons */
-button {
+.page-section button {
   padding: 1.4em 2.6em;
   letter-spacing: 0.12em;
-  background: #3b3a3a;
+  background: #6d6b6b;
   border: none;
   outline: none;
   transition: ease 2s;
 }
 
-button:hover {
-  background: #7c7373;
+.page-section button:hover {
+  background: #d4cfcf;
 }
 
 /* 
@@ -66,85 +67,12 @@ Gooey Effect
 }
 
 .goo-container img {
-  width: 20%;
+  width: 800px;
+  height: 300px;
+  border-radius: 25px;
 }
 
-.goo-box {
-  position: absolute;
-  height: 100%;
-  width: 140%;
-  top: 0;
-  left: 0;
-  margin: auto;
-  margin-left: -20%;
-  background: linear-gradient(90deg, #444442, #a39e9c);
-  -webkit-filter: url("#goo");
-  filter: url("#goo");
-  transform: translateZ(0);
-  z-index: -1;
-}
-
-/* Remove undesired SVG space */
-svg {
-  width: 0;
-  height: 0;
-  /*display: none;*/ /* Don`t use "display none" or Firefox will omit the effect. */
-}
-
-/* 
-==================
-==================
-Cursor
-==================
-==================
-*/
-
-.true-cursor {
-  background: rgba(250, 181, 153, 0.35);
-}
-
-/* Cursor animations: True Cursor */
-@keyframes truepointeron {
-  0% {
-    transform: scale(1);
-    background: rgba(250, 181, 153, 0.35);
-  }
-  100% {
-    transform: scale(0.3);
-    background: #ef8b8b;
-  }
-}
-
-@keyframes truepointeroff {
-  0% {
-    transform: scale(0.3);
-    background: #ef8b8b;
-  }
-  100% {
-    transform: scale(1);
-    background: rgba(250, 181, 153, 0.35);
-  }
-}
-
-/* Cursor animations: Gooey Cursor */
-@keyframes goopointeron {
-  0% {
-    transform: scale(1);
-    background: #fab599;
-  }
-  100% {
-    transform: scale(0);
-    background: #ef8b8b;
-  }
-}
-
-@keyframes goopointeroff {
-  0% {
-    transform: scale(0);
-    background: #ef8b8b;
-  }
-  100% {
-    transform: scale(1);
-    background: #fab599;
-  }
+.page-section:nth-child(odd) {
+  width: 100%;
+  background: linear-gradient(var(--color2), var(--fill2));
 }

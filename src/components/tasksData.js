@@ -352,8 +352,8 @@ const blogCards = [
     category: "React",
     title: "How to create Authentication Guard Component",
     extract:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, omnis placeat. Aut ipsum tenetur temporibus asperiores cumque, iure deserunt quis...",
-    date: "07 june 2020",
+      "Today we'll walk through the process of implementing authentication in a React application using Firebase and React Router. We'll create an AuthGuard component to manage the authentication state anr protect routes that require authentication, ensuring a seamless user experience.",
+    date: "04 April 2024",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.png",
   },
@@ -374,10 +374,25 @@ const blogCards = [
 const blogTopic = [
   {
     id: 1,
-    paragraph1: "text1",
-    paragraph2: "text2",
-    paragraph3: "text3",
-    paragraph4: "text4",
+    paragraph1:
+      "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.js or similar) where you initialize Firebase with your configuration. ",
+    paragraph2: ["Implement AuthGuard Component:",
+  "Create an AuthGuard.js file. This component will handle the authentication logic.",
+  "Inside the AuthGuard component, you're using useEffect hook to listen for changes in authentication state (onAuthStateChanged). When the authentication state changes, it updates the isLoggedIn state.",
+  "If the user is authenticated (user is not null), isLoggedIn is set to true. Otherwise, it's set to false, and the user is redirected to the login page using navigate(/login).",
+  "This component returns the children (components wrapped inside it) only if the user is authenticated. Otherwise, it returns null."],
+    paragraph3: [
+      "Import necessary modules from React",
+      "Import useNavigate hook from react-router-dom",
+      "Import the 'auth' object from './firebase' file",
+      "Define a functional component AuthGuard that takes 'children' as a prop",
+      "Initialize navigate function using the useNavigate hook from react-router-dom",
+      "Initialize 'isLoggedIn' state variable with false using useState hook",
+      "Implement useEffect hook",
+      "Call onAuthStateChanged method on 'auth' object to listen for authentication state changes",
+    ],
+    paragraph4: "",
+    
   },
   {
     id: 2,
