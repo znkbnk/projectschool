@@ -68,7 +68,7 @@ const Checkout = () => {
           </div>
         </div>
         <div className='text-container'>
-          <p className='text'>{isLoading ? "Loading..." : "Buy"}</p>
+          <p className='text'>{isLoading ? "Loading..." : "Get Started"}</p>
         </div>
       </button>
     </div>

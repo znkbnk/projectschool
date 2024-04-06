@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/login.css";
 import Navbar from "../components/Navbar";
-import { Link, useNavigate } from "react-router-dom";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { Link } from "react-router-dom";
+import {
+  createUserWithEmailAndPassword,
+  sendEmailVerification,
+} from "firebase/auth";
 import { auth } from "../components/firebase";
 import { toast } from "react-toastify";
 import Footer from "../components/Footer";
@@ -10,8 +13,28 @@ import Footer from "../components/Footer";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false); // Track signup success
+  const [loggedIn, setLoggedIn] = useState(false); // Track user login status
 
-  const navigate = useNavigate();
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        // Check if the user's email is verified
+        if (!user.emailVerified) {
+          // If email is not verified, sign out the user
+          auth.signOut();
+          toast.error("Please verify your email before logging in.");
+        } else {
+          // If email is verified, set logged in state
+          setLoggedIn(true);
+        }
+      } else {
+        setLoggedIn(false);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -22,22 +45,72 @@ const Signup = () => {
     await createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
-        navigate("/login");
-        toast.success("User signed up successfully!");
+        sendVerificationEmail(user);
+        setIsSignUpSuccess(true); // Set signup success flag
+        toast.success("User signed up successfully! Please verify your email.");
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+        console.error(errorMessage);
         toast.error(errorMessage);
       });
   };
 
+  const sendVerificationEmail = (user) => {
+    sendEmailVerification(user)
+      .then(() => {
+        console.log("Verification email sent");
+      })
+      .catch((error) => {
+        console.error("Error sending verification email:", error);
+      });
+  };
+
+  if (loggedIn) {
+    return (
+      <div>
+        <Navbar />
+        <div className='login-container'>
+          <section id='entry-page'>
+            <h2>You are already logged in!</h2>
+            <Link to='/'>
+              <button className='login-button' type='button'>
+                Go to Home
+              </button>
+            </Link>
+          </section>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (isSignUpSuccess) {
+    return (
+      <div>
+        <Navbar />
+        <div className='login-container'>
+          <section id='entry-page'>
+            <h2>Sign Up Successful!</h2>
+            <p>
+              Please check your email for the verification link before logging
+              in.
+            </p>
+            <Link to='/login'>
+              <button className='login-button' type='button'>
+                Login
+              </button>
+            </Link>
+          </section>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div>
       <Navbar />
-
       <div className='login-container'>
         <section id='entry-page'>
           <form>

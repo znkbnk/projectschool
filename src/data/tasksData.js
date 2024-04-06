@@ -144,8 +144,8 @@ const tasksData = {
 const exercisesData = [
   {
     img: require("../images/js.png"),
-    title: "Building Blocks of the Web",
-    desc: "Dont worry, there wont be any HTML",
+    title: "Mastering JavaScript",
+    desc: "Dive deep into JavaScript, the language that powers the web. From variables and functions to advanced concepts like closures and asynchronous programming, unlock the full potential of JavaScript.",
     to: "/jslessons",
   },
   {
