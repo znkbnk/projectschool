@@ -2,29 +2,23 @@
 
 import React, { useState } from "react";
 import "../styles/lessons.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import ProgressBar from "./ProgressBar";
-import { tasksData, authorsData } from "./tasksData";
+import { tasksData, authorsData } from "../components/tasksData";
 import FilterSortButtons from "./FilterSortButtons";
 import FilteredTasks from "./FilteredTasks";
 
 function HtmlLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
-  
-  const [filters, setFilters] = useState([
-    "All",
-    "Easy",
-    "Hard",
-   
-  ]);
+
+  const [filters, setFilters] = useState(["All", "Easy", "Hard"]);
   const numLessons = tasksData.HTML.length;
 
   const handleFilterClick = (filterType) => {
     setShowEasy(filterType === "Easy");
     setShowHard(filterType === "Hard");
-    
   };
 
   const getCompletedTasksCount = () => {
@@ -62,7 +56,6 @@ function HtmlLessons() {
         <FilteredTasks
           tasks={tasksData.HTML}
           completedTasksKey='HTML_completedTasks'
-          
           showEasy={showEasy}
           showHard={showHard}
           getCompletedTasksCount={getCompletedTasksCount}

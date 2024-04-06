@@ -30,12 +30,11 @@ const FilteredTasks = ({
     }
 
     if (!showEasy && !showHard) {
-      return isAvailable; 
+      return isAvailable;
     }
 
     return false;
   };
-  
 
   return (
     <>

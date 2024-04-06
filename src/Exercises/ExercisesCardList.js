@@ -1,7 +1,7 @@
 // CardList.js
 import React from "react";
-import ExercisesCard from "./ExercisesCard"; 
-import '../styles/exercises.css'
+import ExercisesCard from "./ExercisesCard";
+import "../styles/exercises.css";
 
 const ExercisesCardList = () => {
   return (

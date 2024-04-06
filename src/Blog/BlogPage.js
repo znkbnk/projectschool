@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
-import { blogTopic } from "./tasksData";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+import { useParams } from "react-router-dom";
+import { blogTopic } from "../components/tasksData";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import Button from "./Button";
-import authorBackground from "../images/authorBackground.jpg";
 import "../styles/blogPage.css";
 
 const BlogPage = () => {
@@ -21,10 +20,10 @@ const BlogPage = () => {
     .filter((key) => key.startsWith("paragraph"))
     .map((key) => currentBlog[key]);
 
-    function ScrollToTopOnNavigation() {
-      window.scrollTo(0, 0);
-      return null;
-    }
+  function ScrollToTopOnNavigation() {
+    window.scrollTo(0, 0);
+    return null;
+  }
 
   return (
     <div className='blogPage'>

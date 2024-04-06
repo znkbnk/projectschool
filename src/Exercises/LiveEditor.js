@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import { tasksData } from "./tasksData";
-import Navbar from "./Navbar";
+import { tasksData } from "../components/tasksData";
+import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 

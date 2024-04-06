@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import "../styles/login.css";
-import Navbar from './Navbar';
-import Footer from './Footer';
-import { Link } from 'react-router-dom';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const ResetPassword = () => {
   return (
@@ -37,6 +37,6 @@ const ResetPassword = () => {
       <Footer />
     </div>
   );
-}
+};
 
-export default ResetPassword
+export default ResetPassword;

@@ -1,33 +1,28 @@
 import React, { useState } from "react";
 import "../styles/lessons.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import ProgressBar from "./ProgressBar";
-import { tasksData, authorsData } from "./tasksData";
+import { tasksData, authorsData } from "../components/tasksData";
 import FilterSortButtons from "./FilterSortButtons";
 import FilteredTasks from "./FilteredTasks";
 
-function CssLessons() {
+function ReactLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
-  const [filters, setFilters] = useState([
-    "All",
-    "Easy",
-    "Hard",
-   
-  ]);
-  const numLessons = tasksData.CSS.length;
+
+  const [filters, setFilters] = useState(["All", "Easy", "Hard"]);
+  const numLessons = tasksData.React.length;
 
   const handleFilterClick = (filterType) => {
     setShowEasy(filterType === "Easy");
     setShowHard(filterType === "Hard");
-   
   };
 
   const getCompletedTasksCount = () => {
     let count = 0;
     const completedTasks =
-      JSON.parse(localStorage.getItem("CSS_completedTasks")) || {};
+      JSON.parse(localStorage.getItem("React_completedTasks")) || {};
     for (const taskId in completedTasks) {
       if (completedTasks[taskId]) {
         count++;
@@ -44,11 +39,11 @@ function CssLessons() {
     <>
       <Navbar />
       <div className='header'>
-        <h1>CSS Lessons</h1>
+        <h1>React Lessons</h1>
       </div>
       <ProgressBar
         numStages={numLessons}
-        completedTasks={getCompletedTasksCount({ lessonType: "CSS" })}
+        completedTasks={getCompletedTasksCount({ lessonType: "React" })}
       />
       <FilterSortButtons
         filters={filters}
@@ -57,7 +52,7 @@ function CssLessons() {
 
       <div className='lessons-cards'>
         <FilteredTasks
-          tasks={tasksData.CSS}
+          tasks={tasksData.React}
           completedTasksKey='CSS_completedTasks'
           showEasy={showEasy}
           showHard={showHard}
@@ -70,4 +65,4 @@ function CssLessons() {
   );
 }
 
-export default CssLessons;
+export default ReactLessons;

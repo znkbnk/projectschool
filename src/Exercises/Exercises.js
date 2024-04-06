@@ -1,8 +1,8 @@
 import React from "react";
 import ExercisesCardList from "./ExercisesCardList";
 import ExercisesTitle from "./ExercisesTitle";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "../styles/login.css";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebase";
+import { auth } from "../components/firebase";
 import { toast } from "react-toastify";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 const Signup = () => {
   const [email, setEmail] = useState("");

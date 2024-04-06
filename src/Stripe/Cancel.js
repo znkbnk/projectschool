@@ -1,9 +1,9 @@
 // SuccessComponent.js
 
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 import "../styles/success.css";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 const Cancel = () => {
   return (

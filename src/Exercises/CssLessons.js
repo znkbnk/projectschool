@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import "../styles/lessons.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import ProgressBar from "./ProgressBar";
-import { tasksData, authorsData } from "./tasksData";
+import { tasksData, authorsData } from "../components/tasksData";
 import FilterSortButtons from "./FilterSortButtons";
 import FilteredTasks from "./FilteredTasks";
 
-function ReactLessons() {
+function CssLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
-
   const [filters, setFilters] = useState(["All", "Easy", "Hard"]);
-  const numLessons = tasksData.React.length;
+  const numLessons = tasksData.CSS.length;
 
   const handleFilterClick = (filterType) => {
     setShowEasy(filterType === "Easy");
@@ -22,7 +21,7 @@ function ReactLessons() {
   const getCompletedTasksCount = () => {
     let count = 0;
     const completedTasks =
-      JSON.parse(localStorage.getItem("React_completedTasks")) || {};
+      JSON.parse(localStorage.getItem("CSS_completedTasks")) || {};
     for (const taskId in completedTasks) {
       if (completedTasks[taskId]) {
         count++;
@@ -39,11 +38,11 @@ function ReactLessons() {
     <>
       <Navbar />
       <div className='header'>
-        <h1>React Lessons</h1>
+        <h1>CSS Lessons</h1>
       </div>
       <ProgressBar
         numStages={numLessons}
-        completedTasks={getCompletedTasksCount({ lessonType: "React" })}
+        completedTasks={getCompletedTasksCount({ lessonType: "CSS" })}
       />
       <FilterSortButtons
         filters={filters}
@@ -52,7 +51,7 @@ function ReactLessons() {
 
       <div className='lessons-cards'>
         <FilteredTasks
-          tasks={tasksData.React}
+          tasks={tasksData.CSS}
           completedTasksKey='CSS_completedTasks'
           showEasy={showEasy}
           showHard={showHard}
@@ -65,4 +64,4 @@ function ReactLessons() {
   );
 }
 
-export default ReactLessons;
+export default CssLessons;

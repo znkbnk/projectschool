@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { blogCards } from "./tasksData";
+import { blogCards } from "../components/tasksData";
 import "../styles/blog.css";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import BlogTitle from './BlogTitle'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import BlogTitle from "./BlogTitle";
 
 function Blog() {
   function ScrollToTopOnNavigation() {
