@@ -1,15 +1,16 @@
 import React from "react";
 import AuthorProfile from "./AuthorProfile";
-import { authorsData } from "./tasksData"; 
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { authorsData } from "../data/tasksData";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import AuthorsTitle from "./AuthorsTitle";
 
 const AuthorsList = () => {
   return (
     <div>
       <Navbar />
       <div className='header'>
-        <h1>Authors</h1>
+        <AuthorsTitle />
       </div>
       <div className='author-container'>
         {authorsData.map((author, index) => (

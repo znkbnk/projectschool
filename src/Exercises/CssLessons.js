@@ -3,9 +3,10 @@ import "../styles/lessons.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProgressBar from "./ProgressBar";
-import { tasksData, authorsData } from "../components/tasksData";
+import { tasksData, authorsData } from "../data/tasksData";
 import FilterSortButtons from "./FilterSortButtons";
 import FilteredTasks from "./FilteredTasks";
+import CssTitle from "./CssTitle";
 
 function CssLessons() {
   const [showEasy, setShowEasy] = useState(false);
@@ -38,7 +39,7 @@ function CssLessons() {
     <>
       <Navbar />
       <div className='header'>
-        <h1>CSS Lessons</h1>
+        <CssTitle />
       </div>
       <ProgressBar
         numStages={numLessons}

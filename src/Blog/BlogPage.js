@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { blogTopic } from "../components/tasksData";
+import { blogTopic } from "../data/tasksData";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Button from "./Button";

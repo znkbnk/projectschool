@@ -1,14 +1,13 @@
 import React from "react";
 import "../styles/author.css";
 import imageBackground from "../images/authorBackground.jpg";
+import { Link } from "react-router-dom";
 
 const AuthorProfile = ({ author }) => {
-  const { name, description, picture, position } = author;
+  const { name, description, position, picture } = author;
 
   return (
-    
     <div>
-      
       <ul className='author-card-list'>
         <li className='author-card'>
           <img src={imageBackground} className='image' alt='' />
@@ -20,7 +19,7 @@ const AuthorProfile = ({ author }) => {
 
               <img
                 className='thumb'
-                src={picture.medium}
+                src={picture.medium} // Use authorImage here
                 alt={`${name.first} ${name.last}`}
               />
 
@@ -32,22 +31,16 @@ const AuthorProfile = ({ author }) => {
 
             <p className='description'>{`${description}`}</p>
             <div className='social-container'>
-              <a href='/'>
+              <Link to='/exercises'>
                 <button className='k2-button'>❮❮ Lessons</button>
-              </a>
+              </Link>
 
               <div className='k2-social'>
-                <a href='/'>
-                  <i className='fab fa-facebook'></i>
-                </a>
-                <a href='/'>
-                  <i className='fab fa-twitter'></i>
-                </a>
-                <a href='/'>
+                <a href='https://instagram.com/znkbnk'>
                   <i className='fab fa-instagram'></i>
                 </a>
-                <a href='/'>
-                  <i className='fab fa-codepen'></i>
+                <a href='https://github.com/znkbnk'>
+                  <i className='fa-brands fa-github'></i>
                 </a>
               </div>
             </div>

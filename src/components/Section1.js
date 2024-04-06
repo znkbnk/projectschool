@@ -63,7 +63,7 @@ function Section1() {
             <ul>
               <li>
                 Promote upcoming events, workshops, or guest lectures related to
-                HTML, CSS, and React.
+                JS, CSS, and React.
               </li>
               <li>
                 Provide brief descriptions of the topics covered and highlight

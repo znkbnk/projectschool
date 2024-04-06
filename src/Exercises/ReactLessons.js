@@ -3,9 +3,10 @@ import "../styles/lessons.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProgressBar from "./ProgressBar";
-import { tasksData, authorsData } from "../components/tasksData";
+import { tasksData, authorsData } from "../data/tasksData";
 import FilterSortButtons from "./FilterSortButtons";
 import FilteredTasks from "./FilteredTasks";
+import ReactTitle from "./ReactTitle";
 
 function ReactLessons() {
   const [showEasy, setShowEasy] = useState(false);
@@ -39,7 +40,7 @@ function ReactLessons() {
     <>
       <Navbar />
       <div className='header'>
-        <h1>React Lessons</h1>
+        <ReactTitle />
       </div>
       <ProgressBar
         numStages={numLessons}

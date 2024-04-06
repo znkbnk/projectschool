@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
-import FaqItem from "./FaqItem"; 
-import { gsap, Back } from "gsap"; 
+import FaqItem from "./FaqItem";
+import { gsap, Back } from "gsap";
 
-import {faqData} from "./tasksData"; 
-import '../styles/faq.css'
+import { faqData } from "../data/tasksData";
+import "../styles/faq.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -54,4 +54,4 @@ const Faq = () => {
   );
 };
 
-export default Faq; 
+export default Faq;

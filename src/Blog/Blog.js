@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { blogCards } from "../components/tasksData";
+import { blogCards } from "../data/tasksData";
 import "../styles/blog.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";

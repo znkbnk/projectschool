@@ -1,13 +1,13 @@
 const tasksData = {
-  HTML: [
+  js: [
     {
-      taskId: "htmltask1",
+      taskId: "jstask1",
       taskTitle: "Simple Web Page1",
       introduction:
-        "Creating a simple HTML page involves structuring the document with HTML tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
+        "Creating a simple JS page involves structuring the document with JS tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
       taskText: (
         <div className='taskText-container'>
-          <h3>Step 1: Setting Up the HTML File</h3>
+          <h3>Step 1: Setting Up the html File</h3>
           <div className='checkbox-container'>
             <input type='checkbox' id='step1' />
             <label htmlFor='step1'>
@@ -19,15 +19,15 @@ const tasksData = {
           <div className='checkbox-container'>
             <input type='checkbox' id='step2' />
             <label htmlFor='step2'>
-              Create a new file and save it with a .html extension, for example,
-              index.html.
+              Create a new file and save it with a .js extension, for example,
+              index.js.
             </label>
           </div>
-          <h3>Step 2: Writing the Basic HTML Structure</h3>
+          <h3>Step 2: Writing the Basic html Structure</h3>
           <div className='checkbox-container'>
             <input type='checkbox' id='step3' />
             <label htmlFor='step3'>
-              In the HTML file, write the basic structure of an HTML document
+              In the html file, write the basic structure of an html document
               using !.
             </label>
           </div>
@@ -40,7 +40,7 @@ const tasksData = {
               section where the visible content will go.
             </label>
           </div>
-          <h3>Step 3: Adding Content to the HTML Page</h3>
+          <h3>Step 3: Adding Content to the html Page</h3>
           <div className='checkbox-container'>
             <input type='checkbox' id='step5' />
             <label htmlFor='step5'>
@@ -52,7 +52,7 @@ const tasksData = {
           <div className='checkbox-container'>
             <input type='checkbox' id='step6' />
             <label htmlFor='step6'>
-              You can add some basic CSS to style your HTML page. For
+              You can add some basic CSS to style your html page. For
               simplicity, use inline styles.
             </label>
           </div>
@@ -60,92 +60,20 @@ const tasksData = {
           <div className='checkbox-container'>
             <input type='checkbox' id='step7' />
             <label htmlFor='step7'>
-              Save your HTML file and open it in a web browser. You should see
-              your simple HTML page with the added content and styling.
+              Save your html file and open it in a web browser. You should see
+              your simple html page with the added content and styling.
             </label>
           </div>
         </div>
       ),
-      taskType: "HTML",
+      taskType: "js",
       difficulty: "Easy",
       authorIndex: 0,
-      prerequisites: ["HTML Basics"],
+      prerequisites: ["js Basics"],
       completed: false,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/512px-HTML5_Badge.svg.png?20110131171049",
+      img: "https://user-images.githubusercontent.com/68542775/167072911-dc31eac8-6885-4a05-9c25-279ecce22a79.png",
     },
-    {
-      taskId: "htmltask2",
-      taskTitle: "Simple Web Page2",
-      introduction:
-        "Creating a simple HTML page involves structuring the document with HTML tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
-      taskText: (
-        <div className='taskText-container'>
-          <h3>Step 1: Setting Up the HTML File2</h3>
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step1' />
-            <label htmlFor='step1'>
-              Open a text editor such as Notepad, Sublime Text, or Visual Studio
-              Code.
-            </label>
-          </div>
-          <br />
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step2' />
-            <label htmlFor='step2'>
-              Create a new file and save it with a .html extension, for example,
-              index.html.
-            </label>
-          </div>
-          <h3>Step 2: Writing the Basic HTML Structure</h3>
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step3' />
-            <label htmlFor='step3'>
-              In the HTML file, write the basic structure of an HTML document
-              using !.
-            </label>
-          </div>
-          <br />
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step4' />
-            <label htmlFor='step4'>
-              The code should include the !DOCTYPE html declaration, the html
-              root element, the head section with meta information and the body
-              section where the visible content will go.
-            </label>
-          </div>
-          <h3>Step 3: Adding Content to the HTML Page</h3>
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step5' />
-            <label htmlFor='step5'>
-              Add some content to the body section; hheading h1 and a paragraph
-              p containing some introductory text.
-            </label>
-          </div>
-          <h3>Step 4: Adding Styling (Optional)</h3>
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step6' />
-            <label htmlFor='step6'>
-              You can add some basic CSS to style your HTML page. For
-              simplicity, use inline styles.
-            </label>
-          </div>
-          <br />
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step7' />
-            <label htmlFor='step7'>
-              Save your HTML file and open it in a web browser. You should see
-              your simple HTML page with the added content and styling.
-            </label>
-          </div>
-        </div>
-      ),
-      taskType: "HTML",
-      difficulty: "Easy",
-      authorIndex: 0,
-      prerequisites: ["HTML Basics"],
-      completed: false,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/512px-HTML5_Badge.svg.png?20110131171049",
-    },
+   
   ],
   CSS: [
     {
@@ -213,42 +141,39 @@ const tasksData = {
   ],
 };
 
+const exercisesData = [
+  {
+    img: require("../images/js.png"),
+    title: "Building Blocks of the Web",
+    desc: "Dont worry, there wont be any HTML",
+    to: "/jslessons",
+  },
+  {
+    img: "https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg",
+    title: "Styling Your Web Pages",
+    desc: "Explore the power of CSS to beautify and style your web pages. From colors and fonts to layouts and animations, master the art of visual design for the web.",
+    to: "/csslessons",
+  },
+  {
+    img: "https://www.freecodecamp.org/news/content/images/2022/04/featured.jpg",
+    title: "Building Dynamic User Interfaces",
+    desc: "Delve into React, the popular JavaScript library for building dynamic and interactive user interfaces. Learn components, state management, and the React ecosystem to create modern web applications.",
+    to: "/reactlessons",
+  },
+];
+
 const authorsData = [
   {
     name: { first: "Jevin", last: "B" },
-    email: "john.doe@example.com",
     position: "React",
     description: "ты тоже это заметил?",
-    picture: { medium: "https://randomuser.me/api/portraits/men/1.jpg" },
+    picture: { medium: require("../images/me.jpg") }, // Use require to import images
   },
   {
-    name: { first: "Jane", last: "Smith" },
-    email: "jane.smith@example.com",
-    position: "Full-Stack",
-    description: "New York",
-
-    picture: { medium: "https://randomuser.me/api/portraits/women/1.jpg" },
-  },
-  {
-    name: { first: "Jane", last: "Smith" },
-    email: "jane.smith@example.com",
-    position: "Full-Stack",
-    description: "New York",
-    picture: { medium: "https://randomuser.me/api/portraits/women/1.jpg" },
-  },
-  {
-    name: { first: "Jane", last: "Smith" },
-    email: "jane.smith@example.com",
-    position: "Full-Stack",
-    description: "New York",
-    picture: { medium: "https://randomuser.me/api/portraits/women/1.jpg" },
-  },
-  {
-    name: { first: "Jane", last: "Smith" },
-    email: "jane.smith@example.com",
-    position: "Full-Stack",
-    description: "New York",
-    picture: { medium: "https://randomuser.me/api/portraits/women/1.jpg" },
+    name: { first: "Somebody", last: "Ok" },
+    position: "React",
+    description: "ты тоже это заметил?",
+    picture: { medium: require("../images/sectionImg7.png") }, // Use require to import images
   },
 ];
 
@@ -368,18 +293,16 @@ const blogCards = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png",
   },
-  
-  
 ];
 const blogTopic = [
   {
     id: 1,
     image: "AuthGuard (1).png",
     paragraph1:
-      "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.js or similar) where you initialize Firebase with your configuration. ",
+      "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration. ",
     paragraph2: [
       "Implement AuthGuard Component:",
-      "Create an AuthGuard.js file. This component will handle the authentication logic.",
+      "Create an AuthGuard.html file. This component will handle the authentication logic.",
       "Inside the AuthGuard component, you're using useEffect hook to listen for changes in authentication state (onAuthStateChanged). When the authentication state changes, it updates the isLoggedIn state.",
       "If the user is authenticated (user is not null), isLoggedIn is set to true. Otherwise, it's set to false, and the user is redirected to the login page using navigate(/login).",
       "This component returns the children (components wrapped inside it) only if the user is authenticated. Otherwise, it returns null.",
@@ -400,10 +323,10 @@ const blogTopic = [
     id: 2,
     image: "AuthGuard (1).png",
     paragraph1:
-      "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.js or similar) where you initialize Firebase with your configuration. ",
+      "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration. ",
     paragraph2: [
       "Implement AuthGuard Component:",
-      "Create an AuthGuard.js file. This component will handle the authentication logic.",
+      "Create an AuthGuard.html file. This component will handle the authentication logic.",
       "Inside the AuthGuard component, you're using useEffect hook to listen for changes in authentication state (onAuthStateChanged). When the authentication state changes, it updates the isLoggedIn state.",
       "If the user is authenticated (user is not null), isLoggedIn is set to true. Otherwise, it's set to false, and the user is redirected to the login page using navigate(/login).",
       "This component returns the children (components wrapped inside it) only if the user is authenticated. Otherwise, it returns null.",
@@ -436,4 +359,4 @@ const blogTopic = [
   },
 ];
 
-export { tasksData, authorsData, faqData, blogCards, blogTopic };
+export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };

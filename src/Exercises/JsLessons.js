@@ -1,20 +1,21 @@
-// HtmlLessons.js
+// jsLessons.js
 
 import React, { useState } from "react";
 import "../styles/lessons.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ProgressBar from "./ProgressBar";
-import { tasksData, authorsData } from "../components/tasksData";
+import { tasksData, authorsData } from "../data/tasksData";
 import FilterSortButtons from "./FilterSortButtons";
 import FilteredTasks from "./FilteredTasks";
+import JsTitle from "./JsTitle";
 
-function HtmlLessons() {
+function JsLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
 
   const [filters, setFilters] = useState(["All", "Easy", "Hard"]);
-  const numLessons = tasksData.HTML.length;
+  const numLessons = tasksData.js.length;
 
   const handleFilterClick = (filterType) => {
     setShowEasy(filterType === "Easy");
@@ -24,7 +25,7 @@ function HtmlLessons() {
   const getCompletedTasksCount = () => {
     let count = 0;
     const completedTasks =
-      JSON.parse(localStorage.getItem("HTML_completedTasks")) || {};
+      JSON.parse(localStorage.getItem("js_completedTasks")) || {};
     for (const taskId in completedTasks) {
       if (completedTasks[taskId]) {
         count++;
@@ -41,7 +42,7 @@ function HtmlLessons() {
     <>
       <Navbar />
       <div className='header'>
-        <h1>HTML Lessons</h1>
+        <JsTitle />
       </div>
       <ProgressBar
         numStages={numLessons}
@@ -54,13 +55,13 @@ function HtmlLessons() {
 
       <div className='lessons-cards'>
         <FilteredTasks
-          tasks={tasksData.HTML}
-          completedTasksKey='HTML_completedTasks'
+          tasks={tasksData.js}
+          completedTasksKey='js_completedTasks'
           showEasy={showEasy}
           showHard={showHard}
           getCompletedTasksCount={getCompletedTasksCount}
           getAuthorInfo={getAuthorInfo}
-          lessonType='HTML'
+          lessonType='js'
         />
       </div>
       <Footer />
@@ -68,4 +69,4 @@ function HtmlLessons() {
   );
 }
 
-export default HtmlLessons;
+export default JsLessons;

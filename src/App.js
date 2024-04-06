@@ -6,13 +6,13 @@ import Welcome from "./components/Welcome";
 import Login from "./Login/Login";
 import Signup from "./Login/Signup";
 import Exercises from "./Exercises/Exercises";
-import HtmlLessons from "./Exercises/HtmlLessons";
+import JsLessons from "./Exercises/JsLessons";
 import ReactLessons from "./Exercises/ReactLessons";
 import CssLessons from "./Exercises/CssLessons";
 import LiveChat from "./Chat/LiveChat";
 import ResetPassword from "./Login/ResetPassword";
 import LiveEditor from "./Exercises/LiveEditor";
-import AuthorList from "./components/AuthorList";
+import AuthorList from "./Authors/AuthorList";
 import Faq from "./components/Faq";
 import Pricing from "./components/Pricing";
 import Success from "./Stripe/Success";
@@ -62,8 +62,8 @@ const App = () => {
           element={isLoggedIn ? <Exercises /> : <Navigate to='/login' />}
         />
         <Route
-          path='/htmllessons'
-          element={isLoggedIn ? <HtmlLessons /> : <Navigate to='/login' />}
+          path='/jslessons'
+          element={isLoggedIn ? <JsLessons /> : <Navigate to='/login' />}
         />
         <Route
           path='/csslessons'
@@ -93,6 +93,7 @@ const App = () => {
           path='/authors'
           element={isLoggedIn ? <AuthorList /> : <Navigate to='/login' />}
         />
+        
         <Route
           path='/success'
           element={isLoggedIn ? <Success /> : <Navigate to='/login' />}

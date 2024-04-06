@@ -38,9 +38,14 @@ const Login = () => {
         }
       });
   };
+  function ScrollToTopOnNavigation() {
+    window.scrollTo(0, 0);
+    return null;
+  }
 
   return (
     <div>
+      <ScrollToTopOnNavigation />
       <Navbar />
       <div className='login-container'>
         <section id='entry-page'>

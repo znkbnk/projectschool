@@ -57,7 +57,7 @@
 }
 
 .exercises-container {
-  height: 40vh;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,7 @@
 .exercises-title {
   display: block;
   position: relative;
-  font-size: 8rem;
+  font-size: 6rem;
 }
 
 

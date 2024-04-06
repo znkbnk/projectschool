@@ -33,7 +33,8 @@ body {
   list-style-type: none;
   margin: 0 auto;
   max-width: 600px;
-  padding: 7rem 5vw;
+  padding: 0 6vw;
+  margin-bottom: 5rem;
 }
 
 .author-card {
@@ -180,12 +181,10 @@ body {
   transform: scale(1.1);
 }
 /* Official icon colors*/
-.k2-social .fa-facebook {
+.k2-social .fa-envelope {
   color: #3b5998;
 }
-.k2-social .fa-twitter {
-  color: #1da1f2;
-}
+
 .k2-social .fa-instagram {
   color: #c8102e;
 }
