@@ -271,7 +271,7 @@ const faqData = [
           Is this React school suitable for individuals who are new to
           programming without heavy theoretical emphasis?
         </p>
-        ,
+        
       </div>
     ),
 
@@ -290,7 +290,7 @@ const faqData = [
           focuses on active engagement and real-world application to facilitate
           learning and growth.
         </p>
-        ,
+        
       </div>
     ),
   },
