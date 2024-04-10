@@ -13,8 +13,8 @@ import Footer from "../components/Footer";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false); // Track signup success
-  const [loggedIn, setLoggedIn] = useState(false); // Track user login status
+  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false); 
+  const [loggedIn, setLoggedIn] = useState(false); 
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -47,12 +47,12 @@ const Signup = () => {
       );
       const user = userCredential.user;
       await sendVerificationEmail(user);
-      setIsSignUpSuccess(true); // Set signup success flag
+      setIsSignUpSuccess(true); 
       toast.success("User signed up successfully! Please verify your email.");
     } catch (error) {
       const errorMessage = error.message;
       console.error(errorMessage);
-      toast.error(errorMessage);
+      toast.error("Email already in use. Please log in or choose another.");
     }
   };
 

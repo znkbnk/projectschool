@@ -17,14 +17,11 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        // Check if user's email is verified
         if (!user.emailVerified) {
-          // If email is not verified, sign out the user and show an error message
           auth.signOut();
           toast.error("Please verify your email before logging in.");
           return;
         }
-        // If email is verified, navigate to the home page or wherever you want
         navigate("/");
         toast.success("Logged in successfully");
       })

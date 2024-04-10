@@ -224,6 +224,14 @@ section {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
+
+@media (min-width: 768px) {
+  .button-81 {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}
+
 @media (max-width: 420px) {
   .button-84 {
     height: 48px;

@@ -12,6 +12,8 @@ const LiveEditor = () => {
   const [isCompleted, setIsCompleted] = useState(false);
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
   const [showContent, setShowContent] = useState(true);
+    const [checkboxStates, setCheckboxStates] = useState({});
+  
 
   const navigate = useNavigate();
 
@@ -28,8 +30,23 @@ const LiveEditor = () => {
         (task) => task.taskId === taskId
       );
       setCurrentTaskIndex(index);
+      const storedCheckboxStates =
+        JSON.parse(localStorage.getItem(taskId)) || {};
+      setCheckboxStates(storedCheckboxStates);
     }
   }, [lessonType, taskId]);
+
+  const handleCheckboxChange = (stepId) => {
+    setCheckboxStates((prevState) => ({
+      ...prevState,
+      [stepId]: !prevState[stepId]
+    }));
+  };
+
+  // Function to save checkbox states to localStorage
+  useEffect(() => {
+    localStorage.setItem(taskId, JSON.stringify(checkboxStates));
+  }, [taskId, checkboxStates]);
 
   const handleNext = () => {
     if (lessonType && currentTaskIndex < tasksData[lessonType].length - 1) {
@@ -93,6 +110,15 @@ const LiveEditor = () => {
     };
   }, []);
 
+   const handleDownloadStyles = () => {
+     const styleLink = tasksData[lessonType][currentTaskIndex].link;
+     if (styleLink) {
+       window.open(styleLink, "_blank");
+     } else {
+       toast.error("No styles found for download.");
+     }
+   };
+
   return (
     <div>
       <Navbar />
@@ -102,8 +128,19 @@ const LiveEditor = () => {
             <div className='text-window'>
               {lessonType ? (
                 <p>
-                  {lessonType} lesson:{" "}
-                  {tasksData[lessonType][currentTaskIndex].taskText}
+                  {/* Pass down checkboxStates and handleCheckboxChange as props */}
+                  {tasksData[lessonType][currentTaskIndex].taskText({
+                    checkboxStates,
+                    handleCheckboxChange,
+                  })}
+                  {tasksData[lessonType][currentTaskIndex].link && (
+                    <button
+                      className='button-84'
+                      onClick={handleDownloadStyles}
+                    >
+                      Download Styles
+                    </button>
+                  )}
                 </p>
               ) : (
                 <p>Start Practicing...</p>

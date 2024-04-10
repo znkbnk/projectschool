@@ -1,143 +1,145 @@
 const tasksData = {
   js: [
-    {
-      taskId: "jstask1",
-      taskTitle: "Simple Web Page1",
-      introduction:
-        "Creating a simple JS page involves structuring the document with JS tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
-      taskText: (
-        <div className='taskText-container'>
-          <h3>Step 1: Setting Up the html File</h3>
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step1' />
-            <label htmlFor='step1'>
-              Open a text editor such as Notepad, Sublime Text, or Visual Studio
-              Code.
-            </label>
-          </div>
-          <br />
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step2' />
-            <label htmlFor='step2'>
-              Create a new file and save it with a .js extension, for example,
-              index.js.
-            </label>
-          </div>
-          <h3>Step 2: Writing the Basic html Structure</h3>
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step3' />
-            <label htmlFor='step3'>
-              In the html file, write the basic structure of an html document
-              using !.
-            </label>
-          </div>
-          <br />
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step4' />
-            <label htmlFor='step4'>
-              The code should include the !DOCTYPE html declaration, the html
-              root element, the head section with meta information and the body
-              section where the visible content will go.
-            </label>
-          </div>
-          <h3>Step 3: Adding Content to the html Page</h3>
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step5' />
-            <label htmlFor='step5'>
-              Add some content to the body section; hheading h1 and a paragraph
-              p containing some introductory text.
-            </label>
-          </div>
-          <h3>Step 4: Adding Styling (Optional)</h3>
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step6' />
-            <label htmlFor='step6'>
-              You can add some basic CSS to style your html page. For
-              simplicity, use inline styles.
-            </label>
-          </div>
-          <br />
-          <div className='checkbox-container'>
-            <input type='checkbox' id='step7' />
-            <label htmlFor='step7'>
-              Save your html file and open it in a web browser. You should see
-              your simple html page with the added content and styling.
-            </label>
-          </div>
-        </div>
-      ),
-      taskType: "js",
-      difficulty: "Easy",
-      authorIndex: 0,
-      prerequisites: ["js Basics"],
-      completed: false,
-      img: "https://user-images.githubusercontent.com/68542775/167072911-dc31eac8-6885-4a05-9c25-279ecce22a79.png",
-    },
+    
    
   ],
   CSS: [
-    {
-      taskId: "csstask1",
-      taskTitle: "CSS Task 1 Description",
-      introduction: "introduction/description",
-      taskText: "",
-      taskType: "CSS",
-      difficulty: "Easy",
-      authorIndex: 0,
-      prerequisites: ["CSS Basics"],
-      completed: false,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
-    },
-    {
-      taskId: "csstask2",
-      taskTitle: "CSS Task 2 Description",
-      introduction: "introduction/description",
-      taskText: "",
-      taskType: "CSS",
-      difficulty: "Hard",
-      authorIndex: 0,
-      prerequisites: ["CSS Basics"],
-      completed: false,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
-    },
-    {
-      taskId: "csstask3",
-      taskTitle: "CSS Task 2 Description",
-      introduction: "introduction/description",
-      taskText: "",
-      taskType: "CSS",
-      difficulty: "Hard",
-      authorIndex: 0,
-      prerequisites: ["CSS Basics"],
-      completed: false,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
-    },
-    {
-      taskId: "csstask4",
-      taskTitle: "CSS Task 2 Description",
-      introduction: "introduction/description",
-      taskText: "",
-      taskType: "CSS",
-      difficulty: "Hard",
-      authorIndex: 0,
-      prerequisites: ["CSS Basics"],
-      completed: false,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
-    },
+   
   ],
   React: [
     {
       taskId: "reacttask1",
-      taskTitle: "React Task 1 Description",
-      introduction: "introduction/description",
-      taskText: "",
+      taskTitle: "React 3D Interactive Card",
+      introduction:
+        "In this lesson, we're building a dynamic React component featuring a card with interactive 3D effects that respond to mouse movements, offering an engaging user experience.",
+      taskText: ({ checkboxStates, handleCheckboxChange }) => (
+        <div className='taskText-container'>
+          <h3>Step 1: Define functional component Card</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step1'
+              checked={checkboxStates["step1"]}
+              onChange={() => handleCheckboxChange("step1")}
+            />
+            <label htmlFor='step1'>
+              <ul>
+                <li>Create a reference for the card element</li>
+                <li>Create a reference for the title element</li>
+                <li>Create a reference for the sneaker image element</li>
+                <li>Create a reference for the description element</li>
+                <li>Create a reference for the difficulty buttons element</li>
+                <li>Create a reference for the start button element</li>
+              </ul>
+            </label>
+          </div>
+          <br />
+
+          <h3>Step 2: Function to handle mouse movement</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step2'
+              checked={checkboxStates["step2"]}
+              onChange={() => handleCheckboxChange("step2")}
+            />
+            <label htmlFor='step2'>
+              <ul>
+                <li>
+                  Calculate the rotation on the X-axis based on mouse position
+                </li>
+                <li>
+                  Calculate the rotation on the Y-axis based on mouse position
+                </li>
+                <li> Apply rotation to the card element</li>
+              </ul>
+            </label>
+          </div>
+          <br />
+
+          <h3>Step 3: Function to handle mouse entering the card</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step3'
+              checked={checkboxStates["step3"]}
+              onChange={() => handleCheckboxChange("step3")}
+            />
+            <label htmlFor='step3'>
+              <ul>
+                <li>Remove transition effect</li>
+                <li>Apply transformation to the title</li>
+                <li>Apply transformation to the sneaker image</li>
+                <li>Apply transformation to the description</li>
+                <li>Apply transformation to the difficulty buttons</li>
+                <li>Apply transformation to the start button</li>
+              </ul>
+            </label>
+          </div>
+          <h3>Step 4: Function to handle mouse leaving the card</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step4'
+              checked={checkboxStates["step4"]}
+              onChange={() => handleCheckboxChange("step4")}
+            />
+            <label htmlFor='step4'>
+              <ul>
+                <li>Add transition effect</li>
+                <li>Reset rotation of the card</li>
+                <li>Reset transformation of the title</li>
+                <li>Reset transformation of the sneaker image</li>
+                <li>Reset transformation of the description</li>
+                <li>Reset transformation of the difficulty buttons</li>
+                <li>Reset transformation of the start button</li>
+              </ul>
+            </label>
+          </div>
+          <h3>Step 5: Return JSX for the component</h3>
+
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step5'
+              checked={checkboxStates["step5"]}
+              onChange={() => handleCheckboxChange("step5")}
+            />
+            <label htmlFor='step5'>
+              <ul>
+                <li>Container for the card with mouse move event handler</li>
+                <li>Attach reference to the card element</li>
+                <li>Attach mouse enter event handler</li>
+                <li>Attach mouse leave event handler</li>
+                <li>Container for the sneaker image</li>
+                <li>Circular background for the image</li>
+                <li>Source for the image</li>
+                <li>Alt text for the image</li>
+                <li>Attach reference to the sneaker image element</li>
+                <li>Container for the information</li>
+                <li>Title of the card</li>
+                <li>Description of the card</li>
+                <li>Container for the difficulty buttons</li>
+                <li>Button for easy difficulty</li>
+                <li>Button for advanced difficulty</li>
+                <li>Button for hard difficulty</li>
+                <li>Button for pro difficulty</li>
+                <li>Container for the start button</li>
+                <li>Start button</li>
+              </ul>
+            </label>
+          </div>
+        </div>
+      ),
       taskType: "React",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      img: require("../images/ReactLesson1.png"),
+      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
+   
   ],
 };
 
@@ -166,15 +168,10 @@ const authorsData = [
   {
     name: { first: "Jevin", last: "B" },
     position: "React",
-    description: "ты тоже это заметил?",
+    description: "I will update this soon....",
     picture: { medium: require("../images/me.jpg") }, // Use require to import images
   },
-  {
-    name: { first: "Somebody", last: "Ok" },
-    position: "React",
-    description: "ты тоже это заметил?",
-    picture: { medium: require("../images/sectionImg7.png") }, // Use require to import images
-  },
+ 
 ];
 
 const faqData = [
@@ -225,7 +222,7 @@ const faqData = [
           Sure! We're using Stripe solution. All transactions are SSL (Secure
           Socket Layer) protected. Your information and your donors information
           are securely transmitted during the processing of all payments.
-        </p>{" "}
+        </p>
         <p>
           Stripe is a PCI Service Provider Level 1 which is the highest grade of
           payment processing security. You can rest assured that your donors
@@ -282,17 +279,7 @@ const blogCards = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.png",
   },
-  {
-    id: 2,
-
-    category: "JavaScript",
-    title: "Filtering Logic Mastery",
-    extract:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem, omnis placeat. Aut ipsum tenetur temporibus asperiores cumque, iure deserunt quis...",
-    date: "07 june 2020",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png",
-  },
+ 
 ];
 const blogTopic = [
   {
@@ -360,3 +347,136 @@ const blogTopic = [
 ];
 
 export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
+
+
+
+
+/* Task description example template:
+
+---------------------- REACT, js
+
+{
+      taskId: "jstask1",
+      taskTitle: "Simple Web Page1",
+      introduction:
+        "Creating a simple JS page involves structuring the document with JS tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
+      taskText: ({ checkboxStates, handleCheckboxChange }) => (
+        <div className='taskText-container'>
+          <h3>Step 1: Setting Up the html File</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step1'
+              checked={checkboxStates["step1"]}
+              onChange={() => handleCheckboxChange("step1")}
+            />
+            <label htmlFor='step1'>
+              Open a text editor such as Notepad, Sublime Text, or Visual Studio
+              Code.
+            </label>
+          </div>
+          <br />
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step2'
+              checked={checkboxStates["step2"]}
+              onChange={() => handleCheckboxChange("step2")}
+            />
+            <label htmlFor='step2'>
+              Create a new file and save it with a .js extension, for example,
+              index.js.
+            </label>
+          </div>
+          <h3>Step 2: Writing the Basic html Structure</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step3'
+              checked={checkboxStates["step3"]}
+              onChange={() => handleCheckboxChange("step3")}
+            />
+            <label htmlFor='step3'>
+              In the html file, write the basic structure of an html document
+              using !.
+            </label>
+          </div>
+          <br />
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step4'
+              checked={checkboxStates["step4"]}
+              onChange={() => handleCheckboxChange("step4")}
+            />
+            <label htmlFor='step4'>
+              The code should include the !DOCTYPE html declaration, the html
+              root element, the head section with meta information and the body
+              section where the visible content will go.
+            </label>
+          </div>
+          <h3>Step 3: Adding Content to the html Page</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step5'
+              checked={checkboxStates["step5"]}
+              onChange={() => handleCheckboxChange("step5")}
+            />
+            <label htmlFor='step5'>
+              Add some content to the body section; hheading h1 and a paragraph
+              p containing some introductory text.
+            </label>
+          </div>
+          <h3>Step 4: Adding Styling (Optional)</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step6'
+              checked={checkboxStates["step6"]}
+              onChange={() => handleCheckboxChange("step6")}
+            />
+            <label htmlFor='step6'>
+              You can add some basic CSS to style your html page. For
+              simplicity, use inline styles.
+            </label>
+          </div>
+          <br />
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step7'
+              checked={checkboxStates["step7"]}
+              onChange={() => handleCheckboxChange("step7")}
+            />
+            <label htmlFor='step7'>
+              Save your html file and open it in a web browser. You should see
+              your simple html page with the added content and styling.
+            </label>
+          </div>
+        </div>
+      ),
+      taskType: "js",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["js Basics"],
+      completed: false,
+      img: "https://user-images.githubusercontent.com/68542775/167072911-dc31eac8-6885-4a05-9c25-279ecce22a79.png",
+    },
+
+------------- CSS
+  {
+      taskId: "csstask1",
+      taskTitle: "CSS Task 1 Description",
+      introduction: "introduction/description",
+      taskText: "",
+      taskType: "CSS",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["CSS Basics"],
+      completed: false,
+      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
+    },
+
+      */
+     

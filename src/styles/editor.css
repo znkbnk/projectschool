@@ -51,6 +51,33 @@
   padding: 20px;
 }
 
+.prerequisites {
+  margin-top: 20px;
+}
+
+.prerequisite-button {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prerequisite-button:hover {
+  background-color: #0056b3;
+}
+
+.prerequisite-button:focus {
+  outline: none;
+}
+
 /* taskData file */
 .checkbox-container input[type="checkbox"] {
   display: none; /* Hide the default checkbox */
@@ -68,6 +95,10 @@
 .checkbox-container label {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.checkbox-container ul {
+  margin: 1rem;
 }
 
 .checkbox-container input[type="checkbox"] + label {
