@@ -91,7 +91,10 @@ const Navbar = () => {
               <Link to='/editor' className='nav-link'>
                 Live Editor
               </Link>
-            </div> 
+              <Link to='/faq' className='nav-link'>
+                FAQ
+              </Link>
+            </div>
           ) : (
             <>
               <Link to='/blog' className='nav-link'>
