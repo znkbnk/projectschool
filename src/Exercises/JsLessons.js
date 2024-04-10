@@ -14,6 +14,7 @@ function JsLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const [filters, setFilters] = useState(["All", "Easy", "Hard"]);
   const numLessons = tasksData.js.length;
 
