@@ -264,10 +264,35 @@ const faqData = [
     ),
   },
   {
-    question:
-      "Is this React school suitable for individuals who are new to programming without heavy theoretical emphasis?",
-    answer:
-      "Yes, our React school is suitable for beginners who have a basic understanding of programming concepts. While we prioritize practical exercises over theoretical learning, we do assume that students have some foundational knowledge in programming. This might include familiarity with concepts such as variables, loops, functions, and basic HTML/CSS. However, our program is designed to guide beginners through hands-on tasks that will help them develop practical skills and confidence in React programming. Whether you're new to programming or looking to expand your skills specifically in React, our approach focuses on active engagement and real-world application to facilitate learning and growth.",
+    question: (
+      <div className='faq-container-answer'>
+        <p>
+          {" "}
+          Is this React school suitable for individuals who are new to
+          programming without heavy theoretical emphasis?
+        </p>
+        ,
+      </div>
+    ),
+
+    answer: (
+      <div className='faq-container-answer'>
+        <p>
+          Yes, our React school is suitable for beginners who have a basic
+          understanding of programming concepts. While we prioritize practical
+          exercises over theoretical learning, we do assume that students have
+          some foundational knowledge in programming. This might include
+          familiarity with concepts such as variables, loops, functions, and
+          basic HTML/CSS. However, our program is designed to guide beginners
+          through hands-on tasks that will help them develop practical skills
+          and confidence in React programming. Whether you're new to programming
+          or looking to expand your skills specifically in React, our approach
+          focuses on active engagement and real-world application to facilitate
+          learning and growth.
+        </p>
+        ,
+      </div>
+    ),
   },
 ];
 const blogCards = [
