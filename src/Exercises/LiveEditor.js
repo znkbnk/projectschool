@@ -75,18 +75,14 @@ const LiveEditor = () => {
       (task) => task.taskId === taskId
     );
 
-    if (taskIndex !== -1) {
-      const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
-      const updatedTasksData = { ...tasksData };
-      updatedTasksData[lessonType][taskIndex].completed = true;
+   if (taskIndex !== -1) {
+    const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
+    const updatedTasksData = { ...tasksData };
+    updatedTasksData[lessonType][taskIndex].completed = true;
 
-      const completedTasks =
-        JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
-      completedTasks[taskId] = true;
-      localStorage.setItem(
-        lessonCompletedTasksKey,
-        JSON.stringify(completedTasks)
-      );
+    const completedTasks = JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+    completedTasks[taskId] = true;
+    localStorage.setItem(lessonCompletedTasksKey, JSON.stringify(completedTasks));
 
       console.log(`Task ${taskId} marked as completed.`);
       toast.success(`Lesson ${lessonType} is completed!`);

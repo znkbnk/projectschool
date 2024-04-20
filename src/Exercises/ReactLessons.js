@@ -55,7 +55,7 @@ function ReactLessons() {
       <div className='lessons-cards'>
         <FilteredTasks
           tasks={tasksData.React}
-          completedTasksKey='CSS_completedTasks'
+          completedTasksKey='React_completedTasks'
           showEasy={showEasy}
           showHard={showHard}
           getCompletedTasksCount={getCompletedTasksCount}

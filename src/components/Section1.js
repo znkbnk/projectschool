@@ -5,7 +5,7 @@ import image1 from "../images/pic5.png";
 import image2 from "../images/pic6.png";
 import image3 from "../images/pic7.png";
 import image4 from "../images/pic7.png";
-import image5 from "../images/sectionPicture2.jpeg";
+import image5 from "../images/sectionPicture2.png";
 import "../styles/section1.css";
 import WelcomeWord from "./WelcomeWord";
 import { Link } from "react-router-dom";

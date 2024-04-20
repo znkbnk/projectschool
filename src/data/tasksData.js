@@ -308,7 +308,6 @@ const authorsData = [
     description: "I will update this soon....",
     picture: { medium: require("../images/me.jpg") }, // Use require to import images
   },
- 
 ];
 
 const faqData = [
@@ -347,6 +346,30 @@ const faqData = [
           experience that emphasizes experiential learning and practical
           knowledge, empowering learners to apply their newfound skills
           effectively in real-world scenarios.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question:
+      "Is ProjectSchool suitable for individuals who are new to programming and lack heavy theoretical knowledge?",
+    answer: (
+      <div className='faq-container-answer'>
+        <p>
+          Yes, our React school is suitable for beginners who have a basic
+          understanding of programming concepts. While we prioritize practical
+          exercises over theoretical learning, we do assume that students have
+          some foundational knowledge in programming. This might include
+          familiarity with concepts such as variables, loops, functions, and
+          basic HTML/CSS.
+        </p>
+        <p>
+          However, our program is designed to guide beginners through hands-on
+          tasks that will help them develop practical skills and confidence in
+          React programming. Whether you're new to programming or looking to
+          expand your skills specifically in React, our approach focuses on
+          active engagement and real-world application to facilitate learning
+          and growth.
         </p>
       </div>
     ),
@@ -400,37 +423,6 @@ const faqData = [
       </div>
     ),
   },
-  {
-    question: (
-      <div className='faq-container-answer'>
-        <p>
-          {" "}
-          Is this React school suitable for individuals who are new to
-          programming without heavy theoretical emphasis?
-        </p>
-        
-      </div>
-    ),
-
-    answer: (
-      <div className='faq-container-answer'>
-        <p>
-          Yes, our React school is suitable for beginners who have a basic
-          understanding of programming concepts. While we prioritize practical
-          exercises over theoretical learning, we do assume that students have
-          some foundational knowledge in programming. This might include
-          familiarity with concepts such as variables, loops, functions, and
-          basic HTML/CSS. However, our program is designed to guide beginners
-          through hands-on tasks that will help them develop practical skills
-          and confidence in React programming. Whether you're new to programming
-          or looking to expand your skills specifically in React, our approach
-          focuses on active engagement and real-world application to facilitate
-          learning and growth.
-        </p>
-        
-      </div>
-    ),
-  },
 ];
 const blogCards = [
   {
@@ -443,7 +435,6 @@ const blogCards = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.png",
   },
- 
 ];
 const blogTopic = [
   {
@@ -511,9 +502,6 @@ const blogTopic = [
 ];
 
 export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
-
-
-
 
 /* Task description example template:
 
@@ -635,4 +623,3 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
     },
 
       */
-     

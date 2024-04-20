@@ -9,14 +9,20 @@ const FilteredTasks = ({
   showEasy,
   showHard,
 }) => {
-  const isTaskAvailable = (task) => {
-    const completedTasks =
-      JSON.parse(localStorage.getItem(completedTasksKey)) || {};
-    const taskIndex = tasks.findIndex(
-      (originalTask) => originalTask.taskId === task.taskId
-    );
-    return taskIndex === 0 || completedTasks[tasks[taskIndex - 1].taskId];
-  };
+ const isTaskAvailable = (task) => {
+   const completedTasks =
+     JSON.parse(localStorage.getItem(completedTasksKey)) || {};
+   const taskIndex = tasks.findIndex(
+     (originalTask) => originalTask.taskId === task.taskId
+   );
+
+   // Check if it's the first task or the previous task is completed
+   const isPreviousTaskCompleted =
+     taskIndex === 0 || completedTasks[tasks[taskIndex - 1].taskId];
+   console.log(`Task ${task.taskId} is available: ${isPreviousTaskCompleted}`);
+
+   return isPreviousTaskCompleted;
+ };
 
   const filterTasks = (task) => {
     const isAvailable = isTaskAvailable(task);
@@ -80,7 +86,7 @@ const FilteredTasks = ({
                       introduction={task.introduction}
                       difficulty={task.difficulty}
                       taskId={task.taskId}
-                      completedTasksKey={completedTasksKey}
+                      completedTasksKey={`${task.taskType}_completedTasks`} 
                     />
                   )}
                 </div>

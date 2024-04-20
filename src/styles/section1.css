@@ -81,9 +81,9 @@ h2.heading_large {
 .image-container {
   width: 100%;
   height: 0;
-  padding-bottom: 100%; /* Maintain aspect ratio (1:1 in this case) */
+  padding-bottom: 100%; 
   position: relative;
-  overflow: hidden; /* Ensure images don't overflow */
+  overflow: hidden;
 }
 .section1-image {
   position: absolute;
@@ -92,7 +92,8 @@ h2.heading_large {
   transform: translate(-50%, -50%);
   width: 50%;
   height: 50%;
-  object-fit: contain; /* Ensure entire image is visible */
+  object-fit: contain; 
+
 }
 
 .section2-image {
@@ -101,7 +102,8 @@ h2.heading_large {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  object-fit: contain; /* Ensure entire image is visible */
+  object-fit: contain; 
+  transform: translate(-50%, -50%) rotate(10deg);
 }
 
 .content-section {
@@ -148,10 +150,10 @@ h2.heading_large {
 
 @keyframes neon {
   0% {
-    filter: brightness(170%);
+    filter: brightness(270%);
   }
   100% {
-    filter: brightness(80%);
+    filter: brightness(40%);
   }
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
 import image2 from "../images/navbarlogo.png";
@@ -22,24 +22,6 @@ const Navbar = () => {
       });
   };
 
-  const dropdownRef = useRef(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        // Click occurred outside the dropdown
-        setShowLinks(false);
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -55,16 +37,8 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => {
-    if (isMenuOpen) {
-      setShowLinks(false);
-    } else {
-      if (!isLoggedIn) {
-        setShowLinks(true);
-      } else {
-        setShowLinks(!showLinks);
-      }
-    }
-    setIsMenuOpen(!isMenuOpen);
+    setShowLinks(!showLinks); // Toggle the visibility of links
+    setIsMenuOpen(!isMenuOpen); // Toggle the menu state
   };
 
   return (
@@ -96,7 +70,7 @@ const Navbar = () => {
               </Link>
             </div>
           )}
-          {!isLoggedIn && showLinks && (
+          {!isLoggedIn && (
             <>
               <Link to='/blog' className='nav-link'>
                 Blog
@@ -138,10 +112,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div
-        ref={dropdownRef}
-        className={showLinks ? "responsive-links open" : "responsive-links"}
-      >
+      <div className={showLinks ? "responsive-links open" : "responsive-links"}>
         {!isLoggedIn && (
           <>
             <Link to='/blog' className='nav-link'>

@@ -129,7 +129,6 @@ nav img {
   transition: transform 0.3s ease;
 }
 
-
 .menu-icon__line.open:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -169,7 +168,6 @@ nav img {
 
 .responsive-links.open {
   display: flex;
-  
 }
 
 .responsive-links a {
@@ -198,7 +196,6 @@ nav img {
   }
 
 
-
   .menu-icon {
     display: flex;
     flex-direction: column;
@@ -216,8 +213,6 @@ nav img {
 }
 
 @media only screen and (max-device-width: 1024px) {
- 
-
   .nav-link {
     font-size: 1rem;
     color: #fff;
