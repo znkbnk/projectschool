@@ -167,16 +167,48 @@
   z-index: 6;
 }
 
+
+
 @media only screen and (max-device-width: 768px) {
   .sectionImg4 {
     width: 80%;
   }
   .sectionImg7 {
-  left: 15%;
-  top: 37%;
+    left: 15%;
+    top: 37%;
+  }
+  .twoWords {
+    margin-top: 8rem;
+  }
+ 
 }
-.twoWords {
-  
-  margin-top: 8rem;
+@media only screen and (max-device-width: 460px) {
+  .sectionImg4 {
+    width: 80%;
+  }
+  .sectionImg7 {
+    left: 15%;
+    top: 42%;
+  }
+  .twoWords {
+    margin-top: 12rem;
+    font-size: 8rem;
+  }
+ 
 }
+@media only screen and (max-device-width: 1024px) {
+  .sectionImg4 {
+    width: 80%;
+  }
+  .sectionImg7 {
+    left: 15%;
+    top: 40%;
+  }
+  .twoWords {
+    margin-top: 12rem;
+    font-size: 6rem;
+  }
+ 
 }
+
+

@@ -15,9 +15,9 @@ const LessonsCards = ({
 
   useEffect(() => {
     const completedTasks =
-      JSON.parse(localStorage.getItem(completedTasksKey)) || {}; // Use completedTasksKey dynamically
+      JSON.parse(localStorage.getItem(completedTasksKey)) || {};
     setIsCompleted(completedTasks[taskId] || false);
-  }, [taskId, completedTasksKey]); // Include completedTasksKey in dependencies
+  }, [taskId, completedTasksKey]); 
 
   return (
     <div>

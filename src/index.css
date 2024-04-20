@@ -62,8 +62,7 @@ h3 {
 
 p > span {
   font-size: 2rem;
-
-  color: var(--color);
+  color: white;
 }
 
 
@@ -76,36 +75,6 @@ section {
   place-items: center;
 }
 
-@supports (animation-timeline: scroll()) {
-  @media (prefers-reduced-motion: no-preference) {
-    main {
-      view-timeline-name: --section;
-    }
-
-    p > span {
-      background-position-x: calc(var(--underline-block-width) * -1),
-        calc(var(--underline-block-width) * -1), 0;
-      color: transparent;
-      animation-name: fill-up, color-in;
-      animation-fill-mode: both;
-      animation-timing-function: linear;
-      animation-timeline: --section;
-      animation-range: entry 200% cover 25%, cover 25% exit 0%;
-    }
-
-    @keyframes fill-up {
-      to {
-        background-position-x: 0, 0, 0;
-      }
-    }
-
-    @keyframes color-in {
-      to {
-        color: var(--finish-fill);
-      }
-    }
-  }
-}
 
 /* Button 28 */
 

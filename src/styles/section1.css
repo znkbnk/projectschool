@@ -128,9 +128,9 @@ h2.heading_large {
   will-change: transform, opacity;
   color: #fff;
   font-size: 1.5em;
-  padding: 10px; /* Adjust padding as needed */
-  margin: 0 100px; /* Reset margin */
-  word-wrap: break-word; /* Ensure text wrapping */
+  padding: 10px; 
+  margin: 0 100px; 
+  word-wrap: break-word; 
 }
 
 .section1-chat {

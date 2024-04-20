@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin: 0  20px  20px;
-
+  margin: 0 20px 20px;
 }
 
 .wrapper .exercises-card {
@@ -17,7 +16,6 @@
   justify-content: space-between;
   flex-direction: column;
   transition: transform 200ms ease-in;
-  
 }
 .wrapper .exercises-card__image {
   height: 12rem;
@@ -63,12 +61,13 @@
   align-items: center;
 }
 
-
 .exercises-title {
   display: block;
   position: relative;
   font-size: 6rem;
 }
+
+
 
 
 @media screen and (min-width: 768px) {

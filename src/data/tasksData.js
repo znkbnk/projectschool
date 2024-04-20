@@ -1,11 +1,6 @@
 const tasksData = {
-  js: [
-    
-   
-  ],
-  CSS: [
-   
-  ],
+  js: [],
+  CSS: [],
   React: [
     {
       taskId: "reacttask1",
@@ -139,7 +134,149 @@ const tasksData = {
       img: require("../images/ReactLesson1.png"),
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
-   
+
+    {
+      taskId: "reacttask2",
+      taskTitle: "BMI Tracker",
+      introduction:
+        "BMI Tracker is a user-friendly tool designed to calculate and monitor Body Mass Index (BMI) quickly and accurately. Easily input your weight and height to instantly receive your BMI along with personalized health messages, helping you track your fitness journey with ease.",
+      taskText: ({ checkboxStates, handleCheckboxChange }) => (
+        <div className='taskText-container'>
+          <h3>Step 1: Import React and useState hook</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step1'
+              checked={checkboxStates["step1"]}
+              onChange={() => handleCheckboxChange("step1")}
+            />
+            <label htmlFor='step1'>
+              Import the React library and the useState hook from the react
+              package. This is necessary to define a functional component and
+              manage state within it.
+            </label>
+          </div>
+          <br />
+
+          <h3>Step 2: Import CSS files</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step2'
+              checked={checkboxStates["step2"]}
+              onChange={() => handleCheckboxChange("step2")}
+            />
+            <label htmlFor='step2'>
+              Import the CSS files (App.css or index.css) to style the BMI
+              calculator component.
+            </label>
+          </div>
+          <br />
+
+          <h3>Step 3: Define the BMI function component</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step3'
+              checked={checkboxStates["step3"]}
+              onChange={() => handleCheckboxChange("step3")}
+            />
+            <label htmlFor='step3'>Create a function component named BM3</label>
+          </div>
+          <h3>Step 4: State initialization</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step4'
+              checked={checkboxStates["step4"]}
+              onChange={() => handleCheckboxChange("step4")}
+            />
+            <label htmlFor='step4'>
+              Initialize state variables using the useState hook:
+              <ul>
+                <li>weight: Holds the weight input value, initialized to 0.</li>
+                <li>height: Holds the height input value, initialized to 0.</li>
+                <li>
+                  bmi: Holds the calculated BMI value, initialized as an empty
+                  string.
+                </li>
+                <li>
+                  message: Holds the message corresponding to the BMI category,
+                  initialized as an empty string.
+                </li>
+              </ul>
+            </label>
+          </div>
+          <h3>Step 5: calcBmi function</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step5'
+              checked={checkboxStates["step5"]}
+              onChange={() => handleCheckboxChange("step5")}
+            />
+            <label htmlFor='step5'>
+              Define a function calcBmi to calculate BMI when the form is
+              submitted:
+              <ul>
+                <li>Prevent the default form submission behavior.</li>
+                <li>
+                  Check if weight or height is equal to 0, if so, display an
+                  alert asking the user to enter valid inputs.
+                </li>
+                <li>
+                  Calculate BMI using the formula weight / (heightInCm *
+                  heightInCm), where heightInCm is calculated by dividing height
+                  by 100.
+                </li>
+                <li>Set the calculated BMI using setBmi.</li>
+                <li>
+                  Determine the BMI category based on the calculated BMI and set
+                  the appropriate message using setMessage.
+                </li>
+              </ul>
+            </label>
+          </div>
+          <h3>Step 6: Render JSX</h3>
+          <div className='checkbox-container'>
+            <input
+              type='checkbox'
+              id='step6'
+              checked={checkboxStates["step6"]}
+              onChange={() => handleCheckboxChange("step6")}
+            />
+            <label htmlFor='step6'>
+              Return the JSX structure for the BMI calculator component:
+              <ul>
+                <li>
+                  Enclose the entire component within a div with the class app.
+                </li>
+                <li>
+                  Inside the div, create a container div with the class
+                  container.
+                </li>
+                <li>Display the heading "BMI Calculator".</li>
+                <li>Create a form with input fields for weight and height.</li>
+                <li>
+                  Attach the calcBmi function to the form's onSubmit event.
+                </li>
+                <li>
+                  Add buttons for submitting the form and reloading the page.
+                </li>
+                <li>Display the calculated BMI and corresponding message.</li>
+              </ul>
+            </label>
+          </div>
+        </div>
+      ),
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson2.png"),
+      link: "https://www.dropbox.com/scl/fi/03e0si4h3xgxgg74ygra3/BMIstyles.css.css?rlkey=v7kz0wgjp8qtyhfr7ttco3vqx&dl=0",
+    },
   ],
 };
 
@@ -383,13 +520,13 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
 ---------------------- REACT, js
 
 {
-      taskId: "jstask1",
+      taskId: "reacttask",
       taskTitle: "Simple Web Page1",
       introduction:
-        "Creating a simple JS page involves structuring the document with JS tags like html, head, and body, adding content elements such as headings and paragraphs, and optionally styling the page using CSS, resulting in a basic webpage that can be viewed in a web browser.",
+        "",
       taskText: ({ checkboxStates, handleCheckboxChange }) => (
         <div className='taskText-container'>
-          <h3>Step 1: Setting Up the html File</h3>
+          <h3>Step 1: </h3>
           <div className='checkbox-container'>
             <input
               type='checkbox'
@@ -398,8 +535,7 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
               onChange={() => handleCheckboxChange("step1")}
             />
             <label htmlFor='step1'>
-              Open a text editor such as Notepad, Sublime Text, or Visual Studio
-              Code.
+              text
             </label>
           </div>
           <br />
@@ -411,11 +547,10 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
               onChange={() => handleCheckboxChange("step2")}
             />
             <label htmlFor='step2'>
-              Create a new file and save it with a .js extension, for example,
-              index.js.
+              text
             </label>
           </div>
-          <h3>Step 2: Writing the Basic html Structure</h3>
+          <h3>Step 2: </h3>
           <div className='checkbox-container'>
             <input
               type='checkbox'
@@ -424,8 +559,7 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
               onChange={() => handleCheckboxChange("step3")}
             />
             <label htmlFor='step3'>
-              In the html file, write the basic structure of an html document
-              using !.
+              text
             </label>
           </div>
           <br />
@@ -437,12 +571,10 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
               onChange={() => handleCheckboxChange("step4")}
             />
             <label htmlFor='step4'>
-              The code should include the !DOCTYPE html declaration, the html
-              root element, the head section with meta information and the body
-              section where the visible content will go.
+              text
             </label>
           </div>
-          <h3>Step 3: Adding Content to the html Page</h3>
+          <h3>Step 3: </h3>
           <div className='checkbox-container'>
             <input
               type='checkbox'
@@ -451,11 +583,10 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
               onChange={() => handleCheckboxChange("step5")}
             />
             <label htmlFor='step5'>
-              Add some content to the body section; hheading h1 and a paragraph
-              p containing some introductory text.
+              text
             </label>
           </div>
-          <h3>Step 4: Adding Styling (Optional)</h3>
+          <h3>Step 4: </h3>
           <div className='checkbox-container'>
             <input
               type='checkbox'
@@ -464,8 +595,7 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
               onChange={() => handleCheckboxChange("step6")}
             />
             <label htmlFor='step6'>
-              You can add some basic CSS to style your html page. For
-              simplicity, use inline styles.
+              text
             </label>
           </div>
           <br />
@@ -477,8 +607,7 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
               onChange={() => handleCheckboxChange("step7")}
             />
             <label htmlFor='step7'>
-              Save your html file and open it in a web browser. You should see
-              your simple html page with the added content and styling.
+              text
             </label>
           </div>
         </div>

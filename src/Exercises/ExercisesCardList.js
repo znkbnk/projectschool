@@ -8,7 +8,7 @@ const ExercisesCardList = () => {
     <div className='wrapper'>
       {exercisesData.map((exercise, index) => (
         <ExercisesCard
-          key={index} // Remember to add a unique key for each card
+          key={index} 
           img={exercise.img}
           title={exercise.title}
           desc={exercise.desc}

@@ -1,6 +1,5 @@
-// LiveEditor.js
 import React, { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { tasksData } from "../data/tasksData";
 import Navbar from "../components/Navbar";
@@ -11,9 +10,7 @@ const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
   const [isCompleted, setIsCompleted] = useState(false);
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
-  const [showContent, setShowContent] = useState(true);
-    const [checkboxStates, setCheckboxStates] = useState({});
-  
+  const [checkboxStates, setCheckboxStates] = useState({});
 
   const navigate = useNavigate();
 
@@ -39,7 +36,7 @@ const LiveEditor = () => {
   const handleCheckboxChange = (stepId) => {
     setCheckboxStates((prevState) => ({
       ...prevState,
-      [stepId]: !prevState[stepId]
+      [stepId]: !prevState[stepId],
     }));
   };
 
@@ -99,36 +96,29 @@ const LiveEditor = () => {
     }
   };
 
-  const handleResize = () => {
-    setShowContent(window.innerWidth >= 768);
+
+
+  const handleDownloadStyles = () => {
+    const styleLink = tasksData[lessonType][currentTaskIndex].link;
+    if (styleLink) {
+      window.open(styleLink, "_blank");
+    } else {
+      toast.error("No styles found for download.");
+    }
   };
 
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  // Conditional rendering for showing message if screen size is less than 768px
 
-   const handleDownloadStyles = () => {
-     const styleLink = tasksData[lessonType][currentTaskIndex].link;
-     if (styleLink) {
-       window.open(styleLink, "_blank");
-     } else {
-       toast.error("No styles found for download.");
-     }
-   };
 
   return (
     <div>
       <Navbar />
-      <div className={showContent ? "editor-container" : "hidden"}>
+      <div className='editor-container'>
         <div className='task-container'>
           <div className='task'>
             <div className='text-window'>
               {lessonType ? (
                 <p>
-                  {/* Pass down checkboxStates and handleCheckboxChange as props */}
                   {tasksData[lessonType][currentTaskIndex].taskText({
                     checkboxStates,
                     handleCheckboxChange,

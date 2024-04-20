@@ -93,7 +93,7 @@ const App = () => {
           path='/authors'
           element={isLoggedIn ? <AuthorList /> : <Navigate to='/login' />}
         />
-        
+
         <Route
           path='/success'
           element={isLoggedIn ? <Success /> : <Navigate to='/login' />}
@@ -106,6 +106,7 @@ const App = () => {
           path='/checkout'
           element={isLoggedIn ? <Checkout /> : <Navigate to='/login' />}
         />
+       
       </Routes>
     </div>
   );

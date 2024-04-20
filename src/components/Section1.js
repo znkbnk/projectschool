@@ -5,7 +5,7 @@ import image1 from "../images/pic5.png";
 import image2 from "../images/pic6.png";
 import image3 from "../images/pic7.png";
 import image4 from "../images/pic7.png";
-import image5 from "../images/sectionPicture1.jpg";
+import image5 from "../images/sectionPicture2.jpeg";
 import "../styles/section1.css";
 import WelcomeWord from "./WelcomeWord";
 import { Link } from "react-router-dom";
@@ -163,10 +163,7 @@ function Section1() {
   
 
   return (
-    <div
-      className='container'
-    
-    >
+    <div className='container'>
       <header>
         <WelcomeWord />
       </header>
@@ -176,16 +173,14 @@ function Section1() {
             <div className='ipsGrid_span7 ipsType_right'>
               <p>
                 <span>
-                  In a departure from traditional courses heavy on theory, our
-                  program prioritizes practical exercises. Here, you'll delve
-                  straight into hands-on tasks, fostering deeper understanding
-                  and real-world application. Rather than passive learning,
-                  you'll actively engage in activities that cultivate tangible
-                  skills and confidence. Embrace this opportunity to bridge
-                  theory with practice, where your journey is defined by active
-                  participation and meaningful outcomes. Join us in redefining
-                  education through practical knowledge and experiential
-                  learning.
+                  This project focuses more on doing things rather than just
+                  learning about them. You'll jump right into hands-on
+                  activities to really understand and use what you're learning.
+                  Instead of just listening, you'll be actively involved in
+                  activities that help you gain skills and confidence. This is
+                  your chance to connect what you learn in class with real-life
+                  situations. Come join us in making education more about doing
+                  and experiencing things!
                 </span>
               </p>
             </div>
