@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
 import image2 from "../images/navbarlogo.png";
@@ -8,6 +8,8 @@ import { toast } from "react-toastify";
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
+  const [showLinks, setShowLinks] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
     auth
@@ -17,9 +19,27 @@ const Navbar = () => {
       })
       .catch((error) => {
         console.log(error.message);
-      }); 
+      });
   };
- 
+
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        // Click occurred outside the dropdown
+        setShowLinks(false);
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -34,38 +54,18 @@ const Navbar = () => {
     return () => unsubscribe();
   }, []);
 
-
-
-  useEffect(() => {
-    const createDot = () => {
-      const dot = document.createElement("div");
-      dot.className = "nav-dot";
-      document.querySelector("#nav").appendChild(dot);
-
-      dot.style.left = "0";
-
-      setTimeout(() => {
-        dot.style.transition = "left 1.2s ease";
-        dot.style.left = "calc(100% - 5px)";
-      }, 50);
-
-      setTimeout(() => {
-        dot.style.opacity = "0";
-      }, 1200 + 50);
-
-      setTimeout(() => {
-        dot.remove(); 
-      }, 1200 + 50 + 500);
-    };
-
-    createDot(); 
-
-    const dotInterval = setInterval(createDot, 8000);
-
-    return () => {
-      clearInterval(dotInterval);
-    };
-  }, []);
+  const toggleMenu = () => {
+    if (isMenuOpen) {
+      setShowLinks(false);
+    } else {
+      if (!isLoggedIn) {
+        setShowLinks(true);
+      } else {
+        setShowLinks(!showLinks);
+      }
+    }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav id='nav'>
@@ -74,7 +74,7 @@ const Navbar = () => {
           <img src={image2} alt='logo' />
         </Link>
         <div className='middle'>
-          {isLoggedIn ? (
+          {isLoggedIn && (
             <div className='middle'>
               <Link to='/exercises' className='nav-link'>
                 Exercises
@@ -89,13 +89,14 @@ const Navbar = () => {
                 Authors
               </Link>
               <Link to='/editor' className='nav-link'>
-                Live Editor
+                LiveEditor
               </Link>
               <Link to='/faq' className='nav-link'>
                 FAQ
               </Link>
             </div>
-          ) : (
+          )}
+          {!isLoggedIn && showLinks && (
             <>
               <Link to='/blog' className='nav-link'>
                 Blog
@@ -127,7 +128,55 @@ const Navbar = () => {
               </Link>
             </>
           )}
+          <div
+            className={`menu-icon ${isMenuOpen ? "open" : ""}`}
+            onClick={toggleMenu}
+          >
+            <div className='menu-icon__line'></div>
+            <div className='menu-icon__line'></div>
+            <div className='menu-icon__line'></div>
+          </div>
         </div>
+      </div>
+      <div
+        ref={dropdownRef}
+        className={showLinks ? "responsive-links open" : "responsive-links"}
+      >
+        {!isLoggedIn && (
+          <>
+            <Link to='/blog' className='nav-link'>
+              Blog
+            </Link>
+            <Link to='/pricing' className='nav-link'>
+              Pricing
+            </Link>
+            <Link to='/faq' className='nav-link'>
+              FAQ
+            </Link>
+          </>
+        )}
+        {isLoggedIn && showLinks && (
+          <>
+            <Link to='/exercises' className='nav-link'>
+              Exercises
+            </Link>
+            <Link to='/livechat' className='nav-link'>
+              LiveChat
+            </Link>
+            <Link to='/blog' className='nav-link'>
+              Blog
+            </Link>
+            <Link to='/authors' className='nav-link'>
+              Authors
+            </Link>
+            <Link to='/editor' className='nav-link'>
+              LiveEditor
+            </Link>
+            <Link to='/faq' className='nav-link'>
+              FAQ
+            </Link>
+          </>
+        )}
       </div>
     </nav>
   );
