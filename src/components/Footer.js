@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../styles/footer.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 
