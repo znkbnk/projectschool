@@ -163,4 +163,25 @@ p .user-name {
   font-weight: 600;
 }
 
+@media only screen and (max-device-width: 640px)  {
+  .chat-bubble.right {
+    width: 70%;
+  }
+  .chat-bubble {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
 
+  #livechat-container > div > main > div > div:nth-child(2) > div > p.message-date {
+    font-size: 1.5rem;
+  }
+  .user-name {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .user-message {
+    font-size: 2rem;
+  }
+}

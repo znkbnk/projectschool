@@ -77,3 +77,31 @@ Gooey Effect
   width: 100%;
   background: linear-gradient(var(--color2), var(--fill2));
 }
+
+@media only screen and (max-device-width: 640px) {
+  .blogPage p {
+    font-size: 2rem;
+  }
+  .page-section  {
+    width: 100%;
+    
+  }
+  .page-section ul  {
+    font-size: 2rem;
+    
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .blogPage p {
+    font-size: 2rem;
+  }
+  .page-section  {
+    width: 100%;
+    
+  }
+  .page-section ul  {
+    font-size: 1.5rem;
+    
+  }
+}

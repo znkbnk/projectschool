@@ -5,127 +5,83 @@ const tasksData = {
     {
       taskId: "reacttask1",
       taskTitle: "React 3D Interactive Card",
-      introduction:
-        "In this lesson, we're building a dynamic React component featuring a card with interactive 3D effects that respond to mouse movements, offering an engaging user experience.",
-      taskText: ({ checkboxStates, handleCheckboxChange }) => (
-        <div className='taskText-container'>
-          <h3>Step 1: Define functional component Card</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step1'
-              checked={checkboxStates["step1"]}
-              onChange={() => handleCheckboxChange("step1")}
-            />
-            <label htmlFor='step1'>
-              <ul>
-                <li>Create a reference for the card element</li>
-                <li>Create a reference for the title element</li>
-                <li>Create a reference for the sneaker image element</li>
-                <li>Create a reference for the description element</li>
-                <li>Create a reference for the difficulty buttons element</li>
-                <li>Create a reference for the start button element</li>
-              </ul>
-            </label>
-          </div>
-          <br />
+      steps: [
+        {
+          stepTitle: "Step 1: Define functional component Card",
+          titleDescription: "",
+          description: [
+            "Create a reference for the card element",
+            "Create a reference for the title element",
+            "Create a reference for the sneaker image element",
+            "Create a reference for the description element",
+            "Create a reference for the difficulty buttons element",
+            "Create a reference for the start button element",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Function to handle mouse movement",
+          titleDescription: "",
 
-          <h3>Step 2: Function to handle mouse movement</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step2'
-              checked={checkboxStates["step2"]}
-              onChange={() => handleCheckboxChange("step2")}
-            />
-            <label htmlFor='step2'>
-              <ul>
-                <li>
-                  Calculate the rotation on the X-axis based on mouse position
-                </li>
-                <li>
-                  Calculate the rotation on the Y-axis based on mouse position
-                </li>
-                <li> Apply rotation to the card element</li>
-              </ul>
-            </label>
-          </div>
-          <br />
+          description: [
+            "Calculate the rotation on the X-axis based on mouse position",
+            "Calculate the rotation on the Y-axis based on mouse position",
+            "Apply rotation to the card element",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Function to handle mouse entering the card",
+          titleDescription: "",
 
-          <h3>Step 3: Function to handle mouse entering the card</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step3'
-              checked={checkboxStates["step3"]}
-              onChange={() => handleCheckboxChange("step3")}
-            />
-            <label htmlFor='step3'>
-              <ul>
-                <li>Remove transition effect</li>
-                <li>Apply transformation to the title</li>
-                <li>Apply transformation to the sneaker image</li>
-                <li>Apply transformation to the description</li>
-                <li>Apply transformation to the difficulty buttons</li>
-                <li>Apply transformation to the start button</li>
-              </ul>
-            </label>
-          </div>
-          <h3>Step 4: Function to handle mouse leaving the card</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step4'
-              checked={checkboxStates["step4"]}
-              onChange={() => handleCheckboxChange("step4")}
-            />
-            <label htmlFor='step4'>
-              <ul>
-                <li>Add transition effect</li>
-                <li>Reset rotation of the card</li>
-                <li>Reset transformation of the title</li>
-                <li>Reset transformation of the sneaker image</li>
-                <li>Reset transformation of the description</li>
-                <li>Reset transformation of the difficulty buttons</li>
-                <li>Reset transformation of the start button</li>
-              </ul>
-            </label>
-          </div>
-          <h3>Step 5: Return JSX for the component</h3>
+          description: [
+            "Remove transition effect",
+            "Apply transformation to the title",
+            "Apply transformation to the sneaker image",
+            "Apply transformation to the description",
+            "Apply transformation to the difficulty buttons",
+            "Apply transformation to the start button",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Function to handle mouse leaving the card",
+          titleDescription: "",
 
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step5'
-              checked={checkboxStates["step5"]}
-              onChange={() => handleCheckboxChange("step5")}
-            />
-            <label htmlFor='step5'>
-              <ul>
-                <li>Container for the card with mouse move event handler</li>
-                <li>Attach reference to the card element</li>
-                <li>Attach mouse enter event handler</li>
-                <li>Attach mouse leave event handler</li>
-                <li>Container for the sneaker image</li>
-                <li>Circular background for the image</li>
-                <li>Source for the image</li>
-                <li>Alt text for the image</li>
-                <li>Attach reference to the sneaker image element</li>
-                <li>Container for the information</li>
-                <li>Title of the card</li>
-                <li>Description of the card</li>
-                <li>Container for the difficulty buttons</li>
-                <li>Button for easy difficulty</li>
-                <li>Button for advanced difficulty</li>
-                <li>Button for hard difficulty</li>
-                <li>Button for pro difficulty</li>
-                <li>Container for the start button</li>
-                <li>Start button</li>
-              </ul>
-            </label>
-          </div>
-        </div>
-      ),
+          description: [
+            "Add transition effect",
+            "Reset rotation of the card",
+            "Reset transformation of the title",
+            "Reset transformation of the sneaker image",
+            "Reset transformation of the description",
+            "Reset transformation of the difficulty buttons",
+            "Reset transformation of the start button",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Return JSX for the component",
+          titleDescription: "",
+
+          description: [
+            "Container for the card with mouse move event handler",
+            "Attach reference to the card element",
+            "Attach mouse enter event handler",
+            "Attach mouse leave event handler",
+            "Container for the sneaker image",
+            "Circular background for the image",
+            "Source for the image",
+            "Alt text for the image",
+            "Attach reference to the sneaker image element",
+            "Container for the information",
+            "Title of the card",
+            "Description of the card",
+            "Container for the difficulty buttons",
+            "Button for easy difficulty",
+            "Button for advanced difficulty",
+            "Button for hard difficulty",
+            "Button for pro difficulty",
+            "Container for the start button",
+            "Start button",
+          ],
+        },
+      ],
       taskType: "React",
       difficulty: "Easy",
       authorIndex: 0,
@@ -134,141 +90,72 @@ const tasksData = {
       img: require("../images/ReactLesson1.png"),
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
-
     {
       taskId: "reacttask2",
       taskTitle: "BMI Tracker",
-      introduction:
-        "BMI Tracker is a user-friendly tool designed to calculate and monitor Body Mass Index (BMI) quickly and accurately. Easily input your weight and height to instantly receive your BMI along with personalized health messages, helping you track your fitness journey with ease.",
-      taskText: ({ checkboxStates, handleCheckboxChange }) => (
-        <div className='taskText-container'>
-          <h3>Step 1: Import React and useState hook</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step1'
-              checked={checkboxStates["step1"]}
-              onChange={() => handleCheckboxChange("step1")}
-            />
-            <label htmlFor='step1'>
-              Import the React library and the useState hook from the react
-              package. This is necessary to define a functional component and
-              manage state within it.
-            </label>
-          </div>
-          <br />
+      steps: [
+        {
+          stepTitle: "Step 1: Import React and useState hook",
+          titleDescription: "",
 
-          <h3>Step 2: Import CSS files</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step2'
-              checked={checkboxStates["step2"]}
-              onChange={() => handleCheckboxChange("step2")}
-            />
-            <label htmlFor='step2'>
-              Import the CSS files (App.css or index.css) to style the BMI
-              calculator component.
-            </label>
-          </div>
-          <br />
+          description: [
+            "Import the React library and the useState hook from the react package. This is necessary to define a functional component and manage state within it.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Import CSS files",
+          titleDescription: "",
 
-          <h3>Step 3: Define the BMI function component</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step3'
-              checked={checkboxStates["step3"]}
-              onChange={() => handleCheckboxChange("step3")}
-            />
-            <label htmlFor='step3'>Create a function component named BM3</label>
-          </div>
-          <h3>Step 4: State initialization</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step4'
-              checked={checkboxStates["step4"]}
-              onChange={() => handleCheckboxChange("step4")}
-            />
-            <label htmlFor='step4'>
-              Initialize state variables using the useState hook:
-              <ul>
-                <li>weight: Holds the weight input value, initialized to 0.</li>
-                <li>height: Holds the height input value, initialized to 0.</li>
-                <li>
-                  bmi: Holds the calculated BMI value, initialized as an empty
-                  string.
-                </li>
-                <li>
-                  message: Holds the message corresponding to the BMI category,
-                  initialized as an empty string.
-                </li>
-              </ul>
-            </label>
-          </div>
-          <h3>Step 5: calcBmi function</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step5'
-              checked={checkboxStates["step5"]}
-              onChange={() => handleCheckboxChange("step5")}
-            />
-            <label htmlFor='step5'>
-              Define a function calcBmi to calculate BMI when the form is
-              submitted:
-              <ul>
-                <li>Prevent the default form submission behavior.</li>
-                <li>
-                  Check if weight or height is equal to 0, if so, display an
-                  alert asking the user to enter valid inputs.
-                </li>
-                <li>
-                  Calculate BMI using the formula weight / (heightInCm *
-                  heightInCm), where heightInCm is calculated by dividing height
-                  by 100.
-                </li>
-                <li>Set the calculated BMI using setBmi.</li>
-                <li>
-                  Determine the BMI category based on the calculated BMI and set
-                  the appropriate message using setMessage.
-                </li>
-              </ul>
-            </label>
-          </div>
-          <h3>Step 6: Render JSX</h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step6'
-              checked={checkboxStates["step6"]}
-              onChange={() => handleCheckboxChange("step6")}
-            />
-            <label htmlFor='step6'>
-              Return the JSX structure for the BMI calculator component:
-              <ul>
-                <li>
-                  Enclose the entire component within a div with the class app.
-                </li>
-                <li>
-                  Inside the div, create a container div with the class
-                  container.
-                </li>
-                <li>Display the heading "BMI Calculator".</li>
-                <li>Create a form with input fields for weight and height.</li>
-                <li>
-                  Attach the calcBmi function to the form's onSubmit event.
-                </li>
-                <li>
-                  Add buttons for submitting the form and reloading the page.
-                </li>
-                <li>Display the calculated BMI and corresponding message.</li>
-              </ul>
-            </label>
-          </div>
-        </div>
-      ),
+          description: [
+            "Import the CSS files (App.css or index.css) to style the BMI calculator component.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Define the BMI function component",
+          titleDescription: "",
+
+          description: ["Create a function component named BM3."],
+        },
+        {
+          stepTitle: "Step 4: State initialization",
+          titleDescription: "",
+
+          description: [
+            "weight: Holds the weight input value, initialized to 0.",
+            "height: Holds the height input value, initialized to 0.",
+            "bmi: Holds the calculated BMI value, initialized as an empty string.",
+            "message: Holds the message corresponding to the BMI category, initialized as an empty string.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: calcBmi function",
+          titleDescription: "",
+
+          description: [
+            "Define a function calcBmi to calculate BMI when the form is submitted:",
+            "Prevent the default form submission behavior.",
+            "Check if weight or height is equal to 0, if so, display an alert asking the user to enter valid inputs.",
+            "Calculate BMI using the formula weight / (heightInCm * heightInCm), where heightInCm is calculated by dividing height by 100.",
+            "Set the calculated BMI using setBmi.",
+            "Determine the BMI category based on the calculated BMI and set the appropriate message using setMessage.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Render JSX",
+          titleDescription: "",
+
+          description: [
+            "Return the JSX structure for the BMI calculator component:",
+            "Enclose the entire component within a div with the class app.",
+            "Inside the div, create a container div with the class container.",
+            "Display the heading 'BMI Calculator'.",
+            "Create a form with input fields for weight and height.",
+            "Attach the calcBmi function to the form's onSubmit event.",
+            "Add buttons for submitting the form and reloading the page.",
+            "Display the calculated BMI and corresponding message.",
+          ],
+        },
+      ],
       taskType: "React",
       difficulty: "Easy",
       authorIndex: 0,
@@ -506,120 +393,59 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
 /* Task description example template:
 
 ---------------------- REACT, js
-
-{
-      taskId: "reacttask",
-      taskTitle: "Simple Web Page1",
-      introduction:
-        "",
-      taskText: ({ checkboxStates, handleCheckboxChange }) => (
-        <div className='taskText-container'>
-          <h3>Step 1: </h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step1'
-              checked={checkboxStates["step1"]}
-              onChange={() => handleCheckboxChange("step1")}
-            />
-            <label htmlFor='step1'>
-              text
-            </label>
-          </div>
-          <br />
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step2'
-              checked={checkboxStates["step2"]}
-              onChange={() => handleCheckboxChange("step2")}
-            />
-            <label htmlFor='step2'>
-              text
-            </label>
-          </div>
-          <h3>Step 2: </h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step3'
-              checked={checkboxStates["step3"]}
-              onChange={() => handleCheckboxChange("step3")}
-            />
-            <label htmlFor='step3'>
-              text
-            </label>
-          </div>
-          <br />
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step4'
-              checked={checkboxStates["step4"]}
-              onChange={() => handleCheckboxChange("step4")}
-            />
-            <label htmlFor='step4'>
-              text
-            </label>
-          </div>
-          <h3>Step 3: </h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step5'
-              checked={checkboxStates["step5"]}
-              onChange={() => handleCheckboxChange("step5")}
-            />
-            <label htmlFor='step5'>
-              text
-            </label>
-          </div>
-          <h3>Step 4: </h3>
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step6'
-              checked={checkboxStates["step6"]}
-              onChange={() => handleCheckboxChange("step6")}
-            />
-            <label htmlFor='step6'>
-              text
-            </label>
-          </div>
-          <br />
-          <div className='checkbox-container'>
-            <input
-              type='checkbox'
-              id='step7'
-              checked={checkboxStates["step7"]}
-              onChange={() => handleCheckboxChange("step7")}
-            />
-            <label htmlFor='step7'>
-              text
-            </label>
-          </div>
-        </div>
-      ),
-      taskType: "js",
+React: [
+    {
+      taskId: "reacttask1",
+      taskTitle: "React 3D Interactive Card",
+      steps: [
+        {
+          stepTitle: "Step 1: Define functional component Card",
+          titleDescription: "",
+          description: [
+            "Create a reference for the card element",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 2: Function to handle mouse movement",
+          titleDescription: "",
+          description: [
+            "Calculate the rotation on the X-axis based on mouse position",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 3: Function to handle mouse entering the card",
+          titleDescription: "",
+          description: [
+            "Remove transition effect",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 4: Function to handle mouse leaving the card",
+          titleDescription: "",
+          description: [
+            "Add transition effect",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 5: Return JSX for the component",
+          titleDescription: "",
+          description: [
+            "Container for the card with mouse move event handler",
+            
+          ],
+        },
+      ],
+      taskType: "React",
       difficulty: "Easy",
       authorIndex: 0,
-      prerequisites: ["js Basics"],
+      prerequisites: ["React Basics"],
       completed: false,
-      img: "https://user-images.githubusercontent.com/68542775/167072911-dc31eac8-6885-4a05-9c25-279ecce22a79.png",
+      img: require("../images/ReactLesson1.png"),
+      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
-
-------------- CSS
-  {
-      taskId: "csstask1",
-      taskTitle: "CSS Task 1 Description",
-      introduction: "introduction/description",
-      taskText: "",
-      taskType: "CSS",
-      difficulty: "Easy",
-      authorIndex: 0,
-      prerequisites: ["CSS Basics"],
-      completed: false,
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817",
-    },
-
-      */
+   
+  ],  */

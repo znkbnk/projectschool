@@ -45,6 +45,11 @@
 }
 .text-window h3 {
   margin: 20px 0;
+  padding: 10px;
+}
+
+.text-window h4 {
+  padding: 10px;
 }
 
 .task p {
@@ -95,6 +100,7 @@
 .checkbox-container label {
   font-size: 16px;
   line-height: 1.5;
+  padding: 10px;
 }
 
 .checkbox-container ul {
@@ -119,40 +125,16 @@
 .checkbox-container input[type="checkbox"]:checked + label::before {
   background-color: #2adf12;
 }
-.hidden {
-  display: none;
-}
 
-.continue-on-computer {
-  display: none;
-  text-align: center;
-  color: red;
-  font-size: 48px;
-  padding: 40px;
-}
+
+
 
 @media only screen and (max-device-width: 1024px) {
   .task-container {
-    width: 30%; /* Adjust the width of the task container */
+    width: 30%; 
   }
 }
-@media only screen and (max-device-width: 767px) {
-  .editor-container {
-    display: none;
-  }
 
-  .continue-on-computer {
-    display: flex; /* Ensure the text is displayed */
-    justify-content: center; /* Center the text horizontally */
-    height: 80vh; /* Occupy full height of the viewport */
-  }
-  .continue-on-computer p {
-    margin-top: 250px;
-  }
- 
 
-  .nav-link {
-    font-size: 1rem;
-    color: #fff;
-  }
-}
+
+
