@@ -243,3 +243,10 @@ section {
     content: "\203A";
   }
 }
+@media only screen and (max-device-width: 640px) {
+  .Toastify__toast-container {
+    top: 180px !important;
+  }
+}
+
+
