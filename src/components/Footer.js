@@ -19,20 +19,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className='com' data-aos='fade-up'>
-          <h1>About</h1>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/faq'>FAQ</Link>
-            </li>
-            <li>
-              <Link to='/projects'>Projects</Link>
-            </li>
-          </ul>
-        </div>
+        
         <div className='info' data-aos='fade-up'>
           <h1>Social Media</h1>
           <div className='sociallogos'>

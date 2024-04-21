@@ -4,6 +4,8 @@ import CardIcon from "../images/pslogosmall.png";
 import ProductImage from "../images/navbarlogo.png";
 
 import "../styles/checkout.css";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 let stripePromise;
 
@@ -45,32 +47,37 @@ const Checkout = () => {
   if (stripeError) alert(stripeError);
 
   return (
-    <div className='checkout'>
-      <h1>Stripe Checkout</h1>
-      <p className='checkout-title'>React</p>
-      <p className='checkout-description'>
-        Practice React
-      </p>
-      <h1 className='checkout-price'>£10</h1>
-      <img
-        className='checkout-product-image'
-        src={ProductImage}
-        alt='Product'
-      />
-      <button
-        className='checkout-button'
-        onClick={redirectToCheckout}
-        disabled={isLoading}
-      >
-        <div className='grey-circle'>
-          <div className='purple-circle'>
-            <img className='icon' src={CardIcon} alt='credit-card-icon' />
+    <div>
+      <Navbar />
+      <div className='checkout'>
+        <h1>Checkout</h1>
+        <p className='checkout-title'>ProjectSchool</p>
+        <p className='checkout-description'>
+          Practice React Practice React Practice React Practice React Practice
+          React{" "}
+        </p>
+        <h1 className='checkout-price'>£10</h1>
+        <img
+          className='checkout-product-image'
+          src={ProductImage}
+          alt='Product'
+        />
+        <button
+          className='checkout-button'
+          onClick={redirectToCheckout}
+          disabled={isLoading}
+        >
+          <div className='grey-circle'>
+            <div className='purple-circle'>
+              <img className='icon' src={CardIcon} alt='credit-card-icon' />
+            </div>
           </div>
-        </div>
-        <div className='text-container'>
-          <p className='text'>{isLoading ? "Loading..." : "Get Started"}</p>
-        </div>
-      </button>
+          <div className='text-container'>
+            <p className='text'>{isLoading ? "Loading..." : "Get Started"}</p>
+          </div>
+        </button>
+      </div>
+      <Footer />
     </div>
   );
 };

@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   max-width: 100%;
-  margin-top: 3rem;
+  margin-top: 1rem;
   transform: rotate(10deg);
 }
 
@@ -50,7 +50,7 @@
   font-family: "Shadows Into Light", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 8rem;
+  font-size: 9rem;
   text-align: center;
 }
 
@@ -177,9 +177,7 @@
     left: 15%;
     top: 37%;
   }
-  .twoWords {
-    margin-top: 8rem;
-  }
+  
 
  
 }
@@ -191,10 +189,7 @@
     left: 15%;
     top: 42%;
   }
-  .twoWords {
-    margin-top: 12rem;
-    font-size: 8rem;
-  }
+
   
  
 }
@@ -206,11 +201,37 @@
     left: 15%;
     top: 40%;
   }
-  .twoWords {
-    margin-top: 12rem;
-    font-size: 6rem;
+  
+ .word-title span {
+    font-size: 12rem;
   }
- 
+  .toTheWord span {
+    margin-top: 30px;
+  }
 }
+
+@media only screen and (max-device-width: 640px)  {
+  .twoWords {
+    margin-top: 150px;
+  }
+  .word-title span {
+    font-size: 16rem;
+    
+  }
+  .toTheWord span {
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1920px){
+
+  .toTheWord span {
+    margin: 55px 0;
+  }
+}
+
+
+  
+
 
 

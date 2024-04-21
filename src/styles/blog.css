@@ -153,8 +153,31 @@
   overflow: hidden;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-device-width: 640px)  {
   body {
     flex-direction: column;
+  }
+
+  .card-container {
+    width: 1000px;
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 2rem;
+  }
+
+  .card-extract {
+    padding: 30px;
+    font-size: 2rem;
+  }
+  .card-container.React .card-category {
+    font-size: 2rem;
+  }
+  .card-container.React .card-date {
+    font-size: 2rem;
+  }
+  .card-thumb {
+    width: 40%;
   }
 }

@@ -327,3 +327,9 @@ h2.heading_large {
     line-height: 1.5rem;
   }
 }
+
+@media only screen and (max-device-width: 640px)  {
+  .sectionImg4 {
+    height: 100%;
+  }
+}
