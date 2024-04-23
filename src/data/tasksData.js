@@ -88,7 +88,7 @@ const tasksData = {
       prerequisites: ["React Basics"],
       completed: false,
       img: require("../images/ReactLesson1.png"),
-      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/InteractiveCard.css?rlkey=bydjjmcbwquipvhhlw470mbkb&st=op6om9ay&dl=0",
     },
     {
       taskId: "reacttask2",
@@ -163,6 +163,78 @@ const tasksData = {
       completed: false,
       img: require("../images/ReactLesson2.png"),
       link: "https://www.dropbox.com/scl/fi/03e0si4h3xgxgg74ygra3/BMIstyles.css.css?rlkey=v7kz0wgjp8qtyhfr7ttco3vqx&dl=0",
+    },
+    {
+      taskId: "reacttask3",
+      taskTitle: "React Dark-Light Mode Toggle",
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up Your React Project",
+          titleDescription: "",
+          description: [
+            "Make sure you have Node.js and npm installed on your system.",
+            "Create a new React project using Create React App or any other preferred method.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Required Files",
+          titleDescription: "",
+          description: [
+            "Create App.js, Article.js, data.js, and index.css files in your project directory.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Populate data.js with Sample Data",
+          titleDescription: "",
+          description: [
+            "In data.js, export an array of objects, each representing an article. Each object should have properties like id, title, snippet, date, and length.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Implement the Article Component",
+          titleDescription: "",
+          description: [
+            "In Article.js, import React and any other required dependencies like moment.",
+            "Create a functional component named Article.",
+            "Inside the component, destructure the props (title, snippet, date, length) passed to it.",
+            "Use JSX to render the article's title, date (formatted using moment), length, and snippet.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create Styles in index.css",
+          titleDescription: "",
+          description: [
+            "Define styles for the navigation, button, articles, and any other elements you want to style.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Implement the getStorageTheme Function",
+          titleDescription: "",
+          description: [
+            "In App.js, define a function named getStorageTheme that retrieves the theme from localStorage.",
+            "Set the default theme to 'light-theme' if no theme is found in localStorage.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Implement the App Component",
+          titleDescription: "",
+          description: [
+            "Define a functional component named App.",
+            "Use useState to manage the theme state, initializing it with the value returned by getStorageTheme.",
+            "Define a toggleTheme function that toggles between 'light-theme' and 'dark-theme' based on the current theme.",
+            "Use useEffect to update the document's className and store the theme in localStorage whenever the theme changes.",
+            "Return JSX for the main structure of the app, including a navigation section with a title and a button to toggle the theme, and a section to display articles.",
+            "Map through the data array, rendering an Article component for each item.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson3.png"),
+      link: "https://www.dropbox.com/scl/fi/knoeb48ov2on7o1p7qcim/DarkLight.css?rlkey=s5xlzw4l86ugerz5w9v0e5w07&st=hnajvomv&dl=0",
     },
   ],
 };

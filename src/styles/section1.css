@@ -5,7 +5,10 @@
   padding: 0;
 }
 .ipsType_right p {
-  padding: 10rem;
+  padding: 2rem;
+}
+.ipsType_right p span{
+  font-size: 1.75rem;
 }
 
 .ipsType_right {

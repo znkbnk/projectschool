@@ -11,102 +11,99 @@ import WelcomeWord from "./WelcomeWord";
 import { Link } from "react-router-dom";
 
 function Section1() {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const slides = [
-      {
-        title: "Project Showcase",
-        content: (
-          <>
-            <ul>
-              <li>
-                Display featured projects or case studies completed by students.
-              </li>
-              <li>
-                Highlight the practical skills and knowledge gained through the
-                course.
-              </li>
-              <li>
-                Showcase visually appealing screenshots or thumbnails of the
-                projects.
-              </li>
-            </ul>
-          </>
-        ),
-        imageSrc: image1,
-      },
-      {
-        title: "Testimonials and Success Stories",
-        content: (
-          <>
-            <ul>
-              <li>
-                Share testimonials from past students who have benefited from
-                the practical approach of the program.
-              </li>
-              <li>
-                Include success stories or anecdotes about how hands-on learning
-                has made a difference in their careers or projects.
-              </li>
-              <li>
-                Use quotes or short excerpts to convey the impact of the course
-                on students learning experiences.
-              </li>
-            </ul>
-          </>
-        ),
-        imageSrc: image2,
-      },
-      {
-        title: "Upcoming Events or Workshops",
-        content: (
-          <>
-            <ul>
-              <li>
-                Promote upcoming events, workshops, or guest lectures related to
-                JS, CSS, and React.
-              </li>
-              <li>
-                Provide brief descriptions of the topics covered and highlight
-                the benefits of participation.
-              </li>
-              <li>
-                Include links or buttons for students to learn more or register
-                for the events.
-              </li>
-            </ul>
-          </>
-        ),
-        imageSrc: image3,
-      },
-    ];
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      title: "Project Showcase",
+      content: (
+        <>
+          <ul>
+            <li>
+              Display featured projects or case studies completed by students.
+            </li>
+            <li>
+              Highlight the practical skills and knowledge gained through the
+              course.
+            </li>
+            <li>
+              Showcase visually appealing screenshots or thumbnails of the
+              projects.
+            </li>
+          </ul>
+        </>
+      ),
+      imageSrc: image1,
+    },
+    {
+      title: "Testimonials and Success Stories",
+      content: (
+        <>
+          <ul>
+            <li>
+              Share testimonials from past students who have benefited from the
+              practical approach of the program.
+            </li>
+            <li>
+              Include success stories or anecdotes about how hands-on learning
+              has made a difference in their careers or projects.
+            </li>
+            <li>
+              Use quotes or short excerpts to convey the impact of the course on
+              students learning experiences.
+            </li>
+          </ul>
+        </>
+      ),
+      imageSrc: image2,
+    },
+    {
+      title: "Upcoming Events or Workshops",
+      content: (
+        <>
+          <ul>
+            <li>
+              Promote upcoming events, workshops, or guest lectures related to
+              JS, CSS, and React.
+            </li>
+            <li>
+              Provide brief descriptions of the topics covered and highlight the
+              benefits of participation.
+            </li>
+            <li>
+              Include links or buttons for students to learn more or register
+              for the events.
+            </li>
+          </ul>
+        </>
+      ),
+      imageSrc: image3,
+    },
+  ];
 
-    const titleRef = useRef(null);
-    const contentRef = useRef(null);
+  const titleRef = useRef(null);
+  const contentRef = useRef(null);
 
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-        handleAnimation();
-      }, 3000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      handleAnimation();
+    }, 3000);
 
-      return () => {
-        clearInterval(interval);
-      };
-    }, [slides.length]);
-
-    const handleAnimation = () => {
-      const title = titleRef.current;
-      const content = contentRef.current;
-      title.classList.add("left");
-      content.classList.add("fade");
-      setTimeout(() => {
-        title.classList.remove("left");
-        content.classList.remove("fade");
-      }, 700);
+    return () => {
+      clearInterval(interval);
     };
+  }, [slides.length]);
 
- 
-  
+  const handleAnimation = () => {
+    const title = titleRef.current;
+    const content = contentRef.current;
+    title.classList.add("left");
+    content.classList.add("fade");
+    setTimeout(() => {
+      title.classList.remove("left");
+      content.classList.remove("fade");
+    }, 700);
+  };
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -160,8 +157,6 @@ function Section1() {
     });
   }, []);
 
-  
-
   return (
     <div className='container'>
       <header>
@@ -173,14 +168,29 @@ function Section1() {
             <div className='ipsGrid_span7 ipsType_right'>
               <p>
                 <span>
-                  This project focuses more on doing things rather than just
-                  learning about them. You'll jump right into hands-on
-                  activities to really understand and use what you're learning.
-                  Instead of just listening, you'll be actively involved in
-                  activities that help you gain skills and confidence. This is
-                  your chance to connect what you learn in class with real-life
-                  situations. Come join us in making education more about doing
-                  and experiencing things!
+                  Welcome to our React language upgrade school, where we focus
+                  on practical learning rather than overwhelming you with
+                  theory. Nowadays, many online coding schools bombard you with
+                  lots of theory, but we believe in a different approach. Our
+                  courses are designed to dive straight into hands-on tasks so
+                  you can really understand and use what you're learning.
+                </span>
+              </p>
+              <p>
+                <span>
+                  No more passive learning! Our classes are all about getting
+                  involved and doing things. You won't just sit and listen;
+                  you'll be actively participating in activities to build your
+                  skills and confidence. We want to help you connect what you
+                  learn in class with real-life situations.
+                </span>
+              </p>
+              <p>
+                <span>
+                  At our school, we make education more about doing and
+                  experiencing things, bridging the gap between what you learn
+                  and what you can actually do. Join us in making learning more
+                  practical and rewarding!
                 </span>
               </p>
             </div>

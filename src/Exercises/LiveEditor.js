@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import {tasksData} from "../data/tasksData"; // Import the updated tasksData
+import {tasksData} from "../data/tasksData"; 
 import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -110,7 +110,7 @@ const LiveEditor = () => {
         <div className='task-container'>
           <div className='task'>
             <div className='text-window'>
-              {lessonType ? (
+              {lessonType &&
                 tasksData[lessonType][currentTaskIndex].steps.map(
                   (step, index) => (
                     <div className='taskText-container' key={index}>
@@ -134,10 +134,7 @@ const LiveEditor = () => {
                       <br />
                     </div>
                   )
-                )
-              ) : (
-                <p>Start Practicing...</p>
-              )}
+                )}
               {tasksData[lessonType][currentTaskIndex].link && (
                 <button className='button-84' onClick={handleDownloadStyles}>
                   Download Styles

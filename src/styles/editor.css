@@ -83,9 +83,8 @@
   outline: none;
 }
 
-/* taskData file */
 .checkbox-container input[type="checkbox"] {
-  display: none; /* Hide the default checkbox */
+  display: none; 
 }
 
 .checkbox-container {

@@ -81,10 +81,7 @@ const App = () => {
           path='/resetPassword'
           element={isLoggedIn ? <ResetPassword /> : <Navigate to='/login' />}
         />
-        <Route
-          path='/editor'
-          element={isLoggedIn ? <LiveEditor /> : <Navigate to='/login' />}
-        />
+       
         <Route
           path='/editor/:lessonType/:taskId'
           element={isLoggedIn ? <LiveEditor /> : <Navigate to='/login' />}
