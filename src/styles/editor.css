@@ -43,6 +43,11 @@
   font-weight: 400;
   font-size: 1.2rem;
 }
+
+.text-window h1 {
+  padding: 10px;
+  text-align: center;
+}
 .text-window h3 {
   margin: 20px 0;
   padding: 10px;

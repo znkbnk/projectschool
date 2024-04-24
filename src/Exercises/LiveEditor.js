@@ -110,6 +110,8 @@ const LiveEditor = () => {
         <div className='task-container'>
           <div className='task'>
             <div className='text-window'>
+              <h1>{tasksData[lessonType][currentTaskIndex].taskTitle}</h1>
+
               {lessonType &&
                 tasksData[lessonType][currentTaskIndex].steps.map(
                   (step, index) => (

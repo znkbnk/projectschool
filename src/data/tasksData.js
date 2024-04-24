@@ -9,7 +9,7 @@ const tasksData = {
       steps: [
         {
           stepTitle: "Step 1: Define functional component Card",
-          titleDescription: "",
+          titleDescription: "In this lesson, we'll be building a React functional component called Card, which represents a dynamic card element showcasing sneaker information. We'll implement mouse movement handling and event listeners for mouse enter and leave actions to create engaging visual effects and interactions within the component.",
           description: [
             "Create a reference for the card element",
             "Create a reference for the title element",
@@ -94,7 +94,8 @@ const tasksData = {
     {
       taskId: "reacttask2",
       taskTitle: "BMI Tracker",
-      introduction: "aaa",
+      introduction:
+        "Welcome to the BMI Calculator! This React component allows you to input your weight and height, then calculates your Body Mass Index (BMI) and provides a message indicating your BMI category.",
       steps: [
         {
           stepTitle: "Step 1: Import React and useState hook",
@@ -169,7 +170,8 @@ const tasksData = {
     {
       taskId: "reacttask3",
       taskTitle: "React Dark-Light Mode Toggle",
-      introduction: "aaa",
+      introduction:
+        "This tutorial guides you through setting up a React project to display articles with a toggleable light and dark theme. By following these steps, you'll create a structured application with styled components and basic functionality.",
       steps: [
         {
           stepTitle: "Step 1: Set Up Your React Project",
