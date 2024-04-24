@@ -5,7 +5,8 @@ const tasksData = {
     {
       taskId: "reacttask1",
       taskTitle: "React 3D Interactive Card",
-      introduction: "In this lesson, we'll be building a React functional component called Card. We'll implement mouse movement handling and event listeners for mouse enter and leave actions to create engaging visual effects and interactions within the component.",
+      introduction:
+        "In this lesson, we'll be building a React functional component called Card. We'll implement mouse movement handling and event listeners for mouse enter and leave actions to create engaging visual effects and interactions within the component.",
       steps: [
         {
           stepTitle: "Step 1: Define functional component Card",
@@ -305,6 +306,77 @@ const tasksData = {
       img: require("../images/ReactLesson4.png"),
       link: "https://www.dropbox.com/scl/fi/ggr71m0hhr7dwqbxsn7zb/filterContactList.css?rlkey=ze15q78lxoiocw6z84o2c12cb&st=zw4011an&dl=0",
     },
+    {
+      taskId: "reacttask5",
+      taskTitle: "Simple Quiz App",
+      introduction:
+        "In this guide, you will embark on a journey to create an interactive quiz app. Follow along as we guide you through the process of building your very own quiz application from scratch.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Create Component Files",
+          titleDescription: "",
+          description: [
+            "Open your code editor.",
+            "Navigate to the 'src' folder of your project directory.",
+            "Create a new file named App.js.",
+            "Create another new file named index.css.",
+            "Finally, create a file named questions.js.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Define Questions",
+          titleDescription: "",
+          description: [
+            "Create the questions.js file.",
+            "Inside, create a JavaScript array named questions.",
+            "Each element of this array will represent a single question in your quiz.",
+            "For each question, create an object with two properties: questionText (the text of the question) and answerOptions (an array of possible answer options, each represented by an object containing answerText and isCorrect properties).",
+          ],
+        },
+        {
+          stepTitle: "Step 3: App Component",
+          titleDescription: "",
+          description: [
+            "Open the App.js file.",
+            "Begin by importing React at the top of the file.",
+            "Import the useState hook from React to manage state within the component.",
+            "Also, import the questions array from ./questions.js.",
+            "Create a functional component named App.",
+            "Inside the component, declare state variables to keep track of the current question, the score, and the number of correct and incorrect answers.",
+            "Implement the handleAnswerButtonClick function to handle user clicks on answer options.",
+            "Inside this function, update the score and the counts of correct and incorrect answers based on the selected option.",
+            "Update the current question index to move to the next question if there are more questions remaining. Otherwise, call the finishQuiz function.",
+            "Implement the finishQuiz function to finalize the quiz when all questions have been answered.",
+            "Render the quiz interface using JSX, displaying the current question text and answer options based on the current question index.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Conditional Rendering",
+          titleDescription: "",
+          description: [
+            "Use conditional rendering within the App component to display either the quiz questions or the final score section based on the value of currentQuestion.",
+            "If currentQuestion is less than the total number of questions, render the quiz interface. Otherwise, render the final score section.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Styling",
+          titleDescription: "",
+          description: [
+            "Open the index.css file.",
+            "Add CSS rules to style the quiz app according to your preferences.",
+            "You can define styles for the app container, question text, answer options, buttons, etc.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson5.png"),
+      link: "https://www.dropbox.com/scl/fi/x993b93wtivxvs24vu2gh/quizApp.css?rlkey=ugoc9v64xrxs7a82giuyj0d21&st=5nhhq4ti&dl=0",
+    },
   ],
 };
 
@@ -536,48 +608,48 @@ export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
 ---------------------- REACT, js
 React: [
     {
-      taskId: "reacttask1",
-      taskTitle: "React 3D Interactive Card",
+      taskId: "reacttask",
+      taskTitle: "",
       introduction: "",
 
       steps: [
         {
-          stepTitle: "Step 1: Define functional component Card",
+          stepTitle: "Step 1: ",
           titleDescription: "",
           description: [
-            "Create a reference for the card element",
+            "",
             
           ],
         },
         {
-          stepTitle: "Step 2: Function to handle mouse movement",
+          stepTitle: "Step 2: ",
           titleDescription: "",
           description: [
-            "Calculate the rotation on the X-axis based on mouse position",
+            "",
             
           ],
         },
         {
-          stepTitle: "Step 3: Function to handle mouse entering the card",
+          stepTitle: "Step 3: ",
           titleDescription: "",
           description: [
-            "Remove transition effect",
+            "",
           
           ],
         },
         {
-          stepTitle: "Step 4: Function to handle mouse leaving the card",
+          stepTitle: "Step 4: ",
           titleDescription: "",
           description: [
-            "Add transition effect",
+            "",
            
           ],
         },
         {
-          stepTitle: "Step 5: Return JSX for the component",
+          stepTitle: "Step 5: ",
           titleDescription: "",
           description: [
-            "Container for the card with mouse move event handler",
+            "",
             
           ],
         },
@@ -591,4 +663,6 @@ React: [
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
    
-  ],  */
+  ],  
+  
+  */
