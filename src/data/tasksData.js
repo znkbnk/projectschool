@@ -5,11 +5,11 @@ const tasksData = {
     {
       taskId: "reacttask1",
       taskTitle: "React 3D Interactive Card",
-      introduction: "aaa",
+      introduction: "In this lesson, we'll be building a React functional component called Card. We'll implement mouse movement handling and event listeners for mouse enter and leave actions to create engaging visual effects and interactions within the component.",
       steps: [
         {
           stepTitle: "Step 1: Define functional component Card",
-          titleDescription: "In this lesson, we'll be building a React functional component called Card, which represents a dynamic card element showcasing sneaker information. We'll implement mouse movement handling and event listeners for mouse enter and leave actions to create engaging visual effects and interactions within the component.",
+          titleDescription: "",
           description: [
             "Create a reference for the card element",
             "Create a reference for the title element",
