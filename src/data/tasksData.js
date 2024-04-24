@@ -5,6 +5,7 @@ const tasksData = {
     {
       taskId: "reacttask1",
       taskTitle: "React 3D Interactive Card",
+      introduction: "aaa",
       steps: [
         {
           stepTitle: "Step 1: Define functional component Card",
@@ -93,6 +94,7 @@ const tasksData = {
     {
       taskId: "reacttask2",
       taskTitle: "BMI Tracker",
+      introduction: "aaa",
       steps: [
         {
           stepTitle: "Step 1: Import React and useState hook",
@@ -167,6 +169,7 @@ const tasksData = {
     {
       taskId: "reacttask3",
       taskTitle: "React Dark-Light Mode Toggle",
+      introduction: "aaa",
       steps: [
         {
           stepTitle: "Step 1: Set Up Your React Project",
@@ -235,6 +238,70 @@ const tasksData = {
       completed: false,
       img: require("../images/ReactLesson3.png"),
       link: "https://www.dropbox.com/scl/fi/knoeb48ov2on7o1p7qcim/DarkLight.css?rlkey=s5xlzw4l86ugerz5w9v0e5w07&st=hnajvomv&dl=0",
+    },
+    {
+      taskId: "reacttask4",
+      taskTitle: "Sortify: Search by Name",
+      introduction:
+        "Sortify is a simple yet powerful web application designed for effortlessly sorting contact names. Built with React and Bootstrap, Sortify enables users to efficiently manage their contacts by organizing them alphabetically based on first names. With its intuitive interface and seamless functionality, Sortify streamlines the process of maintaining an organized contact list.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Import Required Modules",
+          titleDescription: "Import React and useState hook from 'react'",
+          description: [
+            "Create a reference for the card element",
+            'Import various components from "react-bootstrap".',
+            'Import the data array from a separate file named "data.js".',
+          ],
+        },
+        {
+          stepTitle: "Step 2: Initialize State Variables",
+          titleDescription:
+            "Initialize two state variables using the useState hook:",
+          description: [
+            "search: to store the search query entered by the user.",
+            "contacts: to store the array of contacts data imported from 'data.js'.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Define Event Handlers",
+          titleDescription: "",
+          description: [
+            "handleSearchChange: This function updates the search state variable with the value entered by the user in the search input field.",
+            "sortName: This function sorts the contacts array based on the first name in ascending order when the 'Sort by First Name' button is clicked.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Render UI Components",
+          titleDescription: "",
+          description: [
+            "Render a Container component from 'react-bootstrap' to wrap the content.",
+            "Render a heading for the application.",
+            "Render a Form component with an InputGroup to allow users to search for contacts.",
+            "Render a Button component to trigger the sorting of contacts by first name.",
+            "Render a Table component from 'react-bootstrap' to display the contacts data in a tabular format.",
+            "Define the table headers.",
+            "Filter the contacts based on the search query entered by the user.",
+            "Map through the filtered contacts and render each contact as a row in the table.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Event Binding",
+          titleDescription: "",
+          description: [
+            "Bind the onChange event of the search input field to the handleSearchChange function to update the search query state.",
+            "Bind the onClick event of the 'Sort by First Name' button to the sortName function to trigger sorting.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson4.png"),
+      link: "https://www.dropbox.com/scl/fi/ggr71m0hhr7dwqbxsn7zb/filterContactList.css?rlkey=ze15q78lxoiocw6z84o2c12cb&st=zw4011an&dl=0",
     },
   ],
 };
@@ -469,6 +536,8 @@ React: [
     {
       taskId: "reacttask1",
       taskTitle: "React 3D Interactive Card",
+      introduction: "",
+
       steps: [
         {
           stepTitle: "Step 1: Define functional component Card",

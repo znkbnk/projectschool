@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import LessonsCards from "./LessonsCards";
 
@@ -15,10 +16,23 @@ const FilteredTasks = ({
   showEasy,
   showHard,
 }) => {
-  const isMobile = window.innerWidth < 460;
-  if (isMobile) {
-    return <MobileMessage />;
-  }
+ const [isMobile, setIsMobile] = useState(window.innerWidth < 460);
+   useEffect(() => {
+     const handleResize = () => {
+       setIsMobile(window.innerWidth < 460);
+     };
+
+     window.addEventListener("resize", handleResize);
+
+     return () => {
+       window.removeEventListener("resize", handleResize);
+     };
+   }, []);
+
+   if (isMobile) {
+     return <MobileMessage />;
+   }
+
   const isTaskAvailable = (task) => {
     const completedTasks =
       JSON.parse(localStorage.getItem(completedTasksKey)) || {};
@@ -78,7 +92,7 @@ const FilteredTasks = ({
               </div>
             ) : (
               // Conditionally render Link only if it's not a mobile device
-              !isMobile && (
+              
                 <Link
                   to={`/editor/${task.taskType}/${task.taskId}`}
                   style={{ textDecoration: "none" }}
@@ -103,7 +117,7 @@ const FilteredTasks = ({
                   </div>
                 </Link>
               )
-            )}
+            }
           </div>
         );
       })}
@@ -112,7 +126,6 @@ const FilteredTasks = ({
 };
 
 export default FilteredTasks;
-
 
 
 // import React from "react";
@@ -126,20 +139,20 @@ export default FilteredTasks;
 //   showEasy,
 //   showHard,
 // }) => {
-//  const isTaskAvailable = (task) => {
-//    const completedTasks =
-//      JSON.parse(localStorage.getItem(completedTasksKey)) || {};
-//    const taskIndex = tasks.findIndex(
-//      (originalTask) => originalTask.taskId === task.taskId
-//    );
+//   const isTaskAvailable = (task) => {
+//     const completedTasks =
+//       JSON.parse(localStorage.getItem(completedTasksKey)) || {};
+//     const taskIndex = tasks.findIndex(
+//       (originalTask) => originalTask.taskId === task.taskId
+//     );
 
-//    // Check if it's the first task or the previous task is completed
-//    const isPreviousTaskCompleted =
-//      taskIndex === 0 || completedTasks[tasks[taskIndex - 1].taskId];
-//    console.log(`Task ${task.taskId} is available: ${isPreviousTaskCompleted}`);
+//     // Check if it's the first task or the previous task is completed
+//     const isPreviousTaskCompleted =
+//       taskIndex === 0 || completedTasks[tasks[taskIndex - 1].taskId];
+//     console.log(`Task ${task.taskId} is available: ${isPreviousTaskCompleted}`);
 
-//    return isPreviousTaskCompleted;
-//  };
+//     return isPreviousTaskCompleted;
+//   };
 
 //   const filterTasks = (task) => {
 //     const isAvailable = isTaskAvailable(task);
@@ -203,7 +216,7 @@ export default FilteredTasks;
 //                       introduction={task.introduction}
 //                       difficulty={task.difficulty}
 //                       taskId={task.taskId}
-//                       completedTasksKey={`${task.taskType}_completedTasks`} 
+//                       completedTasksKey={`${task.taskType}_completedTasks`}
 //                     />
 //                   )}
 //                 </div>
