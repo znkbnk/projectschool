@@ -377,6 +377,79 @@ const tasksData = {
       img: require("../images/ReactLesson5.png"),
       link: "https://www.dropbox.com/scl/fi/x993b93wtivxvs24vu2gh/quizApp.css?rlkey=ugoc9v64xrxs7a82giuyj0d21&st=5nhhq4ti&dl=0",
     },
+    {
+      taskId: "reacttask6",
+      taskTitle: "ReactFAQ",
+      introduction:
+        "ReactFAQ is a user-friendly React application designed to provide quick access to frequently asked questions and their detailed answers. With collapsible sections and intuitive navigation, users can easily find the information they need within a sleek and modern interface.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Create React App",
+          titleDescription: "",
+          description: [
+            "Open your terminal.",
+            "Navigate to the directory where you want to create your project.",
+            "Run npx create-react-app my-react-app (replace my-react-app with your preferred project name).",
+            "Navigate into your project directory: cd my-react-app.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Component Structure",
+          titleDescription: "",
+          description: [
+            "Inside the src folder of your React project, create a new folder named components.",
+            "Inside the components folder, create two files: Question.js and index.css.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Question Component",
+          titleDescription: "In question.js",
+          description: [
+            "Install ( npm i react-icons ) and import the AiOutlineMinus and AiOutlinePlus icons from the 'react-icons/ai' library",
+            "Define the Question component as a functional component that takes 'title' and 'info' props",
+            "Initialize state variable 'showInfo' using the useState hook, default value is false",
+            "Render the component structure",
+            "Define outer container for the question article",
+            "Then, create a header section containing the question title",
+            "Add the button to toggle visibility of additional information",
+            "Apply conditional rendering of 'minus' icon if showInfo is true, otherwise 'plus' icon",
+            "Render additional information paragraph if showInfo is true",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Main App Component",
+          titleDescription: "In your App.js file",
+          description: [
+            "Import necessary modules from React library.",
+            "Import data from an external file named 'data'.",
+            "Import the Question component from a file named 'Question'.",
+            "Import styles from an external CSS file named 'index.css'.",
+            "Declare a functional component named App.",
+            "Declaring a state variable 'questions' using useState hook, initialise it with data imported from 'data' file. ",
+            "In return statement create a main container of the application",
+            "Then, container div with a class name of 'container', 'heading' sectiopn element with a class name of 'info",
+            "Map through the 'questions' array and render the Question component for each question",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Data File",
+          titleDescription: "",
+          description: [
+            "Create a new file named data.js in the src directory.",
+            "Define an array of objects representing questions, each with properties like id, title, and info.",
+            "Populate the data file with question objects containing various titles and information.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson6.png"),
+      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+    },
   ],
 };
 
