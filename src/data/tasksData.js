@@ -450,22 +450,100 @@ const tasksData = {
       img: require("../images/ReactLesson6.png"),
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
+    {
+      taskId: "reacttask7",
+      taskTitle: "Birthday Reminder",
+      introduction:
+        "In this task, you'll explore building a dynamic 'Birthday Reminder' app using React. You'll dive into concepts such as state management with useState, filtering data based on dates, and structuring components effectively. By the end, you'll have a practical understanding of React fundamentals and be equipped to create your own personalized applications.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Create React App",
+          titleDescription: "",
+          description: [
+            "Start by creating a new React application using Create React App or any other method you prefer.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Component Structure",
+          titleDescription: "",
+          description: [
+            "Plan out the component structure. You'll need components for the main App, the logic to determine birthdays, the list of people, and potentially individual person cards if you want to break it down further.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Data Structure",
+          titleDescription: "",
+          description: [
+            "Decide on the structure of your data. You need an array of objects representing people, with each object containing properties like id, name, age, date of birth (dob), and image URL.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: App Component",
+          titleDescription: "App.js",
+          description: [
+            "Begin by creating the main App component in a file named App.js.",
+            "Import the necessary modules such as React, useState, and any other components you'll be using, like List and BirthdayLogic.",
+            "Set up the initial state using React's useState hook. Initialize the state with the data array imported from a separate file. This array will hold information about people's birthdays.",
+            "Inside the component's return statement, structure the JSX for the main layout of your app. This will include a section with a heading displaying the number of birthdays today, the list of people with birthdays today, and a button to clear all birthdays.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Birthday Logic Component",
+          titleDescription: "BirthdayLogic.js",
+          description: [
+            "Create a new file named BirthdayLogic.js for the BirthdayLogic component.",
+            "Define a functional component named BirthdayLogic that accepts the people prop.",
+            "Inside the component, create a variable to hold today's date using new Date().",
+            "Format today's date to match the format of the date of birth (e.g., 'MM-DD') for comparison.",
+            "Use the filter method to iterate through the people array and filter out those whose date of birth matches today's date.",
+            "Return the filtered array of people whose birthday is today.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: List Component",
+          titleDescription: "List.js",
+          description: [
+            "Create a new file named List.js for the List component.",
+            "Define a functional component named List that accepts the people prop.",
+            "Inside the component, filter the people array received as a prop to find those whose birthday is today. You can use a similar approach as in the BirthdayLogic component.",
+            "Render JSX to display the list of people whose birthday is today. This may involve mapping over the filtered array and rendering individual person cards.",
+            "Ensure that the component conditionally renders the list only if there are people with birthdays today.",
+            "Style the list component using CSS to make it visually appealing. You can create a CSS file named index.css to contain your styles.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Styling",
+          titleDescription: "List.js",
+          description: [
+            "Style your components using CSS or any styling solution you prefer. You can use classNames or CSS-in-JS libraries like Styled Components to style your components.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson7.png"),
+      link: "https://www.dropbox.com/scl/fi/57ns2zldn9w6jud6hbstj/birthdayStyles.css?rlkey=j24jn3vqz5vg144vl0hbj0z51&st=5yn64tby&dl=0",
+    },
   ],
 };
 
 const exercisesData = [
-  {
-    img: require("../images/js.png"),
-    title: "Mastering JavaScript",
-    desc: "Dive deep into JavaScript, the language that powers the web. From variables and functions to advanced concepts like closures and asynchronous programming, unlock the full potential of JavaScript.",
-    to: "/jslessons",
-  },
-  {
-    img: "https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg",
-    title: "Styling Your Web Pages",
-    desc: "Explore the power of CSS to beautify and style your web pages. From colors and fonts to layouts and animations, master the art of visual design for the web.",
-    to: "/csslessons",
-  },
+  // {
+  //   img: require("../images/js.png"),
+  //   title: "Mastering JavaScript",
+  //   desc: "Dive deep into JavaScript, the language that powers the web. From variables and functions to advanced concepts like closures and asynchronous programming, unlock the full potential of JavaScript.",
+  //   to: "/jslessons",
+  // },
+  // {
+  //   img: "https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg",
+  //   title: "Styling Your Web Pages",
+  //   desc: "Explore the power of CSS to beautify and style your web pages. From colors and fonts to layouts and animations, master the art of visual design for the web.",
+  //   to: "/csslessons",
+  // },
   {
     img: "https://www.freecodecamp.org/news/content/images/2022/04/featured.jpg",
     title: "Building Dynamic User Interfaces",
