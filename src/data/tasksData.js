@@ -528,6 +528,97 @@ const tasksData = {
       img: require("../images/ReactLesson7.png"),
       link: "https://www.dropbox.com/scl/fi/57ns2zldn9w6jud6hbstj/birthdayStyles.css?rlkey=j24jn3vqz5vg144vl0hbj0z51&st=5yn64tby&dl=0",
     },
+    {
+      taskId: "reacttask8",
+      taskTitle: "Dynamic Box Shadow Generator",
+      introduction:
+        "In this project, we'll be creating a dynamic box shadow generator. We'll implement an App component to manage the state of box shadows and controls, and a ControlBox component to allow users to customize shadow properties.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setting Up the Project",
+          titleDescription: "",
+          description: [
+            "Create a new React project using Create React App or your preferred method.",
+            "Ensure you have React installed in your project.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Component Structure",
+          titleDescription: "",
+          description: [
+            "Create two components: App.js and ControlBox.js.",
+            "App.js will serve as the main component containing the shadow preview and control panel.",
+            "ControlBox.js will contain the controls for adjusting the box shadow properties.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Implementing App Component ",
+          titleDescription: "App.js",
+          description: [
+            "Import React and required hooks (useState) from the React library.",
+            "Import the ControlBox component from its file.",
+            "Define a functional component named App.",
+            "Initialize state variables for managing shadows and controls using the useState hook: 'shadows': An array to store the box shadow values. 'controls': An array to keep track of control box components.            ",
+            "Implement a function named updateShadow that takes two parameters: s (shadow object) and id (index of the shadow to update).",
+            "Build the new shadow value based on the properties passed (x, y, blur, spread, color, inset).",
+            "Update the shadows state array at the specified index with the new shadow value.",
+            "Use the spread operator to avoid mutating the state directly.",
+            "Update the shadows state using the setShadows function.",
+            "Implement a function named addShadow to add a new control box and corresponding shadow to the state.",
+            "Append a new control object to the controls state array.",
+            "Add an empty string to the shadows state array to represent the new shadow.",
+            "Implement a function named undoAddLayer to remove the last added control box and corresponding shadow.",
+            "Check if there's more than one control box.",
+            "Remove the last element from both controls and shadows state arrays using the pop() method.",
+            "Update the state arrays using the setControls and setShadows functions.",
+            "Render the preview box and control panel components.",
+            "Pass necessary props to the ControlBox component (key, id, updateShadow).",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Implementing ControlBox Component",
+          titleDescription: "ControlBox.js",
+          description: [
+            "Import React, useState, and useEffect hooks from the React library.",
+            "Define a functional component named ControlBox.",
+            "Initialize state variable shadowModel using the useState hook.",
+            "shadowModel will store the properties of the box shadow being modified by the control box.",
+            "Implement a function named updateShadowModel to update the shadowModel state.",
+            "The function takes two parameters: propr (property name) and val (new value for the property).",
+            "Update the shadowModel state using the spread operator to merge the new property/value pair.",
+            "Use the useEffect hook to update the shadow whenever shadowModel changes.",
+            "Call the updateShadow function passed from the App component, passing shadowModel and id as arguments.",
+            "Add [shadowModel] as the dependency array to ensure the effect is triggered when shadowModel changes.",
+            "Render input elements for adjusting shadow properties (offset, blur, spread, color, inset) using JSX.",
+            "Set appropriate attributes (type, min, max, defaultValue, onChange) for each input.",
+            "Bind updateShadowModel function to the onChange event of each input to update shadowModel.",
+            "Render a checkbox input element for the 'Inset' property.",
+            "Bind the updateShadowModel function to the onChange event of the checkbox to update the inset property in shadowModel.",
+            "Ensure that changes in the input values trigger the updateShadowModel function to update the shadowModel state.",
+            "Utilize React's state management to keep track of changes in the control inputs.",
+            "Ensure that the updated shadow information is communicated back to the App component for rendering.",
+            "Apply CSS styles to the input elements for better visual presentation.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Connecting Components",
+          titleDescription: "",
+          description: [
+            "Import ControlBox component into App.js.",
+            "Pass necessary props (updateShadow) to ControlBox component.",
+            "Ensure that updateShadow function in App.js updates the shadows state with the correct shadow information.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson8.png"),
+      link: "https://www.dropbox.com/scl/fi/4afgt9yycn142ivtclsm9/shadowStyles.css?rlkey=p92gydd9wnxlt46r4n3b1vjaw&st=nmib5hqn&dl=0",
+    },
   ],
 };
 
@@ -769,15 +860,23 @@ React: [
           titleDescription: "",
           description: [
             "",
-            
+            "",
+            "",
+            "",
+            "",
+            "",
           ],
         },
         {
           stepTitle: "Step 2: ",
           titleDescription: "",
           description: [
+             "",
             "",
-            
+            "",
+            "",
+            "",
+            "",
           ],
         },
         {
@@ -785,7 +884,12 @@ React: [
           titleDescription: "",
           description: [
             "",
-          
+           "",
+            "",
+            "",
+            "",
+            "",
+            "",
           ],
         },
         {
@@ -793,7 +897,12 @@ React: [
           titleDescription: "",
           description: [
             "",
-           
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
           ],
         },
         {
@@ -801,7 +910,12 @@ React: [
           titleDescription: "",
           description: [
             "",
-            
+             "",
+            "",
+            "",
+            "",
+            "",
+            "",
           ],
         },
       ],
