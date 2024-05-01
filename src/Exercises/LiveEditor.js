@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import {tasksData} from "../data/tasksData"; 
+import { tasksData } from "../data/tasksData";
 import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
@@ -102,6 +102,14 @@ const LiveEditor = () => {
       toast.error("No styles found for download.");
     }
   };
+  const handleDownloadImg = () => {
+    const imgLink = tasksData[lessonType][currentTaskIndex].link2;
+    if (imgLink) {
+      window.open(imgLink, "_blank");
+    } else {
+      toast.error("No styles found for download.");
+    }
+  };
 
   return (
     <div>
@@ -140,6 +148,11 @@ const LiveEditor = () => {
               {tasksData[lessonType][currentTaskIndex].link && (
                 <button className='button-84' onClick={handleDownloadStyles}>
                   Download Styles
+                </button>
+              )}
+              {tasksData[lessonType][currentTaskIndex].link2 && (
+                <button className='button-84' onClick={handleDownloadImg}>
+                  Download Images
                 </button>
               )}
             </div>

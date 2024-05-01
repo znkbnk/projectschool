@@ -619,6 +619,85 @@ const tasksData = {
       img: require("../images/ReactLesson8.png"),
       link: "https://www.dropbox.com/scl/fi/4afgt9yycn142ivtclsm9/shadowStyles.css?rlkey=p92gydd9wnxlt46r4n3b1vjaw&st=nmib5hqn&dl=0",
     },
+    {
+      taskId: "reacttask9",
+      taskTitle: "Memory Game",
+      introduction:
+        "In this Memory Game implementation using React, we'll explore how to create a Memory Game using React. The game will involve flipping pairs of cards to find matches. We'll break down the process into steps, focusing on managing game state, rendering the game board, and implementing the card interactions. ",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up React App",
+          titleDescription: "",
+          description: [
+            "Create a new React app using create-react-app or any preferred method.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Component Structure",
+          titleDescription: "",
+          description: [
+            "Plan out the component structure. You'll need at least three components: App, Cards, and Card.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create App Component",
+          titleDescription: "App.js",
+          description: [
+            "Use the useState hook to create a state variable to track whether to start the game again. Initialize it with false, since the game hasn't started yet.",
+            "Create a function, let's call it handleStartAgain, that updates the state variable to true when the 'Start Again' button is clicked. Use setTimeout to set the state back to false after a short delay, like 100 milliseconds. This is to ensure a smooth transition when resetting the game.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create Cards Component",
+          titleDescription: "Crads.js",
+          description: [
+            " Inside the Cards component, use the useState hook to manage the state of the cards. This state should hold an array of objects representing each card, with properties like id, img, and stat (to track whether it's active, correct, or wrong).",
+            "Utilize the useEffect hook to watch for changes in the startAgain prop passed from the App component. When startAgain becomes true, reset the game by reinitializing the state of the cards. Remember to reset the prev state as well.",
+            " Implement a function, let's name it handleClick, to handle clicks on the cards. When a card is clicked, check if there's already a previously clicked card. If not, mark the clicked card as active. If there's already a previously clicked card, compare it with the current one. If they match, mark both as correct. If they don't match, mark them as wrong and reset their status after a delay.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create Card Component",
+          titleDescription: "",
+          description: [
+            "Define the Card component to accept props like item, id, and handleClick. The item prop will contain information about the card, such as its image and status.",
+            "Inside the Card component, render a div representing the card. Bind an onClick event to this div, calling the handleClick function with the card's id when clicked.",
+            "Use the item.stat property to dynamically apply CSS classes based on the card's status. For example, if item.stat is 'active', apply a class to highlight the card. If it's 'correct' or 'wrong', apply respective classes for visual feedback.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Randomize Cards",
+          titleDescription: "In Cards.js file",
+          description: [
+            "Implement a function to randomize the cards. You can use the Fisher-Yates shuffle algorithm or simply shuffle the array using sort method with a randomizing function.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Logic for Card Click",
+          titleDescription: "In Cards.js file",
+          description: [
+            "Implement the logic to handle card clicks. If no card is currently selected, mark the clicked card as selected. If one card is already selected, compare it with the newly selected card. If they match, mark them as correct. If they don't match, mark them as wrong and reset them after a delay.",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Styling",
+          titleDescription: "In Cards.js file",
+          description: [
+            "Apply styles to make the memory game visually appealing. You can use CSS or any CSS-in-JS solution.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson9.png"),
+      link: "https://www.dropbox.com/scl/fi/mqd7ggdarkm4fl704iun1/memoryStyles.css?rlkey=9amnv9br4g9t7iz3w4iz9e8h8&st=xopph5bz&dl=0",
+      link2:
+        "https://www.dropbox.com/scl/fo/xun1wmslf3nuok6kjslto/AJAoOoiDotzvxhHAdeA20co?rlkey=lfo67u2afk1bsaouc41azfd5p&st=cfmm90r4&dl=0",
+    },
   ],
 };
 
