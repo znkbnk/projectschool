@@ -698,6 +698,76 @@ const tasksData = {
       link2:
         "https://www.dropbox.com/scl/fo/xun1wmslf3nuok6kjslto/AJAoOoiDotzvxhHAdeA20co?rlkey=lfo67u2afk1bsaouc41azfd5p&st=cfmm90r4&dl=0",
     },
+    {
+      taskId: "reacttask10",
+      taskTitle: "Color Generator",
+      introduction:
+        "In this tutorial, you will learn how to build a React application for generating and displaying color palettes. We'll create two components: App, which handles user input and color generation, and SingleColor, responsible for rendering individual color swatches with the ability to copy color values to the clipboard. ",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setting Up React Environment",
+          titleDescription: "",
+          description: [
+            "Make sure you have Node.js installed on your system.",
+            "Create a new React project using create-react-app or any other method you prefer.",
+            "Install values.js",
+            "Navigate to the project directory in your terminal.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Component Files",
+          titleDescription: "",
+          description: [
+            "Inside the src folder of your React project, create two new files: App.js and SingleColor.js.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: App Component",
+          titleDescription: "App.js",
+          description: [
+            "Import React and necessary hooks from the 'react' library.",
+            "Import the SingleColor component from './SingleColor'.",
+            "Import the 'Values' class from 'values.js'.",
+            "Define a functional component named App.",
+            "Inside the component, set up state variables using the useState hook: 'color': to store the input hex color value, 'error': to track any input errors, 'list': to store an array of color values.",
+            "Implement a handleSubmit function: Prevent the default form submission behavior. Try to create a list of color values using the 'Values' class from the input hex color. If successful, update the 'list' state with the new color values. If an error occurs, set the 'error' state to 'true'.",
+            "Return JSX: Create a form with an input field for entering a hex color code and a submit button. Display an error message if error state is true. Map over the list state array and render SingleColor component for each color value.",
+            "Export the App component as the default export.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: SingleColor Component",
+          titleDescription: "SingleColor.js",
+          description: [
+            "Import React and necessary hooks from the 'react' library.",
+            "Define a functional component named SingleColor.",
+            "Inside the component, set up state variables using the useState hook: 'alert': to track whether the color value has been copied to the clipboard.",
+            "Extract the rgb, weight, index, and hexColor props from the component props.",
+            "Convert the rgb array to a string to represent the background color.",
+            "Define a hexValue variable to represent the hex color value.",
+            "Implement a useEffect hook to clear the alert message after 3 seconds.",
+            "Return JSX: Render an article element representing a single color. Set the background color using inline styles. Display the weight percentage and hex color value. Show an alert message if 'alert' state is 'true'.",
+            "Export the SingleColor component as the default export.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Styling",
+          titleDescription: "",
+          description: [
+            "Style the components using CSS according to your preferences.",
+            "You can add CSS classes and styles directly in your component files or download separate CSS file and import them into your components.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson10.png"),
+      link: "https://www.dropbox.com/scl/fi/y011c3db1gyww9io1b31k/colorStyles.css?rlkey=xqydm3kozk30nac0tt4d7bozv&st=dhj5uhv0&dl=0",
+    },
   ],
 };
 
