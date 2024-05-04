@@ -771,13 +771,13 @@ const tasksData = {
     {
       taskId: "reacttask11",
       taskTitle: "Range Slider",
-      introduction: "",
+      introduction:
+        "'Range Slider' is a versatile React project that features a customizable double range slider component. With intuitive user interaction and adjustable minimum and maximum values, it offers a seamless way to select a range of values within a specified range.",
 
       steps: [
         {
           stepTitle: "Step 1: Setup your React environment",
-          titleDescription:
-            "'Range Slider' is a versatile React project that features a customizable double range slider component. With intuitive user interaction and adjustable minimum and maximum values, it offers a seamless way to select a range of values within a specified range.",
+          titleDescription: "",
           description: [
             "Make sure you have Node.js and npm installed on your machine.",
             "Create a new React project using create-react-app or any other method you prefer.",
@@ -872,10 +872,7 @@ const tasksData = {
         {
           stepTitle: "Step 11: Add PropTypes validation",
           titleDescription: "",
-          description: [
-            "Define PropTypes for the min and max props.",
-           
-          ],
+          description: ["Define PropTypes for the min and max props."],
         },
         {
           stepTitle: "Step 12: Apply CSS classes and styles",
@@ -884,7 +881,6 @@ const tasksData = {
             "Define CSS classes for styling the range slider components.",
             "Apply styles to position the thumbs, track, and value displays.",
             "Use CSS to customize the appearance of the range slider according to your design preferences.",
-           
           ],
         },
       ],
