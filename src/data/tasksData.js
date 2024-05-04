@@ -768,6 +768,134 @@ const tasksData = {
       img: require("../images/ReactLesson10.png"),
       link: "https://www.dropbox.com/scl/fi/y011c3db1gyww9io1b31k/colorStyles.css?rlkey=xqydm3kozk30nac0tt4d7bozv&st=dhj5uhv0&dl=0",
     },
+    {
+      taskId: "reacttask11",
+      taskTitle: "Range Slider",
+      introduction: "",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setup your React environment",
+          titleDescription:
+            "'Range Slider' is a versatile React project that features a customizable double range slider component. With intuitive user interaction and adjustable minimum and maximum values, it offers a seamless way to select a range of values within a specified range.",
+          description: [
+            "Make sure you have Node.js and npm installed on your machine.",
+            "Create a new React project using create-react-app or any other method you prefer.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create a new component file",
+          titleDescription: "",
+          description: [
+            "In your React project, create a new file called DoubleRangeSlider.js.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Import necessary dependencies",
+          titleDescription: "",
+          description: [
+            "At the top of your DoubleRangeSlider.js file, import React, useState, useEffect, useRef, and PropTypes",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create the component function",
+          titleDescription: "",
+          description: [
+            "Declare your component function named DoubleRangeSlider and pass min and max as props",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Initialize state for min and max values",
+          titleDescription: "",
+          description: [
+            "Inside the component function, use the useState hook to create state variables for minVal and maxVal",
+          ],
+        },
+        {
+          stepTitle: "Step 6:Create refs for DOM elements",
+          titleDescription: "",
+          description: [
+            "Define refs for the left thumb, right thumb, and the range track",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Define utility functions",
+          titleDescription: "",
+          description: [
+            "Create a utility function getPercent to convert slider values to percentage",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Implement useEffect for left thumb",
+          titleDescription: "",
+          description: [
+            "Within the useEffect hook, calculate the percentage value of minVal using the getPercent utility function.",
+            "Update the left thumb's position using the calculated percentage.",
+            "Also, update the position of the range track.",
+          ],
+        },
+        {
+          stepTitle: "Step 9: Implement useEffect for right thumb ",
+          titleDescription: "",
+          description: [
+            "Inside the useEffect hook, calculate the percentage value of maxVal using the getPercent utility function.",
+            "Update the right thumb's position using the calculated percentage.",
+            "Adjust the width of the range track based on the difference between minVal and maxVal.",
+          ],
+        },
+        {
+          stepTitle: "Step 10: Render the component ",
+          titleDescription: "",
+          description: [
+            "Within the return statement of the DoubleRangeSlider component, define the HTML structure for the range slider.",
+            "Use <div> elements to create containers for the slider components.",
+            "Create an <input> element for the left thumb of the range slider.",
+            "Set the type attribute to 'range' to create a range input.",
+            "Set min, max, and value attributes to min, max, and minVal respectively to define the range and initial value.",
+            "Add an onChange event handler to update the minVal state when the left thumb is moved.",
+            "Assign the className attribute to style the left thumb.",
+            "Similar to the left thumb, create another <input> element for the right thumb of the range slider.",
+            "Set the type attribute to 'range'.",
+            "Set min, max, and value attributes to min, max, and maxVal respectively.",
+            "Add an onChange event handler to update the maxVal state when the right thumb is moved.",
+            "Assign the className attribute to style the right thumb.",
+            "Create a <div> element with a class name to represent the slider track.",
+            "This will serve as the visual representation of the range between the left and right thumbs.",
+            "Create a <div> element to display the current value of the left thumb.",
+            "Use the ref attribute to reference this element for positioning updates.",
+            "Initially, display the minVal.",
+            "Similarly, create another <div> element to display the current value of the right thumb.",
+            "Use the ref attribute to reference this element for positioning updates.",
+            "Initially, display the maxVal.",
+          ],
+        },
+        {
+          stepTitle: "Step 11: Add PropTypes validation",
+          titleDescription: "",
+          description: [
+            "Define PropTypes for the min and max props.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 12: Apply CSS classes and styles",
+          titleDescription: "",
+          description: [
+            "Define CSS classes for styling the range slider components.",
+            "Apply styles to position the thumbs, track, and value displays.",
+            "Use CSS to customize the appearance of the range slider according to your design preferences.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson11.png"),
+      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+    },
   ],
 };
 
