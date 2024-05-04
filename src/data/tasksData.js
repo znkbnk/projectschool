@@ -890,7 +890,7 @@ const tasksData = {
       prerequisites: ["React Basics"],
       completed: false,
       img: require("../images/ReactLesson11.png"),
-      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+      link: "https://www.dropbox.com/scl/fi/c6zfmsr8pc53v6kchxndv/rangeStyles.css?rlkey=20wjzpsgqvtzpxk634w1oyk5s&st=i048axb2&dl=0",
     },
   ],
 };
