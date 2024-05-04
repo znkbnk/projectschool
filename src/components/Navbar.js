@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
-import image2 from "../images/navbarlogo.png";
+import imageLarge from "../images/navbarlogo.png"; 
+import imageSmall from "../images/pslogosmall.png";
+
 import { auth } from "./firebase";
 import { toast } from "react-toastify";
 
@@ -37,15 +39,22 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => {
-    setShowLinks(!showLinks); // Toggle the visibility of links
-    setIsMenuOpen(!isMenuOpen); // Toggle the menu state
+    setShowLinks(!showLinks); 
+    setIsMenuOpen(!isMenuOpen); 
   };
 
   return (
     <nav id='nav'>
       <div className='navbar-container flex'>
         <Link to='/'>
-          <img src={image2} alt='logo' />
+          <img
+            src={
+              window.innerWidth > 460
+                ? imageLarge
+                : imageSmall
+            }
+            alt='logo'
+          />
         </Link>
         <div className='middle'>
           {isLoggedIn && (
@@ -62,7 +71,7 @@ const Navbar = () => {
               <Link to='/authors' className='nav-link'>
                 Authors
               </Link>
-              
+
               <Link to='/faq' className='nav-link'>
                 FAQ
               </Link>

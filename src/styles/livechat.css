@@ -92,7 +92,12 @@ main.welcome {
   margin-bottom: 40px;
 }
 
+
+
 .chat-bubble.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   border-radius: 20px 20px 0 20px;
   background-color: #333333;
@@ -110,6 +115,7 @@ main.welcome {
   color: #ffffff;
   text-align: right;
   text-decoration: underline;
+  text-align: center;
 }
 p .user-name {
   padding: 20px;
@@ -119,6 +125,7 @@ p .user-name {
   white-space: pre-wrap;
   color: #ffffff;
   padding: 1rem;
+  font-size: 1.25rem;
 }
 
 .message-time {
@@ -174,14 +181,18 @@ p .user-name {
   }
 
   #livechat-container > div > main > div > div:nth-child(2) > div > p.message-date {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
   }
   .user-name {
-    font-size: 1.5rem;
+    font-size: 0.75rem;
     display: flex;
     justify-content: center;
   }
   .user-message {
-    font-size: 2rem;
+    font-size: 1rem;
+  }
+
+  .nav-bar {
+    margin: 80px 0;
   }
 }

@@ -22,14 +22,14 @@
 }
 
 .word-title {
-  position: relative; /* Ensure proper stacking context */
+  position: relative;
   z-index: 2;
 }
 
 .toTheWord {
   position: relative;
   margin-top: 6rem;
-  z-index: 3; /* Set an even higher z-index for toTheWord */
+  z-index: 3;
 }
 
 .sectionImages-container {
@@ -167,8 +167,6 @@
   z-index: 6;
 }
 
-
-
 @media only screen and (max-device-width: 768px) {
   .sectionImg4 {
     width: 80%;
@@ -177,21 +175,40 @@
     left: 15%;
     top: 37%;
   }
-  
-
- 
+  .section1-list {
+    margin: 0 50px;
+  }
 }
 @media only screen and (max-device-width: 460px) {
   .sectionImg4 {
-    width: 80%;
+    width: 86%;
   }
   .sectionImg7 {
     left: 15%;
     top: 42%;
   }
+  .sectionImg3 {
+    width: 80%;
+  }
+  .projectschoolImg {
+    width: 50%;
+  }
+  .ipsType_right p span {
+    font-size: 0.8rem;
+  }
+  .section1-list {
+    font-size: 1rem;
+    margin: 0 20px;
+  }
+  h2.heading_large {
+    font-size: 1.5em;
+  }
 
+  .slide__content--para {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
   
- 
 }
 @media only screen and (max-device-width: 1024px) {
   .sectionImg4 {
@@ -201,8 +218,8 @@
     left: 15%;
     top: 40%;
   }
-  
- .word-title span {
+
+  .word-title span {
     font-size: 12rem;
   }
   .toTheWord span {
@@ -210,28 +227,18 @@
   }
 }
 
-@media only screen and (max-device-width: 640px)  {
+@media only screen and (max-device-width: 640px) {
   .twoWords {
     margin-top: 150px;
   }
   .word-title span {
-    font-size: 16rem;
-    
+    font-size: 6rem;
   }
-  .toTheWord span {
-    margin-top: 80px;
-  }
+ 
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1920px){
-
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1920px) {
   .toTheWord span {
     margin: 55px 0;
   }
 }
-
-
-  
-
-
-

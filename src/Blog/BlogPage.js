@@ -15,7 +15,6 @@ const BlogPage = () => {
     return <div>Blog not found</div>;
   }
 
-  // Extract all paragraphs dynamically
   const paragraphs = Object.keys(currentBlog)
     .filter((key) => key.startsWith("paragraph"))
     .map((key) => currentBlog[key]);

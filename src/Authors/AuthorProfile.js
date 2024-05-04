@@ -36,20 +36,28 @@ const AuthorProfile = ({ author }) => {
               </Link>
 
               <div className='k2-social'>
-                <a
-                  href='https://instagram.com/znkbnk'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <i className='fab fa-instagram'></i>
-                </a>
-                <a
-                  href='https://github.com/znkbnk'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  <i className='fa-brands fa-github'></i>
-                </a>
+                <div>
+                  <div className='sociallogos'>
+                    <div className='logobox'>
+                      <a
+                        href='https://instagram.com/znkbnk'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label='Instagram Profile: @znkbnk'
+                      >
+                        <i className='fab fa-instagram'></i>
+                      </a>
+                      <a
+                        href='https://github.com/znkbnk'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        aria-label='GitHub Profile: @znkbnk'
+                      >
+                        <i className='fa-brands fa-github'></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

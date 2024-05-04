@@ -13,18 +13,23 @@
   align-items: center;
   flex-direction: column;
   margin: 60px;
+  
 }
 
 
 
 .card-container.React {
   border-left: 8px solid #4ec9d4;
+  width: 1000px;
+
 }
 .card-container.React:hover .card-title {
   color: #4ec9d4;
+
 }
 .card-container.React .card-category {
   color: #4ec9d4;
+  font-size: 2rem;
 }
 .card-container.React .card-category::after {
   background-color: #4ec9d4;
@@ -116,7 +121,7 @@
 .card-body {
   margin: 20px;
   display: flex;
-  justify-content: space-between; /* Adjust alignment */
+  justify-content: center;
   align-items: stretch; /* Stretch items vertically */
 }
 
@@ -127,12 +132,12 @@
 
 .card-title {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 2rem;
   padding: 10px;
 }
 
 .card-date {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 700;
   text-align: right;
 }
@@ -140,7 +145,7 @@
 .card-extract {
   flex: 1;
   color: #808080;
-  font-size: 0.9rem;
+  font-size: 2rem;
   font-weight: 300;
   padding: 0 10px; 
 }
@@ -154,30 +159,34 @@
 }
 
 @media only screen and (max-device-width: 640px)  {
+  .card-body {
+    display: flex;
+    justify-content: center;
+  }
   body {
     flex-direction: column;
   }
 
   .card-container {
-    width: 1000px;
+    width: 400px;
     height: auto;
   }
 
   .card-title {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .card-extract {
-    padding: 30px;
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .card-container.React .card-category {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .card-container.React .card-date {
-    font-size: 2rem;
+    font-size: 1rem;
+    padding: 10px;
   }
   .card-thumb {
-    width: 40%;
+    width: 20%;
   }
 }
