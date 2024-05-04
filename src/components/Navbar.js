@@ -147,9 +147,7 @@ const Navbar = () => {
             <Link to='/authors' className='nav-link'>
               Authors
             </Link>
-            <Link to='/editor' className='nav-link'>
-              LiveEditor
-            </Link>
+            
             <Link to='/faq' className='nav-link'>
               FAQ
             </Link>

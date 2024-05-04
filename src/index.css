@@ -128,10 +128,10 @@ section {
 }
 
 .button-28.completed {
-  background-color: #4efd54; /* Green color when task is completed */
+  background-color: #4efd54;
 }
 .button-28.completed:hover {
-  background-color: #dd1818; /* Green color when task is completed */
+  background-color: #dd1818; 
 }
 
 .button-28.previous {
@@ -243,11 +243,7 @@ section {
     content: "\203A";
   }
 }
-@media only screen and (max-device-width: 640px) {
-  .Toastify__toast-container {
-    top: 180px !important;
-  }
-}
+
 
 
 

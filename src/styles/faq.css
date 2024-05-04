@@ -91,16 +91,16 @@
   }
 
   .faqItemContainer {
-    width: 80%;
+    width: 100%;
     padding: 26px;
   }
 
   .faqHeader {
-    font-size: 2rem;
+    font-size: 1rem;
   }
 
   .faq-container-answer p {
-    font-size: 2rem;
-    line-height: 25px;
+    font-size: 1rem;
+    line-height: 20px;
   } 
 }
