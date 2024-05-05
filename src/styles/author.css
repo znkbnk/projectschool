@@ -31,7 +31,7 @@ body {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  margin: 0 auto;
+  margin: 20px 0;
   max-width: 600px;
   padding: 0 6vw;
   margin-bottom: 5rem;

@@ -55,30 +55,27 @@
 }
 
 .exercises-container {
-  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 25vh;
 }
 
 .exercises-title {
   display: block;
   position: relative;
-  font-size: 6rem;
+  font-size: 5rem;
 }
-
-
-
 
 @media screen and (max-width: 460px) {
   .wrapper .exercises-card {
     width: 100%;
+    margin:  40px 0;
   }
   .wrapper .exercises-card__image {
-   
     object-fit: contain;
   }
-.exercises-title {
-margin-top: 60px;
-}
+  .exercises-title {
+    margin-top: 100px;
+  }
 }

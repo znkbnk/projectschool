@@ -12,19 +12,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 60px;
-  
 }
-
-
 
 .card-container.React {
   border-left: 8px solid #4ec9d4;
-
 }
 .card-container.React:hover .card-title {
   color: #4ec9d4;
-
 }
 .card-container.React .card-category {
   color: #4ec9d4;
@@ -38,16 +32,16 @@
 }
 
 .card-container.JavaScript {
-  border-left: 8px solid #FDCC0D;
+  border-left: 8px solid #fdcc0d;
 }
 .card-container.JavaScript:hover .card-title {
-  color: #FDCC0D;
+  color: #fdcc0d;
 }
 .card-container.JavaScript .card-category {
-  color: #FDCC0D;
+  color: #fdcc0d;
 }
 .card-container.JavaScript .card-category::after {
-  background-color: #FDCC0D;
+  background-color: #fdcc0d;
 }
 .card-container.JavaScript .card-date {
   color: #000000;
@@ -55,7 +49,6 @@
 
 .card-container {
   width: 600px;
-  height: auto;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -146,7 +139,7 @@
   color: #808080;
   font-size: 2rem;
   font-weight: 300;
-  padding: 0 10px; 
+  padding: 0 10px;
 }
 
 .card-thumb {
@@ -157,18 +150,14 @@
   overflow: hidden;
 }
 
-@media only screen and (max-device-width: 640px)  {
-  .card-body {
-    display: flex;
-    justify-content: center;
-  }
-  body {
-    flex-direction: column;
+@media only screen and (max-device-width: 640px) {
+  .card-container {
+    margin: 40px;
+    width: 450px;
   }
 
-  .card-container {
-    width: 500px;
-    height: auto;
+  .card-body {
+    margin: 0;
   }
 
   .card-title {
@@ -186,10 +175,6 @@
     padding: 10px;
   }
   .card-thumb {
-    width: 20%;
+    display: none;
   }
-
- 
-
-
 }
