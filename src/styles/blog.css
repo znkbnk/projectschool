@@ -20,7 +20,6 @@
 
 .card-container.React {
   border-left: 8px solid #4ec9d4;
-  width: 1000px;
 
 }
 .card-container.React:hover .card-title {
@@ -189,4 +188,8 @@
   .card-thumb {
     width: 20%;
   }
+.blogPage p {
+  font-size: 1rem;
+}
+
 }
