@@ -91,6 +91,7 @@ Gooey Effect
 @media only screen and (max-device-width: 768px) {
   .blogPage p {
     font-size: 1rem;
+    margin: 10px;
   }
 
   .page-section ul {

@@ -1050,6 +1050,15 @@ const blogCards = [
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.png",
   },
+  {
+    id: 2,
+    title: "InsightTrack: Empowering Your Digital Presence",
+    extract:
+      "Google Analytics is a powerful web analytics service offered by Google that helps website owners and marketers track and analyze their website traffic and user behavior. By providing detailed insights into visitor demographics, acquisition channels, user engagement, and conversion metrics, Google Analytics enables businesses to make data-driven decisions to improve their online presence, optimize marketing strategies, and enhance the overall user experience.",
+    date: "5 May 2024",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/GAnalytics.svg/220px-GAnalytics.svg.png",
+  },
 ];
 const blogTopic = [
   {
@@ -1078,41 +1087,23 @@ const blogTopic = [
   },
   {
     id: 2,
-    image: "AuthGuard (1).png",
+    image: "googleAnalytics.jpg",
     paragraph1:
-      "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration. ",
+      "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
     paragraph2: [
-      "Implement AuthGuard Component:",
-      "Create an AuthGuard.html file. This component will handle the authentication logic.",
-      "Inside the AuthGuard component, you're using useEffect hook to listen for changes in authentication state (onAuthStateChanged). When the authentication state changes, it updates the isLoggedIn state.",
-      "If the user is authenticated (user is not null), isLoggedIn is set to true. Otherwise, it's set to false, and the user is redirected to the login page using navigate(/login).",
-      "This component returns the children (components wrapped inside it) only if the user is authenticated. Otherwise, it returns null.",
+      "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
+      "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
+      "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
+      "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
+      "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
     ],
     paragraph3: [
-      "Import necessary modules from React",
-      "Import useNavigate hook from react-router-dom",
-      "Import the 'auth' object from './firebase' file",
-      "Define a functional component AuthGuard that takes 'children' as a prop",
-      "Initialize navigate function using the useNavigate hook from react-router-dom",
-      "Initialize 'isLoggedIn' state variable with false using useState hook",
-      "Implement useEffect hook",
-      "Call onAuthStateChanged method on 'auth' object to listen for authentication state changes",
+      "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
+      "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
+      "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
+      "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
     ],
     paragraph4: "",
-  },
-  {
-    id: 3,
-    paragraph1: "text100",
-    paragraph2: "text200",
-    paragraph3: "text300",
-    paragraph4: "text400",
-  },
-  {
-    id: 4,
-    paragraph1: "text10",
-    paragraph2: "text20",
-    paragraph3: "text30",
-    paragraph4: "text40",
   },
 ];
 
