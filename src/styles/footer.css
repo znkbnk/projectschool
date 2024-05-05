@@ -31,6 +31,7 @@
 .main-footer ul li .fa {
   color: #ffffffcc;
   text-decoration: none;
+ 
 }
 footer {
   border-top: 4px solid var(--fill2);
@@ -49,6 +50,7 @@ footer a {
 }
 .contact-details {
   margin-top: 20px;
+  text-align: center;
 }
 .contact-details li {
   list-style: none;
@@ -125,4 +127,10 @@ footer a {
   .com {
     padding: 20px 0;
   }
+  .copyright {
+    margin: 20px;
+  }
+.main-footer ul li {
+  text-align: center;
+}
 }

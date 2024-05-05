@@ -23,7 +23,6 @@ body {
 .page-section {
   width: 80%;
   margin: 0 auto;
- 
 }
 
 .blogPage p {
@@ -55,7 +54,6 @@ body {
   background: #d4cfcf;
 }
 
-
 /* 
 ==================
 ==================
@@ -82,26 +80,28 @@ Gooey Effect
   .blogPage p {
     font-size: 2rem;
   }
-  .page-section  {
+  .page-section {
     width: 100%;
-    
   }
-  .page-section ul  {
+  .page-section ul {
     font-size: 2rem;
-    
   }
 }
 
 @media only screen and (max-device-width: 768px) {
   .blogPage p {
-    font-size: 2rem;
+    font-size: 1rem;
+    margin: 0 20px;
   }
-  .page-section  {
-    width: 100%;
-    
+
+  .page-section ul {
+    font-size: 1rem;
+    margin: 0 20px;
+
   }
-  .page-section ul  {
-    font-size: 1.5rem;
-    
+  .goo-container img {
+    width: 90%;
+    height: auto;
   }
+  
 }

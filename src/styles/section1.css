@@ -306,7 +306,7 @@ h2.heading_large {
 @media only screen and (max-device-width: 768px) {
   .ipsType_right p {
     padding: 0;
-    margin: 50px;
+    margin: 25px;
   }
   .header-section {
     padding: 7rem;

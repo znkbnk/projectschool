@@ -167,7 +167,7 @@
   }
 
   .card-container {
-    width: 400px;
+    width: 500px;
     height: auto;
   }
 
@@ -188,8 +188,8 @@
   .card-thumb {
     width: 20%;
   }
-.blogPage p {
-  font-size: 1rem;
-}
+
+ 
+
 
 }
