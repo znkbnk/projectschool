@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Button = ({ title }) => {
   return (
     <div className='btn-container'>
-      <Link className='btn-content' to='/editor'>
+      <Link className='btn-content' to='/exercises'>
         <span className='btn-title'>{title}</span>
         <span className='icon-arrow'>
           <svg

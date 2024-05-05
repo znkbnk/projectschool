@@ -57,7 +57,7 @@ const BlogPage = () => {
 
         <section className='page-section'>
           <p>{paragraphs[paragraphs.length - 1]}</p>
-          <Button title='Start Practicing' to='/editor' />
+          <Button title='Start Practicing' />
         </section>
       </div>
       <Footer />

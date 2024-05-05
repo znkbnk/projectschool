@@ -892,6 +892,123 @@ const tasksData = {
       img: require("../images/ReactLesson11.png"),
       link: "https://www.dropbox.com/scl/fi/c6zfmsr8pc53v6kchxndv/rangeStyles.css?rlkey=20wjzpsgqvtzpxk634w1oyk5s&st=i048axb2&dl=0",
     },
+    {
+      taskId: "reacttask12",
+      taskTitle: "React Form Validation Component",
+      introduction:
+        "This React task designed to facilitate form input validation within a user interface. It employs conditional logic to validate user input for fields such as username, email, password, and confirm password, displaying corresponding error messages and dynamically adjusting border colors to indicate validation status.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Import React and useState Hook",
+          titleDescription: "",
+          description: [
+            " Import React at the top of your file. Then, import the useState hook from the react package.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Functional Component",
+          titleDescription: "",
+          description: ["Define a functional component named Main."],
+        },
+        {
+          stepTitle: "Step 3: Initialize State Variables",
+          titleDescription: "",
+          description: [
+            "Inside the Main component, initialize state variables using the useState hook for username, email, password, confirmPassword, errorUserName, errorEmail, errorPassword, errorConfrimPassword, userColor, emailColor, passwordColor, and confirmPasswordColor.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create Validation Function",
+          titleDescription: "",
+          description: [
+            "Define a function named validate within the Main component. This function will handle form validation.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Prevent Default Behavior",
+          titleDescription: "",
+          description: [
+            "In the validate function, prevent the default form submission behavior using e.preventDefault().",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Validate Username",
+          titleDescription: "",
+          description: [
+            "Check if the length of the username is greater than 8 characters. If it is, clear any existing error message related to the username and set the userColor state to green. Otherwise, set the error message to 'Username must be 8 letters long' and userColor to red.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Validate Email",
+          titleDescription: "",
+          description: [
+            "Check if the email includes '@gmail'. If it does, clear any existing error message related to the email and set the emailColor state to green. Otherwise, set the error message to 'Email should have @gmail' and emailColor to red.",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Validate Password",
+          titleDescription: "",
+          description: [
+            "Check if the length of the password is greater than 8 characters. If it is, clear any existing error message related to the password and set the passwordColor state to green. Otherwise, set the error message to 'Password should be 8 letters long' and passwordColor to red.",
+          ],
+        },
+        {
+          stepTitle: "Step 9: Validate Confirm Password",
+          titleDescription: "",
+          description: [
+            "Check if the password and confirmPassword match. If they do, clear any existing error message related to the confirm password and set the confirmPasswordColor state to green. Otherwise, set the error message to 'Passwords didn't matched' and confirmPasswordColor to red.",
+          ],
+        },
+        {
+          stepTitle: "Step 10: Render Form Inputs",
+          titleDescription: "",
+          description: [
+            "Render input fields for username, email, password, and confirmPassword. Apply inline styles to set the border color based on the corresponding state variables (userColor, emailColor, passwordColor, confirmPasswordColor).",
+          ],
+        },
+        {
+          stepTitle: "Step 11: Render Error Messages",
+          titleDescription: "",
+          description: [
+            "Render error messages below each input field to display validation errors (errorUserName, errorEmail, errorPassword, errorConfrimPassword).",
+          ],
+        },
+        {
+          stepTitle: "Step 12: Attach Event Handlers",
+          titleDescription: "",
+          description: [
+            "Attach onChange event handlers to update state variables as the user types in each input field.",
+          ],
+        },
+        {
+          stepTitle: "Step 13: Attach Click Event Handler",
+          titleDescription: "",
+          description: [
+            "Attach a onClick event handler to the submit button (<button>). This handler will call the validate function when the button is clicked.",
+          ],
+        },
+        {
+          stepTitle: "Step 14: In your App.js file",
+          titleDescription: "",
+          description: [
+            "Import the Main component from the './Main' file.",
+            "Import the CSS styles from the './index.css' file to apply styling to the components.",
+            "Create a functional component named App using an arrow function syntax (=>), (or other preferable way).",
+            "Within the App component, return the Main component. This will render the form validation component within the App.",
+           
+          ],
+        },
+       
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson12.png"),
+      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+    },
   ],
 };
 
