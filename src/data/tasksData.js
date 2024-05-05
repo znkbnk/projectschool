@@ -996,10 +996,8 @@ const tasksData = {
             "Import the CSS styles from the './index.css' file to apply styling to the components.",
             "Create a functional component named App using an arrow function syntax (=>), (or other preferable way).",
             "Within the App component, return the Main component. This will render the form validation component within the App.",
-           
           ],
         },
-       
       ],
       taskType: "React",
       difficulty: "Easy",
@@ -1007,7 +1005,7 @@ const tasksData = {
       prerequisites: ["React Basics"],
       completed: false,
       img: require("../images/ReactLesson12.png"),
-      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+      link: "https://www.dropbox.com/scl/fi/oh478sruh4coo1niwb2c4/formValidationStyles.css?rlkey=7b9v41wez31d5fqgzgl53qmoe&st=nfdqrklr&dl=0",
     },
   ],
 };
