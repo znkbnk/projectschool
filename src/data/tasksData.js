@@ -1007,6 +1007,71 @@ const tasksData = {
       img: require("../images/ReactLesson12.png"),
       link: "https://www.dropbox.com/scl/fi/oh478sruh4coo1niwb2c4/formValidationStyles.css?rlkey=7b9v41wez31d5fqgzgl53qmoe&st=nfdqrklr&dl=0",
     },
+    {
+      taskId: "reacttask13",
+      taskTitle: "Markdown Preview App",
+      introduction:
+        "The Markdown Preview app is a simple yet powerful tool built using React, a popular JavaScript library for building user interfaces. Markdown is a lightweight markup language with plain-text formatting syntax, often used to format text on the web. This app allows users to input Markdown syntax in a textarea and instantly preview the formatted output in real-time.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Create React App",
+          titleDescription: "",
+          description: [
+            "If you haven't already, initiate a new React project using Create React App",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Install Dependencies",
+          titleDescription: "",
+          description: [
+            "Install the necessary dependencies for your Markdown preview app. In this case, you'll need the react-markdown library.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Component Structure",
+          titleDescription: "",
+          description: [
+            "Inside App.js, you'll create a functional component named App. This component will manage the state of the Markdown content and render both the textarea for input and the Markdown preview.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: State Management",
+          titleDescription: "",
+          description: [
+            "Utilize the useState hook to manage the Markdown content. Initially, set the default Markdown content to '# Markdown Preview:'.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Rendering",
+          titleDescription: "",
+          description: [
+            "Render the main component structure inside the App component. This includes a textarea for input and an article for the Markdown preview. Bind the textarea value to the Markdown state and update the state whenever the content in the textarea changes.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Markdown Rendering",
+          titleDescription: "",
+          description: [
+            "Use the ReactMarkdown component from the react-markdown library to render the Markdown content inside the article.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Styling ",
+          titleDescription: "",
+          description: [
+            "Add some basic styling to your app for a better user experience. You can download a CSS file from below.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson13.png"),
+      link: "https://www.dropbox.com/scl/fi/iim1mrxbiomqdfu6a8534/markdownStyles.css?rlkey=x702xjplsx1lmje9xlxsmnztl&st=tjk1d94n&dl=0",
+    },
   ],
 };
 
