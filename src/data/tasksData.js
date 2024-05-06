@@ -1072,6 +1072,98 @@ const tasksData = {
       img: require("../images/ReactLesson13.png"),
       link: "https://www.dropbox.com/scl/fi/iim1mrxbiomqdfu6a8534/markdownStyles.css?rlkey=x702xjplsx1lmje9xlxsmnztl&st=tjk1d94n&dl=0",
     },
+    {
+      taskId: "reacttask14",
+      taskTitle: "React Menu App",
+      introduction:
+        "React Menu App is a responsive web application. It provides users with a dynamic menu interface, allowing them to explore a variety of food items categorized into different sections. Users can easily navigate through the menu, filter items based on categories, and view detailed information such as item descriptions and prices. With its intuitive design and interactive features, ReactMenuApp offers a delightful browsing experience for discovering delicious dishes.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setting Up the Project",
+          titleDescription: "",
+          description: [
+            "Start by creating a new React project using Create React App or any other method you prefer.",
+            "Make sure you have React installed in your project.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Data Setup",
+          titleDescription: "data.js",
+          description: [
+            "Create a file named data.js where you will store the menu items as an array of objects.",
+            "Each object should represent a menu item and include properties like id, title, category, price, img, and desc.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Creating Components",
+          titleDescription: "",
+          description: [
+            "Create three new files: App.js, Categories.js, and Menu.js in your project directory.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create an App Component",
+          titleDescription: "App.js",
+          description: [
+            "Start by importing React and useState hook at the top of App.js.",
+            "Import Menu, Categories, and items from their respective files (Menu.js, Categories.js, and data.js).",
+            "Create a constant allCategories that includes all unique categories from the items data. You can achieve this using the map function along with the Set object to filter out unique categories.",
+            "Utilize the useState hook to create state variables for menuItems and categories. Initialize them with items and allCategories respectively.",
+            "Implement a function named filterItems that takes a category parameter. Inside this function, check if the selected category is 'all'. If it is, set menuItems state to the entire items array. Otherwise, filter the items array based on the selected category and update the state of menuItems accordingly.",
+            "Within the return statement, render the Categories and Menu components. Pass the appropriate props (categories, filterItems, and menuItems) to each component.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create a Categories Component",
+          titleDescription: "Categories.js",
+          description: [
+            "Import React and useState hook at the top of Categories.js.",
+            "Create a functional component named Categories that takes categories and filterItems as props.",
+            "Use the useState hook to create a state variable named activeCategory and initialize it to null.",
+            "Implement a function named handleCategoryClick that takes category as a parameter. Inside this function, call the filterItems function passed as a prop and update the activeCategory state with the selected category.",
+            "Map through the categories array and render a button for each category. Use the activeCategory state to conditionally apply a CSS class to highlight the active category. Implement an onClick event on each button to call the handleCategoryClick function with the corresponding category.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Create a Menu Component",
+          titleDescription: "Menu.js",
+          description: [
+            "Import React at the top of Menu.js.",
+            "Create a functional component named Menu that takes items as a prop.",
+            "Map through the items array passed as props. For each item, destructure its properties (such as id, title, img, desc, and price) and render them within an <article> element.",
+            "Inside the <article> element, render the item's image, title, price, and description using the destructured properties.",
+            "Assign a unique key prop to each <article> element, using the item's id property to ensure React can efficiently update the DOM when items are added, removed, or reordered.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Styling",
+          titleDescription: "",
+          description: [
+            "Add CSS files (App.css, Menu.css, Categories.css) to style your components.",
+            "Style the menu, categories, buttons, and other elements as per your design.",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Wiring Everything Together",
+          titleDescription: "",
+          description: [
+            "Import the necessary components into App.js.",
+            "Ensure proper props are passed to each component.",
+            "Test your application to see if everything works as expected.",
+            "Make adjustments and refactor code if needed.",
+          ],
+        },
+       
+      ],
+      taskType: "React",
+      difficulty: "Hard",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson14.png"),
+      link: "https://www.dropbox.com/scl/fi/tuz5g26aze4lf3y9xixfq/menuStyles.css?rlkey=7tqcib3pn704k93ezqeqi5di5&st=cvmlknzy&dl=0",
+    },
   ],
 };
 
