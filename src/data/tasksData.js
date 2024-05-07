@@ -1154,7 +1154,6 @@ const tasksData = {
             "Make adjustments and refactor code if needed.",
           ],
         },
-       
       ],
       taskType: "React",
       difficulty: "Hard",
@@ -1163,6 +1162,67 @@ const tasksData = {
       completed: false,
       img: require("../images/ReactLesson14.png"),
       link: "https://www.dropbox.com/scl/fi/tuz5g26aze4lf3y9xixfq/menuStyles.css?rlkey=7tqcib3pn704k93ezqeqi5di5&st=cvmlknzy&dl=0",
+    },
+    {
+      taskId: "reacttask15",
+      taskTitle: "Responsive Navbar",
+      introduction:
+        "This project is a simple React application focused on building a responsive navbar component. It includes a logo, navigation links, and social icons. It's designed to repeat the basics of React component creation, state management, and rendering dynamic data. This hands-on project offers a step-by-step guide to help understand the fundamentals of web development using React.js.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setting Up React Project",
+          titleDescription: "",
+          description: [
+            "Begin by creating a new React project using Create React App or your preferred method.",
+            "Make sure you have Node.js and npm (Node Package Manager) installed on your system.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Data File",
+          titleDescription: "",
+          description: [
+            "Create a new file named data.js.",
+            "Inside data.js, define two arrays: links and social.",
+            "Each array should contain objects with properties like id, url, text, and icon. Populate them with your desired data.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create Navbar Component",
+          titleDescription: "Navbar.js",
+          description: [
+            "Create a new file named Navbar.js.",
+            "Import React at the top of the file.",
+            "Import 'links' and 'social' arrays from data.js. ( dont forget to put them in {} ) ",
+            "Install and import necessary dependencies like FaBars icon from react-icons/fa.",
+            "Define a functional component named Navbar.",
+            "Declare state variables for managing the visibility of links. Use the useState hook to initialize state variables.",
+            "Utilize the useRef hook to create refs for the links container and the links themselves. This allows us to access the DOM elements and manipulate their properties.",
+            "Define a function to toggle the visibility of links when the toggle button is clicked. This function will update the showLinks state.",
+            "Use the useEffect hook to update the height of the links container based on the visibility state. This ensures that the container expands and collapses smoothly.",
+            "Render JSX for your navbar structure, including logo, toggle button, links, and social icons. Use semantic HTML elements like <nav>, <ul>, <li>, and <a> for better accessibility and SEO.",
+            "Map through the links and social arrays imported from the data.js file to generate respective elements. Use the map function to iterate over the arrays and create <li> elements with <a> tags inside.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create App Component",
+          titleDescription: "App.js",
+          description: [
+            "Open App.js.",
+            "Import React at the top of the file. ( use 'imr' snippet ;) )",
+            "Import Navbar component from the Navbar.js file.",
+            "Define a functional component named App. ( use 'nfn' snippet ;) )",
+            "Inside the component, return JSX that renders the Navbar component.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson15.png"),
+      link: "https://www.dropbox.com/scl/fi/ks97vsqcdxhjg236ystvp/navbarStyles.css?rlkey=zcqeskq64ip14h2l07ouf2lt8&st=s8s2fkc7&dl=0",
     },
   ],
 };
