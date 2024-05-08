@@ -89,7 +89,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson1.png"),
+      img: require("../images/ReactLesson1.webp"),
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/InteractiveCard.css?rlkey=bydjjmcbwquipvhhlw470mbkb&st=op6om9ay&dl=0",
     },
     {
@@ -165,7 +165,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson2.png"),
+      img: require("../images/ReactLesson2.webp"),
       link: "https://www.dropbox.com/scl/fi/03e0si4h3xgxgg74ygra3/BMIstyles.css.css?rlkey=v7kz0wgjp8qtyhfr7ttco3vqx&dl=0",
     },
     {
@@ -239,7 +239,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson3.png"),
+      img: require("../images/ReactLesson3.webp"),
       link: "https://www.dropbox.com/scl/fi/knoeb48ov2on7o1p7qcim/DarkLight.css?rlkey=s5xlzw4l86ugerz5w9v0e5w07&st=hnajvomv&dl=0",
     },
     {
@@ -303,7 +303,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson4.png"),
+      img: require("../images/ReactLesson4.webp"),
       link: "https://www.dropbox.com/scl/fi/ggr71m0hhr7dwqbxsn7zb/filterContactList.css?rlkey=ze15q78lxoiocw6z84o2c12cb&st=zw4011an&dl=0",
     },
     {
@@ -374,7 +374,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson5.png"),
+      img: require("../images/ReactLesson5.webp"),
       link: "https://www.dropbox.com/scl/fi/x993b93wtivxvs24vu2gh/quizApp.css?rlkey=ugoc9v64xrxs7a82giuyj0d21&st=5nhhq4ti&dl=0",
     },
     {
@@ -447,7 +447,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson6.png"),
+      img: require("../images/ReactLesson6.webp"),
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
     {
@@ -525,7 +525,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson7.png"),
+      img: require("../images/ReactLesson7.webp"),
       link: "https://www.dropbox.com/scl/fi/57ns2zldn9w6jud6hbstj/birthdayStyles.css?rlkey=j24jn3vqz5vg144vl0hbj0z51&st=5yn64tby&dl=0",
     },
     {
@@ -616,7 +616,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson8.png"),
+      img: require("../images/ReactLesson8.webp"),
       link: "https://www.dropbox.com/scl/fi/4afgt9yycn142ivtclsm9/shadowStyles.css?rlkey=p92gydd9wnxlt46r4n3b1vjaw&st=nmib5hqn&dl=0",
     },
     {
@@ -693,7 +693,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson9.png"),
+      img: require("../images/ReactLesson9.webp"),
       link: "https://www.dropbox.com/scl/fi/mqd7ggdarkm4fl704iun1/memoryStyles.css?rlkey=9amnv9br4g9t7iz3w4iz9e8h8&st=xopph5bz&dl=0",
       link2:
         "https://www.dropbox.com/scl/fo/xun1wmslf3nuok6kjslto/AJAoOoiDotzvxhHAdeA20co?rlkey=lfo67u2afk1bsaouc41azfd5p&st=cfmm90r4&dl=0",
@@ -765,7 +765,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson10.png"),
+      img: require("../images/ReactLesson10.webp"),
       link: "https://www.dropbox.com/scl/fi/y011c3db1gyww9io1b31k/colorStyles.css?rlkey=xqydm3kozk30nac0tt4d7bozv&st=dhj5uhv0&dl=0",
     },
     {
@@ -889,7 +889,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson11.png"),
+      img: require("../images/ReactLesson11.webp"),
       link: "https://www.dropbox.com/scl/fi/c6zfmsr8pc53v6kchxndv/rangeStyles.css?rlkey=20wjzpsgqvtzpxk634w1oyk5s&st=i048axb2&dl=0",
     },
     {
@@ -1004,7 +1004,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson12.png"),
+      img: require("../images/ReactLesson12.webp"),
       link: "https://www.dropbox.com/scl/fi/oh478sruh4coo1niwb2c4/formValidationStyles.css?rlkey=7b9v41wez31d5fqgzgl53qmoe&st=nfdqrklr&dl=0",
     },
     {
@@ -1069,7 +1069,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson13.png"),
+      img: require("../images/ReactLesson13.webp"),
       link: "https://www.dropbox.com/scl/fi/iim1mrxbiomqdfu6a8534/markdownStyles.css?rlkey=x702xjplsx1lmje9xlxsmnztl&st=tjk1d94n&dl=0",
     },
     {
@@ -1160,7 +1160,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson14.png"),
+      img: require("../images/ReactLesson14.webp"),
       link: "https://www.dropbox.com/scl/fi/tuz5g26aze4lf3y9xixfq/menuStyles.css?rlkey=7tqcib3pn704k93ezqeqi5di5&st=cvmlknzy&dl=0",
     },
     {
@@ -1221,7 +1221,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson15.png"),
+      img: require("../images/ReactLesson15.webp"),
       link: "https://www.dropbox.com/scl/fi/ks97vsqcdxhjg236ystvp/navbarStyles.css?rlkey=zcqeskq64ip14h2l07ouf2lt8&st=s8s2fkc7&dl=0",
     },
   ],
@@ -1229,7 +1229,7 @@ const tasksData = {
 
 const exercisesData = [
   // {
-  //   img: require("../images/js.png"),
+  //   img: require("../images/js.webp"),
   //   title: "Mastering JavaScript",
   //   desc: "Dive deep into JavaScript, the language that powers the web. From variables and functions to advanced concepts like closures and asynchronous programming, unlock the full potential of JavaScript.",
   //   to: "/jslessons",
@@ -1253,7 +1253,7 @@ const authorsData = [
     name: { first: "Jevin", last: "B" },
     position: "React",
     description: "I will update this soon....",
-    picture: { medium: require("../images/me.jpg") }, // Use require to import images
+    picture: { medium: require("../images/me.webp") }, // Use require to import images
   },
 ];
 
@@ -1380,7 +1380,7 @@ const blogCards = [
       "Today we'll walk through the process of implementing authentication in a React application using Firebase and React Router. We'll create an AuthGuard component to manage the authentication state anr protect routes that require authentication, ensuring a seamless user experience.",
     date: "04 April 2024",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.webp",
   },
   {
     id: 2,
@@ -1389,53 +1389,121 @@ const blogCards = [
       "Google Analytics is a powerful web analytics service offered by Google that helps website owners and marketers track and analyze their website traffic and user behavior. By providing detailed insights into visitor demographics, acquisition channels, user engagement, and conversion metrics, Google Analytics enables businesses to make data-driven decisions to improve their online presence, optimize marketing strategies, and enhance the overall user experience.",
     date: "5 May 2024",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/GAnalytics.svg/220px-GAnalytics.svg.png",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/GAnalytics.svg/220px-GAnalytics.svg.webp",
+  },
+  {
+    id: 3,
+    category: "JavaScript",
+
+    title: "Mastering JavaScript Pagination",
+    extract:
+      "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
+    date: "8 May 2024",
+    image:
+      "https://previews.dropbox.com/p/thumb/ACTCFfgXH20DHzLoTetZe6p9Tcwk4XHiU81rBfxGpiHT6jlM127L8A3X9WzlRDnMUnyD8zkcSiIMC3q7vo-0VcS9rfMnpBVRg4wX0UOaeqkMD-FNId-KKtnxGArs7jN--FGWrCZeomQBOBWGjjCtYRgd5XKyW9Q24MCWed9LD6xYr-5E6xlTxJTQtn2JeKCXW76DJdJXXANPw9OgvnGHu-yQCvVd61IG36n6eeON13vLeSFjTQDH2W-Zfhi4X3b0SveBtvzk9KwDryBF2MPIRoo4_3z_7bQA2RUEP9dHais4vYru2I_PTGAqcdZDVATf37Mclbx5ekTHyMjK5hUrsVqn/p.webp",
   },
 ];
 const blogTopic = [
   {
     id: 1,
-    image: "AuthGuard (1).png",
-    paragraph1:
-      "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration. ",
-    paragraph2: [
-      "Implement AuthGuard Component:",
-      "Create an AuthGuard.html file. This component will handle the authentication logic.",
-      "Inside the AuthGuard component, you're using useEffect hook to listen for changes in authentication state (onAuthStateChanged). When the authentication state changes, it updates the isLoggedIn state.",
-      "If the user is authenticated (user is not null), isLoggedIn is set to true. Otherwise, it's set to false, and the user is redirected to the login page using navigate(/login).",
-      "This component returns the children (components wrapped inside it) only if the user is authenticated. Otherwise, it returns null.",
+    image: "AuthGuard (1).webp",
+    paragraphs: [
+      {
+        text: "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration.",
+        image: null,
+        isList: false,
+      },
+      {
+        text: [
+          "Implement AuthGuard Component:",
+          "Create an AuthGuard.html file. This component will handle the authentication logic.",
+          "Inside the AuthGuard component, you're using useEffect hook to listen for changes in authentication state (onAuthStateChanged). When the authentication state changes, it updates the isLoggedIn state.",
+          "If the user is authenticated (user is not null), isLoggedIn is set to true. Otherwise, it's set to false, and the user is redirected to the login page using navigate(/login).",
+          "This component returns the children (components wrapped inside it) only if the user is authenticated. Otherwise, it returns null.",
+        ],
+        image: null,
+        isList: true,
+      },
+      {
+        text: [
+          "Import necessary modules from React",
+          "Import useNavigate hook from react-router-dom",
+          "Import the 'auth' object from './firebase' file",
+          "Define a functional component AuthGuard that takes 'children' as a prop",
+          "Initialize navigate function using the useNavigate hook from react-router-dom",
+          "Initialize 'isLoggedIn' state variable with false using useState hook",
+          "Implement useEffect hook",
+          "Call onAuthStateChanged method on 'auth' object to listen for authentication state changes",
+        ],
+        image: null,
+        isList: true,
+      },
     ],
-    paragraph3: [
-      "Import necessary modules from React",
-      "Import useNavigate hook from react-router-dom",
-      "Import the 'auth' object from './firebase' file",
-      "Define a functional component AuthGuard that takes 'children' as a prop",
-      "Initialize navigate function using the useNavigate hook from react-router-dom",
-      "Initialize 'isLoggedIn' state variable with false using useState hook",
-      "Implement useEffect hook",
-      "Call onAuthStateChanged method on 'auth' object to listen for authentication state changes",
-    ],
-    paragraph4: "",
   },
   {
     id: 2,
-    image: "googleAnalytics.jpg",
-    paragraph1:
-      "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
-    paragraph2: [
-      "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
-      "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
-      "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
-      "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
-      "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
+    image: "googleAnalytics.webp",
+    paragraphs: [
+      {
+        text: "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
+        image: null,
+        isList: false,
+      },
+      {
+        text: [
+          "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
+          "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
+          "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
+          "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
+          "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
+        ],
+        image: null,
+        isList: true,
+      },
+      {
+        text: [
+          "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
+          "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
+          "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
+          "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
+        ],
+        image: null,
+        isList: true,
+      },
     ],
-    paragraph3: [
-      "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
-      "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
-      "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
-      "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
+  },
+  {
+    id: 3,
+    image: "Pagination.webp",
+    paragraphs: [
+      {
+        text: "",
+        image:
+          "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.webp",
+        isList: false,
+      },
+      {
+        text: [
+          "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
+          "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
+          "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
+          "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
+          "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
+        ],
+        image: null,
+        isList: true,
+      },
+      {
+        text: [
+          "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
+          "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
+          "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
+          "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
+        ],
+        image: null,
+        isList: true,
+      },
     ],
-    paragraph4: "",
   },
 ];
 
@@ -1520,10 +1588,47 @@ React: [
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      img: require("../images/ReactLesson1.png"),
+      img: require("../images/ReactLesson1.webp"),
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
    
   ],  
+  
+  */
+
+/*   
+  
+  
+  BLOG TOPIC EXAMPLE
+  
+  const blogTopic = [
+  {
+    id: 1,
+    image: "example.jpg",
+    paragraphs: [
+      {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        image: null, 
+        isList: false 
+      },
+      {
+        text: "This is an example of adding a picture to a paragraph:",
+        image: "example2.jpg", 
+        isList: false 
+      },
+      {
+        text: [
+          "List item 1",
+          "List item 2",
+          "List item 3"
+        ],
+        image: null, 
+        isList: true 
+      },
+      
+    ]
+  }
+];
+
   
   */

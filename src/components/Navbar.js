@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
-import imageLarge from "../images/navbarlogo.png"; 
-import imageSmall from "../images/pslogosmall.png";
+import imageLarge from "../images/navbarlogo.webp"; 
+import imageSmall from "../images/pslogosmall.webp";
 
 import { auth } from "./firebase";
 import { toast } from "react-toastify";

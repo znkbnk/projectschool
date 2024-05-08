@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import CardIcon from "../images/pslogosmall.png";
-import ProductImage from "../images/navbarlogo.png";
+import CardIcon from "../images/pslogosmall.webp";
+import ProductImage from "../images/navbarlogo.webp";
 
 import "../styles/checkout.css";
 import Footer from "../components/Footer";

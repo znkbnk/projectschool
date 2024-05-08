@@ -1,11 +1,11 @@
 import React, { useEffect} from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image1 from "../images/pic5.png";
-import image2 from "../images/pic6.png";
-import image3 from "../images/pic7.png";
-import image4 from "../images/pic7.png";
-import image5 from "../images/sectionPicture2.png";
+import image1 from "../images/pic5.webp";
+import image2 from "../images/pic6.webp";
+import image3 from "../images/pic7.webp";
+import image4 from "../images/pic7.webp";
+import image5 from "../images/sectionPicture2.webp";
 import "../styles/section1.css";
 import WelcomeWord from "./WelcomeWord";
 import { Link } from "react-router-dom";

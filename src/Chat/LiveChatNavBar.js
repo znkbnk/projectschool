@@ -1,5 +1,5 @@
 import React from "react";
-import GoogleSignin from "../images/btn_google_signin_dark_pressed_web.png";
+import GoogleSignin from "../images/btn_google_signin_dark_pressed_web.webp";
 import { auth } from "../components/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";

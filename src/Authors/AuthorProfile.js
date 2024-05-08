@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/author.css";
-import imageBackground from "../images/authorBackground.jpg";
+import imageBackground from "../images/authorBackground.webp";
 import { Link } from "react-router-dom";
 
 const AuthorProfile = ({ author }) => {

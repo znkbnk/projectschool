@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { gsap, Back } from "gsap";
 import "../styles/welcomeWord.css";
-import image1 from "../images/pslogo.png";
-import sectionImg2 from "../images/sectionImg2.png";
-import sectionImg3 from "../images/sectionImg3.png";
-import sectionImg4 from "../images/sectionImg4.png";
-import sectionImg7 from "../images/sectionImg7.png";
+import image1 from "../images/pslogo.webp";
+import sectionImg2 from "../images/sectionImg2.webp";
+import sectionImg3 from "../images/sectionImg3.webp";
+import sectionImg4 from "../images/sectionImg4.webp";
+import sectionImg7 from "../images/sectionImg7.webp";
 
 const WelcomeComponent = () => {
   const welcomeRef = useRef(null);
