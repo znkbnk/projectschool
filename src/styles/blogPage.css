@@ -23,6 +23,11 @@ body {
 .page-section {
   width: 80%;
   margin: 0 auto;
+  
+}
+
+.page-section img {
+  min-height: 400px; /* Adjust as needed */
 }
 
 .blogPage p {
@@ -48,6 +53,10 @@ body {
   border: none;
   outline: none;
   transition: ease 2s;
+}
+
+.paragraph-image {  
+  object-fit: contain;
 }
 
 .page-section button:hover {

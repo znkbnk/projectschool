@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { blogTopic } from "../data/tasksData"; 
+import { blogTopic } from "../data/tasksData";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Button from "./Button";
@@ -15,13 +15,20 @@ const BlogPage = () => {
     return <div>Blog not found</div>;
   }
 
+    const getImagePath = (imageName) => {
+      return require(`../images/${imageName}`);
+    };
+
+    const firstImage = currentBlog.image && getImagePath(currentBlog.image[0]);
+
+
   return (
     <div className='blogPage'>
       <ScrollToTopOnNavigation />
       <Navbar />
       <div key={currentBlog.id} className='goo-container'>
         <section className='page-section'>
-          <img src={require(`../images/${currentBlog.image}`)} alt='First' />
+          {firstImage && <img src={firstImage} alt='First' />}
         </section>
 
         {currentBlog.paragraphs.map((paragraph, index) => (
@@ -37,8 +44,19 @@ const BlogPage = () => {
               </ul>
             ) : (
               <>
-                <p>{paragraph.text}</p>
-                {paragraph.image && <img src={paragraph.image} alt='' />}
+                {paragraph.text &&
+                  paragraph.text.map((text, idx) => (
+                    <p key={`text-${idx}`}>{text}</p>
+                  ))}
+                {paragraph.images &&
+                  paragraph.images.map((image, idx) => (
+                    <img
+                      key={`image-${idx}`}
+                      className='paragraph-image'
+                      src={image}
+                      alt=''
+                    />
+                  ))}
               </>
             )}
           </section>

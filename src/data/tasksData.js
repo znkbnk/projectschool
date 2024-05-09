@@ -1161,7 +1161,7 @@ const tasksData = {
       prerequisites: ["React Basics"],
       completed: false,
       img: require("../images/ReactLesson14.webp"),
-      link: "https://www.dropbox.com/scl/fi/tuz5g26aze4lf3y9xixfq/menuStyles.css?rlkey=7tqcib3pn704k93ezqeqi5di5&st=cvmlknzy&dl=0",
+      link: "https://www.dropbox.com/scl/fi/tuz5g26aze4lf3y9xixfq/menuStyles.css?rlkey=7tqcib3pn704k93ezqeqi5di5&st=cbhgezxb&dl=0",
     },
     {
       taskId: "reacttask15",
@@ -1487,7 +1487,7 @@ const blogCards = [
       "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
     date: "8 May 2024",
     image:
-      "https://previews.dropbox.com/p/thumb/ACTCFfgXH20DHzLoTetZe6p9Tcwk4XHiU81rBfxGpiHT6jlM127L8A3X9WzlRDnMUnyD8zkcSiIMC3q7vo-0VcS9rfMnpBVRg4wX0UOaeqkMD-FNId-KKtnxGArs7jN--FGWrCZeomQBOBWGjjCtYRgd5XKyW9Q24MCWed9LD6xYr-5E6xlTxJTQtn2JeKCXW76DJdJXXANPw9OgvnGHu-yQCvVd61IG36n6eeON13vLeSFjTQDH2W-Zfhi4X3b0SveBtvzk9KwDryBF2MPIRoo4_3z_7bQA2RUEP9dHais4vYru2I_PTGAqcdZDVATf37Mclbx5ekTHyMjK5hUrsVqn/p.webp",
+      "https://previews.dropbox.com/p/thumb/ACR5ZavloDgY7Puh3xjuBAAgD4ogUz50R5SAIEdIweVFothY40CcTX8InXrRDAzIehspQ2h2HamapyRGP3BYMHq0ri3Xuk43iT0VBKWvixIgFcNR-sgcRxtnRWxgp9hgydUWlmA7RXFZPUkZOj-RZThyXD2ds69yNm04ZPK4M736XL3ayT2brEFMEw6oULk89VWEJFseDBsxcYRpFCIA6WKfSWFvmDeDa5gsEJ4g2q4jDm0eabiY9FowsnJVplEPFlaC15OyWs41OOVdxDM9VPPcWE1wrpTmBdihoK0Aa45Q9FDLtAuu0cr6YSwTlcvCSHRQ863sh6MvBVBPaSD4jCug/p.png",
   },
 ];
 const blogTopic = [
@@ -1561,17 +1561,12 @@ const blogTopic = [
   },
   {
     id: 3,
-    image: "Pagination.webp",
+    image: ["Pagination.webp"],
     paragraphs: [
-      {
-        text: "",
-        image:
-          "https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.webp",
-        isList: false,
-      },
+     
       {
         text: [
-          "Title: Mastering JavaScript Pagination: Theory, Implementation, and Best Practices In the dynamic landscape of web development, efficient data management and presentation are paramount. One common challenge developers face is efficiently displaying large datasets while maintaining user experience. Enter JavaScript pagination—a technique that not only enhances performance but also improves usability by breaking down voluminous data into digestible chunks. In this comprehensive guide, we'll delve into the theory behind pagination, provide practical code examples, and explore its applications across various scenarios.",
+          "Mastering JavaScript Pagination: Theory, Implementation, and Best Practices In the dynamic landscape of web development, efficient data management and presentation are paramount. One common challenge developers face is efficiently displaying large datasets while maintaining user experience. Enter JavaScript pagination—a technique that not only enhances performance but also improves usability by breaking down voluminous data into digestible chunks. In this comprehensive guide, we'll delve into the theory behind pagination, provide practical code examples, and explore its applications across various scenarios.",
         ],
         image: null,
         isList: false,
@@ -1588,10 +1583,58 @@ const blogTopic = [
       },
       {
         text: [
-          "Let's illustrate pagination implementation using JavaScript, HTML, and CSS. Consider a scenario where we have an array of items and aim to display them in paginated form.",
+          "Let's illustrate pagination implementation using HTML, CSS and JavaScript. Consider a scenario where we have an array of items and aim to display them in paginated form.",
         ],
-        image:
+        images: [
           "https://previews.dropbox.com/p/thumb/ACTGcr5YpyNERnqPTDt-wQdJRh-2ps5WaDQriA9zofvCiIPCKBG6vSIkp8o1n5EESk9oT8ymkgqFyH6eM2wTz6Xt6gsgkkXeyW3zHrGNpN5KKX8iIOECBr7NztGDfhiVgCF8aR5wYCd5jPIR61ZUyRi9joO42gwAqMPUtKguuPLO7FmL0TAWxtjpPET9SV0kRTI3w8Y2SPV9S_Nn0KWlzrVjY4FW_MqxwJAPZWOFUhEKzDeuDhGr4HfnRbFeNu4DcBLkwM9wsefpLm4Qn17WoQR2lMcmAm2IN5VdwSiLS_I7OWmL0A7TZYwmpNOaMx7rkitriW_OU4Mh9e-T71QZbmEf/p.png",
+        ],
+        isList: false,
+      },
+      {
+        text: null,
+        images: [
+          "https://previews.dropbox.com/p/thumb/ACRhCnNrGLxYDzQfd54JCzF96cvc6UuqE6StiC9q2Xe4s4e6e2Eb5TIu1rMhNhla7BOAk-thOatjRVa5hhsLDVld7pb8imIuaI2bDbUXRwCP9J8trDULla5QaMI9lORUgDXqlEn3hofjW5NGdqCeS8upH8swYDJkdCI43CxFSLN01F4bFc-tvSAcylDflkTDykgFJUiZfpZfO5_vygp2pqLbHT0wW3ZGZBHElQipnGSofOubpwCwawUvBySylagR2rujLzMNFIn1U9Ga5WJhGT2Gh4jg1tqIXXA8pgI1R2GRVHnpIZgOHtOSZTVrXMIMSxJYbiB3Ru_RQ_PkYFWYYIDY/p.png",
+        ],
+        isList: false,
+      },
+      {
+        text: null,
+        images: [
+          "https://previews.dropbox.com/p/thumb/ACQbe5_oezyLk8dsOmkhZic3MTlwPC0luDRaKaSsGB8PTrV0X2jwmGm79xQwrgrZ_hWMkE47ibzALxH4Nyx5j7VLT7nGRdDLXhGTDo306VzPNHXTadrjZ3L166kveeZvBvAHyKzwbYsQ2hE2P42FJqAGTb8UUafOhHWJSznT4-zy7tfNvp1iyjoAZcIymu_PQigNPXJrhNVyLu1EY0DrLVNFdqRhY9kHZX-zedW8WBxtJFjqsuGKMQ8pbn_hXVh6A0HG8FX9r91NFE9U3qnJdCKqbWuGVXN3-CRVgK5IKMMnyiZ-bjwV1heDRefgaYtyhqtJyjZetdIEzGNmSqMaRIFL/p.png",
+        ],
+        isList: false,
+      },
+      {
+        text: null,
+        images: [
+          "https://previews.dropbox.com/p/thumb/ACTmpS5JUvtU-2zSzAKqEFtqD_vOCKTYVR_EJQeCnb3rAsO3I9dzAuWffrsPAzh8M_4Tv-VkkYMnYwOTcOrgFm52F546kztZnuFfooX_UvmWzpnm1BWWCu69BE3QD0qvO3-afwRtOkKoBtnov7RR_mV94hOo725vYPxNNaqQFNjZk1MUeVUkZu01Sj_yXy99tkHUSoS7vtP3mHSqEJd6XalPWgFDaTMJD5Dcvt2mbY9TolPib4jvsKFDWT7cHwYt6eMBu5R7kwN-hXpfe5VGzIGl3mKbDIaxqnaqvOKweymo5oY9jd9xnV-lKWvjWrFxzn8xhcvm8sf1WghsoYp1vKwz/p.png",
+        ],
+        isList: false,
+      },
+      {
+        text: [
+          "In this example, we start by defining an array of items. The displayItems function takes care of rendering items for the current page, while renderPaginationButtons generates pagination controls. Clicking on a pagination button triggers the display of corresponding items.",
+        ],
+       
+        isList: false,
+      },
+      {
+        text: [
+          "Where to Use Pagination:",
+          "Pagination finds applications across various domains, including:",
+          "E-commerce Websites: Displaying products in paginated grids allows users to navigate through extensive catalogs conveniently.",
+          "Blogs and Articles: Long-form content can be divided into pages, facilitating easier reading and navigation.",
+          "Data Tables: In applications dealing with tabular data, pagination enhances readability and performance by splitting data into manageable chunks.",
+          "Search Results: Search engines often paginate results to present them in a structured and navigable manner.",
+        ],
+
+        isList: true,
+      },
+      {
+        text: [
+          "In conclusion, JavaScript pagination is a versatile tool for managing and presenting data in web applications. By understanding its theory, implementing it effectively, and leveraging it across various contexts, developers can significantly enhance user experience and optimize performance.",
+        ],
+
         isList: false,
       },
     ],
