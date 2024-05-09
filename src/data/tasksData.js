@@ -1224,6 +1224,93 @@ const tasksData = {
       img: require("../images/ReactLesson15.webp"),
       link: "https://www.dropbox.com/scl/fi/ks97vsqcdxhjg236ystvp/navbarStyles.css?rlkey=zcqeskq64ip14h2l07ouf2lt8&st=s8s2fkc7&dl=0",
     },
+    {
+      taskId: "reacttask16",
+      taskTitle: "Pagination",
+      introduction:
+        "This project is a React application designed to showcase pagination functionality while fetching and displaying a list of GitHub followers. Through the use of React hooks, specifically useState and useEffect, it efficiently manages state and data fetching. The main component, App, orchestrates the pagination logic, rendering follower cards dynamically with the help of the Follower component. The useFetch custom hook handles fetching data from the GitHub API, while a utility function called paginate organizes the fetched data into pages for easier navigation. By studying and implementing this project, you will gain valuable insights into React state management, data fetching, and pagination techniques.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Project Setup",
+          titleDescription: "",
+          description: [
+            "Set up a new React project using Create React App or by initializing a project manually.",
+            "Install necessary dependencies such as react and react-dom.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create useFetch Hook",
+          titleDescription: "useFetch.js",
+          description: [
+            "Create a new file named useFetch.js.",
+            "Import useState and useEffect from the React library.",
+            "Define the useFetch function as a custom hook.",
+            "Inside useFetch, initialize state variables using useState: 'loading': to track whether data is currently being fetched. 'data': to store the fetched data from the GitHub API.",
+            "Write an asynchronous function within useFetch to fetch data from the GitHub API: Use 'fetch' to make a GET request to the API endpoint (https://api.github.com/users/znkbnk/followers?per_page=100). Convert the response to JSON using 'response.json()'. Update the 'data' state with the fetched data. Set 'loading' to 'false' once the data is fetched.",
+            "Use 'useEffect' within the 'useFetch' function to trigger the data fetching process when the component mounts: Pass an empty dependency array ([]) to ensure 'useEffect' only runs once. Call the asynchronous function responsible for fetching data.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create paginate Utility Function",
+          titleDescription: "paginate.js",
+          description: [
+            "Create a new file named paginate.js.",
+            "Define the 'paginate' function to handle pagination logic.",
+            "Declare 'paginate' as a function that takes an array of followers as input.",
+            "Inside 'paginate', calculate the number of pages required based on the length of the followers array and a predetermined number of items per page (e.g., 10).",
+            "Initialize an empty array to store paginated followers.",
+            "Use a loop (such as 'Array.from' or a traditional 'for' loop) to iterate over the followers array and split it into chunks corresponding to each page.",
+            "For each page, extract a slice of followers from the original array based on the current page number and the items per page.",
+            "Push each slice of followers into the 'paginatedFollowers' array.",
+            "Finally, return the 'paginatedFollowers' array containing arrays of followers grouped by page.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Build the Follower Component",
+          titleDescription: "Follower.js",
+          description: [
+            "Create a new file named Follower.js.",
+            "Define the 'Follower' component as a functional component that takes props (e.g., avatar_url, html_url, login).",
+            "Inside the 'Follower' component, destructure the props to access individual follower data.",
+            "Use JSX to render the follower card, including the follower's avatar, username, and a link to their GitHub profile.",
+            "Utilize appropriate HTML elements and attributes (e.g., <img>, <h4>, <a>) to structure the follower card.",
+            "Ensure that the GitHub profile link (html_url) is set as the 'href' attribute of the anchor (<a>) tag.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Implement Pagination in the App Component",
+          titleDescription: "App.js",
+          description: [
+            "Open the App.js file.",
+            "Import useState, useEffect, and the useFetch hook.",
+            "Inside the App functional component, initialize state variables using useState: 'page': to track the current page number. 'followers': to store the followers data for the current page.",
+            "Use the 'useFetch' hook to fetch data from the GitHub API and manage loading state (loading) and fetched data (data).",
+            "Implement useEffect to update the followers state whenever the data or loading status changes: Check if data is loaded (!loading). If data is loaded, update the 'followers' state with the followers data for the current page (data[page]).",
+            "Implement functions for navigating between pages: 'nextPage': Increment the page state to display the next page of followers. 'prevPage': Decrement the 'page' state to display the previous 'page' of followers.",
+            "Implement a function (handlePage) to handle clicking on pagination buttons: Update the 'page' state based on the index of the clicked pagination button.",
+            "Render follower cards based on the followers state: Use the map function to iterate over the 'followers' array and render a 'Follower' component for each follower.",
+            "Render pagination buttons: Use the map function to generate pagination buttons based on the number of pages in the data (data.length). Add appropriate CSS classes to style the active page button differently.",
+            "Attach event handlers (onClick) to the pagination buttons to trigger page navigation when clicked.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Style the Components",
+          titleDescription: "",
+          description: [
+            "Create a CSS file (e.g., styles.css) to style the components.",
+            "Style the follower cards, buttons, and pagination elements to improve the appearance and layout of the application. ( Or download from the bottom )",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Hard",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson16.webp"),
+      link: "https://www.dropbox.com/scl/fi/8g5fg5okeku604k3v1ijv/paginationStyles.css?rlkey=gxh2ah4lqq2v9qb7im9bnqmgr&st=ymt2ym6v&dl=0",
+    },
   ],
 };
 
@@ -1484,24 +1571,28 @@ const blogTopic = [
       },
       {
         text: [
-          "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
-          "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
-          "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
-          "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
-          "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
+          "Title: Mastering JavaScript Pagination: Theory, Implementation, and Best Practices In the dynamic landscape of web development, efficient data management and presentation are paramount. One common challenge developers face is efficiently displaying large datasets while maintaining user experience. Enter JavaScript pagination—a technique that not only enhances performance but also improves usability by breaking down voluminous data into digestible chunks. In this comprehensive guide, we'll delve into the theory behind pagination, provide practical code examples, and explore its applications across various scenarios.",
+        ],
+        image: null,
+        isList: false,
+      },
+      {
+        text: [
+          "Pagination, in essence, involves dividing content into discrete pages, typically with a limited number of items per page. This approach offers several benefits:",
+          "Enhanced Performance: Loading a large dataset in a single go can strain server resources and lead to sluggish user experiences. Pagination mitigates this issue by distributing data across multiple pages, resulting in faster load times.",
+          "Improved User Experience: Navigating through pages is intuitive for users, allowing them to consume content at their own pace without feeling overwhelmed.",
+          "Optimized Bandwidth Usage: By fetching only the necessary data for each page, pagination reduces bandwidth consumption, making it ideal for users with limited internet connectivity.",
         ],
         image: null,
         isList: true,
       },
       {
         text: [
-          "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
-          "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
-          "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
-          "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
+          "Let's illustrate pagination implementation using JavaScript, HTML, and CSS. Consider a scenario where we have an array of items and aim to display them in paginated form.",
         ],
-        image: null,
-        isList: true,
+        image:
+          "https://previews.dropbox.com/p/thumb/ACTGcr5YpyNERnqPTDt-wQdJRh-2ps5WaDQriA9zofvCiIPCKBG6vSIkp8o1n5EESk9oT8ymkgqFyH6eM2wTz6Xt6gsgkkXeyW3zHrGNpN5KKX8iIOECBr7NztGDfhiVgCF8aR5wYCd5jPIR61ZUyRi9joO42gwAqMPUtKguuPLO7FmL0TAWxtjpPET9SV0kRTI3w8Y2SPV9S_Nn0KWlzrVjY4FW_MqxwJAPZWOFUhEKzDeuDhGr4HfnRbFeNu4DcBLkwM9wsefpLm4Qn17WoQR2lMcmAm2IN5VdwSiLS_I7OWmL0A7TZYwmpNOaMx7rkitriW_OU4Mh9e-T71QZbmEf/p.png",
+        isList: false,
       },
     ],
   },
