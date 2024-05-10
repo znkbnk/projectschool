@@ -45,7 +45,7 @@ const AuthorProfile = ({ author }) => {
                         rel='noopener noreferrer'
                         aria-label='Visit Instagram profile of ZNKBNK'
                       >
-                        <i className='fab fa-instagram'></i> Instagram
+                        <i className='fab fa-instagram'></i> 
                       </a>
                       <a
                         href='https://github.com/znkbnk'
@@ -53,7 +53,7 @@ const AuthorProfile = ({ author }) => {
                         rel='noopener noreferrer'
                         aria-label='Visit GitHub profile of ZNKBNK'
                       >
-                        <i className='fa-brands fa-github'></i> GitHub
+                        <i className='fa-brands fa-github'></i> 
                       </a>
                     </div>
                   </div>
