@@ -60,6 +60,7 @@
   justify-content: center;
   align-items: center;
   width: 50%;
+  height: auto;
 }
 
 .sectionImg7 {
@@ -168,9 +169,7 @@
 }
 
 @media only screen and (max-device-width: 768px) {
-  .sectionImg4 {
-    width: 80%;
-  }
+ 
   .sectionImg7 {
     left: 15%;
     top: 37%;
@@ -180,9 +179,7 @@
   }
 }
 @media only screen and (max-device-width: 460px) {
-  .sectionImg4 {
-    width: 86%;
-  }
+  
   .sectionImg7 {
     left: 15%;
     top: 42%;

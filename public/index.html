@@ -7,6 +7,13 @@
       name="description"
       content="Learn React through hands-on tasks, not just theory. Dive into practical exercises designed to reinforce your skills and accelerate your learning journey. Get ready to code, learn, and conquer React with our task-based approach. Start building your React expertise today!"
     />
+    <style>
+      /* Critical CSS styles go here */
+      body {
+        font-family: 'Lato', sans-serif;
+      }
+      /* Add other critical CSS styles */
+    </style>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,22 +32,18 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <meta name="theme-color" content="#ffffff" />
     <title>Learn React at ProjectSchool</title>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-7L2NMEJKB6"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-7L2NMEJKB6");
-    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      // Defer non-critical JavaScript
+      function loadDeferredScripts() {
+        var script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-7L2NMEJKB6';
+        document.body.appendChild(script);
+      }
+      window.addEventListener('load', loadDeferredScripts);
+    </script>
   </body>
 </html>
