@@ -1413,7 +1413,6 @@ const tasksData = {
           description: [
             "Import the SearchBar component into your main application file (e.g., App.js) and render it within your main component hierarchy.",
             "Ensure that the SearchBar component is properly integrated with the rest of your application, and its functionality is tested thoroughly.",
-           
           ],
         },
       ],
@@ -1423,7 +1422,7 @@ const tasksData = {
       prerequisites: ["React Basics"],
       completed: false,
       img: require("../images/ReactLesson17.webp"),
-      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+      link: "https://www.dropbox.com/scl/fi/wj8mbt35tzthwb59t0fpp/searchBarStyles.css?rlkey=1ssb43swqlr20wm3e5nkugzzk&st=s1gbhfpy&dl=0",
     },
   ],
 };
