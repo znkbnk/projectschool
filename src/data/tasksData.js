@@ -1226,7 +1226,7 @@ const tasksData = {
     },
     {
       taskId: "reacttask16",
-      taskTitle: "Pagination",
+      taskTitle: "Pagination Page",
       introduction:
         "This project is a React application designed to showcase pagination functionality while fetching and displaying a list of GitHub followers. Through the use of React hooks, specifically useState and useEffect, it efficiently manages state and data fetching. The main component, App, orchestrates the pagination logic, rendering follower cards dynamically with the help of the Follower component. The useFetch custom hook handles fetching data from the GitHub API, while a utility function called paginate organizes the fetched data into pages for easier navigation. By studying and implementing this project, you will gain valuable insights into React state management, data fetching, and pagination techniques.",
 
@@ -1311,6 +1311,120 @@ const tasksData = {
       img: require("../images/ReactLesson16.webp"),
       link: "https://www.dropbox.com/scl/fi/8g5fg5okeku604k3v1ijv/paginationStyles.css?rlkey=gxh2ah4lqq2v9qb7im9bnqmgr&st=ymt2ym6v&dl=0",
     },
+    {
+      taskId: "reacttask",
+      taskTitle: "Search Bar",
+      introduction:
+        "This project is a React-based web application designed to facilitate user searches within a given dataset. The core functionality revolves around a SearchBar component, allowing users to input search queries. As users type into the search bar, the application dynamically fetches data from an external API and filters the results based on the user's input. The search results are then displayed in a list format, enabling users to browse and select relevant items.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Create a React project",
+          titleDescription: "",
+          description: [
+            "If you haven't already, set up a new React project using Create React App or any other preferred method.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Component Structure",
+          titleDescription: "",
+          description: [
+            "Ensure that you have three components: SearchBar, SearchResult, and SearchResultsList.",
+            "Each component should be in its own file with appropriate names (SearchBar.js, SearchResult.js, SearchResultsList.js).",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Component Styling",
+          titleDescription: "",
+          description: [
+            "Create CSS files for each component to handle their styling (SearchBar.css, SearchResult.css, SearchResultsList.css).",
+            "Style each component according to the provided CSS classes. ( Or just download all the styles from link provided on the bottom )",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Implement SearchBar Component",
+          titleDescription: "SearchBar.js",
+          description: [
+            "Begin by importing the necessary dependencies at the top of your SearchBar.js file.",
+            "These dependencies include React, useState hook, FaSearch icon from react-icons/fa, and the CSS file for styling.",
+            "Initialize state variables using the useState hook to manage the input value, search results, selected result, and visibility of search results.",
+            "Use useState to declare state variables such as 'input', 'results', 'selectedResult', and 'showResults'.",
+            "Implement the 'fetchData' function to fetch data from a remote API endpoint.",
+            "Use the 'fetch' API to retrieve data from the specified URL (e.g., 'https://jsonplaceholder.typicode.com/users'). Also you can create your own using 'https://json-generator.com' website ",
+            "Upon receiving the response, parse it as JSON and filter the results based on the user input.",
+            "Update the 'results' state with the filtered data and set 'showResults' to true to display the search results.",
+            "Implement event handler functions to manage user interactions with the search bar.",
+            "'handleChange': Update the input value as the user types and trigger data fetching based on the input value.",
+            "'handleSelect': Handle the selection of a search result and update the selectedResult state accordingly.",
+            "'handleKeyPress': Handle keyboard events, such as hiding search results when the Enter key is pressed.",
+            "Render JSX elements for the search bar, selected result details (if any), and the search results list.",
+            "Use the FaSearch icon component to render the search icon.",
+            "Bind event handlers to relevant input events such as onChange and onKeyDown.",
+            "Conditionally render the selected result details and search results list based on the state variables.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Implement SearchResult Component",
+          titleDescription: "SearchResult.js",
+          description: [
+            "Import React and the CSS file for styling at the top of your SearchResult.js file.",
+            "Define the SearchResult functional component that accepts props (user and onSelect).",
+            "Destructure the user and onSelect props within the function signature.",
+            "Render JSX elements to display the search result information.",
+            "Typically, this includes rendering the user's name within a clickable container.",
+            "Handle user interactions such as clicking on the search result.",
+            "Implement an onClick event on the container element to invoke the onSelect function with the selected user as an argument.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Implement SearchResultsList Component",
+          titleDescription: "SearchResultsList.js",
+          description: [
+            "Import React, the SearchResult component, and the CSS file for styling at the top of your SearchResultsList.js file.",
+            "Define the SearchResultsList functional component that accepts props (results and onSelect).",
+            "Destructure the results and onSelect props within the function signature.",
+            "Map through the results array passed as props.",
+            "For each user in the results array, render a SearchResult component.",
+            "Pass the user object and onSelect function as props to the SearchResult component.",
+            "Ensure that the SearchResultsList component properly renders a list of SearchResult components based on the provided results array.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: App Component Implementation",
+          titleDescription: "App.js",
+          description: [
+            "Import React and useState hook at the top of your App.js file.",
+            "Define the functional component named App.",
+            "Initialize state variable 'results' using the useState hook.",
+            "'results' will hold the search results fetched from the SearchBar component.",
+            "Within the App component's return statement, render JSX elements to create the layout of your application.",
+            "Use the CSS class 'App' for the root div element.",
+            "Import the SearchBar component and render it within the App component.",
+            "Pass the 'setResults' function as a prop to the SearchBar component to update the results state.",
+            "Use conditional rendering to display the SearchResultsList component only if there are results to display.",
+            "Check if results state is not empty and has a length greater than 0.",
+            "If true, render the SearchResultsList component and pass the results state as props.",
+            "Ensure that the CSS classes used in the JSX elements are defined in the associated CSS file (e.g., index.css).",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Integrate Components",
+          titleDescription: "",
+          description: [
+            "Import the SearchBar component into your main application file (e.g., App.js) and render it within your main component hierarchy.",
+            "Ensure that the SearchBar component is properly integrated with the rest of your application, and its functionality is tested thoroughly.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Hard",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson17.webp"),
+      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+    },
   ],
 };
 
@@ -1330,7 +1444,7 @@ const exercisesData = [
   {
     img: "https://www.freecodecamp.org/news/content/images/2022/04/featured.jpg",
     title: "Building Dynamic User Interfaces",
-    desc: "Delve into React, the popular JavaScript library for building dynamic and interactive user interfaces. Learn components, state management, and the React ecosystem to create modern web applications.",
+    desc: "Explore React, the widely-used JavaScript library designed for crafting dynamic and engaging user interfaces. Discover its core concepts such as components and state management, alongside navigating the diverse React ecosystem, empowering you to construct contemporary web applications.",
     to: "/reactlessons",
   },
 ];
