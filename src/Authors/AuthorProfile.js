@@ -43,17 +43,17 @@ const AuthorProfile = ({ author }) => {
                         href='https://instagram.com/znkbnk'
                         target='_blank'
                         rel='noopener noreferrer'
-                        aria-label='Instagram Profile: @znkbnk'
+                        aria-label='Visit Instagram profile of ZNKBNK'
                       >
-                        <i className='fab fa-instagram'></i>
+                        <i className='fab fa-instagram'></i> Instagram
                       </a>
                       <a
                         href='https://github.com/znkbnk'
                         target='_blank'
                         rel='noopener noreferrer'
-                        aria-label='GitHub Profile: @znkbnk'
+                        aria-label='Visit GitHub profile of ZNKBNK'
                       >
-                        <i className='fa-brands fa-github'></i>
+                        <i className='fa-brands fa-github'></i> GitHub
                       </a>
                     </div>
                   </div>
