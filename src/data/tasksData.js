@@ -1733,7 +1733,7 @@ const tasksData = {
       taskId: "reacttask18",
       taskTitle: "Dropdown",
       introduction:
-        "Explore React, the widely-used JavaScript library designed for crafting dynamic and engaging user interfaces. Discover its core concepts such as components and state management, alongside navigating the diverse React ecosystem, empowering you to construct contemporary web applications. Overall, this project provides a user-friendly interface for selecting programming languages within a React environment.",
+        "This project is a React application that implements a dropdown menu for selecting programming languages. Users can click on an input field, triggering the appearance of a dropdown menu containing a list of programming languages. They can then select a language from the list, and the selected language will be displayed in the input field. The dropdown menu can be toggled open and closed by clicking on the input field. Overall, this project provides a user-friendly interface for selecting programming languages within a React environment.",
 
       steps: [
         {
