@@ -107,7 +107,14 @@ const LiveEditor = () => {
     if (imgLink) {
       window.open(imgLink, "_blank");
     } else {
-      toast.error("No styles found for download.");
+      toast.error("No images found for download.");
+    }
+  };const handleDownloadData = () => {
+    const dataLink = tasksData[lessonType][currentTaskIndex].link3;
+    if (dataLink) {
+      window.open(dataLink, "_blank");
+    } else {
+      toast.error("No data found for download.");
     }
   };
 
@@ -119,7 +126,6 @@ const LiveEditor = () => {
           <div className='task'>
             <div className='text-window'>
               <h1>{tasksData[lessonType][currentTaskIndex].taskTitle}</h1>
-
               {lessonType &&
                 tasksData[lessonType][currentTaskIndex].steps.map(
                   (step, index) => (
@@ -154,6 +160,11 @@ const LiveEditor = () => {
                 <button className='button-84' onClick={handleDownloadImg}>
                   Download Images
                 </button>
+              )}{" "}
+              {tasksData[lessonType][currentTaskIndex].link3 && (
+                <button className='button-84' onClick={handleDownloadData}>
+                  Download Data
+                </button>
               )}
             </div>
           </div>
@@ -182,7 +193,6 @@ const LiveEditor = () => {
           allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
           sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
         ></iframe>
-        
       </div>
       <ToastContainer />
     </div>

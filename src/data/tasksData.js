@@ -1824,11 +1824,7 @@ const tasksData = {
           description: [
             "Apply conditional classes to the icon and options container based on the state of 'isOpenSelect'.",
             "If 'isOpenSelect' is 'true', add the class 'active' to the icon and options container to make them visible; otherwise, remove the class to hide them.",
-            "",
-            "",
-            "",
-            "",
-            "",
+           
           ],
         },
       ],
@@ -1839,6 +1835,92 @@ const tasksData = {
       completed: false,
       img: require("../images/ReactLesson18.webp"),
       link: "https://www.dropbox.com/scl/fi/a4s2nemre2jjzb30u75u5/dropdownStyles.css?rlkey=12wx0dim604hwgarpnjssr8qu&st=har5kkyl&dl=0",
+    },
+    {
+      taskId: "reacttask19",
+      taskTitle: "",
+      introduction:
+        "This is a React-based web application featuring a dynamic sidebar navigation menu, offering users easy access to various sections and functionalities. With a customizable and expandable structure, it enhances user experience by providing seamless navigation within the application.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setup your React project",
+          titleDescription: "",
+          description: [
+            "Ensure you have a React project set up with all necessary dependencies installed.",
+            "Install 'Bootstrap Icons' via npm",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Components",
+          titleDescription: "",
+          description: [
+            "Create a Sidebar.js file inside the components directory.",
+            "Create a SidebarItem.js file inside the components directory.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Implement SidebarItem Component",
+          titleDescription: "SidebarItem.js",
+          description: [
+            "Inside the 'components' directory, create a new file named SidebarItem.js.",
+            "In SidebarItem.js, import 'useState' from React for managing component state.",
+            "Import Bootstrap icons CSS for icon rendering.",
+            "Create a functional component named SidebarItem that accepts 'item' as a prop.",
+            "Inside the component, use 'useState' hook to manage the state of submenu ('open' state).",
+            "Conditionally render the sidebar item based on whether it has children or not.",
+            "If it has children, render a collapsible item with a submenu. If not, render a plain link.",
+            "Use Bootstrap icons for rendering icons associated with sidebar items.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Implement Sidebar Component",
+          titleDescription: "Sidebar.js",
+          description: [
+            "Inside the 'components' directory, create a new file named Sidebar.js.",
+            "Import 'SidebarItem' component.",
+            "Import the sidebar data from the JSON file.",
+            "Create a functional component named 'Sidebar'.",
+            "Inside the component, map through the sidebar data and render each sidebar item using the 'SidebarItem' component.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Implement Main App Component",
+          titleDescription: "App.js",
+          description: [
+            "Import the 'Sidebar' component at the top of the file.",
+            "In the 'App' functional component, structure the layout with a main container and a sidebar.",
+            "Render the 'Sidebar' component inside the main container.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Import Sidebar Data",
+          titleDescription: "sidebar.json",
+          description: [
+            "Inside the src directory (or wherever your data folder is located), create a new file named sidebar.json.",
+            "Manually type or define your sidebar data structure within this JSON file.",
+            "This structure should have an array of sidebar items, each containing properties such as title, icon, path, and optionally childrens.",
+            "Or you can download it from the link below",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Style Your Components",
+          titleDescription: "",
+          description: [
+            "Style your components using CSS. You can create a separate CSS file or use CSS-in-JS libraries like Styled Components.",
+            "Or simply download it from the link below",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson19.webp"),
+      link: "https://www.dropbox.com/scl/fi/gkczh6ps4swxpr1cebv3m/sidebarStyles.css?rlkey=1gn09lghyev6h92r4vzm143ny&st=sjjt66f6&dl=0",
+      link3:
+        "https://www.dropbox.com/scl/fi/cbzzf2hzzi7bpzfzm5496/sidebar.json?rlkey=3wufj9ijefhd9zdl3lucq6jn0&st=muc48ibt&dl=0",
     },
   ],
 };
