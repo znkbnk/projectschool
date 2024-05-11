@@ -1,3 +1,308 @@
+const authorsData = [
+  {
+    name: { first: "Jevin", last: "B" },
+    position: "React",
+    description: "I will update this soon....",
+    picture: { medium: require("../images/me.webp") }, // Use require to import images
+  },
+];
+
+const faqData = [
+  {
+    question:
+      "Why is ProjectSchool learning is different from other platforms with online courses?",
+    answer: (
+      <div className='faq-container-answer'>
+        <p>
+          ProjectSchool learning stands out from other platforms with online
+          courses due to its emphasis on practical exercises over traditional
+          theoretical approaches. Unlike many other programs that rely heavily
+          on passive learning through lectures and readings, ProjectSchool
+          prioritizes hands-on tasks that allow participants to directly engage
+          with the subject matter.
+        </p>
+        <p>
+          {" "}
+          By immersing learners in practical activities, ProjectSchool
+          facilitates a deeper understanding of concepts and their real-world
+          application. This approach fosters the development of tangible skills
+          and boosts learners' confidence as they actively apply what they're
+          learning.
+        </p>
+        <p>
+          {" "}
+          ProjectSchool's focus on active participation and meaningful outcomes
+          distinguishes it from platforms that predominantly offer theoretical
+          knowledge. Rather than merely absorbing information, participants in
+          ProjectSchool actively shape their learning journey through hands-on
+          experiences, bridging the gap between theory and practice.
+        </p>
+        <p>
+          {" "}
+          In summary, ProjectSchool stands out by offering a dynamic learning
+          experience that emphasizes experiential learning and practical
+          knowledge, empowering learners to apply their newfound skills
+          effectively in real-world scenarios.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question:
+      "Is ProjectSchool suitable for individuals who are new to programming and lack heavy theoretical knowledge?",
+    answer: (
+      <div className='faq-container-answer'>
+        <p>
+          Yes, our React school is suitable for beginners who have a basic
+          understanding of programming concepts. While we prioritize practical
+          exercises over theoretical learning, we do assume that students have
+          some foundational knowledge in programming. This might include
+          familiarity with concepts such as variables, loops, functions, and
+          basic HTML/CSS.
+        </p>
+        <p>
+          However, our program is designed to guide beginners through hands-on
+          tasks that will help them develop practical skills and confidence in
+          React programming. Whether you're new to programming or looking to
+          expand your skills specifically in React, our approach focuses on
+          active engagement and real-world application to facilitate learning
+          and growth.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Are payments on ProjectSchool safe?",
+    answer: (
+      <div className='faq-container-answer'>
+        <p>
+          Sure! We're using Stripe solution. All transactions are SSL (Secure
+          Socket Layer) protected. Your information and your donors information
+          are securely transmitted during the processing of all payments.
+        </p>
+        <p>
+          Stripe is a PCI Service Provider Level 1 which is the highest grade of
+          payment processing security. You can rest assured that your donors
+          information is safe and secure.
+        </p>
+        <p>
+          All credit card numbers are encrypted and safely stored in Stripe's
+          state of the art data-center. This ensures both the security and
+          integrity of your donors information.
+        </p>
+      </div>
+    ),
+  },
+  {
+    question: "Is it safe to use codesandbox.io platform?",
+    answer: (
+      <div className='faq-container-answer'>
+        <p>
+          Certainly! CodeSandbox is generally considered a secure platform for
+          coding, with measures in place to safeguard users' code and data. It
+          prioritizes security by regularly updating its platform to address any
+          potential vulnerabilities and offers users control over the privacy
+          settings of their projects. Additionally, the platform has clear
+          community guidelines to maintain respectful interactions among users,
+          with appropriate actions taken against any violations.
+        </p>
+        <p>
+          However, users should remain cautious when using third-party code and
+          ensure they come from reputable sources to minimize the risk of
+          including malicious code. While CodeSandbox encrypts data transmission
+          and storage, users should still be mindful of the information they
+          include in their projects, especially sensitive data. Ultimately,
+          users play a role in the security of their code and data by practicing
+          good coding practices and regularly reviewing permissions. Alternative
+          platforms and additional security measures, such as code review and
+          version control systems, can also be considered for added protection.
+        </p>
+      </div>
+    ),
+  },
+];
+const blogCards = [
+  {
+    id: 1,
+    category: "React",
+    title: "How to create Authentication Guard Component",
+    extract:
+      "Today we'll walk through the process of implementing authentication in a React application using Firebase and React Router. We'll create an AuthGuard component to manage the authentication state anr protect routes that require authentication, ensuring a seamless user experience.",
+    date: "04 April 2024",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.webp",
+  },
+  {
+    id: 2,
+    title: "InsightTrack: Empowering Your Digital Presence",
+    extract:
+      "Google Analytics is a powerful web analytics service offered by Google that helps website owners and marketers track and analyze their website traffic and user behavior. By providing detailed insights into visitor demographics, acquisition channels, user engagement, and conversion metrics, Google Analytics enables businesses to make data-driven decisions to improve their online presence, optimize marketing strategies, and enhance the overall user experience.",
+    date: "5 May 2024",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/GAnalytics.svg/220px-GAnalytics.svg.webp",
+  },
+  {
+    id: 3,
+    category: "JavaScript",
+
+    title: "Mastering JavaScript Pagination",
+    extract:
+      "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
+    date: "8 May 2024",
+    image:
+      "https://previews.dropbox.com/p/thumb/ACR5ZavloDgY7Puh3xjuBAAgD4ogUz50R5SAIEdIweVFothY40CcTX8InXrRDAzIehspQ2h2HamapyRGP3BYMHq0ri3Xuk43iT0VBKWvixIgFcNR-sgcRxtnRWxgp9hgydUWlmA7RXFZPUkZOj-RZThyXD2ds69yNm04ZPK4M736XL3ayT2brEFMEw6oULk89VWEJFseDBsxcYRpFCIA6WKfSWFvmDeDa5gsEJ4g2q4jDm0eabiY9FowsnJVplEPFlaC15OyWs41OOVdxDM9VPPcWE1wrpTmBdihoK0Aa45Q9FDLtAuu0cr6YSwTlcvCSHRQ863sh6MvBVBPaSD4jCug/p.png",
+  },
+];
+const blogTopic = [
+  {
+    id: 1,
+    image: "AuthGuard (1).webp",
+    paragraphs: [
+      {
+        text: "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration.",
+        image: null,
+        isList: false,
+      },
+      {
+        text: [
+          "Implement AuthGuard Component:",
+          "Create an AuthGuard.html file. This component will handle the authentication logic.",
+          "Inside the AuthGuard component, you're using useEffect hook to listen for changes in authentication state (onAuthStateChanged). When the authentication state changes, it updates the isLoggedIn state.",
+          "If the user is authenticated (user is not null), isLoggedIn is set to true. Otherwise, it's set to false, and the user is redirected to the login page using navigate(/login).",
+          "This component returns the children (components wrapped inside it) only if the user is authenticated. Otherwise, it returns null.",
+        ],
+        image: null,
+        isList: true,
+      },
+      {
+        text: [
+          "Import necessary modules from React",
+          "Import useNavigate hook from react-router-dom",
+          "Import the 'auth' object from './firebase' file",
+          "Define a functional component AuthGuard that takes 'children' as a prop",
+          "Initialize navigate function using the useNavigate hook from react-router-dom",
+          "Initialize 'isLoggedIn' state variable with false using useState hook",
+          "Implement useEffect hook",
+          "Call onAuthStateChanged method on 'auth' object to listen for authentication state changes",
+        ],
+        image: null,
+        isList: true,
+      },
+    ],
+  },
+  {
+    id: 2,
+    image: "googleAnalytics.webp",
+    paragraphs: [
+      {
+        text: "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
+        image: null,
+        isList: false,
+      },
+      {
+        text: [
+          "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
+          "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
+          "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
+          "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
+          "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
+        ],
+        image: null,
+        isList: true,
+      },
+      {
+        text: [
+          "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
+          "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
+          "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
+          "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
+        ],
+        image: null,
+        isList: true,
+      },
+    ],
+  },
+  {
+    id: 3,
+    image: ["Pagination.webp"],
+    paragraphs: [
+      {
+        text: [
+          "Mastering JavaScript Pagination: Theory, Implementation, and Best Practices In the dynamic landscape of web development, efficient data management and presentation are paramount. One common challenge developers face is efficiently displaying large datasets while maintaining user experience. Enter JavaScript pagination—a technique that not only enhances performance but also improves usability by breaking down voluminous data into digestible chunks. In this comprehensive guide, we'll delve into the theory behind pagination, provide practical code examples, and explore its applications across various scenarios.",
+        ],
+        image: null,
+        isList: false,
+      },
+      {
+        text: [
+          "Pagination, in essence, involves dividing content into discrete pages, typically with a limited number of items per page. This approach offers several benefits:",
+          "Enhanced Performance: Loading a large dataset in a single go can strain server resources and lead to sluggish user experiences. Pagination mitigates this issue by distributing data across multiple pages, resulting in faster load times.",
+          "Improved User Experience: Navigating through pages is intuitive for users, allowing them to consume content at their own pace without feeling overwhelmed.",
+          "Optimized Bandwidth Usage: By fetching only the necessary data for each page, pagination reduces bandwidth consumption, making it ideal for users with limited internet connectivity.",
+        ],
+        image: null,
+        isList: true,
+      },
+      {
+        text: [
+          "Let's illustrate pagination implementation using HTML, CSS and JavaScript. Consider a scenario where we have an array of items and aim to display them in paginated form.",
+        ],
+        images: [
+          "https://previews.dropbox.com/p/thumb/ACTGcr5YpyNERnqPTDt-wQdJRh-2ps5WaDQriA9zofvCiIPCKBG6vSIkp8o1n5EESk9oT8ymkgqFyH6eM2wTz6Xt6gsgkkXeyW3zHrGNpN5KKX8iIOECBr7NztGDfhiVgCF8aR5wYCd5jPIR61ZUyRi9joO42gwAqMPUtKguuPLO7FmL0TAWxtjpPET9SV0kRTI3w8Y2SPV9S_Nn0KWlzrVjY4FW_MqxwJAPZWOFUhEKzDeuDhGr4HfnRbFeNu4DcBLkwM9wsefpLm4Qn17WoQR2lMcmAm2IN5VdwSiLS_I7OWmL0A7TZYwmpNOaMx7rkitriW_OU4Mh9e-T71QZbmEf/p.png",
+        ],
+        isList: false,
+      },
+      {
+        text: null,
+        images: [
+          "https://previews.dropbox.com/p/thumb/ACRhCnNrGLxYDzQfd54JCzF96cvc6UuqE6StiC9q2Xe4s4e6e2Eb5TIu1rMhNhla7BOAk-thOatjRVa5hhsLDVld7pb8imIuaI2bDbUXRwCP9J8trDULla5QaMI9lORUgDXqlEn3hofjW5NGdqCeS8upH8swYDJkdCI43CxFSLN01F4bFc-tvSAcylDflkTDykgFJUiZfpZfO5_vygp2pqLbHT0wW3ZGZBHElQipnGSofOubpwCwawUvBySylagR2rujLzMNFIn1U9Ga5WJhGT2Gh4jg1tqIXXA8pgI1R2GRVHnpIZgOHtOSZTVrXMIMSxJYbiB3Ru_RQ_PkYFWYYIDY/p.png",
+        ],
+        isList: false,
+      },
+      {
+        text: null,
+        images: [
+          "https://previews.dropbox.com/p/thumb/ACQbe5_oezyLk8dsOmkhZic3MTlwPC0luDRaKaSsGB8PTrV0X2jwmGm79xQwrgrZ_hWMkE47ibzALxH4Nyx5j7VLT7nGRdDLXhGTDo306VzPNHXTadrjZ3L166kveeZvBvAHyKzwbYsQ2hE2P42FJqAGTb8UUafOhHWJSznT4-zy7tfNvp1iyjoAZcIymu_PQigNPXJrhNVyLu1EY0DrLVNFdqRhY9kHZX-zedW8WBxtJFjqsuGKMQ8pbn_hXVh6A0HG8FX9r91NFE9U3qnJdCKqbWuGVXN3-CRVgK5IKMMnyiZ-bjwV1heDRefgaYtyhqtJyjZetdIEzGNmSqMaRIFL/p.png",
+        ],
+        isList: false,
+      },
+      {
+        text: null,
+        images: [
+          "https://previews.dropbox.com/p/thumb/ACTmpS5JUvtU-2zSzAKqEFtqD_vOCKTYVR_EJQeCnb3rAsO3I9dzAuWffrsPAzh8M_4Tv-VkkYMnYwOTcOrgFm52F546kztZnuFfooX_UvmWzpnm1BWWCu69BE3QD0qvO3-afwRtOkKoBtnov7RR_mV94hOo725vYPxNNaqQFNjZk1MUeVUkZu01Sj_yXy99tkHUSoS7vtP3mHSqEJd6XalPWgFDaTMJD5Dcvt2mbY9TolPib4jvsKFDWT7cHwYt6eMBu5R7kwN-hXpfe5VGzIGl3mKbDIaxqnaqvOKweymo5oY9jd9xnV-lKWvjWrFxzn8xhcvm8sf1WghsoYp1vKwz/p.png",
+        ],
+        isList: false,
+      },
+      {
+        text: [
+          "In this example, we start by defining an array of items. The displayItems function takes care of rendering items for the current page, while renderPaginationButtons generates pagination controls. Clicking on a pagination button triggers the display of corresponding items.",
+        ],
+
+        isList: false,
+      },
+      {
+        text: [
+          "Where to Use Pagination:",
+          "Pagination finds applications across various domains, including:",
+          "E-commerce Websites: Displaying products in paginated grids allows users to navigate through extensive catalogs conveniently.",
+          "Blogs and Articles: Long-form content can be divided into pages, facilitating easier reading and navigation.",
+          "Data Tables: In applications dealing with tabular data, pagination enhances readability and performance by splitting data into manageable chunks.",
+          "Search Results: Search engines often paginate results to present them in a structured and navigable manner.",
+        ],
+
+        isList: true,
+      },
+      {
+        text: [
+          "In conclusion, JavaScript pagination is a versatile tool for managing and presenting data in web applications. By understanding its theory, implementing it effectively, and leveraging it across various contexts, developers can significantly enhance user experience and optimize performance.",
+        ],
+
+        isList: false,
+      },
+    ],
+  },
+];
+
 const tasksData = {
   js: [],
   CSS: [],
@@ -1312,7 +1617,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/8g5fg5okeku604k3v1ijv/paginationStyles.css?rlkey=gxh2ah4lqq2v9qb7im9bnqmgr&st=ymt2ym6v&dl=0",
     },
     {
-      taskId: "reacttask",
+      taskId: "reacttask17",
       taskTitle: "Search Bar",
       introduction:
         "This project is a React-based web application designed to facilitate user searches within a given dataset. The core functionality revolves around a SearchBar component, allowing users to input search queries. As users type into the search bar, the application dynamically fetches data from an external API and filters the results based on the user's input. The search results are then displayed in a list format, enabling users to browse and select relevant items.",
@@ -1424,6 +1729,117 @@ const tasksData = {
       img: require("../images/ReactLesson17.webp"),
       link: "https://www.dropbox.com/scl/fi/wj8mbt35tzthwb59t0fpp/searchBarStyles.css?rlkey=1ssb43swqlr20wm3e5nkugzzk&st=s1gbhfpy&dl=0",
     },
+    {
+      taskId: "reacttask18",
+      taskTitle: "Dropdown",
+      introduction:
+        "Explore React, the widely-used JavaScript library designed for crafting dynamic and engaging user interfaces. Discover its core concepts such as components and state management, alongside navigating the diverse React ecosystem, empowering you to construct contemporary web applications. Overall, this project provides a user-friendly interface for selecting programming languages within a React environment.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Import CSS File",
+          titleDescription: "",
+          description: [
+            "Import the CSS file (App.css) at the top of your JavaScript file to apply styles to the components used in your React application.",
+            "Or download from the link below",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Import Necessary Dependencies",
+          titleDescription: "",
+          description: [
+            "Import necessary dependencies from React such as 'useState' and 'useRef' to manage state and create refs, respectively.",
+            "Also, import the 'FontAwesomeIcon' component and 'faCaretDown' icon from @fortawesome/react-fontawesome to use an icon for the dropdown indicator.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Define Options Array",
+          titleDescription: "",
+          description: [
+            "Create an array named 'optionsArray' containing different programming languages that users can select from.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Declare State Variables",
+          titleDescription: "",
+          description: [
+            "Use the 'useState' hook to declare a state variable named 'isOpenSelect'. This variable will manage the visibility of the dropdown menu.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create Ref for Input Element",
+          titleDescription: "",
+          description: [
+            "Create a ref using the 'useRef' hook to reference the input element where the selected language will be displayed.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Define selectLanguage Function",
+          titleDescription: "",
+          description: [
+            "Define a function named 'selectLanguage' that takes an event as a parameter.",
+            "Inside this function, access the text content of the clicked option using 'e.target.textContent'.",
+            "Update the value of the input field (languageInput.current.value) with the selected language.",
+            "Set the 'isOpenSelect' state to 'false' to close the dropdown menu after selection.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Define toggleOptions Function",
+          titleDescription: "",
+          description: [
+            "Define a function named 'toggleOptions' that toggles the visibility of the dropdown menu.",
+            "Inside this function, use 'setIsOpenSelect' to update the 'isOpenSelect' state by toggling its value between 'true' and 'false'.",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Render Input Field",
+          titleDescription: "",
+          description: [
+            "Render an input field (<input>) for selecting languages.",
+            "Attach the 'onClick' event listener to the input field to trigger the 'toggleOptions' function when clicked.",
+            "Attach the 'onBlur' event listener to the input field to close the dropdown menu when it loses focus.",
+            "Set the 'ref' attribute of the input field to 'languageInput' to create a reference to this input element.",
+          ],
+        },
+        {
+          stepTitle: "Step 9: Render Caret Icon",
+          titleDescription: "",
+          description: [
+            "Render a caret icon (downward arrow) using 'FontAwesomeIcon' component.",
+            "Pass the 'faCaretDown' icon as a prop to 'FontAwesomeIcon'.",
+          ],
+        },
+        {
+          stepTitle: "Step 10: Render Dropdown Menu",
+          titleDescription: "",
+          description: [
+            "Render the dropdown menu containing the options from the 'optionsArray'.",
+            "Use the map method to iterate over the 'optionsArray' and render each option as a list item (<li>).",
+            "Attach the 'onClick' event listener to each list item to trigger the 'selectLanguage' function when clicked.",
+          ],
+        },
+        {
+          stepTitle: "Step11: Apply Conditional Classes",
+          titleDescription: "",
+          description: [
+            "Apply conditional classes to the icon and options container based on the state of 'isOpenSelect'.",
+            "If 'isOpenSelect' is 'true', add the class 'active' to the icon and options container to make them visible; otherwise, remove the class to hide them.",
+            "",
+            "",
+            "",
+            "",
+            "",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson18.webp"),
+      link: "https://www.dropbox.com/scl/fi/a4s2nemre2jjzb30u75u5/dropdownStyles.css?rlkey=12wx0dim604hwgarpnjssr8qu&st=har5kkyl&dl=0",
+    },
   ],
 };
 
@@ -1445,312 +1861,6 @@ const exercisesData = [
     title: "Building Dynamic User Interfaces",
     desc: "Explore React, the widely-used JavaScript library designed for crafting dynamic and engaging user interfaces. Discover its core concepts such as components and state management, alongside navigating the diverse React ecosystem, empowering you to construct contemporary web applications.",
     to: "/reactlessons",
-  },
-];
-
-const authorsData = [
-  {
-    name: { first: "Jevin", last: "B" },
-    position: "React",
-    description: "I will update this soon....",
-    picture: { medium: require("../images/me.webp") }, // Use require to import images
-  },
-];
-
-const faqData = [
-  {
-    question:
-      "Why is ProjectSchool learning is different from other platforms with online courses?",
-    answer: (
-      <div className='faq-container-answer'>
-        <p>
-          ProjectSchool learning stands out from other platforms with online
-          courses due to its emphasis on practical exercises over traditional
-          theoretical approaches. Unlike many other programs that rely heavily
-          on passive learning through lectures and readings, ProjectSchool
-          prioritizes hands-on tasks that allow participants to directly engage
-          with the subject matter.
-        </p>
-        <p>
-          {" "}
-          By immersing learners in practical activities, ProjectSchool
-          facilitates a deeper understanding of concepts and their real-world
-          application. This approach fosters the development of tangible skills
-          and boosts learners' confidence as they actively apply what they're
-          learning.
-        </p>
-        <p>
-          {" "}
-          ProjectSchool's focus on active participation and meaningful outcomes
-          distinguishes it from platforms that predominantly offer theoretical
-          knowledge. Rather than merely absorbing information, participants in
-          ProjectSchool actively shape their learning journey through hands-on
-          experiences, bridging the gap between theory and practice.
-        </p>
-        <p>
-          {" "}
-          In summary, ProjectSchool stands out by offering a dynamic learning
-          experience that emphasizes experiential learning and practical
-          knowledge, empowering learners to apply their newfound skills
-          effectively in real-world scenarios.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question:
-      "Is ProjectSchool suitable for individuals who are new to programming and lack heavy theoretical knowledge?",
-    answer: (
-      <div className='faq-container-answer'>
-        <p>
-          Yes, our React school is suitable for beginners who have a basic
-          understanding of programming concepts. While we prioritize practical
-          exercises over theoretical learning, we do assume that students have
-          some foundational knowledge in programming. This might include
-          familiarity with concepts such as variables, loops, functions, and
-          basic HTML/CSS.
-        </p>
-        <p>
-          However, our program is designed to guide beginners through hands-on
-          tasks that will help them develop practical skills and confidence in
-          React programming. Whether you're new to programming or looking to
-          expand your skills specifically in React, our approach focuses on
-          active engagement and real-world application to facilitate learning
-          and growth.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Are payments on ProjectSchool safe?",
-    answer: (
-      <div className='faq-container-answer'>
-        <p>
-          Sure! We're using Stripe solution. All transactions are SSL (Secure
-          Socket Layer) protected. Your information and your donors information
-          are securely transmitted during the processing of all payments.
-        </p>
-        <p>
-          Stripe is a PCI Service Provider Level 1 which is the highest grade of
-          payment processing security. You can rest assured that your donors
-          information is safe and secure.
-        </p>
-        <p>
-          All credit card numbers are encrypted and safely stored in Stripe's
-          state of the art data-center. This ensures both the security and
-          integrity of your donors information.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Is it safe to use codesandbox.io platform?",
-    answer: (
-      <div className='faq-container-answer'>
-        <p>
-          Certainly! CodeSandbox is generally considered a secure platform for
-          coding, with measures in place to safeguard users' code and data. It
-          prioritizes security by regularly updating its platform to address any
-          potential vulnerabilities and offers users control over the privacy
-          settings of their projects. Additionally, the platform has clear
-          community guidelines to maintain respectful interactions among users,
-          with appropriate actions taken against any violations.
-        </p>
-        <p>
-          However, users should remain cautious when using third-party code and
-          ensure they come from reputable sources to minimize the risk of
-          including malicious code. While CodeSandbox encrypts data transmission
-          and storage, users should still be mindful of the information they
-          include in their projects, especially sensitive data. Ultimately,
-          users play a role in the security of their code and data by practicing
-          good coding practices and regularly reviewing permissions. Alternative
-          platforms and additional security measures, such as code review and
-          version control systems, can also be considered for added protection.
-        </p>
-      </div>
-    ),
-  },
-];
-const blogCards = [
-  {
-    id: 1,
-    category: "React",
-    title: "How to create Authentication Guard Component",
-    extract:
-      "Today we'll walk through the process of implementing authentication in a React application using Firebase and React Router. We'll create an AuthGuard component to manage the authentication state anr protect routes that require authentication, ensuring a seamless user experience.",
-    date: "04 April 2024",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.webp",
-  },
-  {
-    id: 2,
-    title: "InsightTrack: Empowering Your Digital Presence",
-    extract:
-      "Google Analytics is a powerful web analytics service offered by Google that helps website owners and marketers track and analyze their website traffic and user behavior. By providing detailed insights into visitor demographics, acquisition channels, user engagement, and conversion metrics, Google Analytics enables businesses to make data-driven decisions to improve their online presence, optimize marketing strategies, and enhance the overall user experience.",
-    date: "5 May 2024",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/GAnalytics.svg/220px-GAnalytics.svg.webp",
-  },
-  {
-    id: 3,
-    category: "JavaScript",
-
-    title: "Mastering JavaScript Pagination",
-    extract:
-      "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
-    date: "8 May 2024",
-    image:
-      "https://previews.dropbox.com/p/thumb/ACR5ZavloDgY7Puh3xjuBAAgD4ogUz50R5SAIEdIweVFothY40CcTX8InXrRDAzIehspQ2h2HamapyRGP3BYMHq0ri3Xuk43iT0VBKWvixIgFcNR-sgcRxtnRWxgp9hgydUWlmA7RXFZPUkZOj-RZThyXD2ds69yNm04ZPK4M736XL3ayT2brEFMEw6oULk89VWEJFseDBsxcYRpFCIA6WKfSWFvmDeDa5gsEJ4g2q4jDm0eabiY9FowsnJVplEPFlaC15OyWs41OOVdxDM9VPPcWE1wrpTmBdihoK0Aa45Q9FDLtAuu0cr6YSwTlcvCSHRQ863sh6MvBVBPaSD4jCug/p.png",
-  },
-];
-const blogTopic = [
-  {
-    id: 1,
-    image: "AuthGuard (1).webp",
-    paragraphs: [
-      {
-        text: "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration.",
-        image: null,
-        isList: false,
-      },
-      {
-        text: [
-          "Implement AuthGuard Component:",
-          "Create an AuthGuard.html file. This component will handle the authentication logic.",
-          "Inside the AuthGuard component, you're using useEffect hook to listen for changes in authentication state (onAuthStateChanged). When the authentication state changes, it updates the isLoggedIn state.",
-          "If the user is authenticated (user is not null), isLoggedIn is set to true. Otherwise, it's set to false, and the user is redirected to the login page using navigate(/login).",
-          "This component returns the children (components wrapped inside it) only if the user is authenticated. Otherwise, it returns null.",
-        ],
-        image: null,
-        isList: true,
-      },
-      {
-        text: [
-          "Import necessary modules from React",
-          "Import useNavigate hook from react-router-dom",
-          "Import the 'auth' object from './firebase' file",
-          "Define a functional component AuthGuard that takes 'children' as a prop",
-          "Initialize navigate function using the useNavigate hook from react-router-dom",
-          "Initialize 'isLoggedIn' state variable with false using useState hook",
-          "Implement useEffect hook",
-          "Call onAuthStateChanged method on 'auth' object to listen for authentication state changes",
-        ],
-        image: null,
-        isList: true,
-      },
-    ],
-  },
-  {
-    id: 2,
-    image: "googleAnalytics.webp",
-    paragraphs: [
-      {
-        text: "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
-        image: null,
-        isList: false,
-      },
-      {
-        text: [
-          "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
-          "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
-          "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
-          "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
-          "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
-        ],
-        image: null,
-        isList: true,
-      },
-      {
-        text: [
-          "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
-          "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
-          "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
-          "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
-        ],
-        image: null,
-        isList: true,
-      },
-    ],
-  },
-  {
-    id: 3,
-    image: ["Pagination.webp"],
-    paragraphs: [
-     
-      {
-        text: [
-          "Mastering JavaScript Pagination: Theory, Implementation, and Best Practices In the dynamic landscape of web development, efficient data management and presentation are paramount. One common challenge developers face is efficiently displaying large datasets while maintaining user experience. Enter JavaScript pagination—a technique that not only enhances performance but also improves usability by breaking down voluminous data into digestible chunks. In this comprehensive guide, we'll delve into the theory behind pagination, provide practical code examples, and explore its applications across various scenarios.",
-        ],
-        image: null,
-        isList: false,
-      },
-      {
-        text: [
-          "Pagination, in essence, involves dividing content into discrete pages, typically with a limited number of items per page. This approach offers several benefits:",
-          "Enhanced Performance: Loading a large dataset in a single go can strain server resources and lead to sluggish user experiences. Pagination mitigates this issue by distributing data across multiple pages, resulting in faster load times.",
-          "Improved User Experience: Navigating through pages is intuitive for users, allowing them to consume content at their own pace without feeling overwhelmed.",
-          "Optimized Bandwidth Usage: By fetching only the necessary data for each page, pagination reduces bandwidth consumption, making it ideal for users with limited internet connectivity.",
-        ],
-        image: null,
-        isList: true,
-      },
-      {
-        text: [
-          "Let's illustrate pagination implementation using HTML, CSS and JavaScript. Consider a scenario where we have an array of items and aim to display them in paginated form.",
-        ],
-        images: [
-          "https://previews.dropbox.com/p/thumb/ACTGcr5YpyNERnqPTDt-wQdJRh-2ps5WaDQriA9zofvCiIPCKBG6vSIkp8o1n5EESk9oT8ymkgqFyH6eM2wTz6Xt6gsgkkXeyW3zHrGNpN5KKX8iIOECBr7NztGDfhiVgCF8aR5wYCd5jPIR61ZUyRi9joO42gwAqMPUtKguuPLO7FmL0TAWxtjpPET9SV0kRTI3w8Y2SPV9S_Nn0KWlzrVjY4FW_MqxwJAPZWOFUhEKzDeuDhGr4HfnRbFeNu4DcBLkwM9wsefpLm4Qn17WoQR2lMcmAm2IN5VdwSiLS_I7OWmL0A7TZYwmpNOaMx7rkitriW_OU4Mh9e-T71QZbmEf/p.png",
-        ],
-        isList: false,
-      },
-      {
-        text: null,
-        images: [
-          "https://previews.dropbox.com/p/thumb/ACRhCnNrGLxYDzQfd54JCzF96cvc6UuqE6StiC9q2Xe4s4e6e2Eb5TIu1rMhNhla7BOAk-thOatjRVa5hhsLDVld7pb8imIuaI2bDbUXRwCP9J8trDULla5QaMI9lORUgDXqlEn3hofjW5NGdqCeS8upH8swYDJkdCI43CxFSLN01F4bFc-tvSAcylDflkTDykgFJUiZfpZfO5_vygp2pqLbHT0wW3ZGZBHElQipnGSofOubpwCwawUvBySylagR2rujLzMNFIn1U9Ga5WJhGT2Gh4jg1tqIXXA8pgI1R2GRVHnpIZgOHtOSZTVrXMIMSxJYbiB3Ru_RQ_PkYFWYYIDY/p.png",
-        ],
-        isList: false,
-      },
-      {
-        text: null,
-        images: [
-          "https://previews.dropbox.com/p/thumb/ACQbe5_oezyLk8dsOmkhZic3MTlwPC0luDRaKaSsGB8PTrV0X2jwmGm79xQwrgrZ_hWMkE47ibzALxH4Nyx5j7VLT7nGRdDLXhGTDo306VzPNHXTadrjZ3L166kveeZvBvAHyKzwbYsQ2hE2P42FJqAGTb8UUafOhHWJSznT4-zy7tfNvp1iyjoAZcIymu_PQigNPXJrhNVyLu1EY0DrLVNFdqRhY9kHZX-zedW8WBxtJFjqsuGKMQ8pbn_hXVh6A0HG8FX9r91NFE9U3qnJdCKqbWuGVXN3-CRVgK5IKMMnyiZ-bjwV1heDRefgaYtyhqtJyjZetdIEzGNmSqMaRIFL/p.png",
-        ],
-        isList: false,
-      },
-      {
-        text: null,
-        images: [
-          "https://previews.dropbox.com/p/thumb/ACTmpS5JUvtU-2zSzAKqEFtqD_vOCKTYVR_EJQeCnb3rAsO3I9dzAuWffrsPAzh8M_4Tv-VkkYMnYwOTcOrgFm52F546kztZnuFfooX_UvmWzpnm1BWWCu69BE3QD0qvO3-afwRtOkKoBtnov7RR_mV94hOo725vYPxNNaqQFNjZk1MUeVUkZu01Sj_yXy99tkHUSoS7vtP3mHSqEJd6XalPWgFDaTMJD5Dcvt2mbY9TolPib4jvsKFDWT7cHwYt6eMBu5R7kwN-hXpfe5VGzIGl3mKbDIaxqnaqvOKweymo5oY9jd9xnV-lKWvjWrFxzn8xhcvm8sf1WghsoYp1vKwz/p.png",
-        ],
-        isList: false,
-      },
-      {
-        text: [
-          "In this example, we start by defining an array of items. The displayItems function takes care of rendering items for the current page, while renderPaginationButtons generates pagination controls. Clicking on a pagination button triggers the display of corresponding items.",
-        ],
-       
-        isList: false,
-      },
-      {
-        text: [
-          "Where to Use Pagination:",
-          "Pagination finds applications across various domains, including:",
-          "E-commerce Websites: Displaying products in paginated grids allows users to navigate through extensive catalogs conveniently.",
-          "Blogs and Articles: Long-form content can be divided into pages, facilitating easier reading and navigation.",
-          "Data Tables: In applications dealing with tabular data, pagination enhances readability and performance by splitting data into manageable chunks.",
-          "Search Results: Search engines often paginate results to present them in a structured and navigable manner.",
-        ],
-
-        isList: true,
-      },
-      {
-        text: [
-          "In conclusion, JavaScript pagination is a versatile tool for managing and presenting data in web applications. By understanding its theory, implementing it effectively, and leveraging it across various contexts, developers can significantly enhance user experience and optimize performance.",
-        ],
-
-        isList: false,
-      },
-    ],
   },
 ];
 
@@ -1818,6 +1928,66 @@ React: [
         },
         {
           stepTitle: "Step 5: ",
+          titleDescription: "",
+          description: [
+            "",
+             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+          ],
+        },{
+          stepTitle: "Step 6: ",
+          titleDescription: "",
+          description: [
+            "",
+             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+          ],
+        },{
+          stepTitle: "Step 7: ",
+          titleDescription: "",
+          description: [
+            "",
+             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+          ],
+        },{
+          stepTitle: "Step 8: ",
+          titleDescription: "",
+          description: [
+            "",
+             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+          ],
+        },{
+          stepTitle: "Step 9: ",
+          titleDescription: "",
+          description: [
+            "",
+             "",
+            "",
+            "",
+            "",
+            "",
+            "",
+          ],
+        },{
+          stepTitle: "Step 10: ",
           titleDescription: "",
           description: [
             "",
