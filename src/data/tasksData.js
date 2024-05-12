@@ -2007,7 +2007,7 @@ const tasksData = {
           titleDescription: "Style the Components",
           description: [
             "Style the components according to your preferences. Aapply CSS styles directly within the *.css file or use any CSS-in-JS solution of your choice.",
-            "Optionally, you can download pre-made CSS stylesheets for the table components. Additionally, you can download the JSON/data file containing mock data from the provided links below",
+            "Optionally, you can download pre-made CSS stylesheets for the table components. Additionally, you can download the JSON/data file containing mock data from the provided links below.",
           ],
         },
       ],

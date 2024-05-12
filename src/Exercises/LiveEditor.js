@@ -188,11 +188,12 @@ const LiveEditor = () => {
           )}
         </div>
         <iframe
-          src={`https://codesandbox.io/embed/ppwh78?view=Editor+%2B+Preview&module=%2Fsrc%2Fapp.tsx&hidenavigation=1&task=${taskId}`}
+          src={`https://codesandbox.io/embed/rssh4g?view=editor+%2B+preview&module=%2Fsrc%2FMain.js&hidenavigation=1&task=${taskId}`}
           title='React'
           allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
           sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
         ></iframe>
+       
       </div>
       <ToastContainer />
     </div>
