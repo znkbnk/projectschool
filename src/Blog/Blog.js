@@ -19,22 +19,23 @@ function Blog() {
 
       <div className='blog-cards'>
         <BlogTitle />
-
-        {blogCards.map((item, index) => (
-          <Link key={index} to={`/blog/${item.id}`}>
-            <div className={`card-container ${item.category}`}>
-              <div className='card-category'>{item.category}</div>
-              <div className='card-body'>
-                <div className='card-content'>
-                  <div className='card-title'>{item.title}</div>
-                  <div className='card-extract'>{item.extract}</div>
-                  <div className='card-date'>{item.date}</div>
+        <div className="cards-flex"> 
+          {blogCards.map((item, index) => (
+            <Link key={index} to={`/blog/${item.id}`}>
+              <div className={`card-container ${item.category}`}>
+                <div className='card-category'>{item.category}</div>
+                <div className='card-body'>
+                  <div className='card-content'>
+                    <div className='card-title'>{item.title}</div>
+                    <div className='card-extract'>{item.extract}</div>
+                    <div className='card-date'>{item.date}</div>
+                  </div>
+                  <img src={item.image} alt='' className='card-thumb' />
                 </div>
-                <img src={item.image} alt='' className='card-thumb' />
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>

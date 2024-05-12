@@ -14,6 +14,11 @@
   flex-direction: column;
 }
 
+.cards-flex {
+display: flex;
+flex-wrap: wrap;
+}
+
 .card-container.React {
   border-left: 8px solid #4ec9d4;
 }

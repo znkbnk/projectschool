@@ -152,6 +152,7 @@ const blogCards = [
     image:
       "https://previews.dropbox.com/p/thumb/ACR5ZavloDgY7Puh3xjuBAAgD4ogUz50R5SAIEdIweVFothY40CcTX8InXrRDAzIehspQ2h2HamapyRGP3BYMHq0ri3Xuk43iT0VBKWvixIgFcNR-sgcRxtnRWxgp9hgydUWlmA7RXFZPUkZOj-RZThyXD2ds69yNm04ZPK4M736XL3ayT2brEFMEw6oULk89VWEJFseDBsxcYRpFCIA6WKfSWFvmDeDa5gsEJ4g2q4jDm0eabiY9FowsnJVplEPFlaC15OyWs41OOVdxDM9VPPcWE1wrpTmBdihoK0Aa45Q9FDLtAuu0cr6YSwTlcvCSHRQ863sh6MvBVBPaSD4jCug/p.png",
   },
+  
 ];
 const blogTopic = [
   {
