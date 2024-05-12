@@ -156,10 +156,10 @@ const blogCards = [
 const blogTopic = [
   {
     id: 1,
-    image: "AuthGuard (1).webp",
+    image: ["AuthGuard (1).webp"],
     paragraphs: [
       {
-        text: "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration.",
+        text: ["Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration."],
         image: null,
         isList: false,
       },
@@ -192,10 +192,10 @@ const blogTopic = [
   },
   {
     id: 2,
-    image: "googleAnalytics.webp",
+    image: ["googleAnalytics.webp"],
     paragraphs: [
       {
-        text: "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
+        text: ["Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals."],
         image: null,
         isList: false,
       },
