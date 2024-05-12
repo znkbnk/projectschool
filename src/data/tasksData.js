@@ -1824,7 +1824,6 @@ const tasksData = {
           description: [
             "Apply conditional classes to the icon and options container based on the state of 'isOpenSelect'.",
             "If 'isOpenSelect' is 'true', add the class 'active' to the icon and options container to make them visible; otherwise, remove the class to hide them.",
-           
           ],
         },
       ],
@@ -1921,6 +1920,106 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/gkczh6ps4swxpr1cebv3m/sidebarStyles.css?rlkey=1gn09lghyev6h92r4vzm143ny&st=sjjt66f6&dl=0",
       link3:
         "https://www.dropbox.com/scl/fi/cbzzf2hzzi7bpzfzm5496/sidebar.json?rlkey=3wufj9ijefhd9zdl3lucq6jn0&st=muc48ibt&dl=0",
+    },
+    {
+      taskId: "reacttask20",
+      taskTitle: "Dynamic Table with Sorting and Copy Functionality",
+      introduction:
+        "This project is a React application that demonstrates the implementation of a dynamic table using the react-table library. The table is populated with mock data imported from a JSON file. Each row in the table represents an object from the mock data, with columns corresponding to the object properties. The table provides sorting functionality for each column and allows users to copy row data to the clipboard. Overall, this project serves as a practical example of creating interactive tables in React applications with sorting and copy functionality.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Import Required Dependencies",
+          titleDescription: "",
+          description: [
+            "Begin by importing the necessary modules and dependencies for your React application. In your case, you're using React, react-table ( useTable, useSortBy ), fakeData ( from JSON/data file ) and react-toastify. Make sure to import any required stylesheets as well.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Define Component Function",
+          titleDescription: "App.js",
+          description: [
+            "Create a functional component named App. This is where you'll define the structure and behavior of your application.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Prepare Mock Data",
+          titleDescription: "",
+          description: [
+            "Use 'React.useMemo' inside your component, use the 'React.useMemo' hook to store your mock data. This hook ensures that the data is memoized and recalculated only when necessary, which can improve performance.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Define Columns Configuration",
+          titleDescription: "",
+          description: [
+            "Create a configuration object for your table columns using the 'React.useMemo' hook. Each column should have a 'Header' property, specifying the column header text, and an 'accessor' property, specifying the data key to be accessed from each row. Optionally, you can specify a 'sortType' for sorting and define a custom 'Cell' for rendering.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Define Table Hooks",
+          titleDescription: "",
+          description: [
+            "Utilize the 'useTable' hook provided by 'react-table' to initialize the table functionality. Pass in the columns and data as arguments. Additionally, include the 'useSortBy' hook to enable sorting functionality.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Define Copy Function",
+          titleDescription: "",
+          description: [
+            "Create a function named 'handleCopy' that takes 'rowData' as an argument. This function will convert the row data into a string format and copy it to the clipboard using the 'navigator.clipboard.writeText()' method. Additionally, display a success toast using 'react-toastify' to notify the user that the data has been copied.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Render Table Structure",
+          titleDescription: "",
+          description: [
+            "Use the getTableProps() function provided by the 'useTable' hook to retrieve the necessary props for the <table> element.",
+            "Create a <thead> element to contain the table headers.",
+            "Map over the 'headerGroups' array, which contains groups of headers. For each 'headerGroup': Create a <tr> element to represent a row of headers. Within the header row, map over the 'headers' array of the 'headerGroup'. For each 'column': Create a <th> element to represent a header cell. Use 'column.getHeaderProps(column.getSortByToggleProps())' to apply sorting functionality to the header cell.",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Render Table Headers",
+          titleDescription: "",
+          description: [
+            "Inside each <th> element, render the header text using 'column.render('Header')'.",
+            "Include sorting icons based on the 'isSorted' and 'isSortedDesc' properties of the column. If 'isSorted' is true, display a descending or ascending arrow based on 'isSortedDesc'.",
+          ],
+        },
+        {
+          stepTitle: "Step 9: Render Table Body",
+          titleDescription: "",
+          description: [
+            "Use the getTableBodyProps() function provided by the 'useTable' hook to retrieve the necessary props for the <tbody> element.",
+            "Map over the 'rows' array, which contains the data rows. For each 'row': Use the 'prepareRow' function provided by 'react-table' to prepare the row for rendering.",
+          ],
+        },
+        {
+          stepTitle: "Step 10: Render Table Cells",
+          titleDescription: "",
+          description: [
+            "Inside each <tr> element representing a row, map over the 'row.cells' array. For each 'cell': Create a <td> element to represent a cell. Use 'cell.render('Cell')' to render the content of the cell. This will render the custom cell component if defined or the default cell content otherwise.",
+          ],
+        },
+        {
+          stepTitle: "Step 11: Styles and Data",
+          titleDescription: "Style the Components",
+          description: [
+            "Style the components according to your preferences. Aapply CSS styles directly within the *.css file or use any CSS-in-JS solution of your choice.",
+            "Optionally, you can download pre-made CSS stylesheets for the table components. Additionally, you can download the JSON/data file containing mock data from the provided links below",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Hard",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson20.webp"),
+      link: "https://www.dropbox.com/scl/fi/d0q4mnod8ujtuzdm26702/tableStyles.css?rlkey=iv41red29y6ghfr179l7q55we&st=4657uhv6&dl=0",
+      link3:
+        "https://www.dropbox.com/scl/fi/7f1x9hdogipicqprg0b1m/MOCK_DATA.json?rlkey=560qnx7xci00p2107gl1mbo23&st=6hzqv971&dl=0",
     },
   ],
 };
