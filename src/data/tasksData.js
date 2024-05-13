@@ -3,7 +3,7 @@ const authorsData = [
     name: { first: "Jevin", last: "B" },
     position: "React",
     description: "I will update this soon....",
-    picture: { medium: require("../images/me.webp") }, 
+    picture: { medium: require("../images/me.webp") },
   },
 ];
 
@@ -152,7 +152,6 @@ const blogCards = [
     image:
       "https://previews.dropbox.com/p/thumb/ACR5ZavloDgY7Puh3xjuBAAgD4ogUz50R5SAIEdIweVFothY40CcTX8InXrRDAzIehspQ2h2HamapyRGP3BYMHq0ri3Xuk43iT0VBKWvixIgFcNR-sgcRxtnRWxgp9hgydUWlmA7RXFZPUkZOj-RZThyXD2ds69yNm04ZPK4M736XL3ayT2brEFMEw6oULk89VWEJFseDBsxcYRpFCIA6WKfSWFvmDeDa5gsEJ4g2q4jDm0eabiY9FowsnJVplEPFlaC15OyWs41OOVdxDM9VPPcWE1wrpTmBdihoK0Aa45Q9FDLtAuu0cr6YSwTlcvCSHRQ863sh6MvBVBPaSD4jCug/p.png",
   },
-  
 ];
 const blogTopic = [
   {
@@ -160,7 +159,9 @@ const blogTopic = [
     image: ["AuthGuard (1).webp"],
     paragraphs: [
       {
-        text: ["Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration."],
+        text: [
+          "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration.",
+        ],
         image: null,
         isList: false,
       },
@@ -196,7 +197,9 @@ const blogTopic = [
     image: ["googleAnalytics.webp"],
     paragraphs: [
       {
-        text: ["Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals."],
+        text: [
+          "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
+        ],
         image: null,
         isList: false,
       },
@@ -2021,6 +2024,138 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/d0q4mnod8ujtuzdm26702/tableStyles.css?rlkey=iv41red29y6ghfr179l7q55we&st=4657uhv6&dl=0",
       link3:
         "https://www.dropbox.com/scl/fi/7f1x9hdogipicqprg0b1m/MOCK_DATA.json?rlkey=560qnx7xci00p2107gl1mbo23&st=6hzqv971&dl=0",
+    },
+    {
+      taskId: "reacttask21",
+      taskTitle: "To-Do App",
+      introduction:
+        "The To-Do application is a simple task management tool built using React. It allows users to add, delete, edit, and mark tasks as complete. The application provides a clean and intuitive user interface, with separate components for adding new tasks, displaying existing tasks, and editing tasks. Users can interact with each task individually, marking them as completed or editing their details as needed. The application also features toast notifications to provide real-time feedback to users when tasks are completed or edited.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up React Project",
+          titleDescription: "",
+          description: [
+            "Ensure you have Node.js and npm installed.",
+            "Create a new React project using npx create-react-app todo-app.",
+            "Navigate into the project directory with cd todo-app.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Components Directory",
+          titleDescription: "",
+          description: [
+            "Inside the src directory, create a new directory named Components.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create Todo Component",
+          titleDescription: "Todo.js",
+          description: [
+            "Inside the Components directory, create a new file named Todo.js.",
+            "This file will contain the component responsible for rendering a single todo item.",
+            "Start by importing React at the top of the file.",
+            "Define a functional component named Todo that takes props such as task, deleteTodo, editTodo, and toggleComplete.",
+            "This component will render the task text along with icons for editing and deleting the todo.",
+            "Inside the Todo component, write JSX to display the task text wrapped in a <p> tag.",
+            "Add icons for editing and deleting using Font Awesome icons.",
+            "Implement onClick handlers for the icons to trigger the respective functions passed as props (editTodo and deleteTodo).",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create TodoForm Component",
+          titleDescription: "TodoForm.js",
+          description: [
+            "Inside the Components directory, create a new file named TodoForm.js.",
+            "This file will contain the component responsible for rendering the form to add new todos.",
+            "Start by importing React at the top of the file.",
+            "Define a functional component named TodoForm that takes props such as addTodo.",
+            "This component will render a form with an input field and a button for adding new todos.",
+            "Inside the TodoForm component, write JSX for a <form> element.",
+            "Add an <input> field for users to type the task text.",
+            "Implement an onChange handler for the input field to update the component state with the entered value.",
+            "Implement an onSubmit handler for the form to call the addTodo function passed as a prop with the current value of the input field.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create EditTodoForm Component",
+          titleDescription: "EditTodoForm.js",
+          description: [
+            "Inside the Components directory, create a new file named EditTodoForm.js.",
+            "This file will contain the component responsible for rendering the form to edit existing todos.",
+            "Start by importing React at the top of the file.",
+            "Define a functional component named EditTodoForm that takes props such as editTodo and task.",
+            "This component will render a form with an input field pre-filled with the task text for editing.",
+            "Inside the EditTodoForm component, write JSX for a <form> element.",
+            "Add an <input> field for users to edit the task text, and set its initial value to the current task text passed as a prop.",
+            "Implement an onChange handler for the input field to update the component state with the edited value.",
+            "Implement an onSubmit handler for the form to call the editTodo function passed as a prop with the updated task text and the todo ID.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Create TodoWrapper Component",
+          titleDescription: "TodoWrapper.js",
+          description: [
+            "Inside the Components directory, create a new file named TodoWrapper.js.",
+            "This file will contain the main component responsible for managing todos.",
+            "Start by importing React, useState, useEffect, useRef, and other necessary dependencies.",
+            "Define a functional component named TodoWrapper.",
+            "Inside TodoWrapper, initialize state using the useState hook to manage todos.",
+            "Create a useRef to store the previous state of todos for comparison in useEffect.",
+            "Implement functions like addTodo, deleteTodo, toggleComplete, editTodo, and editTask to manage todo operations using setTodos.",
+            "Inside TodoWrapper, use the useEffect hook to display toast notifications when todos are completed or edited.",
+            "Compare the current state of todos with the previous state stored in the ref to determine if a todo was completed or edited.",
+            "Display toast notifications using toast.success and toast.info based on the comparison results.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Implement Icons and Styling",
+          titleDescription: "",
+          description: [
+            "Install Font Awesome for icons using npm install @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons.",
+            "Import required icons in Todo.js.",
+            "Implement CSS styles for the Todo application. You can either create a new CSS file or use inline styles within each component.",
+            "Or download styles from link provided below.",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Integrate Toast Notifications",
+          titleDescription: "",
+          description: [
+            "Run npm install react-toastify to install the React Toastify library for displaying toast notifications.",
+            "Import ToastContainer from react-toastify in the TodoWrapper component.",
+            "Place the <ToastContainer /> component inside the TodoWrapper component to enable toast notifications.",
+            "Inside the useEffect hook of TodoWrapper, use toast.success and toast.info to display toast notifications when todos are completed or edited.",
+            "Customize the toast messages based on the specific todo operation (completion or editing).",
+          ],
+        },
+        {
+          stepTitle: "Step 9: Update App Component",
+          titleDescription: "App.js",
+          description: [
+            "In src directory, open App.js.",
+            "Import TodoWrapper component.",
+            "Render TodoWrapper inside the App component.",
+          ],
+        },
+        {
+          stepTitle: "Step 10: Test the Application",
+          titleDescription: "",
+          description: [
+            "Start the development server by running npm start.",
+            "Open your web browser and navigate to http://localhost:3000 to see the To-Do application.",
+            "Test adding, deleting, completing, and editing todos to ensure everything works as expected.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson21.webp"),
+      link: "https://www.dropbox.com/scl/fi/jbdlfwibc4fi9jnesjevt/todoStyles.css?rlkey=8khn7jf4fbes6dl82vhw9g7cq&st=hu1wmyz0&dl=0",
     },
   ],
 };
