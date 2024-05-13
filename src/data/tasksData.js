@@ -2098,7 +2098,8 @@ const tasksData = {
           description: [
             "Inside the Components directory, create a new file named TodoWrapper.js.",
             "This file will contain the main component responsible for managing todos.",
-            "Start by importing React, useState, useEffect, useRef, and other necessary dependencies.",
+            "Start by importing React, useState, useEffect, useRef, v4 as uuidv4 and other necessary dependencies.",
+            
             "Define a functional component named TodoWrapper.",
             "Inside TodoWrapper, initialize state using the useState hook to manage todos.",
             "Create a useRef to store the previous state of todos for comparison in useEffect.",
@@ -2137,9 +2138,19 @@ const tasksData = {
             "Import TodoWrapper component.",
             "Render TodoWrapper inside the App component.",
           ],
+        }, {
+          stepTitle: "Step 10: Integrate UUID Library",
+          titleDescription: "",
+          description: [
+            "Run npm install uuid to install the UUID library for generating unique identifiers.",
+            "Open the file containing your TodoApp component ( TodoWrapper.js ).",
+            "Import the v4 function from the UUID library at the top of the file.",
+             "Replace the logic for generating todo IDs with uuidv4(). ( In 'addTodo' function).",
+            
+          ],
         },
         {
-          stepTitle: "Step 10: Test the Application",
+          stepTitle: "Step 11: Test the Application",
           titleDescription: "",
           description: [
             "Start the development server by running npm start.",
