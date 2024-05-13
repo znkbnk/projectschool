@@ -3,7 +3,7 @@ const authorsData = [
     name: { first: "Jevin", last: "B" },
     position: "React",
     description: "I will update this soon....",
-    picture: { medium: require("../images/me.webp") }, // Use require to import images
+    picture: { medium: require("../images/me.webp") }, 
   },
 ];
 

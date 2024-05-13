@@ -119,7 +119,7 @@ flex-wrap: wrap;
   margin: 20px;
   display: flex;
   justify-content: center;
-  align-items: stretch; /* Stretch items vertically */
+  align-items: stretch; 
 }
 
 .card-content {

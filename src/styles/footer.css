@@ -88,7 +88,7 @@ footer a {
   text-decoration: none;
   color: #ffffffcc;
   position: relative;
-  transition: color 0.3s; /* Add transition for smooth color change */
+  transition: color 0.3s;
 }
 
 .com ul li a::after {
@@ -98,13 +98,13 @@ footer a {
   bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: transparent; /* Set transparent initially */
-  transition: width 0.3s ease, background-color 0.3s; /* Add transitions */
+  background-color: transparent; 
+  transition: width 0.3s ease, background-color 0.3s; 
 }
 
 .com ul li a:hover::after {
   width: 100%;
-  background-color: #ffffff; /* Change background color on hover */
+  background-color: #ffffff; 
 }
 
 @media only screen and (max-width: 749px) {

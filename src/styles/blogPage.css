@@ -27,21 +27,21 @@ body {
 }
 
 .page-section img {
-  min-height: 400px; /* Adjust as needed */
+  min-height: 400px;
 }
 
 .blogPage p {
   line-height: 1.7em;
-  max-width: 600px; /* Set the width of paragraphs */
-  margin: 0 auto; /* Center paragraphs horizontally */
-  text-align: center; /* Justify text */
+  max-width: 600px; 
+  margin: 0 auto; 
+  text-align: center; 
   word-wrap: break-word;
 }
 .blogPage ul {
   line-height: 1.7em;
-  max-width: 600px; /* Set the width of paragraphs */
-  margin: 0 auto; /* Center paragraphs horizontally */
-  text-align: justify; /* Justify text */
+  max-width: 600px;
+  margin: 0 auto; 
+  text-align: justify;
   word-wrap: break-word;
 }
 
