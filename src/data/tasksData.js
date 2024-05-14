@@ -2098,8 +2098,7 @@ const tasksData = {
           description: [
             "Inside the Components directory, create a new file named TodoWrapper.js.",
             "This file will contain the main component responsible for managing todos.",
-            "Start by importing React, useState, useEffect, useRef, v4 as uuidv4 and other necessary dependencies.",
-            
+            "Start by importing React, useState, useEffect, useRef, v4 as uuidv4 and other necessary dependencies.",            
             "Define a functional component named TodoWrapper.",
             "Inside TodoWrapper, initialize state using the useState hook to manage todos.",
             "Create a useRef to store the previous state of todos for comparison in useEffect.",
@@ -2140,7 +2139,7 @@ const tasksData = {
           ],
         }, {
           stepTitle: "Step 10: Integrate UUID Library",
-          titleDescription: "",
+          titleDescription: "(Optional)",
           description: [
             "Run npm install uuid to install the UUID library for generating unique identifiers.",
             "Open the file containing your TodoApp component ( TodoWrapper.js ).",
@@ -2167,6 +2166,93 @@ const tasksData = {
       completed: false,
       img: require("../images/ReactLesson21.webp"),
       link: "https://www.dropbox.com/scl/fi/jbdlfwibc4fi9jnesjevt/todoStyles.css?rlkey=8khn7jf4fbes6dl82vhw9g7cq&st=hu1wmyz0&dl=0",
+    },
+    {
+      taskId: "reacttask22",
+      taskTitle: "Testimonials",
+      introduction: " This React project called 'Testimonials' designed to showcase customer feedback. It includes a dynamic testimonial display with navigation buttons for users to cycle through testimonials, enhanced with animated background color for added visual appeal.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Import React and Required Dependencies",
+          titleDescription: "",
+          description: [
+            "Import React and other necessary dependencies such as useState, useEffect from 'react', and gsap from 'gsap'.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Functional Component",
+          titleDescription: "",
+          description: [
+             "Define a functional component named Testimonials.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 3: Initialize State",
+          titleDescription: "",
+          description: [
+            "Use the useState hook to create a state variable named currentIndex initialized to 0. This variable will keep track of the index of the currently displayed testimonial.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 4: Define Testimonials Data",
+          titleDescription: "",
+          description: [
+            "Define an array named testimonials containing objects. Each object should have two properties: quote for the testimonial text and author for the author's name.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 5: Use useEffect for Animation",
+          titleDescription: "",
+          description: [
+            "Utilize the useEffect hook to apply animations using gsap library. Inside the effect, target the .testimonials class and animate its background color with a duration of 4 seconds. Set backgroundColor to #87CEEB. Add the options repeat: -1 to repeat indefinitely, yoyo: true for back and forth animation, and ease: 'power1.inOut' for smooth animation.",
+          
+          ],
+        },{
+          stepTitle: "Step 6: Create Event Handlers",
+          titleDescription: "",
+          description: [
+            "Define two event handler functions: handlePrevClick and handleNextClick.",
+             "'handlePrevClick' should decrement the currentIndex by 1 (with wrap-around logic to ensure it doesn't go below 0).",
+            "'handleNextClick' should increment the currentIndex by 1 (with wrap-around logic to ensure it loops back to 0 when reaching the end of the testimonials array).",
+           
+          ],
+        },{
+          stepTitle: "Step 7: Render Testimonial Content",
+          titleDescription: "",
+          description: [
+            "Within the return statement, render the testimonial content.",
+             "Display the current testimonial's quote and author.",
+            "Include navigation buttons (Prev and Next) to cycle through testimonials.",
+           
+          ],
+        },{
+          stepTitle: "Step 8: Implement Navigation",
+          titleDescription: "",
+          description: [
+            "Bind the onClick event of the Prev button to the handlePrevClick function and the Next button to the handleNextClick function.",
+          
+          ],
+        },{
+          stepTitle: "Step 9: Export Component",
+          titleDescription: "",
+          description: [
+            "Export the Testimonials component as the default export.",
+          
+          ],
+        }
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson22.webp"),
+      link: "https://www.dropbox.com/scl/fi/y1yc1mh9isqrbktm5adfh/testimonialsStyles.css?rlkey=85uofxm5xfuv4a4iu5mvzqgi3&st=pmq8ylyh&dl=0",
     },
   ],
 };
