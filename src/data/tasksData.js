@@ -2254,6 +2254,181 @@ const tasksData = {
       img: require("../images/ReactLesson22.webp"),
       link: "https://www.dropbox.com/scl/fi/y1yc1mh9isqrbktm5adfh/testimonialsStyles.css?rlkey=85uofxm5xfuv4a4iu5mvzqgi3&st=pmq8ylyh&dl=0",
     },
+    {
+      taskId: "reacttask",
+      taskTitle: "Voice to Text",
+      introduction: "This React application utilizes speech recognition to convert spoken words into text in real-time, enabling users to interact with the interface through voice commands. Additionally, users can conveniently copy the recognized text to their clipboard with the click of a button.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setup React App",
+          titleDescription: "",
+          description: [
+            "Start by setting up a new React application using Create React App or any other method you prefer.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 2: Install Dependencies",
+          titleDescription: "",
+          description: [
+             "Install the necessary dependencies for your project. You'll need 'react-speech-recognition', 'react-use-clipboard', and 'react'.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 3: Import CSS",
+          titleDescription: "",
+          description: [
+            "Import the CSS file (App.css in this case) where you define your styles for the application.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 4: Functional Component",
+          titleDescription: "",
+          description: [
+            "Create a functional component named 'App' to hold your application logic.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 5: State Management",
+          titleDescription: "",
+          description: [
+            "Utilize the 'useState' hook from React to manage state within your component. You'll need state variables for the text to copy and for tracking whether the text has been copied successfully.",
+           
+          ],
+        },{
+          stepTitle: "Step 6: Clipboard Functionality",
+          titleDescription: "",
+          description: [
+            "Implement clipboard functionality using the useClipboard hook from react-use-clipboard. This hook provides functionality to copy text to the clipboard.",
+         
+          ],
+        },{
+          stepTitle: "Step 7: Speech Recognition Hook",
+          titleDescription: "",
+          description: [
+            "Utilize the 'useSpeechRecognition' hook from the 'react-speech-recognition' library to enable speech recognition functionality within your React component. This hook provides access to various properties and methods, including 'transcript', which holds the recognized speech in real-time. By accessing this 'transcript' property, you can update your UI dynamically as speech is recognized by the browser. Additionally, the 'browserSupportsSpeechRecognition' property allows you to check whether the user's browser supports speech recognition, ensuring a seamless experience for all users.",
+           
+          ],
+        },{
+          stepTitle: "Step 8: Conditional Rendering",
+          titleDescription: "",
+          description: [
+            "Check if the browser supports speech recognition using the 'browserSupportsSpeechRecognition' property provided by the 'useSpeechRecognition' hook. If not supported, return 'null' from the component.",
+           
+          ],
+        },{
+          stepTitle: "Step 9: Rendering UI",
+          titleDescription: "",
+          description: [
+            "Render the user interface within the 'App' component. Include elements such as a header, description, a container to display the transcript, and buttons for copying text to clipboard and controlling speech recognition.",
+           
+          ],
+        },{
+          stepTitle: "Step 10: Event Handlers",
+          titleDescription: "",
+          description: [
+            "Implement event handlers for interacting with the application. These include functions to start and stop listening for speech, and to copy the transcript text to the clipboard.",
+            
+          ],
+        },{
+          stepTitle: "Step 11: Button Actions",
+          titleDescription: "",
+          description: [
+            "Attach the event handlers to the respective buttons for starting and stopping speech recognition, as well as copying text to clipboard.",
+           
+          ],
+        },{
+          stepTitle: "Step 12: Styling",
+          titleDescription: "",
+          description: [
+            "Apply styles to your components as desired. You can define styles in the imported CSS file (App.css) to achieve the desired layout and appearance.",
+             "Also you can download complete styles from the link provided below.",
+            
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson23.webp"),
+      link: "https://www.dropbox.com/scl/fi/axg1uy5ds3m3fnzf6u8fe/voiceToTextStyles.css?rlkey=95c02402dkkcl12qj75qf82it&st=mhgahg76&dl=0",
+    },
+    {
+      taskId: "reacttask24",
+      taskTitle: "",
+      introduction: "Introducing TextToSpeechApp, a React application that enables users to convert typed text into speech effortlessly. Using the browser's built-in SpeechSynthesis API, users can input text, click a button, and hear their words spoken aloud in real-time, offering a seamless and interactive text-to-speech experience.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setup React App",
+          titleDescription: "",
+          description: [
+            "Start by setting up a new React application using Create React App or any other preferred method.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 2: Functional Component",
+          titleDescription: "",
+          description: [
+             "Create a functional component named 'TextToSpeechApp' to hold your application logic.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 3: State Management",
+          titleDescription: "",
+          description: [
+            "Utilize the 'useState' hook from React to manage the text inputted by the user.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 4: Text-to-Speech Functionality",
+          titleDescription: "",
+          description: [
+            "Implement text-to-speech functionality using the browser's built-in SpeechSynthesis API. This API provides the 'speechSynthesis' object, which you can use to create and control speech synthesis utterances.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 5: Event Handlers",
+          titleDescription: "",
+          description: [
+            "Implement event handlers to handle changes in the text input and to trigger the text-to-speech conversion.",
+           
+          ],
+        },{
+          stepTitle: "Step 6: Rendering UI",
+          titleDescription: "",
+          description: [
+            "Render the user interface within the TextToSpeechApp component. Include an input field where users can type the text they want to be converted to speech, and a button to trigger the text-to-speech conversion.",
+            
+          ],
+        },{
+          stepTitle: "Step 7: Styling",
+          titleDescription: "",
+          description: [
+            "Apply styles to your components as desired. You can define styles inline or in a separate CSS file to achieve the desired layout and appearance.",
+             "Also, the pre-ready styles available in the link below.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson24.webp"),
+      link: "https://www.dropbox.com/scl/fi/tarvsoi5fgx8c4kar8gs7/textToVoiceStyles.css?rlkey=87sk3e7qtill3m205gfjhr6cv&st=5jhx5kjf&dl=0",
+    },
   ],
 };
 
