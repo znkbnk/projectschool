@@ -2361,7 +2361,7 @@ const tasksData = {
     },
     {
       taskId: "reacttask24",
-      taskTitle: "",
+      taskTitle: "Text to Voice",
       introduction: "Introducing TextToSpeechApp, a React application that enables users to convert typed text into speech effortlessly. Using the browser's built-in SpeechSynthesis API, users can input text, click a button, and hear their words spoken aloud in real-time, offering a seamless and interactive text-to-speech experience.",
 
       steps: [
