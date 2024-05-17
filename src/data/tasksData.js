@@ -2429,6 +2429,186 @@ const tasksData = {
       img: require("../images/ReactLesson24.webp"),
       link: "https://www.dropbox.com/scl/fi/tarvsoi5fgx8c4kar8gs7/textToVoiceStyles.css?rlkey=87sk3e7qtill3m205gfjhr6cv&st=5jhx5kjf&dl=0",
     },
+    {
+      taskId: "reacttask25",
+      taskTitle: "CourseFinder",
+      introduction: "CourseFinder is an intuitive web application designed to simplify the process of discovering and selecting online courses. With powerful filtering options based on category, price range, and search queries, CourseFinder helps users navigate through a diverse range of educational offerings, empowering them to find the perfect learning experience tailored to their interests and needs.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up React App",
+          titleDescription: "",
+          description: [
+            "Begin by setting up a new React application using create-react-app or any other method you prefer.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Component Structure",
+          titleDescription: "",
+          description: [
+             "Visualize the structure of your application. You will have 10 components and 1 data file: Button, Card, Input, Nav, Products, Recommended, Category, Price, Sidebar, and App.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create Component Files",
+          titleDescription: "",
+          description: [
+            "For each component, create a separate file in your project directory.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 4: Implement Button Component",
+          titleDescription: "Button.js",
+          description: [
+            "Create a new file named Button.js in your components directory.",
+            "Define a functional component named 'Button'.",
+            "Inside the component, accept props like 'onClickHandler', 'value', and 'title'.",
+            "Use JSX to return a button element with the class name 'button'.",
+            "Add an onClick event handler to the button that calls the 'onClickHandler' function with the 'value' prop as its argument.",
+            "Export the 'Button' component as the default export.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 5: Implement Card Component",
+          titleDescription: "Card.js",
+          description: [
+            "Create a new file named Card.js in your components directory.",
+             "Define a functional component named 'Card'.",
+            "Accept props like 'img', 'title', 'star', 'reviews', 'prevPrice', and 'newPrice'.",
+            "Use JSX to structure the card layout. Include elements like 'img', 'h3', 'span', de'l, etc., to display the product information.",
+            "Apply appropriate class names for styling.",
+            "Export the 'Card' component as the default export.",
+          ],
+        },{
+          stepTitle: "Step 6: Implement Input Component",
+          titleDescription: "Input.js",
+          description: [
+            "Create a new file named Input.js in your components directory.",
+             "Define a functional component named 'Input'.",
+            "Accept props like 'handleChange', 'value', 'title' and 'name'.",
+            "Use JSX to return a label containing an input (radio) element and a span element for custom styling.",
+            "Apply appropriate event handlers to the input element.",
+            "Export the 'Input' component as the default export.",
+          ],
+        },{
+          stepTitle: "Step 7: Implement Nav Component ",
+          titleDescription: "Nav.js",
+          description: [
+            "Create a new file named Nav.js in your components directory.",
+             "Define a functional component named 'Nav'.",
+            "Accept props like 'handleInputChange' and 'query'.",
+            "Use JSX to structure the navigation bar, including an input field for search and icons for actions like adding to cart or user profile.",
+            "Apply appropriate event handlers to the input field.",
+            "Export the 'Nav' component as the default export.",
+          ],
+        },{
+          stepTitle: "Step 8: Implement Products Component",
+          titleDescription: "Products.js",
+          description: [
+            "Create a new file named Products.js in your components directory.",
+             "Define a functional component named 'Products'.",
+            "Accept props like 'result', which is an array of product cards to be displayed.",
+            "Use JSX to map over the 'result' array and render each product card.",
+            "Export the 'Products' component as the default export.",
+           
+          ],
+        },{
+          stepTitle: "Step 9: Implement Recommended Component",
+          titleDescription: "Recommended.js",
+          description: [
+            "Create a new file named Recommended.js in your components directory.",
+             "Define a functional component named 'Recommended'.",
+            "Accept props like 'handleClick'.",
+            "Use JSX to display a list of recommended categories as buttons.",
+            "Apply appropriate event handlers to the buttons to trigger the 'handleClick' function with the selected category as an argument.",
+            "Export the 'Recommended' component as the default export.",
+          ],
+        },{
+          stepTitle: "Step 10: Implement Category Component",
+          titleDescription: "Category.js",
+          description: [
+            "Create a new file named Category.js in your components directory.",
+             "Define a functional component named 'Category'.",
+            "Accept props like 'handleChange'.",
+            "Use JSX to display a list of category options as radio buttons.",
+            "Apply appropriate event handlers to the radio buttons to trigger the 'handleChange' function with the selected category as an argument.",
+            "Export the 'Category' component as the default export.",
+          ],
+        },{
+          stepTitle: "Step 11: Implement Price Component",
+          titleDescription: "Price.js",
+          description: [
+            "Create a new file named Price.js in your components directory.",
+             "Define a functional component named 'Price'.",
+            "Accept props like 'handleChange'.",
+            "Use JSX to display a list of price range options as radio buttons.",
+            "Apply appropriate event handlers to the radio buttons to trigger the 'handleChange' function with the selected price range as an argument.",
+            "Export the 'Price' component as the default export.",
+            "",
+          ],
+        },{
+          stepTitle: "Step 12: Implement Sidebar Component ",
+          titleDescription: "Sidebar.js",
+          description: [
+            "Create a new file named Sidebar.js in your components directory.",
+             "Define a functional component named 'Sidebar'.",
+            "Accept props like 'handleChange' and 'handlePriceChange'.",
+            "Use JSX to structure the sidebar, including the 'Category' and 'Price' components.",
+            "Pass down event handlers to the 'Category' and 'Price' components as props.",
+            "Export the 'Sidebar' component as the default export.",
+          ],
+        },{
+          stepTitle: "Step 13: Implement App Component",
+          titleDescription: "App.js",
+          description: [
+            "Initialize state variables using the 'useState' hook for 'selectedCategory', 'query', and 'selectedPriceRange' ( These states will manage the selected category, search query, and selected price range, respectively. ).",
+            "Implement event handlers: 'handleInputChange': Updates the 'query' state based on user input in the search bar. 'handleChange': Updates the 'selectedCategory' state when a category is selected. It also clears the 'selectedPriceRange'. 'handlePriceChange': Updates the 'selectedPriceRange' state when a price range is selected. It also clears the 'selectedCategory' and 'query'.",
+            "Implement the filteredData function: It takes the 'products' array, 'selectedCategory', 'query', and 'selectedPriceRange' as parameters. Filters the products based on the selected category, search query, and price range. Returns an array of JSX elements (product cards) based on the filtered products. ( If you find it too difficult to implement, refer to the additional step below. ) ",
+            "Render the 'Sidebar', 'Navigation', 'Recommended', and 'Products' components: Pass down necessary props to each component. 'Sidebar': Pass 'handleChange' and 'handlePriceChange' as props to handle category and price range changes. 'Navigation': Pass 'query' and 'handleInputChange' as props to manage search functionality. 'Recommended': Pass 'handleRecommendedClick' to handle clicks on recommended categories. 'Products': Pass 'result', which is the filtered product data, as a prop to display the products.",
+           
+          ],
+        },{
+          stepTitle: "Step 14: Data Management",
+          titleDescription: "data.js",
+          description: [
+            "Create a JavaScript file named data.js to store your product data.",
+             "Define an array containing objects, where each object represents a product with properties like 'img', 'title', 'star', 'reviews', 'prevPrice', 'newPrice', etc.",
+            "Import this data into your App.js file.",
+            "Implement a function to filter this data based on user interactions (selected category, query, selected price range).",
+            "Pass the filtered data to the 'Products' component for rendering.",
+           
+          ],
+        },
+        {
+          stepTitle: "Extra Step: 'filteredData' function",
+          titleDescription: "In your App.js file",
+          description: [
+            "Create a function named 'filteredData'.",
+            "Pass four parameters: 'products', 'selectedCategory', 'query', and 'selectedPriceRange'.",
+            "Initialize a variable 'filteredProducts' with the value of the 'products' parameter ( This ensures that initially, all products are included in the filtered list. )",
+            "Check if the 'query' parameter is not empty: Use the 'filter' method on 'filteredProducts'. Inside the filter function, check if the lowercase title of each product includes the lowercase query string ( This filters out products whose titles do not match the search query. ). Assign the filtered result back to 'filteredProducts'.",
+            "Check if the 'selectedCategory' parameter is not null: Use the 'filter' method on 'filteredProducts'. Inside the filter function, check if the category of each product matches the 'selectedCategory' ( This filters out products that do not belong to the selected category. ). Assign the filtered result back to 'filteredProducts'. ",
+            "Check if the 'selectedPriceRange' parameter is not null: Use the 'filter' method on 'filteredProducts'. Inside the filter function, destructure the 'newPrice' of each product. Parse the price range string into minimum and maximum values. Compare the price of each product with the minimum and maximum values. Filter out products whose prices fall outside the selected range. Assign the filtered result back to 'filteredProducts'.",
+            "After applying all filters, map the 'filteredProducts' array to JSX elements representing product cards.",
+            "For each product, create a 'Card' component with appropriate props (img, title, star, reviews, prevPrice, newPrice).",
+            "Use a unique 'key' for each 'Card' component to avoid warnings.",
+            "Return the array of JSX elements representing filtered product cards.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson25.webp"),
+      link: "https://www.dropbox.com/scl/fi/q4wtsg840xgeapkcf14c5/courseFinderStyles.css?rlkey=8730yrzni5wtv4utdc0eebgek&st=zt7m1rbq&dl=0",
+      link3: "https://www.dropbox.com/scl/fi/fg84c0gl9r71enaij1w1f/data.js?rlkey=odo6ubd1wm65zdyh5admq63hh&st=qu6d83ly&dl=0",
+    },
   ],
 };
 
