@@ -2601,7 +2601,7 @@ const tasksData = {
         },
       ],
       taskType: "React",
-      difficulty: "Easy",
+      difficulty: "Hard",
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
