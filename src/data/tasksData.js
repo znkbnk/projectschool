@@ -2098,7 +2098,7 @@ const tasksData = {
           description: [
             "Inside the Components directory, create a new file named TodoWrapper.js.",
             "This file will contain the main component responsible for managing todos.",
-            "Start by importing React, useState, useEffect, useRef, v4 as uuidv4 and other necessary dependencies.",            
+            "Start by importing React, useState, useEffect, useRef, v4 as uuidv4 and other necessary dependencies.",
             "Define a functional component named TodoWrapper.",
             "Inside TodoWrapper, initialize state using the useState hook to manage todos.",
             "Create a useRef to store the previous state of todos for comparison in useEffect.",
@@ -2137,15 +2137,15 @@ const tasksData = {
             "Import TodoWrapper component.",
             "Render TodoWrapper inside the App component.",
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 10: Integrate UUID Library",
           titleDescription: "(Optional)",
           description: [
             "Run npm install uuid to install the UUID library for generating unique identifiers.",
             "Open the file containing your TodoApp component ( TodoWrapper.js ).",
             "Import the v4 function from the UUID library at the top of the file.",
-             "Replace the logic for generating todo IDs with uuidv4(). ( In 'addTodo' function).",
-            
+            "Replace the logic for generating todo IDs with uuidv4(). ( In 'addTodo' function).",
           ],
         },
         {
@@ -2155,7 +2155,6 @@ const tasksData = {
             "Start the development server by running npm start.",
             "Open your web browser and navigate to http://localhost:3000 to see the To-Do application.",
             "Test adding, deleting, completing, and editing todos to ensure everything works as expected.",
-           
           ],
         },
       ],
@@ -2170,7 +2169,8 @@ const tasksData = {
     {
       taskId: "reacttask22",
       taskTitle: "Testimonials",
-      introduction: " This React project called 'Testimonials' designed to showcase customer feedback. It includes a dynamic testimonial display with navigation buttons for users to cycle through testimonials, enhanced with animated background color for added visual appeal.",
+      introduction:
+        " This React project called 'Testimonials' designed to showcase customer feedback. It includes a dynamic testimonial display with navigation buttons for users to cycle through testimonials, enhanced with animated background color for added visual appeal.",
 
       steps: [
         {
@@ -2178,23 +2178,18 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Import React and other necessary dependencies such as useState, useEffect from 'react', and gsap from 'gsap'.",
-         
           ],
         },
         {
           stepTitle: "Step 2: Create Functional Component",
           titleDescription: "",
-          description: [
-             "Define a functional component named Testimonials.",
-           
-          ],
+          description: ["Define a functional component named Testimonials."],
         },
         {
           stepTitle: "Step 3: Initialize State",
           titleDescription: "",
           description: [
             "Use the useState hook to create a state variable named currentIndex initialized to 0. This variable will keep track of the index of the currently displayed testimonial.",
-          
           ],
         },
         {
@@ -2202,7 +2197,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Define an array named testimonials containing objects. Each object should have two properties: quote for the testimonial text and author for the author's name.",
-          
           ],
         },
         {
@@ -2210,41 +2204,40 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Utilize the useEffect hook to apply animations using gsap library. Inside the effect, target the .testimonials class and animate its background color with a duration of 4 seconds. Set backgroundColor to #87CEEB. Add the options repeat: -1 to repeat indefinitely, yoyo: true for back and forth animation, and ease: 'power1.inOut' for smooth animation.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Create Event Handlers",
           titleDescription: "",
           description: [
             "Define two event handler functions: handlePrevClick and handleNextClick.",
-             "'handlePrevClick' should decrement the currentIndex by 1 (with wrap-around logic to ensure it doesn't go below 0).",
+            "'handlePrevClick' should decrement the currentIndex by 1 (with wrap-around logic to ensure it doesn't go below 0).",
             "'handleNextClick' should increment the currentIndex by 1 (with wrap-around logic to ensure it loops back to 0 when reaching the end of the testimonials array).",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Render Testimonial Content",
           titleDescription: "",
           description: [
             "Within the return statement, render the testimonial content.",
-             "Display the current testimonial's quote and author.",
+            "Display the current testimonial's quote and author.",
             "Include navigation buttons (Prev and Next) to cycle through testimonials.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Implement Navigation",
           titleDescription: "",
           description: [
             "Bind the onClick event of the Prev button to the handlePrevClick function and the Next button to the handleNextClick function.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Export Component",
           titleDescription: "",
           description: [
             "Export the Testimonials component as the default export.",
-          
           ],
-        }
+        },
       ],
       taskType: "React",
       difficulty: "Easy",
@@ -2257,7 +2250,8 @@ const tasksData = {
     {
       taskId: "reacttask",
       taskTitle: "Voice to Text",
-      introduction: "This React application utilizes speech recognition to convert spoken words into text in real-time, enabling users to interact with the interface through voice commands. Additionally, users can conveniently copy the recognized text to their clipboard with the click of a button.",
+      introduction:
+        "This React application utilizes speech recognition to convert spoken words into text in real-time, enabling users to interact with the interface through voice commands. Additionally, users can conveniently copy the recognized text to their clipboard with the click of a button.",
 
       steps: [
         {
@@ -2265,15 +2259,13 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Start by setting up a new React application using Create React App or any other method you prefer.",
-            
           ],
         },
         {
           stepTitle: "Step 2: Install Dependencies",
           titleDescription: "",
           description: [
-             "Install the necessary dependencies for your project. You'll need 'react-speech-recognition', 'react-use-clipboard', and 'react'.",
-           
+            "Install the necessary dependencies for your project. You'll need 'react-speech-recognition', 'react-use-clipboard', and 'react'.",
           ],
         },
         {
@@ -2281,7 +2273,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Import the CSS file (App.css in this case) where you define your styles for the application.",
-         
           ],
         },
         {
@@ -2289,7 +2280,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Create a functional component named 'App' to hold your application logic.",
-          
           ],
         },
         {
@@ -2297,57 +2287,56 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Utilize the 'useState' hook from React to manage state within your component. You'll need state variables for the text to copy and for tracking whether the text has been copied successfully.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Clipboard Functionality",
           titleDescription: "",
           description: [
             "Implement clipboard functionality using the useClipboard hook from react-use-clipboard. This hook provides functionality to copy text to the clipboard.",
-         
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Speech Recognition Hook",
           titleDescription: "",
           description: [
             "Utilize the 'useSpeechRecognition' hook from the 'react-speech-recognition' library to enable speech recognition functionality within your React component. This hook provides access to various properties and methods, including 'transcript', which holds the recognized speech in real-time. By accessing this 'transcript' property, you can update your UI dynamically as speech is recognized by the browser. Additionally, the 'browserSupportsSpeechRecognition' property allows you to check whether the user's browser supports speech recognition, ensuring a seamless experience for all users.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Conditional Rendering",
           titleDescription: "",
           description: [
             "Check if the browser supports speech recognition using the 'browserSupportsSpeechRecognition' property provided by the 'useSpeechRecognition' hook. If not supported, return 'null' from the component.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Rendering UI",
           titleDescription: "",
           description: [
             "Render the user interface within the 'App' component. Include elements such as a header, description, a container to display the transcript, and buttons for copying text to clipboard and controlling speech recognition.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Event Handlers",
           titleDescription: "",
           description: [
             "Implement event handlers for interacting with the application. These include functions to start and stop listening for speech, and to copy the transcript text to the clipboard.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 11: Button Actions",
           titleDescription: "",
           description: [
             "Attach the event handlers to the respective buttons for starting and stopping speech recognition, as well as copying text to clipboard.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 12: Styling",
           titleDescription: "",
           description: [
             "Apply styles to your components as desired. You can define styles in the imported CSS file (App.css) to achieve the desired layout and appearance.",
-             "Also you can download complete styles from the link provided below.",
-            
+            "Also you can download complete styles from the link provided below.",
           ],
         },
       ],
@@ -2362,7 +2351,8 @@ const tasksData = {
     {
       taskId: "reacttask24",
       taskTitle: "Text to Voice",
-      introduction: "Introducing TextToSpeechApp, a React application that enables users to convert typed text into speech effortlessly. Using the browser's built-in SpeechSynthesis API, users can input text, click a button, and hear their words spoken aloud in real-time, offering a seamless and interactive text-to-speech experience.",
+      introduction:
+        "Introducing TextToSpeechApp, a React application that enables users to convert typed text into speech effortlessly. Using the browser's built-in SpeechSynthesis API, users can input text, click a button, and hear their words spoken aloud in real-time, offering a seamless and interactive text-to-speech experience.",
 
       steps: [
         {
@@ -2370,15 +2360,13 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Start by setting up a new React application using Create React App or any other preferred method.",
-          
           ],
         },
         {
           stepTitle: "Step 2: Functional Component",
           titleDescription: "",
           description: [
-             "Create a functional component named 'TextToSpeechApp' to hold your application logic.",
-         
+            "Create a functional component named 'TextToSpeechApp' to hold your application logic.",
           ],
         },
         {
@@ -2386,7 +2374,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Utilize the 'useState' hook from React to manage the text inputted by the user.",
-          
           ],
         },
         {
@@ -2394,7 +2381,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Implement text-to-speech functionality using the browser's built-in SpeechSynthesis API. This API provides the 'speechSynthesis' object, which you can use to create and control speech synthesis utterances.",
-         
           ],
         },
         {
@@ -2402,22 +2388,21 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Implement event handlers to handle changes in the text input and to trigger the text-to-speech conversion.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Rendering UI",
           titleDescription: "",
           description: [
             "Render the user interface within the TextToSpeechApp component. Include an input field where users can type the text they want to be converted to speech, and a button to trigger the text-to-speech conversion.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Styling",
           titleDescription: "",
           description: [
             "Apply styles to your components as desired. You can define styles inline or in a separate CSS file to achieve the desired layout and appearance.",
-             "Also, the pre-ready styles available in the link below.",
-           
+            "Also, the pre-ready styles available in the link below.",
           ],
         },
       ],
@@ -2432,7 +2417,8 @@ const tasksData = {
     {
       taskId: "reacttask25",
       taskTitle: "CourseFinder",
-      introduction: "CourseFinder is an intuitive web application designed to simplify the process of discovering and selecting online courses. With powerful filtering options based on category, price range, and search queries, CourseFinder helps users navigate through a diverse range of educational offerings, empowering them to find the perfect learning experience tailored to their interests and needs.",
+      introduction:
+        "CourseFinder is an intuitive web application designed to simplify the process of discovering and selecting online courses. With powerful filtering options based on category, price range, and search queries, CourseFinder helps users navigate through a diverse range of educational offerings, empowering them to find the perfect learning experience tailored to their interests and needs.",
 
       steps: [
         {
@@ -2440,15 +2426,13 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Begin by setting up a new React application using create-react-app or any other method you prefer.",
-           
           ],
         },
         {
           stepTitle: "Step 2: Component Structure",
           titleDescription: "",
           description: [
-             "Visualize the structure of your application. You will have 10 components and 1 data file: Button, Card, Input, Nav, Products, Recommended, Category, Price, Sidebar, and App.",
-          
+            "Visualize the structure of your application. You will have 10 components and 1 data file: Button, Card, Input, Nav, Products, Recommended, Category, Price, Sidebar, and App.",
           ],
         },
         {
@@ -2456,7 +2440,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "For each component, create a separate file in your project directory.",
-           
           ],
         },
         {
@@ -2469,7 +2452,6 @@ const tasksData = {
             "Use JSX to return a button element with the class name 'button'.",
             "Add an onClick event handler to the button that calls the 'onClickHandler' function with the 'value' prop as its argument.",
             "Export the 'Button' component as the default export.",
-            
           ],
         },
         {
@@ -2477,91 +2459,98 @@ const tasksData = {
           titleDescription: "Card.js",
           description: [
             "Create a new file named Card.js in your components directory.",
-             "Define a functional component named 'Card'.",
+            "Define a functional component named 'Card'.",
             "Accept props like 'img', 'title', 'star', 'reviews', 'prevPrice', and 'newPrice'.",
             "Use JSX to structure the card layout. Include elements like 'img', 'h3', 'span', de'l, etc., to display the product information.",
             "Apply appropriate class names for styling.",
             "Export the 'Card' component as the default export.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Implement Input Component",
           titleDescription: "Input.js",
           description: [
             "Create a new file named Input.js in your components directory.",
-             "Define a functional component named 'Input'.",
+            "Define a functional component named 'Input'.",
             "Accept props like 'handleChange', 'value', 'title' and 'name'.",
             "Use JSX to return a label containing an input (radio) element and a span element for custom styling.",
             "Apply appropriate event handlers to the input element.",
             "Export the 'Input' component as the default export.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Implement Nav Component ",
           titleDescription: "Nav.js",
           description: [
             "Create a new file named Nav.js in your components directory.",
-             "Define a functional component named 'Nav'.",
+            "Define a functional component named 'Nav'.",
             "Accept props like 'handleInputChange' and 'query'.",
             "Use JSX to structure the navigation bar, including an input field for search and icons for actions like adding to cart or user profile.",
             "Apply appropriate event handlers to the input field.",
             "Export the 'Nav' component as the default export.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Implement Products Component",
           titleDescription: "Products.js",
           description: [
             "Create a new file named Products.js in your components directory.",
-             "Define a functional component named 'Products'.",
+            "Define a functional component named 'Products'.",
             "Accept props like 'result', which is an array of product cards to be displayed.",
             "Use JSX to map over the 'result' array and render each product card.",
             "Export the 'Products' component as the default export.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Implement Recommended Component",
           titleDescription: "Recommended.js",
           description: [
             "Create a new file named Recommended.js in your components directory.",
-             "Define a functional component named 'Recommended'.",
+            "Define a functional component named 'Recommended'.",
             "Accept props like 'handleClick'.",
             "Use JSX to display a list of recommended categories as buttons.",
             "Apply appropriate event handlers to the buttons to trigger the 'handleClick' function with the selected category as an argument.",
             "Export the 'Recommended' component as the default export.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Implement Category Component",
           titleDescription: "Category.js",
           description: [
             "Create a new file named Category.js in your components directory.",
-             "Define a functional component named 'Category'.",
+            "Define a functional component named 'Category'.",
             "Accept props like 'handleChange'.",
             "Use JSX to display a list of category options as radio buttons.",
             "Apply appropriate event handlers to the radio buttons to trigger the 'handleChange' function with the selected category as an argument.",
             "Export the 'Category' component as the default export.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 11: Implement Price Component",
           titleDescription: "Price.js",
           description: [
             "Create a new file named Price.js in your components directory.",
-             "Define a functional component named 'Price'.",
+            "Define a functional component named 'Price'.",
             "Accept props like 'handleChange'.",
             "Use JSX to display a list of price range options as radio buttons.",
             "Apply appropriate event handlers to the radio buttons to trigger the 'handleChange' function with the selected price range as an argument.",
             "Export the 'Price' component as the default export.",
             "",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 12: Implement Sidebar Component ",
           titleDescription: "Sidebar.js",
           description: [
             "Create a new file named Sidebar.js in your components directory.",
-             "Define a functional component named 'Sidebar'.",
+            "Define a functional component named 'Sidebar'.",
             "Accept props like 'handleChange' and 'handlePriceChange'.",
             "Use JSX to structure the sidebar, including the 'Category' and 'Price' components.",
             "Pass down event handlers to the 'Category' and 'Price' components as props.",
             "Export the 'Sidebar' component as the default export.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 13: Implement App Component",
           titleDescription: "App.js",
           description: [
@@ -2569,18 +2558,17 @@ const tasksData = {
             "Implement event handlers: 'handleInputChange': Updates the 'query' state based on user input in the search bar. 'handleChange': Updates the 'selectedCategory' state when a category is selected. It also clears the 'selectedPriceRange'. 'handlePriceChange': Updates the 'selectedPriceRange' state when a price range is selected. It also clears the 'selectedCategory' and 'query'.",
             "Implement the filteredData function: It takes the 'products' array, 'selectedCategory', 'query', and 'selectedPriceRange' as parameters. Filters the products based on the selected category, search query, and price range. Returns an array of JSX elements (product cards) based on the filtered products. ( If you find it too difficult to implement, refer to the additional step below. ) ",
             "Render the 'Sidebar', 'Navigation', 'Recommended', and 'Products' components: Pass down necessary props to each component. 'Sidebar': Pass 'handleChange' and 'handlePriceChange' as props to handle category and price range changes. 'Navigation': Pass 'query' and 'handleInputChange' as props to manage search functionality. 'Recommended': Pass 'handleRecommendedClick' to handle clicks on recommended categories. 'Products': Pass 'result', which is the filtered product data, as a prop to display the products.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 14: Data Management",
           titleDescription: "data.js",
           description: [
             "Create a JavaScript file named data.js to store your product data.",
-             "Define an array containing objects, where each object represents a product with properties like 'img', 'title', 'star', 'reviews', 'prevPrice', 'newPrice', etc.",
+            "Define an array containing objects, where each object represents a product with properties like 'img', 'title', 'star', 'reviews', 'prevPrice', 'newPrice', etc.",
             "Import this data into your App.js file.",
             "Implement a function to filter this data based on user interactions (selected category, query, selected price range).",
             "Pass the filtered data to the 'Products' component for rendering.",
-           
           ],
         },
         {
@@ -2607,7 +2595,143 @@ const tasksData = {
       completed: false,
       img: require("../images/ReactLesson25.webp"),
       link: "https://www.dropbox.com/scl/fi/q4wtsg840xgeapkcf14c5/courseFinderStyles.css?rlkey=8730yrzni5wtv4utdc0eebgek&st=zt7m1rbq&dl=0",
-      link3: "https://www.dropbox.com/scl/fi/fg84c0gl9r71enaij1w1f/data.js?rlkey=odo6ubd1wm65zdyh5admq63hh&st=qu6d83ly&dl=0",
+      link3:
+        "https://www.dropbox.com/scl/fi/fg84c0gl9r71enaij1w1f/data.js?rlkey=odo6ubd1wm65zdyh5admq63hh&st=qu6d83ly&dl=0",
+    },
+    {
+      taskId: "reacttask26",
+      taskTitle: "Course Shop",
+      introduction:
+        "In this guide, we'll walk through the process of creating essential components for a React-based e-commerce application: a context for managing the shopping cart state, individual cart items, the overall cart view, and individual product displays. These components will work together to provide a seamless shopping experience, allowing users to add, update, and manage items in their cart.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Create a React Project",
+          titleDescription: "",
+          description: [
+            "Open your terminal.",
+            "Run npx create-react-app course-shop.",
+            "Navigate to the project directory: cd course-shop.",
+            "Run npm install react-router-dom phosphor-react.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Project Structure",
+          titleDescription: "",
+          description: [
+            "Inside src, create the following folders: 'components': For reusable components like the Navbar. 'pages': For main pages like Shop, Contact, and Cart. 'context': For context-related files. 'assets/products': For product images.",
+            "Create App.css in the src folder for global styles.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Setup Context for State Management",
+          titleDescription: "shop-context.js",
+          description: [
+            "Navigate to 'src/context' and create a file named shop-context.js.",
+            "Import 'createContext' and 'useState' from React.",
+            "Define and export ShopContext using createContext(null).",
+            "Define a function ShopContextProvider that takes 'props' as an argument.",
+            "Initialize state for 'cartItems' using useState. Example: const [cartItems, setCartItems] = useState(getDefaultCart());",
+            "Define helper functions: 'getDefaultCart()': Initialize an empty cart. 'addToCart(itemId)': Increment the quantity of an item in the cart. 'removeFromCart(itemId)': Decrement the quantity of an item in the cart. 'updateCartItemCount(newAmount, itemId)': Update the quantity of an item to a specific value. 'getTotalCartAmount()': Calculate the total price of items in the cart. 'checkout()': Reset the cart to its default state.",
+            "Provide these functions and state as context values.",
+            "Wrap 'props.children' with 'ShopContext.Provider' and pass the context values.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create CartItem Component",
+          titleDescription: "CartItem.js",
+          description: [
+            "Navigate to 'src/pages/cart' and create a file named CartItem.js.",
+            "Import React, useContext from React, and ShopContext.",
+            "Create a functional component 'CartItem' that takes 'props' as an argument.",
+            "Destructure 'id', 'productName', 'price', and 'productImage' from 'props.data'.",
+            "Use 'useContext(ShopContext)' to access 'cartItems', 'addToCart', 'removeFromCart', and 'updateCartItemCount'.",
+            "Return JSX that displays: Product image. Product name and price. Quantity controls (buttons to increment/decrement and an input to set quantity).",
+            "Use context functions to handle button clicks and input changes.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create Cart Component",
+          titleDescription: "Cart.js",
+          description: [
+            "Navigate to 'src/pages/cart' and create a file named Cart.js.",
+            "Import React, useContext from React, useNavigate from react-router-dom, ShopContext, PRODUCTS, and CartItem.",
+            "Create a functional component Cart.",
+            "Use 'useContext(ShopContext)' to access 'cartItems', 'getTotalCartAmount', and 'checkout'.",
+            "Use 'useNavigate' to handle navigation.",
+            "Calculate 'totalAmount' using 'getTotalCartAmount()'.",
+            "Return JSX that displays: A heading 'Your Cart Items'. A list of 'CartItem' components for each product in the cart. A subtotal and buttons for 'Continue Shopping' and 'Checkout'. If 'totalAmount' is zero, display a message that the cart is empty.",
+            "Use context functions to handle checkout and navigation.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Create Product Component",
+          titleDescription: "Product.js",
+          description: [
+            "Navigate to 'src/pages/shop' and create a file named Product.js.",
+            "Import React, useContext from React, and ShopContext.",
+            "Create a functional component Product that takes 'props' as an argument.",
+            "Destructure 'id', 'productName', 'price', and 'productImage' from 'props.data'.",
+            "Use 'useContext(ShopContext)' to access 'addToCart' and 'cartItems'.",
+            "Return JSX that displays: Product image. Product name and price. An 'Add to Cart' button that also shows the number of items in the cart.",
+            "Use context functions to handle button clicks.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Define Products Data",
+          titleDescription: "Products.js",
+          description: [
+            "Inside src, create a file named products.js.",
+            "Export an array of product objects with properties: 'id', 'courseName', 'price', and 'productImage'.",
+            "Save product images in 'src/assets/products' with appropriate names (e.g., 1.webp, 2.webp).",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Create Navbar Component",
+          titleDescription: "Navbar.js",
+          description: [
+            "Inside 'src/components', create a file named Navbar.js.",
+            "Import Link from react-router-dom and ShoppingCart from phosphor-react.",
+            "Implement a functional component to display navigation links and a shopping cart icon.",
+          ],
+        },
+        {
+          stepTitle: "Step 9: Create Shop Component",
+          titleDescription: "Shop.js",
+          description: [
+            "Inside src/pages/shop, create a file named Shop.js.",
+            "Import PRODUCTS and Product component.",
+            "Implement a functional component to map over products and render 'Product' components.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 10: Create Contact Component",
+          titleDescription: "Contact.js",
+          description: ["Inside 'src/pages', create a file named Contact.js.", "Implement a functional component with contact information or a form.",],
+        },
+        {
+          stepTitle: "Step 11: Modify App.js",
+          titleDescription: "App.js",
+          description: [
+            "Import BrowserRouter, Routes, and Route from react-router-dom.",
+            "Import Navbar, Shop, Contact, and Cart components.",
+            "Wrap the app in ShopContextProvider and Router.",
+            "Define routes for / (Shop), /contact (Contact), and /cart (Cart).",
+            "Define routes inside <Routes>: <Route path='/' element={<Shop />} />, <Route path='/contact' element={<Contact />} />, and <Route path='/cart 'element={<Cart />} />.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Hard",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson26.webp"),
+      link: "https://www.dropbox.com/scl/fi/2ztcyxpl23euc4621pgrk/courseShopStyles.css?rlkey=nfu7b3lsl98w0asmlwu80omio&st=swxaihy0&dl=0",
+      link2: "https://www.dropbox.com/scl/fo/vltgb0atop29kgu0xy6mr/AKNJ_oUkZ_bbCn1uYgXkjvQ?rlkey=c4r6xjl6ch9vgwrxhjj2zs1ns&st=zhalksgn&dl=0",
+      link3: "https://www.dropbox.com/scl/fi/nmmqf0tr0yhpx9vf0o37x/products.js?rlkey=2e0st63koly7ivvo5x60okrhp&st=35ajx6cl&dl=0",
     },
   ],
 };

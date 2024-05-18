@@ -79,6 +79,7 @@ footer a {
 .copyright {
   background-color: black;
   color: #fff;
+  margin: 20px;
 }
 
 .com ul li {
@@ -127,9 +128,7 @@ footer a {
   .com {
     padding: 20px 0;
   }
-  .copyright {
-    margin: 20px;
-  }
+  
 .main-footer ul li {
   text-align: center;
 }
