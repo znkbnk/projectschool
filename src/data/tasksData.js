@@ -2733,6 +2733,121 @@ const tasksData = {
       link2: "https://www.dropbox.com/scl/fo/vltgb0atop29kgu0xy6mr/AKNJ_oUkZ_bbCn1uYgXkjvQ?rlkey=c4r6xjl6ch9vgwrxhjj2zs1ns&st=zhalksgn&dl=0",
       link3: "https://www.dropbox.com/scl/fi/nmmqf0tr0yhpx9vf0o37x/products.js?rlkey=2e0st63koly7ivvo5x60okrhp&st=35ajx6cl&dl=0",
     },
+    {
+      taskId: "reacttask27",
+      taskTitle: "MATERIALIZECSS Portfolio",
+      introduction: "This React project utilizes Materialize CSS to create a sleek and responsive web application featuring a dynamic navigation bar, captivating parallax sections, informative content sections (including About, Projects, and Contact), and a polished footer. With its modern design and intuitive user interface, it offers a seamless browsing experience for showcasing personal or professional portfolios.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Create a New React Project",
+          titleDescription: "",
+          description: [
+            "Open your terminal and create a new React project.",
+            "Navigate to the project directory.",
+            "Install Materialize CSS and Material Icons. ( npm install materialize-css material-icons )",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 2: Import Materialize CSS and Material Icons",
+          titleDescription: "",
+          description: [
+             "At the top of the file, import the Materialize CSS and Material Icons. ( import 'materialize-css/dist/css/materialize.min.css'; import 'material-icons/iconfont/material-icons.css'; )",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 3: Initialize Materialize Components in App.js",
+          titleDescription: "",
+          description: [
+            "Import Materialize CSS ( import M from 'materialize-css'; )",
+           "Use React.useEffect to initialize Materialize components when the component mounts. ( React.useEffect(() => { M.Parallax.init(document.querySelectorAll('.parallax')); M.Sidenav.init(document.querySelectorAll('.sidenav'));}, []); )",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create the Navigation Bar",
+          titleDescription: "",
+          description: [
+            "In the materializecss.com website, type 'Navbar' into the search input and then copy the code.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create the Parallax Section",
+          titleDescription: "",
+          description: [
+            "In the materializecss.com website, type 'Parallax' into the search input and then copy the code. ( You can add attribute width='100%' ).",
+            
+          ],
+        },{
+          stepTitle: "Step 6: Create the Content Sections",
+          titleDescription: "",
+          description: [
+            "In the materializecss.com website, type 'Grid' into the search input and then copy the code. ( You can add <h1>, <p> or any other element you want ).",
+          
+          ],
+        },{
+          stepTitle: "Step 7: Create another the Parallax Section",
+          titleDescription: "",
+          description: [
+            "In the materializecss.com website, type 'Parallax' into the search input and then copy the code.",
+             "Inside your parallax, add a grid (with <h1>, <button> or any other element you prefer).",
+          
+          ],
+        },{
+          stepTitle: "Step 8: Add Card Section",
+          titleDescription: "",
+          description: [
+            "In the materializecss.com website, type 'Card' into the search input and then copy the code. ( In my case I used the 'Card Reveal )",
+          
+          ],
+        },{
+          stepTitle: "Step 9: Add Contact Section",
+          titleDescription: "",
+          description: [
+            "In the materializecss.com website, type 'Text-inputs' into the search input and then copy the code.",
+          
+          ],
+        },{
+          stepTitle: "Step 10: Create the Footer",
+          titleDescription: "",
+          description: [
+            "In the materializecss.com website, type 'Text-inputs' into the search input and then copy the code.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 11: Create the Footer",
+          titleDescription: "",
+          description: [
+            "In the materializecss.com website, type 'Footer' into the search input and then copy the code.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 12: Create a 'handleNavClick' function",
+          titleDescription: "Optional",
+          description: [
+            "Start by creating a function named handleNavClick that takes two parameters: event and section.",
+            "Within the function, use event.preventDefault() to prevent the default behavior of the click event.",
+            "Use 'document.getElementById(section)' to get the DOM element corresponding to the section ID passed as an argument.",
+            "Verify if the target element exists. If it does not exist, it means there's no section with the provided ID, so there's no need to scroll.",
+            "Smoothly scroll the window to the top position of the target element using the 'smooth' behavior to create a smooth scrolling effect.",
+            "If the target element exists, use window.scrollTo() to scroll to that element. Set the 'top' property to 'target.offsetTop' to scroll to the top of the target element. Use behavior: 'smooth' to enable smooth scrolling.",
+            "Locate the navigation buttons in your JSX code. These buttons likely have 'onClick' handlers that call functions like 'handleNavClick'. Ensure that each button's 'onClick' handler passes the appropriate parameters (event and section name) to the 'handleNavClick' function. ( Example: onClick={(e) => handleNavClick(e, 'projects')} ).",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson27.webp"),
+      link: "https://www.dropbox.com/scl/fi/qzlk1srk93y1ut98cw1q2/materializecssStyles.css?rlkey=orbzl27hvw1ao3vnl7yps07y4&st=th9ekx3n&dl=0",
+    },
   ],
 };
 
