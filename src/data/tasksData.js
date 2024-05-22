@@ -2702,13 +2702,15 @@ const tasksData = {
             "Inside src/pages/shop, create a file named Shop.js.",
             "Import PRODUCTS and Product component.",
             "Implement a functional component to map over products and render 'Product' components.",
-           
           ],
         },
         {
           stepTitle: "Step 10: Create Contact Component",
           titleDescription: "Contact.js",
-          description: ["Inside 'src/pages', create a file named Contact.js.", "Implement a functional component with contact information or a form.",],
+          description: [
+            "Inside 'src/pages', create a file named Contact.js.",
+            "Implement a functional component with contact information or a form.",
+          ],
         },
         {
           stepTitle: "Step 11: Modify App.js",
@@ -2719,7 +2721,6 @@ const tasksData = {
             "Wrap the app in ShopContextProvider and Router.",
             "Define routes for / (Shop), /contact (Contact), and /cart (Cart).",
             "Define routes inside <Routes>: <Route path='/' element={<Shop />} />, <Route path='/contact' element={<Contact />} />, and <Route path='/cart 'element={<Cart />} />.",
-           
           ],
         },
       ],
@@ -2730,13 +2731,16 @@ const tasksData = {
       completed: false,
       img: require("../images/ReactLesson26.webp"),
       link: "https://www.dropbox.com/scl/fi/2ztcyxpl23euc4621pgrk/courseShopStyles.css?rlkey=nfu7b3lsl98w0asmlwu80omio&st=swxaihy0&dl=0",
-      link2: "https://www.dropbox.com/scl/fo/vltgb0atop29kgu0xy6mr/AKNJ_oUkZ_bbCn1uYgXkjvQ?rlkey=c4r6xjl6ch9vgwrxhjj2zs1ns&st=zhalksgn&dl=0",
-      link3: "https://www.dropbox.com/scl/fi/nmmqf0tr0yhpx9vf0o37x/products.js?rlkey=2e0st63koly7ivvo5x60okrhp&st=35ajx6cl&dl=0",
+      link2:
+        "https://www.dropbox.com/scl/fo/vltgb0atop29kgu0xy6mr/AKNJ_oUkZ_bbCn1uYgXkjvQ?rlkey=c4r6xjl6ch9vgwrxhjj2zs1ns&st=zhalksgn&dl=0",
+      link3:
+        "https://www.dropbox.com/scl/fi/nmmqf0tr0yhpx9vf0o37x/products.js?rlkey=2e0st63koly7ivvo5x60okrhp&st=35ajx6cl&dl=0",
     },
     {
       taskId: "reacttask27",
       taskTitle: "MATERIALIZECSS Portfolio",
-      introduction: "This React project utilizes Materialize CSS to create a sleek and responsive web application featuring a dynamic navigation bar, captivating parallax sections, informative content sections (including About, Projects, and Contact), and a polished footer. With its modern design and intuitive user interface, it offers a seamless browsing experience for showcasing personal or professional portfolios.",
+      introduction:
+        "This React project utilizes Materialize CSS to create a sleek and responsive web application featuring a dynamic navigation bar, captivating parallax sections, informative content sections (including About, Projects, and Contact), and a polished footer. With its modern design and intuitive user interface, it offers a seamless browsing experience for showcasing personal or professional portfolios.",
 
       steps: [
         {
@@ -2746,15 +2750,13 @@ const tasksData = {
             "Open your terminal and create a new React project.",
             "Navigate to the project directory.",
             "Install Materialize CSS and Material Icons. ( npm install materialize-css material-icons )",
-          
           ],
         },
         {
           stepTitle: "Step 2: Import Materialize CSS and Material Icons",
           titleDescription: "",
           description: [
-             "At the top of the file, import the Materialize CSS and Material Icons. ( import 'materialize-css/dist/css/materialize.min.css'; import 'material-icons/iconfont/material-icons.css'; )",
-           
+            "At the top of the file, import the Materialize CSS and Material Icons. ( import 'materialize-css/dist/css/materialize.min.css'; import 'material-icons/iconfont/material-icons.css'; ).",
           ],
         },
         {
@@ -2762,8 +2764,7 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Import Materialize CSS ( import M from 'materialize-css'; )",
-           "Use React.useEffect to initialize Materialize components when the component mounts. ( React.useEffect(() => { M.Parallax.init(document.querySelectorAll('.parallax')); M.Sidenav.init(document.querySelectorAll('.sidenav'));}, []); )",
-           
+            "Use React.useEffect to initialize Materialize components when the component mounts. ( React.useEffect(() => { M.Parallax.init(document.querySelectorAll('.parallax')); M.Sidenav.init(document.querySelectorAll('.sidenav'));}, []); )",
           ],
         },
         {
@@ -2771,7 +2772,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "In the materializecss.com website, type 'Navbar' into the search input and then copy the code.",
-           
           ],
         },
         {
@@ -2779,43 +2779,42 @@ const tasksData = {
           titleDescription: "",
           description: [
             "In the materializecss.com website, type 'Parallax' into the search input and then copy the code. ( You can add attribute width='100%' ).",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Create the Content Sections",
           titleDescription: "",
           description: [
             "In the materializecss.com website, type 'Grid' into the search input and then copy the code. ( You can add <h1>, <p> or any other element you want ).",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Create another the Parallax Section",
           titleDescription: "",
           description: [
             "In the materializecss.com website, type 'Parallax' into the search input and then copy the code.",
-             "Inside your parallax, add a grid (with <h1>, <button> or any other element you prefer).",
-          
+            "Inside your parallax, add a grid (with <h1>, <button> or any other element you prefer).",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Add Card Section",
           titleDescription: "",
           description: [
-            "In the materializecss.com website, type 'Card' into the search input and then copy the code. ( In my case I used the 'Card Reveal )",
-          
+            "In the materializecss.com website, type 'Card' into the search input and then copy the code. ( In my case I used the 'Card Reveal ).",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Add Contact Section",
           titleDescription: "",
           description: [
             "In the materializecss.com website, type 'Text-inputs' into the search input and then copy the code.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Create the Footer",
           titleDescription: "",
           description: [
             "In the materializecss.com website, type 'Text-inputs' into the search input and then copy the code.",
-          
           ],
         },
         {
@@ -2823,7 +2822,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "In the materializecss.com website, type 'Footer' into the search input and then copy the code.",
-          
           ],
         },
         {
@@ -2847,6 +2845,93 @@ const tasksData = {
       completed: false,
       img: require("../images/ReactLesson27.webp"),
       link: "https://www.dropbox.com/scl/fi/qzlk1srk93y1ut98cw1q2/materializecssStyles.css?rlkey=orbzl27hvw1ao3vnl7yps07y4&st=th9ekx3n&dl=0",
+    },
+    {
+      taskId: "reacttask28",
+      taskTitle: "React-MaterializeCSS Web Toolkit",
+      introduction:
+        "This project employs React and Materialize CSS to craft a user-friendly web interface. It offers a responsive navbar, collapsible sidebar, dynamic content sections with tabs, and a customizable footer. It's designed to empower developers in constructing versatile web applications with contemporary styling and interactive elements.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setup React Project",
+          titleDescription: "",
+          description: [
+            "Initialize a new React project using a tool like Create React App: npx create-react-app my-dashboard-app.",
+            "Navigate into your project directory: cd my-dashboard-app.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Install Materialize CSS",
+          titleDescription: "",
+          description: [
+            "Use npm to install Materialize CSS: npm install materialize-css.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Import Materialize CSS",
+          titleDescription: "",
+          description: [
+            "In your Dashboard.js file (or any other relevant component), import Materialize CSS: import 'materialize-css/dist/css/materialize.min.css';.",
+            "Import M from 'materialize-css'",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create a Component",
+          titleDescription: "",
+          description: [
+            "Create a new file named Dashboard.js ( or any other you would like ) in your src folder.",
+            "Define a functional component named 'Dashboard' in Dashboard.js.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: UseEffect for Collapsible Initialization",
+          titleDescription: "",
+          description: [
+            "Inside the 'Dashboard' component, import the 'useEffect' hook: import React, { useEffect } from 'react';.",
+            "Use the useEffect hook to initialize collapsible elements when the component mounts. ( The code is provided in Materializecss.com website )",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Render Navbar",
+          titleDescription: "",
+          description: [
+            "On the 'materializecss' website, enter 'Navbar' into the search input, then copy the code of your choice.",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Render Dashboard Sidebar",
+          titleDescription: "",
+          description: [
+            "Create a <div> element with the class 'row' to contain the dashboard sidebar.",
+            "Inside this <div>, create another <div> with the class 'col s3 no-padding' to define the width of the sidebar. This class sets the width to 25% of the screen width for small-sized screens.",
+            "On the 'materializecss' website, enter 'Collapsible' into the search input, then copy the code of your choice.",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Render Main Content",
+          titleDescription: "",
+          description: [
+            "Create a <div> element with the class col s9 to define the width of the main content area. This class sets the width to 75% of the screen width for small-sized screens.",
+            "Within this <div>, you can include different sections or tabs to display the main content.",
+            "Populate the main content sections with relevant content, such as cards, images, text, or other components, based on your application requirements.",
+            "Fill the main content sections with relevant content from the 'materializecss' website, such as cards, images, text, or other components, according to your application's needs.",
+          ],
+        },
+        {
+          stepTitle: "Step 9: Render Footer",
+          titleDescription: "",
+          description: [
+            "On the 'materializecss' website, enter 'Footer' into the search input, then copy the code of your choice.",
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson28.webp"),
     },
   ],
 };
