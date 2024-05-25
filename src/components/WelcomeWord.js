@@ -138,10 +138,6 @@ const WelcomeComponent = () => {
           <h1 className='word-title' ref={toTheRef}>
             <span>t</span>
             <span>o</span>
-            <span>&nbsp;</span>
-            <span>t</span>
-            <span>h</span>
-            <span>e</span>
           </h1>
         </div>
       </div>
