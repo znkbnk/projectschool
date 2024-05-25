@@ -109,7 +109,8 @@ const LiveEditor = () => {
     } else {
       toast.error("No images found for download.");
     }
-  };const handleDownloadData = () => {
+  };
+  const handleDownloadData = () => {
     const dataLink = tasksData[lessonType][currentTaskIndex].link3;
     if (dataLink) {
       window.open(dataLink, "_blank");
@@ -118,6 +119,9 @@ const LiveEditor = () => {
     }
   };
 
+  const currentTask = tasksData[lessonType][currentTaskIndex];
+  const codesandboxUrl = currentTask ? currentTask.codesandboxUrl : "";
+
   return (
     <div>
       <Navbar />
@@ -125,43 +129,41 @@ const LiveEditor = () => {
         <div className='task-container'>
           <div className='task'>
             <div className='text-window'>
-              <h1>{tasksData[lessonType][currentTaskIndex].taskTitle}</h1>
+              <h1>{currentTask.taskTitle}</h1>
               {lessonType &&
-                tasksData[lessonType][currentTaskIndex].steps.map(
-                  (step, index) => (
-                    <div className='taskText-container' key={index}>
-                      <h3>{step.stepTitle}</h3>
-                      <h4>{step.titleDescription}</h4>
-                      <div className='checkbox-container'>
-                        <input
-                          type='checkbox'
-                          id={`step${index}`}
-                          checked={checkboxStates[`step${index}`]}
-                          onChange={() => handleCheckboxChange(`step${index}`)}
-                        />
-                        <label htmlFor={`step${index}`}>
-                          <ul>
-                            {step.description.map((desc, descIndex) => (
-                              <li key={descIndex}>{desc}</li>
-                            ))}
-                          </ul>
-                        </label>
-                      </div>
-                      <br />
+                currentTask.steps.map((step, index) => (
+                  <div className='taskText-container' key={index}>
+                    <h3>{step.stepTitle}</h3>
+                    <h4>{step.titleDescription}</h4>
+                    <div className='checkbox-container'>
+                      <input
+                        type='checkbox'
+                        id={`step${index}`}
+                        checked={checkboxStates[`step${index}`]}
+                        onChange={() => handleCheckboxChange(`step${index}`)}
+                      />
+                      <label htmlFor={`step${index}`}>
+                        <ul>
+                          {step.description.map((desc, descIndex) => (
+                            <li key={descIndex}>{desc}</li>
+                          ))}
+                        </ul>
+                      </label>
                     </div>
-                  )
-                )}
-              {tasksData[lessonType][currentTaskIndex].link && (
+                    <br />
+                  </div>
+                ))}
+              {currentTask.link && (
                 <button className='button-84' onClick={handleDownloadStyles}>
                   Download Styles
                 </button>
               )}
-              {tasksData[lessonType][currentTaskIndex].link2 && (
+              {currentTask.link2 && (
                 <button className='button-84' onClick={handleDownloadImg}>
                   Download Images
                 </button>
               )}{" "}
-              {tasksData[lessonType][currentTaskIndex].link3 && (
+              {currentTask.link3 && (
                 <button className='button-84' onClick={handleDownloadData}>
                   Download Data
                 </button>
@@ -188,12 +190,11 @@ const LiveEditor = () => {
           )}
         </div>
         <iframe
-          src={`https://codesandbox.io/embed/rssh4g?view=editor+%2B+preview&module=%2Fsrc%2FMain.js&hidenavigation=1&task=${taskId}`}
+          src={codesandboxUrl}
           title='React'
           allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
           sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
         ></iframe>
-       
       </div>
       <ToastContainer />
     </div>

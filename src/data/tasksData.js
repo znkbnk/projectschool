@@ -474,6 +474,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-2-2fxd29",
       img: require("../images/ReactLesson2.webp"),
       link: "https://www.dropbox.com/scl/fi/03e0si4h3xgxgg74ygra3/BMIstyles.css.css?rlkey=v7kz0wgjp8qtyhfr7ttco3vqx&dl=0",
     },
@@ -548,6 +549,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-3-cf8936",
       img: require("../images/ReactLesson3.webp"),
       link: "https://www.dropbox.com/scl/fi/knoeb48ov2on7o1p7qcim/DarkLight.css?rlkey=s5xlzw4l86ugerz5w9v0e5w07&st=hnajvomv&dl=0",
     },
@@ -2936,7 +2938,8 @@ const tasksData = {
     {
       taskId: "reacttask29",
       taskTitle: "TradeHub: React Trading Dashboard.",
-      introduction: "Our React trading dashboard application offers users a comprehensive platform for managing their investments, executing trades, and monitoring market data. With intuitive navigation, real-time price updates, and personalized user profiles, traders can make informed decisions and track their portfolios efficiently.",
+      introduction:
+        "Our React trading dashboard application offers users a comprehensive platform for managing their investments, executing trades, and monitoring market data. With intuitive navigation, real-time price updates, and personalized user profiles, traders can make informed decisions and track their portfolios efficiently.",
 
       steps: [
         {
@@ -2944,15 +2947,13 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Set up a new React project using Create React App or your preferred method.",
-         
           ],
         },
         {
           stepTitle: "Step 2: Component Structure",
           titleDescription: "",
           description: [
-             "Plan out the component structure based on the provided designs. Identify main components like Dashboard, Support, Transaction, etc.",
-          
+            "Plan out the component structure based on the provided designs. Identify main components like Dashboard, Support, Transaction, etc.",
           ],
         },
         {
@@ -2960,7 +2961,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Create a reusable layout component (DashboardLayout) that includes a top navigation bar and a side navigation bar (Sidenav). Implement responsive design for different screen sizes.",
-          
           ],
         },
         {
@@ -2968,7 +2968,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Build the top navigation bar (TopNav) with features like a title/logo, user profile menu, and responsive menu toggle button for small screens.",
-          
           ],
         },
         {
@@ -2976,56 +2975,56 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Develop the side navigation bar (Sidenav) with links to different sections of the dashboard. Ensure it's responsive and collapsible on smaller screens.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Dashboard Page",
           titleDescription: "",
           description: [
             "Create the main dashboard page (Dashboard) displaying portfolio information, price sections, recent transactions, and informational cards. Utilize reusable components like PortfolioSection, PriceSection, Transactions, and InfoCard.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Transaction Page",
           titleDescription: "",
           description: [
             "Design the transaction page (TransactionPage) with tabs for different transaction types (All, Deposit, Withdraw, Trade). Implement a transaction table (TransactionTable) component to display transaction data.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Support Page",
           titleDescription: "",
           description: [
             "Develop the support page (Support) with contact options like email and live chat. Utilize components like SupportCard and ContactCard to structure the page.",
-         
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Styling",
           titleDescription: "",
           description: [
             "Apply CSS styles using a CSS framework like Chakra UI or styled-components to achieve the desired look and feel for each component.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Routing",
           titleDescription: "",
           description: [
             " Set up routing using React Router to navigate between different pages (Dashboard, Transaction, Support) and handle URL changes.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 11: Install Dependencies",
           titleDescription: "",
           description: [
             "You'll need to install and import several dependencies and libraries:",
-             "'React and ReactDom'. Installation: npm install react react-dom",
+            "'React and ReactDom'. Installation: npm install react react-dom",
             "'React Router'. Installation: npm install react-router-dom",
             "'Chakra UI. Installation: npm install @chakra-ui/react @emotion/react @emotion/styled'",
             "'Icons'. Installation: npm install react-icons",
-            "'Chakra-UI Icons'. Installation: npm install @chakra-ui/icons"
-            
+            "'Chakra-UI Icons'. Installation: npm install @chakra-ui/icons",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 12: Create a TopNav Component",
           titleDescription: "TopNav.js",
           description: [
@@ -3035,7 +3034,8 @@ const tasksData = {
             "Inside the <Heading> component, use curly braces to insert the 'title' argument.",
             "Utilize the 'onClick' event handler on the <Icon> component. Assign the 'onOpen' function to the 'onClick' attribute.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 13: Create a Sidenav Component",
           titleDescription: "Sidenav.js",
           description: [
@@ -3044,11 +3044,11 @@ const tasksData = {
             "Utilize the useLocation hook from react-router-dom to access the current location.",
             "Define a function isActiveLink(link) to check if the provided link matches the current location pathname.",
             "Create an array navLinks containing objects with properties for icon, text, and link for each navigation item.",
-             "In the return statement, select any element/s of your choice from the chakra-ui.com website by entering 'Box' into the search input, and then proceed to copy its code.",
+            "In the return statement, select any element/s of your choice from the chakra-ui.com website by entering 'Box' into the search input, and then proceed to copy its code.",
             "Repeat the step outlined previously, but this time for: HStack, Heading, Icon, Stack, Text. Also, import those components from chakra-ui/react at the beginning of the file.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 14: Create a SideDrawer Component",
           titleDescription: "SideDrawer.js",
           description: [
@@ -3057,14 +3057,15 @@ const tasksData = {
             "Use the isOpen prop on the <Drawer> component.",
             "Assign the onClose function to the onClose prop of the <Drawer> component. ",
             "In the return statement, select any element/s of your choice from the chakra-ui.com website by entering 'Drawer' into the search input, and then proceed to copy its code.",
-           "Repeat the step outlined previously, but this time for: DrawerBody, DrawerOverlay, DrawerContent and DrawerCloseButton.",
+            "Repeat the step outlined previously, but this time for: DrawerBody, DrawerOverlay, DrawerContent and DrawerCloseButton.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 15: Create a DashboardLayout Component",
           titleDescription: "DashboardLayout.js",
           description: [
             "Import necessary components: Sidenav, TopNav and SideDrawer",
-             "Import necessary hook 'useDisclosure' from  '@chakra-ui/react'",
+            "Import necessary hook 'useDisclosure' from  '@chakra-ui/react'",
             "Declare a functional component named DashboardLayout. It accepts two props: 'title' and 'children'.",
             "Utilize the 'useDisclosure' hook from Chakra UI to manage the state of the side drawer. Destructure the state variables 'isOpen', 'onOpen', and 'onClose' from the return value of useDisclosure.",
             "In the return statement, select any element/s of your choice from the chakra-ui.com website by entering 'Box' into the search input, and then proceed to copy its code.",
@@ -3074,16 +3075,17 @@ const tasksData = {
             "Render the TopNav component, passing title and onOpen props.",
             "Render the children prop within the Container component.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 16: Create a PortfolioSection Component",
           titleDescription: "PortfolioSection.js",
           description: [
             "Declare a functional component named PortfolioSection.",
-             "In the return statement, select any element/s of your choice from the chakra-ui.com website by entering 'HStack' into the search input, and then proceed to copy its code.",
+            "In the return statement, select any element/s of your choice from the chakra-ui.com website by entering 'HStack' into the search input, and then proceed to copy its code.",
             "Repeat the step outlined previously, but this time for: Button, Icon, Stack, Tag and Text. Also, import those components from chakra-ui/react at the beginning of the file.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 17: Create a CustomCard Component",
           titleDescription: "CustomCard.js",
           description: [
@@ -3091,9 +3093,9 @@ const tasksData = {
             "Create a custom card component using the chakra function.",
             "The chakra function takes two arguments: the HTML element type ('div' in this case) and the object which includes the 'baseStyle' property to define the base styles for the custom card. In this case, the card has a white background (bg: 'white'), rounded corners (borderRadius: 'xl'), and padding (p: '6').",
             "Understanding 'chakra': The chakra function is a utility provided by Chakra UI for creating custom styled components. It enhances HTML elements with additional functionality and styling capabilities, making them compatible with Chakra UI's design system. Once defined, the CustomCard component can be used like any other React component. It can accept additional props and render content inside it while inheriting the base styles defined in the chakra function.",
-           
           ],
-        },  {
+        },
+        {
           stepTitle: "Step 18: Create a PriceSection Component",
           titleDescription: "PriceSection.js",
           description: [
@@ -3106,102 +3108,107 @@ const tasksData = {
             "Repeat the step outlined previously, but this time for:  Button, Icon, Image, Stack, Tabs and Tab. Also, import those components from chakra-ui/react at the beginning of the file.",
             "Inside each 'TabPanel', map through the corresponding array of 'timestamps' and render them. Use the Text component from Chakra UI to display each 'timestamp'.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 19: Create a Transactions Component",
           titleDescription: "Transactions.js",
           description: [
             "Import necessary component: CustomCard.",
-             "Declare an array transactions containing objects representing transaction data.",
+            "Declare an array transactions containing objects representing transaction data.",
             "Each transaction object contains properties like id, icon, text, amount, and timestamp.",
             "Define any element/s of your choice from the chakra-ui.com website by entering 'Stack' into the search input, and then proceed to copy its code.",
             "Repeat the step outlined previously, but this time for: Button, Divider, Image, Stack, Grid, Icon, and Text. Also, import those components from chakra-ui/react at the beginning of the file.",
             "Iterate over the 'transactions' array using the map function.",
             "Render each transaction item as a 'Flex' container with transaction details.",
             "Use 'Divider' component to separate transaction items.",
-            "Utilize 'Fragment' to group multiple elements without adding extra nodes to the DOM. Set the 'key' prop to a unique identifier associated with each transaction, such as 'transaction.id'."
+            "Utilize 'Fragment' to group multiple elements without adding extra nodes to the DOM. Set the 'key' prop to a unique identifier associated with each transaction, such as 'transaction.id'.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 20: Create a InfoCard Component",
           titleDescription: "InfoCard.js",
           description: [
             "Import necessary component: CustomCard.",
-             "Create a functional component named InfoCard.",
+            "Create a functional component named InfoCard.",
             "Define props for 'imgUrl', 'text', 'tagText', and 'inverted'.",
             "In return statement use the 'CustomCard' component to wrap the content.",
             "Define any element/s of your choice from the chakra-ui.com website by entering 'Tag' into the search input, and then proceed to copy its code.",
             "Repeat the step outlined previously, but this time for: Text. Also, import those components from chakra-ui/react at the beginning of the file.",
             "Ensure that the InfoCard component receives the necessary props (imgUrl, text, tagText, inverted) when used.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 21: Create a ContactCard Component",
           titleDescription: "ContactCard.js",
           description: [
             "Create a functional component named SupportCard.",
             "Define any element/s of your choice from the chakra-ui.com website by entering 'Card' into the search input, and then proceed to copy its code.",
-             "Repeat the step outlined previously, but this time for: Checkbox, FormControl, FormLabel, HStack, Input, Box, Stack, Text, Textarea, and Button. Also, import those components from chakra-ui/react at the beginning of the file.",
-           
+            "Repeat the step outlined previously, but this time for: Checkbox, FormControl, FormLabel, HStack, Input, Box, Stack, Text, Textarea, and Button. Also, import those components from chakra-ui/react at the beginning of the file.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 22: Create a SupportCard Component",
           titleDescription: "SupportCard.js",
           description: [
             "Create a functional component named SupportCard.",
-             "Define props for 'leftComponent', 'icon', 'title', and 'text'.",
+            "Define props for 'leftComponent', 'icon', 'title', and 'text'.",
             "Define any element/s of your choice from the chakra-ui.com website by entering 'Flex' into the search input, and then proceed to copy its code.",
             "Repeat the step outlined previously, but this time for: Box, Flex, Icon, Stack, and Text. Also, import those components from chakra-ui/react at the beginning of the file.",
             "Ensure that the 'chakra' components receives the necessary props (leftComponent, icon, title, text) when used.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 23: Create a SupportCard Component",
           titleDescription: "Support.js",
           description: [
             "Import necessary components: DashboardLayout, ContactCard, SupportCard, InfoCard",
-             "Create a functional component named Support.",
+            "Create a functional component named Support.",
             "In your return statement use DashboardLayout component as the layout for the support page.",
             "Define element from the chakra-ui.com website by entering 'Stack' into the search input, and then proceed to copy its code. Do not forget to import it at the beginming of the file",
             "Include SupportCard inside a Stack component with appropriate spacing.",
             "Pass props such as 'icon', 'leftComponent', 'title', and 'text' to each 'SupportCard'",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 24: Create a TransactionTable Component",
           titleDescription: "TransactionTable.js",
           description: [
             "Create a functional component named TransactionTable.",
-             "Define an array tableData containing transaction details. Each transaction object should have properties like 'id', 'date', 'time', 'type', 'amount', and 'status'.",
+            "Define an array tableData containing transaction details. Each transaction object should have properties like 'id', 'date', 'time', 'type', 'amount', and 'status'.",
             "Define any element/s of your choice from the chakra-ui.com website by entering 'Table Container' into the search input, and then proceed to copy its code.",
             "Repeat the step outlined previously, but this time for: Table, Thead, Tbody, Tr, Th, Td, Stack, Text, and Tag. Also, import those components from chakra-ui/react at the beginning of the file.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 25: Create a TransactionPage Component",
           titleDescription: "Transaction.js",
           description: [
             "Import necessary components: DashboardLayout, TransactionTable",
-             "Create a functional component named TransactionPage.",
+            "Create a functional component named TransactionPage.",
             "Define an array tabs containing tab 'names' and their corresponding 'counts'",
             "In return statement use DashboardLayout component to wrap the page content.",
             "Define any element/s of your choice from the chakra-ui.com website by entering 'Card' into the search input, and then proceed to copy its code.",
             "Repeat the step outlined previously, but this time for: Button, Flex, HStack, Icon, Input, InputGroup, InputLeftElement, and Tag. Also, import those components from chakra-ui/react at the beginning of the file.",
             "Inside the HStack, utilize the tabs.map function to dynamically generate tabs.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 26: Create a Dashboard Component",
           titleDescription: "Dashboard.js",
           description: [
             "Import components required for the dashboard layout: DashboardLayout, PortfolioSection, PriceSection, Transactions, InfoCard.",
-             "Define a functional component named Dashboard.",
+            "Define a functional component named Dashboard.",
             "Define any element/s of your choice from the chakra-ui.com website by entering 'Grid' into the search input, and then proceed to copy its code.",
             "Repeat the step outlined previously, but this time for: GridItem. Also, import this component from chakra-ui/react at the beginning of the file.",
             "Render the respective components within each GridItem.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 27: Create/Change a App.js Component",
           titleDescription: "App.js",
           description: [
             "Import the Dashboard, Support, and TransactionPage components from their respective files.",
-             "Import the necessary routing components from React Router DOM for routing configuration.",
+            "Import the necessary routing components from React Router DOM for routing configuration.",
             "Use createBrowserRouter to define the routing configuration.",
             "Use createBrowserRouter to define the routing configuration.",
             "Define a functional component named App.",
@@ -3217,7 +3224,6 @@ const tasksData = {
             "Import the custom theme object from the theme.js file. ",
             "Wrap the root component (App) with the ChakraProvider component.",
             "Pass the custom theme object to the theme prop of the ChakraProvider.",
-        
           ],
         },
       ],
