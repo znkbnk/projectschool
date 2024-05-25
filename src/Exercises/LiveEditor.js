@@ -103,7 +103,7 @@ const LiveEditor = () => {
     }
   };
   const handleDownloadImg = () => {
-    const imgLink = tasksData[lessonType][currentTaskIndex].link2;
+    const imgLink = tasksData[lessonType][currentTaskIndex].linkImg;
     if (imgLink) {
       window.open(imgLink, "_blank");
     } else {
@@ -111,7 +111,7 @@ const LiveEditor = () => {
     }
   };
   const handleDownloadData = () => {
-    const dataLink = tasksData[lessonType][currentTaskIndex].link3;
+    const dataLink = tasksData[lessonType][currentTaskIndex].linkData;
     if (dataLink) {
       window.open(dataLink, "_blank");
     } else {
@@ -158,12 +158,12 @@ const LiveEditor = () => {
                   Download Styles
                 </button>
               )}
-              {currentTask.link2 && (
+              {currentTask.linkImg && (
                 <button className='button-84' onClick={handleDownloadImg}>
                   Download Images
                 </button>
               )}{" "}
-              {currentTask.link3 && (
+              {currentTask.linkData && (
                 <button className='button-84' onClick={handleDownloadData}>
                   Download Data
                 </button>

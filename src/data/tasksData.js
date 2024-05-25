@@ -1012,7 +1012,7 @@ const tasksData = {
       codesandboxUr: "https://codesandbox.io/p/sandbox/lesson-9-56gy36",
       img: require("../images/ReactLesson9.webp"),
       link: "https://www.dropbox.com/scl/fi/mqd7ggdarkm4fl704iun1/memoryStyles.css?rlkey=9amnv9br4g9t7iz3w4iz9e8h8&st=xopph5bz&dl=0",
-      link2:
+      linkImg:
         "https://www.dropbox.com/scl/fo/xun1wmslf3nuok6kjslto/AJAoOoiDotzvxhHAdeA20co?rlkey=lfo67u2afk1bsaouc41azfd5p&st=cfmm90r4&dl=0",
     },
     {
@@ -1941,7 +1941,7 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-19-sidebar-7dcynh",
       img: require("../images/ReactLesson19.webp"),
       link: "https://www.dropbox.com/scl/fi/gkczh6ps4swxpr1cebv3m/sidebarStyles.css?rlkey=1gn09lghyev6h92r4vzm143ny&st=sjjt66f6&dl=0",
-      link3:
+      linkData:
         "https://www.dropbox.com/scl/fi/cbzzf2hzzi7bpzfzm5496/sidebar.json?rlkey=3wufj9ijefhd9zdl3lucq6jn0&st=muc48ibt&dl=0",
     },
     {
@@ -2042,7 +2042,7 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-20-dynamic-table-with-sorting-and-copy-functionality-nklcs7",
       img: require("../images/ReactLesson20.webp"),
       link: "https://www.dropbox.com/scl/fi/d0q4mnod8ujtuzdm26702/tableStyles.css?rlkey=iv41red29y6ghfr179l7q55we&st=4657uhv6&dl=0",
-      link3:
+      linkData:
         "https://www.dropbox.com/scl/fi/7f1x9hdogipicqprg0b1m/MOCK_DATA.json?rlkey=560qnx7xci00p2107gl1mbo23&st=6hzqv971&dl=0",
     },
     {
@@ -2183,6 +2183,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-21-todo-app-dqvxqy",
       img: require("../images/ReactLesson21.webp"),
       link: "https://www.dropbox.com/scl/fi/jbdlfwibc4fi9jnesjevt/todoStyles.css?rlkey=8khn7jf4fbes6dl82vhw9g7cq&st=hu1wmyz0&dl=0",
     },
@@ -2264,11 +2265,12 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-22-testimonials-zj8n36",
       img: require("../images/ReactLesson22.webp"),
       link: "https://www.dropbox.com/scl/fi/y1yc1mh9isqrbktm5adfh/testimonialsStyles.css?rlkey=85uofxm5xfuv4a4iu5mvzqgi3&st=pmq8ylyh&dl=0",
     },
     {
-      taskId: "reacttask",
+      taskId: "reacttask23",
       taskTitle: "Voice to Text",
       introduction:
         "This React application utilizes speech recognition to convert spoken words into text in real-time, enabling users to interact with the interface through voice commands. Additionally, users can conveniently copy the recognized text to their clipboard with the click of a button.",
@@ -2365,6 +2367,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-23-voice-to-text-9jclqn",
       img: require("../images/ReactLesson23.webp"),
       link: "https://www.dropbox.com/scl/fi/axg1uy5ds3m3fnzf6u8fe/voiceToTextStyles.css?rlkey=95c02402dkkcl12qj75qf82it&st=mhgahg76&dl=0",
     },
@@ -2431,6 +2434,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-24-text-to-voice-5l526g",
       img: require("../images/ReactLesson24.webp"),
       link: "https://www.dropbox.com/scl/fi/tarvsoi5fgx8c4kar8gs7/textToVoiceStyles.css?rlkey=87sk3e7qtill3m205gfjhr6cv&st=5jhx5kjf&dl=0",
     },
@@ -2613,9 +2617,10 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-25-course-finder-4fvyjs",
       img: require("../images/ReactLesson25.webp"),
       link: "https://www.dropbox.com/scl/fi/q4wtsg840xgeapkcf14c5/courseFinderStyles.css?rlkey=8730yrzni5wtv4utdc0eebgek&st=zt7m1rbq&dl=0",
-      link3:
+      linkData:
         "https://www.dropbox.com/scl/fi/fg84c0gl9r71enaij1w1f/data.js?rlkey=odo6ubd1wm65zdyh5admq63hh&st=qu6d83ly&dl=0",
     },
     {
@@ -2749,11 +2754,12 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-26-course-shop-6k7zvw",
       img: require("../images/ReactLesson26.webp"),
       link: "https://www.dropbox.com/scl/fi/2ztcyxpl23euc4621pgrk/courseShopStyles.css?rlkey=nfu7b3lsl98w0asmlwu80omio&st=swxaihy0&dl=0",
-      link2:
+      linkImg:
         "https://www.dropbox.com/scl/fo/vltgb0atop29kgu0xy6mr/AKNJ_oUkZ_bbCn1uYgXkjvQ?rlkey=c4r6xjl6ch9vgwrxhjj2zs1ns&st=zhalksgn&dl=0",
-      link3:
+      linkData:
         "https://www.dropbox.com/scl/fi/nmmqf0tr0yhpx9vf0o37x/products.js?rlkey=2e0st63koly7ivvo5x60okrhp&st=35ajx6cl&dl=0",
     },
     {
@@ -2863,6 +2869,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-27-materializecss-portfolio-wp9hkw",
       img: require("../images/ReactLesson27.webp"),
       link: "https://www.dropbox.com/scl/fi/qzlk1srk93y1ut98cw1q2/materializecssStyles.css?rlkey=orbzl27hvw1ao3vnl7yps07y4&st=th9ekx3n&dl=0",
     },
@@ -2951,6 +2958,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-28-materializecss-web-toolkit-8y8mkt",
       img: require("../images/ReactLesson28.webp"),
     },
     {
@@ -3250,6 +3258,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: "https://codesandbox.io/p/sandbox/lesson-29-chakra-dashboard-dtwvpq",
       img: require("../images/ReactLesson29.webp"),
       link: "https://www.dropbox.com/scl/fi/pb18ki5xovtd5fud36d4d/index.js?rlkey=luh3f3pa2xx2ldiaao6xfdfux&st=2xvsaaph&dl=0",
     },
