@@ -1,10 +1,9 @@
 import React from 'react'
 
-const cherviak = () => {
+const SingleColor = () => {
   return (
-    <div>cherviak</div>
-    
+    <div>SingleColor</div>
   )
 }
 
-export default cherviak
+export default SingleColor

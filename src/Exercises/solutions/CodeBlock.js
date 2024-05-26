@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'; // Choose your preferred style
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import 'prismjs'; // Import Prism
-import 'prismjs/components/prism-javascript';
+import hljs from 'highlight.js';
 import "../../styles/solution.css";
 
+hljs.configure({
+  languages: ['javascript'], // Add more languages if needed
+});
 
 const CodeBlock = ({ code }) => {
   const [copied, setCopied] = useState(false);
@@ -18,7 +20,7 @@ const CodeBlock = ({ code }) => {
   return (
     <div className="solution-container">
       <div className="code-block">
-        <SyntaxHighlighter style={vscDarkPlus} className="custom-code-block">
+        <SyntaxHighlighter language="javascript" style={a11yDark} className="custom-code-block">
           {code}
         </SyntaxHighlighter>
         <CopyToClipboard text={code} onCopy={handleCopy}>
