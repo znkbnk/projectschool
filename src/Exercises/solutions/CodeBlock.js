@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import "../../styles/solution.css";
 
