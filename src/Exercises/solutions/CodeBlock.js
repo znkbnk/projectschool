@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'; // Choose your preferred style
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'; 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import hljs from 'highlight.js';
 import "../../styles/solution.css";
 
 hljs.configure({
-  languages: ['javascript'], // Add more languages if needed
+  languages: ['javascript'],
 });
 
 const CodeBlock = ({ code }) => {
