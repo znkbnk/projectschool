@@ -11,9 +11,7 @@ const CodeBlock = ({ code }) => {
   const handleCopy = () => {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000); 
-  };
-
-  
+  };  
 
   return (
     <div className="solution-container">
