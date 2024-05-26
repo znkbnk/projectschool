@@ -43,4 +43,5 @@ const Solution2 = () => {
 export default Solution2;
 `;
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default [solutionCode1, solutionCode2];
