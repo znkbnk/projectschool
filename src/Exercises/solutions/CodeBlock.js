@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'prismjs/themes/prism.css';
 import "../../styles/solution.css";
 
 const CodeBlock = ({ code }) => {
@@ -23,6 +22,7 @@ const CodeBlock = ({ code }) => {
             {copied ? "Copied!" : "Copy Code"}
           </button>
         </div>
+        {copied && <div className="copied-message">Copied!</div>}
       </div>
     </div>
   );
