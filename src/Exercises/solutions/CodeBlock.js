@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import 'prismjs'; // Import Prism
+import 'prismjs/components/prism-javascript';
 import "../../styles/solution.css";
 
 
