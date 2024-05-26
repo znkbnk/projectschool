@@ -57,6 +57,13 @@
   padding: 10px;
 }
 
+.task-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .task p {
   padding: 20px;
 }

@@ -11,6 +11,7 @@ const LiveEditor = () => {
   const [isCompleted, setIsCompleted] = useState(false);
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
   const [checkboxStates, setCheckboxStates] = useState({});
+  
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -119,6 +120,10 @@ const LiveEditor = () => {
     }
   };
 
+  const handleSolutionClick = () => {
+    navigate(`/solution/${lessonType}/${taskId}`);
+  };
+
   const currentTask = tasksData[lessonType][currentTaskIndex];
   const codesandboxUrl = currentTask ? currentTask.codesandboxUrl : "";
 
@@ -153,21 +158,26 @@ const LiveEditor = () => {
                     <br />
                   </div>
                 ))}
-              {currentTask.link && (
-                <button className='button-84' onClick={handleDownloadStyles}>
-                  Download Styles
+              <div className="task-button-container">
+                <button className='button-84' onClick={handleSolutionClick}>
+                  Solution
                 </button>
-              )}
-              {currentTask.linkImg && (
-                <button className='button-84' onClick={handleDownloadImg}>
-                  Download Images
-                </button>
-              )}{" "}
-              {currentTask.linkData && (
-                <button className='button-84' onClick={handleDownloadData}>
-                  Download Data
-                </button>
-              )}
+                {currentTask.link && (
+                  <button className='button-84' onClick={handleDownloadStyles}>
+                    Download Styles
+                  </button>
+                )}
+                {currentTask.linkImg && (
+                  <button className='button-84' onClick={handleDownloadImg}>
+                    Download Images
+                  </button>
+                )}{" "}
+                {currentTask.linkData && (
+                  <button className='button-84' onClick={handleDownloadData}>
+                    Download Data
+                  </button>
+                )}
+              </div>
             </div>
           </div>
           {lessonType && lessonType.length > 0 && (
@@ -192,7 +202,7 @@ const LiveEditor = () => {
         <iframe
           src={codesandboxUrl}
           title='React'
-          allow='accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking'
+          allow='accelerometer; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb;'
           sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
         ></iframe>
       </div>

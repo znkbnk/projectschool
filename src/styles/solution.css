@@ -1,0 +1,46 @@
+.solution-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .custom-code-block {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .copy-button {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .button-85 {
+    margin-right: 3rem;
+    background: linear-gradient(#464d55, #25292e);
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  
+  .button-85:hover {
+    box-shadow: rgba(231, 155, 155, 0.2) 0 2px 8px;
+    opacity: 0.85;
+  }
+
+  @media only screen and (max-device-width: 769px) {
+    .button-85 {
+      top: 5rem;
+    left: 2rem;
+
+    }
+  }
+  
