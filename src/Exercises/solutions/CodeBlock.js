@@ -18,7 +18,7 @@ const CodeBlock = ({ code }) => {
   return (
     <div className="solution-container">
       <div className="code-block">
-        <SyntaxHighlighter language="javascript" style={vscDarkPlus} className="custom-code-block">
+        <SyntaxHighlighter style={vscDarkPlus} className="custom-code-block">
           {code}
         </SyntaxHighlighter>
         <CopyToClipboard text={code} onCopy={handleCopy}>
