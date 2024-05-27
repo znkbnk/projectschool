@@ -401,7 +401,7 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/embed/vywdxt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
 
       img: require("../images/ReactLesson1.webp"),
-      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/InteractiveCard.css?rlkey=bydjjmcbwquipvhhlw470mbkb&st=op6om9ay&dl=0",
+      link: "https://www.dropbox.com/scl/fi/ttc2uqnhaxzmky587jj0w/3dHoverStyles.css?rlkey=gbdk8jfuexgcu5z1e52efhj4m&st=3zoceprl&dl=0",
     },
     {
       taskId: "reacttask2",

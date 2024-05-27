@@ -21,7 +21,6 @@ import Checkout from "./Stripe/Checkout";
 import Blog from "./Blog/Blog";
 import BlogPage from "./Blog/BlogPage";
 import { auth } from "./components/firebase";
-import Solution from "./Exercises/solutions/Solution";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -87,10 +86,7 @@ const App = () => {
           path='/editor/:lessonType/:taskId'
           element={isLoggedIn ? <LiveEditor /> : <Navigate to='/login' />}
         />
-        <Route
-          path='/solution/:lessonType/:taskId'
-          element={isLoggedIn ? <Solution /> : <Navigate to='/login' />}
-        />
+        
 
         <Route
           path='/authors'

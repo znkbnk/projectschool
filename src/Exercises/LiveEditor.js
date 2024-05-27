@@ -5,13 +5,16 @@ import { tasksData } from "../data/tasksData";
 import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
+import CodeBlock from "./solutions/CodeBlock";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
   const [isCompleted, setIsCompleted] = useState(false);
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
   const [checkboxStates, setCheckboxStates] = useState({});
-  
+  const [solutionCodes, setSolutionCodes] = useState([]);
+  const [showSolution, setShowSolution] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,6 +35,21 @@ const LiveEditor = () => {
       setCheckboxStates(storedCheckboxStates);
     }
   }, [lessonType, taskId]);
+
+  useEffect(() => {
+    import(`./solutions/${taskId}`)
+      .then((module) => {
+        if (Array.isArray(module.default)) {
+          setSolutionCodes(module.default);
+        } else {
+          setSolutionCodes([module.default]);
+        }
+      })
+      .catch((error) => {
+        console.error("Error loading solution:", error);
+        setSolutionCodes(["Solution not found"]);
+      });
+  }, [taskId]);
 
   const handleCheckboxChange = (stepId) => {
     setCheckboxStates((prevState) => ({
@@ -103,6 +121,7 @@ const LiveEditor = () => {
       toast.error("No styles found for download.");
     }
   };
+
   const handleDownloadImg = () => {
     const imgLink = tasksData[lessonType][currentTaskIndex].linkImg;
     if (imgLink) {
@@ -111,6 +130,7 @@ const LiveEditor = () => {
       toast.error("No images found for download.");
     }
   };
+
   const handleDownloadData = () => {
     const dataLink = tasksData[lessonType][currentTaskIndex].linkData;
     if (dataLink) {
@@ -120,8 +140,8 @@ const LiveEditor = () => {
     }
   };
 
-  const handleSolutionClick = () => {
-    navigate(`/solution/${lessonType}/${taskId}`);
+  const handleToggleSolution = () => {
+    setShowSolution(!showSolution);
   };
 
   const currentTask = tasksData[lessonType][currentTaskIndex];
@@ -158,10 +178,8 @@ const LiveEditor = () => {
                     <br />
                   </div>
                 ))}
-              <div className="task-button-container">
-                <button className='button-84' onClick={handleSolutionClick}>
-                  Solution
-                </button>
+              <div className='task-button-container'>
+                
                 {currentTask.link && (
                   <button className='button-84' onClick={handleDownloadStyles}>
                     Download Styles
@@ -177,7 +195,33 @@ const LiveEditor = () => {
                     Download Data
                   </button>
                 )}
+                <button className='button-84' onClick={handleToggleSolution}>
+                  Solution
+                </button>
               </div>
+              {showSolution && (
+                <div className='solution-popup'>
+                  <div className='solution-container'>
+                    <h2 className='solution-title'>
+                     Solution code for: {currentTask ?  currentTask.taskTitle : "Task Title"}
+                    </h2>
+                    {solutionCodes.map((code, index) => (
+                      <CodeBlock
+                        key={index}
+                        code={code}
+                        className='code-block'
+                      />
+                    ))}
+                    <button
+                    
+                      className='close-button button-84'
+                      onClick={handleToggleSolution}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           {lessonType && lessonType.length > 0 && (

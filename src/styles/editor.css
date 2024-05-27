@@ -1,16 +1,18 @@
 .editor-container {
   display: flex;
+
 }
 
 .task-container {
   display: flex;
   flex-direction: column;
   width: 20%;
-  height: 93vh;
+  height: calc(100vh - 60px);
   background-color: #000000;
   border: 1px solid #ccc;
   color: #fff;
   margin-top: 60px;
+
 }
 
 .task {
@@ -26,15 +28,15 @@
 }
 
 .editor-container iframe {
-  width: 100%;
-  height: 93vh;
-  border: 1px solid #ccc;
-  overflow: hidden;
-  overflow-y: hidden;
-  flex: 1;
   margin-top: 60px;
-}
+  width: 100%;
+  height: calc(100vh - 60px);
 
+  border: 1px solid #ccc;
+
+  flex: 1;
+}
+ 
 .text-window {
   width: 100%;
   height: 100%;
@@ -44,9 +46,12 @@
   font-size: 1.2rem;
 }
 
+
+
 .text-window h1 {
   padding: 10px;
   text-align: center;
+
 }
 .text-window h3 {
   margin: 20px 0;

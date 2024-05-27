@@ -28,7 +28,7 @@ const WelcomeComponent = () => {
   return (
     <div className='exercises-container'>
       <div>
-        <h1 className='exercises-title' ref={titleRef}>
+        <h1 className='solution-title' ref={titleRef}>
           <span>S</span>
           <span>o</span>
           <span>l</span>
@@ -47,7 +47,7 @@ const WelcomeComponent = () => {
           <span>o</span>
           <span>r</span>
           <span>:</span>
-         
+        
         </h1>
       </div>
     </div>

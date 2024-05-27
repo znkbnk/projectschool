@@ -5,9 +5,15 @@ const CodeBlock = ({ code }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000); 
-  };  
+    navigator.clipboard.writeText(code)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      })
+      .catch((error) => {
+        console.error('Failed to copy: ', error);
+      });
+  };
 
   return (
     <div className="solution-container">

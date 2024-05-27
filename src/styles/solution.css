@@ -3,14 +3,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
   }
-  
+
   .custom-code-block {
-    padding: 16px;
-    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     border-radius: 8px;
+    font-size: 14px;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow: auto; /* Added */
+    word-break: break-all; /* Added */
   }
   
   .copy-button {
@@ -36,11 +46,21 @@
     opacity: 0.85;
   }
 
+ 
+  .solution-title {
+    text-align: center;
+    word-wrap: break-word;
+    padding: 10px 0;
+  }
+  
+
   @media only screen and (max-device-width: 769px) {
     .button-85 {
       top: 5rem;
     left: 2rem;
 
     }
+   
   }
+  
   
