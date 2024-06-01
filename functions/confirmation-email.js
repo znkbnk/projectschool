@@ -1,10 +1,10 @@
-import { send } from 'emailjs-com';
+const axios = require('axios');
 
-export async function handler(event, context) {
+exports.handler = async (event) => {
   const payload = JSON.parse(event.body);
   const { type } = payload;
 
-  console.log("Received webhook event:", type); 
+  console.log("Received webhook event:", type);
 
   if (type === "checkout.session.completed") {
     const session = payload.data.object;
@@ -14,8 +14,7 @@ export async function handler(event, context) {
       const customerName = session.customer_details.name || "Valued Customer";
       const subscriptionPlan = session.lines.data[0].price.product.name;
       const subscriptionPrice = session.lines.data[0].price.unit_amount / 100;
-      const subscriptionDuration =
-        session.lines.data[0].price.recurring.interval;
+      const subscriptionDuration = session.lines.data[0].price.recurring.interval;
 
       console.log("Subscription details:", {
         customerEmail,
@@ -25,27 +24,43 @@ export async function handler(event, context) {
         subscriptionDuration,
       });
 
-      // Send confirmation email using EmailJS
-      const serviceID = process.env.EMAILJS_SERVICE_ID;
-      const templateID = process.env.EMAILJS_TEMPLATE_ID;
-      const userID = process.env.EMAILJS_USER_ID;
+      const sendgridApiKey = process.env.SENDGRID_API_KEY;
 
-      const emailParams = {
-        to_email: customerEmail,
-        from_name: "Your App Name",
-        to_name: customerName,
-        message: "Thank you for subscribing!",
-        subscription_plan: subscriptionPlan,
-        subscription_price: `$${subscriptionPrice}`,
-        subscription_duration: subscriptionDuration,
+      const emailData = {
+        personalizations: [
+          {
+            to: [
+              {
+                email: customerEmail,
+                name: customerName
+              }
+            ],
+            subject: "Subscription Confirmation"
+          }
+        ],
+        from: {
+          email: "your_email@example.com",
+          name: "Your App Name"
+        },
+        content: [
+          {
+            type: "text/plain",
+            value: `Dear ${customerName},\n\nThank you for subscribing to ${subscriptionPlan}!\n\nPrice: $${subscriptionPrice}\nDuration: ${subscriptionDuration}\n\nBest regards,\nYour App Team`
+          }
+        ]
       };
 
       try {
-        await send(serviceID, templateID, emailParams, userID);
-        console.log("Confirmation email sent successfully");
+        const response = await axios.post('https://api.sendgrid.com/v3/mail/send', emailData, {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${sendgridApiKey}`
+          }
+        });
+        console.log("Confirmation email sent successfully", response.data);
       } catch (error) {
         console.error("Error sending confirmation email:", error);
-        return { statusCode: 500, body: JSON.stringify({ error: error.message }) }; 
+        return { statusCode: 500, body: JSON.stringify({ error: error.message }) };
       }
     }
   }
@@ -54,4 +69,4 @@ export async function handler(event, context) {
     statusCode: 200,
     body: JSON.stringify({ received: true }),
   };
-}
+};
