@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,7 +6,6 @@ import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
-import { auth, db } from "../components/firebase";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -16,7 +14,6 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const navigate = useNavigate();
 
@@ -25,29 +22,18 @@ const LiveEditor = () => {
     const completedTasks =
       JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
     setIsCompleted(completedTasks[taskId] || false);
+  }, [lessonType, taskId]);
 
-    // Check user subscription status
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        const userRef = db.collection("users").doc(user.uid); // Add this line
-        const unsubscribeFromUserUpdates = userRef.onSnapshot((doc) => {
-          const userData = doc.data();
-          setIsSubscribed(userData.status === "subscribed");
-        });
-
-        // Clean up the listener when the component unmounts
-        return () => {
-          unsubscribeFromUserUpdates();
-        };
-      } else {
-        setIsSubscribed(false);
-      }
-    });
-
-    // Clean up the authentication listener when the component unmounts
-    return () => {
-      unsubscribe();
-    };
+  useEffect(() => {
+    if (lessonType && taskId) {
+      const index = tasksData[lessonType].findIndex(
+        (task) => task.taskId === taskId
+      );
+      setCurrentTaskIndex(index);
+      const storedCheckboxStates =
+        JSON.parse(localStorage.getItem(taskId)) || {};
+      setCheckboxStates(storedCheckboxStates);
+    }
   }, [lessonType, taskId]);
 
   useEffect(() => {
@@ -110,7 +96,7 @@ const LiveEditor = () => {
       const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
       const updatedTasksData = { ...tasksData };
       updatedTasksData[lessonType][taskIndex].completed = true;
- 
+
       const completedTasks =
         JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
       completedTasks[taskId] = true;
@@ -155,10 +141,6 @@ const LiveEditor = () => {
   };
 
   const handleToggleSolution = () => {
-    if (!isSubscribed) {
-      toast.warn("Please subscribe to access the solution.");
-      return;
-    }
     setShowSolution(!showSolution);
   };
 
@@ -197,6 +179,7 @@ const LiveEditor = () => {
                   </div>
                 ))}
               <div className='task-button-container'>
+                
                 {currentTask.link && (
                   <button className='button-84' onClick={handleDownloadStyles}>
                     Download Styles
@@ -212,11 +195,7 @@ const LiveEditor = () => {
                     Download Data
                   </button>
                 )}
-                <button
-                  className='button-84'
-                  onClick={handleToggleSolution}
-                  disabled={!isSubscribed}
-                >
+                <button className='button-84' onClick={handleToggleSolution}>
                   Solution
                 </button>
               </div>
@@ -224,8 +203,7 @@ const LiveEditor = () => {
                 <div className='solution-popup'>
                   <div className='solution-container'>
                     <h2 className='solution-title'>
-                      Solution code for:{" "}
-                      {currentTask ? currentTask.taskTitle : "Task Title"}
+                     Solution code for: {currentTask ?  currentTask.taskTitle : "Task Title"}
                     </h2>
                     {solutionCodes.map((code, index) => (
                       <CodeBlock
@@ -235,6 +213,7 @@ const LiveEditor = () => {
                       />
                     ))}
                     <button
+                    
                       className='close-button button-84'
                       onClick={handleToggleSolution}
                     >

@@ -29,3 +29,5 @@ src/components/aa.css
 
 # Local Netlify folder
 .netlify
+src/components/cherviak.js
+src/components/firebase.js

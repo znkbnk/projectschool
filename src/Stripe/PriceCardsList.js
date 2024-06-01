@@ -13,17 +13,20 @@ const PriceCardsList = () => {
   const handleCheckout = async (priceId) => {
     try {
       const stripe = await stripePromise;
-      const { error } = await stripe.redirectToCheckout({
+      stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
         successUrl: window.location.origin + "/#success",
-        cancelUrl: window.location.origin + "/#cancel", 
+        cancelUrl: window.location.origin + "/#cancel",
+      }).then((result) => {
+        if (result.error) {
+          console.error("Error during redirect to checkout:", result.error.message);
+        } else {
+          console.log("Redirect to checkout successful:", result);
+        }
       });
-      if (error) {
-        throw new Error(error.message);
-      }
-
-      // Update user status to "subscribed" in Firebase
+  
+      // Update user status to "subscribed" in Firebase after successful checkout
       const user = auth.currentUser;
       if (user) {
         const userRef = db.collection("users").doc(user.uid);
@@ -34,6 +37,8 @@ const PriceCardsList = () => {
     } catch (error) {
       console.error("Error during checkout:", error);
     }
+  
+    return false; // Prevent default action of button click event
   };
 
   const handleFreeButtonClick = () => {

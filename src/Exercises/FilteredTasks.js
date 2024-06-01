@@ -43,7 +43,6 @@ const FilteredTasks = ({
     // Check if it's the first task or the previous task is completed
     const isPreviousTaskCompleted =
       taskIndex === 0 || completedTasks[tasks[taskIndex - 1].taskId];
-    console.log(`Task ${task.taskId} is available: ${isPreviousTaskCompleted}`);
 
     return isPreviousTaskCompleted;
   };
@@ -149,7 +148,6 @@ export default FilteredTasks;
 //     // Check if it's the first task or the previous task is completed
 //     const isPreviousTaskCompleted =
 //       taskIndex === 0 || completedTasks[tasks[taskIndex - 1].taskId];
-//     console.log(`Task ${task.taskId} is available: ${isPreviousTaskCompleted}`);
 
 //     return isPreviousTaskCompleted;
 //   };
