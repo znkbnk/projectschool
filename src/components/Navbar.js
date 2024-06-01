@@ -65,6 +65,9 @@ const Navbar = () => {
               <Link to='/livechat' className='nav-link'>
                 LiveChat
               </Link>
+              <Link to='/pricing' className='nav-link'>
+                Pricing
+              </Link>
               <Link to='/blog' className='nav-link'>
                 Blog
               </Link>

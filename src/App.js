@@ -15,12 +15,12 @@ import LiveEditor from "./Exercises/LiveEditor";
 import AuthorList from "./Authors/AuthorList";
 import Faq from "./components/Faq";
 import Pricing from "./components/Pricing";
-import Success from "./Stripe/Success";
-import Cancel from "./Stripe/Cancel";
-import Checkout from "./Stripe/Checkout";
+
+import { auth } from "./components/firebase";
 import Blog from "./Blog/Blog";
 import BlogPage from "./Blog/BlogPage";
-import { auth } from "./components/firebase";
+import Success from "./Stripe/Success";
+import Cancel from "./Stripe/Cancel";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -81,29 +81,21 @@ const App = () => {
           path='/resetPassword'
           element={isLoggedIn ? <ResetPassword /> : <Navigate to='/login' />}
         />
-
         <Route
           path='/editor/:lessonType/:taskId'
           element={isLoggedIn ? <LiveEditor /> : <Navigate to='/login' />}
         />
-        
-
         <Route
           path='/authors'
           element={isLoggedIn ? <AuthorList /> : <Navigate to='/login' />}
         />
-
         <Route
           path='/success'
-          element={isLoggedIn ? <Success /> : <Navigate to='/login' />}
+          element={<Success />}
         />
         <Route
           path='/cancel'
-          element={isLoggedIn ? <Cancel /> : <Navigate to='/login' />}
-        />
-        <Route
-          path='/checkout'
-          element={isLoggedIn ? <Checkout /> : <Navigate to='/login' />}
+          element={<Cancel />}
         />
       </Routes>
     </div>
