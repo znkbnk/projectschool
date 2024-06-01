@@ -5,40 +5,39 @@ import "../styles/checkout.css";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../components/firebase";
 
+// Initialize Stripe with your API key
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
   const navigate = useNavigate();
 
+  // Function to handle checkout process
   const handleCheckout = async (priceId) => {
     try {
       const stripe = await stripePromise;
-      stripe.redirectToCheckout({
+      const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
-        successUrl: window.location.origin + "/#success",
-        cancelUrl: window.location.origin + "/#cancel",
-      }).then((result) => {
-        if (result.error) {
-          console.error("Error during redirect to checkout:", result.error.message);
-        } else {
-          console.log("Redirect to checkout successful:", result);
-        }
+        successUrl: `${window.location.origin}/#success`,
+        cancelUrl: `${window.location.origin}/#cancel`,
       });
-  
-      // Update user status to "subscribed" in Firebase after successful checkout
-      const user = auth.currentUser;
-      if (user) {
-        const userRef = db.collection("users").doc(user.uid);
-        await userRef.update({ status: "subscribed" });
+
+      if (error) {
+        console.error("Error during redirect to checkout:", error.message);
       } else {
-        console.error("User not authenticated");
+        console.log("Redirect to checkout successful");
+        // Update user status to "subscribed" in Firebase after successful checkout
+        const user = auth.currentUser;
+        if (user) {
+          const userRef = db.collection("users").doc(user.uid);
+          await userRef.update({ status: "subscribed" });
+        } else {
+          console.error("User not authenticated");
+        }
       }
     } catch (error) {
       console.error("Error during checkout:", error);
     }
-  
-    return false; // Prevent default action of button click event
   };
 
   const handleFreeButtonClick = () => {
