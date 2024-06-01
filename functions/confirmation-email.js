@@ -1,9 +1,10 @@
-// stripeWebhook.js
-import { send } from "emailjs-com";
+import { send } from 'emailjs-com';
 
 export async function handler(event, context) {
   const payload = JSON.parse(event.body);
   const { type } = payload;
+
+  console.log("Received webhook event:", type); 
 
   if (type === "checkout.session.completed") {
     const session = payload.data.object;
@@ -16,8 +17,15 @@ export async function handler(event, context) {
       const subscriptionDuration =
         session.lines.data[0].price.recurring.interval;
 
-      // Send confirmation email using EmailJS
+      console.log("Subscription details:", {
+        customerEmail,
+        customerName,
+        subscriptionPlan,
+        subscriptionPrice,
+        subscriptionDuration,
+      });
 
+      // Send confirmation email using EmailJS
       const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
       const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
       const userID = process.env.REACT_APP_EMAILJS_USER_ID;
@@ -37,6 +45,7 @@ export async function handler(event, context) {
         console.log("Confirmation email sent successfully");
       } catch (error) {
         console.error("Error sending confirmation email:", error);
+        return { statusCode: 500, body: JSON.stringify({ error: error.message }) }; 
       }
     }
   }
