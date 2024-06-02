@@ -4,7 +4,7 @@ export async function handler(event, context) {
   const payload = JSON.parse(event.body);
   const { type } = payload;
 
-  console.log("Received webhook event:", type); 
+  console.log("Received webhook event:", type);  
 
   if (type === "checkout.session.completed") {
     const session = payload.data.object;
