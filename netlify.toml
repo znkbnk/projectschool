@@ -1,12 +1,11 @@
 [node]
-  nodeVersion = "18"
+nodeVersion = "18"
 
 [[plugins]]
 package = "@netlify/plugin-emails"
-  package = "@netlify/plugin-nextjs"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
 
 [build.environment]
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-
-
-  
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
