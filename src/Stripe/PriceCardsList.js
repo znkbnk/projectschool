@@ -15,7 +15,7 @@ const PriceCardsList = () => {
   useEffect(() => {
     const loadSendConfirmationEmail = async () => {
       try {
-        const module = await import('../../netlify/functions/sendConfirmationEmail');
+        const module = await import('./netlify/functions/sendConfirmationEmail');
         setSendConfirmationEmail(module.handler);
       } catch (error) {
         console.error('Failed to load sendConfirmationEmail:', error);
