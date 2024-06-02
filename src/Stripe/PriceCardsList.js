@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import PriceCard from './PriceCard';
 import '../styles/checkout.css';
@@ -10,6 +10,20 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
   const navigate = useNavigate();
+  const [sendConfirmationEmail, setSendConfirmationEmail] = useState(null);
+
+  useEffect(() => {
+    const loadSendConfirmationEmail = async () => {
+      try {
+        const module = await import('../../netlify/functions/sendConfirmationEmail');
+        setSendConfirmationEmail(module.handler);
+      } catch (error) {
+        console.error('Failed to load sendConfirmationEmail:', error);
+      }
+    };
+
+    loadSendConfirmationEmail();
+  }, []);
 
   // Function to handle checkout process
   const handleCheckout = async (priceId) => {
@@ -26,11 +40,17 @@ const PriceCardsList = () => {
         console.error('Error during redirect to checkout:', error.message);
       } else {
         console.log('Redirect to checkout successful');
-        // Update user status to "subscribed" in Firebase after successful checkout
         const user = auth.currentUser;
         if (user) {
           const userRef = db.collection('users').doc(user.uid);
           await userRef.update({ status: 'subscribed' });
+
+          // Send confirmation email
+          if (sendConfirmationEmail) {
+            await sendConfirmationEmail({ body: JSON.stringify({ email: user.email }) });
+          } else {
+            console.error('sendConfirmationEmail function not loaded');
+          }
         } else {
           console.error('User not authenticated');
         }
