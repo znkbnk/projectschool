@@ -1,9 +1,9 @@
-const emailjs = require('@emailjs/browser');
+import { init, send } from '@emailjs/browser';
 
 // Initialize EmailJS
-emailjs.init(process.env.EMAILJS_PUBLIC_KEY);
+init(process.env.EMAILJS_PUBLIC_KEY);
 
-exports.handler = async function(event, context) {
+export async function handler(event, context) {
   const payload = JSON.parse(event.body);
   const { type } = payload;
 
@@ -42,7 +42,7 @@ exports.handler = async function(event, context) {
       };
 
       try {
-        await emailjs.send(serviceID, templateID, emailParams);
+        await send(serviceID, templateID, emailParams);
         console.log("Confirmation email sent successfully");
       } catch (error) {
         console.error("Error sending confirmation email:", error);
@@ -58,4 +58,4 @@ exports.handler = async function(event, context) {
     statusCode: 200,
     body: JSON.stringify({ received: true }),
   };
-};
+}
