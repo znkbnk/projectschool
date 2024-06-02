@@ -1,3 +1,5 @@
+[node]
+  nodeVersion = "18"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
