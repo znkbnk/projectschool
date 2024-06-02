@@ -1,30 +1,20 @@
-import React, { useEffect } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
+import React from 'react';
+
 import PriceCard from './PriceCard';
 import '../styles/checkout.css';
 import { useNavigate } from 'react-router-dom';
-import { auth, db } from '../components/firebase';
-import sendConfirmationEmail from '../../netlify/functions/sendConfirmationEmail';
+import { auth } from 'firebase-admin';
+import { db } from '../components/firebase';
+import { loadStripe } from '@stripe/stripe-js';
 
-// Initialize Stripe with your API key
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
+
 
 const PriceCardsList = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const loadSendConfirmationEmail = async () => {
-      try {
-        await import('../../netlify/functions/sendConfirmationEmail');
-      } catch (error) {
-        console.error('Failed to load sendConfirmationEmail:', error);
-      }
-    };
 
-    loadSendConfirmationEmail();
-  }, []);
 
-  // Function to handle checkout process
   const handleCheckout = async (priceId) => {
     try {
       const stripe = await stripePromise;
@@ -34,7 +24,7 @@ const PriceCardsList = () => {
         successUrl: `${window.location.origin}/#success`,
         cancelUrl: `${window.location.origin}/#cancel`,
       });
-
+  
       if (error) {
         console.error('Error during redirect to checkout:', error.message);
       } else {
@@ -43,13 +33,6 @@ const PriceCardsList = () => {
         if (user) {
           const userRef = db.collection('users').doc(user.uid);
           await userRef.update({ status: 'subscribed' });
-
-          // Send confirmation email
-          if (sendConfirmationEmail) {
-            await sendConfirmationEmail({ body: JSON.stringify({ email: user.email }) });
-          } else {
-            console.error('sendConfirmationEmail function not loaded');
-          }
         } else {
           console.error('User not authenticated');
         }
@@ -58,6 +41,7 @@ const PriceCardsList = () => {
       console.error('Error during checkout:', error);
     }
   };
+  
 
   const handleFreeButtonClick = () => {
     navigate('/signup');
