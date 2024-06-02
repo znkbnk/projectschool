@@ -1,10 +1,12 @@
-import { send } from 'emailjs-com';
+const emailjs = require('@emailjs/browser');
+
+emailjs.init(process.env.EMAILJS_PUBLIC_KEY);
 
 export async function handler(event, context) {
   const payload = JSON.parse(event.body);
   const { type } = payload;
 
-  console.log("Received webhook event:", type);  
+  console.log("Received webhook event:", type);
 
   if (type === "checkout.session.completed") {
     const session = payload.data.object;
@@ -14,8 +16,7 @@ export async function handler(event, context) {
       const customerName = session.customer_details.name || "Valued Customer";
       const subscriptionPlan = session.lines.data[0].price.product.name;
       const subscriptionPrice = session.lines.data[0].price.unit_amount / 100;
-      const subscriptionDuration =
-        session.lines.data[0].price.recurring.interval;
+      const subscriptionDuration = session.lines.data[0].price.recurring.interval;
 
       console.log("Subscription details:", {
         customerEmail,
@@ -28,7 +29,6 @@ export async function handler(event, context) {
       // Send confirmation email using EmailJS
       const serviceID = process.env.EMAILJS_SERVICE_ID;
       const templateID = process.env.EMAILJS_TEMPLATE_ID;
-      const userID = process.env.EMAILJS_USER_ID;
 
       const emailParams = {
         to_email: customerEmail,
@@ -41,11 +41,11 @@ export async function handler(event, context) {
       };
 
       try {
-        await send(serviceID, templateID, emailParams, userID);
+        await emailjs.send(serviceID, templateID, emailParams);
         console.log("Confirmation email sent successfully");
       } catch (error) {
         console.error("Error sending confirmation email:", error);
-        return { statusCode: 500, body: JSON.stringify({ error: error.message }) }; 
+        return { statusCode: 500, body: JSON.stringify({ error: error.message }) };
       }
     }
   }
