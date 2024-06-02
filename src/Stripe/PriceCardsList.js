@@ -9,7 +9,7 @@ import '../styles/checkout.css';
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();  
 
   const handleCheckout = async (priceId) => {
     try {

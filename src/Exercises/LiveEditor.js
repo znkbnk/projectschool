@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,6 +7,8 @@ import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
+import { auth } from "firebase-admin";
+import { db } from "../components/firebase";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -14,8 +17,26 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
+  const [userSubscription, setUserSubscription] = useState(false);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Fetch user's subscription status from the database and update state
+    const fetchUserSubscriptionStatus = async () => {
+      try {
+        const user = auth.currentUser;
+        if (user) {
+          const userDoc = await db.collection('users').doc(user.uid).get();
+          const userData = userDoc.data();
+          setUserSubscription(userData.status === 'subscribed');
+        }
+      } catch (error) {
+        console.error('Error fetching user subscription status:', error);
+      }
+    };
+    fetchUserSubscriptionStatus();
+  }, []);
 
   useEffect(() => {
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
@@ -195,9 +216,11 @@ const LiveEditor = () => {
                     Download Data
                   </button>
                 )}
+                 {userSubscription && (
                 <button className='button-84' onClick={handleToggleSolution}>
                   Solution
                 </button>
+              )}
               </div>
               {showSolution && (
                 <div className='solution-popup'>
