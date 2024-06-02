@@ -1,4 +1,7 @@
-[build]
-  functions = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
   NODE_VERSION = "18"
 
+[build.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
