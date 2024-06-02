@@ -1,8 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
-// Import firebase auth and firestore correctly
-import { auth } from '../components/firebase'; // Update this import if necessary
-import { db } from '../components/firebase'; // Update this import if necessary
+import { useNavigate } from 'react-router-dom'; 
+import { auth } from '../components/firebase'; 
+import { db } from '../components/firebase'; 
 import { loadStripe } from '@stripe/stripe-js';
 import PriceCard from './PriceCard';
 import '../styles/checkout.css';
@@ -10,7 +9,7 @@ import '../styles/checkout.css';
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
-  const navigate = useNavigate(); // Ensure React Router is properly configured
+  const navigate = useNavigate(); 
 
   const handleCheckout = async (priceId) => {
     try {
