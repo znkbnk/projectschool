@@ -2,5 +2,5 @@
   NODE_VERSION = "18"
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
-  [functions]
-  node_bundler = "npm"
+[functions]
+  node_bundler = "esbuild"
