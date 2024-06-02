@@ -1,19 +1,16 @@
 import React from 'react';
-
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+// Import firebase auth and firestore correctly
+import { auth } from '../components/firebase'; // Update this import if necessary
+import { db } from '../components/firebase'; // Update this import if necessary
+import { loadStripe } from '@stripe/stripe-js';
 import PriceCard from './PriceCard';
 import '../styles/checkout.css';
-import { useNavigate } from 'react-router-dom';
-import { auth } from 'firebase-admin';
-import { db } from '../components/firebase';
-import { loadStripe } from '@stripe/stripe-js';
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
-
 const PriceCardsList = () => {
-  const navigate = useNavigate();
-
-
+  const navigate = useNavigate(); // Ensure React Router is properly configured
 
   const handleCheckout = async (priceId) => {
     try {
@@ -24,7 +21,7 @@ const PriceCardsList = () => {
         successUrl: `${window.location.origin}/#success`,
         cancelUrl: `${window.location.origin}/#cancel`,
       });
-  
+
       if (error) {
         console.error('Error during redirect to checkout:', error.message);
       } else {
@@ -41,7 +38,6 @@ const PriceCardsList = () => {
       console.error('Error during checkout:', error);
     }
   };
-  
 
   const handleFreeButtonClick = () => {
     navigate('/signup');
