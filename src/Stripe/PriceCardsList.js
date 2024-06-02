@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import PriceCard from './PriceCard';
 import '../styles/checkout.css';
 import { useNavigate } from 'react-router-dom';
 import { auth, db } from '../components/firebase';
+import sendConfirmationEmail from '../../netlify/functions/sendConfirmationEmail';
 
 // Initialize Stripe with your API key
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
   const navigate = useNavigate();
-  const [sendConfirmationEmail, setSendConfirmationEmail] = useState(null);
 
   useEffect(() => {
     const loadSendConfirmationEmail = async () => {
       try {
-        const module = await import('./netlify/functions/sendConfirmationEmail');
-        setSendConfirmationEmail(module.handler);
+        await import('../../netlify/functions/sendConfirmationEmail');
       } catch (error) {
         console.error('Failed to load sendConfirmationEmail:', error);
       }
