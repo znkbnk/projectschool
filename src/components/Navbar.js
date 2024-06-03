@@ -7,6 +7,7 @@ import imageSmall from "../images/pslogosmall.webp";
 import { auth } from "./firebase";
 import { toast } from "react-toastify";
 
+
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState("");
