@@ -4,3 +4,11 @@
 
 [functions]
   node_bundler = "esbuild"
+
+[build]
+  functions = "functions"
+
+[[headers]]
+  for = "/.netlify/functions/stripe-webhook"
+  [headers.values]
+    Content-Type = "application/json"

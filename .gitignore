@@ -27,5 +27,7 @@ src/components/aa.jpg
 src/components/aa.css
 .env
 
-# Local Netlify folder
+
 .netlify
+.next/
+.gitignore

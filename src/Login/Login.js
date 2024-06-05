@@ -24,6 +24,7 @@ const Login = () => {
         }
         navigate("/");
         toast.success("Logged in successfully");
+        toast.info(`Email verified: ${user.emailVerified ? 'Yes' : 'No'}`);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -44,7 +45,7 @@ const Login = () => {
       <Navbar />
       <div className='login-container'>
         <section id='entry-page'>
-          <form>
+          <form onSubmit={onLogin}>
             <h2>Welcome Back!</h2>
             <fieldset>
               <legend>Log In</legend>
@@ -57,6 +58,7 @@ const Login = () => {
                     type='email'
                     required
                     placeholder='Email address'
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </li>
@@ -68,6 +70,7 @@ const Login = () => {
                     type='password'
                     required
                     placeholder='Password'
+                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </li>
@@ -76,7 +79,7 @@ const Login = () => {
             <div className='forgot-password'>
               <Link to='/resetPassword'>Forgot Password?</Link>
             </div>
-            <button onClick={onLogin}>Login</button>
+            <button type='submit'>Login</button>
             <Link to='/signup'>
               <button className='login-button' type='button'>
                 Create an Account

@@ -1,10 +1,8 @@
-// functions/sendConfirmationEmail.js
-
-import { setApiKey, send } from '@sendgrid/mail';
-
-setApiKey(process.env.SENDGRID_API_KEY);
+const sgMail = require('@sendgrid/mail');
 
 export async function handler(event, context) {
+  // Set the SendGrid API key from the environment variable
+  sgMail.setApiKey(context.clientContext.SENDGRID_API_KEY);
   const { email } = JSON.parse(event.body);
 
   const msg = {
@@ -16,7 +14,7 @@ export async function handler(event, context) {
   };
 
   try {
-    await send(msg);
+    await sgMail.send(msg); // Use sgMail.send instead of send
     return {
       statusCode: 200,
       body: JSON.stringify({ message: 'Email sent successfully' }),
