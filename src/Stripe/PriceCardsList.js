@@ -10,22 +10,7 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 const PriceCardsList = () => {
   const navigate = useNavigate();
 
-  const sendConfirmationEmail = async (email) => {
-    try {
-      const response = await fetch('/.netlify/functions/sendConfirmationEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ email }),
-      });
-      if (!response.ok) {
-        throw new Error('Failed to send confirmation email');
-      }
-    } catch (error) {
-      console.error('Error sending confirmation email:', error);
-    }
-  };
+  
 
   const handleCheckout = async (priceId) => {
     try {
@@ -52,7 +37,6 @@ const PriceCardsList = () => {
       // Update user status to "subscribed" and send confirmation email only after successful checkout
       const userRef = db.collection("users").doc(user.uid);
       await userRef.update({ status: "subscribed" });
-      await sendConfirmationEmail(user.email);
     } catch (error) {
       console.error("Error during checkout:", error);
     }
