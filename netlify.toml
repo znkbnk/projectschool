@@ -1,6 +1,6 @@
 [build.environment]
   NODE_VERSION = "20.14"
-
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [functions]
   node_bundler = "esbuild"

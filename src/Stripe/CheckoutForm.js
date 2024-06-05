@@ -37,7 +37,7 @@ const CheckoutForm = ({ userId, setStatus }) => {
 
         if (paymentIntent.error) {
             console.error(paymentIntent.error);
-            return;
+            return; 
         } 
 
         const { error: confirmError } = await stripe.confirmCardPayment(paymentIntent.client_secret);
