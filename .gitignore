@@ -33,3 +33,4 @@ src/components/aa.css
 .gitignore
 src/components/firebase.js
 projectschool-48842.json
+package-lock.json
