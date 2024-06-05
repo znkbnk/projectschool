@@ -1,7 +1,7 @@
 // functions/stripe-webhook.js
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const admin = require('firebase-admin');
-const serviceAccount = require('./path/to/serviceAccountKey.json'); // Provide the path to your service account key file
+const serviceAccount = require('../../src/components/firebase');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
@@ -24,9 +24,17 @@ exports.handler = async (event, context) => {
 
   if (stripeEvent.type === 'payment_intent.succeeded') {
     const paymentIntent = stripeEvent.data.object;
-    const customerId = paymentIntent.metadata.userId;
+    const userId = paymentIntent.metadata.userId;
 
-    await firestore.collection('users').doc(customerId).update({ status: 'subscribed' });
+    try {
+      await firestore.collection('users').doc(userId).update({ status: 'subscribed' });
+    } catch (error) {
+      console.error('Error updating user status:', error);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Error updating user status' }),
+      };
+    }
   }
 
   return {
