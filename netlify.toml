@@ -7,8 +7,13 @@
 
 [build]
   functions = "functions"
+  command = "npm run build"
+  publish = ".next"
 
 [[headers]]
   for = "/.netlify/functions/stripe-webhook"
   [headers.values]
     Content-Type = "application/json"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
