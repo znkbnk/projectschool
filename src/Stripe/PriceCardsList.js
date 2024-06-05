@@ -26,8 +26,8 @@ const PriceCardsList = () => {
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
-        successUrl: window.location.origin + "/success",
-        cancelUrl: window.location.origin + "/cancel",
+        successUrl: window.location.origin + "/#success",
+        cancelUrl: window.location.origin + "/#cancel",
       });
   
       if (error) {
