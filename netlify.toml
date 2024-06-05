@@ -8,7 +8,6 @@
 [build]
   functions = "functions"
   command = "npm run build"
-  publish = ".next"  
 
 [[headers]]
   for = "/.netlify/functions/stripe-webhook"
