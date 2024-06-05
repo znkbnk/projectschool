@@ -12,7 +12,7 @@ const CheckoutForm = ({ userId, setStatus }) => {
 
         if (!stripe || !elements) {
             return;
-        }
+        } 
 
         const card = elements.getElement(CardElement);
         const { error, paymentMethod } = await stripe.createPaymentMethod({
