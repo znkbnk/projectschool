@@ -1,7 +1,7 @@
 // functions/stripe-webhook.js
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const admin = require('firebase-admin');
-const serviceAccount = require('../../src/components/firebase');
+const serviceAccount = require('./projectschool-48842.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
