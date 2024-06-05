@@ -15,7 +15,7 @@ const ChatBox = () => {
   const messagesEndRef = useRef(null);
 
   useEffect(() => { 
-    const q = query(
+    const q = query( 
       collection(db, "messages"),
       orderBy("createdAt", "asc"),
       limit(50) 
