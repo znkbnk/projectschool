@@ -8,6 +8,7 @@
   functions = "functions"
   command = "npm run build"
   publish = "build/"
+  context = "cli"
 
 [[headers]]
   for = "/.netlify/functions/stripe-webhook"
