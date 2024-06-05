@@ -1,6 +1,5 @@
 [build.environment]
   NODE_VERSION = "20.14"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [functions]
   node_bundler = "esbuild"
@@ -8,7 +7,7 @@
 [build]
   functions = "functions"
   command = "npm run build"
-  publish = "build"
+  publish = "build/"
 
 [[headers]]
   for = "/.netlify/functions/stripe-webhook"
