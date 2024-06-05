@@ -21,3 +21,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+src/components/aaaa.html
+src/components/aa.jpg
+src/components/aa.css
+.env
+
+
+.netlify
+.next/
+.gitignore
+src/components/firebase.js
+projectschool-48842.json
+package-lock.json

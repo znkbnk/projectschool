@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards-flex {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.card-container.React {
+  border-left: 8px solid #4ec9d4;
+}
+.card-container.React:hover .card-title {
+  color: #4ec9d4;
+}
+.card-container.React .card-category {
+  color: #4ec9d4;
+  font-size: 2rem;
+}
+.card-container.React .card-category::after {
+  background-color: #4ec9d4;
+}
+.card-container.React .card-date {
+  color: #000000;
+}
+
+.card-container.JavaScript {
+  border-left: 8px solid #fdcc0d;
+}
+.card-container.JavaScript:hover .card-title {
+  color: #fdcc0d;
+}
+.card-container.JavaScript .card-category {
+  color: #fdcc0d;
+}
+.card-container.JavaScript .card-category::after {
+  background-color: #fdcc0d;
+}
+.card-container.JavaScript .card-date {
+  color: #000000;
+}
+
+.card-container {
+  width: 600px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition-duration: 0.3s;
+  transform: scale(0.8);
+  overflow: hidden;
+}
+
+.card-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.3s;
+}
+
+.card-container:hover .card-category::after {
+  transition-duration: 0.3s;
+  left: 280px;
+  opacity: 0;
+}
+
+.card-container:hover .card-category::before {
+  transition-duration: 0.3s;
+  opacity: 1;
+}
+
+.card-container:hover .card-title {
+  transition-duration: 0.3s;
+}
+
+.card-category {
+  height: 50px;
+  position: relative;
+  padding: 15px 20px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.card-category::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 5px;
+  bottom: -5px;
+  left: 20px;
+  opacity: 1;
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
+.card-category::before {
+  content: "\00BB";
+  position: absolute;
+  display: block;
+  right: 20px;
+  opacity: 0;
+  bottom: -10px;
+  font-size: 3rem;
+  transition-duration: 0.3s;
+}
+
+.card-body {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch; 
+}
+
+.card-content {
+  width: 60%;
+  color: black;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 10px;
+}
+
+.card-date {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+.card-extract {
+  flex: 1;
+  color: #808080;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0 10px;
+}
+
+.card-thumb {
+  height: 80%;
+  width: 30%;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media only screen and (max-device-width: 640px) {
+  .card-container {
+    margin: 40px;
+    width: 450px;
+  }
+
+  .card-body {
+    margin: 0;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-extract {
+    font-size: 1rem;
+  }
+  .card-container.React .card-category {
+    font-size: 1rem;
+  }
+  .card-container.React .card-date {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  .card-thumb {
+    display: none;
+  }
+}
