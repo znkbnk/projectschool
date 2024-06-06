@@ -14,7 +14,6 @@ const ChatBox = () => {
   const [messages, setMessages] = useState([]);
   const messagesEndRef = useRef(null);
 
-
   useEffect(() => {
     const q = query(
       collection(db, "messages"),
