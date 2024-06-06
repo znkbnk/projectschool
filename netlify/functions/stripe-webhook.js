@@ -1,17 +1,5 @@
-// netlify/functions/stripeWebhook.js
-
 const admin = require('firebase-admin');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-
-// Initialize Firebase Admin SDK
-admin.initializeApp({
-  credential: admin.credential.cert({
-    projectId: process.env.FIREBASE_PROJECT_ID,
-    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-    privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'), // Replace escaped newlines
-  }),
-  databaseURL: process.env.FIREBASE_DATABASE_URL,
-});
 
 async function updateFirebaseStatus(customerId) {
   try {
