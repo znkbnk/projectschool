@@ -1,8 +1,8 @@
-// functions/create-payment-intent.js
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event, context) => {
     const { paymentMethodId } = JSON.parse(event.body);
+    const origin = process.env.URL || 'http://localhost:8888';
 
     try {
         const paymentIntent = await stripe.paymentIntents.create({
@@ -10,6 +10,11 @@ exports.handler = async (event, context) => {
             currency: 'gbp',
             payment_method: paymentMethodId,
             confirm: true,
+            automatic_payment_methods: {
+                enabled: true,
+                allow_redirects: true,
+            },
+            return_url: `${origin}/#success`,
         });
 
         return {

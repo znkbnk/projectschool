@@ -44,7 +44,7 @@ const CheckoutForm = ({ userId, setStatus }) => {
 
         if (confirmError) {
             console.error(confirmError);
-            return;
+            return; 
         }
 
         await firestore.collection('users').doc(userId).set({ status: 'subscribed' });

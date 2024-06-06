@@ -3,14 +3,12 @@ import { loadStripe } from "@stripe/stripe-js";
 import PriceCard from "./PriceCard";
 import "../styles/checkout.css";
 import { useNavigate } from "react-router-dom";
-import { auth, db } from "../components/firebase";
+import { auth} from "../components/firebase";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
   const navigate = useNavigate();
-
-  
 
   const handleCheckout = async (priceId) => {
     try {
@@ -19,24 +17,20 @@ const PriceCardsList = () => {
         console.error("User not authenticated");
         return; // Exit function if user is not authenticated
       }
-      
+
       console.log("User authenticated:", user);
-  
+
       const stripe = await stripePromise;
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
-        successUrl: window.location.origin + "/#success",
+        successUrl: `${window.location.origin}/#success?userId=${user.uid}`,
         cancelUrl: window.location.origin + "/#cancel",
       });
-  
+
       if (error) {
         throw new Error(error.message);
       }
-  
-      // Update user status to "subscribed" and send confirmation email only after successful checkout
-      const userRef = db.collection("users").doc(user.uid);
-      await userRef.update({ status: "subscribed" });
     } catch (error) {
       console.error("Error during checkout:", error);
     }
