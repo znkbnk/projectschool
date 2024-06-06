@@ -17,7 +17,7 @@ const Success = () => {
             const userData = userDoc.data();
             setUserStatus(userData.status || "Unknown");
           } else {
-            setUserStatus("Unknown");
+            setUserStatus("Unknown"); 
           }
         } else {
           setUserStatus("Unknown");
