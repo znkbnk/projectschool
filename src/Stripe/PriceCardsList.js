@@ -3,7 +3,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import PriceCard from "./PriceCard";
 import "../styles/checkout.css";
 import { useNavigate } from "react-router-dom";
-import { auth} from "../components/firebase";
+import { auth } from "../components/firebase";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
@@ -17,17 +17,17 @@ const PriceCardsList = () => {
         console.error("User not authenticated");
         return; // Exit function if user is not authenticated
       }
-
+      
       console.log("User authenticated:", user);
-
+  
       const stripe = await stripePromise;
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
-        successUrl: `${window.location.origin}/#success?userId=${user.uid}`,
+        successUrl: window.location.origin + "/#success",
         cancelUrl: window.location.origin + "/#cancel",
       });
-
+  
       if (error) {
         throw new Error(error.message);
       }
