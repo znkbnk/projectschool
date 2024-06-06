@@ -22,69 +22,76 @@ const serviceAccountData = {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccountData)
   });
-
-exports.handler = async (event, context) => {
-  const sig = event.headers['stripe-signature'];
-  let stripeEvent;
-
-  try {
-    stripeEvent = stripe.webhooks.constructEvent(event.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
-  } catch (err) {
-    return {
-      statusCode: 400,
-      body: `Webhook Error: ${err.message}`,
-    };
-  }
-
-  if (stripeEvent.type === 'invoice.payment_succeeded') {
-    const invoice = stripeEvent.data.object;
-    const customerId = invoice.customer;
-
-    let customer;
+  
+  exports.handler = async (event, context) => {
+    const sig = event.headers['stripe-signature'];
+    let stripeEvent;
+  
     try {
-      customer = await stripe.customers.retrieve(customerId);
+      stripeEvent = stripe.webhooks.constructEvent(event.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
     } catch (err) {
-      console.error('Error retrieving customer:', err);
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ error: 'Failed to retrieve customer' }),
-      };
-    }
-
-    const email = customer.email;
-
-    if (!email) {
+      console.error('Webhook Error:', err.message);
       return {
         statusCode: 400,
-        body: JSON.stringify({ error: 'Email is required' }),
+        body: `Webhook Error: ${err.message}`,
       };
     }
-
-    const msg = {
-      to: email,
-      from: 'zenikibeniki@gmail.com',
-      subject: 'Subscription Confirmation',
-      text: 'Thank you for subscribing!',
-      html: '<p>Thank you for subscribing to our service!</p>',
+  
+    if (stripeEvent.type === 'invoice.payment_succeeded') {
+      const invoice = stripeEvent.data.object;
+      const customerId = invoice.customer;
+  
+      try {
+        const customer = await stripe.customers.retrieve(customerId);
+        const userId = customer.metadata.userId; // Assuming you're storing the user ID in Stripe's customer metadata
+  
+        const userDoc = await admin.firestore().collection('users').doc(userId).get();
+        const userData = userDoc.data();
+  
+        if (!userData) {
+          console.error('User data not found');
+          return {
+            statusCode: 404,
+            body: JSON.stringify({ error: 'User data not found' }),
+          };
+        }
+  
+        const email = userData.email;
+  
+        if (!email) {
+          console.error('User email not found');
+          return {
+            statusCode: 400,
+            body: JSON.stringify({ error: 'Email is required' }),
+          };
+        }
+  
+        const msg = {
+          to: email,
+          from: 'your_verified_email@example.com',
+          subject: 'Subscription Confirmation',
+          text: 'Thank you for subscribing!',
+          html: '<p>Thank you for subscribing to our service!</p>',
+        };
+  
+        await sgMail.send(msg);
+        console.log('Email sent successfully');
+        return {
+          statusCode: 200,
+          body: JSON.stringify({ message: 'Email sent successfully' }),
+        };
+      } catch (error) {
+        console.error('Error sending email:', error);
+        return {
+          statusCode: 500,
+          body: JSON.stringify({ error: 'Failed to send email' }),
+        };
+      }
+    }
+  
+    console.log('Received event:', stripeEvent.type);
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ received: true }),
     };
-
-    try {
-      await sgMail.send(msg);
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ message: 'Email sent successfully' }),
-      };
-    } catch (error) {
-      console.error('Error sending email:', error);
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ error: 'Failed to send email' }),
-      };
-    }
-  }
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ received: true }),
   };
-};

@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
             confirm: true,
             automatic_payment_methods: {
                 enabled: true,
-                allow_redirects: true,
+                allow_redirects: 'always',
             },
             return_url: `${origin}/#success`,
         });
