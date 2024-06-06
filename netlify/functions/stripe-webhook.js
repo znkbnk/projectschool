@@ -1,13 +1,11 @@
-// functions/stripe-webhook.js
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const admin = require('firebase-admin');
 const serviceAccount = require('./projectschool-48842.json');
+const sgMail = require('@sendgrid/mail'); // Import the sendgrid/mail module
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
-
-const firestore = admin.firestore();
 
 exports.handler = async (event, context) => {
   const sig = event.headers['stripe-signature'];
@@ -22,17 +20,49 @@ exports.handler = async (event, context) => {
     };
   }
 
-  if (stripeEvent.type === 'payment_intent.succeeded') {
-    const paymentIntent = stripeEvent.data.object;
-    const userId = paymentIntent.metadata.userId;
+  if (stripeEvent.type === 'invoice.payment_succeeded') {
+    const invoice = stripeEvent.data.object;
+    const customerId = invoice.customer;
 
+    let customer;
     try {
-      await firestore.collection('users').doc(userId).update({ status: 'subscribed' });
-    } catch (error) {
-      console.error('Error updating user status:', error);
+      customer = await stripe.customers.retrieve(customerId);
+    } catch (err) {
+      console.error('Error retrieving customer:', err);
       return {
         statusCode: 500,
-        body: JSON.stringify({ error: 'Error updating user status' }),
+        body: JSON.stringify({ error: 'Failed to retrieve customer' }),
+      };
+    }
+
+    const email = customer.email;
+
+    if (!email) {
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: 'Email is required' }),
+      };
+    }
+
+    const msg = {
+      to: email,
+      from: 'zenikibeniki@gmail.com',
+      subject: 'Subscription Confirmation',
+      text: 'Thank you for subscribing!',
+      html: '<p>Thank you for subscribing to our service!</p>',
+    };
+
+    try {
+      await sgMail.send(msg);
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ message: 'Email sent successfully' }),
+      };
+    } catch (error) {
+      console.error('Error sending email:', error);
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: 'Failed to send email' }),
       };
     }
   }
