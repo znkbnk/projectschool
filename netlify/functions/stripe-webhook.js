@@ -3,9 +3,11 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 // Initialize Firebase Admin SDK
 if (!admin.apps.length) { // Check if the app has already been initialized
-    admin.initializeApp();
+    admin.initializeApp({
+      credential: admin.credential.applicationDefault(),
+      projectId: process.env.FIREBASE_PROJECT_ID,
+    });
   }
-
 async function updateFirebaseStatus(customerId) {
   try {
     const db = admin.firestore();
