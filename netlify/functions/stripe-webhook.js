@@ -1,7 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const admin = require('firebase-admin');
 const serviceAccount = require('./projectschool-48842.json');
-const sgMail = require('@sendgrid/mail'); // Import the sendgrid/mail module
+const sgMail = require('@sendgrid/mail'); 
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
