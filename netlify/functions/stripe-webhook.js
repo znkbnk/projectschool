@@ -1,22 +1,32 @@
-// stripe-webhook.js
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const firebase = require('firebase/app');
-require('firebase/auth');
-const faunadb = require('faunadb');
+// Import the required modules using ES module syntax
+import Stripe from 'stripe';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import faunadb from 'faunadb';
+
+// Initialize Stripe with the secret key
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+// FaunaDB client and query module
 const q = faunadb.query;
 
 // Load Firebase configuration from environment variables
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// Ensure this is called once in your entire project lifecycle
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+} else {
+  firebase.app(); // if already initialized, use that one
+}
 
 // Stripe webhook secret for verification
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -26,7 +36,7 @@ const faunaClient = new faunadb.Client({
   secret: process.env.FAUNADB_SECRET,
 });
 
-exports.handler = async (event, context) => {
+export const handler = async (event, context) => {
   // Verify the webhook signature
   const signature = event.headers['stripe-signature'];
   let stripeEvent;

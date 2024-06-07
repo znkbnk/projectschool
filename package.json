@@ -15,6 +15,7 @@
     "bootstrap": "^5.3.2",
     "browserslist": "^4.23.0",
     "cors": "^2.8.5",
+    "faunadb": "^4.8.0",
     "firebase": "^10.12.2",
     "firebase-admin": "^12.1.1",
     "gsap": "^3.12.5",
