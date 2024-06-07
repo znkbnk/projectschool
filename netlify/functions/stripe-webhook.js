@@ -1,4 +1,3 @@
-// netlify/functions/stripe-webhook.js
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const admin = require('firebase-admin');
 
@@ -53,7 +52,7 @@ async function handleEvent(event) {
         const stripeCustomerId = event.data.object.customer;
 
         // Retrieve user record from Firebase
-        const userRecord = await admin.auth().getUserByPhoneNumber(stripeCustomerId);
+        const userRecord = await admin.auth().getUser(stripeCustomerId);
         
         // Update the user's custom claims to indicate subscription status
         await admin.auth().setCustomUserClaims(userRecord.uid, { subscribed: true });
