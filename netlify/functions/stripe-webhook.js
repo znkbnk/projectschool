@@ -1,11 +1,11 @@
-// Import the required modules using ES module syntax
-import Stripe from 'stripe';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import faunadb from 'faunadb';
+// Import the required modules using CommonJS syntax
+const Stripe = require('stripe');
+const firebase = require('firebase/app');
+require('firebase/auth');
+const faunadb = require('faunadb');
 
 // Initialize Stripe with the secret key
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 // FaunaDB client and query module
 const q = faunadb.query;
@@ -36,7 +36,7 @@ const faunaClient = new faunadb.Client({
   secret: process.env.FAUNADB_SECRET,
 });
 
-export const handler = async (event, context) => {
+exports.handler = async (event, context) => {
   // Verify the webhook signature
   const signature = event.headers['stripe-signature'];
   let stripeEvent;
@@ -57,7 +57,7 @@ export const handler = async (event, context) => {
 
   // Handle the event
   switch (stripeEvent.type) {
-    case 'customer.subscription.updated':
+    case 'customer.subscription.updated': {
       const subscription = stripeEvent.data.object;
       const customerId = subscription.customer;
       const subscriptionStatus = subscription.status;
@@ -94,6 +94,7 @@ export const handler = async (event, context) => {
         };
       }
       break;
+    }
     // ... handle other event types
     default:
       console.log(`Unhandled event type ${stripeEvent.type}`);
