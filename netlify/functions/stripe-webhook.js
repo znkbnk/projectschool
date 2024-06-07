@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-const Stripe = require('stripe');
+import Stripe from 'stripe';
 require('firebase/auth');
 
 // Initialize Stripe with the secret key
