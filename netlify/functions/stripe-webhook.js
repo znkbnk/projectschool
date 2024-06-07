@@ -50,6 +50,11 @@ async function handleEvent(event) {
         const stripeCustomer = await stripe.customers.retrieve(stripeCustomerId);
         const firebaseUid = stripeCustomer.metadata.firebaseUid;
 
+        if (!firebaseUid || typeof firebaseUid !== 'string' || firebaseUid.length > 128) {
+          console.error('Invalid Firebase UID:', firebaseUid);
+          return;
+        }
+
         const userRecord = await admin.auth().getUser(firebaseUid);
 
         await admin.auth().setCustomUserClaims(userRecord.uid, { subscribed: true });
@@ -63,3 +68,4 @@ async function handleEvent(event) {
     console.error('Error handling event:', error);
   }
 }
+
