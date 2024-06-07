@@ -26,6 +26,7 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 
+// Webhook endpoint for handling Stripe events
 app.post('/webhook', async (req, res) => {
   const sig = req.headers['stripe-signature'];
   let event;
@@ -37,29 +38,38 @@ app.post('/webhook', async (req, res) => {
     return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
-  // Handle the event type
-  switch (event.type) {
-    case 'payment_intent.succeeded':
-      try {
-        // Get the user's UID from the Stripe customer ID
+  // Handle the event asynchronously
+  handleEvent(event);
+
+  // Acknowledge receipt of the event immediately
+  res.status(200).end();
+});
+
+// Function to handle webhook events asynchronously
+async function handleEvent(event) {
+  try {
+    switch (event.type) {
+      case 'payment_intent.succeeded':
+        // Extract necessary data from the event
         const stripeCustomerId = event.data.object.customer;
+
+        // Retrieve user record from Firebase
         const userRecord = await admin.auth().getUserByPhoneNumber(stripeCustomerId);
         
         // Update the user's custom claims to indicate subscription status
         await admin.auth().setCustomUserClaims(userRecord.uid, { subscribed: true });
         
         console.log(`User ${userRecord.uid} subscribed.`);
-      } catch (error) {
-        console.error('Error updating user claims:', error);
-      }
-      break;
-    // Add more cases for other event types you want to handle
-    default:
-      console.log(`Unhandled event type: ${event.type}`);
+        break;
+      // Add more cases for other event types you want to handle
+      default:
+        console.log(`Unhandled event type: ${event.type}`);
+    }
+  } catch (error) {
+    console.error('Error handling event:', error);
+    // Implement retry mechanism or error logging here
   }
-
-  res.status(200).end();
-});
+}
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

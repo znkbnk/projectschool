@@ -10,6 +10,7 @@ const Success = () => {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
+        // Assuming 'subscribed' is a boolean field in the user's custom claims
         const userStatus = user.subscribed ? "Subscribed" : "Not Subscribed";
         setUserStatus(userStatus);
       } else {

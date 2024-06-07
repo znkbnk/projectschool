@@ -64,10 +64,12 @@ const LiveEditor = () => {
         setIsPaidUser(false);
       }
     });
-
+  
     // Cleanup function
     return () => unsubscribe();
   }, []);
+  
+  
 
   const handleCheckboxChange = (stepId) => {
     setCheckboxStates((prevState) => ({
