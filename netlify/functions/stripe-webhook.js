@@ -21,8 +21,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-// Ensure this is called once in your entire project lifecycle
-if (!firebase.apps.length) {
+if (!firebase.apps || !firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 } else {
   firebase.app(); // if already initialized, use that one
