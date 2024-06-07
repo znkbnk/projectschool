@@ -53,11 +53,10 @@ async function handleEvent(event) {
           return;
         }
 
-        const userRecord = await admin.auth().getUser(firebaseUid);
+        // Set the custom claim
+        await admin.auth().setCustomUserClaims(firebaseUid, { subscribed: true });
 
-        await admin.auth().setCustomUserClaims(userRecord.uid, { subscribed: true });
-
-        console.log(`User ${userRecord.uid} subscribed.`);
+        console.log(`User ${firebaseUid} subscribed.`);
         break;
       default:
         console.log(`Unhandled event type: ${event.type}`);
