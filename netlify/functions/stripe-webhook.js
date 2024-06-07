@@ -1,56 +1,123 @@
-const admin = require('firebase-admin');
+// stripe-webhook.js
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const firebase = require('firebase/app');
+require('firebase/auth');
+const faunadb = require('faunadb');
+const q = faunadb.query;
 
-// Initialize Firebase Admin SDK without specifying credentials
-if (!admin.apps.length) { // Check if the app has already been initialized
-  const serviceAccount = require(process.env.GOOGLE_APPLICATION_CREDENTIALS);
+// Load Firebase configuration from environment variables
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+};
 
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-  });
-}
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
-async function updateFirebaseStatus(customerId) {
+// Stripe webhook secret for verification
+const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+
+// Initialize FaunaDB client
+const faunaClient = new faunadb.Client({
+  secret: process.env.FAUNADB_SECRET,
+});
+
+exports.handler = async (event, context) => {
+  // Verify the webhook signature
+  const signature = event.headers['stripe-signature'];
+  let stripeEvent;
+
   try {
-    const db = admin.firestore();
-
-    // Assuming you have a collection named 'users' where user documents are stored
-    const userRef = db.collection('users').doc(customerId);
-
-    // Update the user document to set the status to 'subscribed'
-    await userRef.update({ status: 'subscribed' });
-
-    console.log('User status updated successfully');
-  } catch (error) {
-    console.error('Error updating user status in Firebase:', error);
-    throw new Error('Failed to update user status in Firebase');
+    stripeEvent = stripe.webhooks.constructEvent(
+      event.body,
+      signature,
+      webhookSecret
+    );
+  } catch (err) {
+    console.error('Error verifying Stripe webhook signature:', err);
+    return {
+      statusCode: 400,
+      body: `Webhook Error: ${err.message}`,
+    };
   }
-}
 
-exports.handler = async (event) => {
-    try {
-      const sig = event.headers['stripe-signature'];
-      const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-      const stripeEvent = stripe.webhooks.constructEvent(event.body, sig, webhookSecret);
-  
-      // Handle specific event types, e.g., checkout.session.completed
-      if (stripeEvent.type === 'checkout.session.completed') {
-        const session = stripeEvent.data.object;
-        const customerId = session.customer;
-  
-        // Update user status in Firebase database
-        await updateFirebaseStatus(customerId);
+  // Handle the event
+  switch (stripeEvent.type) {
+    case 'customer.subscription.updated':
+      const subscription = stripeEvent.data.object;
+      const customerId = subscription.customer;
+      const subscriptionStatus = subscription.status;
+
+      try {
+        // Check if the event has already been processed
+        const idempotencyKey = stripeEvent.id;
+        const eventProcessed = await checkEventProcessed(idempotencyKey);
+
+        if (eventProcessed) {
+          console.log(`Event with idempotency key ${idempotencyKey} has already been processed`);
+          return {
+            statusCode: 200,
+            body: JSON.stringify({ received: true, message: 'Event already processed' }),
+          };
+        }
+
+        // Update the user's subscription status in Firebase Authentication
+        const user = await firebase.auth().getUserByProviderId(`stripe_customer:${customerId}`);
+        if (user) {
+          await firebase.auth().updateUser(user.uid, { subscribed: subscriptionStatus === 'active' });
+          console.log(`User ${user.uid} subscription status updated to ${subscriptionStatus === 'active'}`);
+        } else {
+          console.error(`User not found for customer ID ${customerId}`);
+        }
+
+        // Mark the event as processed
+        await markEventProcessed(idempotencyKey);
+      } catch (err) {
+        console.error('Error processing Stripe webhook event:', err);
+        return {
+          statusCode: 500,
+          body: `Webhook Error: ${err.message}`,
+        };
       }
-  
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ received: true }),
-      };
-    } catch (error) {
-      console.error('Error handling webhook:', error);
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ error: 'Webhook handling failed' }),
-      };
-    }
+      break;
+    // ... handle other event types
+    default:
+      console.log(`Unhandled event type ${stripeEvent.type}`);
+  }
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ received: true }),
+  };
+};
+
+// Helper function to check if an event has already been processed
+const checkEventProcessed = async (idempotencyKey) => {
+  try {
+    const result = await faunaClient.query(
+      q.Exists(q.Match(q.Index('processed_events_by_key'), idempotencyKey))
+    );
+    return result;
+  } catch (err) {
+    console.error('Error checking event processed status:', err);
+    throw err;
+  }
+};
+
+// Helper function to mark an event as processed
+const markEventProcessed = async (idempotencyKey) => {
+  try {
+    await faunaClient.query(
+      q.Create(q.Collection('processed_events'), {
+        data: { idempotencyKey },
+      })
+    );
+  } catch (err) {
+    console.error('Error marking event as processed:', err);
+    throw err;
+  }
 };
