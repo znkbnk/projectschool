@@ -40,6 +40,28 @@ exports.handler = async (event, context) => {
   };
 };
 
+exports.handler = async (event, context) => {
+  const sig = event.headers['stripe-signature'];
+  let stripeEvent;
+
+  try {
+    stripeEvent = stripe.webhooks.constructEvent(event.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
+  } catch (err) {
+    console.error('Webhook signature verification failed.', err.message);
+    return {
+      statusCode: 400,
+      body: `Webhook Error: ${err.message}`,
+    };
+  }
+
+  await handleEvent(stripeEvent);
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ received: true }),
+  };
+};
+
 async function handleEvent(event) {
   try {
     console.log("Received Stripe webhook event:", event);
@@ -55,6 +77,16 @@ async function handleEvent(event) {
 
         // Set the custom claim
         await admin.auth().setCustomUserClaims(firebaseUid, { subscribed: true });
+
+        // Retrieve the user record and check the custom claims
+        admin.auth().getUser(firebaseUid)
+          .then((userRecord) => {
+            console.log('User custom claims:', userRecord.customClaims);
+            // The 'subscribed' custom claim should be true
+          })
+          .catch((error) => {
+            console.error('Error retrieving user:', error);
+          });
 
         console.log(`User ${firebaseUid} subscribed.`);
         break;

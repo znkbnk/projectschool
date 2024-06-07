@@ -57,7 +57,8 @@ const LiveEditor = () => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         // If user is authenticated, check their subscription status
-        const userSubscriptionStatus = user.customClaims.subscribed || false; // Assuming 'subscribed' is a boolean field in the user's custom claims
+        const customClaims = user.customClaims || {}; // Add this line
+        const userSubscriptionStatus = customClaims.subscribed || false;
         setIsPaidUser(userSubscriptionStatus);
       } else {
         // If user is not authenticated, set subscription status to false
