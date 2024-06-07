@@ -45,14 +45,9 @@ async function handleEvent(event) {
     console.log("Received Stripe webhook event:", event);
 
     switch (event.type) {
-      case 'customer.subscription.created':
-        const subscription = event.data.object;
-        const checkoutSessionId = subscription.latest_invoice.checkout_session; // or subscription.metadata.checkout_session_id
-
-        // Retrieve the checkout session object
-        const checkoutSession = await stripe.checkout.sessions.retrieve(checkoutSessionId);
-
-        const firebaseUid = checkoutSession.metadata.firebaseUid;
+      case 'checkout.session.completed':
+        const checkoutSession = event.data.object;
+        const firebaseUid = new URL(checkoutSession.success_url).searchParams.get('firebaseUid');
 
         if (!firebaseUid || typeof firebaseUid !== 'string' || firebaseUid.length > 128) {
           return;

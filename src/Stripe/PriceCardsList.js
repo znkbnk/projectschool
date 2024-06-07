@@ -35,16 +35,17 @@ const PriceCardsList = () => {
         return; // Exit function if Stripe is not loaded
       }
   
+      // Include the firebaseUid in the success and cancel URLs
+      const successUrl = `${window.location.origin}/#success?firebaseUid=${user.uid}`;
+      const cancelUrl = `${window.location.origin}/#cancel?firebaseUid=${user.uid}`;
+  
       // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
-        lineItems: [
-          { price: priceId, quantity: 1 }
-        ],
+        lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
-        successUrl: window.location.origin + "/#success",
-        cancelUrl: window.location.origin + "/#cancel",
+        successUrl,
+        cancelUrl,
         customerEmail: user.email, // Use the authenticated user's email
-        metadata: { firebaseUid: user.uid } // Include Firebase UID as metadata
       });
   
       if (error) {
