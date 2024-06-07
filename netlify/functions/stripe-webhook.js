@@ -1,7 +1,7 @@
 // Import the required modules using CommonJS syntax
 const Stripe = require('stripe');
 const firebase = require('firebase/app');
-const { auth } = require('./firebase');
+const { auth } = require('../firebase');
 require('firebase/auth');
 
 
