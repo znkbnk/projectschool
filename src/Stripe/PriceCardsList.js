@@ -37,19 +37,15 @@ const PriceCardsList = () => {
         return; // Exit function if Stripe is not loaded
       }
   
-      // Include Firebase UID as metadata
-      const metadata = {
-        firebaseUid: user.uid,
-      };
-  
       // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
-        lineItems: [{ price: priceId, quantity: 1 }],
+        lineItems: [
+          { price: priceId, quantity: 1 }
+        ],
         mode: "subscription",
         successUrl: window.location.origin + "/#success",
         cancelUrl: window.location.origin + "/#cancel",
         customerEmail: user.email, // Use the authenticated user's email
-        metadata: metadata, // Include Firebase UID as metadata
       });
   
       if (error) {
@@ -59,6 +55,10 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
+  
+  
+  
+  
   
 
   const handleFreeButtonClick = () => {
