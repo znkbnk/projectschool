@@ -16,11 +16,10 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-if (!firebase.apps || !firebase.apps.length) {
+if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app(); // if already initialized, use that one
 }
+
 
 // Stripe webhook secret for verification
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
