@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import Stripe from 'stripe';
-require('firebase/auth');
+import 'firebase/auth';
 
 // Initialize Stripe with the secret key
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
