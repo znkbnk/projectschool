@@ -1,77 +1,66 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import Stripe from 'stripe';
+const express = require('express');
+const bodyParser = require('body-parser');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const admin = require('firebase-admin');
 
-// Initialize Firebase before anything else
-const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+const app = express();
+
+app.use(bodyParser.json());
+
+const serviceAccount = {
+  "type": "service_account",
+  "project_id": process.env.FIREBASE_PROJECT_ID,
+  "private_key_id": process.env.FIREBASE_PRIVATE_KEY_ID,
+  "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+  "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+  "client_id": process.env.FIREBASE_CLIENT_ID,
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+   "client_x509_cert_url": process.env.FIREBASE_CLIENT_X509_CERT_URL
 };
 
-firebase.initializeApp(firebaseConfig); // Ensure Firebase is initialized
+// Initialize Firebase Admin SDK
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
 
-// Initialize Stripe with the secret key
-const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
-
-// Stripe webhook secret for verification
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-
-exports.handler = async (event, context) => {
-  // Verify the webhook signature
-  const signature = event.headers['stripe-signature'];
-  let stripeEvent;
+app.post('/webhook', async (req, res) => {
+  const sig = req.headers['stripe-signature'];
+  let event;
 
   try {
-    stripeEvent = stripe.webhooks.constructEvent(
-      event.body,
-      signature,
-      webhookSecret
-    );
+    event = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
   } catch (err) {
-    console.error('Error verifying Stripe webhook signature:', err);
-    return {
-      statusCode: 400,
-      body: `Webhook Error: ${err.message}`,
-    };
+    console.error('Webhook signature verification failed.', err.message);
+    return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
-  // Handle the event
-  switch (stripeEvent.type) {
-    case 'customer.subscription.updated': {
-      const subscription = stripeEvent.data.object;
-      const customerId = subscription.customer;
-      const subscriptionStatus = subscription.status;
-
+  // Handle the event type
+  switch (event.type) {
+    case 'payment_intent.succeeded':
       try {
-        // Update the user's subscription status in Firebase Authentication
-        const auth = firebase.auth();
-        const user = await auth.getUserByProviderId(`stripe_customer:${customerId}`);
-        if (user) {
-          await auth.updateUser(user.uid, { subscribed: subscriptionStatus === 'active' });
-          console.log(`User ${user.uid} subscription status updated to ${subscriptionStatus === 'active'}`);
-        } else {
-          console.error(`User not found for customer ID ${customerId}`);
-        }
-      } catch (err) {
-        console.error('Error processing Stripe webhook event:', err);
-        return {
-          statusCode: 500,
-          body: `Webhook Error: ${err.message}`,
-        };
+        // Get the user's UID from the Stripe customer ID
+        const stripeCustomerId = event.data.object.customer;
+        const userRecord = await admin.auth().getUserByPhoneNumber(stripeCustomerId);
+        
+        // Update the user's custom claims to indicate subscription status
+        await admin.auth().setCustomUserClaims(userRecord.uid, { subscribed: true });
+        
+        console.log(`User ${userRecord.uid} subscribed.`);
+      } catch (error) {
+        console.error('Error updating user claims:', error);
       }
       break;
-    }
-    // ... handle other event types
+    // Add more cases for other event types you want to handle
     default:
-      console.log(`Unhandled event type ${stripeEvent.type}`);
+      console.log(`Unhandled event type: ${event.type}`);
   }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ received: true }),
-  };
-};
+  res.status(200).end();
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
+});

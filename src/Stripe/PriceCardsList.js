@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import PriceCard from "./PriceCard";
 import "../styles/checkout.css";
@@ -9,15 +9,30 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   const handleCheckout = async (priceId) => {
     try {
-      const user = auth.currentUser;
       if (!user) {
         console.error("User not authenticated");
         return; // Exit function if user is not authenticated
       }
       
+      if (!user.subscribed) {
+        console.error("User is not subscribed");
+        return; // Exit function if user is not subscribed
+      }
+
       console.log("User authenticated:", user);
   
       const stripe = await stripePromise;

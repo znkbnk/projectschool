@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
+import { auth } from "../components/firebase";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -14,7 +15,7 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
-
+  const [isPaidUser, setIsPaidUser] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -50,6 +51,23 @@ const LiveEditor = () => {
         setSolutionCodes(["Solution not found"]);
       });
   }, [taskId]);
+
+  useEffect(() => {
+    // Check user's subscription status when component mounts
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        // If user is authenticated, check their subscription status
+        const userSubscriptionStatus = user.customClaims.subscribed || false; // Assuming 'subscribed' is a boolean field in the user's custom claims
+        setIsPaidUser(userSubscriptionStatus);
+      } else {
+        // If user is not authenticated, set subscription status to false
+        setIsPaidUser(false);
+      }
+    });
+
+    // Cleanup function
+    return () => unsubscribe();
+  }, []);
 
   const handleCheckboxChange = (stepId) => {
     setCheckboxStates((prevState) => ({
@@ -179,7 +197,6 @@ const LiveEditor = () => {
                   </div>
                 ))}
               <div className='task-button-container'>
-                
                 {currentTask.link && (
                   <button className='button-84' onClick={handleDownloadStyles}>
                     Download Styles
@@ -195,15 +212,18 @@ const LiveEditor = () => {
                     Download Data
                   </button>
                 )}
-                <button className='button-84' onClick={handleToggleSolution}>
-                  Solution
-                </button>
+                 {isPaidUser && ( // Render the button only if the user has paid for a subscription
+                  <button className='button-84' onClick={handleToggleSolution}>
+                    Solution
+                  </button>
+                )}
               </div>
               {showSolution && (
                 <div className='solution-popup'>
                   <div className='solution-container'>
                     <h2 className='solution-title'>
-                     Solution code for: {currentTask ?  currentTask.taskTitle : "Task Title"}
+                      Solution code for:{" "}
+                      {currentTask ? currentTask.taskTitle : "Task Title"}
                     </h2>
                     {solutionCodes.map((code, index) => (
                       <CodeBlock
@@ -213,7 +233,6 @@ const LiveEditor = () => {
                       />
                     ))}
                     <button
-                    
                       className='close-button button-84'
                       onClick={handleToggleSolution}
                     >
