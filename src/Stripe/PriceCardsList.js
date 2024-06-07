@@ -1,5 +1,3 @@
-// In your PriceCardsList component
-
 import React, { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import PriceCard from "./PriceCard";
@@ -110,4 +108,3 @@ const PriceCardsList = () => {
 };
 
 export default PriceCardsList;
-

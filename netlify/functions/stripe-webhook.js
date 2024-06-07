@@ -46,11 +46,13 @@ async function handleEvent(event) {
 
     switch (event.type) {
       case 'customer.subscription.created':
-        const stripeCustomerId = event.data.object.customer;
-        
-        const stripeCustomer = await stripe.customers.retrieve(stripeCustomerId);
+        const subscription = event.data.object;
+        const checkoutSessionId = subscription.latest_invoice.checkout_session; // or subscription.metadata.checkout_session_id
 
-        const firebaseUid = stripeCustomer.metadata.firebaseUid;
+        // Retrieve the checkout session object
+        const checkoutSession = await stripe.checkout.sessions.retrieve(checkoutSessionId);
+
+        const firebaseUid = checkoutSession.metadata.firebaseUid;
 
         if (!firebaseUid || typeof firebaseUid !== 'string' || firebaseUid.length > 128) {
           return;
