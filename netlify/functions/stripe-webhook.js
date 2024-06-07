@@ -40,28 +40,6 @@ exports.handler = async (event, context) => {
   };
 };
 
-exports.handler = async (event, context) => {
-  const sig = event.headers['stripe-signature'];
-  let stripeEvent;
-
-  try {
-    stripeEvent = stripe.webhooks.constructEvent(event.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
-  } catch (err) {
-    console.error('Webhook signature verification failed.', err.message);
-    return {
-      statusCode: 400,
-      body: `Webhook Error: ${err.message}`,
-    };
-  }
-
-  await handleEvent(stripeEvent);
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ received: true }),
-  };
-};
-
 
 async function handleEvent(event) {
   try {
@@ -91,3 +69,4 @@ async function handleEvent(event) {
     console.error('Error handling event:', error);
   }
 }
+
