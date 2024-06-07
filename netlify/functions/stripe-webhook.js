@@ -50,9 +50,11 @@ async function handleEvent(event) {
       case 'customer.subscription.created':
         // Extract necessary data from the event
         const stripeCustomerId = event.data.object.customer;
+        const stripeCustomer = await stripe.customers.retrieve(stripeCustomerId);
+        const firebaseUid = stripeCustomer.metadata.firebaseUid;
 
         // Retrieve user record from Firebase
-        const userRecord = await admin.auth().getUser(stripeCustomerId);
+        const userRecord = await admin.auth().getUser(firebaseUid);
 
         // Update the user's custom claims to indicate subscription status
         await admin.auth().setCustomUserClaims(userRecord.uid, { subscribed: true });

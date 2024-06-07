@@ -27,17 +27,26 @@ const PriceCardsList = () => {
         console.error("User not authenticated");
         return; // Exit function if user is not authenticated
       }
-      
-    
-
-      console.log("User authenticated:", user);
   
       const stripe = await stripePromise;
+      const customerData = {
+        email: user.email, // Use the authenticated user's email
+        metadata: {
+          firebaseUid: user.uid, // Associate the Firebase user's uid with the Stripe customer
+        },
+      };
+  
+      // Create a new Stripe customer with the Firebase user's uid
+      const customer = await stripe.customers.create(customerData);
+  
+      // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
         successUrl: window.location.origin + "/#success",
         cancelUrl: window.location.origin + "/#cancel",
+        customerEmail: user.email, // Use the authenticated user's email
+        customer: customer.id, // Use the newly created Stripe customer
       });
   
       if (error) {
