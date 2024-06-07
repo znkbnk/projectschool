@@ -15,7 +15,7 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
-  const [isPaidUser, setIsPaidUser] = useState(false);
+  const [isPaidUser, setIsPaidUser] = useState(false); // State to track subscription status
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -212,7 +212,7 @@ const LiveEditor = () => {
                     Download Data
                   </button>
                 )}
-                 {isPaidUser && ( // Render the button only if the user has paid for a subscription
+                   {isPaidUser && ( // Render the button only if the user has paid for a subscription
                   <button className='button-84' onClick={handleToggleSolution}>
                     Solution
                   </button>

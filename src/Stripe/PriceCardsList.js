@@ -28,10 +28,7 @@ const PriceCardsList = () => {
         return; // Exit function if user is not authenticated
       }
       
-      if (!user.subscribed) {
-        console.error("User is not subscribed");
-        return; // Exit function if user is not subscribed
-      }
+    
 
       console.log("User authenticated:", user);
   
