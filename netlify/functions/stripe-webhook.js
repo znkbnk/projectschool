@@ -1,7 +1,9 @@
 // Import the required modules using CommonJS syntax
 const Stripe = require('stripe');
 const firebase = require('firebase/app');
+const { auth } = require('./firebase');
 require('firebase/auth');
+
 
 // Initialize Stripe with the secret key
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -54,9 +56,9 @@ exports.handler = async (event, context) => {
 
       try {
         // Update the user's subscription status in Firebase Authentication
-        const user = await firebase.auth().getUserByProviderId(`stripe_customer:${customerId}`);
+        const user = await auth.getUserByProviderId(`stripe_customer:${customerId}`);
         if (user) {
-          await firebase.auth().updateUser(user.uid, { subscribed: subscriptionStatus === 'active' });
+          await auth.updateUser(user.uid, { subscribed: subscriptionStatus === 'active' });
           console.log(`User ${user.uid} subscription status updated to ${subscriptionStatus === 'active'}`);
         } else {
           console.error(`User not found for customer ID ${customerId}`);
