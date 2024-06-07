@@ -47,16 +47,16 @@ exports.handler = async (event, context) => {
 async function handleEvent(event) {
   try {
     switch (event.type) {
-      case 'payment_intent.succeeded':
+      case 'customer.subscription.created':
         // Extract necessary data from the event
         const stripeCustomerId = event.data.object.customer;
 
         // Retrieve user record from Firebase
         const userRecord = await admin.auth().getUser(stripeCustomerId);
-        
+
         // Update the user's custom claims to indicate subscription status
         await admin.auth().setCustomUserClaims(userRecord.uid, { subscribed: true });
-        
+
         console.log(`User ${userRecord.uid} subscribed.`);
         break;
       // Add more cases for other event types you want to handle
