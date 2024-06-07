@@ -1,5 +1,3 @@
-// In your Netlify Function (e.g., stripeWebhook.js)
-
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const admin = require('firebase-admin');
 
@@ -41,6 +39,7 @@ exports.handler = async (event, context) => {
     body: JSON.stringify({ received: true }),
   };
 };
+
 async function handleEvent(event) {
   try {
     console.log("Received Stripe webhook event:", event);
@@ -70,5 +69,3 @@ async function handleEvent(event) {
     console.error('Error handling event:', error);
   }
 }
-
-

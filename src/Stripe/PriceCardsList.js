@@ -46,6 +46,7 @@ const PriceCardsList = () => {
         successUrl: window.location.origin + "/#success",
         cancelUrl: window.location.origin + "/#cancel",
         customerEmail: user.email, // Use the authenticated user's email
+        metadata: { firebaseUid: user.uid } // Include Firebase UID as metadata
       });
   
       if (error) {
@@ -56,11 +57,6 @@ const PriceCardsList = () => {
     }
   };
   
-  
-  
-  
-  
-
   const handleFreeButtonClick = () => {
     navigate("/signup");
   };
@@ -114,3 +110,4 @@ const PriceCardsList = () => {
 };
 
 export default PriceCardsList;
+
