@@ -1,3 +1,5 @@
+// In your PriceCardsList component
+
 import React, { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import PriceCard from "./PriceCard";
@@ -29,16 +31,12 @@ const PriceCardsList = () => {
       }
   
       const stripe = await stripePromise;
-      const customerData = {
-        email: user.email, // Use the authenticated user's email
-        metadata: {
-          firebaseUid: user.uid, // Associate the Firebase user's uid with the Stripe customer
-        },
-      };
   
-      // Create a new Stripe customer with the Firebase user's uid
-      const customer = await stripe.customers.create(customerData);
-  
+      if (!stripe) {
+        console.error("Stripe.js library not loaded yet");
+        return; // Exit function if Stripe is not loaded
+      }
+
       // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
@@ -46,7 +44,6 @@ const PriceCardsList = () => {
         successUrl: window.location.origin + "/#success",
         cancelUrl: window.location.origin + "/#cancel",
         customerEmail: user.email, // Use the authenticated user's email
-        customer: customer.id, // Use the newly created Stripe customer
       });
   
       if (error) {
@@ -62,10 +59,10 @@ const PriceCardsList = () => {
   };
 
   return (
-    <div className="price-cards-container">
+    <div className='price-cards-container'>
       <PriceCard
-        title="Free"
-        price="0"
+        title='Free'
+        price='0'
         advantages={[
           "Access to all course materials.",
           "Receive 5 or more new tasks every month.",
@@ -73,13 +70,13 @@ const PriceCardsList = () => {
           "Solutions provided for each task.",
           "Access to a private Discord forum server.",
         ]}
-        buttonText="Get started"
-        trialDays=""
+        buttonText='Get started'
+        trialDays=''
         onButtonClick={handleFreeButtonClick}
       />
       <PriceCard
-        title="Monthly"
-        price="5"
+        title='Monthly'
+        price='5'
         advantages={[
           "Access to all course materials.",
           "Receive 5 or more new tasks every month.",
@@ -87,13 +84,13 @@ const PriceCardsList = () => {
           "Solutions provided for each task.",
           "Access to a private Discord forum server.",
         ]}
-        buttonText="Get started"
-        trialDays=""
+        buttonText='Get started'
+        trialDays=''
         onButtonClick={() => handleCheckout("price_1PMza52NvwaBESku2hHPRWQW")}
       />
       <PriceCard
-        title="Annual"
-        price="50"
+        title='Annual'
+        price='50'
         advantages={[
           "Access to all course materials.",
           "Receive 5 or more new tasks every month.",
@@ -101,8 +98,8 @@ const PriceCardsList = () => {
           "Solutions provided for each task.",
           "Access to a private Discord forum server.",
         ]}
-        buttonText="Get started"
-        trialDays=""
+        buttonText='Get started'
+        trialDays=''
         onButtonClick={() => handleCheckout("price_1PMzab2NvwaBESkuTJ0jL6F4")}
       />
     </div>
