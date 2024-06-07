@@ -41,14 +41,20 @@ exports.handler = async (event, context) => {
     body: JSON.stringify({ received: true }),
   };
 };
-
 async function handleEvent(event) {
   try {
+    console.log("Received Stripe webhook event:", event);
+
     switch (event.type) {
       case 'customer.subscription.created':
         const stripeCustomerId = event.data.object.customer;
+        console.log("Stripe Customer ID:", stripeCustomerId);
+        
         const stripeCustomer = await stripe.customers.retrieve(stripeCustomerId);
+        console.log("Stripe Customer data:", stripeCustomer);
+
         const firebaseUid = stripeCustomer.metadata.firebaseUid;
+        console.log("Firebase UID:", firebaseUid);
 
         if (!firebaseUid || typeof firebaseUid !== 'string' || firebaseUid.length > 128) {
           console.error('Invalid Firebase UID:', firebaseUid);
@@ -56,6 +62,7 @@ async function handleEvent(event) {
         }
 
         const userRecord = await admin.auth().getUser(firebaseUid);
+        console.log("Firebase User Record:", userRecord);
 
         await admin.auth().setCustomUserClaims(userRecord.uid, { subscribed: true });
 
@@ -68,4 +75,5 @@ async function handleEvent(event) {
     console.error('Error handling event:', error);
   }
 }
+
 
