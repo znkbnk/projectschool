@@ -62,6 +62,7 @@ exports.handler = async (event, context) => {
   };
 };
 
+
 async function handleEvent(event) {
   try {
     console.log("Received Stripe webhook event:", event);
@@ -78,17 +79,10 @@ async function handleEvent(event) {
         // Set the custom claim
         await admin.auth().setCustomUserClaims(firebaseUid, { subscribed: true });
 
-        // Retrieve the user record and check the custom claims
-        admin.auth().getUser(firebaseUid)
-          .then((userRecord) => {
-            console.log('User custom claims:', userRecord.customClaims);
-            // The 'subscribed' custom claim should be true
-          })
-          .catch((error) => {
-            console.error('Error retrieving user:', error);
-          });
+        // Revoke the user's refresh tokens to force a re-authentication
+        await admin.auth().revokeRefreshTokens(firebaseUid);
 
-        console.log(`User ${firebaseUid} subscribed.`);
+        console.log(`User ${firebaseUid} subscribed. Custom claims updated and refresh tokens revoked.`);
         break;
       default:
         console.log(`Unhandled event type: ${event.type}`);

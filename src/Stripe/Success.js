@@ -11,7 +11,8 @@ const Success = () => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
         // Assuming 'subscribed' is a boolean field in the user's custom claims
-        const userStatus = user.subscribed ? "Subscribed" : "Not Subscribed";
+        const customClaims = user.customClaims || {};
+        const userStatus = customClaims.subscribed ? "Subscribed" : "Not Subscribed";
         setUserStatus(userStatus);
       } else {
         setUserStatus("Unknown");
