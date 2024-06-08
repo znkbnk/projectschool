@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
-import { auth } from "firebase-admin";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -16,18 +15,7 @@ const LiveEditor = () => {
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
   const [userSubscribed, setUserSubscribed] = useState(false);
-  const [user, setUser] = useState(null);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user);
-    });
-  
-    return () => {
-      unsubscribe();
-    };
-  }, []);
 
   useEffect(() => {
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
@@ -144,19 +132,7 @@ const LiveEditor = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchSubscriptionStatus = async () => {
-      try {
-        const response = await fetch(`/api/user/subscription-status?firebaseUid=${user.uid}`);
-        const data = await response.json();
-        setUserSubscribed(data.subscribed);
-      } catch (error) {
-        console.error('Error fetching subscription status:', error);
-      }
-    };
-  
-    fetchSubscriptionStatus();
-  }, [user]);
+
   
   const handleToggleSolution = () => {
     if (!userSubscribed) {
@@ -218,11 +194,9 @@ const LiveEditor = () => {
                </button>
              )}
         
-        {userSubscribed && (
-        <button className='button-84' onClick={handleToggleSolution}>
-          Solution
-        </button>
-      )}
+               <button className='button-84' onClick={handleToggleSolution}>
+                 Solution
+               </button>
             
            </div>
            {showSolution && (
