@@ -53,7 +53,7 @@ const LiveEditor = () => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
         try {
-          const idTokenResult = await user.getIdTokenResult();
+          const idTokenResult = await user.getIdTokenResult(true); // Force refresh of the ID token
           const userSubscriptionStatus = idTokenResult.claims.subscribed || false;
           setIsPaidUser(userSubscriptionStatus);
         } catch (error) {
@@ -61,12 +61,10 @@ const LiveEditor = () => {
           setIsPaidUser(false);
         }
       } else {
-        // If user is not authenticated, set subscription status to false
         setIsPaidUser(false);
       }
     });
 
-    // Cleanup function
     return () => unsubscribe();
   }, []);
 

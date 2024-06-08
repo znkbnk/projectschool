@@ -40,7 +40,6 @@ exports.handler = async (event, context) => {
   };
 };
 
-
 async function handleEvent(event) {
   try {
     console.log("Received Stripe webhook event:", event);
@@ -69,4 +68,3 @@ async function handleEvent(event) {
     console.error('Error handling event:', error);
   }
 }
-
