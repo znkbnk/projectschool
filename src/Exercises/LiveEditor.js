@@ -15,7 +15,7 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
-  const [isPaidUser, setIsPaidUser] = useState(false); // State to track subscription status
+  const [isPaidUser, setIsPaidUser] = useState(false); 
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -65,7 +65,7 @@ const LiveEditor = () => {
         setIsPaidUser(false);
       }
     });
-  
+
     // Cleanup function
     return () => unsubscribe();
   }, []);
@@ -162,7 +162,11 @@ const LiveEditor = () => {
   };
 
   const handleToggleSolution = () => {
-    setShowSolution(!showSolution);
+    if (isPaidUser) {
+      setShowSolution(!showSolution);
+    } else {
+      toast.info("Please subscribe to access the solution.");
+    }
   };
 
   const currentTask = tasksData[lessonType][currentTaskIndex];
@@ -215,13 +219,11 @@ const LiveEditor = () => {
                     Download Data
                   </button>
                 )}
-                   {isPaidUser && ( // Render the button only if the user has paid for a subscription
-                  <button className='button-84' onClick={handleToggleSolution}>
-                    Solution
-                  </button>
-                )}
+                  <button className="button-84" onClick={handleToggleSolution}>
+                  {isPaidUser ? "Solution" : "Subscribe"}
+                </button>
               </div>
-              {showSolution && (
+              {showSolution && isPaidUser && (
                 <div className='solution-popup'>
                   <div className='solution-container'>
                     <h2 className='solution-title'>
