@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
+import { auth } from "../components/firebase";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -14,7 +15,7 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
-  const [userSubscribed, setUserSubscribed] = useState(false);
+  const [isPaidUser, setIsPaidUser] = useState(false); // State to track subscription status
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -47,7 +48,23 @@ const LiveEditor = () => {
       });
   }, [taskId]);
 
-
+  useEffect(() => {
+    // Check user's subscription status when component mounts
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      if (user) {
+        // If user is authenticated, check their subscription status
+        const customClaims = user.customClaims || {};
+        const userSubscriptionStatus = customClaims.subscribed || false;
+        setIsPaidUser(userSubscriptionStatus);
+      } else {
+        // If user is not authenticated, set subscription status to false
+        setIsPaidUser(false);
+      }
+    });
+  
+    // Cleanup function
+    return () => unsubscribe();
+  }, []);
 
   const handleCheckboxChange = stepId => {
     setCheckboxStates(prevState => ({
@@ -132,13 +149,7 @@ const LiveEditor = () => {
     }
   };
 
-
-  
   const handleToggleSolution = () => {
-    if (!userSubscribed) {
-      toast.error("Please subscribe first to access the solution.");
-      return;
-    }
     setShowSolution(!showSolution);
   };
 
@@ -193,11 +204,11 @@ const LiveEditor = () => {
                  Download Data
                </button>
              )}
-        
+             {isPaidUser && ( // Render the button only if the user has paid for a subscription
                <button className='button-84' onClick={handleToggleSolution}>
                  Solution
                </button>
-            
+             )}
            </div>
            {showSolution && (
              <div className='solution-popup'>
