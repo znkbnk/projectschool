@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
-import { auth } from "../components/firebase";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -15,7 +14,7 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
-  const [isPaidUser, setIsPaidUser] = useState(false); // State to track subscription status
+  const [userSubscribed, setUserSubscribed] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -26,7 +25,7 @@ const LiveEditor = () => {
 
   useEffect(() => {
     if (lessonType && taskId) {
-      const index = tasksData[lessonType].findIndex((task) => task.taskId === taskId);
+      const index = tasksData[lessonType].findIndex(task => task.taskId === taskId);
       setCurrentTaskIndex(index);
       const storedCheckboxStates = JSON.parse(localStorage.getItem(taskId)) || {};
       setCheckboxStates(storedCheckboxStates);
@@ -35,43 +34,25 @@ const LiveEditor = () => {
 
   useEffect(() => {
     import(`./solutions/${taskId}`)
-      .then((module) => {
+      .then(module => {
         if (Array.isArray(module.default)) {
           setSolutionCodes(module.default);
         } else {
           setSolutionCodes([module.default]);
         }
       })
-      .catch((error) => {
+      .catch(error => {
         console.error("Error loading solution:", error);
         setSolutionCodes(["Solution not found"]);
       });
   }, [taskId]);
 
-  useEffect(() => {
-    // Check user's subscription status when component mounts
-    const unsubscribe = auth.onAuthStateChanged(async (user) => {
-      if (user) {
-        try {
-          const idTokenResult = await user.getIdTokenResult(true); // Force refresh of the ID token
-          const userSubscriptionStatus = idTokenResult.claims.subscribed || false;
-          setIsPaidUser(userSubscriptionStatus);
-        } catch (error) {
-          console.error("Error fetching user claims:", error);
-          setIsPaidUser(false);
-        }
-      } else {
-        setIsPaidUser(false);
-      }
-    });
 
-    return () => unsubscribe();
-  }, []);
 
-  const handleCheckboxChange = (stepId) => {
-    setCheckboxStates((prevState) => ({
+  const handleCheckboxChange = stepId => {
+    setCheckboxStates(prevState => ({
       ...prevState,
-      [stepId]: !prevState[stepId],
+      [stepId]: !prevState[stepId]
     }));
   };
 
@@ -105,7 +86,7 @@ const LiveEditor = () => {
       return;
     }
 
-    const taskIndex = tasksData[lessonType].findIndex((task) => task.taskId === taskId);
+    const taskIndex = tasksData[lessonType].findIndex(task => task.taskId === taskId);
 
     if (taskIndex !== -1) {
       const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
@@ -151,12 +132,29 @@ const LiveEditor = () => {
     }
   };
 
+  useEffect(() => {
+    // Fetch user's subscription status from backend or Firebase
+    const fetchSubscriptionStatus = async () => {
+      try {
+        // Make a request to your backend or Firebase to check if the user is subscribed
+        // Example:
+        const response = await fetch('/api/user/subscription-status');
+        const data = await response.json();
+        setUserSubscribed(data.subscribed);
+      } catch (error) {
+        console.error('Error fetching subscription status:', error);
+      }
+    };
+  
+    fetchSubscriptionStatus();
+  }, []);
+  
   const handleToggleSolution = () => {
-    if (isPaidUser) {
-      setShowSolution(!showSolution);
-    } else {
-      toast.error("You must subscribe to access the solution.");
+    if (!userSubscribed) {
+      toast.error("Please subscribe first to access the solution.");
+      return;
     }
+    setShowSolution(!showSolution);
   };
 
   const currentTask = tasksData[lessonType][currentTaskIndex];
@@ -205,70 +203,71 @@ const LiveEditor = () => {
                   </button>
                 )}{" "}
                 {currentTask.linkData && (
-                  <button className='button-84' onClick={handleDownloadData}>
-                    Download Data
-                  </button>
-                )}
-                {isPaidUser && ( // Render the button only if the user has paid for a subscription
-                  <button className='button-84' onClick={handleToggleSolution}>
-                    Solution
-                  </button>
-                )}
-              </div>
-              {showSolution && (
-                <div className='solution-popup'>
-                  <div className='solution-container'>
-                    <h2 className='solution-title'>
-                      Solution code for:{" "}
-                      {currentTask ? currentTask.taskTitle : "Task Title"}
-                    </h2>
-                    {solutionCodes.map((code, index) => (
-                      <CodeBlock
-                        key={index}
-                        code={code}
-                        className='code-block'
-                      />
-                    ))}
-                    <button
-                      className='close-button button-84'
-                      onClick={handleToggleSolution}
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-          {lessonType && lessonType.length > 0 && (
-            <div className='task-buttons'>
-              <button className='button-28 previous' onClick={handlePrevious}>
-                Previous
-              </button>
-              <button
-                className={`button-28 complete ${
-                  isCompleted ? "completed" : ""
-                }`}
-                onClick={handleComplete}
-              >
-                {isCompleted ? "Completed" : "Complete"}
-              </button>
-              <button className='button-28 next' onClick={handleNext}>
-                Next
-              </button>
-            </div>
-          )}
-        </div>
-        <iframe
-          src={codesandboxUrl}
-          title='React'
-          allow='accelerometer; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb;'
-          sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
-        ></iframe>
-      </div>
-      <ToastContainer />
-    </div>
-  );
+                 
+                 <button className='button-84' onClick={handleDownloadData}>
+                 Download Data
+               </button>
+             )}
+        
+               <button className='button-84' onClick={handleToggleSolution}>
+                 Solution
+               </button>
+            
+           </div>
+           {showSolution && (
+             <div className='solution-popup'>
+               <div className='solution-container'>
+                 <h2 className='solution-title'>
+                   Solution code for:{" "}
+                   {currentTask ? currentTask.taskTitle : "Task Title"}
+                 </h2>
+                 {solutionCodes.map((code, index) => (
+                   <CodeBlock
+                     key={index}
+                     code={code}
+                     className='code-block'
+                   />
+                 ))}
+                 <button
+                   className='close-button button-84'
+                   onClick={handleToggleSolution}
+                 >
+                   Close
+                 </button>
+               </div>
+             </div>
+           )}
+         </div>
+       </div>
+       {lessonType && lessonType.length > 0 && (
+         <div className='task-buttons'>
+           <button className='button-28 previous' onClick={handlePrevious}>
+             Previous
+           </button>
+           <button
+             className={`button-28 complete ${
+               isCompleted ? "completed" : ""
+             }`}
+             onClick={handleComplete}
+           >
+             {isCompleted ? "Completed" : "Complete"}
+           </button>
+           <button className='button-28 next' onClick={handleNext}>
+             Next
+           </button>
+         </div>
+       )}
+     </div>
+     <iframe
+       src={codesandboxUrl}
+       title='React'
+       allow='accelerometer; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb;'
+       sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
+     ></iframe>
+   </div>
+   <ToastContainer />
+ </div>
+);
 };
 
 export default LiveEditor;

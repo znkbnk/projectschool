@@ -48,17 +48,17 @@ async function handleEvent(event) {
       case 'checkout.session.completed':
         const checkoutSession = event.data.object;
         const firebaseUid = new URL(checkoutSession.success_url).searchParams.get('firebaseUid');
-
+      
         if (!firebaseUid || typeof firebaseUid !== 'string' || firebaseUid.length > 128) {
           return;
         }
-
+      
         // Set the custom claim
         await admin.auth().setCustomUserClaims(firebaseUid, { subscribed: true });
-
+      
         // Revoke the user's refresh tokens to force a re-authentication
         await admin.auth().revokeRefreshTokens(firebaseUid);
-
+      
         console.log(`User ${firebaseUid} subscribed. Custom claims updated and refresh tokens revoked.`);
         break;
       default:
