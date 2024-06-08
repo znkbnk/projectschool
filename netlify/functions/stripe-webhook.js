@@ -46,9 +46,9 @@ async function handleEvent(event) {
     console.log("Received Stripe webhook event:", event);
 
     switch (event.type) {
-      case 'checkout.session.completed':
-        const checkoutSession = event.data.object;
-        const firebaseUid = new URL(checkoutSession.success_url).searchParams.get('firebaseUid');
+      case 'customer.subscription.updated':
+        const subscription = event.data.object;
+        const firebaseUid = subscription.metadata.firebaseUid;
 
         if (!firebaseUid || typeof firebaseUid !== 'string' || firebaseUid.length > 128) {
           return;
@@ -62,6 +62,7 @@ async function handleEvent(event) {
 
         console.log(`User ${firebaseUid} subscribed. Custom claims updated and refresh tokens revoked.`);
         break;
+      // ... (other event cases) ...
       default:
         console.log(`Unhandled event type: ${event.type}`);
     }

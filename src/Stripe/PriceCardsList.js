@@ -25,27 +25,28 @@ const PriceCardsList = () => {
     try {
       if (!user) {
         console.error("User not authenticated");
-        return; // Exit function if user is not authenticated
+        return;
       }
   
       const stripe = await stripePromise;
   
       if (!stripe) {
         console.error("Stripe.js library not loaded yet");
-        return; // Exit function if Stripe is not loaded
+        return;
       }
   
-      // Include the firebaseUid in the success and cancel URLs
-      const successUrl = `${window.location.origin}/#success?firebaseUid=${user.uid}`;
-      const cancelUrl = `${window.location.origin}/#cancel?firebaseUid=${user.uid}`;
+      const successUrl = `${window.location.origin}/#success`;
+      const cancelUrl = `${window.location.origin}/#cancel`;
   
-      // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
         successUrl,
         cancelUrl,
-        customerEmail: user.email, // Use the authenticated user's email
+        customerEmail: user.email,
+        metadata: {
+          firebaseUid: user.uid, // Include the firebaseUid in the metadata
+        },
       });
   
       if (error) {
@@ -55,7 +56,6 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
-  
   const handleFreeButtonClick = () => {
     navigate("/signup");
   };
