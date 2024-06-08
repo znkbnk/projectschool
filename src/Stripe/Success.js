@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from "react";
-import "../styles/success.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { auth } from "../components/firebase";
 
-const Success = () => {
-  const [userStatus, setUserStatus] = useState("");
+const Success = ({ location }) => {
+  const [userStatus, setUserStatus] = useState("Loading");
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(async (user) => {
-      if (user) {
-        // Assuming 'subscribed' is a boolean field in the user's custom claims
-        const customClaims = user.customClaims || {};
-        const userStatus = customClaims.subscribed ? "Subscribed" : "Not Subscribed";
-        setUserStatus(userStatus);
-      } else {
-        setUserStatus("Unknown");
+    const fetchUserStatus = async () => {
+      try {
+        const firebaseUid = new URLSearchParams(location.search).get("firebaseUid");
+        const response = await axios.get(`/api/user-status?firebaseUid=${firebaseUid}`);
+        const { subscriptionStatus } = response.data;
+        setUserStatus(subscriptionStatus === "subscribed" ? "Subscribed" : "Not Subscribed");
+      } catch (error) {
+        console.error("Error fetching user status:", error);
+        setUserStatus("Error");
       }
-    });
+    };
 
-    return () => unsubscribe();
-  }, []);
+    fetchUserStatus();
+  }, [location.search]);
 
   return (
     <div>
