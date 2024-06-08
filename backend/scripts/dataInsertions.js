@@ -1,3 +1,5 @@
+//backend/scripts/dataInsertion.js
+
 const User = require('./models/User');
 
 const insertSampleData = async () => {

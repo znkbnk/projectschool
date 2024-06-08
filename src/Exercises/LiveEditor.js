@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
+import { auth } from "firebase-admin";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -15,7 +16,18 @@ const LiveEditor = () => {
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
   const [userSubscribed, setUserSubscribed] = useState(false);
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+  
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   useEffect(() => {
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
@@ -133,12 +145,9 @@ const LiveEditor = () => {
   };
 
   useEffect(() => {
-    // Fetch user's subscription status from backend or Firebase
     const fetchSubscriptionStatus = async () => {
       try {
-        // Make a request to your backend or Firebase to check if the user is subscribed
-        // Example:
-        const response = await fetch('/api/user/subscription-status');
+        const response = await fetch(`/api/user/subscription-status?firebaseUid=${user.uid}`);
         const data = await response.json();
         setUserSubscribed(data.subscribed);
       } catch (error) {
@@ -147,7 +156,7 @@ const LiveEditor = () => {
     };
   
     fetchSubscriptionStatus();
-  }, []);
+  }, [user]);
   
   const handleToggleSolution = () => {
     if (!userSubscribed) {
@@ -209,9 +218,11 @@ const LiveEditor = () => {
                </button>
              )}
         
-               <button className='button-84' onClick={handleToggleSolution}>
-                 Solution
-               </button>
+        {userSubscribed && (
+        <button className='button-84' onClick={handleToggleSolution}>
+          Solution
+        </button>
+      )}
             
            </div>
            {showSolution && (
