@@ -15,24 +15,20 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
-  const [isPaidUser, setIsPaidUser] = useState(false); 
+  const [isPaidUser, setIsPaidUser] = useState(false); // State to track subscription status
   const navigate = useNavigate();
 
   useEffect(() => {
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
-    const completedTasks =
-      JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+    const completedTasks = JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
     setIsCompleted(completedTasks[taskId] || false);
   }, [lessonType, taskId]);
 
   useEffect(() => {
     if (lessonType && taskId) {
-      const index = tasksData[lessonType].findIndex(
-        (task) => task.taskId === taskId
-      );
+      const index = tasksData[lessonType].findIndex((task) => task.taskId === taskId);
       setCurrentTaskIndex(index);
-      const storedCheckboxStates =
-        JSON.parse(localStorage.getItem(taskId)) || {};
+      const storedCheckboxStates = JSON.parse(localStorage.getItem(taskId)) || {};
       setCheckboxStates(storedCheckboxStates);
     }
   }, [lessonType, taskId]);
@@ -54,12 +50,16 @@ const LiveEditor = () => {
 
   useEffect(() => {
     // Check user's subscription status when component mounts
-    const unsubscribe = auth.onAuthStateChanged((user) => {
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
-        // If user is authenticated, check their subscription status
-        const customClaims = user.customClaims || {}; // Add this line
-        const userSubscriptionStatus = customClaims.subscribed || false;
-        setIsPaidUser(userSubscriptionStatus);
+        try {
+          const idTokenResult = await user.getIdTokenResult();
+          const userSubscriptionStatus = idTokenResult.claims.subscribed || false;
+          setIsPaidUser(userSubscriptionStatus);
+        } catch (error) {
+          console.error("Error fetching user claims:", error);
+          setIsPaidUser(false);
+        }
       } else {
         // If user is not authenticated, set subscription status to false
         setIsPaidUser(false);
@@ -69,8 +69,6 @@ const LiveEditor = () => {
     // Cleanup function
     return () => unsubscribe();
   }, []);
-  
-  
 
   const handleCheckboxChange = (stepId) => {
     setCheckboxStates((prevState) => ({
@@ -109,22 +107,16 @@ const LiveEditor = () => {
       return;
     }
 
-    const taskIndex = tasksData[lessonType].findIndex(
-      (task) => task.taskId === taskId
-    );
+    const taskIndex = tasksData[lessonType].findIndex((task) => task.taskId === taskId);
 
     if (taskIndex !== -1) {
       const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
       const updatedTasksData = { ...tasksData };
       updatedTasksData[lessonType][taskIndex].completed = true;
 
-      const completedTasks =
-        JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+      const completedTasks = JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
       completedTasks[taskId] = true;
-      localStorage.setItem(
-        lessonCompletedTasksKey,
-        JSON.stringify(completedTasks)
-      );
+      localStorage.setItem(lessonCompletedTasksKey, JSON.stringify(completedTasks));
 
       console.log(`Task ${taskId} marked as completed.`);
       toast.success(`Lesson ${lessonType} is completed!`);
@@ -165,7 +157,7 @@ const LiveEditor = () => {
     if (isPaidUser) {
       setShowSolution(!showSolution);
     } else {
-      toast.info("Please subscribe to access the solution.");
+      toast.error("You must subscribe to access the solution.");
     }
   };
 
@@ -219,11 +211,13 @@ const LiveEditor = () => {
                     Download Data
                   </button>
                 )}
-                  <button className="button-84" onClick={handleToggleSolution}>
-                  {isPaidUser ? "Solution" : "Subscribe"}
-                </button>
+                {isPaidUser && ( // Render the button only if the user has paid for a subscription
+                  <button className='button-84' onClick={handleToggleSolution}>
+                    Solution
+                  </button>
+                )}
               </div>
-              {showSolution && isPaidUser && (
+              {showSolution && (
                 <div className='solution-popup'>
                   <div className='solution-container'>
                     <h2 className='solution-title'>
