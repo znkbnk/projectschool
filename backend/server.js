@@ -39,33 +39,34 @@ app.post("/stripe-webhook", async (req, res) => {
   try {
     switch (stripeEvent.type) {
       case "checkout.session.completed":
-        const checkoutSession = stripeEvent.data.object;
-        const customer = await stripe.customers.retrieve(
-          checkoutSession.customer
-        );
-        const uid = customer.metadata.firebaseUid;
+  const checkoutSession = stripeEvent.data.object;
+  const customer = await stripe.customers.retrieve(checkoutSession.customer);
+  const uid = customer.metadata.firebaseUid;
 
-        if (!uid) {
-          throw new Error("Firebase UID not found in customer metadata");
-        }
+  if (!uid) {
+    throw new Error("Firebase UID not found in customer metadata");
+  }
 
-        // Update the user's subscription status in the database
-        await User.findOneAndUpdate(
-          { firebaseUid: uid },
-          {
-            subscriptionStatus: "subscribed",
-            subscriptionId: checkoutSession.subscription,
-            subscriptionExpiry: new Date(
-              checkoutSession.current_period_end * 1000
-            ),
-          },
-          { new: true }
-        );
+  // Find or create the user document
+  let user = await User.findOne({ firebaseUid: uid });
+  if (!user) {
+    user = new User({
+      firebaseUid: uid,
+      subscriptionStatus: "subscribed",
+      subscriptionId: checkoutSession.subscription,
+      subscriptionExpiry: new Date(checkoutSession.current_period_end * 1000),
+    });
+  } else {
+    // Update existing user document
+    user.subscriptionStatus = "subscribed";
+    user.subscriptionId = checkoutSession.subscription;
+    user.subscriptionExpiry = new Date(checkoutSession.current_period_end * 1000);
+  }
 
-        console.log(
-          `User ${uid} subscribed. Subscription status updated in the database.`
-        );
-        break;
+  await user.save();
+
+  console.log(`User ${uid} subscribed. Subscription status updated in the database.`);
+  break;
 
       default:
         console.log(`Unhandled event type: ${stripeEvent.type}`);
