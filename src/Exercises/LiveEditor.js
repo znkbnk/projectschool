@@ -52,19 +52,25 @@ const LiveEditor = () => {
     // Check user's subscription status when component mounts
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
-        // If user is authenticated, check their subscription status
-        const customClaims = user.customClaims || {};
-        const userSubscriptionStatus = customClaims.subscribed || false;
-        setIsPaidUser(userSubscriptionStatus);
+        fetchSubscriptionStatus(user.uid);
       } else {
-        // If user is not authenticated, set subscription status to false
         setIsPaidUser(false);
       }
     });
-  
-    // Cleanup function
+
     return () => unsubscribe();
   }, []);
+
+  const fetchSubscriptionStatus = async (firebaseUid) => {
+    try {
+      const response = await fetch(`/api/user-status?firebaseUid=${firebaseUid}`);
+      const data = await response.json();
+      setIsPaidUser(data.subscriptionStatus === 'subscribed');
+    } catch (error) {
+      console.error("Error fetching subscription status:", error);
+      setIsPaidUser(false);
+    }
+  };
 
   const handleCheckboxChange = stepId => {
     setCheckboxStates(prevState => ({
@@ -150,7 +156,11 @@ const LiveEditor = () => {
   };
 
   const handleToggleSolution = () => {
-    setShowSolution(!showSolution);
+    if (isPaidUser) {
+      setShowSolution(!showSolution);
+    } else {
+      toast.error("You must subscribe to access the solutions.");
+    }
   };
 
   const currentTask = tasksData[lessonType][currentTaskIndex];

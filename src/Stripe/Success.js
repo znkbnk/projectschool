@@ -1,4 +1,3 @@
-// Success.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
@@ -14,7 +13,13 @@ const Success = ({ location }) => {
         // Add console.log to inspect the location object
         console.log("Location object:", location);
 
-        const firebaseUid = new URLSearchParams(location.search).get("firebaseUid");
+        const searchParams = location.search;
+        if (!searchParams) {
+          console.error("Search params not found in the URL");
+          return;
+        }
+
+        const firebaseUid = new URLSearchParams(searchParams).get("firebaseUid");
         if (!firebaseUid) {
           throw new Error("Firebase UID not found in the URL");
         }
@@ -29,7 +34,7 @@ const Success = ({ location }) => {
     };
 
     fetchUserStatus();
-  }, [location, location.search]);
+  }, [location]);
 
   return (
     <div>
