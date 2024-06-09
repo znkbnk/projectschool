@@ -214,11 +214,9 @@ const LiveEditor = () => {
                  Download Data
                </button>
              )}
-             {isPaidUser && ( // Render the button only if the user has paid for a subscription
-               <button className='button-84' onClick={handleToggleSolution}>
-                 Solution
-               </button>
-             )}
+              <button className='button-84' onClick={handleToggleSolution}>
+                  Solution
+                </button>
            </div>
            {showSolution && (
              <div className='solution-popup'>
