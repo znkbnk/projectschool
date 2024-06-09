@@ -1,5 +1,3 @@
-//backend/scripts.dataInsertion.js
-
 const User = require("../models/userModel");
 const mongoose = require("mongoose");
 require("dotenv").config();
@@ -7,7 +5,7 @@ require("dotenv").config();
 const mongoURI = process.env.MONGODB_URI;
 
 mongoose
-  .connect(mongoURI)
+  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected for data insertion"))
   .catch((err) => console.error("MongoDB connection error:", err));
 

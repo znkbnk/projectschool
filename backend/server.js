@@ -1,4 +1,3 @@
-//backend/server.js
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -12,16 +11,16 @@ const port = process.env.PORT || 5002;
 // Connect to MongoDB
 const mongoURI = process.env.MONGODB_URI;
 
-
 mongoose
   .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
-app.use(cors()); // Add CORS middleware
+app.use(cors());
 app.use(bodyParser.json());
 
 // Define route to handle Stripe webhook events
+// backend/server.js
 app.post("/stripe-webhook", async (req, res) => {
   const sig = req.headers["stripe-signature"];
   let stripeEvent;
@@ -45,6 +44,10 @@ app.post("/stripe-webhook", async (req, res) => {
           checkoutSession.customer
         );
         const uid = customer.metadata.firebaseUid;
+
+        if (!uid) {
+          throw new Error("Firebase UID not found in customer metadata");
+        }
 
         // Update the user's subscription status in the database
         await User.findOneAndUpdate(
@@ -75,13 +78,12 @@ app.post("/stripe-webhook", async (req, res) => {
   res.status(200).send("Webhook received successfully");
 });
 
-// server.js
+// Endpoint to get user status
 app.get("/api/user-status", async (req, res) => {
   const firebaseUid = req.query.firebaseUid;
   console.log("Received request for user status:", firebaseUid);
 
   if (!firebaseUid) {
-    console.error("No firebaseUid provided");
     return res
       .status(400)
       .json({ error: "firebaseUid query parameter is required" });
@@ -89,12 +91,9 @@ app.get("/api/user-status", async (req, res) => {
 
   try {
     const user = await User.findOne({ firebaseUid });
-    console.log("User found:", user);
-
     if (!user) {
       return res.status(404).json({ error: "User not found" });
     }
-
     const { subscriptionStatus } = user;
     res.json({ subscriptionStatus });
   } catch (error) {
