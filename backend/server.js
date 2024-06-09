@@ -1,10 +1,9 @@
-//backend/server.js
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose'); // Import Mongoose
-require('dotenv').config(); // Load environment variables from .env file
+const mongoose = require('mongoose');
+require('dotenv').config();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const User = require('./models/User'); // Assuming you have a User model
+const User = require('./models/User');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -47,8 +46,6 @@ app.post('/stripe-webhook', async (req, res) => {
         console.log(`User ${uid} subscribed. Subscription status updated in the database.`);
         break;
 
-      // Add other webhook event handlers as needed
-
       default:
         console.log(`Unhandled event type: ${stripeEvent.type}`);
     }
@@ -58,6 +55,24 @@ app.post('/stripe-webhook', async (req, res) => {
   }
 
   res.status(200).send('Webhook received successfully');
+});
+
+app.get('/api/user-status', async (req, res) => {
+  const firebaseUid = req.query.firebaseUid;
+
+  try {
+    const user = await User.findOne({ firebaseUid });
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    const { subscriptionStatus } = user;
+    res.json({ subscriptionStatus });
+  } catch (error) {
+    console.error('Error fetching user status:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 });
 
 app.listen(port, () => {
