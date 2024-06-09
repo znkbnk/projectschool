@@ -21,7 +21,7 @@ const Success = () => {
         }
 
         const response = await axios.get(
-          `http://www.projectschool.dev/api/user-status?firebaseUid=${firebaseUid}`
+          `https://www.projectschool.dev/api/user-status?firebaseUid=${firebaseUid}`
         );
         const { subscriptionStatus } = response.data;
         setUserStatus(
