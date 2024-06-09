@@ -4,5 +4,5 @@
 
 [[redirects]]
   from = "/stripe-webhook/*"
-  to = "https://projectschool.dev/:splat"
+  to = "https://www.projectschool.dev/:splat"
   status = 200
