@@ -8,6 +8,21 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5002; 
 
+const allowedOrigins = ['https://projectschool.dev'];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true,
+  })
+);
+
 // Connect to MongoDB
 const mongoURI = process.env.MONGODB_URI;
 
