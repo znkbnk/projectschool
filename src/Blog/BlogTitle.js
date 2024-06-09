@@ -29,6 +29,7 @@ const WelcomeComponent = () => {
     <div className='exercises-container'>
       <div>
         <h1 className='exercises-title' ref={titleRef}>
+
           <span>B</span>
           <span>l</span>
           <span>o</span>

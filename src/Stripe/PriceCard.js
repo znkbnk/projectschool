@@ -7,6 +7,7 @@ const PriceCard = ({ title, price, advantages, buttonText, trialDays, onButtonCl
 
   return (
     <div className="card-wrapper">
+
       <div className="card-header">
         <h2 className="card-title">{title}</h2>
       </div>

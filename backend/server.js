@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5002; 
 
-const allowedOrigins = ['https://projectschool.dev'];
+const allowedOrigins = ['https://projectschool.dev', 'https://www.projectschool.dev'];
 
 app.use(
   cors({

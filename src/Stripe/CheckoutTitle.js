@@ -29,14 +29,16 @@ const CheckoutTitle = () => {
     <div className='exercises-container'>
       <div>
         <h1 className='exercises-title' ref={titleRef}>
-        <span>C</span>
+        <h4>Test page, u wont be charged</h4>
+
+        {/* <span>C</span>
           <span>h</span>
           <span>e</span>
           <span>c</span>
           <span>k</span>
           <span>o</span>
           <span>u</span>
-          <span>t</span>
+          <span>t</span> */}
         </h1>
       </div>
     </div>

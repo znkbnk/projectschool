@@ -65,6 +65,7 @@ const PriceCardsList = () => {
 
   return (
     <div className='price-cards-container'>
+
       <PriceCard
         title='Free'
         price='0'
