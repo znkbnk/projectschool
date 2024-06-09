@@ -13,7 +13,12 @@ const Success = () => {
   useEffect(() => {
     const fetchUserStatus = async () => {
       try {
-        const firebaseUid = "sampleUid1"; // Manually set for testing purposes
+        const searchParams = new URLSearchParams(location.search);
+        const firebaseUid = searchParams.get("firebaseUid");
+
+        if (!firebaseUid) {
+          throw new Error("Firebase UID not found in the URL");
+        }
 
         const response = await axios.get(
           `http://localhost:5002/api/user-status?firebaseUid=${firebaseUid}`
