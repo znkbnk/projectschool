@@ -25,6 +25,7 @@ yarn-error.log*
 src/components/aaaa.html
 src/components/aa.jpg
 src/components/aa.css
+backend/.env
 .env
 
 

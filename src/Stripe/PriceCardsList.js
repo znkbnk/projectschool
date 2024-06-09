@@ -34,11 +34,12 @@ const PriceCardsList = () => {
   
       if (!stripe) {
         console.error("Stripe.js library not loaded yet");
-        return; // Exit function if Stripe is not loaded
+        return; 
       }
   
       // Include the firebaseUid in the success and cancel URLs
       const successUrl = `${window.location.origin}/#success?firebaseUid=${user.uid}`;
+      console.log('successUrl:', successUrl);
       const cancelUrl = `${window.location.origin}/#cancel?firebaseUid=${user.uid}`;
   
       // Redirect the user to Stripe Checkout
