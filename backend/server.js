@@ -19,11 +19,11 @@ app.use(
         callback(new Error('Not allowed by CORS'));
       }
     },
-    credentials: true,
+    credentials: true, 
   })
 );
 
-// Connect to MongoDB
+// Connect to MongoDB 
 const mongoURI = process.env.MONGODB_URI;
 
 mongoose
