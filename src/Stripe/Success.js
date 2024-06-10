@@ -21,7 +21,7 @@ const Success = () => {
         }
 
         const response = await axios.get(
-          `https://www.projectschool.dev/api/user-status?firebaseUid=${firebaseUid}`
+          `https://projectschool404-4c33494b2162.herokuapp.com/api/user-status?firebaseUid=${firebaseUid}`
         );
         const { subscriptionStatus } = response.data;
         setUserStatus(
