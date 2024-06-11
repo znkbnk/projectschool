@@ -1,6 +1,6 @@
 // backend/server.js
 
-// Import necessary modules
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -135,6 +135,8 @@ app.get("/api/user-status", async (req, res) => {
 });
 
 console.log('STRIPE_WEBHOOK_SECRET:', process.env.STRIPE_WEBHOOK_SECRET);
+console.log('MONGODB_URI:', process.env.MONGODB_URI);
+console.log('STRIPE_SECRET_KEY:', process.env.STRIPE_SECRET_KEY);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
