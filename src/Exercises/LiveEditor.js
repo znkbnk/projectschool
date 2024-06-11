@@ -44,6 +44,7 @@ const LiveEditor = () => {
       })
       .catch(error => {
         console.error("Error loading solution:", error);
+        // Handle the error here, potentially display a message to the user
         setSolutionCodes(["Solution not found"]);
       });
   }, [taskId]);
