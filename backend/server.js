@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const User = require("./models/userModel");
 const cors = require("cors");
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY); // Import Stripe library
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY); 
 const app = express();
 const port = process.env.PORT || 5002;
 
@@ -14,7 +14,10 @@ const port = process.env.PORT || 5002;
 const allowedOrigins = [
   "https://projectschool.dev",
   "https://www.projectschool.dev",
-  "projectschool.dev"
+  "projectschool.dev",
+  "http://localhost:3000",
+  "http://localhost:5001",
+  "http://localhost:5002",
 ];
 
 app.use(
@@ -131,7 +134,8 @@ app.get("/api/user-status", async (req, res) => {
   }
 });
 
-// Start the server
+console.log('STRIPE_WEBHOOK_SECRET:', process.env.STRIPE_WEBHOOK_SECRET);
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
