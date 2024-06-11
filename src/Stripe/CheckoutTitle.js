@@ -28,8 +28,9 @@ const CheckoutTitle = () => {
   return (
     <div className='exercises-container'>
       <div>
+      <h1>Test page, u wont be charged</h1>
         <h1 className='exercises-title' ref={titleRef}>
-        <h4>Test page, u wont be charged</h4>
+        
 
         {/* <span>C</span>
           <span>h</span>

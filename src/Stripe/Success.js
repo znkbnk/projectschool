@@ -9,6 +9,8 @@ const Success = () => {
   const [error, setError] = useState(null);
 
   const location = useLocation();
+  const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
+  const apiUrl = isDevelopment ? 'http://localhost:5002/api/user-status' : 'https://projectschool404-4c33494b2162.herokuapp.com/api/user-status';
 
   useEffect(() => {
     const fetchUserStatus = async () => {
@@ -20,12 +22,9 @@ const Success = () => {
           throw new Error("Firebase UID not found in the URL");
         }
 
-        const response = await axios.get(`/api/user-status?firebaseUid=${firebaseUid}`
-        );
+        const response = await axios.get(`${apiUrl}?firebaseUid=${firebaseUid}`);
         const { subscriptionStatus } = response.data;
-        setUserStatus(
-          subscriptionStatus === "subscribed" ? "Subscribed" : "Not Subscribed"
-        );
+        setUserStatus(subscriptionStatus === "subscribed" ? "Subscribed" : "Not Subscribed");
       } catch (error) {
         console.error("Error fetching user status:", error);
         setError(error.message);
@@ -33,7 +32,7 @@ const Success = () => {
     };
 
     fetchUserStatus();
-  }, [location]);
+  }, [location, apiUrl]);
 
   return (
     <div>

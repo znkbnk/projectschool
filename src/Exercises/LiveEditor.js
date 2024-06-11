@@ -214,9 +214,11 @@ const LiveEditor = () => {
                  Download Data
                </button>
              )}
-              <button className='button-84' onClick={handleToggleSolution}>
-                  Solution
-                </button>
+                {isPaidUser && (
+                  <button className='button-84' onClick={handleToggleSolution}>
+                    Solution
+                  </button>
+                )}
            </div>
            {showSolution && (
              <div className='solution-popup'>

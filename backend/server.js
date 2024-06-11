@@ -8,7 +8,7 @@ const User = require("./models/userModel");
 const cors = require("cors");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY); 
 const app = express();
-const port = process.env.PORT || 5002;
+const port =  5002;
 
 // Allow only specific origins
 const allowedOrigins = [
@@ -18,6 +18,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5001",
   "http://localhost:5002",
+  "https://projectschool404-4c33494b2162.herokuapp.com"
   
 ];
 
@@ -44,72 +45,60 @@ mongoose
 
 app.use(bodyParser.json());
 
-// Define route to handle Stripe webhook events
-app.post("/stripe-webhook", async (req, res) => {
-  const sig = req.headers["stripe-signature"];
+app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async (req, res) => {
+  const sig = req.headers['stripe-signature'];
   let stripeEvent;
 
   try {
-    stripeEvent = stripe.webhooks.constructEvent(
-      req.body,
-      sig,
-      process.env.STRIPE_WEBHOOK_SECRET
-    );
+    stripeEvent = stripe.webhooks.constructEvent(req.body, sig, process.env.STRIPE_WEBHOOK_SECRET);
+    console.log('Webhook event received:', stripeEvent.type);
   } catch (err) {
-    console.error("Webhook signature verification failed.", err.message);
+    console.error('Webhook signature verification failed:', err.message);
     return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
   try {
-    switch (stripeEvent.type) {
-      case "checkout.session.completed":
-        const checkoutSession = stripeEvent.data.object;
-        const customer = await stripe.customers.retrieve(
-          checkoutSession.customer
-        );
-        const uid = customer.metadata.firebaseUid;
+    if (stripeEvent.type === 'checkout.session.completed') {
+      const checkoutSession = stripeEvent.data.object;
+      const customer = await stripe.customers.retrieve(checkoutSession.customer);
+      const uid = customer.metadata.firebaseUid;
 
-        if (!uid) {
-          throw new Error("Firebase UID not found in customer metadata");
-        }
+      if (!uid) {
+        throw new Error('Firebase UID not found in customer metadata');
+      }
 
-        // Find or create the user document
-        let user = await User.findOne({ firebaseUid: uid });
-        if (!user) {
-          user = new User({
-            firebaseUid: uid,
-            subscriptionStatus: "subscribed",
-            subscriptionId: checkoutSession.subscription,
-            subscriptionExpiry: new Date(
-              checkoutSession.current_period_end * 1000
-            ),
-          });
-        } else {
-          // Update existing user document
-          user.subscriptionStatus = "subscribed";
-          user.subscriptionId = checkoutSession.subscription;
-          user.subscriptionExpiry = new Date(
-            checkoutSession.current_period_end * 1000
-          );
-        }
+      console.log(`Processing checkout session for UID: ${uid}`);
 
-        await user.save();
+      let user = await User.findOne({ firebaseUid: uid });
+      if (!user) {
+        console.log(`Creating new user for UID: ${uid}`);
+        user = new User({
+          firebaseUid: uid,
+          subscriptionStatus: 'subscribed',
+          subscriptionId: checkoutSession.subscription,
+          subscriptionExpiry: new Date(checkoutSession.current_period_end * 1000),
+        });
+      } else {
+        console.log(`Updating existing user for UID: ${uid}`);
+        user.subscriptionStatus = 'subscribed';
+        user.subscriptionId = checkoutSession.subscription;
+        user.subscriptionExpiry = new Date(checkoutSession.current_period_end * 1000);
+      }
 
-        console.log(
-          `User ${uid} subscribed. Subscription status updated in the database.`
-        );
-        break;
-
-      default:
-        console.log(`Unhandled event type: ${stripeEvent.type}`);
+      await user.save();
+      console.log(`User ${uid} subscribed. Subscription status updated in the database.`);
+    } else {
+      console.log(`Unhandled event type: ${stripeEvent.type}`);
     }
   } catch (error) {
-    console.error("Error handling Stripe webhook event:", error);
-    return res.status(500).send("Error handling webhook event");
+    console.error('Error handling Stripe webhook event:', error);
+    return res.status(500).send('Error handling webhook event');
   }
 
-  res.status(200).send("Webhook received successfully");
+  res.status(200).send('Webhook received successfully');
 });
+
+
 
 // Endpoint to get user status
 app.get("/api/user-status", async (req, res) => {

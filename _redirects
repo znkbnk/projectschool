@@ -1,1 +1,2 @@
 /stripe-webhook/*  https://www.projectschool.dev/stripe-webhook/:splat  308
+/api/* https://projectschool404-4c33494b2162.herokuapp.com/api/:splat 200
