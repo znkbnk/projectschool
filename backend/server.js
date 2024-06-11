@@ -117,9 +117,7 @@ app.get("/api/user-status", async (req, res) => {
   console.log("Received request for user status:", firebaseUid);
 
   if (!firebaseUid) {
-    return res
-      .status(400)
-      .json({ error: "firebaseUid query parameter is required" });
+    return res.status(400).json({ error: "firebaseUid query parameter is required" });
   }
 
   try {
