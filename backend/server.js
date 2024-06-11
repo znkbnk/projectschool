@@ -18,6 +18,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5001",
   "http://localhost:5002",
+  
 ];
 
 app.use(
@@ -134,9 +135,7 @@ app.get("/api/user-status", async (req, res) => {
   }
 });
 
-console.log('STRIPE_WEBHOOK_SECRET:', process.env.STRIPE_WEBHOOK_SECRET);
-console.log('MONGODB_URI:', process.env.MONGODB_URI);
-console.log('STRIPE_SECRET_KEY:', process.env.STRIPE_SECRET_KEY);
+
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

@@ -50,6 +50,7 @@
       "react-app/jest"
     ]
   },
+  "proxy": "https://projectschool404-4c33494b2162.herokuapp.com",
   "browserslist": {
     "production": [
       ">0.2%",

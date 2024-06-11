@@ -20,8 +20,7 @@ const Success = () => {
           throw new Error("Firebase UID not found in the URL");
         }
 
-        const response = await axios.get(
-          `https://projectschool404-4c33494b2162.herokuapp.com/api/user-status?firebaseUid=${firebaseUid}`
+        const response = await axios.get(`api/user-status?firebaseUid=${firebaseUid}`
         );
         const { subscriptionStatus } = response.data;
         setUserStatus(
