@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const User = require('../../backend/models/userModel'); 
+const User = require('../backend/models/userModel');
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -14,6 +14,10 @@ const handleCreateUser = async (event) => {
     if (existingUser) {
       return {
         statusCode: 400,
+        headers: {
+          'Access-Control-Allow-Origin': '*', // Add this line
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept', // Add this line
+        },
         body: JSON.stringify({ error: 'User already exists' }),
       };
     }
@@ -28,12 +32,20 @@ const handleCreateUser = async (event) => {
 
     return {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Add this line
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept', // Add this line
+      },
       body: JSON.stringify({ message: 'User created successfully' }),
     };
   } catch (error) {
     console.error('Error creating user:', error);
     return {
       statusCode: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Add this line
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept', // Add this line
+      },
       body: JSON.stringify({ error: 'Internal server error' }),
     };
   }
