@@ -1,5 +1,3 @@
-// backend/server.js
-
 require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -8,7 +6,7 @@ const User = require("./models/userModel");
 const cors = require("cors");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY); 
 const app = express();
-const port =  5002;
+const port = 5002;
 
 // Allow only specific origins
 const allowedOrigins = [
@@ -16,24 +14,21 @@ const allowedOrigins = [
   "https://www.projectschool.dev",
   "projectschool.dev",
   "http://localhost:3000",
-  "http://localhost:3000/",
-  "http://localhost:3000/#",
   "http://localhost:5001",
   "http://localhost:5002",
   "https://projectschool404-4c33494b2162.herokuapp.com"
-  
 ];
 
 app.use(
   cors({
-      origin: function (origin, callback) {
-          if (!origin || allowedOrigins.includes(origin)) {
-              callback(null, true);
-          } else {
-              callback(new Error("Not allowed by CORS"));
-          }
-      },
-      credentials: true,
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
 
@@ -59,23 +54,18 @@ app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async 
     return res.status(400).send(`Webhook Error: ${err.message}`);
   }
 
-  try {
-    if (stripeEvent.type === 'checkout.session.completed') {
-      const checkoutSession = stripeEvent.data.object;
-      console.log('Checkout session:', checkoutSession);
+  if (stripeEvent.type === 'checkout.session.completed') {
+    const checkoutSession = stripeEvent.data.object;
 
+    try {
       const customer = await stripe.customers.retrieve(checkoutSession.customer);
-      console.log('Customer retrieved:', customer);
-
       const uid = customer.metadata.firebaseUid;
-      console.log('Firebase UID:', uid);
 
       if (!uid) {
         throw new Error('Firebase UID not found in customer metadata');
       }
 
       let user = await User.findOne({ firebaseUid: uid });
-      console.log('User found:', user);
 
       if (!user) {
         console.log(`Creating new user for UID: ${uid}`);
@@ -94,20 +84,16 @@ app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async 
 
       await user.save();
       console.log(`User ${uid} subscribed. Subscription status updated in the database.`);
-    } else {
-      console.log(`Unhandled event type: ${stripeEvent.type}`);
+    } catch (error) {
+      console.error('Error handling Stripe webhook event:', error);
+      return res.status(500).send('Error handling webhook event');
     }
-  } catch (error) {
-    console.error('Error handling Stripe webhook event:', error);
-    return res.status(500).send('Error handling webhook event');
+  } else {
+    console.log(`Unhandled event type: ${stripeEvent.type}`);
   }
 
   res.status(200).send('Webhook received successfully');
 });
-
-
-
-
 
 app.get("/api/user-status", async (req, res) => {
   const firebaseUid = req.query.firebaseUid;
@@ -158,25 +144,21 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 });
 
-
 app.post('/api/create-user', async (req, res) => {
   const { firebaseUid, email } = req.body;
 
   try {
-    // Check if the user already exists in the database
     const existingUser = await User.findOne({ firebaseUid });
     if (existingUser) {
       return res.status(400).json({ error: 'User already exists' });
     }
 
-    // Create a new user document
     const newUser = new User({
       firebaseUid,
       email,
-      subscriptionStatus: 'subscribed', // Set the initial subscription status
+      subscriptionStatus: 'not_subscribed', // Set the initial subscription status
     });
 
-    // Save the new user document to the database
     await newUser.save();
 
     res.status(200).json({ message: 'User created successfully' });
@@ -185,7 +167,6 @@ app.post('/api/create-user', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
-
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

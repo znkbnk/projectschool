@@ -1,3 +1,5 @@
+//backend/mode/userModel.js
+
 const mongoose = require('mongoose');
 const User = require('../../backend/models/userModel');
 
