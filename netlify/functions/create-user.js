@@ -22,7 +22,7 @@ const handleCreateUser = async (event) => {
   const { firebaseUid, email } = JSON.parse(event.body);
 
   try {
-    const existingUser = await User.findOne({ firebaseUid });
+    const existingUser = await User.findOne({ firebaseUid,  });
     if (existingUser) {
       return {
         statusCode: 400,

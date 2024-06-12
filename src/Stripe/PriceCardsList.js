@@ -34,21 +34,26 @@ const PriceCardsList = () => {
   
       if (!stripe) {
         console.error("Stripe.js library not loaded yet");
-        return; 
+        return;
       }
   
-      // Include the firebaseUid in the success and cancel URLs
-      const successUrl = `${window.location.origin}/#success?firebaseUid=${user.uid}`;
-      console.log('successUrl:', successUrl);
-      const cancelUrl = `${window.location.origin}/#cancel?firebaseUid=${user.uid}`;
+      const response = await fetch('/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          priceId,
+          firebaseUid: user.uid,
+          customerEmail: user.email,
+        }),
+      });
+  
+      const session = await response.json();
   
       // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
-        lineItems: [{ price: priceId, quantity: 1 }],
-        mode: "subscription",
-        successUrl,
-        cancelUrl,
-        customerEmail: user.email, // Use the authenticated user's email
+        sessionId: session.id,
       });
   
       if (error) {
@@ -58,6 +63,7 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
+  
   
   const handleFreeButtonClick = () => {
     navigate("/signup");
