@@ -27,7 +27,7 @@ const PriceCardsList = () => {
     try {
       if (!user) {
         console.error("User not authenticated");
-        return;
+        return; // Exit function if user is not authenticated
       }
   
       const stripe = await stripePromise;
@@ -37,7 +37,10 @@ const PriceCardsList = () => {
         return;
       }
   
-      const response = await fetch('http://localhost:5002/create-checkout-session', { // Ensure this URL is correct
+      const successUrl = `${window.location.origin}/#success?firebaseUid=${user.uid}`;
+      const cancelUrl = `${window.location.origin}/#cancel`;
+  
+      const response = await fetch('http://localhost:5002/create-checkout-session', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,6 +70,7 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
+  
   
   
   

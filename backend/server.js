@@ -113,7 +113,7 @@ app.post('/create-checkout-session', async (req, res) => {
         },
       ],
       mode: 'subscription',
-      success_url: `${req.headers.origin}/#success?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${req.headers.origin}/#success?firebaseUid=${firebaseUid}`,
       cancel_url: `${req.headers.origin}/#cancel`,
       customer_email: customerEmail,
       metadata: {
@@ -127,6 +127,7 @@ app.post('/create-checkout-session', async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 
 
 
