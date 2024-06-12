@@ -145,7 +145,7 @@ app.post('/api/create-user', async (req, res) => {
     const newUser = new User({
       firebaseUid,
       email,
-      subscriptionStatus: 'not_subscribed', // Set the initial subscription status
+      subscriptionStatus: 'subscribed', // Set the initial subscription status
     });
 
     // Save the new user document to the database
