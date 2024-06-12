@@ -29,40 +29,40 @@ const PriceCardsList = () => {
         console.error("User not authenticated");
         return; // Exit function if user is not authenticated
       }
-  
+
       const stripe = await stripePromise;
-  
+
       if (!stripe) {
         console.error("Stripe.js library not loaded yet");
         return;
       }
-  
-      const successUrl = `${window.location.origin}/#success?firebaseUid=${user.uid}`;
-      const cancelUrl = `${window.location.origin}/#cancel`;
-  
-      const response = await fetch('http://localhost:5002/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          priceId,
-          firebaseUid: user.uid,
-          customerEmail: user.email,
-        }),
-      });
-  
+
+      const response = await fetch(
+        "http://localhost:5002/create-checkout-session",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            priceId,
+            firebaseUid: user.uid,
+            customerEmail: user.email,
+          }),
+        }
+      );
+
       if (!response.ok) {
-        throw new Error('Failed to create checkout session');
+        throw new Error("Failed to create checkout session");
       }
-  
+
       const session = await response.json();
-  
+
       // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
         sessionId: session.id,
       });
-  
+
       if (error) {
         throw new Error(error.message);
       }
@@ -70,17 +70,13 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
-  
-  
-  
-  
+
   const handleFreeButtonClick = () => {
     navigate("/signup");
   };
 
   return (
     <div className='price-cards-container'>
-
       <PriceCard
         title='Free'
         price='0'
