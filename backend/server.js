@@ -62,16 +62,21 @@ app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async 
   try {
     if (stripeEvent.type === 'checkout.session.completed') {
       const checkoutSession = stripeEvent.data.object;
+      console.log('Checkout session:', checkoutSession);
+
       const customer = await stripe.customers.retrieve(checkoutSession.customer);
+      console.log('Customer retrieved:', customer);
+
       const uid = customer.metadata.firebaseUid;
+      console.log('Firebase UID:', uid);
 
       if (!uid) {
         throw new Error('Firebase UID not found in customer metadata');
       }
 
-      console.log(`Processing checkout session for UID: ${uid}`);
-
       let user = await User.findOne({ firebaseUid: uid });
+      console.log('User found:', user);
+
       if (!user) {
         console.log(`Creating new user for UID: ${uid}`);
         user = new User({
@@ -101,6 +106,30 @@ app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async 
 });
 
 
+
+
+
+app.get("/api/user-status", async (req, res) => {
+  const firebaseUid = req.query.firebaseUid;
+  console.log("Received request for user status:", firebaseUid);
+
+  if (!firebaseUid) {
+    return res.status(400).json({ error: "firebaseUid query parameter is required" });
+  }
+
+  try {
+    let user = await User.findOne({ firebaseUid });
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    const { subscriptionStatus } = user;
+    res.json({ subscriptionStatus });
+  } catch (error) {
+    console.error("Error fetching user status:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 app.post('/create-checkout-session', async (req, res) => {
   const { priceId, firebaseUid, customerEmail } = req.body;
   
@@ -126,27 +155,6 @@ app.post('/create-checkout-session', async (req, res) => {
   } catch (error) {
     console.error('Error creating checkout session:', error);
     res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-app.get("/api/user-status", async (req, res) => {
-  const firebaseUid = req.query.firebaseUid;
-  console.log("Received request for user status:", firebaseUid);
-
-  if (!firebaseUid) {
-    return res.status(400).json({ error: "firebaseUid query parameter is required" });
-  }
-
-  try {
-    let user = await User.findOne({ firebaseUid });
-    if (!user) {
-      return res.status(404).json({ error: "User not found" });
-    }
-    const { subscriptionStatus } = user;
-    res.json({ subscriptionStatus });
-  } catch (error) {
-    console.error("Error fetching user status:", error);
-    res.status(500).json({ error: "Internal server error" });
   }
 });
 
