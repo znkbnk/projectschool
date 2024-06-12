@@ -1,6 +1,7 @@
 
 //Signup.js
 
+import axios from 'axios';
 import React, { useState, useEffect } from "react";
 import "../styles/login.css";
 import Navbar from "../components/Navbar";
@@ -50,8 +51,20 @@ const Signup = () => {
       );
       const user = userCredential.user;
       await sendVerificationEmail(user);
-      setIsSignUpSuccess(true); 
+      setIsSignUpSuccess(true);
       toast.success("User signed up successfully! Please verify your email.");
+  
+      // Send a POST request to the Netlify Function
+      const { uid } = user;
+      try {
+        await axios.post('https://projectschool.dev/.netlify/functions/create-user', {
+          firebaseUid: uid,
+          email,
+        });
+        console.log('User created in database');
+      } catch (error) {
+        console.error('Error creating user in database:', error);
+      }
     } catch (error) {
       const errorMessage = error.message;
       console.error(errorMessage);
