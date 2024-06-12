@@ -9,5 +9,5 @@
   status = 200
 
 [functions]
-  node_bundler = "npm"
+  node_bundler = "esbuild"
   external_node_modules = ["mongoose"]
