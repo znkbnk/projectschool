@@ -16,6 +16,8 @@ const allowedOrigins = [
   "https://www.projectschool.dev",
   "projectschool.dev",
   "http://localhost:3000",
+  "http://localhost:3000/",
+  "http://localhost:3000/#",
   "http://localhost:5001",
   "http://localhost:5002",
   "https://projectschool404-4c33494b2162.herokuapp.com"

@@ -52,7 +52,6 @@ const Signup = () => {
       const user = userCredential.user;
       await sendVerificationEmail(user);
       setIsSignUpSuccess(true);
-      toast.success("User signed up successfully! Please verify your email.");
   
       // Send a POST request to the Netlify Function
       const { uid } = user;
@@ -62,6 +61,7 @@ const Signup = () => {
           email,
         });
         console.log('User created in database');
+        toast.success("User signed up successfully! Please verify your email.");
       } catch (error) {
         console.error('Error creating user in database:', error);
       }
