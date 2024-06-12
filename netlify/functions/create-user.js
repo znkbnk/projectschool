@@ -7,6 +7,18 @@ mongoose.connect(process.env.MONGODB_URI, {
 });
 
 const handleCreateUser = async (event) => {
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      },
+      body: '',
+    };
+  }
+
   const { firebaseUid, email } = JSON.parse(event.body);
 
   try {
@@ -15,8 +27,9 @@ const handleCreateUser = async (event) => {
       return {
         statusCode: 400,
         headers: {
-          'Access-Control-Allow-Origin': '*', // Add this line
-          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept', // Add this line
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+          'Access-Control-Allow-Methods': 'POST, OPTIONS',
         },
         body: JSON.stringify({ error: 'User already exists' }),
       };
@@ -33,8 +46,9 @@ const handleCreateUser = async (event) => {
     return {
       statusCode: 200,
       headers: {
-        'Access-Control-Allow-Origin': '*', // Add this line
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept', // Add this line
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
       },
       body: JSON.stringify({ message: 'User created successfully' }),
     };
@@ -43,8 +57,9 @@ const handleCreateUser = async (event) => {
     return {
       statusCode: 500,
       headers: {
-        'Access-Control-Allow-Origin': '*', // Add this line
-        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept', // Add this line
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
       },
       body: JSON.stringify({ error: 'Internal server error' }),
     };
