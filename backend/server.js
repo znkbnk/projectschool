@@ -76,13 +76,13 @@ app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async 
         console.log(`Creating new user for UID: ${uid}`);
         user = new User({
           firebaseUid: uid,
-          subscriptionStatus: 'subscribed', // Set subscriptionStatus as 'subscribed' for new users
+          subscriptionStatus: 'subscribed',
           subscriptionId: checkoutSession.subscription,
           subscriptionExpiry: new Date(checkoutSession.current_period_end * 1000),
         });
       } else {
         console.log(`Updating existing user for UID: ${uid}`);
-        user.subscriptionStatus = 'subscribed'; // Set subscriptionStatus as 'subscribed'
+        user.subscriptionStatus = 'subscribed';
         user.subscriptionId = checkoutSession.subscription;
         user.subscriptionExpiry = new Date(checkoutSession.current_period_end * 1000);
       }
@@ -99,6 +99,7 @@ app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async 
 
   res.status(200).send('Webhook received successfully');
 });
+
 
 app.post('/create-checkout-session', async (req, res) => {
   const { priceId, firebaseUid, customerEmail } = req.body;
@@ -128,13 +129,6 @@ app.post('/create-checkout-session', async (req, res) => {
   }
 });
 
-
-
-
-
-
-// Endpoint to get user status
-// Endpoint to get user status
 app.get("/api/user-status", async (req, res) => {
   const firebaseUid = req.query.firebaseUid;
   console.log("Received request for user status:", firebaseUid);
@@ -146,13 +140,7 @@ app.get("/api/user-status", async (req, res) => {
   try {
     let user = await User.findOne({ firebaseUid });
     if (!user) {
-      console.log(`Creating new user for UID: ${firebaseUid}`);
-      user = new User({
-        firebaseUid,
-        email,
-        subscriptionStatus: 'subscribed', 
-      });
-      await user.save();
+      return res.status(404).json({ error: "User not found" });
     }
     const { subscriptionStatus } = user;
     res.json({ subscriptionStatus });
@@ -161,6 +149,7 @@ app.get("/api/user-status", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
 
 app.post('/api/create-user', async (req, res) => {
   const { firebaseUid, email } = req.body;
