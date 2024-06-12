@@ -10,7 +10,7 @@ mongoose
   .catch((err) => console.error('MongoDB connection error:', err));
 
   const testUser = new User({
-    firebaseUid: '37fyGIQCACOsqGxJtU9jdB2W4nm1',
+    firebaseUid: '37fyGIQCACOsqGxJtU9jdB2W4nm2',
     subscriptionStatus: 'subscribed',
     subscriptionId: 'test_subscription_id',
     subscriptionExpiry: new Date('2024-12-31') // Set an appropriate expiry date

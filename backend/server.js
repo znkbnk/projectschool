@@ -74,13 +74,13 @@ app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async 
         console.log(`Creating new user for UID: ${uid}`);
         user = new User({
           firebaseUid: uid,
-          subscriptionStatus: 'subscribed',
+          subscriptionStatus: 'subscribed', // Set subscriptionStatus as 'subscribed' for new users
           subscriptionId: checkoutSession.subscription,
           subscriptionExpiry: new Date(checkoutSession.current_period_end * 1000),
         });
       } else {
         console.log(`Updating existing user for UID: ${uid}`);
-        user.subscriptionStatus = 'subscribed';
+        user.subscriptionStatus = 'subscribed'; // Set subscriptionStatus as 'subscribed'
         user.subscriptionId = checkoutSession.subscription;
         user.subscriptionExpiry = new Date(checkoutSession.current_period_end * 1000);
       }
@@ -101,6 +101,7 @@ app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async 
 
 
 // Endpoint to get user status
+// Endpoint to get user status
 app.get("/api/user-status", async (req, res) => {
   const firebaseUid = req.query.firebaseUid;
   console.log("Received request for user status:", firebaseUid);
@@ -110,9 +111,15 @@ app.get("/api/user-status", async (req, res) => {
   }
 
   try {
-    const user = await User.findOne({ firebaseUid });
+    let user = await User.findOne({ firebaseUid });
     if (!user) {
-      return res.status(404).json({ error: "User not found" });
+      console.log(`Creating new user for UID: ${firebaseUid}`);
+      user = new User({
+        firebaseUid,
+        email,
+        subscriptionStatus: 'subscribed', 
+      });
+      await user.save();
     }
     const { subscriptionStatus } = user;
     res.json({ subscriptionStatus });
@@ -122,6 +129,32 @@ app.get("/api/user-status", async (req, res) => {
   }
 });
 
+app.post('/api/create-user', async (req, res) => {
+  const { firebaseUid, email } = req.body;
+
+  try {
+    // Check if the user already exists in the database
+    const existingUser = await User.findOne({ firebaseUid });
+    if (existingUser) {
+      return res.status(400).json({ error: 'User already exists' });
+    }
+
+    // Create a new user document
+    const newUser = new User({
+      firebaseUid,
+      email,
+      subscriptionStatus: 'not_subscribed', // Set the initial subscription status
+    });
+
+    // Save the new user document to the database
+    await newUser.save();
+
+    res.status(200).json({ message: 'User created successfully' });
+  } catch (error) {
+    console.error('Error creating user:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 
 app.listen(port, () => {
