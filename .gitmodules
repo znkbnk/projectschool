@@ -1,0 +1,4 @@
+[submodule "backend"]
+    path = backend
+    url = https://github.com/znkbnk/projectschool-backend.git
+
