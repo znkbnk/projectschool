@@ -27,7 +27,7 @@ const PriceCardsList = () => {
     try {
       if (!user) {
         console.error("User not authenticated");
-        return; // Exit function if user is not authenticated
+        return; 
       }
 
       const stripe = await stripePromise;
