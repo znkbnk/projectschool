@@ -32,7 +32,6 @@ backend/.env
 
 .netlify
 .next/
-src/components/firebase.js
 projectschool-48842.json
 package-lock.json
 
