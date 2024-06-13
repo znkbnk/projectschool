@@ -9,7 +9,7 @@ const app = express();
 const port = 5002;
 
 // Allow only specific origins
-const allowedOrigins = [
+const allowedOrigins = [  
   'https://projectschool.dev',
   "https://www.projectschool.dev",
   "http://localhost:3000",
