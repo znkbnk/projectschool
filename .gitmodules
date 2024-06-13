@@ -1,3 +1,0 @@
-# [submodule "backend"]
-#     path = backend
-#     url = https://${process.env.GITHUB_PAT}@github.com/znkbnk/backend.git
