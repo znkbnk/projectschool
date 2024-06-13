@@ -6,17 +6,23 @@ const User = require("./models/userModel");
 const cors = require("cors");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY); 
 const app = express();
-const port = 5002;
+const port = process.env.PORT || 5002;
 
 // Allow only specific origins
-const allowedOrigins = [  
-  'https://projectschool.dev',
-  "https://www.projectschool.dev",
-  "http://localhost:3000",
-  "http://localhost:5001",
-  "http://localhost:5002",
-  "https://projectschool404.herokuapp.com"  
-];
+const corsOptions = {
+  origin: [
+    'https://projectschool.dev',
+    'https://www.projectschool.dev',
+    'http://localhost:3000',
+    'http://localhost:5001',
+    'http://localhost:5002',
+    'https://projectschool404.herokuapp.com'
+  ],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); 
 
 app.use(
   cors({

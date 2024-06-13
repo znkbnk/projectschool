@@ -49,6 +49,7 @@ const PriceCardsList = () => {
             firebaseUid: user.uid,
             customerEmail: user.email,
           }),
+          credentials: 'include',
         }
       );
       
