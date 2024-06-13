@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema({
   firebaseUid: { type: String, required: true, unique: true },
   subscriptionStatus: { type: String, default: 'not_subscribed' },
   subscriptionId: String,
-  subscriptionExpiry: Date,
   email: String,
 });
 

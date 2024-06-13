@@ -10,7 +10,7 @@ const Success = () => {
 
   const location = useLocation();
   const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
-  const apiUrl = isDevelopment ? 'http://localhost:5002/api/user-status' : 'https://projectschool404-4c33494b2162.herokuapp.com/api/user-status';
+  const apiUrl = 'https://projectschool404-4c33494b2162.herokuapp.com/api/user-status';
 
   useEffect(() => {
     const fetchUserStatus = async () => {

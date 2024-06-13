@@ -13,7 +13,6 @@ mongoose
     firebaseUid: '37fyGIQCACOsqGxJtU9jdB2W4nm2',
     subscriptionStatus: 'subscribed',
     subscriptionId: 'test_subscription_id',
-    subscriptionExpiry: new Date('2024-12-31') // Set an appropriate expiry date
   });
 
   testUser.save()

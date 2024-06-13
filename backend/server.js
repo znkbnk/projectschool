@@ -62,37 +62,36 @@ app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async 
       const uid = customer.metadata.firebaseUid;
 
       if (!uid) {
-        throw new Error('Firebase UID not found in customer metadata');
+        console.error('Firebase UID not found in customer metadata');
+        return res.status(400).send('Firebase UID not found in customer metadata');
       }
 
-      let user = await User.findOne({ firebaseUid: uid });
+      // Find the existing user by firebaseUid
+      const user = await User.findOne({ firebaseUid: uid });
 
-      if (!user) {
-        console.log(`Creating new user for UID: ${uid}`);
-        user = new User({
-          firebaseUid: uid,
-          subscriptionStatus: 'subscribed',
-          subscriptionId: checkoutSession.subscription,
-          subscriptionExpiry: new Date(checkoutSession.current_period_end * 1000),
-        });
-      } else {
-        console.log(`Updating existing user for UID: ${uid}`);
+      if (user) {
+        // Update the existing user's subscription status
         user.subscriptionStatus = 'subscribed';
         user.subscriptionId = checkoutSession.subscription;
-        user.subscriptionExpiry = new Date(checkoutSession.current_period_end * 1000);
-      }
 
-      await user.save();
-      console.log(`User ${uid} subscribed. Subscription status updated in the database.`);
+        // Save the updated user document
+        await user.save();
+        console.log(`User ${uid} subscribed. Subscription status updated in the database.`);
+        return res.status(200).send('Webhook received successfully');
+      } else {
+        console.error(`User not found for UID: ${uid}. User may not have been created during signup.`);
+        // Handle this case according to your requirements
+        // For example, you can log the error and continue without creating a new user
+        return res.status(400).send(`User not found for UID: ${uid}. User may not have been created during signup.`);
+      }
     } catch (error) {
       console.error('Error handling Stripe webhook event:', error);
       return res.status(500).send('Error handling webhook event');
     }
   } else {
     console.log(`Unhandled event type: ${stripeEvent.type}`);
+    return res.status(200).send('Webhook received successfully');
   }
-
-  res.status(200).send('Webhook received successfully');
 });
 
 app.get("/api/user-status", async (req, res) => {

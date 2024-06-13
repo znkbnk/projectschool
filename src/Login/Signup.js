@@ -53,7 +53,7 @@ const Signup = () => {
       await sendVerificationEmail(user);
       setIsSignUpSuccess(true);
   
-      // Send a POST request to the Netlify Function
+      // Send a POST request to the Netlify Function 
       const { uid } = user;
       try {
         await axios.post('https://projectschool.dev/.netlify/functions/create-user', {

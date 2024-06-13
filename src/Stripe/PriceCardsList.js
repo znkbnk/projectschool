@@ -38,7 +38,7 @@ const PriceCardsList = () => {
       }
 
       const response = await fetch(
-        "http://localhost:5002/create-checkout-session",
+        "https://projectschool404-4c33494b2162.herokuapp.com/create-checkout-session",
         {
           method: "POST",
           headers: {
