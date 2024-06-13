@@ -15,7 +15,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5001",
   "http://localhost:5002",
-  "https://projectschool404-4c33494b2162.herokuapp.com"
+  "https://projectschool404.herokuapp.com"
 ];
 
 app.use(
@@ -37,7 +37,7 @@ app.use(
 const mongoURI = process.env.MONGODB_URI;
 
 mongoose
-  .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongoURI)
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
