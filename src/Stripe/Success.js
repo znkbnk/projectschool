@@ -9,7 +9,6 @@ const Success = () => {
   const [error, setError] = useState(null);
 
   const location = useLocation();
-  const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
   const apiUrl = 'https://projectschool404-4c33494b2162.herokuapp.com/api/user-status';
 
   useEffect(() => {
