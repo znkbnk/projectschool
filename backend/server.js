@@ -10,9 +10,8 @@ const port = 5002;
 
 // Allow only specific origins
 const allowedOrigins = [
-  "https://projectschool.dev",
+  'https://projectschool.dev',
   "https://www.projectschool.dev",
-  "projectschool.dev",
   "http://localhost:3000",
   "http://localhost:5001",
   "http://localhost:5002",
@@ -22,9 +21,11 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: function (origin, callback) {
+      console.log("Origin: ", origin);
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
+        console.log("Blocked by CORS");
         callback(new Error("Not allowed by CORS"));
       }
     },
@@ -41,6 +42,7 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/stripe-webhook', bodyParser.raw({ type: 'application/json' }), async (req, res) => {
   const sig = req.headers['stripe-signature'];

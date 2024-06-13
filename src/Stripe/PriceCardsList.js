@@ -51,6 +51,7 @@ const PriceCardsList = () => {
           }),
         }
       );
+      
 
       if (!response.ok) {
         throw new Error("Failed to create checkout session");
