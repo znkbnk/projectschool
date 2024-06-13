@@ -15,8 +15,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5001",
   "http://localhost:5002",
-  "https://projectschool404.herokuapp.com"
-  
+  "https://projectschool404.herokuapp.com"  
 ];
 
 app.use(
