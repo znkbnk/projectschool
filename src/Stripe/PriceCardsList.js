@@ -41,6 +41,7 @@ const PriceCardsList = () => {
         "https://projectschool404.herokuapp.com/create-checkout-session",
         {
           method: "POST",
+
           headers: {
             "Content-Type": "application/json",
           },
@@ -48,6 +49,7 @@ const PriceCardsList = () => {
             priceId,
             firebaseUid: user.uid,
             customerEmail: user.email,
+            mode: 'no-cors'
           }),
           credentials: 'include',
         }
