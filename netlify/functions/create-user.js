@@ -1,7 +1,8 @@
-//backend/mode/userModel.js
+//netlify/functions/create0users.js.js
 
 const mongoose = require('mongoose');
-const User = require('../../backend/models/userModel');
+const UserModelPath = path.resolve(__dirname, '../../backend/models/userModel');
+const User = require(UserModelPath);
 
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
