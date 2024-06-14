@@ -9,7 +9,7 @@ const Success = () => {
   const [error, setError] = useState(null);
 
   const location = useLocation();
-  const apiUrl = 'https://projectschool404.herokuapp.com/api/user-status';
+  const apiUrl = 'https://projectschool404-4c33494b2162.herokuapp.com/api/user-status';
 
   useEffect(() => {
     const fetchUserStatus = async () => {
