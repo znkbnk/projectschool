@@ -1,0 +1,117 @@
+/* 
+==================
+==================
+Global
+==================
+==================
+*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  margin: 0;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Layout */
+.page-section {
+  width: 80%;
+  margin: 0 auto;
+  
+}
+
+.page-section img {
+  min-height: 400px;
+}
+
+.blogPage p {
+  line-height: 1.7em;
+  max-width: 600px; 
+  margin: 0 auto; 
+  text-align: center; 
+  word-wrap: break-word;
+}
+.blogPage ul {
+  line-height: 1.7em;
+  max-width: 600px;
+  margin: 0 auto; 
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+/* Buttons */
+.page-section button {
+  padding: 1.4em 2.6em;
+  letter-spacing: 0.12em;
+  background: #6d6b6b;
+  border: none;
+  outline: none;
+  transition: ease 2s;
+}
+
+.paragraph-image {  
+  object-fit: contain;
+}
+
+.page-section button:hover {
+  background: #d4cfcf;
+}
+
+/* 
+==================
+==================
+Gooey Effect
+==================
+==================
+*/
+.goo-container {
+  position: relative;
+}
+
+.goo-container img {
+  width: 800px;
+  height: 300px;
+  border-radius: 25px;
+}
+
+.page-section:nth-child(odd) {
+  width: 100%;
+  background: linear-gradient(var(--color2), var(--fill2));
+}
+
+@media only screen and (max-device-width: 640px) {
+  .blogPage p {
+    font-size: 2rem;
+  }
+  .page-section {
+    width: 100%;
+  }
+  .page-section ul {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  .blogPage p {
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .page-section ul {
+    font-size: 1rem;
+    margin: 0 20px;
+
+  }
+  .goo-container img {
+    width: 90%;
+    height: auto;
+    margin-top: 60px;
+  }
+  
+}
