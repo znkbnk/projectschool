@@ -28,21 +28,20 @@ const PriceCardsList = () => {
     try {
       if (!user) {
         console.error("User not authenticated");
-        return; 
+        return;
       }
-
+  
       const stripe = await stripePromise;
-
+  
       if (!stripe) {
         console.error("Stripe.js library not loaded yet");
         return;
       }
-
+  
       const response = await fetch(
         `https://projectschool404-4c33494b2162.herokuapp.com/create-checkout-session`,
         {
           method: "POST",
-
           headers: {
             "Content-Type": "application/json",
           },
@@ -50,23 +49,23 @@ const PriceCardsList = () => {
             priceId,
             firebaseUid: user.uid,
             customerEmail: user.email,
-            mode: 'no-cors'
+            mode: 'subscription', // Add this line
           }),
           credentials: 'include',
         }
-      );      
-
+      );
+  
       if (!response.ok) {
         throw new Error("Failed to create checkout session");
       }
-
+  
       const session = await response.json();
-
+  
       // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
         sessionId: session.id,
       });
-
+  
       if (error) {
         throw new Error(error.message);
       }
