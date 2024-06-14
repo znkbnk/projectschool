@@ -28,7 +28,7 @@ const CheckoutTitle = () => {
   return (
     <div className='exercises-container'>
       <div>
-      <h1>Test page, u wont be charged</h1>
+      <h1>Test page, u wont be charged, doesnt work anyway</h1>
         <h1 className='exercises-title' ref={titleRef}>
         
 
