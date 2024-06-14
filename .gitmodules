@@ -1,3 +1,3 @@
 [submodule "backend"]
   path = backend
-  url = git@github.com:your-username/projectschool-backend.git
+  url = git@github.com:znkbnk/projectschool-backend.git
