@@ -53,8 +53,7 @@ const PriceCardsList = () => {
           }),
           credentials: 'include',
         }
-      );
-      
+      );      
 
       if (!response.ok) {
         throw new Error("Failed to create checkout session");
