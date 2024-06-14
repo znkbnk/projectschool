@@ -69,3 +69,4 @@ const handleCreateUser = async (event) => {
 };
 
 exports.handler = handleCreateUser;
+
