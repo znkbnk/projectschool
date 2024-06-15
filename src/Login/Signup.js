@@ -1,7 +1,6 @@
-
 //src/Login/Signup.js
 
-import axios from 'axios';
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "../styles/login.css";
 import Navbar from "../components/Navbar";
@@ -17,8 +16,8 @@ import Footer from "../components/Footer";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false); 
-  const [loggedIn, setLoggedIn] = useState(false); 
+  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -52,18 +51,17 @@ const Signup = () => {
       const user = userCredential.user;
       await sendVerificationEmail(user);
       setIsSignUpSuccess(true);
-  
-      // Send a POST request to the Netlify Function 
-      const { uid } = user;
+
+      // Send a POST request to the Netlify Function
+      const { uid } = userCredential.user;
       try {
-        await axios.post('https://projectschool.dev/.netlify/functions/create-user', {
+        await axios.post("https://projectschool.dev/.netlify/functions/create-user", {
           firebaseUid: uid,
           email,
         });
-        console.log('User created in database');
-        toast.success("User signed up successfully! Please verify your email.");
+        console.log("User created in database");
       } catch (error) {
-        console.error('Error creating user in database:', error);
+        console.error("Error creating user in database:", error);
       }
     } catch (error) {
       const errorMessage = error.message;
