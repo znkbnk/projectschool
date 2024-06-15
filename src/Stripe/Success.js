@@ -21,7 +21,7 @@ const Success = () => {
           throw new Error("Firebase UID not found in the URL");
         }
 
-        const response = await axios.get(`${apiUrl}?firebaseUid=LF8ygtdsnKM3M0MgEsdTXVF5Ivv2`);
+        const response = await axios.get(`${apiUrl}?firebaseUid=${firebaseUid}`);
         const { subscriptionStatus } = response.data;
         setUserStatus(subscriptionStatus === "subscribed" ? "Subscribed" : "Not Subscribed");
       } catch (error) {
