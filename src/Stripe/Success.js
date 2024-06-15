@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, {  useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useLocation } from "react-router-dom";
 
 const Success = () => {
-  const [userStatus, setUserStatus] = useState("Loading");
   const [error, setError] = useState(null);
 
 
