@@ -3,7 +3,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import PriceCard from "./PriceCard";
 import "../styles/checkout.css";
 import { useNavigate } from "react-router-dom";
-import { auth, db } from "../components/firebase";
+import { auth } from "../components/firebase";
 
 // Initialize Stripe with your API key
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
@@ -11,34 +11,32 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 const PriceCardsList = () => {
   const navigate = useNavigate();
 
-  // Function to handle checkout process
   const handleCheckout = async (priceId) => {
     try {
       const stripe = await stripePromise;
+      const user = auth.currentUser;
+  
+      if (!user) {
+        console.error("User not authenticated");
+        return;
+      }
+  
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
+        clientReferenceId: user.uid, // Pass Firebase UID
         successUrl: `${window.location.origin}/#success`,
         cancelUrl: `${window.location.origin}/#cancel`,
       });
-
+  
       if (error) {
         console.error("Error during redirect to checkout:", error.message);
-      } else {
-        console.log("Redirect to checkout successful");
-        // Update user status to "subscribed" in Firebase after successful checkout
-        const user = auth.currentUser;
-        if (user) {
-          const userRef = db.collection("users").doc(user.uid);
-          await userRef.update({ status: "subscribed" });
-        } else {
-          console.error("User not authenticated");
-        }
       }
     } catch (error) {
       console.error("Error during checkout:", error);
     }
   };
+  
 
   const handleFreeButtonClick = () => {
     navigate("/signup");
