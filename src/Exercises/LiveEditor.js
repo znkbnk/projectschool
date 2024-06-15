@@ -50,28 +50,30 @@ const LiveEditor = () => {
   }, [taskId]);
 
   useEffect(() => {
-    // Check user's subscription status when component mounts
-    const unsubscribe = auth.onAuthStateChanged(user => {
+    const fetchSubscriptionDetails = async (firebaseUid) => {
+      try {
+        const response = await fetch(`/api/subscription-details?firebaseUid=${firebaseUid}`);
+        const data = await response.json();
+        setIsPaidUser(data.subscriptionStatus);
+        // You can store the subscriptionId if needed
+      } catch (error) {
+        console.error("Error fetching subscription details:", error);
+        setIsPaidUser(false);
+      }
+    };
+  
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
-        fetchSubscriptionStatus(user.uid);
+        fetchSubscriptionDetails(user.uid);
       } else {
         setIsPaidUser(false);
       }
     });
-
+  
     return () => unsubscribe();
   }, []);
 
-  const fetchSubscriptionStatus = async (firebaseUid) => {
-    try {
-      const response = await fetch(`/api/user-status?firebaseUid=${firebaseUid}`);
-      const data = await response.json();
-      setIsPaidUser(data.subscriptionStatus === true);
-    } catch (error) {
-      console.error("Error fetching subscription status:", error);
-      setIsPaidUser(false);
-    }
-  };
+  
 
   const handleCheckboxChange = stepId => {
     setCheckboxStates(prevState => ({
@@ -160,7 +162,10 @@ const LiveEditor = () => {
     if (isPaidUser) {
       setShowSolution(!showSolution);
     } else {
+      // Show a message or redirect to the subscription page
       toast.error("You must subscribe to access the solutions.");
+      // or
+      navigate("/subscription");
     }
   };
 
