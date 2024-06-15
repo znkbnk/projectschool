@@ -37,6 +37,7 @@ const PriceCardsList = () => {
     }
   };
   
+  
 
   const handleFreeButtonClick = () => {
     navigate("/signup");
