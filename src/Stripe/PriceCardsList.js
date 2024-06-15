@@ -1,90 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import PriceCard from "./PriceCard";
 import "../styles/checkout.css";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../components/firebase";
-import axios from "axios";
+import { auth, db } from "../components/firebase";
 
+// Initialize Stripe with your API key
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
   const navigate = useNavigate();
-  const [user, setUser] = useState(null);
-  // eslint-disable-next-line no-unused-vars
-const [subscriptionStatus, setSubscriptionStatus] = useState(false);
-// eslint-disable-next-line no-unused-vars
-const [subscriptionId, setSubscriptionId] = useState(null);
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user);
-      if (user) {
-        fetchSubscriptionDetails(user.uid);
-      }
-    });
-
-    return () => {
-      unsubscribe();
-    };
-  }, []);
-
-  const fetchSubscriptionDetails = async (firebaseUid) => {
-    try {
-      const response = await axios.get(
-        `https://projectschool404-4c33494b2162.herokuapp.com/api/subscription-details?firebaseUid=${firebaseUid}`
-      );
-      const { subscriptionStatus, subscriptionId } = response.data;
-      setSubscriptionStatus(subscriptionStatus);
-      setSubscriptionId(subscriptionId);
-    } catch (error) {
-      console.error("Error fetching subscription details:", error);
-    }
-  };
-
+  // Function to handle checkout process
   const handleCheckout = async (priceId) => {
     try {
-      if (!user) {
-        console.error("User not authenticated");
-        return;
-      }
-
       const stripe = await stripePromise;
-
-      if (!stripe) {
-        console.error("Stripe.js library not loaded yet");
-        return;
-      }
-
-      const response = await fetch(
-        `https://projectschool404-4c33494b2162.herokuapp.com/create-checkout-session`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            priceId,
-            firebaseUid: user.uid,
-            customerEmail: user.email,
-          }),
-          credentials: 'include',
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to create checkout session");
-      }
-
-      const session = await response.json();
-
-      // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
-        sessionId: session.id,
+        lineItems: [{ price: priceId, quantity: 1 }],
+        mode: "subscription",
+        successUrl: `${window.location.origin}/#success`,
+        cancelUrl: `${window.location.origin}/#cancel`,
       });
 
       if (error) {
-        throw new Error(error.message);
+        console.error("Error during redirect to checkout:", error.message);
+      } else {
+        console.log("Redirect to checkout successful");
+        // Update user status to "subscribed" in Firebase after successful checkout
+        const user = auth.currentUser;
+        if (user) {
+          const userRef = db.collection("users").doc(user.uid);
+          await userRef.update({ status: "subscribed" });
+        } else {
+          console.error("User not authenticated");
+        }
       }
     } catch (error) {
       console.error("Error during checkout:", error);

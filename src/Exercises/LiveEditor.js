@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
-import { auth } from "../components/firebase";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -15,7 +14,6 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
-  const [isPaidUser, setIsPaidUser] = useState(false); // State to track subscription status
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -49,29 +47,7 @@ const LiveEditor = () => {
       });
   }, [taskId]);
 
-  useEffect(() => {
-    const fetchSubscriptionDetails = async (firebaseUid) => {
-      try {
-        const response = await fetch(`https://projectschool404-4c33494b2162.herokuapp.com/api/subscription-details?firebaseUid=${firebaseUid}`);
-        const data = await response.json();
-        setIsPaidUser(data.subscriptionStatus);
-        // You can store the subscriptionId if needed
-      } catch (error) {
-        console.error("Error fetching subscription details:", error);
-        setIsPaidUser(false);
-      }
-    };
-  
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        fetchSubscriptionDetails(user.uid);
-      } else {
-        setIsPaidUser(false);
-      }
-    });
-  
-    return () => unsubscribe();
-  }, []);
+
 
   
 
@@ -159,15 +135,9 @@ const LiveEditor = () => {
   };
 
   const handleToggleSolution = () => {
-    if (isPaidUser) {
+   
       setShowSolution(!showSolution);
-    } else {
-      // Show a message or redirect to the subscription page
-      toast.error("You must subscribe to access the solutions.");
-      // or
-      navigate("/subscription");
-    }
-  };
+    } 
 
   const currentTask = tasksData[lessonType][currentTaskIndex];
   const codesandboxUrl = currentTask ? currentTask.codesandboxUrl : "";
@@ -220,11 +190,11 @@ const LiveEditor = () => {
                  Download Data
                </button>
              )}
-                {isPaidUser && (
+                
                   <button className='button-84' onClick={handleToggleSolution}>
                     Solution
                   </button>
-                )}
+              
            </div>
            {showSolution && (
              <div className='solution-popup'>
