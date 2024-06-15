@@ -8,30 +8,6 @@ const Success = () => {
   const [userStatus, setUserStatus] = useState("Loading");
   const [error, setError] = useState(null);
 
-  const location = useLocation();
-  const apiUrl = `https://projectschool404-4c33494b2162.herokuapp.com/api/user-status`;
-
-  useEffect(() => {
-    const fetchUserStatus = async () => {
-      try {
-        const searchParams = new URLSearchParams(location.search);
-        const firebaseUid = searchParams.get("firebaseUid");
-
-        if (!firebaseUid) {
-          throw new Error("Firebase UID not found in the URL");
-        }
-
-        const response = await axios.get(`${apiUrl}?firebaseUid=${firebaseUid}`);
-        const { subscriptionStatus } = response.data;
-        setUserStatus(subscriptionStatus === true ? true : false);
-      } catch (error) {
-        console.error("Error fetching user status:", error);
-        setError(error.message);
-      }
-    };
-
-    fetchUserStatus();
-  }, [location, apiUrl]);
 
   return (
     <div>
@@ -50,9 +26,7 @@ const Success = () => {
                 We received your purchase request;
                 <br /> we'll be in touch shortly!
               </p>
-              <p className="user-status">
-                Your subscription status: {userStatus}
-              </p>
+              
             </>
           )}
         </div>
