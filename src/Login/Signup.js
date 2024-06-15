@@ -1,6 +1,3 @@
-
-//src/Login/Signup.js
-
 import axios from 'axios';
 import React, { useState, useEffect } from "react";
 import "../styles/login.css";

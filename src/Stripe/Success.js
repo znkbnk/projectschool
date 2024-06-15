@@ -23,7 +23,7 @@ const Success = () => {
 
         const response = await axios.get(`${apiUrl}?firebaseUid=${firebaseUid}`);
         const { subscriptionStatus } = response.data;
-        setUserStatus(subscriptionStatus === "subscribed" ? "Subscribed" : "Not Subscribed");
+        setUserStatus(subscriptionStatus === true ? true : false);
       } catch (error) {
         console.error("Error fetching user status:", error);
         setError(error.message);

@@ -1,6 +1,3 @@
-//PriceCardList.js
-
-
 import React, { useEffect, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import PriceCard from "./PriceCard";
@@ -49,7 +46,6 @@ const PriceCardsList = () => {
             priceId,
             firebaseUid: user.uid,
             customerEmail: user.email,
-            mode: 'subscription',
           }),
           credentials: 'include',
         }

@@ -66,7 +66,7 @@ const LiveEditor = () => {
     try {
       const response = await fetch(`/api/user-status?firebaseUid=${firebaseUid}`);
       const data = await response.json();
-      setIsPaidUser(data.subscriptionStatus === 'subscribed');
+      setIsPaidUser(data.subscriptionStatus === true);
     } catch (error) {
       console.error("Error fetching subscription status:", error);
       setIsPaidUser(false);
