@@ -52,7 +52,7 @@ const LiveEditor = () => {
   useEffect(() => {
     const fetchSubscriptionDetails = async (firebaseUid) => {
       try {
-        const response = await fetch(`https://projectschool404-4c33494b2162.herokuapp.com/api/subscription-details?firebaseUid=${firebaseUid}`);
+        const response = await fetch(`/api/subscription-details?firebaseUid=${firebaseUid}`);
         const data = await response.json();
         setIsPaidUser(data.subscriptionStatus);
         // You can store the subscriptionId if needed

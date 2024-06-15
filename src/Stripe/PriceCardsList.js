@@ -4,16 +4,22 @@ import PriceCard from "./PriceCard";
 import "../styles/checkout.css";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../components/firebase";
+import axios from "axios";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
+  const [subscriptionStatus, setSubscriptionStatus] = useState(false);
+  const [subscriptionId, setSubscriptionId] = useState(null);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
+      if (user) {
+        fetchSubscriptionDetails(user.uid);
+      }
     });
 
     return () => {
@@ -21,20 +27,33 @@ const PriceCardsList = () => {
     };
   }, []);
 
+  const fetchSubscriptionDetails = async (firebaseUid) => {
+    try {
+      const response = await axios.get(
+        `https://projectschool404-4c33494b2162.herokuapp.com/api/subscription-details?firebaseUid=${firebaseUid}`
+      );
+      const { subscriptionStatus, subscriptionId } = response.data;
+      setSubscriptionStatus(subscriptionStatus);
+      setSubscriptionId(subscriptionId);
+    } catch (error) {
+      console.error("Error fetching subscription details:", error);
+    }
+  };
+
   const handleCheckout = async (priceId) => {
     try {
       if (!user) {
         console.error("User not authenticated");
         return;
       }
-  
+
       const stripe = await stripePromise;
-  
+
       if (!stripe) {
         console.error("Stripe.js library not loaded yet");
         return;
       }
-  
+
       const response = await fetch(
         `https://projectschool404-4c33494b2162.herokuapp.com/create-checkout-session`,
         {
@@ -50,18 +69,18 @@ const PriceCardsList = () => {
           credentials: 'include',
         }
       );
-  
+
       if (!response.ok) {
         throw new Error("Failed to create checkout session");
       }
-  
+
       const session = await response.json();
-  
+
       // Redirect the user to Stripe Checkout
       const { error } = await stripe.redirectToCheckout({
         sessionId: session.id,
       });
-  
+
       if (error) {
         throw new Error(error.message);
       }
@@ -69,7 +88,6 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
-  
 
   const handleFreeButtonClick = () => {
     navigate("/signup");
