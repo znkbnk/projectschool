@@ -49,7 +49,7 @@ const PriceCardsList = () => {
             priceId,
             firebaseUid: user.uid,
             customerEmail: user.email,
-            mode: 'subscription', 
+            mode: 'subscription', // Add this line
           }),
           credentials: 'include',
         }
