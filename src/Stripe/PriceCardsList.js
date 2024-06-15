@@ -11,8 +11,10 @@ const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 const PriceCardsList = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
-  const [subscriptionStatus, setSubscriptionStatus] = useState(false);
-  const [subscriptionId, setSubscriptionId] = useState(null);
+  // eslint-disable-next-line no-unused-vars
+const [subscriptionStatus, setSubscriptionStatus] = useState(false);
+// eslint-disable-next-line no-unused-vars
+const [subscriptionId, setSubscriptionId] = useState(null);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
