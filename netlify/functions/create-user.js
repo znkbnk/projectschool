@@ -40,7 +40,7 @@ const handleCreateUser = async (event) => {
     const newUser = new User({
       firebaseUid,
       email,
-      subscriptionStatus: false,
+      subscriptionStatus: 'not_subscribed',
     });
 
     await newUser.save();
