@@ -49,7 +49,7 @@ const PriceCardsList = () => {
             priceId,
             firebaseUid: user.uid,
             customerEmail: user.email,
-            mode: 'subscription', // Add this line
+            mode: 'subscription',
           }),
           credentials: 'include',
         }
@@ -73,6 +73,7 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
+  
 
   const handleFreeButtonClick = () => {
     navigate("/signup");
