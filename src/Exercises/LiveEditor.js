@@ -25,7 +25,7 @@ const LiveEditor = () => {
         const user = auth.currentUser;
         if (user) {
           const { uid } = user;
-          const response = await axios.get(`/api/users/${uid}/subscription-status`);
+          const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/users/${uid}/subscription-status`);
           setSubscriptionStatus(response.data.subscriptionStatus);
         }
       } catch (error) {
