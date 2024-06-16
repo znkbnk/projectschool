@@ -27,6 +27,10 @@ const PriceCardsList = () => {
         clientReferenceId: user.uid, // Pass Firebase UID
         successUrl: `${window.location.origin}/#success`,
         cancelUrl: `${window.location.origin}/#cancel`,
+        metadata: {
+          plan_name: priceId === "price_1PMza52NvwaBESku2hHPRWQW" ? "Monthly" : "Annual",
+          plan_interval: priceId === "price_1PMza52NvwaBESku2hHPRWQW" ? "month" : "year",
+        },
       });
   
       if (error) {
@@ -36,6 +40,7 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
+  
   
   
 
