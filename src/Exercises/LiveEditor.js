@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
+import { auth } from '../components/firebase';
+import axios from 'axios';
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -14,7 +16,26 @@ const LiveEditor = () => {
   const [checkboxStates, setCheckboxStates] = useState({});
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
+  const [subscriptionStatus, setSubscriptionStatus] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchSubscriptionStatus = async () => {
+      try {
+        const user = auth.currentUser;
+        if (user) {
+          const { uid } = user;
+          const response = await axios.get(`/api/users/${uid}/subscription-status`);
+          setSubscriptionStatus(response.data.subscriptionStatus);
+        }
+      } catch (error) {
+        console.error('Error fetching subscription status:', error);
+        toast.error('Error fetching subscription status');
+      }
+    };
+  
+    fetchSubscriptionStatus();
+  }, []);
 
   useEffect(() => {
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
@@ -135,9 +156,12 @@ const LiveEditor = () => {
   };
 
   const handleToggleSolution = () => {
-   
+    if (subscriptionStatus === 'subscribed') {
       setShowSolution(!showSolution);
-    } 
+    } else {
+      toast.info('Please subscribe to access the solution.');
+    }
+  };
 
   const currentTask = tasksData[lessonType][currentTaskIndex];
   const codesandboxUrl = currentTask ? currentTask.codesandboxUrl : "";
