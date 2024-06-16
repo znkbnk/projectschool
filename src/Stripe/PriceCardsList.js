@@ -15,22 +15,20 @@ const PriceCardsList = () => {
     try {
       const stripe = await stripePromise;
       const user = auth.currentUser;
-
+  
       if (!user) {
         console.error("User not authenticated");
         return;
       }
-
-      const lineItems = [{ price: priceId, quantity: 1 }];
-
+  
       const { error } = await stripe.redirectToCheckout({
-        lineItems,
+        lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
         clientReferenceId: user.uid, // Pass Firebase UID
         successUrl: `${window.location.origin}/#success`,
         cancelUrl: `${window.location.origin}/#cancel`,
       });
-
+  
       if (error) {
         console.error("Error during redirect to checkout:", error.message);
       }
@@ -38,6 +36,8 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
+  
+  
 
   const handleFreeButtonClick = () => {
     navigate("/signup");
