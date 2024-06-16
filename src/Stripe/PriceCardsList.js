@@ -24,7 +24,7 @@ const PriceCardsList = () => {
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
-        clientReferenceId: user.uid, // Pass Firebase UID
+        clientReferenceId: user.uid,
         successUrl: `${window.location.origin}/#success`,
         cancelUrl: `${window.location.origin}/#cancel`,
         metadata: {
@@ -40,6 +40,7 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
+  
   
   
   
