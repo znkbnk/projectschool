@@ -159,7 +159,7 @@ const LiveEditor = () => {
     if (subscriptionStatus === 'subscribed') {
       setShowSolution(!showSolution);
     } else {
-      toast.info('Solutions not available at the momnet!');
+      toast.info('Please subscribe to access the solution.');
     }
   };
 
