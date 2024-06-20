@@ -28,18 +28,18 @@ const CheckoutTitle = () => {
   return (
     <div className='exercises-container'>
       <div>
-      <h1>Test page, u wont be charged, doesnt work anyway</h1>
+      {/* <h1>Test page, u wont be charged, doesnt work anyway</h1> */}
         <h1 className='exercises-title' ref={titleRef}>
         
 
-        {/* <span>C</span>
+        <span>C</span>
           <span>h</span>
           <span>e</span>
           <span>c</span>
           <span>k</span>
           <span>o</span>
           <span>u</span>
-          <span>t</span> */}
+          <span>t</span>
         </h1>
       </div>
     </div>
