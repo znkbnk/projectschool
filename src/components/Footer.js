@@ -12,7 +12,7 @@ function Footer() {
             <ul>
               <li>
                 <div className='fa fa-envelope'></div>
-                <a href='mailto:yourmail@gmail.com'>zenikibeniki@gmail.com</a>
+                <a href='mailto:yourmail@gmail.com'>projectschoolhelp@gmail.com</a>
               </li>
             </ul>
           </div>
