@@ -37,7 +37,7 @@ const App = () => {
         setIsLoggedIn(true);
         
         // Fetch user data from your backend to check if the user is an admin
-        const response = await fetch(`/api/users/${user.uid}`);
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/${user.uid}`);
         const userData = await response.json();
         setIsAdmin(userData.isAdmin);
       } else {
