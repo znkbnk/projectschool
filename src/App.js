@@ -15,7 +15,7 @@ import LiveEditor from "./Exercises/LiveEditor";
 import AuthorList from "./Authors/AuthorList";
 import Faq from "./components/Faq";
 import Pricing from "./components/Pricing";
-
+import Terms from "./components/Terms";
 import { auth } from "./components/firebase";
 import Blog from "./Blog/Blog";
 import BlogPage from "./Blog/BlogPage";
@@ -29,10 +29,21 @@ function ScrollToTopOnNavigation() {
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setIsLoggedIn(!!user);
+    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        setIsLoggedIn(true);
+        
+        // Fetch user data from your backend to check if the user is an admin
+        const response = await fetch(`/api/users/${user.uid}`);
+        const userData = await response.json();
+        setIsAdmin(userData.isAdmin);
+      } else {
+        setIsLoggedIn(false);
+        setIsAdmin(false);
+      }
     });
 
     return () => unsubscribe();
@@ -83,11 +94,11 @@ const App = () => {
         />
         <Route
           path='/editor/:lessonType/:taskId'
-          element={isLoggedIn ? <LiveEditor /> : <Navigate to='/login' />}
+          element={(isLoggedIn || isAdmin) ? <LiveEditor /> : <Navigate to='/login' />}
         />
         <Route
           path='/authors'
-          element={isLoggedIn ? <AuthorList /> : <Navigate to='/login' />}
+          element={(isLoggedIn || isAdmin) ? <AuthorList /> : <Navigate to='/login' />}
         />
         <Route
           path='/success'
@@ -96,6 +107,10 @@ const App = () => {
         <Route
           path='/cancel'
           element={<Cancel />}
+        />
+        <Route
+          path='/terms'
+          element={<Terms />}
         />
       </Routes>
     </div>

@@ -21,8 +21,6 @@ export default App;
 const solutionCode2 = `
 // Card.js 
 
-// Card.js 
-
 import React, { useRef } from 'react';
 import './styles.css';
 

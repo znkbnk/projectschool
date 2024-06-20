@@ -33,7 +33,7 @@ const SendMessage = ({ scroll }) => {
 
   return (
     <form onSubmit={(event) => sendMessage(event)} className='send-message'>
-      <label htmlFor='messageInput' hidden>
+      <label jsFor='messageInput' hidden>
         Enter Message
       </label>
       <input

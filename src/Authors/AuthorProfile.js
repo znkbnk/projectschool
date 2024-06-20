@@ -19,7 +19,7 @@ const AuthorProfile = ({ author }) => {
 
               <img
                 className='thumb'
-                src={picture.medium} // Use authorImage here
+                src={picture.medium} 
                 alt={`${name.first} ${name.last}`}
               />
 
@@ -29,7 +29,9 @@ const AuthorProfile = ({ author }) => {
               <p className='status'>{`${position}`}</p>
             </div>
 
-            <p className='description'>{`${description}`}</p>
+            <div className='description-container'>
+              <p className='description'>{`${description}`}</p>
+            </div>
             <div className='social-container'>
               <Link to='/exercises'>
                 <button className='k2-button'>❮❮ Lessons</button>

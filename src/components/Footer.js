@@ -1,9 +1,8 @@
+import { Link } from "react-router-dom";
 import "../styles/footer.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-
 function Footer() {
-  
   return (
     <footer id='footer'>
       <div className='main-footer'>
@@ -18,7 +17,22 @@ function Footer() {
             </ul>
           </div>
         </div>
-        
+
+        <div className='info' data-aos='fade-up'>
+          <h1>Legals</h1>
+          <div className='sociallogos'>
+            <div className='logobox'>
+              <Link
+                to='/terms'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <i className='fab fa-instagram'></i>
+              </Link>
+            </div>
+          </div>
+        </div>
+
         <div className='info' data-aos='fade-up'>
           <h1>Social Media</h1>
           <div className='sociallogos'>

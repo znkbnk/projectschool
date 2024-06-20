@@ -2,7 +2,7 @@ const authorsData = [
   {
     name: { first: "Jevin", last: "B" },
     position: "React",
-    description: "I will update this soon....",
+    description: "As a self-taught front-end developer specializing in React, I understand the challenge of finding practical projects while learning. To help others in the same position, I created this project to provide aspiring developers with the resources and opportunities to improve their skills and succeed in front-end development.",
     picture: { medium: require("../images/me.webp") },
   },
 ];
@@ -1065,8 +1065,10 @@ const tasksData = {
             "Extract the rgb, weight, index, and hexColor props from the component props.",
             "Convert the rgb array to a string to represent the background color.",
             "Define a hexValue variable to represent the hex color value.",
-            "Implement a useEffect hook to clear the alert message after 3 seconds.",
+            "Implement a useEffect hook to clear the alert message after 3 seconds: ",
+            "Define an asynchronous function called copyToClipboard that: Attempts to write the hexValue to the clipboard using navigator.clipboard.writeText(hexValue); Sets the 'alert' state to true if the clipboard write operation is successful; Logs any errors to the console if the clipboard write operation fails.",
             "Return JSX: Render an article element representing a single color. Set the background color using inline styles. Display the weight percentage and hex color value. Show an alert message if 'alert' state is 'true'.",
+            "Bind the onClick event of the article element to the copyToClipboard function, ensuring that the clipboard write operation is triggered by a user gesture.",
             "Export the SingleColor component as the default export.",
           ],
         },
@@ -1211,7 +1213,7 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/frqg9y?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson11.webp"),
-      link: "https://www.dropbox.com/scl/fi/c6zfmsr8pc53v6kchxndv/rangeStyles.css?rlkey=20wjzpsgqvtzpxk634w1oyk5s&st=i048axb2&dl=0",
+      link: "https://www.dropbox.com/scl/fi/cewx3sj8qajjwgt6sen28/rangeStyles.css?rlkey=tbx8czemili7mitcw0i47l3x7&st=xjsbkrzb&dl=0",
     },
     {
       taskId: "reacttask12",
@@ -1942,9 +1944,7 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/embed/7dcynh?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson19.webp"),
       link: "https://www.dropbox.com/scl/fi/gkczh6ps4swxpr1cebv3m/sidebarStyles.css?rlkey=1gn09lghyev6h92r4vzm143ny&st=sjjt66f6&dl=0",
-      linkData:
-        "https://www.dropbox.com/scl/fi/cbzzf2hzzi7bpzfzm5496/sidebar.json?rlkey=3wufj9ijefhd9zdl3lucq6jn0&st=muc48ibt&dl=0",
-    },
+     },
     {
       taskId: "reacttask20",
       taskTitle: "Dynamic Table with Sorting and Copy Functionality",
@@ -1956,7 +1956,7 @@ const tasksData = {
           stepTitle: "Step 1: Import Required Dependencies",
           titleDescription: "",
           description: [
-            "Begin by importing the necessary modules and dependencies for your React application. In your case, you're using React, react-table ( useTable, useSortBy ), fakeData ( from JSON/data file ) and react-toastify. Make sure to import any required stylesheets as well.",
+            "Begin by importing the necessary modules and dependencies for your React application. In your case, you're using React, react-table ( useTable, useSortBy ) and fakeData ( from JSON/data file ). Make sure to import any required stylesheets as well.",
           ],
         },
         {
@@ -1970,28 +1970,28 @@ const tasksData = {
           stepTitle: "Step 3: Prepare Mock Data",
           titleDescription: "",
           description: [
-            "Use 'React.useMemo' inside your component, use the 'React.useMemo' hook to store your mock data. This hook ensures that the data is memoized and recalculated only when necessary, which can improve performance.",
+            "Use React.useMemo to memoize your mock data. This improves performance by ensuring the data is recalculated only when necessary.",
           ],
         },
         {
           stepTitle: "Step 4: Define Columns Configuration",
           titleDescription: "",
           description: [
-            "Create a configuration object for your table columns using the 'React.useMemo' hook. Each column should have a 'Header' property, specifying the column header text, and an 'accessor' property, specifying the data key to be accessed from each row. Optionally, you can specify a 'sortType' for sorting and define a custom 'Cell' for rendering.",
+            "Create a configuration object for your table columns using React.useMemo. Each column should have a Header property for the column header text and an accessor property for the data key to be accessed from each row. Optionally, specify a custom Cell renderer.",
           ],
         },
         {
           stepTitle: "Step 5: Define Table Hooks",
           titleDescription: "",
           description: [
-            "Utilize the 'useTable' hook provided by 'react-table' to initialize the table functionality. Pass in the columns and data as arguments. Additionally, include the 'useSortBy' hook to enable sorting functionality.",
+            "Utilize the 'useTable' and 'useSortBy' hooks from 'react-table' to initialize the table functionality. Pass in the columns and data as arguments.",
           ],
         },
         {
           stepTitle: "Step 6: Define Copy Function",
           titleDescription: "",
           description: [
-            "Create a function named 'handleCopy' that takes 'rowData' as an argument. This function will convert the row data into a string format and copy it to the clipboard using the 'navigator.clipboard.writeText()' method. Additionally, display a success toast using 'react-toastify' to notify the user that the data has been copied.",
+            "Create a CopyButton component that takes text as a prop. This component will copy the text to the clipboard using the navigator.clipboard.writeText() method",
           ],
         },
         {
@@ -2042,9 +2042,7 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/nklcs7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson20.webp"),
-      link: "https://www.dropbox.com/scl/fi/d0q4mnod8ujtuzdm26702/tableStyles.css?rlkey=iv41red29y6ghfr179l7q55we&st=4657uhv6&dl=0",
-      linkData:
-        "https://www.dropbox.com/scl/fi/7f1x9hdogipicqprg0b1m/MOCK_DATA.json?rlkey=560qnx7xci00p2107gl1mbo23&st=6hzqv971&dl=0",
+      link: "https://www.dropbox.com/scl/fi/241kvmwi5uw8j7oxizpq3/tableStyles.css?rlkey=9usdl7n6wu7vqxv1pjpehtukl&st=7fl30hco&dl=0",
     },
     {
       taskId: "reacttask21",
@@ -2621,8 +2619,6 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/embed/4fvyjs?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson25.webp"),
       link: "https://www.dropbox.com/scl/fi/q4wtsg840xgeapkcf14c5/courseFinderStyles.css?rlkey=8730yrzni5wtv4utdc0eebgek&st=zt7m1rbq&dl=0",
-      linkData:
-        "https://www.dropbox.com/scl/fi/fg84c0gl9r71enaij1w1f/data.js?rlkey=odo6ubd1wm65zdyh5admq63hh&st=qu6d83ly&dl=0",
     },
     {
       taskId: "reacttask26",
@@ -2758,11 +2754,7 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/embed/6k7zvw?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson26.webp"),
       link: "https://www.dropbox.com/scl/fi/2ztcyxpl23euc4621pgrk/courseShopStyles.css?rlkey=nfu7b3lsl98w0asmlwu80omio&st=swxaihy0&dl=0",
-      linkImg:
-        "https://www.dropbox.com/scl/fo/vltgb0atop29kgu0xy6mr/AKNJ_oUkZ_bbCn1uYgXkjvQ?rlkey=c4r6xjl6ch9vgwrxhjj2zs1ns&st=zhalksgn&dl=0",
-      linkData:
-        "https://www.dropbox.com/scl/fi/nmmqf0tr0yhpx9vf0o37x/products.js?rlkey=2e0st63koly7ivvo5x60okrhp&st=35ajx6cl&dl=0",
-    },
+     },
     {
       taskId: "reacttask27",
       taskTitle: "MATERIALIZECSS Portfolio",
