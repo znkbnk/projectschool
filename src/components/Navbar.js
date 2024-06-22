@@ -151,7 +151,9 @@ const Navbar = () => {
             <Link to='/authors' className='nav-link'>
               Authors
             </Link>
-            
+            <Link to='/pricing' className='nav-link'>
+                Pricing
+              </Link>
             <Link to='/faq' className='nav-link'>
               FAQ
             </Link>
