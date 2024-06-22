@@ -108,6 +108,25 @@
   margin: 25px 0 50px;
 }
 
+.terms-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 200px;
+}
+
+.terms-links a {
+  text-decoration: underline;
+  
+  font-size: large;
+}
+
+.terms-links a:visited {
+  text-decoration: none;
+  color: inherit; /* Ensure the color remains unchanged for visited links */
+}
+
 @media only screen and (max-device-width: 640px) {
   .price-cards-container {
     display: flex;

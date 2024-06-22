@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import PriceCard from "./PriceCard";
 import "../styles/checkout.css";
@@ -9,18 +9,24 @@ import { auth } from "../components/firebase";
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
 
 const PriceCardsList = () => {
+  const [isTermsAccepted, setIsTermsAccepted] = useState(false);
   const navigate = useNavigate();
 
   const handleCheckout = async (priceId) => {
+    if (!isTermsAccepted) {
+      alert("You must agree to the terms and conditions and privacy policy before proceeding.");
+      return;
+    }
+
     try {
       const stripe = await stripePromise;
       const user = auth.currentUser;
-  
+
       if (!user) {
         console.error("User not authenticated");
         return;
       }
-  
+
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
@@ -28,7 +34,7 @@ const PriceCardsList = () => {
         successUrl: `${window.location.origin}/#success`,
         cancelUrl: `${window.location.origin}/#cancel`,
       });
-  
+
       if (error) {
         console.error("Error during redirect to checkout:", error.message);
       }
@@ -36,14 +42,13 @@ const PriceCardsList = () => {
       console.error("Error during checkout:", error);
     }
   };
-  
-  
 
   const handleFreeButtonClick = () => {
     navigate("/signup");
   };
 
   return (
+    <div>
     <div className='price-cards-container'>
       <PriceCard
         title='Free'
@@ -87,6 +92,22 @@ const PriceCardsList = () => {
         trialDays=''
         onButtonClick={() => handleCheckout("price_1PMzab2NvwaBESkuTJ0jL6F4")}
       />
+      
+    </div>
+    <div className="terms-links">
+      <div>
+      <p>By subscribing, you agree to our <a href="https://projectschool.dev/#/terms" target="_blank" rel="noopener noreferrer">Terms and Conditions</a> and <a href="https://projectschool.dev/#/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p>
+        
+      </div>
+        <label>
+          <input
+            type="checkbox"
+            checked={isTermsAccepted}
+            onChange={() => setIsTermsAccepted(!isTermsAccepted)}
+          />
+          I have read and agree to the <a href="https://projectschool.dev/#/terms" target="_blank" rel="noopener noreferrer">Terms and Conditions</a> and <a href="https://projectschool.dev/#/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </label>
+      </div>
     </div>
   );
 };

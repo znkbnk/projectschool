@@ -196,9 +196,7 @@ nav img {
     display: none;
   }
 
-  nav {
-    height: 80px;
-  }
+ 
 
   .menu-icon {
     display: flex;
@@ -254,5 +252,17 @@ nav img {
 @media only screen and (min-width: 460px) and (max-width: 768px) {
   nav img {
     width: 150px;
+  }
+  .middle {
+    display: none;
+  } 
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
   }
 }
