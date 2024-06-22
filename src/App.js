@@ -32,20 +32,29 @@ const App = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
+    const fetchUserData = async (user) => {
+      try {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/${user.uid}/subscription-status`);
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
+        const userData = await response.json();
+        setIsAdmin(userData.isAdmin);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+  
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
         setIsLoggedIn(true);
-        
-        // Fetch user data from your backend to check if the user is an admin
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/${user.uid}`);
-        const userData = await response.json();
-        setIsAdmin(userData.isAdmin);
+        await fetchUserData(user);
       } else {
         setIsLoggedIn(false);
         setIsAdmin(false);
       }
     });
-
+  
     return () => unsubscribe();
   }, []);
 
