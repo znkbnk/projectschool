@@ -14,20 +14,17 @@ import Footer from "../components/Footer";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
-  // eslint-disable-next-line no-unused-vars
-  const [isAdmin, setIsAdmin] = useState(false); // State for admin status
+  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false); 
+  const [loggedIn, setLoggedIn] = useState(false); 
 
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(async (user) => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         if (!user.emailVerified) {
           auth.signOut();
           toast.error("Please verify your email before logging in.");
         } else {
           setLoggedIn(true);
-          await fetchUserData(user);
         }
       } else {
         setLoggedIn(false);
@@ -44,11 +41,15 @@ const Signup = () => {
       return;
     }
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       const user = userCredential.user;
       await sendVerificationEmail(user);
       setIsSignUpSuccess(true);
-
+  
       // Send a POST request to the Netlify Function 
       const { uid } = user;
       try {
@@ -58,10 +59,6 @@ const Signup = () => {
         });
         console.log('User created in database');
         toast.success("User signed up successfully! Please verify your email.");
-
-        // Delay fetch user data to allow the backend to create the user
-        setTimeout(() => fetchUserData(user), 3000); // Initial delay before the first fetch
-
       } catch (error) {
         console.error('Error creating user in database:', error);
       }
@@ -78,25 +75,6 @@ const Signup = () => {
       console.log("Verification email sent");
     } catch (error) {
       console.error("Error sending verification email:", error);
-    }
-  };
-
-  const fetchUserData = async (user, retries = 5, delay = 3000) => {
-    try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/${user.uid}/subscription-status`);
-      if (!response.ok) {
-        if (response.status === 404 && retries > 0) {
-          console.warn('User not found, retrying...');
-          // Retry fetching after a delay
-          setTimeout(() => fetchUserData(user, retries - 1, delay * 2), delay); // Exponential backoff
-          return;
-        }
-        throw new Error(`Error: ${response.statusText}`);
-      }
-      const userData = await response.json();
-      setIsAdmin(userData.isAdmin); // Set the isAdmin state
-    } catch (error) {
-      console.error('Error fetching user data:', error);
     }
   };
 
