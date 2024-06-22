@@ -1,4 +1,4 @@
-// SuccessComponent.js
+// CancelComponent.js
 
 import React from "react";
 import Navbar from "../components/Navbar";
