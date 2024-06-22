@@ -76,7 +76,7 @@ const PriceCardsList = () => {
         ]}
         buttonText='Get started'
         trialDays=''
-        onButtonClick={() => handleCheckout("price_1PMza52NvwaBESku2hHPRWQW")}
+        onButtonClick={() => handleCheckout("price_1PUY142NvwaBESkufgVpQic7")}
       />
       <PriceCard
         title='Annual'
@@ -90,7 +90,7 @@ const PriceCardsList = () => {
         ]}
         buttonText='Get started'
         trialDays=''
-        onButtonClick={() => handleCheckout("price_1PMzab2NvwaBESkuTJ0jL6F4")}
+        onButtonClick={() => handleCheckout("price_1PUY3f2NvwaBESkuS8hZLwkb")}
       />
       
     </div>
