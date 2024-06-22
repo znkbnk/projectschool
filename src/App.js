@@ -16,6 +16,7 @@ import AuthorList from "./Authors/AuthorList";
 import Faq from "./components/Faq";
 import Pricing from "./components/Pricing";
 import Terms from "./components/Terms";
+import Privacy from "./components/Privacy";
 import { auth } from "./components/firebase";
 import Blog from "./Blog/Blog";
 import BlogPage from "./Blog/BlogPage";
@@ -34,12 +35,17 @@ const App = () => {
   useEffect(() => {
     const fetchUserData = async (user, retries = 5, delay = 3000) => {
       try {
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/${user.uid}/subscription-status`);
+        const response = await fetch(
+          `${process.env.REACT_APP_API_URL}/api/users/${user.uid}/subscription-status`
+        );
         if (!response.ok) {
           if (response.status === 404 && retries > 0) {
-            console.warn('User not found, retrying...');
+            console.warn("User not found, retrying...");
             // Retry fetching after a delay
-            setTimeout(() => fetchUserData(user, retries - 1, delay * 2), delay); // Exponential backoff
+            setTimeout(
+              () => fetchUserData(user, retries - 1, delay * 2),
+              delay
+            ); // Exponential backoff
             return;
           }
           throw new Error(`Error: ${response.statusText}`);
@@ -47,12 +53,10 @@ const App = () => {
         const userData = await response.json();
         setIsAdmin(userData.isAdmin);
       } catch (error) {
-        console.error('Error fetching user data:', error);
+        console.error("Error fetching user data:", error);
       }
     };
-    
-    
-  
+
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
         setIsLoggedIn(true);
@@ -62,7 +66,7 @@ const App = () => {
         setIsAdmin(false);
       }
     });
-  
+
     return () => unsubscribe();
   }, []);
 
@@ -84,6 +88,8 @@ const App = () => {
         <Route path='/faq' element={<Faq />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/blog/:id' element={<BlogPage />} />
+        <Route path='/terms' element={<Terms />} />
+        <Route path='/privacy' element={<Privacy />} />
 
         <Route
           path='/exercises'
@@ -111,24 +117,19 @@ const App = () => {
         />
         <Route
           path='/editor/:lessonType/:taskId'
-          element={(isLoggedIn || isAdmin) ? <LiveEditor /> : <Navigate to='/login' />}
+          element={
+            isLoggedIn || isAdmin ? <LiveEditor /> : <Navigate to='/login' />
+          }
         />
         <Route
           path='/authors'
-          element={(isLoggedIn || isAdmin) ? <AuthorList /> : <Navigate to='/login' />}
+          element={
+            isLoggedIn || isAdmin ? <AuthorList /> : <Navigate to='/login' />
+          }
         />
-        <Route
-          path='/success'
-          element={<Success />}
-        />
-        <Route
-          path='/cancel'
-          element={<Cancel />}
-        />
-        <Route
-          path='/terms'
-          element={<Terms />}
-        />
+        <Route path='/success' element={<Success />} />
+        <Route path='/cancel' element={<Cancel />} />
+        
       </Routes>
     </div>
   );

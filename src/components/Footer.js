@@ -27,7 +27,14 @@ function Footer() {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <i className='fab fa-instagram'></i>
+                <p>Term and conditions</p>
+              </Link>
+              <Link
+                to='/privacy'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <p>Privacy Policy</p>
               </Link>
             </div>
           </div>
