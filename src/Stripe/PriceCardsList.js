@@ -33,8 +33,8 @@ const PriceCardsList = () => {
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
         clientReferenceId: user.uid,
-        successUrl: `https://checkout.projectschool.dev/#success`,
-        cancelUrl: `https://checkout.projectschool.dev/#cancel`,
+        successUrl: `https://projectschool.dev/#success`,
+        cancelUrl: `https://projectschool.dev/#cancel`,
       });
 
       if (error) {
