@@ -36,6 +36,12 @@ const App = () => {
       try {
         const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/${user.uid}/subscription-status`);
         if (!response.ok) {
+          if (response.status === 404) {
+            console.warn('User not found, retrying...');
+            // Retry fetching after a delay
+            setTimeout(() => fetchUserData(user), 3000); // Adjust the delay as needed
+            return;
+          }
           throw new Error(`Error: ${response.statusText}`);
         }
         const userData = await response.json();
@@ -44,6 +50,7 @@ const App = () => {
         console.error('Error fetching user data:', error);
       }
     };
+    
   
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
