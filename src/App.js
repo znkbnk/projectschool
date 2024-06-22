@@ -32,14 +32,14 @@ const App = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    const fetchUserData = async (user) => {
+    const fetchUserData = async (user, retries = 5, delay = 3000) => {
       try {
         const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/${user.uid}/subscription-status`);
         if (!response.ok) {
-          if (response.status === 404) {
+          if (response.status === 404 && retries > 0) {
             console.warn('User not found, retrying...');
             // Retry fetching after a delay
-            setTimeout(() => fetchUserData(user), 3000); // Adjust the delay as needed
+            setTimeout(() => fetchUserData(user, retries - 1, delay * 2), delay); // Exponential backoff
             return;
           }
           throw new Error(`Error: ${response.statusText}`);
@@ -50,6 +50,7 @@ const App = () => {
         console.error('Error fetching user data:', error);
       }
     };
+    
     
   
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
