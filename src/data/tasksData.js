@@ -399,7 +399,6 @@ const tasksData = {
       prerequisites: ["React Basics"],
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/vywdxt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
-
       img: require("../images/ReactLesson1.webp"),
       link: "https://www.dropbox.com/scl/fi/ttc2uqnhaxzmky587jj0w/3dHoverStyles.css?rlkey=gbdk8jfuexgcu5z1e52efhj4m&st=3zoceprl&dl=0",
     },
@@ -3332,6 +3331,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl: 'https://codesandbox.io/embed/nklcs7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js'
       img: require("../images/ReactLesson30.webp"),
       link: "https://www.dropbox.com/scl/fi/33r850r4goal6buln22oh/CubeImageGallery.css?rlkey=5sgt95oxccgxptvla3r1fqc01&st=psdl8ajb&dl=0",
     },
@@ -3500,6 +3500,7 @@ React: [
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      codesandboxUrl:
       img: require("../images/ReactLesson1.webp"),
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
