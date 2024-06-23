@@ -3255,6 +3255,86 @@ const tasksData = {
       img: require("../images/ReactLesson29.webp"),
       link: "https://www.dropbox.com/scl/fi/pb18ki5xovtd5fud36d4d/index.js?rlkey=luh3f3pa2xx2ldiaao6xfdfux&st=2xvsaaph&dl=0",
     },
+    {
+      taskId: "reacttask30",
+      taskTitle: "Cube Image Gallery",
+      introduction: "The Cube Image Gallery project utilizes advanced CSS transformations such as transform and rotate to create an interactive 3D cube that displays different images on its faces. These techniques allow for dynamic positioning and orientation of elements, enhancing user engagement and providing a visually compelling experience on the web.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Environment Setup",
+          titleDescription: "",
+          description: [
+            "Ensure you have Node.js installed on your computer. Node.js is required for using 'npm' (Node Package Manager) to manage dependencies and run scripts.",
+            "Use 'npx create-react-app cube-gallery-app' to set up a new React project named 'cube-gallery-app'. This command creates a new directory with the necessary files and folder structure for a React application.",
+            "Use cd 'cube-gallery-app' to change into the newly created project directory.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 2: Planning Your Components",
+          titleDescription: "",
+          description: [
+             "Determine the components needed for the Cube Image Gallery",
+            "'App': Main component rendering the 'CubeGallery'.",
+            "'CubeGallery': Component containing the cube and image thumbnails.",
+            "Sketch out how these components will be structured and interact with each other. Consider the structure of the 'CubeGallery' component, which will manage the cube's state and display.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create CubeGallery Component",
+          titleDescription: "CubeGallery.js",
+          description: [
+            "Inside the src directory of your project, create a new file named CubeGallery.js to define the CubeGallery component.",
+           "Use 'useState' hook to manage the state within CubeGallery. This state will keep track of which image (or face of the cube) is currently displayed.",
+            "Implement 'handleImageClick' function",
+            "Use an argument 'targetClass' which represents the class of the thumbnail image clicked.",
+            "Check if 'targetClass' is different from the current cubeImageClass state.",
+            "Update the 'cubeImageClass' state to reflect the clicked image, triggering a re-render to update the cube's displayed face.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Structuring Your Gallery",
+          titleDescription: "In you return statement implement:",
+          description: [
+            "A main container (cube-gallery-container) wrapping all elements.",
+            "A cube container (cube-container) for positioning and perspective of the cube.",
+            "Inside 'cube-container', a 'cube' element with dynamic classes based on cubeImageClass, rotating to display the selected image face.",
+            "Below the cube, include a section (image-buttons) containing thumbnail images (input[type='image']). These thumbnails will trigger the 'handleImageClick' function when clicked.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 5: Styling Your Gallery",
+          titleDescription: "index.css",
+          description: [
+            "Define styles for cube-gallery-container, cube-container, cube, and image-buttons.",
+             "Apply rotate for 3D Effects",
+            "In your Cube Image Gallery CSS, each image (image-1, image-2, etc.) is positioned on a different face of the cube.",
+            "translateZ(15rem): Positions the image on a face of the cube, pushing it back along the z-axis (15rem units away).",
+            "rotateX(angle), rotateY(angle), rotateZ(angle): Rotates the cube to display different faces corresponding to each image. This rotation creates a dynamic 3D effect as users interact with the gallery.",
+           
+          ],
+        },{
+          stepTitle: "Step 6: Integrating Components",
+          titleDescription: "App.js",
+          description: [
+            " In App.js, import the CubeGallery component to render it within the main App component.",
+             "Utilize the CubeGallery component within the App component to display your Cube Image Gallery.",
+           
+          ],
+        },
+          
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      img: require("../images/ReactLesson30.webp"),
+      link: "https://www.dropbox.com/scl/fi/33r850r4goal6buln22oh/CubeImageGallery.css?rlkey=5sgt95oxccgxptvla3r1fqc01&st=psdl8ajb&dl=0",
+    },
   ],
 };
 
