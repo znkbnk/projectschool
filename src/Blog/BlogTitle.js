@@ -30,10 +30,14 @@ const WelcomeComponent = () => {
       <div>
         <h1 className='exercises-title' ref={titleRef}>
 
-          <span>B</span>
+          <span>A</span>
+          <span>r</span>
+          <span>t</span>
+          <span>i</span>
+          <span>c</span>
           <span>l</span>
-          <span>o</span>
-          <span>g</span>
+          <span>e</span>
+          <span>s</span>
         </h1>
       </div>
     </div>

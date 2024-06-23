@@ -70,7 +70,7 @@ const Navbar = () => {
                 Pricing
               </Link>
               <Link to='/blog' className='nav-link'>
-                Blog
+                Articles
               </Link>
               <Link to='/authors' className='nav-link'>
                 Authors
@@ -84,7 +84,7 @@ const Navbar = () => {
           {!isLoggedIn && (
             <>
               <Link to='/blog' className='nav-link'>
-                Blog
+                Articles
               </Link>
               <Link to='/pricing' className='nav-link'>
                 Pricing
@@ -127,7 +127,7 @@ const Navbar = () => {
         {!isLoggedIn && (
           <>
             <Link to='/blog' className='nav-link'>
-              Blog
+              Articles
             </Link>
             <Link to='/pricing' className='nav-link'>
               Pricing
@@ -146,7 +146,7 @@ const Navbar = () => {
               LiveChat
             </Link>
             <Link to='/blog' className='nav-link'>
-              Blog
+              Articles
             </Link>
             <Link to='/authors' className='nav-link'>
               Authors
