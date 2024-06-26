@@ -2,7 +2,8 @@ const authorsData = [
   {
     name: { first: "Jevin", last: "B" },
     position: "React",
-    description: "As a self-taught front-end developer specializing in React, I understand the challenge of finding practical projects while learning. To help others in the same position, I created this project to provide aspiring developers with the resources and opportunities to improve their skills and succeed in front-end development.",
+    description:
+      "As a self-taught front-end developer specializing in React, I understand the challenge of finding practical projects while learning. To help others in the same position, I created this project to provide aspiring developers with the resources and opportunities to improve their skills and succeed in front-end development.",
     picture: { medium: require("../images/me.webp") },
   },
 ];
@@ -150,7 +151,16 @@ const blogCards = [
       "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
     date: "8 May 2024",
     image:
-      "https://previews.dropbox.com/p/thumb/ACTWKE4czX_N8Ld8FZgBpUzIeShFCsXiG-TPoui2S_B1UOcn4qniml1HUa4omkad3GOA2liet9GW9iKoBryr2Jdix35kVHf0RMIgGJtssbXCbGvOHFprPkd8JgNik8Z7hlZ5nXe4R_OPV8j4-vGrrV-S4KGsTbvrx38S4ZCcs26MmtCBRg2lluWIYJd5x9wd6Svy-1XNctpQMVs3r5BeUPVUP8cbmyJF_wO2kF2QcHD81NdbmpPtKOOHzuFvDZG2iefUtWnLRYJE7yFx-CaiE06KwC5fAYlK3jw-QdB10xQUZaGwkyetJgo0VFzFBpYmQ1zj-ngGBYfiddp9dvNN5yEi/p.png",
+      "https://previews.dropbox.com/p/thumb/ACQQ6jzdp8fuLs2buFiT5yPLwY4e5dm_XRGsUOUqh6YmwFwcZ9ooHf2_GDZY-MbLqgyKE1dPBiHU0LeB5XVSol1dUxK-HbQ91lKtd7sli7mJ4jrJLjoLimMPgPk5ING5NpVbgM4VpwVnEjvM3vbDdrOl4JG9_q1F4rbHekU61D0OX93lYkj6cSL5gFgTkD1MYCOsmqY0EkCTLTZaL36DNJsXZeOFDAmWomkrl1nCIiizcK6CMVjFyxWiFj3TmLj_JGdSbQsNH5Jl6fPimdym35KCGC4gz-w2VMjm4py0oGxvahSb2TONSWEaRWVUhTtg7TGqqOfYAzzVYM_NTV4vQP0UhjRIRM2qchZlyFBCohU4q0R9mbKtEfMWto84knqdzeQ/p.png",
+  },
+  {
+    id: 4,
+    title: "Going Live with Stripe in Your React Project",
+    extract:
+      "Transitioning your React project from Stripe's test environment to the live environment is a crucial step to start processing real payments. This process ensures that your application is fully prepared to handle secure transactions in a production setting.",
+    date: "23 June 2024",
+    image:
+      "https://previews.dropbox.com/p/thumb/ACSAWT2-Uqhlmo0YehiFk6x07fP8R0W0Buuj3t-KL3qhvRAIID0I-xMjkqUQxZPlXzqRF-KJx2b_xeSBglwbrx1mHhjwadgvsiAQ92FzniP01Vqq25o6Qd53HZzowx36IiKXzPPQfe5hZaO6snksyQhuVbxf8r3Sl7wfYFKUmA3rlD4ldZgbIGsGAdbdIbB4BRndJw5HdkA9AXJf4bdB39DSczoOJFv1O4Wzfs6zgL-V6AWcUIR_9ZcXLAk5Afn4t29gzTlJyesIdczxMsrJrYaKD8IR7wRsa1vINuEupe_CNJEYnSVfLTT4CZhhVL_fFqxs-4TTqTg8oKWMj9G86Bqs/p.png",
   },
 ];
 const blogTopic = [
@@ -228,7 +238,8 @@ const blogTopic = [
   },
   {
     id: 3,
-    image: ["Pagination.webp"],
+    image: ["googleAnalytics.webp"],
+
     paragraphs: [
       {
         text: [
@@ -302,6 +313,40 @@ const blogTopic = [
         ],
 
         isList: false,
+      },
+    ],
+  },
+  {
+    id: 4,
+    image: ["blog4.webp"],
+    paragraphs: [
+      {
+        text: [
+          "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
+        ],
+        image: null,
+        isList: false,
+      },
+      {
+        text: [
+          "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
+          "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
+          "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
+          "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
+          "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
+        ],
+        image: null,
+        isList: true,
+      },
+      {
+        text: [
+          "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
+          "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
+          "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
+          "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
+        ],
+        image: null,
+        isList: true,
       },
     ],
   },
@@ -398,7 +443,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/vywdxt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/vywdxt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson1.webp"),
       link: "https://www.dropbox.com/scl/fi/ttc2uqnhaxzmky587jj0w/3dHoverStyles.css?rlkey=gbdk8jfuexgcu5z1e52efhj4m&st=3zoceprl&dl=0",
     },
@@ -475,7 +521,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/2fxd29?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/2fxd29?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson2.webp"),
       link: "https://www.dropbox.com/scl/fi/03e0si4h3xgxgg74ygra3/BMIstyles.css.css?rlkey=v7kz0wgjp8qtyhfr7ttco3vqx&dl=0",
     },
@@ -550,7 +597,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/cf8936?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/cf8936?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson3.webp"),
       link: "https://www.dropbox.com/scl/fi/knoeb48ov2on7o1p7qcim/DarkLight.css?rlkey=s5xlzw4l86ugerz5w9v0e5w07&st=hnajvomv&dl=0",
     },
@@ -615,7 +663,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/rjhv9j?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/rjhv9j?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson4.webp"),
       link: "https://www.dropbox.com/scl/fi/ggr71m0hhr7dwqbxsn7zb/filterContactList.css?rlkey=ze15q78lxoiocw6z84o2c12cb&st=zw4011an&dl=0",
     },
@@ -687,7 +736,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/grf285?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/grf285?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson5.webp"),
       link: "https://www.dropbox.com/scl/fi/x993b93wtivxvs24vu2gh/quizApp.css?rlkey=ugoc9v64xrxs7a82giuyj0d21&st=5nhhq4ti&dl=0",
     },
@@ -761,7 +811,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/jwgpwd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/jwgpwd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson6.webp"),
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
@@ -840,7 +891,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/7lx22x?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/7lx22x?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson7.webp"),
       link: "https://www.dropbox.com/scl/fi/57ns2zldn9w6jud6hbstj/birthdayStyles.css?rlkey=j24jn3vqz5vg144vl0hbj0z51&st=5yn64tby&dl=0",
     },
@@ -932,7 +984,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/5pts5h?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/5pts5h?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson8.webp"),
       link: "https://www.dropbox.com/scl/fi/4afgt9yycn142ivtclsm9/shadowStyles.css?rlkey=p92gydd9wnxlt46r4n3b1vjaw&st=nmib5hqn&dl=0",
     },
@@ -1010,7 +1063,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/56gy36?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/56gy36?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson9.webp"),
       link: "https://www.dropbox.com/scl/fi/mqd7ggdarkm4fl704iun1/memoryStyles.css?rlkey=9amnv9br4g9t7iz3w4iz9e8h8&st=xopph5bz&dl=0",
       linkImg:
@@ -1085,7 +1139,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/33th26?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/33th26?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson10.webp"),
       link: "https://www.dropbox.com/scl/fi/y011c3db1gyww9io1b31k/colorStyles.css?rlkey=xqydm3kozk30nac0tt4d7bozv&st=dhj5uhv0&dl=0",
     },
@@ -1210,7 +1265,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/frqg9y?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/frqg9y?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson11.webp"),
       link: "https://www.dropbox.com/scl/fi/cewx3sj8qajjwgt6sen28/rangeStyles.css?rlkey=tbx8czemili7mitcw0i47l3x7&st=xjsbkrzb&dl=0",
     },
@@ -1326,7 +1382,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/x6fmlz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/x6fmlz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson12.webp"),
       link: "https://www.dropbox.com/scl/fi/oh478sruh4coo1niwb2c4/formValidationStyles.css?rlkey=7b9v41wez31d5fqgzgl53qmoe&st=nfdqrklr&dl=0",
     },
@@ -1392,7 +1449,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/l8sft7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/l8sft7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson13.webp"),
       link: "https://www.dropbox.com/scl/fi/iim1mrxbiomqdfu6a8534/markdownStyles.css?rlkey=x702xjplsx1lmje9xlxsmnztl&st=tjk1d94n&dl=0",
     },
@@ -1484,7 +1542,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/5yphtm?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/5yphtm?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson14.webp"),
       link: "https://www.dropbox.com/scl/fi/tuz5g26aze4lf3y9xixfq/menuStyles.css?rlkey=7tqcib3pn704k93ezqeqi5di5&st=cbhgezxb&dl=0",
     },
@@ -1546,7 +1605,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/ccxl9t?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/ccxl9t?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson15.webp"),
       link: "https://www.dropbox.com/scl/fi/ks97vsqcdxhjg236ystvp/navbarStyles.css?rlkey=zcqeskq64ip14h2l07ouf2lt8&st=s8s2fkc7&dl=0",
     },
@@ -1634,7 +1694,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/kcsm88?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/kcsm88?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson16.webp"),
       link: "https://www.dropbox.com/scl/fi/8g5fg5okeku604k3v1ijv/paginationStyles.css?rlkey=gxh2ah4lqq2v9qb7im9bnqmgr&st=ymt2ym6v&dl=0",
     },
@@ -1748,7 +1809,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/ltj77r?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/ltj77r?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson17.webp"),
       link: "https://www.dropbox.com/scl/fi/wj8mbt35tzthwb59t0fpp/searchBarStyles.css?rlkey=1ssb43swqlr20wm3e5nkugzzk&st=s1gbhfpy&dl=0",
     },
@@ -1855,7 +1917,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/5rsfxk?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/5rsfxk?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson18.webp"),
       link: "https://www.dropbox.com/scl/fi/a4s2nemre2jjzb30u75u5/dropdownStyles.css?rlkey=12wx0dim604hwgarpnjssr8qu&st=har5kkyl&dl=0",
     },
@@ -1940,10 +2003,11 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/7dcynh?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/7dcynh?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson19.webp"),
       link: "https://www.dropbox.com/scl/fi/gkczh6ps4swxpr1cebv3m/sidebarStyles.css?rlkey=1gn09lghyev6h92r4vzm143ny&st=sjjt66f6&dl=0",
-     },
+    },
     {
       taskId: "reacttask20",
       taskTitle: "Dynamic Table with Sorting and Copy Functionality",
@@ -2039,7 +2103,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/nklcs7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/nklcs7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson20.webp"),
       link: "https://www.dropbox.com/scl/fi/241kvmwi5uw8j7oxizpq3/tableStyles.css?rlkey=9usdl7n6wu7vqxv1pjpehtukl&st=7fl30hco&dl=0",
     },
@@ -2181,7 +2246,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/dqvxqy?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/dqvxqy?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson21.webp"),
       link: "https://www.dropbox.com/scl/fi/jbdlfwibc4fi9jnesjevt/todoStyles.css?rlkey=8khn7jf4fbes6dl82vhw9g7cq&st=hu1wmyz0&dl=0",
     },
@@ -2263,7 +2329,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/zj8n36?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/zj8n36?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson22.webp"),
       link: "https://www.dropbox.com/scl/fi/y1yc1mh9isqrbktm5adfh/testimonialsStyles.css?rlkey=85uofxm5xfuv4a4iu5mvzqgi3&st=pmq8ylyh&dl=0",
     },
@@ -2365,7 +2432,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/9jclqn?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/9jclqn?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson23.webp"),
       link: "https://www.dropbox.com/scl/fi/axg1uy5ds3m3fnzf6u8fe/voiceToTextStyles.css?rlkey=95c02402dkkcl12qj75qf82it&st=mhgahg76&dl=0",
     },
@@ -2432,7 +2500,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/5l526g?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/5l526g?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson24.webp"),
       link: "https://www.dropbox.com/scl/fi/tarvsoi5fgx8c4kar8gs7/textToVoiceStyles.css?rlkey=87sk3e7qtill3m205gfjhr6cv&st=5jhx5kjf&dl=0",
     },
@@ -2615,7 +2684,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/4fvyjs?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/4fvyjs?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson25.webp"),
       link: "https://www.dropbox.com/scl/fi/q4wtsg840xgeapkcf14c5/courseFinderStyles.css?rlkey=8730yrzni5wtv4utdc0eebgek&st=zt7m1rbq&dl=0",
     },
@@ -2750,10 +2820,11 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/6k7zvw?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/6k7zvw?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson26.webp"),
       link: "https://www.dropbox.com/scl/fi/2ztcyxpl23euc4621pgrk/courseShopStyles.css?rlkey=nfu7b3lsl98w0asmlwu80omio&st=swxaihy0&dl=0",
-     },
+    },
     {
       taskId: "reacttask27",
       taskTitle: "MATERIALIZECSS Portfolio",
@@ -2861,7 +2932,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/wp9hkw?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/wp9hkw?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson27.webp"),
       link: "https://www.dropbox.com/scl/fi/qzlk1srk93y1ut98cw1q2/materializecssStyles.css?rlkey=orbzl27hvw1ao3vnl7yps07y4&st=th9ekx3n&dl=0",
     },
@@ -2950,7 +3022,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/8y8mkt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/8y8mkt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson28.webp"),
     },
     {
@@ -3250,14 +3323,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/dtwvpq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/dtwvpq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson29.webp"),
       link: "https://www.dropbox.com/scl/fi/pb18ki5xovtd5fud36d4d/index.js?rlkey=luh3f3pa2xx2ldiaao6xfdfux&st=2xvsaaph&dl=0",
     },
     {
       taskId: "reacttask30",
       taskTitle: "Cube Image Gallery",
-      introduction: "The Cube Image Gallery project utilizes advanced CSS transformations such as transform and rotate to create an interactive 3D cube that displays different images on its faces. These techniques allow for dynamic positioning and orientation of elements, enhancing user engagement and providing a visually compelling experience on the web.",
+      introduction:
+        "The Cube Image Gallery project utilizes advanced CSS transformations such as transform and rotate to create an interactive 3D cube that displays different images on its faces. These techniques allow for dynamic positioning and orientation of elements, enhancing user engagement and providing a visually compelling experience on the web.",
 
       steps: [
         {
@@ -3267,18 +3342,16 @@ const tasksData = {
             "Ensure you have Node.js installed on your computer. Node.js is required for using 'npm' (Node Package Manager) to manage dependencies and run scripts.",
             "Use 'npx create-react-app cube-gallery-app' to set up a new React project named 'cube-gallery-app'. This command creates a new directory with the necessary files and folder structure for a React application.",
             "Use cd 'cube-gallery-app' to change into the newly created project directory.",
-            
           ],
         },
         {
           stepTitle: "Step 2: Planning Your Components",
           titleDescription: "",
           description: [
-             "Determine the components needed for the Cube Image Gallery",
+            "Determine the components needed for the Cube Image Gallery",
             "'App': Main component rendering the 'CubeGallery'.",
             "'CubeGallery': Component containing the cube and image thumbnails.",
             "Sketch out how these components will be structured and interact with each other. Consider the structure of the 'CubeGallery' component, which will manage the cube's state and display.",
-            
           ],
         },
         {
@@ -3286,7 +3359,7 @@ const tasksData = {
           titleDescription: "CubeGallery.js",
           description: [
             "Inside the src directory of your project, create a new file named CubeGallery.js to define the CubeGallery component.",
-           "Use 'useState' hook to manage the state within CubeGallery. This state will keep track of which image (or face of the cube) is currently displayed.",
+            "Use 'useState' hook to manage the state within CubeGallery. This state will keep track of which image (or face of the cube) is currently displayed.",
             "Implement 'handleImageClick' function",
             "Use an argument 'targetClass' which represents the class of the thumbnail image clicked.",
             "Check if 'targetClass' is different from the current cubeImageClass state.",
@@ -3301,7 +3374,6 @@ const tasksData = {
             "A cube container (cube-container) for positioning and perspective of the cube.",
             "Inside 'cube-container', a 'cube' element with dynamic classes based on cubeImageClass, rotating to display the selected image face.",
             "Below the cube, include a section (image-buttons) containing thumbnail images (input[type='image']). These thumbnails will trigger the 'handleImageClick' function when clicked.",
-          
           ],
         },
         {
@@ -3309,31 +3381,110 @@ const tasksData = {
           titleDescription: "index.css",
           description: [
             "Define styles for cube-gallery-container, cube-container, cube, and image-buttons.",
-             "Apply rotate for 3D Effects",
+            "Apply rotate for 3D Effects",
             "In your Cube Image Gallery CSS, each image (image-1, image-2, etc.) is positioned on a different face of the cube.",
             "translateZ(15rem): Positions the image on a face of the cube, pushing it back along the z-axis (15rem units away).",
             "rotateX(angle), rotateY(angle), rotateZ(angle): Rotates the cube to display different faces corresponding to each image. This rotation creates a dynamic 3D effect as users interact with the gallery.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Integrating Components",
           titleDescription: "App.js",
           description: [
             " In App.js, import the CubeGallery component to render it within the main App component.",
-             "Utilize the CubeGallery component within the App component to display your Cube Image Gallery.",
-           
+            "Utilize the CubeGallery component within the App component to display your Cube Image Gallery.",
           ],
         },
-          
       ],
       taskType: "React",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: 'https://codesandbox.io/embed/8fv4kq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js',
+      codesandboxUrl:
+        "https://codesandbox.io/embed/8fv4kq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson30.webp"),
       link: "https://www.dropbox.com/scl/fi/33r850r4goal6buln22oh/CubeImageGallery.css?rlkey=5sgt95oxccgxptvla3r1fqc01&st=psdl8ajb&dl=0",
+    },
+    {
+      taskId: "reacttask31",
+      taskTitle: "ReactAnalogClock",
+      introduction: " ReactAnalogClock is a React application that simulates an analog clock. It dynamically updates in real-time, displaying the current hour, minute, and second hands based on the system time. It's designed to be visually appealing and educational, showcasing how to manage time updates and animations in a React environment.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up Your Project",
+          titleDescription: "",
+          description: [
+            "Open your terminal or command prompt.",
+            "Navigate to the directory where you want to create your project.",
+            "Run 'npx create-react-app analog-clock' to create a new React project called 'analog-clock'.",
+            "Use the command 'cd analog-clock' to enter the project directory.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Component Files",
+          titleDescription: "",
+          description: [
+            "Inside the 'src' directory, create a new file named AnalogClock.js.",
+            "This file will contain the logic and structure for the analog clock.",
+            "Ensure that App.js exists in the src directory. This file is created by default in a new React project and will serve as the main entry point for your application.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Write the AnalogClock Component Logic",
+          titleDescription: "AnalogClock.js",
+          description: [
+            "Open AnalogClock.js file.",
+            "Import the useState and useEffect hooks from React.",
+            "Inside the AnalogClock component function, create a state variable using useState.",
+            "Initialize the state with properties for 'seconds', 'minutes', and 'hours'.",
+            "Inside the AnalogClock component function, add a useEffect hook.",
+            "Ensure the useEffect runs only once by passing an empty dependency array.",
+            "Inside the useEffect hook, define a function to get the current time.",
+            "Use JavaScript's Date object to get the current seconds, minutes, and hours.",
+            "Convert the current seconds to degrees (0-360) by multiplying by 6.",
+            "Convert the current minutes to degrees (0-360), accounting for passing seconds.",
+            "Convert the current hours to degrees (0-360), accounting for passing minutes and seconds.",
+            "Use the state updating function from useState to set the time in degrees.",
+            "Inside the useEffect hook, set up an interval that runs every second.",
+            "In the interval callback, update the state to increment the seconds, minutes, and hours.",
+            "Increment the seconds by 6 degrees every second.",
+            "Increment the minutes by 1/10 of a degree every second.",
+            "Increment the hours by 1/120 of a degree every second.",
+            "Ensure the interval is cleared when the component is unmounted by returning a cleanup function from the useEffect hook.",
+          ],
+        },
+        {
+          stepTitle: "Step 4:  Render the Clock Structure",
+          titleDescription: "",
+          description: [
+            "In AnalogClock.js, return a JSX structure with a div for the clock container.",
+            "Inside the clock container, add divs for the numbers 12, 3, 6, and 9.",
+            "Add divs for the hour, minute, and second hands, and use inline styles to rotate them based on the time state.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 5: Implement Styling in index.css",
+          titleDescription: "",
+          description: ["Add styles for the clock container to center it on the page and set its size and background.", "Add styles for the numbers to position them correctly around the clock.", "Add styles for the hour, minute, and second hands, including their size, position, and rotation origin."],
+        },
+        {
+          stepTitle: "Step 6: Modify the App Component",
+          titleDescription: "",
+          description: ["In App.js, import AnalogClock from ./AnalogClock.", "Replace the default JSX in App with the AnalogClock component."],
+        },
+        
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/knmmp2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson31.webp"),
+      link: "https://www.dropbox.com/scl/fi/uzsyfdeozqlsfzu86ay93/analogAclockStyles.css?rlkey=0t401f0u20wo4uwafu5lbxarn&st=opsjjj4s&dl=0",
     },
   ],
 };
@@ -3500,7 +3651,7 @@ React: [
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl:
+      codesandboxUrl: "",
       img: require("../images/ReactLesson1.webp"),
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
