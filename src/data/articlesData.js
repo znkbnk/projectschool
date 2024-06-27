@@ -26,8 +26,7 @@ const blogCards = [
     extract:
       "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
     date: "8 May 2024",
-    image:
-      "https://previews.dropbox.com/p/thumb/ACQQ6jzdp8fuLs2buFiT5yPLwY4e5dm_XRGsUOUqh6YmwFwcZ9ooHf2_GDZY-MbLqgyKE1dPBiHU0LeB5XVSol1dUxK-HbQ91lKtd7sli7mJ4jrJLjoLimMPgPk5ING5NpVbgM4VpwVnEjvM3vbDdrOl4JG9_q1F4rbHekU61D0OX93lYkj6cSL5gFgTkD1MYCOsmqY0EkCTLTZaL36DNJsXZeOFDAmWomkrl1nCIiizcK6CMVjFyxWiFj3TmLj_JGdSbQsNH5Jl6fPimdym35KCGC4gz-w2VMjm4py0oGxvahSb2TONSWEaRWVUhTtg7TGqqOfYAzzVYM_NTV4vQP0UhjRIRM2qchZlyFBCohU4q0R9mbKtEfMWto84knqdzeQ/p.png",
+    image: "https://previews.dropbox.com/p/thumb/ACVNZmwOdZgABQt74eB7VAb5zOhr1TkEa3SjZI4vFdEyr3P5AO8gggwquX36rHG5dKfmazOVaf4BmBS2M_s50CqLUdgTiksdcC-BZy4RN0pu19Z7rLE2EgH6y6RAA1JhmMDhDaCYfHEGpsxT2FLnWP5pKZWyfWIh6SqiWOaGiL69xKFCr6Spd4HmHa5zT4AMj48MoGeVkxJfAU6pF7wol76OI6A9ss1rVxvbjKjyPHICL9-S1yR6ZRg0hWFIhjHR7tFr7gO36LRLa7IMjl_pEUIbsbziZaR-JsSn9_6jQn-5tQfy1shda_12svviwtphhD_gABi5hPXHfaTHMPMYTaPh/p.png",
   },
   {
     id: 4,
