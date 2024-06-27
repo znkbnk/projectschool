@@ -1,3 +1,4 @@
+// App.js
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -19,9 +20,9 @@ import Terms from "./components/Terms";
 import Privacy from "./components/Privacy";
 import { auth } from "./components/firebase";
 import Blog from "./Blog/Blog";
-import BlogPage from "./Blog/BlogPage";
 import Success from "./Stripe/Success";
 import Cancel from "./Stripe/Cancel";
+import Articles from "./Blog/Articles";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -41,7 +42,6 @@ const App = () => {
         if (!response.ok) {
           if (response.status === 404 && retries > 0) {
             console.warn("User not found, retrying...");
-            // Retry fetching after a delay
             setTimeout(
               () => fetchUserData(user, retries - 1, delay * 2),
               delay
@@ -87,7 +87,7 @@ const App = () => {
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/faq' element={<Faq />} />
         <Route path='/blog' element={<Blog />} />
-        <Route path='/blog/:id' element={<BlogPage />} />
+        <Route path='/articles/:id' element={<Articles />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/privacy' element={<Privacy />} />
 
@@ -129,7 +129,6 @@ const App = () => {
         />
         <Route path='/success' element={<Success />} />
         <Route path='/cancel' element={<Cancel />} />
-        
       </Routes>
     </div>
   );
