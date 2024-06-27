@@ -35,7 +35,7 @@ const blogCards = [
       "Transitioning your React project from Stripe's test environment to the live environment is a crucial step to start processing real payments. This process ensures that your application is fully prepared to handle secure transactions in a production setting.",
     date: "23 June 2024",
     image:
-      "https://previews.dropbox.com/p/thumb/ACSAWT2-Uqhlmo0YehiFk6x07fP8R0W0Buuj3t-KL3qhvRAIID0I-xMjkqUQxZPlXzqRF-KJx2b_xeSBglwbrx1mHhjwadgvsiAQ92FzniP01Vqq25o6Qd53HZzowx36IiKXzPPQfe5hZaO6snksyQhuVbxf8r3Sl7wfYFKUmA3rlD4ldZgbIGsGAdbdIbB4BRndJw5HdkA9AXJf4bdB39DSczoOJFv1O4Wzfs6zgL-V6AWcUIR_9ZcXLAk5Afn4t29gzTlJyesIdczxMsrJrYaKD8IR7wRsa1vINuEupe_CNJEYnSVfLTT4CZhhVL_fFqxs-4TTqTg8oKWMj9G86Bqs/p.png",
+      "https://previews.dropbox.com/p/thumb/ACWHrEEocOeW4a-se9v5ZB2A4IgtzDV-ffgPB3ZXgOY5nXqty900BOwFI2V1ROvpekL97p66MRr3LO11-RqlQdbzAbgV7j9BprfzL-MortkYmgk3MVCnH2psZUvRRD0GE82QSRxrClvqaF10_aeF7gKqw5h7i_POnz-oBIggdC3CYeYGTElGrLvjKsqND8WtVMEM8vXzTDtrYJfF8DbjEGNpqNKLNGhN00zOWr39-QcbpjVGsnJrw0EZkSaYCm0eYIKfu82tJrxpcrENz4PwvMLSq5pIZGCnLdCREE6WFpf_a9kiGuhSjG4yc1XH1u9vs4hOiTwopLhy_mgGkH3iG4cy_heT8isARGjN06KuREX_m-OEs3AHHYSaElsM-ToAOOE/p.png",
   },
 ];
 
