@@ -1,6 +1,8 @@
+// Blog.js
 import React from "react";
 import { Link } from "react-router-dom";
-import { blogCards } from "../data/tasksData";
+import { blogCards } from "../data/articlesData";
+
 import "../styles/blog.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -11,17 +13,16 @@ function Blog() {
     window.scrollTo(0, 0);
     return null;
   }
+
   return (
     <div className='blog-container'>
       <ScrollToTopOnNavigation />
-
       <Navbar />
-
       <div className='blog-cards'>
         <BlogTitle />
         <div className="cards-flex"> 
           {blogCards.map((item, index) => (
-            <Link key={index} to={`/blog/${item.id}`}>
+            <Link key={index} to={`/articles/${item.id}`}>
               <div className={`card-container ${item.category}`}>
                 <div className='card-category'>{item.category}</div>
                 <div className='card-body'>

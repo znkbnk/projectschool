@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+#articles-main {
+  font-family: "Piazzolla", serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 5rem 0;
+}
+
+.articles-section {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  height: auto;
+}
+
+.articles-section p {
+  color: white;
+  margin: 20px 0;
+}
+
+.articles-section ul {
+  color: white;
+  text-align: start;
+  margin: 20px 0;
+
+}
+
+.articles-section ol {
+  text-align: left;
+}
+
+.articles-section h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.articles-section img {
+  max-width: 400px;
+  width: 100%;
+  display: block;
+  margin: 10px auto 0;
+}
+
+blockquote {
+  color: #3fd192;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 25px;
+}

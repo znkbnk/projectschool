@@ -122,86 +122,9 @@ const faqData = [
     ),
   },
 ];
-const blogCards = [
-  {
-    id: 1,
-    category: "React",
-    title: "How to create Authentication Guard Component",
-    extract:
-      "Today we'll walk through the process of implementing authentication in a React application using Firebase and React Router. We'll create an AuthGuard component to manage the authentication state anr protect routes that require authentication, ensuring a seamless user experience.",
-    date: "04 April 2024",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.webp",
-  },
-  {
-    id: 2,
-    title: "InsightTrack: Empowering Your Digital Presence",
-    extract:
-      "Google Analytics is a powerful web analytics service offered by Google that helps website owners and marketers track and analyze their website traffic and user behavior. By providing detailed insights into visitor demographics, acquisition channels, user engagement, and conversion metrics, Google Analytics enables businesses to make data-driven decisions to improve their online presence, optimize marketing strategies, and enhance the overall user experience.",
-    date: "5 May 2024",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/GAnalytics.svg/220px-GAnalytics.svg.webp",
-  },
-  {
-    id: 3,
-    category: "JavaScript",
 
-    title: "Mastering JavaScript Pagination",
-    extract:
-      "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
-    date: "8 May 2024",
-    image:
-      "https://previews.dropbox.com/p/thumb/ACQQ6jzdp8fuLs2buFiT5yPLwY4e5dm_XRGsUOUqh6YmwFwcZ9ooHf2_GDZY-MbLqgyKE1dPBiHU0LeB5XVSol1dUxK-HbQ91lKtd7sli7mJ4jrJLjoLimMPgPk5ING5NpVbgM4VpwVnEjvM3vbDdrOl4JG9_q1F4rbHekU61D0OX93lYkj6cSL5gFgTkD1MYCOsmqY0EkCTLTZaL36DNJsXZeOFDAmWomkrl1nCIiizcK6CMVjFyxWiFj3TmLj_JGdSbQsNH5Jl6fPimdym35KCGC4gz-w2VMjm4py0oGxvahSb2TONSWEaRWVUhTtg7TGqqOfYAzzVYM_NTV4vQP0UhjRIRM2qchZlyFBCohU4q0R9mbKtEfMWto84knqdzeQ/p.png",
-  },
-  {
-    id: 4,
-    title: "Going Live with Stripe in Your React Project",
-    extract:
-      "Transitioning your React project from Stripe's test environment to the live environment is a crucial step to start processing real payments. This process ensures that your application is fully prepared to handle secure transactions in a production setting.",
-    date: "23 June 2024",
-    image:
-      "https://previews.dropbox.com/p/thumb/ACSAWT2-Uqhlmo0YehiFk6x07fP8R0W0Buuj3t-KL3qhvRAIID0I-xMjkqUQxZPlXzqRF-KJx2b_xeSBglwbrx1mHhjwadgvsiAQ92FzniP01Vqq25o6Qd53HZzowx36IiKXzPPQfe5hZaO6snksyQhuVbxf8r3Sl7wfYFKUmA3rlD4ldZgbIGsGAdbdIbB4BRndJw5HdkA9AXJf4bdB39DSczoOJFv1O4Wzfs6zgL-V6AWcUIR_9ZcXLAk5Afn4t29gzTlJyesIdczxMsrJrYaKD8IR7wRsa1vINuEupe_CNJEYnSVfLTT4CZhhVL_fFqxs-4TTqTg8oKWMj9G86Bqs/p.png",
-  },
-];
 const blogTopic = [
-  {
-    id: 1,
-    image: ["AuthGuard (1).webp"],
-    paragraphs: [
-      {
-        text: [
-          "Setup Firebase Authentication: Ensure you have set up Firebase Authentication properly. This includes setting up a Firebase project, enabling the Authentication service, and configuring sign-in methods (like email/password, Google, etc.). Create Firebase Configuration File: Ensure you have a Firebase configuration file (usually named firebase.html or similar) where you initialize Firebase with your configuration.",
-        ],
-        image: null,
-        isList: false,
-      },
-      {
-        text: [
-          "Implement AuthGuard Component:",
-          "Create an AuthGuard.html file. This component will handle the authentication logic.",
-          "Inside the AuthGuard component, you're using useEffect hook to listen for changes in authentication state (onAuthStateChanged). When the authentication state changes, it updates the isLoggedIn state.",
-          "If the user is authenticated (user is not null), isLoggedIn is set to true. Otherwise, it's set to false, and the user is redirected to the login page using navigate(/login).",
-          "This component returns the children (components wrapped inside it) only if the user is authenticated. Otherwise, it returns null.",
-        ],
-        image: null,
-        isList: true,
-      },
-      {
-        text: [
-          "Import necessary modules from React",
-          "Import useNavigate hook from react-router-dom",
-          "Import the 'auth' object from './firebase' file",
-          "Define a functional component AuthGuard that takes 'children' as a prop",
-          "Initialize navigate function using the useNavigate hook from react-router-dom",
-          "Initialize 'isLoggedIn' state variable with false using useState hook",
-          "Implement useEffect hook",
-          "Call onAuthStateChanged method on 'auth' object to listen for authentication state changes",
-        ],
-        image: null,
-        isList: true,
-      },
-    ],
-  },
+  
   {
     id: 2,
     image: ["googleAnalytics.webp"],
@@ -3456,7 +3379,7 @@ const tasksData = {
           ],
         },
         {
-          stepTitle: "Step 4:  Render the Clock Structure",
+          stepTitle: "Step 4: Render the Clock Structure",
           titleDescription: "",
           description: [
             "In AnalogClock.js, return a JSX structure with a div for the clock container.",
@@ -3510,7 +3433,7 @@ const exercisesData = [
   },
 ];
 
-export { tasksData, authorsData, faqData, blogCards, blogTopic, exercisesData };
+export { tasksData, authorsData, faqData, blogTopic, exercisesData };
 
 /* Task description example template:
 
