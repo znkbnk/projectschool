@@ -3409,6 +3409,106 @@ const tasksData = {
       img: require("../images/ReactLesson31.webp"),
       link: "https://www.dropbox.com/scl/fi/uzsyfdeozqlsfzu86ay93/analogAclockStyles.css?rlkey=0t401f0u20wo4uwafu5lbxarn&st=opsjjj4s&dl=0",
     },
+    {
+      taskId: "reacttask32",
+      taskTitle: "Dynamic Menu Highlighter",
+      introduction: "Dynamic Menu Highlighter is a visually engaging React application that features an interactive menu with dynamic highlighting and animated border positioning. Each menu item changes the background color of the page, providing a seamless and intuitive user experience.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up Your React Environment",
+          titleDescription: "",
+          description: [
+            "Make sure you have Node.js and npm installed on your machine. You can download and install them from the official Node.js website.",
+            "Open your terminal and run 'npx create-react-app my-app' to create a new React application. Replace 'my-app' with your desired project name.",
+            "Change your directory to the newly created React app by running cd my-app.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Prepare Your Assets",
+          titleDescription: "",
+          description: [
+             "Place your GIF images (1.gif, 2.gif, 3.gif, 4.gif, 5.gif) in the src (or any other) folder of your React app.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 3: Structure Your App Component",
+          titleDescription: "",
+          description: [
+            "Use the 'useState' hook to create a state variable 'activeIndex' and a setter function 'setActiveIndex'. This will keep track of which menu item is currently active.",
+           "Use the 'useRef' hook to create references for the menu ('menuRef') and the border ('borderRef'). These references will be used to directly manipulate the DOM elements.",
+          
+          ],
+        },
+        {
+          titleDescription: "Handle Item Clicks",
+          description: [
+            "Write a function clickItem(index) that will: update the 'activeIndex' state with the clicked index using setActiveIndex(index).",
+            "Change the background color of the 'document.body' to the color corresponding to the clicked item using document.body.style.backgroundColor = bgColorsBody[index].",
+            "Call the 'offsetMenuBorder' function to adjust the position of the menu border.",
+           
+          ],
+        },
+        {
+          
+          titleDescription: "Offset the Menu Border",
+          description: [
+            "Create a function offsetMenuBorder(element, menuBorder) that will: Calculate the position of the 'element' (active menu item) using element.getBoundingClientRect().",
+             "Calculate the left position for the 'menuBorder' by subtracting the menu's offset and adjusting for the border's width.",
+            "Set the 'transform' property of the 'menuBorder' to move it to the calculated position.",
+           
+          ],
+        },{
+          
+          titleDescription: "Add a Resize Event Listener",
+          description: [
+            "Use the 'useEffect' hook to: call the 'offsetMenuBorder' function initially to set the border position when the component mounts.",
+             "Add a 'resize' event listener to the 'window' that calls the 'offsetMenuBorder' function whenever the window is resized.",
+            "Clean up the event listener when the component unmounts to avoid memory leaks.",
+          
+          ],
+        },{
+          stepTitle: "Step 4: Render Your Components",
+          titleDescription: "",
+          description: [
+            "Map over the icons array to create menu items dynamically.",
+             "Use conditional styling to apply the active class to the selected menu item.",
+            "Set a background color for each menu item using CSS custom properties.",
+            "Include an additional 'div' element for the menu border within the menu.",
+            "Add the SVG element with a clip path definition for visual effects.",
+          
+          ],
+        },{
+          stepTitle: "Step 5: Style Your Components",
+          titleDescription: "",
+          description: [
+            "Create a CSS file (e.g., App.css or styles.css) in the 'src' folder.",
+             "Add styles for the menu, menu items, active item, and menu border.",
+            "Ensure the styles for the SVG clip path are correctly applied.",
+            "Use CSS custom properties (--bgColorItem) to dynamically set the background color of each menu item.",
+           
+          ],
+        },{
+          stepTitle: "Step 6: Test and Adjust",
+          titleDescription: "",
+          description: [
+            "Start your React app by running npm start in your terminal.",
+             "Open your browser and navigate to http://localhost:3000 to see your application in action.",
+          
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/mfwtx2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson32.webp"),
+      link: "https://www.dropbox.com/scl/fi/25t69epiuon93hvlcvqfg/DynamicMenuStyles.css?rlkey=2njugn8md2enysmdvobyj2mhl&st=70468e4e&dl=0",
+    },
   ],
 };
 
