@@ -23,6 +23,7 @@
     line-height: 1.6;
   }
   
+  
   .terms-content h2 {
     font-size: 1.5rem;
     margin-top: 20px;
@@ -32,6 +33,7 @@
   .terms-content p {
     font-size: 1rem;
     margin-bottom: 15px;
+    color: white;
   }
   
   /* Styling for Navbar and Footer can be added separately based on your component styles */

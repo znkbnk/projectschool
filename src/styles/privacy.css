@@ -32,16 +32,19 @@
   .privacy-content p {
     font-size: 1rem;
     margin-bottom: 15px;
+    color: white;
   }
   
   .privacy-content ul {
     list-style-type: disc;
     margin-left: 20px;
+    color: white;
   }
   
-  .address {
+  address {
     margin-top: 20px;
     font-style: normal;
+    color: white;
   }
   
   /* Styling for Navbar and Footer can be added separately based on your component styles */
