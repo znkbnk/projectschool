@@ -81,6 +81,7 @@ const PriceCardsList = () => {
             "Access to 24/7 free support.",
             "Solutions provided for each task.",
             "Access to a private Discord forum server.",
+            "Support free education.",
           ]}
           buttonText='Get started'
           trialDays=''
@@ -95,6 +96,7 @@ const PriceCardsList = () => {
             "Access to 24/7 free support.",
             "Solutions provided for each task.",
             "Access to a private Discord forum server.",
+            "Support free education.",
           ]}
           buttonText='Get started'
           trialDays=''
