@@ -15,9 +15,11 @@ function Blog() {
   }
 
   return (
-    <div className='blog-container'>
+    <div>
       <ScrollToTopOnNavigation />
       <Navbar />
+    <div className='blog-container'>
+      
       <div className='blog-cards'>
         <BlogTitle />
         <div className="cards-flex"> 
@@ -39,6 +41,7 @@ function Blog() {
         </div>
       </div>
       <Footer />
+    </div>
     </div>
   );
 }

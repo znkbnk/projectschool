@@ -8,274 +8,99 @@ const authorsData = [
   },
 ];
 
-const faqData = [
-  {
-    question:
-      "Why is ProjectSchool learning is different from other platforms with online courses?",
-    answer: (
-      <div className='faq-container-answer'>
-        <p>
-          ProjectSchool learning stands out from other platforms with online
-          courses due to its emphasis on practical exercises over traditional
-          theoretical approaches. Unlike many other programs that rely heavily
-          on passive learning through lectures and readings, ProjectSchool
-          prioritizes hands-on tasks that allow participants to directly engage
-          with the subject matter.
-        </p>
-        <p>
-          {" "}
-          By immersing learners in practical activities, ProjectSchool
-          facilitates a deeper understanding of concepts and their real-world
-          application. This approach fosters the development of tangible skills
-          and boosts learners' confidence as they actively apply what they're
-          learning.
-        </p>
-        <p>
-          {" "}
-          ProjectSchool's focus on active participation and meaningful outcomes
-          distinguishes it from platforms that predominantly offer theoretical
-          knowledge. Rather than merely absorbing information, participants in
-          ProjectSchool actively shape their learning journey through hands-on
-          experiences, bridging the gap between theory and practice.
-        </p>
-        <p>
-          {" "}
-          In summary, ProjectSchool stands out by offering a dynamic learning
-          experience that emphasizes experiential learning and practical
-          knowledge, empowering learners to apply their newfound skills
-          effectively in real-world scenarios.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question:
-      "Is ProjectSchool suitable for individuals who are new to programming and lack heavy theoretical knowledge?",
-    answer: (
-      <div className='faq-container-answer'>
-        <p>
-          Yes, our React school is suitable for beginners who have a basic
-          understanding of programming concepts. While we prioritize practical
-          exercises over theoretical learning, we do assume that students have
-          some foundational knowledge in programming. This might include
-          familiarity with concepts such as variables, loops, functions, and
-          basic HTML/CSS.
-        </p>
-        <p>
-          However, our program is designed to guide beginners through hands-on
-          tasks that will help them develop practical skills and confidence in
-          React programming. Whether you're new to programming or looking to
-          expand your skills specifically in React, our approach focuses on
-          active engagement and real-world application to facilitate learning
-          and growth.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Are payments on ProjectSchool safe?",
-    answer: (
-      <div className='faq-container-answer'>
-        <p>
-          Sure! We're using Stripe solution. All transactions are SSL (Secure
-          Socket Layer) protected. Your information and your donors information
-          are securely transmitted during the processing of all payments.
-        </p>
-        <p>
-          Stripe is a PCI Service Provider Level 1 which is the highest grade of
-          payment processing security. You can rest assured that your donors
-          information is safe and secure.
-        </p>
-        <p>
-          All credit card numbers are encrypted and safely stored in Stripe's
-          state of the art data-center. This ensures both the security and
-          integrity of your donors information.
-        </p>
-      </div>
-    ),
-  },
-  {
-    question: "Is it safe to use codesandbox.io platform?",
-    answer: (
-      <div className='faq-container-answer'>
-        <p>
-          Certainly! CodeSandbox is generally considered a secure platform for
-          coding, with measures in place to safeguard users' code and data. It
-          prioritizes security by regularly updating its platform to address any
-          potential vulnerabilities and offers users control over the privacy
-          settings of their projects. Additionally, the platform has clear
-          community guidelines to maintain respectful interactions among users,
-          with appropriate actions taken against any violations.
-        </p>
-        <p>
-          However, users should remain cautious when using third-party code and
-          ensure they come from reputable sources to minimize the risk of
-          including malicious code. While CodeSandbox encrypts data transmission
-          and storage, users should still be mindful of the information they
-          include in their projects, especially sensitive data. Ultimately,
-          users play a role in the security of their code and data by practicing
-          good coding practices and regularly reviewing permissions. Alternative
-          platforms and additional security measures, such as code review and
-          version control systems, can also be considered for added protection.
-        </p>
-      </div>
-    ),
-  },
-];
-
-const blogTopic = [
-  
-  {
-    id: 2,
-    image: ["googleAnalytics.webp"],
-    paragraphs: [
-      {
-        text: [
-          "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
-        ],
-        image: null,
-        isList: false,
-      },
-      {
-        text: [
-          "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
-          "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
-          "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
-          "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
-          "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
-        ],
-        image: null,
-        isList: true,
-      },
-      {
-        text: [
-          "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
-          "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
-          "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
-          "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
-        ],
-        image: null,
-        isList: true,
-      },
-    ],
-  },
-  {
-    id: 3,
-    image: ["googleAnalytics.webp"],
-
-    paragraphs: [
-      {
-        text: [
-          "Mastering JavaScript Pagination: Theory, Implementation, and Best Practices In the dynamic landscape of web development, efficient data management and presentation are paramount. One common challenge developers face is efficiently displaying large datasets while maintaining user experience. Enter JavaScript pagination—a technique that not only enhances performance but also improves usability by breaking down voluminous data into digestible chunks. In this comprehensive guide, we'll delve into the theory behind pagination, provide practical code examples, and explore its applications across various scenarios.",
-        ],
-        image: null,
-        isList: false,
-      },
-      {
-        text: [
-          "Pagination, in essence, involves dividing content into discrete pages, typically with a limited number of items per page. This approach offers several benefits:",
-          "Enhanced Performance: Loading a large dataset in a single go can strain server resources and lead to sluggish user experiences. Pagination mitigates this issue by distributing data across multiple pages, resulting in faster load times.",
-          "Improved User Experience: Navigating through pages is intuitive for users, allowing them to consume content at their own pace without feeling overwhelmed.",
-          "Optimized Bandwidth Usage: By fetching only the necessary data for each page, pagination reduces bandwidth consumption, making it ideal for users with limited internet connectivity.",
-        ],
-        image: null,
-        isList: true,
-      },
-      {
-        text: [
-          "Let's illustrate pagination implementation using HTML, CSS and JavaScript. Consider a scenario where we have an array of items and aim to display them in paginated form.",
-        ],
-        images: [
-          "https://previews.dropbox.com/p/thumb/ACS-icZLtCjXjPgkRJvwvsOZImwFeDPmqTVAUqoYpZY48bBeodY6hbuIigUFPE5nfNlNY2tHTCEqCrRkKab1D0In-oQRJEOf4HTo63xYATZsgbkhl0ji3ODPEPWOngTeMrBhaZ0EWGSPGDpPeMdoYkM73OQkFKb8k1tBXu2KZ-SMEj2oUPs6WXpge9anl2OOrs8f1TT5Ds8c3rEsgLeno7l1Fk_1y9BXna7-DgCfXW4cIFfrZlV2FSggxeVG7NOaQRQB1RQnsIIczh2hsXe8kpusagKC4kfU1jozwnGif-H-hpKLPyXDM9z3BW235OtVqao54nMa_lrjW0Et8HF1dMMU/p.png",
-        ],
-        isList: false,
-      },
-      {
-        text: null,
-        images: [
-          "https://previews.dropbox.com/p/thumb/ACTGgG47rMUvZNrFl6qFrTvgmwp3sWRztYnW0lOqAepx2JdERJsDilEaTodz4I8AvWQkXunba-T5nq1FS1-Zyc8GItFiNLOYO4KCJONKF3yPWw-NzhHgCVscFCWfFhC09Jyqml4Ei2__SIYiMeidVtC5Qk9qm48vQY4vHJEvwns2EruKkynGV_kjT8AMvYI5vinC9QSba7CfebbTYmKm_L0Z3uBDh-3LFeew8tDppfXwtDhP_m44_fiO35fRTsn2rPs4Xqv4MsRCZCWJELZljFlexkCtDmCt_yt55RvYYKO5zVq1F-dkIsSVC4xQlFz9P6sZYfPG4vL1YB7N6InYQ9ZB/p.png",
-        ],
-        isList: false,
-      },
-      {
-        text: null,
-        images: [
-          "https://previews.dropbox.com/p/thumb/ACS2e2lJfqd-OK5H0p8McawkAPO1rMZHknBksA92r0Sh46Fh4_c_Gd6DqtR_EML61Fw9KMfAe_OPYuLlm5iZA7ZvD4Eju7X0TlPUZirQdrFWbRN7Htl8NXC59PKtQi_6NnmpbIXwVgBV9U7zid-hRgRCmZXsZd3mO8yi8OBxy-iv62sHWrf34lgVzbua18N6rGGc3JUr7GsoOiocLvLRi3oW9z7ztx9RICTIOscCgFhcIexu0mzDjkVRRKJfsURaILuO-uvOi3HxTJTrMkp0hPsvfvyjGeKDlAwwzHjm3rFXyaJ9d7zRUhRve1F7noxkeqwOghra5YJkbUmd8FmZQ6mC/p.png",
-        ],
-        isList: false,
-      },
-      {
-        text: null,
-        images: [
-          "https://previews.dropbox.com/p/thumb/ACQ9NbyNaH5FlgTFYx17v5mVgI9nmoqDNjk2DMdOyWrvWJRfwPUyFc9oiexRVYMuWTtGU5OJ4fzVi9A5rhnYQtLN79UXhytFOButzfPjQ8tCqEUY7txSR6B9WH_OW94SRg_yC2ju15TPk35EzMey0eOhZue3xj77GLZalUesG8-hEdn-SQYzfelIOhAYib2RbUhivY19pj6aS-2aehThZYnmxK3_Gfb_brkhir86FvQ1ZPDrYgvWo8_2yq3ceQqhFk04Ssp4km8FffjHKejhFQerCx4d4EZmhAtnyTuaiEpEvG7Q2clFi7Mu6JJ6SAzS23fT3kiDx30xRvFr9TfuMBGT/p.png",
-        ],
-        isList: false,
-      },
-      {
-        text: [
-          "In this example, we start by defining an array of items. The displayItems function takes care of rendering items for the current page, while renderPaginationButtons generates pagination controls. Clicking on a pagination button triggers the display of corresponding items.",
-        ],
-
-        isList: false,
-      },
-      {
-        text: [
-          "Where to Use Pagination:",
-          "Pagination finds applications across various domains, including:",
-          "E-commerce Websites: Displaying products in paginated grids allows users to navigate through extensive catalogs conveniently.",
-          "Blogs and Articles: Long-form content can be divided into pages, facilitating easier reading and navigation.",
-          "Data Tables: In applications dealing with tabular data, pagination enhances readability and performance by splitting data into manageable chunks.",
-          "Search Results: Search engines often paginate results to present them in a structured and navigable manner.",
-        ],
-
-        isList: true,
-      },
-      {
-        text: [
-          "In conclusion, JavaScript pagination is a versatile tool for managing and presenting data in web applications. By understanding its theory, implementing it effectively, and leveraging it across various contexts, developers can significantly enhance user experience and optimize performance.",
-        ],
-
-        isList: false,
-      },
-    ],
-  },
-  {
-    id: 4,
-    image: ["blog4.webp"],
-    paragraphs: [
-      {
-        text: [
-          "Having Google Analytics installed on your website is beneficial because it provides valuable insights into your website's performance and visitor behavior. It allows you to track key metrics such as website traffic, user engagement, conversion rates, and more, helping you make informed decisions to optimize your website, improve user experience, and ultimately achieve your business goals.",
-        ],
-        image: null,
-        isList: false,
-      },
-      {
-        text: [
-          "Go to the Google Analytics Website: Visit the Google Analytics website by typing 'Google Analytics' into your browser's search bar or directly navigating to analytics.google.com.",
-          "Sign In or Create an Account: If you already have a Google account (Gmail, Google Drive, etc.), you can sign in with those credentials. If not, you'll need to create a Google account by clicking on the 'Create account' link and following the instructions.",
-          "Start Setting Up Google Analytics: Once you're signed in, click on the 'Start for free' button. This will begin the process of setting up your Google Analytics account.",
-          "Set Up Your Property: After clicking 'Start for free', you'll be prompted to set up your first property. A property represents your website, app, or other digital asset you want to track with Google Analytics. Click on the 'Web' option if you're setting up analytics for a website.",
-          "Enter Property Details: Enter the details for your website, such as the website name, URL, industry category, and reporting time zone.",
-        ],
-        image: null,
-        isList: true,
-      },
-      {
-        text: [
-          "Get Tracking ID: After entering your property details, you'll be presented with a Google Analytics tracking ID. This ID is a unique code that you'll need to add to your website's code so Google can track your site's traffic. You can copy this tracking ID or directly install the Google Analytics tracking code on your website.",
-          "Install Tracking Code: To track your website's traffic accurately, you'll need to install the Google Analytics tracking code on every page of your website. You can either manually add the tracking code to your website's HTML or use a website platform like WordPress that offers plugins for easy integration.",
-          "Verify Tracking Installation: Once you've installed the tracking code, return to the Google Analytics interface and click on the 'Send test traffic' button. This will send test data to Google Analytics to verify that the tracking code is installed correctly.",
-          "Explore Reports: Once you've set up your Google Analytics account and verified that tracking is working, you can start exploring the reports. Google Analytics provides a wealth of data about your website's visitors, including information about where they're coming from, what pages they're visiting, and how they're interacting with your site.",
-        ],
-        image: null,
-        isList: true,
-      },
-    ],
-  },
-];
-
 const tasksData = {
+  Laravel: [
+    {
+      taskId: "laraveltask1",
+      taskTitle: "React 3D Interactive Card",
+      introduction:
+        "In this lesson, we'll be building a React functional component called Card. We'll implement mouse movement handling and event listeners for mouse enter and leave actions to create engaging visual effects and interactions within the component.",
+      steps: [
+        {
+          stepTitle: "Step 1: Define functional component Card",
+          titleDescription: "",
+          description: [
+            "Create a reference for the card element",
+            "Create a reference for the title element",
+            "Create a reference for the React image element",
+            "Create a reference for the description element",
+            "Create a reference for the difficulty buttons element",
+            "Create a reference for the start button element",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Function to handle mouse movement",
+          titleDescription: "",
+
+          description: [
+            "Calculate the rotation on the X-axis based on mouse position",
+            "Calculate the rotation on the Y-axis based on mouse position",
+            "Apply rotation to the card element",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Function to handle mouse entering the card",
+          titleDescription: "",
+
+          description: [
+            "Remove transition effect",
+            "Apply transformation to the title",
+            "Apply transformation to the React image",
+            "Apply transformation to the description",
+            "Apply transformation to the difficulty buttons",
+            "Apply transformation to the start button",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Function to handle mouse leaving the card",
+          titleDescription: "",
+
+          description: [
+            "Add transition effect",
+            "Reset rotation of the card",
+            "Reset transformation of the title",
+            "Reset transformation of the React image",
+            "Reset transformation of the description",
+            "Reset transformation of the difficulty buttons",
+            "Reset transformation of the start button",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Return JSX for the component",
+          titleDescription: "",
+
+          description: [
+            "Container for the card with mouse move event handler",
+            "Attach reference to the card element",
+            "Attach mouse enter event handler",
+            "Attach mouse leave event handler",
+            "Container for the React image",
+            "Circular background for the image",
+            "Source for the image",
+            "Alt text for the image",
+            "Attach reference to the React image element",
+            "Container for the information",
+            "Title of the card",
+            "Description of the card",
+            "Container for the difficulty buttons",
+            "Button for easy difficulty",
+            "Button for advanced difficulty",
+            "Button for hard difficulty",
+            "Button for pro difficulty",
+            "Container for the start button",
+            "Start button",
+          ],
+        },
+      ],
+      taskType: "Laravel",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Laravel Basics"],
+      completed: false,      
+      img: require("../images/ReactLesson1.webp"),
+      link: "https://www.dropbox.com/scl/fi/ttc2uqnhaxzmky587jj0w/3dHoverStyles.css?rlkey=gbdk8jfuexgcu5z1e52efhj4m&st=3zoceprl&dl=0",
+    },
+  ],
   js: [],
   CSS: [],
   React: [
@@ -3332,7 +3157,8 @@ const tasksData = {
     {
       taskId: "reacttask31",
       taskTitle: "ReactAnalogClock",
-      introduction: " ReactAnalogClock is a React application that simulates an analog clock. It dynamically updates in real-time, displaying the current hour, minute, and second hands based on the system time. It's designed to be visually appealing and educational, showcasing how to manage time updates and animations in a React environment.",
+      introduction:
+        " ReactAnalogClock is a React application that simulates an analog clock. It dynamically updates in real-time, displaying the current hour, minute, and second hands based on the system time. It's designed to be visually appealing and educational, showcasing how to manage time updates and animations in a React environment.",
 
       steps: [
         {
@@ -3385,34 +3211,41 @@ const tasksData = {
             "In AnalogClock.js, return a JSX structure with a div for the clock container.",
             "Inside the clock container, add divs for the numbers 12, 3, 6, and 9.",
             "Add divs for the hour, minute, and second hands, and use inline styles to rotate them based on the time state.",
-          
           ],
         },
         {
           stepTitle: "Step 5: Implement Styling in index.css",
           titleDescription: "",
-          description: ["Add styles for the clock container to center it on the page and set its size and background.", "Add styles for the numbers to position them correctly around the clock.", "Add styles for the hour, minute, and second hands, including their size, position, and rotation origin."],
+          description: [
+            "Add styles for the clock container to center it on the page and set its size and background.",
+            "Add styles for the numbers to position them correctly around the clock.",
+            "Add styles for the hour, minute, and second hands, including their size, position, and rotation origin.",
+          ],
         },
         {
           stepTitle: "Step 6: Modify the App Component",
           titleDescription: "",
-          description: ["In App.js, import AnalogClock from ./AnalogClock.", "Replace the default JSX in App with the AnalogClock component."],
+          description: [
+            "In App.js, import AnalogClock from ./AnalogClock.",
+            "Replace the default JSX in App with the AnalogClock component.",
+          ],
         },
-        
       ],
       taskType: "React",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/knmmp2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/knmmp2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson31.webp"),
       link: "https://www.dropbox.com/scl/fi/uzsyfdeozqlsfzu86ay93/analogAclockStyles.css?rlkey=0t401f0u20wo4uwafu5lbxarn&st=opsjjj4s&dl=0",
     },
     {
       taskId: "reacttask32",
       taskTitle: "Dynamic Menu Highlighter",
-      introduction: "Dynamic Menu Highlighter is a visually engaging React application that features an interactive menu with dynamic highlighting and animated border positioning. Each menu item changes the background color of the page, providing a seamless and intuitive user experience.",
+      introduction:
+        "Dynamic Menu Highlighter is a visually engaging React application that features an interactive menu with dynamic highlighting and animated border positioning. Each menu item changes the background color of the page, providing a seamless and intuitive user experience.",
 
       steps: [
         {
@@ -3422,15 +3255,13 @@ const tasksData = {
             "Make sure you have Node.js and npm installed on your machine. You can download and install them from the official Node.js website.",
             "Open your terminal and run 'npx create-react-app my-app' to create a new React application. Replace 'my-app' with your desired project name.",
             "Change your directory to the newly created React app by running cd my-app.",
-           
           ],
         },
         {
           stepTitle: "Step 2: Prepare Your Assets",
           titleDescription: "",
           description: [
-             "Place your GIF images (1.gif, 2.gif, 3.gif, 4.gif, 5.gif) in the src (or any other) folder of your React app.",
-          
+            "Place your GIF images (1.gif, 2.gif, 3.gif, 4.gif, 5.gif) in the src (or any other) folder of your React app.",
           ],
         },
         {
@@ -3438,8 +3269,7 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Use the 'useState' hook to create a state variable 'activeIndex' and a setter function 'setActiveIndex'. This will keep track of which menu item is currently active.",
-           "Use the 'useRef' hook to create references for the menu ('menuRef') and the border ('borderRef'). These references will be used to directly manipulate the DOM elements.",
-          
+            "Use the 'useRef' hook to create references for the menu ('menuRef') and the border ('borderRef'). These references will be used to directly manipulate the DOM elements.",
           ],
         },
         {
@@ -3448,55 +3278,51 @@ const tasksData = {
             "Write a function clickItem(index) that will: update the 'activeIndex' state with the clicked index using setActiveIndex(index).",
             "Change the background color of the 'document.body' to the color corresponding to the clicked item using document.body.style.backgroundColor = bgColorsBody[index].",
             "Call the 'offsetMenuBorder' function to adjust the position of the menu border.",
-           
           ],
         },
         {
-          
           titleDescription: "Offset the Menu Border",
           description: [
             "Create a function offsetMenuBorder(element, menuBorder) that will: Calculate the position of the 'element' (active menu item) using element.getBoundingClientRect().",
-             "Calculate the left position for the 'menuBorder' by subtracting the menu's offset and adjusting for the border's width.",
+            "Calculate the left position for the 'menuBorder' by subtracting the menu's offset and adjusting for the border's width.",
             "Set the 'transform' property of the 'menuBorder' to move it to the calculated position.",
-           
           ],
-        },{
-          
+        },
+        {
           titleDescription: "Add a Resize Event Listener",
           description: [
             "Use the 'useEffect' hook to: call the 'offsetMenuBorder' function initially to set the border position when the component mounts.",
-             "Add a 'resize' event listener to the 'window' that calls the 'offsetMenuBorder' function whenever the window is resized.",
+            "Add a 'resize' event listener to the 'window' that calls the 'offsetMenuBorder' function whenever the window is resized.",
             "Clean up the event listener when the component unmounts to avoid memory leaks.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 4: Render Your Components",
           titleDescription: "",
           description: [
             "Map over the icons array to create menu items dynamically.",
-             "Use conditional styling to apply the active class to the selected menu item.",
+            "Use conditional styling to apply the active class to the selected menu item.",
             "Set a background color for each menu item using CSS custom properties.",
             "Include an additional 'div' element for the menu border within the menu.",
             "Add the SVG element with a clip path definition for visual effects.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 5: Style Your Components",
           titleDescription: "",
           description: [
             "Create a CSS file (e.g., App.css or styles.css) in the 'src' folder.",
-             "Add styles for the menu, menu items, active item, and menu border.",
+            "Add styles for the menu, menu items, active item, and menu border.",
             "Ensure the styles for the SVG clip path are correctly applied.",
             "Use CSS custom properties (--bgColorItem) to dynamically set the background color of each menu item.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Test and Adjust",
           titleDescription: "",
           description: [
             "Start your React app by running npm start in your terminal.",
-             "Open your browser and navigate to http://localhost:3000 to see your application in action.",
-          
+            "Open your browser and navigate to http://localhost:3000 to see your application in action.",
           ],
         },
       ],
@@ -3505,35 +3331,15 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/mfwtx2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/mfwtx2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson32.webp"),
       link: "https://www.dropbox.com/scl/fi/25t69epiuon93hvlcvqfg/DynamicMenuStyles.css?rlkey=2njugn8md2enysmdvobyj2mhl&st=70468e4e&dl=0",
     },
   ],
 };
 
-const exercisesData = [
-  // {
-  //   img: require("../images/js.webp"),
-  //   title: "Mastering JavaScript",
-  //   desc: "Dive deep into JavaScript, the language that powers the web. From variables and functions to advanced concepts like closures and asynchronous programming, unlock the full potential of JavaScript.",
-  //   to: "/jslessons",
-  // },
-  // {
-  //   img: "https://cdn.mos.cms.futurecdn.net/Vp9WvV7YKdH4k8sKRePcE8.jpg",
-  //   title: "Styling Your Web Pages",
-  //   desc: "Explore the power of CSS to beautify and style your web pages. From colors and fonts to layouts and animations, master the art of visual design for the web.",
-  //   to: "/csslessons",
-  // },
-  {
-    img: "https://www.freecodecamp.org/news/content/images/2022/04/featured.jpg",
-    title: "Building Dynamic User Interfaces",
-    desc: "Explore React, the widely-used JavaScript library designed for crafting dynamic and engaging user interfaces. Discover its core concepts such as components and state management, alongside navigating the diverse React ecosystem, empowering you to construct contemporary web applications.",
-    to: "/reactlessons",
-  },
-];
-
-export { tasksData, authorsData, faqData, blogTopic, exercisesData };
+export { tasksData, authorsData };
 
 /* Task description example template:
 

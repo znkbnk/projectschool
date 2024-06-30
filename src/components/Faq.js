@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import FaqItem from "./FaqItem";
 import { gsap, Back } from "gsap";
 
-import { faqData } from "../data/tasksData";
+import { faqData } from "../data/faqData";
 import "../styles/faq.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";

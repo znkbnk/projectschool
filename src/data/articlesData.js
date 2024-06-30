@@ -11,6 +11,7 @@ const blogCards = [
   },
   {
     id: 2,
+    category: "Info",
     title: "InsightTrack: Empowering Your Digital Presence",
     extract:
       "Google Analytics is a powerful web analytics service offered by Google that helps website owners and marketers track and analyze their website traffic and user behavior. By providing detailed insights into visitor demographics, acquisition channels, user engagement, and conversion metrics, Google Analytics enables businesses to make data-driven decisions to improve their online presence, optimize marketing strategies, and enhance the overall user experience.",
@@ -21,15 +22,16 @@ const blogCards = [
   {
     id: 3,
     category: "JavaScript",
-
     title: "Mastering JavaScript Pagination",
     extract:
       "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
     date: "8 May 2024",
-    image: "https://previews.dropbox.com/p/thumb/ACVNZmwOdZgABQt74eB7VAb5zOhr1TkEa3SjZI4vFdEyr3P5AO8gggwquX36rHG5dKfmazOVaf4BmBS2M_s50CqLUdgTiksdcC-BZy4RN0pu19Z7rLE2EgH6y6RAA1JhmMDhDaCYfHEGpsxT2FLnWP5pKZWyfWIh6SqiWOaGiL69xKFCr6Spd4HmHa5zT4AMj48MoGeVkxJfAU6pF7wol76OI6A9ss1rVxvbjKjyPHICL9-S1yR6ZRg0hWFIhjHR7tFr7gO36LRLa7IMjl_pEUIbsbziZaR-JsSn9_6jQn-5tQfy1shda_12svviwtphhD_gABi5hPXHfaTHMPMYTaPh/p.png",
+    image:
+      "https://previews.dropbox.com/p/thumb/ACVNZmwOdZgABQt74eB7VAb5zOhr1TkEa3SjZI4vFdEyr3P5AO8gggwquX36rHG5dKfmazOVaf4BmBS2M_s50CqLUdgTiksdcC-BZy4RN0pu19Z7rLE2EgH6y6RAA1JhmMDhDaCYfHEGpsxT2FLnWP5pKZWyfWIh6SqiWOaGiL69xKFCr6Spd4HmHa5zT4AMj48MoGeVkxJfAU6pF7wol76OI6A9ss1rVxvbjKjyPHICL9-S1yR6ZRg0hWFIhjHR7tFr7gO36LRLa7IMjl_pEUIbsbziZaR-JsSn9_6jQn-5tQfy1shda_12svviwtphhD_gABi5hPXHfaTHMPMYTaPh/p.png",
   },
   {
     id: 4,
+    category: "Info",
     title: "Going Live with Stripe in Your React Project",
     extract:
       "Transitioning your React project from Stripe's test environment to the live environment is a crucial step to start processing real payments. This process ensures that your application is fully prepared to handle secure transactions in a production setting.",
@@ -99,7 +101,8 @@ const articles = [
   {
     id: 2,
     title: "InsightTrack: Empowering Your Digital Presence",
-    image: "https://www.themexpert.com/images/blog/how_add_google-analytics/image9.png",
+    image:
+      "https://www.themexpert.com/images/blog/how_add_google-analytics/image9.png",
     paragraphs: [
       {
         type: "text",
@@ -189,80 +192,78 @@ const articles = [
     ],
   },
   {
-        id: 4,
-        title: "Going Live with Stripe in Your React Project",
-        image: "https://previews.dropbox.com/p/thumb/ACWHrEEocOeW4a-se9v5ZB2A4IgtzDV-ffgPB3ZXgOY5nXqty900BOwFI2V1ROvpekL97p66MRr3LO11-RqlQdbzAbgV7j9BprfzL-MortkYmgk3MVCnH2psZUvRRD0GE82QSRxrClvqaF10_aeF7gKqw5h7i_POnz-oBIggdC3CYeYGTElGrLvjKsqND8WtVMEM8vXzTDtrYJfF8DbjEGNpqNKLNGhN00zOWr39-QcbpjVGsnJrw0EZkSaYCm0eYIKfu82tJrxpcrENz4PwvMLSq5pIZGCnLdCREE6WFpf_a9kiGuhSjG4yc1XH1u9vs4hOiTwopLhy_mgGkH3iG4cy_heT8isARGjN06KuREX_m-OEs3AHHYSaElsM-ToAOOE/p.png",
-        paragraphs: [
-          {
-            type: "text",
-            content: `To transition your React project from using the Stripe test environment to the live environment, you'll need to make a few changes and take some steps to ensure your application can handle real payments securely.`,
-          },
-          {
-            type: "text",
-            content: `Stripe provides separate API keys for test and live environments. You need to replace the test API keys in your React project with the live API keys.`,
-          },
-          {
-           type: "list",
-           items: [
-             "Log in to your Stripe account.",
-             "Go to the Dashboard.",
-             "Navigate to Developers > API keys.",
-             "Copy your live Publishable key and Secret key.",
-             "Replace the test keys with the live keys in your React project. Typically, this means updating your Stripe initialization code or configuration file where the API keys are set.",
-            
-           ],
-          },
-          {
-            type: "text",
-            content: `If your application uses Stripe webhooks for handling events like payment success or failure, you'll need to ensure that your live webhook endpoints are set up and can handle live events.`,
-          },
-          {
-            type: "list",
-            items: [
-              "In the Stripe Dashboard, under Developers > Webhooks, add and configure your live webhook endpoints (e.g., https://yourdomain.com/stripe-webhook). Make sure these endpoints point to your live server or API.",
-              "If your React project communicates with a backend (Node.js, Django, etc.) that handles Stripe webhooks, update the webhook handling logic to verify live events and update your application accordingly.",
-              
-            ],
-           },
-           {
-            type: "text",
-            content: `Before going fully live, thoroughly test your application in the live environment. You can do this with real transactions, but Stripe provides a way to test without actually charging a card.`,
-          },
-          {
-            type: "list",
-            items: [
-              "Use Stripe’s test card numbers for various scenarios (e.g., success, failure).",
-              "Set the amount to a low value (e.g., $0.50) to avoid significant charges during testing.",
-              "Ensure all parts of your checkout process (payment form, payment confirmation, error handling) work correctly with live API keys.",
-            ],
-           },
-           {
-            type: "text",
-            content: `During testing and after going live, monitor your application for any errors or edge cases.`,
-          },
-          {
-            type: "list",
-            items: [
-              "Handle API Errors: Stripe may return different error codes in live mode compared to test mode. Ensure your application can handle these gracefully.",
-              "Check for Edge Cases: Test scenarios such as declined cards, expired cards, insufficient funds, and other common issues that can occur during payments.",
-     
-            ],
-           },
-           {
-            type: "text",
-            content: `Ensure your application complies with PCI-DSS (Payment Card Industry Data Security Standard) requirements if you’re handling card information directly. Stripe handles much of the compliance burden through their payment forms, but you should still be aware of any relevant regulations.`,
-          },
-         
-          {
-            type: "text",
-            content: `Refer to Stripe's documentation for detailed guides and best practices for going live. If you encounter any issues or have questions, Stripe’s support team is also available to help.`,
-          },
-          {
-            type: "text",
-            content: `After completing these steps, your React project will be ready to securely process real payments with Stripe, ensuring a seamless and reliable experience for your users in a live production environment.`,
-          },
-        ]
+    id: 4,
+    title: "Going Live with Stripe in Your React Project",
+    image:
+      "https://previews.dropbox.com/p/thumb/ACWHrEEocOeW4a-se9v5ZB2A4IgtzDV-ffgPB3ZXgOY5nXqty900BOwFI2V1ROvpekL97p66MRr3LO11-RqlQdbzAbgV7j9BprfzL-MortkYmgk3MVCnH2psZUvRRD0GE82QSRxrClvqaF10_aeF7gKqw5h7i_POnz-oBIggdC3CYeYGTElGrLvjKsqND8WtVMEM8vXzTDtrYJfF8DbjEGNpqNKLNGhN00zOWr39-QcbpjVGsnJrw0EZkSaYCm0eYIKfu82tJrxpcrENz4PwvMLSq5pIZGCnLdCREE6WFpf_a9kiGuhSjG4yc1XH1u9vs4hOiTwopLhy_mgGkH3iG4cy_heT8isARGjN06KuREX_m-OEs3AHHYSaElsM-ToAOOE/p.png",
+    paragraphs: [
+      {
+        type: "text",
+        content: `To transition your React project from using the Stripe test environment to the live environment, you'll need to make a few changes and take some steps to ensure your application can handle real payments securely.`,
       },
+      {
+        type: "text",
+        content: `Stripe provides separate API keys for test and live environments. You need to replace the test API keys in your React project with the live API keys.`,
+      },
+      {
+        type: "list",
+        items: [
+          "Log in to your Stripe account.",
+          "Go to the Dashboard.",
+          "Navigate to Developers > API keys.",
+          "Copy your live Publishable key and Secret key.",
+          "Replace the test keys with the live keys in your React project. Typically, this means updating your Stripe initialization code or configuration file where the API keys are set.",
+        ],
+      },
+      {
+        type: "text",
+        content: `If your application uses Stripe webhooks for handling events like payment success or failure, you'll need to ensure that your live webhook endpoints are set up and can handle live events.`,
+      },
+      {
+        type: "list",
+        items: [
+          "In the Stripe Dashboard, under Developers > Webhooks, add and configure your live webhook endpoints (e.g., https://yourdomain.com/stripe-webhook). Make sure these endpoints point to your live server or API.",
+          "If your React project communicates with a backend (Node.js, Django, etc.) that handles Stripe webhooks, update the webhook handling logic to verify live events and update your application accordingly.",
+        ],
+      },
+      {
+        type: "text",
+        content: `Before going fully live, thoroughly test your application in the live environment. You can do this with real transactions, but Stripe provides a way to test without actually charging a card.`,
+      },
+      {
+        type: "list",
+        items: [
+          "Use Stripe's test card numbers for various scenarios (e.g., success, failure).",
+          "Set the amount to a low value (e.g., $0.50) to avoid significant charges during testing.",
+          "Ensure all parts of your checkout process (payment form, payment confirmation, error handling) work correctly with live API keys.",
+        ],
+      },
+      {
+        type: "text",
+        content: `During testing and after going live, monitor your application for any errors or edge cases.`,
+      },
+      {
+        type: "list",
+        items: [
+          "Handle API Errors: Stripe may return different error codes in live mode compared to test mode. Ensure your application can handle these gracefully.",
+          "Check for Edge Cases: Test scenarios such as declined cards, expired cards, insufficient funds, and other common issues that can occur during payments.",
+        ],
+      },
+      {
+        type: "text",
+        content: `Ensure your application complies with PCI-DSS (Payment Card Industry Data Security Standard) requirements if you’re handling card information directly. Stripe handles much of the compliance burden through their payment forms, but you should still be aware of any relevant regulations.`,
+      },
+
+      {
+        type: "text",
+        content: `Refer to Stripe's documentation for detailed guides and best practices for going live. If you encounter any issues or have questions, Stripe’s support team is also available to help.`,
+      },
+      {
+        type: "text",
+        content: `After completing these steps, your React project will be ready to securely process real payments with Stripe, ensuring a seamless and reliable experience for your users in a live production environment.`,
+      },
+    ],
+  },
 ];
 
 export { articles, blogCards };
