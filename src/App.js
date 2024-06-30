@@ -23,6 +23,7 @@ import Blog from "./Blog/Blog";
 import Success from "./Stripe/Success";
 import Cancel from "./Stripe/Cancel";
 import Articles from "./Blog/Articles";
+import LaravelLessons from "./Exercises/LaravelLessons";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -106,6 +107,10 @@ const App = () => {
         <Route
           path='/reactlessons'
           element={isLoggedIn ? <ReactLessons /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/laravellessons'
+          element={isLoggedIn ? <LaravelLessons /> : <Navigate to='/login' />}
         />
         <Route
           path='/livechat'
