@@ -7,8 +7,13 @@ import Footer from "../components/Footer";
 import "../styles/articles.css";
 
 const Articles = () => {
-  const { id } = useParams(); // Retrieve the id from the URL parameters
-  const article = articles.find((article) => article.id === parseInt(id)); // Find the article with the matching id
+  const { id } = useParams(); 
+  const article = articles.find((article) => article.id === parseInt(id)); 
+
+  function ScrollToTopOnNavigation() {
+    window.scrollTo(0, 0);
+    return null;
+  }
 
   if (!article) {
     return <div>Article not found</div>;
@@ -16,6 +21,8 @@ const Articles = () => {
 
   return (
     <div>
+      <ScrollToTopOnNavigation />
+
       <Navbar />
       <main>
         <div id='articles-main'>
