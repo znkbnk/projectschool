@@ -1,10 +1,10 @@
 const exercisesData = [
-    {
-        img: require("../images/laravel.webp"),
-        title: "Building Robust Web Applications",
-        desc: "Explore Laravel, the renowned PHP framework designed for developing robust and scalable web applications. Master key concepts like routing, Eloquent ORM, and middleware, while delving into the comprehensive Laravel ecosystem. Gain the skills to build modern, high-performance web applications with simplicity and efficiency.",
-        to: "/laravellessons",
-      },
+    // {
+    //     img: require("../images/laravel.webp"),
+    //     title: "Building Robust Web Applications",
+    //     desc: "Explore Laravel, the renowned PHP framework designed for developing robust and scalable web applications. Master key concepts like routing, Eloquent ORM, and middleware, while delving into the comprehensive Laravel ecosystem. Gain the skills to build modern, high-performance web applications with simplicity and efficiency.",
+    //     to: "/laravellessons",
+    //   },
     // {
     //   img: require("../images/js.webp"),
     //   title: "Mastering JavaScript",
