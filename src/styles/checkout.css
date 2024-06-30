@@ -119,14 +119,15 @@
 }
 
 .terms-links a {
-  text-decoration: underline;
-  
+  color: inherit;
+
+  text-decoration: underline;  
   font-size: large;
 }
 
 .terms-links a:visited {
   text-decoration: none;
-  color: inherit; /* Ensure the color remains unchanged for visited links */
+  color: inherit;
 }
 
 @media only screen and (max-device-width: 640px) {
