@@ -45,7 +45,7 @@ function Footer() {
           <div className='sociallogos'>
             <div className='logobox'>
               <a
-                href='https://instagram.com/znkbnk'
+                href='https://instagram.com/reactlessons'
                 target='_blank'
                 rel='noopener noreferrer'
               >

@@ -42,10 +42,10 @@ const AuthorProfile = ({ author }) => {
                   <div className='sociallogos'>
                     <div className='logobox'>
                       <a
-                        href='https://instagram.com/znkbnk'
+                        href='https://instagram.com/reactlessons'
                         target='_blank'
                         rel='noopener noreferrer'
-                        aria-label='Visit Instagram profile of ZNKBNK'
+                        aria-label='Visit Instagram profile of reactlessons'
                       >
                         <i className='fab fa-instagram'></i> 
                       </a>
