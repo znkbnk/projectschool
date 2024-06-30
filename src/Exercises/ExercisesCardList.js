@@ -1,6 +1,6 @@
 import React from "react";
 import ExercisesCard from "./ExercisesCard";
-import {exercisesData} from "../data/tasksData"; // Import data array
+import {exercisesData} from "../data/exercisesData"; 
 import "../styles/exercises.css";
 
 const ExercisesCardList = () => {
