@@ -109,12 +109,11 @@ h2.heading_large {
   transform: translate(-50%, -50%) rotate(10deg);
 }
 
-.content-section {
-  height: 100vh;
-}
+
 
 .header-section {
-  margin: 500px auto;
+ 
+  margin: 100px auto;
 }
 
 .gs_reveal {
@@ -309,7 +308,7 @@ h2.heading_large {
     margin: 25px;
   }
   .header-section {
-    padding: 7rem;
+    padding: 2rem;
   }
    .slide-container {
     height: 80vh;
