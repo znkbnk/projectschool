@@ -141,4 +141,14 @@
   .card-wrapper {
     margin: 25px 0;
   }
+
+  .terms-links {
+    padding: 50px;
+  }
 }
+
+@media only screen and (max-device-width: 768px) {
+  .terms-links {
+    padding: 50px;
+  }
+ }
