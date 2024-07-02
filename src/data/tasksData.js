@@ -3478,14 +3478,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/rprym4?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/rprym4?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson33.webp"),
       link: "https://www.dropbox.com/scl/fi/uzifjuktv19fa3k8v56s2/OrderTrackerMobileAppStyles.css?rlkey=gmlwxq43r0oyziy1vg3vgi0rq&st=lv7mwm5a&dl=0",
     },
     {
       taskId: "reacttask34",
       taskTitle: "React Timer App",
-      introduction: "React Timer App is a user-friendly React-based countdown timer, providing seamless start, pause, and reset functions to help you stay on track.",
+      introduction:
+        "React Timer App is a user-friendly React-based countdown timer, providing seamless start, pause, and reset functions to help you stay on track.",
 
       steps: [
         {
@@ -3495,16 +3497,14 @@ const tasksData = {
             "Ensure you have Node.js and npm installed on your machine.",
             "Create a new React application using create-react-app.",
             "Navigate to your project directory.",
-            
           ],
         },
         {
           stepTitle: "Step 2: Create a New Component",
           titleDescription: "",
           description: [
-             "Within your src directory, create a new file for your timer component.",
+            "Within your src directory, create a new file for your timer component.",
             "Define a functional component within this file.",
-          
           ],
         },
         {
@@ -3512,7 +3512,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Inside your component, set up two state variables: one for the timer value and another for the active state of the timer.",
-         
           ],
         },
         {
@@ -3533,35 +3532,59 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Create a function to handle starting the timer.",
-             "This function should set the timer's active state to true.",
+            "This function should set the timer's active state to true.",
             "Create a function to handle pausing the timer.",
             "This function should set the timer's active state to false.",
             "Create a function to handle resetting the timer.",
             "This function should set the timer value back to the initial state (e.g., 10 minutes).",
             "It should also set the timer's active state to false to ensure the timer stops.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Format the Time Display",
           titleDescription: "",
           description: [
             "Define a function to convert the timer value (in seconds) into a formatted string showing minutes and seconds.",
-             "Inside the utility function, calculate the number of minutes by dividing the total seconds by 60.",
+            "Inside the utility function, calculate the number of minutes by dividing the total seconds by 60.",
             "Calculate the remaining seconds using the modulus operator.",
             "Convert the minutes and seconds to strings and pad them with leading zeros if necessary.",
             "Concatenate the minutes and seconds into a single string in the format MM:SS.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Design the UI Layout",
           titleDescription: "",
           description: [
             "Define a main container element to hold the timer display and buttons. This will help in applying styles more easily.",
-             "Create a display area within the container to show the formatted timer value. This can be a div element where the formatted time string will be displayed.",
+            "Create a display area within the container to show the formatted timer value. This can be a div element where the formatted time string will be displayed.",
             "Add three buttons within the container: one for starting the timer, one for pausing it, and one for resetting it.",
             "Use conditional rendering to display the correct button for starting or pausing based on the timer’s active state.",
             "Apply classes to the elements to handle active and inactive states for styling purposes. This will help in visually differentiating between different states of the timer.",
             "Use a main wrapper div for the timer container to encapsulate the timer display and button controls.",
-           
+          ],
+        },
+        {
+          stepTitle: "Step 8: Apply CSS Styling",
+          titleDescription: "",
+          description: [
+            "Create a CSS file to style your timer component.",
+            "Add styles for the timer display, buttons, and active states.",
+          ],
+        },
+        {
+          stepTitle: "Step 9: Integrate the Component",
+          titleDescription: "",
+          description: [
+            "Import your timer component into your main application file.",
+            "Render the timer component within your application’s UI.",
+          ],
+        },
+        {
+          stepTitle: "Step 10: Test Your Component",
+          titleDescription: "",
+          description: [
+            "Run your React application.",
+            "Interact with the timer by starting, pausing, and resetting it to ensure all functionality works as expected.",
           ],
         },
       ],
@@ -3570,7 +3593,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/gdvhkz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/gdvhkz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson34.webp"),
       link: "https://www.dropbox.com/scl/fi/t2zue89djpsi26joppy1u/TimerAppStyles.css?rlkey=8gbliwc0a6rjmm0bshzynkqmx&st=0c8va7gv&dl=0",
     },
