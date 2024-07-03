@@ -3558,7 +3558,7 @@ const tasksData = {
             "Define a main container element to hold the timer display and buttons. This will help in applying styles more easily.",
             "Create a display area within the container to show the formatted timer value. This can be a div element where the formatted time string will be displayed.",
             "Add three buttons within the container: one for starting the timer, one for pausing it, and one for resetting it.",
-            "Use conditional rendering to display the correct button for starting or pausing based on the timer’s active state.",
+            "Use conditional rendering to display the correct button for starting or pausing based on the timer's active state.",
             "Apply classes to the elements to handle active and inactive states for styling purposes. This will help in visually differentiating between different states of the timer.",
             "Use a main wrapper div for the timer container to encapsulate the timer display and button controls.",
           ],
@@ -3576,7 +3576,7 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Import your timer component into your main application file.",
-            "Render the timer component within your application’s UI.",
+            "Render the timer component within your application's UI.",
           ],
         },
         {
@@ -3597,6 +3597,157 @@ const tasksData = {
         "https://codesandbox.io/embed/gdvhkz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson34.webp"),
       link: "https://www.dropbox.com/scl/fi/t2zue89djpsi26joppy1u/TimerAppStyles.css?rlkey=8gbliwc0a6rjmm0bshzynkqmx&st=0c8va7gv&dl=0",
+    },
+    {
+      taskId: "reacttask35",
+      taskTitle: "My Portfolio Website",
+      introduction: "This React project showcases a personal portfolio website featuring sections such as a Hero banner with a downloadable CV, an About Me section highlighting skills and personal interests, Services offered with detailed descriptions, a Portfolio section with filterable image galleries, a Clients section displaying client logos, a Contact form for user inquiries, and a Footer with social media links. The project integrates responsive design and uses React's component-based architecture to create a cohesive and interactive user experience.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Create a React App",
+          titleDescription: "",
+          description: [
+            "Download and install Node.js from nodejs.org.",
+            "Open your terminal.",
+            "Run npx create-react-app my-portfolio.",
+            "Navigate to the project directory using cd my-portfolio.",
+            "Inside the src folder, create a new folder named components.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 2: Implement Portfolio Component",
+          titleDescription: "Portfolio.js",
+          description: [
+            "Inside the components directory, create a file named Portfolio.js.",
+             "Open Portfolio.js and write the necessary imports, function, and export statements to define the Portfolio component.",
+            "Decide on the structure of your Portfolio component, which includes a title, filter buttons, and image grid.",
+            "Determine how to manage state for the current filter (currentFilter) using React's useState hook.",
+            "Use the useState hook to initialize the currentFilter state variable, starting with "*" to show all images initially.",
+            "Implement a function (handleFilterClick) that updates the currentFilter state based on the button clicked.",
+            "Define the JSX structure for the Portfolio component, starting with a <section> element with an id of 'portfolio'.",
+            "Inside the <section>, create a <div> with the class 'container' to hold all content.",
+            "Include a <div> for the section title (section-title) with an <h1> tag for 'My Portfolio'.",
+            "Create a <div> with the id 'filter-btn' and class 'button-group'.",
+            "Inside this <div>, use an <ul> with <li> elements containing buttons for different filters (All, One, Two, Three).",
+            "Each button should have an onClick handler that calls handleFilterClick with the appropriate filter value.",
+            "Add a <div> with the class 'img-grid' to display the images.",
+            "Inside the 'img-grid', include <div> elements (img-container) for each image.",
+            "Use conditional classes (hidden class) based on currentFilter state to display or hide images.",
+            "Open App.js.",
+            "Import the Services component.",
+            "Use the Services component inside the App function to render it.",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create Hero Component",
+          titleDescription: "Hero.js",
+          description: [
+            "Inside the components directory, create a file named Hero.js.",
+           "Open Hero.js and write the necessary imports, function, and export statements to define the Hero component.",
+            "Open App.js.",
+            "Import the Hero component.",
+            "Use the Hero component inside the App function to render it.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create About Component",
+          titleDescription: "About.js",
+          description: [
+            "Inside the components directory, create a file named About.js.",
+            "Open About.js and write the necessary imports, function, and export statements to define the About component.",
+            "Open App.js.",
+            "Import the About component.",
+            "Use the About component inside the App function to render it.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create Services Component",
+          titleDescription: "Services.js",
+          description: [
+            "Inside the components directory, create a file named Services.js.",
+             "Open Services.js and write the necessary imports, function, and export statements to define the Services component.",
+            "Open App.js.",
+            "Import the Services component.",
+            "Use the Services component inside the App function to render it.",
+           
+          ],
+        },{
+          stepTitle: "Step 6: Create Header Component",
+          titleDescription: "Header.js",
+          description: [
+            "Inside the components directory, create a file named Header.js.",
+             "Open Header.js and write the necessary imports, function, and export statements to define the Header component.",
+             "Use the useState hook to initialize the isNavOpen state variable, starting with false (indicating closed navigation).",
+             "Implement a function (toggleNav) that toggles the isNavOpen state between true and false when the mobile toggle button is clicked.",
+             "Define the JSX structure for the Header component, starting with a <header> element with an id of 'main-header'.",
+             "Inside the <header>, create a <div> with the class 'header-wrapper' to hold the header content.",
+             "Insert an <a> tag for the logo with a class of 'logo' and an href attribute pointing to the homepage (/).",
+             "Add a <div> with a class of 'mobile-toggle' for the mobile navigation toggle button, using an onClick handler to call the toggleNav function.",
+             "Include a <nav> element with an ul list containing navigation links (<li> with <a> tags) for each section of the website (Home, About, Services, Portfolio, Clients, Contact).",
+             "Apply conditional classes (open-nav and open) based on the isNavOpen state to control visibility and animation of the navigation menu.",
+             "Open App.js.",
+             "Import the Header component.",
+             "Use the Header component inside the App function to render it.",
+            
+          ],
+        },{
+          stepTitle: "Step 7: Create Clients Component",
+          titleDescription: "Clients.js",
+          description: [
+            "Inside the components directory, create a file named Clients.js.",
+             "Open Clients.js and write the necessary imports, function, and export statements to define the Clients component.",
+            "Open App.js.",
+            "Import the Clients component.",
+            "Use the Clients component inside the App function to render it.",
+            
+          ],
+        },{
+          stepTitle: "Step 8: Create Contact Component",
+          titleDescription: "Contact.js",
+          description: [
+            "Inside the components directory, create a file named Contact.js.",
+             "Open Contact.js and write the necessary imports, function, and export statements to define the Contact component.",
+            "Open App.js.",
+            "Import the Contact component.",
+            "Use the Contact component inside the App function to render it.",
+           
+          ],
+        },{
+          stepTitle: "Step 9: Create Footer Component",
+          titleDescription: "Footer.js",
+          description: [
+            "Inside the components directory, create a file named Footer.js.",
+             "Open Footer.js and write the necessary imports, function, and export statements to define the Footer component.",
+            "Open App.js.",
+            "Import the Footer component.",
+            "Use the Footer component inside the App function to render it.",
+            
+          ],
+        },{
+          stepTitle: "Step 10: Create Skills Component",
+          titleDescription: "Skills.js",
+          description: [
+            "Inside the components directory, create a file named Skills.js.",
+             "Open Skills.js and write the necessary imports, function, and export statements to define the Skills component.",
+            "Open App.js.",
+            "Import the Skills component.",
+            "Use the Skills component inside the App function to render it.",
+          
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/4p4fts?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson35.webp"),
+      link: "https://www.dropbox.com/scl/fi/41ar1xizn0bhnfhaajxqb/PorfolioStyles.css?rlkey=7fklfm02vvgvmqitd0z9cec15&st=ug62zdl7&dl=0",
     },
   ],
 };
