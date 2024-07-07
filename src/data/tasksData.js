@@ -3978,7 +3978,7 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Use npm or yarn to install Materialize CSS and JavaScript libraries. Import these into your App.js file to style and initialize Materialize components.",
-            "Inside the <head> section of your HTML file, add the <link> tag links to Google's Material Icons stylesheet hosted on Google Fonts",
+            "Inside the <head> section of your HTML file, add the <link> tag links to Google's Material Icons stylesheet hosted on Google Fonts.",
           ],
         },
         {
@@ -4001,11 +4001,9 @@ const tasksData = {
             "Add another <a> element with href='/', data-target='mobile-demo', and class sidenav-trigger button-collapse. Inside this <a>, use an <i> element with class material-icons and text 'menu' for the mobile menu toggle icon.",
             "Create two <ul> elements.",
             "The first <ul> with class right hide-on-med-and-down for desktop navigation.",
-            "Inside, include <li> elements with <a> tags and href=" /
-              ". Each <a> represents a navigation link (Intro, Header, Footer).",
+            "Inside, include <li> elements with <a> tags and href="/". Each <a> represents a navigation link (Intro, Header, Footer).",
             "The second <ul> with class sidenav and id='mobile-demo' for mobile navigation.",
-            "Inside, include <li> elements with <a> tags and href=" /
-              ", similar to the desktop navigation.",
+            "Inside, include <li> elements with <a> tags and href="/", similar to the desktop navigation.",
           ],
         },
         {
@@ -4040,8 +4038,7 @@ const tasksData = {
             "Use <div className='col s12'> to create columns that span the entire width on small screens and adjust based on screen size (s12 for small screens, m6 for medium screens, etc.).",
             "Inside each column (<div className='col s12'>): Include <h2> elements for headings (Intro, header, Add more stuff here, Directions).",
             "Use <p> elements for paragraphs (Lorem ipsum... text).",
-            "Use <span> elements with nested <a> tags for clickable links (Clickable Link: <a href=" /
-              ">link text</a>).",
+            "Use <span> elements with nested <a> tags for clickable links (Clickable Link: <a href="/">link text</a>).",
             "Include <div> elements with class divider to create visual dividers.",
             "Use <div> elements with class img-box for image boxes (<div className='img-box'><img ... /><div className='text'>...</div></div>).",
             "Use <img> elements with class responsive-img materialboxed for responsive images with MaterializeCSS styles.",
