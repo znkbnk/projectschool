@@ -3601,7 +3601,8 @@ const tasksData = {
     {
       taskId: "reacttask35",
       taskTitle: "My Portfolio Website",
-      introduction: "This React project showcases a personal portfolio website featuring sections such as a Hero banner with a downloadable CV, an About Me section highlighting skills and personal interests, Services offered with detailed descriptions, a Portfolio section with filterable image galleries, a Clients section displaying client logos, a Contact form for user inquiries, and a Footer with social media links. The project integrates responsive design and uses React's component-based architecture to create a cohesive and interactive user experience.",
+      introduction:
+        "This React project showcases a personal portfolio website featuring sections such as a Hero banner with a downloadable CV, an About Me section highlighting skills and personal interests, Services offered with detailed descriptions, a Portfolio section with filterable image galleries, a Clients section displaying client logos, a Contact form for user inquiries, and a Footer with social media links. The project integrates responsive design and uses React's component-based architecture to create a cohesive and interactive user experience.",
 
       steps: [
         {
@@ -3613,7 +3614,6 @@ const tasksData = {
             "Run npx create-react-app my-portfolio.",
             "Navigate to the project directory using cd my-portfolio.",
             "Inside the src folder, create a new folder named components.",
-         
           ],
         },
         {
@@ -3621,10 +3621,11 @@ const tasksData = {
           titleDescription: "Portfolio.js",
           description: [
             "Inside the components directory, create a file named Portfolio.js.",
-             "Open Portfolio.js and write the necessary imports, function, and export statements to define the Portfolio component.",
+            "Open Portfolio.js and write the necessary imports, function, and export statements to define the Portfolio component.",
             "Decide on the structure of your Portfolio component, which includes a title, filter buttons, and image grid.",
             "Determine how to manage state for the current filter (currentFilter) using React's useState hook.",
-            "Use the useState hook to initialize the currentFilter state variable, starting with "*" to show all images initially.",
+            "Use the useState hook to initialize the currentFilter state variable, starting with " *
+              " to show all images initially.",
             "Implement a function (handleFilterClick) that updates the currentFilter state based on the button clicked.",
             "Define the JSX structure for the Portfolio component, starting with a <section> element with an id of 'portfolio'.",
             "Inside the <section>, create a <div> with the class 'container' to hold all content.",
@@ -3645,11 +3646,10 @@ const tasksData = {
           titleDescription: "Hero.js",
           description: [
             "Inside the components directory, create a file named Hero.js.",
-           "Open Hero.js and write the necessary imports, function, and export statements to define the Hero component.",
+            "Open Hero.js and write the necessary imports, function, and export statements to define the Hero component.",
             "Open App.js.",
             "Import the Hero component.",
             "Use the Hero component inside the App function to render it.",
-            
           ],
         },
         {
@@ -3661,7 +3661,6 @@ const tasksData = {
             "Open App.js.",
             "Import the About component.",
             "Use the About component inside the App function to render it.",
-           
           ],
         },
         {
@@ -3669,74 +3668,73 @@ const tasksData = {
           titleDescription: "Services.js",
           description: [
             "Inside the components directory, create a file named Services.js.",
-             "Open Services.js and write the necessary imports, function, and export statements to define the Services component.",
+            "Open Services.js and write the necessary imports, function, and export statements to define the Services component.",
             "Open App.js.",
             "Import the Services component.",
             "Use the Services component inside the App function to render it.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Create Header Component",
           titleDescription: "Header.js",
           description: [
             "Inside the components directory, create a file named Header.js.",
-             "Open Header.js and write the necessary imports, function, and export statements to define the Header component.",
-             "Use the useState hook to initialize the isNavOpen state variable, starting with false (indicating closed navigation).",
-             "Implement a function (toggleNav) that toggles the isNavOpen state between true and false when the mobile toggle button is clicked.",
-             "Define the JSX structure for the Header component, starting with a <header> element with an id of 'main-header'.",
-             "Inside the <header>, create a <div> with the class 'header-wrapper' to hold the header content.",
-             "Insert an <a> tag for the logo with a class of 'logo' and an href attribute pointing to the homepage (/).",
-             "Add a <div> with a class of 'mobile-toggle' for the mobile navigation toggle button, using an onClick handler to call the toggleNav function.",
-             "Include a <nav> element with an ul list containing navigation links (<li> with <a> tags) for each section of the website (Home, About, Services, Portfolio, Clients, Contact).",
-             "Apply conditional classes (open-nav and open) based on the isNavOpen state to control visibility and animation of the navigation menu.",
-             "Open App.js.",
-             "Import the Header component.",
-             "Use the Header component inside the App function to render it.",
-            
+            "Open Header.js and write the necessary imports, function, and export statements to define the Header component.",
+            "Use the useState hook to initialize the isNavOpen state variable, starting with false (indicating closed navigation).",
+            "Implement a function (toggleNav) that toggles the isNavOpen state between true and false when the mobile toggle button is clicked.",
+            "Define the JSX structure for the Header component, starting with a <header> element with an id of 'main-header'.",
+            "Inside the <header>, create a <div> with the class 'header-wrapper' to hold the header content.",
+            "Insert an <a> tag for the logo with a class of 'logo' and an href attribute pointing to the homepage (/).",
+            "Add a <div> with a class of 'mobile-toggle' for the mobile navigation toggle button, using an onClick handler to call the toggleNav function.",
+            "Include a <nav> element with an ul list containing navigation links (<li> with <a> tags) for each section of the website (Home, About, Services, Portfolio, Clients, Contact).",
+            "Apply conditional classes (open-nav and open) based on the isNavOpen state to control visibility and animation of the navigation menu.",
+            "Open App.js.",
+            "Import the Header component.",
+            "Use the Header component inside the App function to render it.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Create Clients Component",
           titleDescription: "Clients.js",
           description: [
             "Inside the components directory, create a file named Clients.js.",
-             "Open Clients.js and write the necessary imports, function, and export statements to define the Clients component.",
+            "Open Clients.js and write the necessary imports, function, and export statements to define the Clients component.",
             "Open App.js.",
             "Import the Clients component.",
             "Use the Clients component inside the App function to render it.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Create Contact Component",
           titleDescription: "Contact.js",
           description: [
             "Inside the components directory, create a file named Contact.js.",
-             "Open Contact.js and write the necessary imports, function, and export statements to define the Contact component.",
+            "Open Contact.js and write the necessary imports, function, and export statements to define the Contact component.",
             "Open App.js.",
             "Import the Contact component.",
             "Use the Contact component inside the App function to render it.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Create Footer Component",
           titleDescription: "Footer.js",
           description: [
             "Inside the components directory, create a file named Footer.js.",
-             "Open Footer.js and write the necessary imports, function, and export statements to define the Footer component.",
+            "Open Footer.js and write the necessary imports, function, and export statements to define the Footer component.",
             "Open App.js.",
             "Import the Footer component.",
             "Use the Footer component inside the App function to render it.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Create Skills Component",
           titleDescription: "Skills.js",
           description: [
             "Inside the components directory, create a file named Skills.js.",
-             "Open Skills.js and write the necessary imports, function, and export statements to define the Skills component.",
+            "Open Skills.js and write the necessary imports, function, and export statements to define the Skills component.",
             "Open App.js.",
             "Import the Skills component.",
             "Use the Skills component inside the App function to render it.",
-          
           ],
         },
       ],
@@ -3745,14 +3743,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/4p4fts?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/4p4fts?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson35.webp"),
       link: "https://www.dropbox.com/scl/fi/41ar1xizn0bhnfhaajxqb/PorfolioStyles.css?rlkey=7fklfm02vvgvmqitd0z9cec15&st=ug62zdl7&dl=0",
     },
     {
       taskId: "reacttask36",
       taskTitle: "Celestial Canvas",
-      introduction: "Celestial Canvas is a dynamic visual simulation that brings the night sky to life on a web canvas, featuring twinkling stars, drifting nebulae, and occasional comets. This interactive and animated experience allows users to toggle the starry display on and off, creating an immersive celestial atmosphere.",
+      introduction:
+        "Celestial Canvas is a dynamic visual simulation that brings the night sky to life on a web canvas, featuring twinkling stars, drifting nebulae, and occasional comets. This interactive and animated experience allows users to toggle the starry display on and off, creating an immersive celestial atmosphere.",
 
       steps: [
         {
@@ -3763,14 +3763,14 @@ const tasksData = {
             "Open a terminal.",
             "Run the 'npx create-react-app star-animation' command to create a new React app",
             "Navigate into the newly created app directory",
-            
           ],
         },
         {
-          stepTitle: "Step 2: Define a Function to Create a Star with Random Properties",
+          stepTitle:
+            "Step 2: Define a Function to Create a Star with Random Properties",
           titleDescription: "createStar",
           description: [
-             "Create a function named createStar using the useCallback hook. The function should take a single argument, 'canvas', which is expected to be a reference to an HTML canvas element.",
+            "Create a function named createStar using the useCallback hook. The function should take a single argument, 'canvas', which is expected to be a reference to an HTML canvas element.",
             "In return statement: Set a random x position for the star within the canvas width.",
             "Set a random y position for the star within the canvas height.",
             "Set a random size for the star.",
@@ -3784,11 +3784,12 @@ const tasksData = {
           ],
         },
         {
-          stepTitle: "Step 3: Define a Function to Update a Star's Position and Flashing State",
+          stepTitle:
+            "Step 3: Define a Function to Update a Star's Position and Flashing State",
           titleDescription: "updateStar",
           description: [
             "Create a function named updateStar using the useCallback hook. The function should take two arguments: 'star': An object representing a single star with properties like x position, y position, size, etc. 'canvas': A reference to the HTML canvas element where the stars are drawn.",
-           "Inside this function: Update the star’s horizontal position based on its speed.",
+            "Inside this function: Update the star’s horizontal position based on its speed.",
             "Wrap the star around the canvas if it goes off-screen.",
             "Decrease the flash timer.",
             "Check if it's time for the star to flash.",
@@ -3796,7 +3797,7 @@ const tasksData = {
             "Reset the flash timer.",
             "If the star is flashing, decrease the flash duration.",
             "Reset the flashing state to false if the flash duration is over.",
-            "Return updated star",           
+            "Return updated star",
           ],
         },
         {
@@ -3818,22 +3819,24 @@ const tasksData = {
           ],
         },
         {
-          stepTitle: "Step 5: Define a Function to Create a Nebula with Random Properties",
+          stepTitle:
+            "Step 5: Define a Function to Create a Nebula with Random Properties",
           titleDescription: "createNebula",
           description: [
             "Create a function named createNebula using the useCallback hook. The function should take a single argument, 'canvas', which is expected to be a reference to an HTML canvas element.",
-             "In return statement: Set a random x position for the nebula within the canvas width.",
+            "In return statement: Set a random x position for the nebula within the canvas width.",
             "Set a random y position for the nebula within the canvas height.",
             "Set a random size for the nebula.",
             "Set a random color for the nebula within the blue spectrum.",
             "Set a random transparency for the nebula.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Define a Function to Draw a Nebula on the Canvas",
           titleDescription: "drawNebula ",
           description: [
             "Create a function named drawNebula using the useCallback hook. The function should take two arguments: 'ctx': A 2D rendering context object (`CanvasRenderingContext2D`) used for drawing on the canvas. 'nebula': An object likely representing the nebula's properties used for drawing it.",
-             "Inside this function: Begin a new drawing path.",
+            "Inside this function: Begin a new drawing path.",
             "Create a radial gradient for the nebula.",
             "Define inner and outer color stops for the gradient.",
             "Set the gradient as the fill style.",
@@ -3841,38 +3844,41 @@ const tasksData = {
             "Draw and fill the nebula.",
             "Reset global transparency.",
             "Close the drawing path.",
-           
           ],
-        },{
-          stepTitle: "Step 7: Define a Function to Create a Comet with Random Properties",
+        },
+        {
+          stepTitle:
+            "Step 7: Define a Function to Create a Comet with Random Properties",
           titleDescription: "createComet",
           description: [
             "Create a function named createComet using the useCallback hook. The function should take a single argument, 'canvas', which is expected to be a reference to an HTML canvas element.",
-             "In return statement: Set the initial x position off the right edge of the canvas.",
+            "In return statement: Set the initial x position off the right edge of the canvas.",
             "Set a random y position for the comet within the canvas height.",
             "Set the size of the comet.",
             "Set a random horizontal speed for the comet.",
             "Set a random vertical speed for the comet.",
             "Set the length of the comet's tail.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Define a Function to Update a Comet's Position",
           titleDescription: "updateComet",
           description: [
             "Create a function named updateComet using the useCallback hook. The function should take a single argument: 'comet': An object likely representing a comet with properties used for updating its state.",
-             "Inside this function: ",
+            "Inside this function: ",
             "Update the comet's horizontal position based on its speed.",
             "Update the comet's vertical position based on its speed.",
             "Return updated comet",
             "",
             "",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Define a Function to Draw a Comet on the Canvas",
           titleDescription: "drawComet",
           description: [
             "Create a function named drawComet using the useCallback hook. The function should take two arguments: 'ctx': A 2D rendering context object (`CanvasRenderingContext2D`) used for drawing on the canvas. 'comet': An object likely representing a comet with properties used for drawing it.",
-             "Inside this function: Begin a new drawing path.",
+            "Inside this function: Begin a new drawing path.",
             "Move to the comet's current position.",
             "Create a linear gradient for the comet's tail.",
             "Define start and end color stops for the gradient.",
@@ -3885,14 +3891,15 @@ const tasksData = {
             "Set the fill color to white.",
             "Fill the comet head with color.",
             "Close the drawing path.",
-           
           ],
-        },{
-          stepTitle: "Step 10: Handle Canvas Drawing and Animation Using useEffect",
+        },
+        {
+          stepTitle:
+            "Step 10: Handle Canvas Drawing and Animation Using useEffect",
           titleDescription: "",
           description: [
             "Use the useEffect hook to handle the drawing and animation of stars, nebulae, and comets.",
-             "Inside the useEffect hook: ",
+            "Inside the useEffect hook: ",
             "Check if stars are toggled on, and exit if they are not.",
             "Get the canvas element reference and its 2D drawing context.",
             "Set the canvas width and height to match the window size.",
@@ -3923,8 +3930,6 @@ const tasksData = {
             "Add a resize event listener to handle canvas resizing and recreate stars and nebulae on resize.",
             "Set an interval to create a comet periodically.",
             "Return a cleanup function to remove the resize event listener and clear the comet creation interval.",
-           
-
           ],
         },
         {
@@ -3934,7 +3939,6 @@ const tasksData = {
             "Create a function named toggleStars to handle toggling the stars animation. This function should take 'e' as an argument",
             "Inside this function: Prevent the default link behavior.",
             "Toggle the starsOn state.",
-            
           ],
         },
         {
@@ -3943,19 +3947,148 @@ const tasksData = {
           description: [
             "Render a canvas element with a reference to canvasRef if starsOn state is true.",
             "Render a link to toggle the stars animation with text based on the starsOn state.",
-           
           ],
         },
-      
       ],
       taskType: "React",
       difficulty: "Hard",
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/6gwq9m?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/6gwq9m?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson36.webp"),
-      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+    },
+    {
+      taskId: "reacttask37",
+      taskTitle: "React Materialize Portfolio",
+      introduction:
+        "A dynamic portfolio website built using React and styled with Materialize CSS, showcasing responsive design, interactive elements, and seamless navigation.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up React Project",
+          titleDescription: "",
+          description: [
+            "Ensure you have a React development environment set up with Node.js and npm or yarn installed.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Install Materialize CSS and JavaScript",
+          titleDescription: "",
+          description: [
+            "Use npm or yarn to install Materialize CSS and JavaScript libraries. Import these into your App.js file to style and initialize Materialize components.",
+            "Inside the <head> section of your HTML file, add the <link> tag links to Google's Material Icons stylesheet hosted on Google Fonts",
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create Components",
+          titleDescription: "",
+          description: [
+            "Create separate functional components for Navbar, Header, Content, and Footer. These components will encapsulate different parts of your webpage.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Navbar Component",
+          titleDescription: "Navbar.js",
+          description: [
+            "Import React at the top of your file since you're creating a React component.",
+            "Define a functional component named Navbar using arrow function.",
+            "Since this component is a simple stateless component, it can directly return JSX without needing a separate return statement.",
+            "Use a <nav> element with classes white z-depth-0 for styling with MaterializeCSS.",
+            "Inside the <nav>, use a <div> with class nav-wrapper to contain the main navigation elements.",
+            "Include an <a> element with class brand-logo and an href='/'. Inside this <a>, place an <img> element with src set to './logo.jpg' and alt attribute set to 'Logo'. Adjust the src path based on your project structure'.",
+            "Add another <a> element with href='/', data-target='mobile-demo', and class sidenav-trigger button-collapse. Inside this <a>, use an <i> element with class material-icons and text 'menu' for the mobile menu toggle icon.",
+            "Create two <ul> elements.",
+            "The first <ul> with class right hide-on-med-and-down for desktop navigation.",
+            "Inside, include <li> elements with <a> tags and href=" /
+              ". Each <a> represents a navigation link (Intro, Header, Footer).",
+            "The second <ul> with class sidenav and id='mobile-demo' for mobile navigation.",
+            "Inside, include <li> elements with <a> tags and href=" /
+              ", similar to the desktop navigation.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Header Component",
+          titleDescription: "Header.js",
+          description: [
+            "Start by importing React at the top of your Header.js file since you're building a React component.",
+            "Define a functional component named Header using arrow function syntax.",
+            "Define a function handleDirectionsClick inside your component.",
+            "Retrieves the iframe element using document.getElementById('googleMapIframe').",
+            "Checks if the element exists (if (iframeElement)).",
+            "If the element exists, it scrolls smoothly to the iframe using iframeElement.scrollIntoView({ behavior: 'smooth' }).",
+            "In your return statement: Use a <div> with class header valign-wrapper as the outer container.",
+            "Inside this div, nest another <div> with class wrapper valign for layout purposes.",
+            "Include an <h1> element containing a nested <div> with classes light hide-on-small-only and the text 'Hello World'.",
+            "Center-align content using the <center> tag (note: in React, typically you'd use CSS for alignment, but for MaterializeCSS, this is acceptable for certain scenarios).",
+            "Within <center>, include: A <button> element with an onClick handler set to handleDirectionsClick. This button should have classes btn-large blue waves-effect waves-light, the text 'To GoogleMaps', and an <i> tag with classes material-icons right and the text 'map'.",
+            "An <a> element with classes btn-large blue-text white waves-effect, serving as a secondary button with the text 'white button'.",
+            "A <div> with class scroll-down light, including the text 'scroll down ok?' and an <i> tag with class material-icons and the text 'arrow_downward'.",
+          ],
+        },
+        {
+          stepTitle: "Step 6: Content Component",
+          titleDescription: "Content.js",
+          description: [
+            " Import React at the top of your file since you're creating a React component.",
+            "Define a functional component named Content using arrow function syntax.",
+            "Since this component is a simple stateless component, it can directly return JSX without needing a separate return statement.",
+            "Use a <div> element with class content to serve as the main container for your content.",
+            "Inside <div className='content'>, nest a <div> with class container to limit the content width.",
+            "Inside <div className='container'>, use a <div> with class row to create a row for your columns.",
+            "Use <div className='col s12'> to create columns that span the entire width on small screens and adjust based on screen size (s12 for small screens, m6 for medium screens, etc.).",
+            "Inside each column (<div className='col s12'>): Include <h2> elements for headings (Intro, header, Add more stuff here, Directions).",
+            "Use <p> elements for paragraphs (Lorem ipsum... text).",
+            "Use <span> elements with nested <a> tags for clickable links (Clickable Link: <a href=" /
+              ">link text</a>).",
+            "Include <div> elements with class divider to create visual dividers.",
+            "Use <div> elements with class img-box for image boxes (<div className='img-box'><img ... /><div className='text'>...</div></div>).",
+            "Use <img> elements with class responsive-img materialboxed for responsive images with MaterializeCSS styles.",
+            "Include <iframe> elements for embedding Google Maps (<iframe title='Google Maps' ...></iframe>).",
+          ],
+        },
+        {
+          stepTitle: "Step 7: Footer Component",
+          titleDescription: "Footer.js",
+          description: [
+            " Import React at the top of your file since you're creating a React component.",
+            "Define a functional component named Content using arrow function syntax.",
+            "Since this component is a simple stateless component, it can directly return JSX without needing a separate return statement.",
+            "Use a <footer> element with class page-footer transparent to style the footer with MaterializeCSS classes.",
+            "Inside <footer className='page-footer transparent'>, nest a <div> with class container to limit the content width.",
+            "Inside <div className='container'>, use a <div> with class row to create a row for your footer content.",
+            "Use <div className='col s6'> to create columns that span half the width (s6 for small screens, adjusts based on screen size).",
+            "Inside each column (<div className='col s6'>): Include text or links (© 2015 Copyright by YOU, <a href=/'legal'>Footer</a>).",
+            "Use right-align class on the second column (<div className='col s6 right-align'>) to align content to the right within the column.",
+          ],
+        },
+        {
+          stepTitle: "Step 8: Component Interaction and Styling",
+          titleDescription: "App.js",
+          description: [
+            " Import React and useEffect from 'react' at the top of your file since you're creating a React component that uses hooks.",
+            " Import MaterializeCSS styles and JavaScript at the beginning to ensure they are applied throughout your application.",
+            " Import the components (Navbar, Header, Content, Footer) that you have created.",
+            "Define a functional component named App using arrow function syntax.",
+            "Since this component is a simple stateless component, it can directly return JSX without needing a separate return statement.",
+            "Use the useEffect hook to perform side effects in function components. In this case, you are using it to initialize MaterializeCSS components when the component mounts (M.AutoInit();).",
+            "Return a <div> element as the root element (<div> wraps all the content).",
+            "Inside the <div>, include the imported components: <Navbar />, <Header />, <Content />, <Footer />.",
+            "Feel free to use any other elements from MaterializeCSS.",
+          
+          ],
+        },
+       
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/ttfk2x?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson37.webp"),
+      link: "https://www.dropbox.com/scl/fi/7mx73bv5jmwrwm2o1dc3u/MaterializePorfolioStyles.css?rlkey=rw3ql2v2oweo4blr5jw0tozwx&st=03lht5j2&dl=0",
     },
   ],
 };
@@ -4103,7 +4236,7 @@ React: [
       completed: false,
       codesandboxUrl: "",
       img: require("../images/ReactLesson1.webp"),
-      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+      link: "pathStyles",
     },
    
   ],  

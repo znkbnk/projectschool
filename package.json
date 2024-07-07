@@ -24,6 +24,7 @@
     "gsap": "^3.12.5",
     "mongodb": "^6.7.0",
     "mongoose": "^8.4.1",
+    "node-cron": "^3.0.3",
     "path": "^0.12.7",
     "raw-body": "^2.5.2",
     "react": "^18.3.1",
@@ -46,9 +47,11 @@
     "client": "react-scripts start",
     "build": "react-scripts build && npm run build:functions",
     "build:functions": "esbuild netlify/functions/create-user.js --bundle --outdir=build/functions",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
+  
+  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -73,6 +76,8 @@
     "concurrently": "^8.2.2",
     "esbuild": "^0.21.5",
     "gh-pages": "^6.1.1",
+    "jest": "^29.7.0",
     "nodemon": "^3.1.3"
   }
+  
 }
