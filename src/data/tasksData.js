@@ -4029,7 +4029,7 @@ const tasksData = {
           stepTitle: "Step 6: Content Component",
           titleDescription: "Content.js",
           description: [
-            " Import React at the top of your file since you're creating a React component.",
+            "Import React at the top of your file since you're creating a React component.",
             "Define a functional component named Content using arrow function syntax.",
             "Since this component is a simple stateless component, it can directly return JSX without needing a separate return statement.",
             "Use a <div> element with class content to serve as the main container for your content.",
@@ -4049,7 +4049,7 @@ const tasksData = {
           stepTitle: "Step 7: Footer Component",
           titleDescription: "Footer.js",
           description: [
-            " Import React at the top of your file since you're creating a React component.",
+            "Import React at the top of your file since you're creating a React component.",
             "Define a functional component named Content using arrow function syntax.",
             "Since this component is a simple stateless component, it can directly return JSX without needing a separate return statement.",
             "Use a <footer> element with class page-footer transparent to style the footer with MaterializeCSS classes.",
@@ -4064,9 +4064,9 @@ const tasksData = {
           stepTitle: "Step 8: Component Interaction and Styling",
           titleDescription: "App.js",
           description: [
-            " Import React and useEffect from 'react' at the top of your file since you're creating a React component that uses hooks.",
-            " Import MaterializeCSS styles and JavaScript at the beginning to ensure they are applied throughout your application.",
-            " Import the components (Navbar, Header, Content, Footer) that you have created.",
+            "Import React and useEffect from 'react' at the top of your file since you're creating a React component that uses hooks.",
+            "Import MaterializeCSS styles and JavaScript at the beginning to ensure they are applied throughout your application.",
+            "Import the components (Navbar, Header, Content, Footer) that you have created.",
             "Define a functional component named App using arrow function syntax.",
             "Since this component is a simple stateless component, it can directly return JSX without needing a separate return statement.",
             "Use the useEffect hook to perform side effects in function components. In this case, you are using it to initialize MaterializeCSS components when the component mounts (M.AutoInit();).",
@@ -4087,6 +4087,124 @@ const tasksData = {
       img: require("../images/ReactLesson37.webp"),
       link: "https://www.dropbox.com/scl/fi/7mx73bv5jmwrwm2o1dc3u/MaterializePorfolioStyles.css?rlkey=rw3ql2v2oweo4blr5jw0tozwx&st=03lht5j2&dl=0",
     },
+    {
+      taskId: "reacttask38",
+      taskTitle: "React File Uploader",
+      introduction: "React File Uploader is a user-friendly component designed for easy file selection, display, download, and deletion. It leverages React's hooks for state management and provides a seamless interface for managing files within a web application. In real-world applications, files are usually saved in the backend, but for learning purposes, this project does not include backend integration and temporarily stores files in the browser's memory.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Create the Project",
+          titleDescription: "",
+          description: [
+            "If you don't have 'create-react-app' installed, install it using 'npm install -g create-react-app'.",
+            "Create a new project using 'create-react-app file-upload-app'.",
+            "Navigate into your project directory using 'cd file-upload-app'.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Set Up Component Structure",
+          titleDescription: "",
+          description: [
+             "Inside the 'src' directory, create a new file named FileUploadComponent.js.",
+            "At the top of your file, import 'useRef' and 'useState' from React.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 3: Define the Component",
+          titleDescription: "",
+          description: [
+            "Create a functional component named 'FileUploadComponent'.",
+           "Use the 'useRef' hook to create a reference for the file input element.",
+            "Use the 'useState' hook to create a state variable to hold an array of file data.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 4: Handle Button Click",
+          titleDescription: "",
+          description: [
+            "Inside your 'FileUploadComponent' function, define a function named 'handleButtonClick'.",
+            "Access the file input element using 'fileInputRef.current'.",
+            "Call the 'click' method on this element.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 5: Handle File Selection",
+          titleDescription: "",
+          description: [
+            "Inside your 'FileUploadComponent' function, define a function named 'handleFileChange'.",
+             "Access the selected files using 'fileInputRef.current.files'.",
+            "Convert the 'FileList' to an array using 'Array.from'.",
+            "Map over the array to create a new array of objects containing 'name' and 'url' properties for each file.",
+            "Use 'URL.createObjectURL' to create a URL for each file.",
+            "Update the state with the new array of file data objects.",
+          ],
+        },{
+          stepTitle: "Step 6: Handle File Deletion",
+          titleDescription: "",
+          description: [
+            "Inside your 'FileUploadComponent' function, define a function named 'handleFileDelete'.",
+             "Accept the index of the file to be deleted as a parameter.",
+            "Use the 'filter' method to create a new array excluding the file at the specified index.",
+            "Update the state with the new array.",
+            
+          ],
+        },{
+          stepTitle: "Step 7: Display Selected Files",
+          titleDescription: "",
+          description: [
+            "In your JSX, conditionally render the file names if there are any files selected.",
+             "Check if 'filesData' array has any elements.",
+            "If yes, map over the 'filesData' array to render a list of file names.",
+            "If no, display a message indicating that no files are selected.",
+          
+          ],
+        },{
+          stepTitle: "Step 8: Enable File Download",
+          titleDescription: "",
+          description: [
+            "In your JSX, 'map' over the 'filesData' array to create download links for each file.",
+             "Use the map method on the 'filesData' array to create download links.",
+            "For each file, use an anchor (<a>) tag with 'href' set to the file's URL and 'download' attribute set to the file's name.",
+            "Next to each download link, include a button to delete the file, wired to the 'handleFileDelete' function.",
+          
+          ],
+        },{
+          stepTitle: "Step 9: Style the Component",
+          titleDescription: "",
+          description: [
+            "Create a CSS file, e.g., FileUploadComponent.css, to style the component.",
+             "Import this CSS file into your FileUploadComponent.js.",
+            "Or simply download the styles from the link provided below.",
+        
+          ],
+        },{
+          stepTitle: "Step 10: Export, Use and test the Component",
+          titleDescription: "",
+          description: [
+            "Export the 'FileUploadComponent' at the end of your file.",
+             "Open 'App.js' and import the FileUploadComponent.",
+            "Use the component inside the 'App' component's JSX.",
+            "Start your React development server with 'npm start'.",
+            "Open your browser and navigate to 'http://localhost:3000' to test the file upload functionality.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/ympqz7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson38.webp"),
+      link: "https://www.dropbox.com/scl/fi/ev1q8sptptruyjujramev/FileUploadStyles.css?rlkey=a9ry3oeydjadfkzx6ox9rx3v2&st=3p49abh4&dl=0",
+    },
+    
   ],
 };
 
