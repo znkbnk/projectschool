@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 const authorsData = [
   {
     name: { first: "Jevin", last: "B" },
