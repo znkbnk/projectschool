@@ -4204,6 +4204,163 @@ const tasksData = {
       img: require("../images/ReactLesson38.webp"),
       link: "https://www.dropbox.com/scl/fi/ev1q8sptptruyjujramev/FileUploadStyles.css?rlkey=a9ry3oeydjadfkzx6ox9rx3v2&st=3p49abh4&dl=0",
     },
+     {
+      taskId: "reacttask39",
+      taskTitle: "Cake Website",
+      introduction: "This project is a responsive React application designed to simulate the online presence of a bakery. It includes essential components like a dynamic navigation bar, a rotating showcase of bakery specials, and a footer with contact information and social media links. Utilizing React hooks such as useState and useEffect, along with custom hooks for scroll and email validation, the application enhances user interaction and responsiveness, offering a seamless browsing experience for potential customers exploring the bakery's offerings and services.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the Project",
+          titleDescription: "",
+          description: [
+            "Use 'create-react-app' to set up a new React project.",
+            " Install necessary packages for icons. 'npm install 'react-icons''",
+            "Organize your components in a components folder and hooks in a hooks folder.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 2: Implement NavBar Component",
+          titleDescription: "NavBar.js",
+          description: [
+             "Navigate to the src/components directory in your project.",
+            "Create a new file named Navbar.js.",
+            "Import React and the necessary hooks (useState, useEffect).",
+            "Import the required icons from 'react-icons'.",
+            "Import the 'useScrollEffect' custom hook (refer to step 6).",
+            "Define a functional component named Navbar.", 
+            "Inside the component: Create a state variable to manage the open/close state of the navigation menu.",
+            "Use the 'useScrollEffect' hook to manage the scroll effect.",
+            "Create a state variable to manage the number of items in the cart (for simulation purposes only).",
+             "Use 'useEffect' to set the cart items with a random number for now.", 
+            "Define a function to toggle the navigation menu.",
+            "Return JSX for the Navbar, including a logo, a button to toggle the menu, navigation links, and a cart icon with a count.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 3: Implement MainSection Component",
+          titleDescription: "MainSection.js",
+          description: [
+            "Navigate to the src/components directory.",
+           "Create a new file named MainSection.js.",
+            "Import React and the necessary hooks (useState, useEffect).",
+            "Import icons from 'react-icons'.",
+            "Define a functional component named MainSection.",
+            "Inside the component: Create a state variable to manage the current image index.",
+            "Define an array of image URLs.",
+            "Use 'useEffect' to set an interval that changes the image index every few seconds.",
+            "Return JSX for the main section, including the background image, a welcome message, and feature icons with text.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 4: Implement Specials Component",
+          titleDescription: "Specials.js",
+          description: [
+            "Navigate to the src/components directory.",
+            "Create a new file named Specials.js.",
+            "Import React and the necessary hooks (useState).",
+            "Import icons from 'react-icons'.",
+            "Define functional components named 'SpecialCard' and 'Specials'.",
+            "Inside the 'SpecialCard' component: Create a state variable to manage the hover state.",
+            "Return JSX for the special card, including an icon, title, description, price, and a conditional 'Order Now' button.",
+            "Inside the 'Specials' component: Return JSX for the specials section, including multiple 'SpecialCard' components and additional offers.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 5: Implement Footer Component",
+          titleDescription: "Footer.js",
+          description: [
+            "Navigate to the src/components directory.",
+             "Create a new file named Footer.js.",
+            "Import React and the necessary hooks (useState).",
+            "Import icons from 'react-icons'.",
+            "Import the 'useEmailValidation' custom hook (refer to step 7). ",
+            "Define a functional component named Footer.",
+            "Inside the component: Create a state variable to manage the email input.",
+            "Use the 'useEmailValidation' hook to validate the email.",
+            "Define a function to handle form submission and display an alert based on email validity.",
+            "Return JSX for the footer, including contact information, a newsletter subscription form, and social media icons.",
+            
+          ],
+        },{
+          stepTitle: "Step 6: Implement useScrollEffect Hook",
+          titleDescription: "useScrollEffect.js",
+          description: [
+            "Navigate to the src/hooks directory.",
+             "Create a new file named useScrollEffect.js.",
+            "Import 'useEffect' and 'useState' from the 'react' library. These will be used to manage side effects and state within your custom hook.",
+            "Create a function named 'useScrollEffect' that accepts an optional 'threshold' parameter. This parameter will determine the scroll position beyond which the hook will consider the user as having scrolled.",
+            "Inside the 'useScrollEffect' function, use the 'useState' hook to initialize a state variable 'scrolled' with an initial value of 'false'. This state will indicate whether the user has scrolled past the threshold.",
+            "Use the 'useEffect' hook to set up a scroll event listener when the component using this hook mounts or when the 'threshold' value changes. Define a function 'handleScroll' that checks the current 'window.scrollY' position against the 'threshold' value and updates the 'scrolled' state accordingly.",
+            "Within the 'useEffect' hook, add the 'handleScroll' function as an event listener to the 'scroll' event on 'window'.",
+            "Return a cleanup function from the 'useEffect' hook using 'return () => { ... }' syntax. Inside this cleanup function, remove the 'handleScroll' function as an event listener using 'window.removeEventListener'.",
+            "Finally, return the scrolled state variable from the custom hook. This will allow components using the hook to know whether the user has scrolled past the threshold.",
+           
+          ],
+        },{
+          stepTitle: "Step 7: Implement useEmailValidation Hook",
+          titleDescription: "useEmailValidation.js",
+          description: [
+            "Navigate to the src/hooks directory.",
+             "Create a new file named useEmailValidation.js.",
+            " Import 'useState' and 'useEffect' from the 'react' library. These are necessary for managing state and performing side effects within your custom hook.",
+            "Create a function named 'useEmailValidation' that takes an 'email' parameter. This parameter represents the email address to be validated.",
+            " Inside the 'useEmailValidation' function, use the 'useState' hook to initialize a state variable 'isValid' with an initial value of 'false'. This state will indicate whether the provided 'email' is valid according to the defined regular expression.",
+            "Use the 'useEffect' hook to perform the email validation whenever the 'email' parameter changes. Define a function within 'useEffect' that creates a regular expression (emailRegex) to validate the email format (/^([A-Za-z\d_-]+)@([A-Za-z\d_-]+)\.([A-Za-z]{2,14})(\.[A-Za-z]{2,8})?$/). Use 'emailRegex.test(email)' to check if the provided 'email' matches the regex pattern and update the 'isValid' state accordingly using 'setIsValid'.",
+            "Return the 'isValid' state variable from the custom hook. This allows components using the hook to know whether the provided email is valid.",
+          
+          ],
+        },{
+          stepTitle: "Step 8: Implement EmailInput Hook",
+          titleDescription: "EmailInput.js",
+          description: [
+            "Navigate to the src/hooks directory.",
+             "Create a new file named EmailInput.js.",
+            "Import 'useState' from react and the 'useEmailValidation' custom hook from './hooks/useEmailValidation'. This allows the EmailInput component to use state management and email validation logic provided by the custom hook.",
+             "Define the 'EmailInput' functional component.",
+            "Use 'useState' to manage 'email' (current input value) initialized to ''. Use 'useEmailValidation(email)' to get 'isValidEmail'.",
+            "Render: <input> for email with: 'type='email'' and 'value={email}'. 'onChange={(e) => setEmail(e.target.value)}'. 'className={isValidEmail ? 'valid' : 'invalid'}'. ",
+            "Conditional <p> for '!isValidEmail'.",
+           
+          ],
+        },{
+          stepTitle: "Step 9: Apply Styles",
+          titleDescription: "",
+          description: [
+            "Create a src/styles directory.",
+             "Create CSS files for each component (Navbar.css, MainSection.css, Specials.css, Footer.css).",
+            "Open each CSS file.",
+            "Write styles for each component, including layout, colors, typography, and responsive design.",
+            "Make sure to include styles for different states like hover, active, and focus.",
+            "Open each component file.",
+            "Import the corresponding CSS file at the top.",
+            
+          ],
+        },{
+          stepTitle: "Step 10: Test the Application",
+          titleDescription: "",
+          description: [
+            "Open your terminal.",
+             "Navigate to your project directory.",
+            "Run the command to start your development server (usually 'npm start').",
+            "Open your browser and go to the URL where your app is running (usually http://localhost:3000).",
+            
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/j7jpf2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson39.webp"),
+      link: "https://www.dropbox.com/scl/fi/5341920t1y5svtm1zfmq3/cakeWebsiteStyles.css?rlkey=xnj3290vh1bpy0whuw70xm4u1&st=z2lwyyas&dl=0",
+    },
     
   ],
 };
