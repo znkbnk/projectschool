@@ -111,7 +111,7 @@ const App = () => {
         />
         <Route
           path='/resetPassword'
-          element={isLoggedIn ? <ResetPassword /> : <Navigate to='/login' />}
+          element={ <ResetPassword /> }
         />
 
         <Route
