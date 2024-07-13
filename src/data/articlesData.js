@@ -276,7 +276,7 @@ const articles = [
   },
   {
     id: 5,
-    title: "",
+    title: "Git with VSCode",
     image: "/images/articleImg/gitLogo.webp",
     paragraphs: [
       {
