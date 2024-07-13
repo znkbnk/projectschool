@@ -456,7 +456,9 @@ const articles = [
       {
         type: "list",
         items: [
-          "Type message. ( without message it will not commit ).",              
+          "Type message. ( without message it will not commit ).", 
+          "Then press Commit button.",              
+
          
         ],
       },
@@ -468,7 +470,7 @@ const articles = [
       {
         type: "list",
         items: [
-          "Press three dots (...) ",              
+          "Press three dots (...) next to main or master.",              
          
         ],
       },
@@ -476,6 +478,31 @@ const articles = [
         type: "image",
         src: "https://previews.dropbox.com/p/thumb/ACWxhXfD9H1MSG3O5z1yIPGO06Coz1Nm6sFbL4TVI22Bj-5e3qupl06PyS1a43oiSKOfu8QSkcwwrXTJTvmHrHIGwAxliCXGZ48w_kYA1kLxTwKsCmAZH6n3eRavcb6S1VoIsRkStXOvkSZRs7aMFXXEPLRCspDGEO0nEZSYlJiO7ZI7HboCZRaxvpkuPMlp1IqB0w9arwVHhBxhYLYz-k6X_IVh_LdkRkU1nMlhAxUln9lhqXuGMekTmguG4lIaFzQxS5TkZAABFGNDVUMxi24IzQp30_iA6NtSjuj2b_Auj-ST69NxB_01rgsaVPKALJ8L1QSm9LB-w6KQ0RWKQoMnV0VDMG4onf5p904VrETNY5w8JJiFl4U2pfGCt1ngSKc/p.png",
         alt: "Pic5",
+      },
+      {
+        type: "list",
+        items: [
+          "Press Push.",              
+         
+        ],
+      },
+      {
+        type: "image",
+        src: "https://previews.dropbox.com/p/thumb/ACWw28RSA5_gtbNsTWUmiIUJYwDBRmS-uLhUWU1PVXDQHa437qCD74ryq1rISWd7N8EhkSq4mUd73Ywj_Osj9_F_eHMj_LJB4UkxjeY_xP8pzeYAsj_BloueM7kBbmPb0iMupuHaRmZ3u8u3G5tNM0Zld3RBBp2bWLQLnLFKIQpHNIsKsZDcu68oLpEEVllwmJr0wVYIClYMxqmiecUw0SMdIjl95L5LoOYG3QFAr-X9xueJiLzYxPj7pM6X05XoJ6T1WghqckeNu2kxC2Or3vgx84gZBlH57nHtayH2iHRXAy-H-7b7ObIxsQaOBkmj-iaKJm4BWkuLa_5ETNXJvn3IoOXKXXkIGLZyuclDAcX4gSIG03saeUFYm39gL1hw37E/p.png",
+        alt: "Pic6",
+      },
+      {
+        type: "list",
+        items: [
+          "In your Github account navigate to repository.", 
+          "There you will find all the changes you made."             
+         
+        ],
+      },
+      {
+        type: "image",
+        src: "https://previews.dropbox.com/p/thumb/ACWoKIwkqvunxtiOZB6y5d0O0nhlThcMgDzowePwwipVGMcT4G1i0NrNpyGwnh4-Pixh6cgbBAvyBntoSnd888o6eUQjIJSOQxrvHTkjI-nS5HfwCmalWQqjir8D1qHEN7lOibyxaS_dOD1LJah991Q9VIh9OX41-nhj1N_CExBq8QgycvSWj6PzrQmD3u1d1G2jz72AWaAQBEEo5ZwmMEQSaGnFtuz_2fQre0P1uojoondNFAWNdzjDQdC0KMpLkxFib0Q6Dk-WxKHs5lsgKQUtIdnrvGqt5Ii77a0_tqLHCeVDbe2-NkYC6r2g7voPL7-HhhSTknYVTOHzYIOqG07b9SIrsMB3Dv3APsJkpwS4jnxzyWfDFQW9xLjeiZgAhqI/p.png",
+        alt: "Pic7",
       },
     ],
   },
