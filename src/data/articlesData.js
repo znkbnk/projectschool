@@ -27,7 +27,7 @@ const blogCards = [
       "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
     date: "8 May 2024",
     image:
-      "https://previews.dropbox.com/p/thumb/ACVNZmwOdZgABQt74eB7VAb5zOhr1TkEa3SjZI4vFdEyr3P5AO8gggwquX36rHG5dKfmazOVaf4BmBS2M_s50CqLUdgTiksdcC-BZy4RN0pu19Z7rLE2EgH6y6RAA1JhmMDhDaCYfHEGpsxT2FLnWP5pKZWyfWIh6SqiWOaGiL69xKFCr6Spd4HmHa5zT4AMj48MoGeVkxJfAU6pF7wol76OI6A9ss1rVxvbjKjyPHICL9-S1yR6ZRg0hWFIhjHR7tFr7gO36LRLa7IMjl_pEUIbsbziZaR-JsSn9_6jQn-5tQfy1shda_12svviwtphhD_gABi5hPXHfaTHMPMYTaPh/p.png",
+      "https://previews.dropbox.com/p/thumb/ACXHehgHW93I8Z_TTQmXBYP9UthgWgwcTwm5kEwsFP5mYG7_XZPY7fi-KZWGzeseefbQcV4ptILs9l3tW6hpcwW6LMFUixBClUSiGufC3Ecqalp6oAcbQfZ4I1zp8EWakbuf_sIq1jLAuuKRHk4zJtzGnm-vkhVsM0FiexvXtiWJASAS7UEgHFWyHCvakbQG3YQHVnT-BplUKqom1IajiXEXH5_PYuYWTY03t8APxiJl4_eEtHvqJct-yzCuv9udQczn30oS-zAmevGlV4cg5-hxZYTHUtpM_K3OUAmt4nqVPYHShguhb8URMhlHBfQ2dULxEtY3ga5-YRd6oWmCESlQagwxDcbNC6GEc4Hd7Ez1ytyoAbCSR7aZVXl-W2YJyVo/p.png",
   },
   {
     id: 4,
@@ -37,7 +37,17 @@ const blogCards = [
       "Transitioning your React project from Stripe's test environment to the live environment is a crucial step to start processing real payments. This process ensures that your application is fully prepared to handle secure transactions in a production setting.",
     date: "23 June 2024",
     image:
-      "https://previews.dropbox.com/p/thumb/ACWHrEEocOeW4a-se9v5ZB2A4IgtzDV-ffgPB3ZXgOY5nXqty900BOwFI2V1ROvpekL97p66MRr3LO11-RqlQdbzAbgV7j9BprfzL-MortkYmgk3MVCnH2psZUvRRD0GE82QSRxrClvqaF10_aeF7gKqw5h7i_POnz-oBIggdC3CYeYGTElGrLvjKsqND8WtVMEM8vXzTDtrYJfF8DbjEGNpqNKLNGhN00zOWr39-QcbpjVGsnJrw0EZkSaYCm0eYIKfu82tJrxpcrENz4PwvMLSq5pIZGCnLdCREE6WFpf_a9kiGuhSjG4yc1XH1u9vs4hOiTwopLhy_mgGkH3iG4cy_heT8isARGjN06KuREX_m-OEs3AHHYSaElsM-ToAOOE/p.png",
+      "https://previews.dropbox.com/p/thumb/ACXVLpoSw9Vig8CjWqPFcL-xV5YSsFrrklllhD5vPORvyMWOuahnYpzBQFbmNGHsar3ksKVW2qB6K1wx0XAsrM6WuFUjVOfaerFfcyP1v5oA53n4zDZjglje9CrVFyIMK8TQmj_71E8zoE6AxgVQlUpqvJjEisQzKbDLegwsTXWr_nNqJw_j9KNQxCV19R7B-Yzz9HOf6dDHaPQ4cvBqEITOrkm6USXiOup38dsw1LBHcrA72P2iXdyqRf0r0Ibnt8LNCh7N5eiAKFH6wSHOCe5IHBCYakU9ZK4sJ07S9zWFvLzYa6gIupZ-JxTPdYpwHzGwUSWgCdcqSlJ25GXDbczvlzycAfmIRO5VajbyjFdvZdkiMKCItTvUIZxYwaDhzog/p.png",
+  },
+  {
+    id: 5,
+    category: "Info",
+    title: "Guide to Implementing Git in Visual Studio Code",
+    extract:
+      "This step-by-step guide provides detailed instructions on installing Git and Visual Studio Code, configuring Git, managing repositories, and performing common Git operations such as staging, committing, and pushing changes to a remote repository. Ideal for beginners, this guide ensures a smooth start to using Git in your development workflow.",
+    date: "13 July 2024",
+    image:
+      "https://previews.dropbox.com/p/thumb/ACVsWSdi2QVvfAwDVlef1T6OikObpg-ZzV7xLzRMR0xoboGuiL8GHESCenjDcQOFhDezj21qWp2w80wX-C0w0yOWfI-V5bGvUe1_3ci6HxAoiG25sjnRBYMLOQqJk6IrTpaAFe4CMiSeuxN6J9Kq6DyLJ3a1PVX9dD9l_9-GJbuMJzdO3juHBrWRzWaPBER3X0rapasNP9R8isUl8UQF8Xk9hpPXTruYo9PItJDYUWeWPa24nIQ6DDPYuErMRBSGBIv9UdqUqGxAPddKhUZmQZoKXzCYla3C8knsUtIiUUE7ez_z3d4Gb9gkOKCmgfqnBfiEBhSD0NdY_st7AP7fhTgp/p.png",
   },
 ];
 
@@ -264,34 +274,191 @@ const articles = [
       },
     ],
   },
+  {
+    id: 5,
+    title: "",
+    image: "/images/articleImg/gitLogo.webp",
+    paragraphs: [
+      {
+        type: "text",
+        content: `Step 1: Install Git`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "Go to the Git website. (https://git-scm.com).",
+          "Click on 'Download' and choose the version that matches your operating system (Windows, macOS, or Linux).",
+          "Follow the instructions to download the installer.",
+          "Run the downloaded installer.",
+          "Follow the setup instructions. You can use the default settings for most options unless you have specific requirements.",
+          "Open your terminal ( in your VSCode ) or command prompt.",
+          "Type 'git --version' or ( 'git -v' ) and press Enter.",
+          "You should see the installed Git version, confirming that Git is installed successfully.",
+        ],
+      },
+      {
+        type: "text",
+        content: `Step 2: Install Visual Studio Code`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "Go to the VS Code website. (https://code.visualstudio.com).",
+          "Click on 'Download' and choose the version that matches your operating system.",
+          "Run the downloaded installer.",
+          "Follow the setup instructions.",
+        ],
+      },
+      {
+        type: "text",
+        content: `Step 3: Configure Git in VS Code`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "Open Visual Studio Code.",
+          "Go to the top menu and click on 'Terminal' > 'New Terminal'.",
+          "Set your Git username by typing: git config --global user.name 'Your Name' and press Enter.",
+          "Set your Git email by typing: git config --global user.email 'you@example.com' and press Enter.",
+        ],
+      },
+      {
+        type: "text",
+        content: `Step 4: Initialize a Git Repository`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "Open the folder containing your project files in VS Code by clicking on 'File' > 'Open Folder' and selecting your project folder.",
+          "Open the terminal in VS Code (Terminal > New Terminal).",
+          "Navigate to your project folder if not already there. (type: cd projectFolderName)",
+          "Type 'git init' and press Enter to initialize a new Git repository.",
+        ],
+      },
+      {
+        type: "text",
+        content: `Step 5: Make Changes and Commit`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "Create or edit files in your project folder using the VS Code editor.",
+          "Open the terminal in VS Code.",
+          "Type git commit -m 'Your commit message' and press Enter to commit the changes with a descriptive message.",
+         
+        ],
+      },
+      {
+        type: "text",
+        content: `Step 6: Push to a Remote Repository`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "Go to 'GitHub', 'GitLab', or 'Bitbucket' and create a new repository.",
+          "In the terminal, type git remote add origin https://github.com/your-username/your-repository.git (replace the URL with your repository's URL) and press Enter.",
+          "Type git push -u origin master and press Enter to push your local changes to the remote repository.",
+         
+         
+        ],
+      },
+      {
+        type: "text",
+        content: `Step 7: Pull Changes from Remote Repository`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "In the terminal, type git pull origin master and press Enter to pull the latest changes from the remote repository to your local repository.",
+         
+        ],
+      },
+      {
+        type: "text",
+        content: `Step 8: Viewing Git Changes in VS Code`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "Click on the Source Control icon in the Activity Bar on the side of the VS Code window (or press Ctrl+Shift+G).",
+          "In the Source Control view, you can see the list of changes, staged changes, and commit history.",
+         
+        ],
+      },
+      {
+        type: "text",
+        content: `Common Git Commands Cheat Sheet`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "'git status' - Show the working directory status.",
+          "'git add .' - Add all changes to staging.",
+          "'git commit -m 'message'' - Commit changes with a message. ( without message it WILL NOT commit ).",
+          "'git push' - Push changes to remote repository.",
+          "'git pull' - Pull changes from remote repository.",
+          "'git checkout branch-name' - Switch to a branch.",
+          "'git merge branch-name' - Merge a branch into the current branch.",
+        
+         
+        ],
+      },
+      {
+        type: "text",
+        content: `Use my example as a guide`,
+      },
+
+      {
+        type: "list",
+        items: [
+          "Make changes in your code.",
+          
+        
+         
+        ],
+      },
+    ],
+  },
 ];
 
 export { articles, blogCards };
+/*
 
-//  {
-//     id: ,
-//     title: "",
-//     image: "/images/articleImg/AuthGuard1.webp",
-//     paragraphs: [
-//       {
-//         type: "text",
-//         content: `text`,
-//       },
-//       {
-//         type: "image",
-//         src: "https://upload.wikime",
-//         alt: "React Icon",
-//       },
-//       {
-//        type: "list",
-//        items: [
-//          "",
-//          "",
-//          "",
-//          "",
-//          "",
-//          "",
-//        ],
-//       },
-//     ]
-//   },
+ {
+    id: ,
+    title: "",
+    image: "/images/articleImg/AuthGuard1.webp",
+    paragraphs: [
+      {
+        type: "text",
+        content: `text`,
+      },
+      {
+        type: "image",
+        src: "https://upload.wikime",
+        alt: "React Icon",
+      },
+      {
+       type: "list",
+       items: [
+         "",
+         "",
+         "",
+         "",
+         "",
+         "",
+       ],
+      },
+    ]
+  },
+
+  */
