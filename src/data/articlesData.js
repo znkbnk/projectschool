@@ -420,11 +420,62 @@ const articles = [
       {
         type: "list",
         items: [
-          "Make changes in your code.",
-          
-        
+          "Make changes in your code.",              
          
         ],
+      },
+      {
+        type: "image",
+        src: "https://previews.dropbox.com/p/thumb/ACUNee5LAkP6BPw5WCn9ilYgArZ9N1dWeIJsQmWRr1_aEhIXjg0huGIgeYfvySp0A03nuE-YzMVlU6_qSyKJqbiuZzUx6GUlW7Gp1Og8Zk7CEFfJfhiG9Rgw3J5SKM7TIjHhhT-ViE1BN0LpvlM_l3NXt05WsSrmBIClwgvnJ_u7WKZnSTPhYTCC8V3B9UlQAqVdYvFhd39JIaq4DTyLmaCVsGA0OdlmYlIC2-nDSeESJciL-HcRZuHUH-u1G6GHvrIkVLEIqBFx7Uivm4cPHPYo35yQBjzMDBIrnRFVlicjfuPSxMBytt9wXoNxgwF1LdPy4XnQFN7kGZBg43WwKryQnf2de3XNhMjAxapb4DRrNKfnf_TYHsoPR7vLlh9ZnpM/p.png",
+        alt: "Pic1",
+      },
+      {
+        type: "list",
+        items: [
+          "Press Source Control icon.",              
+         
+        ],
+      },
+      {
+        type: "image",
+        src: "https://previews.dropbox.com/p/thumb/ACXSfALVFKgiCT__8Bcj8iDzmoaADGrO3X0YJYkeb3xx0_KUW7f1Cg__BfrZ46HI18br7ln9OjmGKRwSWUxrcKt0N0Lb-OvP1HksgM0wLfCC0Q6WwjS5BltbNB_r1W15W3uY1nNnkG4VyzZ1-AVO-G5P3S_mP4OCg3kkyyYvXMqBFt7uggL4j-vNRLpXYCZFYCwPj0LacJPX5cpU2sXVs5iliZxSnZ8dlVCtajKPb4dwl_wjOxgj1y8VA3PY2UWICNgFFWYPeh42OwhqddJ1vWxcU7gkrZp_40ov6Ygwog_2HxUEvUWodvegykAWHKoWX32ByFXZepusluQkwMXGk99cPDOBYwHi0J-ZT22540mbmrr5gC1lXVspMtd2yqGz-h0/p.png",
+        alt: "Pic2",
+      },
+      {
+        type: "list",
+        items: [
+          "Press '+' to Stage Changes",              
+         
+        ],
+      },
+      {
+        type: "image",
+        src: "https://previews.dropbox.com/p/thumb/ACXRHLqVnTgVyveBuUj4LjFqRMp5b0BTzgXHwbJ_UDKcC2b8xpAeTScFMdx0py3jNQdyFo-TgkqxJUiK2x92bPtFVSjDP6AZui38nLovQK6eHrDSUio_kCwgPIvR21q85ALdpxrOhDmQQeNU6k8lr3BqsiokEr8rC6yGRA3OvvlQsVK2QUZaSUFJmwzAVcpc7PxWhX-WxtwxNjWxKm1b8esEy99dR0k9iLKjkZrueingGmJGBNRfl9ysSFXAj46TOR-9QemO2BDMkhtPuiasMBOJi2hZfTVxw8fr56JxoaFOzPdQjIo9vqd3kRpNCvzvTpNLM4suf8rPop2Z7kxFCKr4MtUvyCou9Vkrt1vWnwcp1FqJuGV-qTFqc4cRZO3-SmY/p.png",
+        alt: "Pic3",
+      },
+      {
+        type: "list",
+        items: [
+          "Type message. ( without message it will not commit ).",              
+         
+        ],
+      },
+      {
+        type: "image",
+        src: "https://previews.dropbox.com/p/thumb/ACVl3qnwqW12-S7r1pJlmTcT56ljPGlryha-OQr3y3Lqja_97toBfnE22vs66rlwTROAK8OibVfV0gQT4OoqY2gKb1-8oMXfIbqZkfvekvPj4GZzun2xijF2mCWHSfBQqEvwuCE3doM5z3PgUPk1VxvBBzBIB-kUF4QUswStomJsDrcdF_0xnBtqkkXqpSzHupemFwgeEG9fPrBmdQc75t0QlOxphkTAYUQI-DDUBAWuumtOGq97uBgqhLeehVUykY1aR_AE1zG922InEuTFwdtcDNcq2JhMxDqs8TKpUx51xNfebvOJ0Hp7GSLYdqqYSc0am0Dj4ZtAEYBNBMEe-EVH/p.png",
+        alt: "Pic4",
+      },
+      {
+        type: "list",
+        items: [
+          "Press three dots (...) ",              
+         
+        ],
+      },
+      {
+        type: "image",
+        src: "https://previews.dropbox.com/p/thumb/ACWxhXfD9H1MSG3O5z1yIPGO06Coz1Nm6sFbL4TVI22Bj-5e3qupl06PyS1a43oiSKOfu8QSkcwwrXTJTvmHrHIGwAxliCXGZ48w_kYA1kLxTwKsCmAZH6n3eRavcb6S1VoIsRkStXOvkSZRs7aMFXXEPLRCspDGEO0nEZSYlJiO7ZI7HboCZRaxvpkuPMlp1IqB0w9arwVHhBxhYLYz-k6X_IVh_LdkRkU1nMlhAxUln9lhqXuGMekTmguG4lIaFzQxS5TkZAABFGNDVUMxi24IzQp30_iA6NtSjuj2b_Auj-ST69NxB_01rgsaVPKALJ8L1QSm9LB-w6KQ0RWKQoMnV0VDMG4onf5p904VrETNY5w8JJiFl4U2pfGCt1ngSKc/p.png",
+        alt: "Pic5",
       },
     ],
   },
