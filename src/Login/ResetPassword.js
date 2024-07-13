@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/login.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { auth } from "../components/firebase";
+import { toast } from "react-toastify";
 
 const ResetPassword = () => {
+  const [email, setEmail] = useState("");
+
+  const handlePasswordReset = async (e) => {
+    e.preventDefault();
+    try {
+      await sendPasswordResetEmail(auth, email);
+      toast.success("Password reset email sent! Check your inbox.");
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      if (errorCode === "auth/user-not-found") {
+        toast.error("User not found. Please check your email.");
+      } else {
+        toast.error("Error: " + errorMessage);
+      }
+    }
+  };
+
   return (
     <div>
       <div className='login-container'>
         <Navbar />
-
         <section id='entry-page'>
-          <form>
+          <form onSubmit={handlePasswordReset}>
             <h2>Reset Password</h2>
             <fieldset>
               <legend>Password Reset</legend>
@@ -21,11 +41,17 @@ const ResetPassword = () => {
                 </li>
                 <li>
                   <label htmlFor='email'>Email:</label>
-                  <input type='email' id='email' required />
+                  <input
+                    type='email'
+                    id='email'
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </li>
               </ul>
             </fieldset>
-            <button>Send Reset Link</button>
+            <button type='submit'>Send Reset Link</button>
             <Link to='/login'>
               <button className='login-button' type='button'>
                 Go Back

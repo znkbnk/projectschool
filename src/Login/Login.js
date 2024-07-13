@@ -24,7 +24,6 @@ const Login = () => {
         }
         navigate("/");
         toast.success("Logged in successfully");
-        toast.info(`Email verified: ${user.emailVerified ? 'Yes' : 'No'}`);
       })
       .catch((error) => {
         const errorCode = error.code;

@@ -85,12 +85,34 @@ const App = () => {
           path='/signup'
           element={isLoggedIn ? <Navigate to='/' /> : <Signup />}
         />
-        <Route path='/pricing' element={<Pricing />} />
-        <Route path='/faq' element={<Faq />} />
-        <Route path='/blog' element={<Blog />} />
-        <Route path='/articles/:id' element={<Articles />} />
-        <Route path='/terms' element={<Terms />} />
-        <Route path='/privacy' element={<Privacy />} />
+        <Route
+          path='/pricing'
+          element={isLoggedIn ? <Pricing /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/faq'
+          element={isLoggedIn ? <Faq /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/blog'
+          element={isLoggedIn ? <Blog /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/articles/:id'
+          element={isLoggedIn ? <Articles /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/terms'
+          element={isLoggedIn ? <Terms /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/privacy'
+          element={isLoggedIn ? <Privacy /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/resetPassword'
+          element={isLoggedIn ? <ResetPassword /> : <Navigate to='/login' />}
+        />
 
         <Route
           path='/exercises'
@@ -132,8 +154,14 @@ const App = () => {
             isLoggedIn || isAdmin ? <AuthorList /> : <Navigate to='/login' />
           }
         />
-        <Route path='/success' element={<Success />} />
-        <Route path='/cancel' element={<Cancel />} />
+        <Route
+          path='/success'
+          element={isLoggedIn ? <Success /> : <Navigate to='/login' />}
+        />
+        <Route
+          path='/cancel'
+          element={isLoggedIn ? <Cancel /> : <Navigate to='/login' />}
+        />
       </Routes>
     </div>
   );
