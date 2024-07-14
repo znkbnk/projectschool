@@ -26,8 +26,7 @@ const blogCards = [
     extract:
       "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
     date: "8 May 2024",
-    image:
-      "https://previews.dropbox.com/p/thumb/ACXHehgHW93I8Z_TTQmXBYP9UthgWgwcTwm5kEwsFP5mYG7_XZPY7fi-KZWGzeseefbQcV4ptILs9l3tW6hpcwW6LMFUixBClUSiGufC3Ecqalp6oAcbQfZ4I1zp8EWakbuf_sIq1jLAuuKRHk4zJtzGnm-vkhVsM0FiexvXtiWJASAS7UEgHFWyHCvakbQG3YQHVnT-BplUKqom1IajiXEXH5_PYuYWTY03t8APxiJl4_eEtHvqJct-yzCuv9udQczn30oS-zAmevGlV4cg5-hxZYTHUtpM_K3OUAmt4nqVPYHShguhb8URMhlHBfQ2dULxEtY3ga5-YRd6oWmCESlQagwxDcbNC6GEc4Hd7Ez1ytyoAbCSR7aZVXl-W2YJyVo/p.png",
+    image: "./images/articleImg/3/title.webp",
   },
   {
     id: 4,
@@ -36,8 +35,7 @@ const blogCards = [
     extract:
       "Transitioning your React project from Stripe's test environment to the live environment is a crucial step to start processing real payments. This process ensures that your application is fully prepared to handle secure transactions in a production setting.",
     date: "23 June 2024",
-    image:
-      "https://previews.dropbox.com/p/thumb/ACXVLpoSw9Vig8CjWqPFcL-xV5YSsFrrklllhD5vPORvyMWOuahnYpzBQFbmNGHsar3ksKVW2qB6K1wx0XAsrM6WuFUjVOfaerFfcyP1v5oA53n4zDZjglje9CrVFyIMK8TQmj_71E8zoE6AxgVQlUpqvJjEisQzKbDLegwsTXWr_nNqJw_j9KNQxCV19R7B-Yzz9HOf6dDHaPQ4cvBqEITOrkm6USXiOup38dsw1LBHcrA72P2iXdyqRf0r0Ibnt8LNCh7N5eiAKFH6wSHOCe5IHBCYakU9ZK4sJ07S9zWFvLzYa6gIupZ-JxTPdYpwHzGwUSWgCdcqSlJ25GXDbczvlzycAfmIRO5VajbyjFdvZdkiMKCItTvUIZxYwaDhzog/p.png",
+    image: "./images/articleImg/4/title.webp",
   },
   {
     id: 5,
@@ -137,8 +135,7 @@ const articles = [
   {
     id: 3,
     title: "Mastering JavaScript Pagination",
-    image:
-      "https://previews.dropbox.com/p/thumb/ACXrBScqRi8LQFFNcxhL37zoUkA46dW_n7G-H5a0nlBpn3giwrgIwHKw-b9XET6KeV5LPQDnLcD_AkotBUxVDZocTn4dHtl_EZqIQxNqIkWJO2NNaLEsxv0GLGF3nS_7uzbDMSRZUanoU5rbm1hHf9fVSA6pXKK0vYQRbCtDrLyoxYiMhq0iQTbAC_mWO6dM4oUz003FgPU_lyeD76L69CHys4kUyRx38NUSLRKh3naEIex0e-AKB1sV8BHQKaW7M4YUTWkf9S1_dD9l0WERDxfKP0-Ti_RxVYkj-o0BAvCEu4C5NmKnKPfFb6ziEiECzOdNAoBUbzDsNYW0IMaHjHMEp5CU84RzQVsHb7axpPbbmfBPVdPPnl8_gWWCuOX57d8/p.png",
+    image: "./images/articleImg/3/logo.webp",
     paragraphs: [
       {
         type: "text",
@@ -159,22 +156,25 @@ const articles = [
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACXHdMOCCWgQ6zf9cSXmkZ_PvHMT8PpMlXUzZKhJog6jxTcLXjvDuGNYsaLswHfa8VmFLBY4zAyUKpBiVM8suJ8inHQtrUB9RF9bs4VGlzRzO9nSvJyhDvwQoKB2SN0SwPzYbmMYmW8v1FEvRPdxQyTAMCpWzyNM570FaiqdWotwSo0dKurb6vcPO3Rf3If3ZVHN-glK2YPO3IewftrzJINYunoD_fovYhsyqfJMKFw2n4lJ-SCXXhdLBEZi6ErTB4HjRfnMl_jvhQgQCqD4GU00A_-bsiUsPAu3uO-AvMf2ZLrk5vu8DB6oOh4EHWqWH0m_ypmFZrf2DY41QTsX0kTf/p.png",
+        src: "./images/articleImg/3/pic1.webp",
         alt: "Pic1",
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACVUaAMahE8cJeZQrYunVXJIzqyQ75gFow75L5m5CgfgFsAm0cw0w9NXciCqGwTK5sf2GfXdsPekkMcXeRxEwk1PSjGUOlHgFdrkxG7M57UXBhCwJOiuaG_yFv_uqiAIvFNaVSFwpIamSdBAVIO7jv2QiVpMoFNnUY3DVXBCsEu-o4N2EIdRk-7iawCz0Ytc7t9xNBNjDdYmW_LQ1l-jzCtfv5aOXnaVrmwbXSlDIHjZeSFwkRyejjZbticqFw49w_vpAiADSudQWzEk9mQSkWJN0sfbLFV_bcDvAplnkU2gRu0nIUZx0N7KV2iUxmt-M_mDpHldn3xYh2_4PYThvrPIaZ2srbAb9czEgEF7xDQ3TB4-5ew_ZCwyVj38aCmHS3g/p.png",
+        src: "./images/articleImg/3/pic2.webp",
+
         alt: "Pic2",
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACXOMvrUrk0fC_jqaXD_Ndgs4NuWDjoaH5TmQ4-5vnutYVJqgcd4-50s6_I3MC6OYmhXh0BRQw0tqFOLGQed659zZg7p83YyvvUTCLNWFlPycXg7W3HsGze2z2pLGVQX4K7_LPrZRkFuJcjtdv7CLD_DSQQDXQQLK0CwTU4bQ6jjIVhD8Mwz9Ij5kyIkahsGfjGfL08sZkAMzdJfEluDUFdsxYWUn2frscVKrfRgt-yM_rIKPWQ8xMILntJt1BN3ljZkh8CU-zTUhmXpJ5PCaQWJBkQiObq_A9qVjlIsBJ8AQJnsEeyLFbcnTDHVBJ-ubtn9grs_UEMq5NFIgQJ4eP2EgtIK6r2wc7PypMrNQZc03cj5QHJYHoRDZqx0Vqzhj4c/p.png",
+        src: "./images/articleImg/3/pic3.webp",
+
         alt: "Pic3",
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACUM0vklbuI69AeOcRi3N0GmHrGlLJMEcVlHa38mJ2UwR6ZIYkKkPRRCaS2jt2YIB5ylk2j8YbwbuhzhWnqu_4zgmqrIzmnG_1cuBhAo1zdVOV6996V8USGWdwwr2Pt7Q2kCIsHxqEFw_Z9dNw_l0NC0udiJJLS0WRzit9f2uKIelBTjVa5Jd8EO1keMQEP2PL6bBMzF7Ihundm8U1iWskjCt8k7L0zxBlkTgRoST6ve2DuYQM0jGjQ7acXrVGquDdlRK6k7SNwn-vobAR2UKKivx0JrKecgSopYVY6ZgXAId9tsE2fnFJcYD3rgESfJEBo65U2a9hJ-dCrpNkdlo8dRcfMxPV6jZMOzYFOMurOzGU6rNoatUlW7Qtw7_fHCejM/p.png",
+        src: "./images/articleImg/3/pic4.webp",
+
         alt: "Pic4",
       },
       {
@@ -205,7 +205,7 @@ const articles = [
     id: 4,
     title: "Going Live with Stripe in Your React Project",
     image:
-      "https://previews.dropbox.com/p/thumb/ACXVLpoSw9Vig8CjWqPFcL-xV5YSsFrrklllhD5vPORvyMWOuahnYpzBQFbmNGHsar3ksKVW2qB6K1wx0XAsrM6WuFUjVOfaerFfcyP1v5oA53n4zDZjglje9CrVFyIMK8TQmj_71E8zoE6AxgVQlUpqvJjEisQzKbDLegwsTXWr_nNqJw_j9KNQxCV19R7B-Yzz9HOf6dDHaPQ4cvBqEITOrkm6USXiOup38dsw1LBHcrA72P2iXdyqRf0r0Ibnt8LNCh7N5eiAKFH6wSHOCe5IHBCYakU9ZK4sJ07S9zWFvLzYa6gIupZ-JxTPdYpwHzGwUSWgCdcqSlJ25GXDbczvlzycAfmIRO5VajbyjFdvZdkiMKCItTvUIZxYwaDhzog/p.png",
+      "./images/articleImg/4/title.webp",
     paragraphs: [
       {
         type: "text",
@@ -350,7 +350,6 @@ const articles = [
           "Create or edit files in your project folder using the VS Code editor.",
           "Open the terminal in VS Code.",
           "Type git commit -m 'Your commit message' and press Enter to commit the changes with a descriptive message.",
-         
         ],
       },
       {
@@ -364,8 +363,6 @@ const articles = [
           "Go to 'GitHub', 'GitLab', or 'Bitbucket' and create a new repository.",
           "In the terminal, type git remote add origin https://github.com/your-username/your-repository.git (replace the URL with your repository's URL) and press Enter.",
           "Type git push -u origin master and press Enter to push your local changes to the remote repository.",
-         
-         
         ],
       },
       {
@@ -377,7 +374,6 @@ const articles = [
         type: "list",
         items: [
           "In the terminal, type git pull origin master and press Enter to pull the latest changes from the remote repository to your local repository.",
-         
         ],
       },
       {
@@ -390,7 +386,6 @@ const articles = [
         items: [
           "Click on the Source Control icon in the Activity Bar on the side of the VS Code window (or press Ctrl+Shift+G).",
           "In the Source Control view, you can see the list of changes, staged changes, and commit history.",
-         
         ],
       },
       {
@@ -408,8 +403,6 @@ const articles = [
           "'git pull' - Pull changes from remote repository.",
           "'git checkout branch-name' - Switch to a branch.",
           "'git merge branch-name' - Merge a branch into the current branch.",
-        
-         
         ],
       },
       {
@@ -419,89 +412,72 @@ const articles = [
 
       {
         type: "list",
-        items: [
-          "Make changes in your code.",              
-         
-        ],
+        items: ["Make changes in your code."],
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACUNee5LAkP6BPw5WCn9ilYgArZ9N1dWeIJsQmWRr1_aEhIXjg0huGIgeYfvySp0A03nuE-YzMVlU6_qSyKJqbiuZzUx6GUlW7Gp1Og8Zk7CEFfJfhiG9Rgw3J5SKM7TIjHhhT-ViE1BN0LpvlM_l3NXt05WsSrmBIClwgvnJ_u7WKZnSTPhYTCC8V3B9UlQAqVdYvFhd39JIaq4DTyLmaCVsGA0OdlmYlIC2-nDSeESJciL-HcRZuHUH-u1G6GHvrIkVLEIqBFx7Uivm4cPHPYo35yQBjzMDBIrnRFVlicjfuPSxMBytt9wXoNxgwF1LdPy4XnQFN7kGZBg43WwKryQnf2de3XNhMjAxapb4DRrNKfnf_TYHsoPR7vLlh9ZnpM/p.png",
+        src: "./images/articleImg/5/blog1.webp",
         alt: "Pic1",
       },
       {
         type: "list",
-        items: [
-          "Press Source Control icon.",              
-         
-        ],
+        items: ["Press Source Control icon."],
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACXSfALVFKgiCT__8Bcj8iDzmoaADGrO3X0YJYkeb3xx0_KUW7f1Cg__BfrZ46HI18br7ln9OjmGKRwSWUxrcKt0N0Lb-OvP1HksgM0wLfCC0Q6WwjS5BltbNB_r1W15W3uY1nNnkG4VyzZ1-AVO-G5P3S_mP4OCg3kkyyYvXMqBFt7uggL4j-vNRLpXYCZFYCwPj0LacJPX5cpU2sXVs5iliZxSnZ8dlVCtajKPb4dwl_wjOxgj1y8VA3PY2UWICNgFFWYPeh42OwhqddJ1vWxcU7gkrZp_40ov6Ygwog_2HxUEvUWodvegykAWHKoWX32ByFXZepusluQkwMXGk99cPDOBYwHi0J-ZT22540mbmrr5gC1lXVspMtd2yqGz-h0/p.png",
+        src: "./images/articleImg/5/blog2.webp",
         alt: "Pic2",
       },
       {
         type: "list",
-        items: [
-          "Press '+' to Stage Changes",              
-         
-        ],
+        items: ["Press '+' to Stage Changes"],
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACXRHLqVnTgVyveBuUj4LjFqRMp5b0BTzgXHwbJ_UDKcC2b8xpAeTScFMdx0py3jNQdyFo-TgkqxJUiK2x92bPtFVSjDP6AZui38nLovQK6eHrDSUio_kCwgPIvR21q85ALdpxrOhDmQQeNU6k8lr3BqsiokEr8rC6yGRA3OvvlQsVK2QUZaSUFJmwzAVcpc7PxWhX-WxtwxNjWxKm1b8esEy99dR0k9iLKjkZrueingGmJGBNRfl9ysSFXAj46TOR-9QemO2BDMkhtPuiasMBOJi2hZfTVxw8fr56JxoaFOzPdQjIo9vqd3kRpNCvzvTpNLM4suf8rPop2Z7kxFCKr4MtUvyCou9Vkrt1vWnwcp1FqJuGV-qTFqc4cRZO3-SmY/p.png",
+        src: "./images/articleImg/5/blog3.webp",
         alt: "Pic3",
       },
       {
         type: "list",
         items: [
-          "Type message. ( without message it will not commit ).", 
-          "Then press Commit button.",              
-
-         
+          "Type message. ( without message it will not commit ).",
+          "Then press Commit button.",
         ],
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACVl3qnwqW12-S7r1pJlmTcT56ljPGlryha-OQr3y3Lqja_97toBfnE22vs66rlwTROAK8OibVfV0gQT4OoqY2gKb1-8oMXfIbqZkfvekvPj4GZzun2xijF2mCWHSfBQqEvwuCE3doM5z3PgUPk1VxvBBzBIB-kUF4QUswStomJsDrcdF_0xnBtqkkXqpSzHupemFwgeEG9fPrBmdQc75t0QlOxphkTAYUQI-DDUBAWuumtOGq97uBgqhLeehVUykY1aR_AE1zG922InEuTFwdtcDNcq2JhMxDqs8TKpUx51xNfebvOJ0Hp7GSLYdqqYSc0am0Dj4ZtAEYBNBMEe-EVH/p.png",
+        src: "./images/articleImg/5/blog4.webp",
         alt: "Pic4",
       },
       {
         type: "list",
-        items: [
-          "Press three dots (...) next to main or master.",              
-         
-        ],
+        items: ["Press three dots (...) next to main or master."],
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACWxhXfD9H1MSG3O5z1yIPGO06Coz1Nm6sFbL4TVI22Bj-5e3qupl06PyS1a43oiSKOfu8QSkcwwrXTJTvmHrHIGwAxliCXGZ48w_kYA1kLxTwKsCmAZH6n3eRavcb6S1VoIsRkStXOvkSZRs7aMFXXEPLRCspDGEO0nEZSYlJiO7ZI7HboCZRaxvpkuPMlp1IqB0w9arwVHhBxhYLYz-k6X_IVh_LdkRkU1nMlhAxUln9lhqXuGMekTmguG4lIaFzQxS5TkZAABFGNDVUMxi24IzQp30_iA6NtSjuj2b_Auj-ST69NxB_01rgsaVPKALJ8L1QSm9LB-w6KQ0RWKQoMnV0VDMG4onf5p904VrETNY5w8JJiFl4U2pfGCt1ngSKc/p.png",
+        src: "./images/articleImg/5/blog5.webp",
         alt: "Pic5",
       },
       {
         type: "list",
-        items: [
-          "Press Push.",              
-         
-        ],
+        items: ["Press Push."],
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACWw28RSA5_gtbNsTWUmiIUJYwDBRmS-uLhUWU1PVXDQHa437qCD74ryq1rISWd7N8EhkSq4mUd73Ywj_Osj9_F_eHMj_LJB4UkxjeY_xP8pzeYAsj_BloueM7kBbmPb0iMupuHaRmZ3u8u3G5tNM0Zld3RBBp2bWLQLnLFKIQpHNIsKsZDcu68oLpEEVllwmJr0wVYIClYMxqmiecUw0SMdIjl95L5LoOYG3QFAr-X9xueJiLzYxPj7pM6X05XoJ6T1WghqckeNu2kxC2Or3vgx84gZBlH57nHtayH2iHRXAy-H-7b7ObIxsQaOBkmj-iaKJm4BWkuLa_5ETNXJvn3IoOXKXXkIGLZyuclDAcX4gSIG03saeUFYm39gL1hw37E/p.png",
+        src: "./images/articleImg/5/blog6.webp",
         alt: "Pic6",
       },
       {
         type: "list",
         items: [
-          "In your Github account navigate to repository.", 
-          "There you will find all the changes you made."             
-         
+          "In your Github account navigate to repository.",
+          "There you will find all the changes you made.",
         ],
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACWoKIwkqvunxtiOZB6y5d0O0nhlThcMgDzowePwwipVGMcT4G1i0NrNpyGwnh4-Pixh6cgbBAvyBntoSnd888o6eUQjIJSOQxrvHTkjI-nS5HfwCmalWQqjir8D1qHEN7lOibyxaS_dOD1LJah991Q9VIh9OX41-nhj1N_CExBq8QgycvSWj6PzrQmD3u1d1G2jz72AWaAQBEEo5ZwmMEQSaGnFtuz_2fQre0P1uojoondNFAWNdzjDQdC0KMpLkxFib0Q6Dk-WxKHs5lsgKQUtIdnrvGqt5Ii77a0_tqLHCeVDbe2-NkYC6r2g7voPL7-HhhSTknYVTOHzYIOqG07b9SIrsMB3Dv3APsJkpwS4jnxzyWfDFQW9xLjeiZgAhqI/p.png",
+        src: "./images/articleImg/5/blog7.webp",
+
         alt: "Pic7",
       },
     ],

@@ -4362,6 +4362,113 @@ const tasksData = {
       img: require("../images/ReactLesson39.webp"),
       link: "https://www.dropbox.com/scl/fi/5341920t1y5svtm1zfmq3/cakeWebsiteStyles.css?rlkey=xnj3290vh1bpy0whuw70xm4u1&st=z2lwyyas&dl=0",
     },
+    {
+      taskId: "reacttask40",
+      taskTitle: "Interactive 3D Card Viewer",
+      introduction: "An interactive React application that visually enhances user engagement by rotating a 3D-rendered card in response to mouse movements and touch gestures, showcasing both the front and back images dynamically.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the React Project",
+          titleDescription: "",
+          description: [
+            "Initialize a new React project using 'create-react-app' or ensure your existing project is ready.",
+            "Make sure you have the necessary files for the project.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 2: Define the Component",
+          titleDescription: "",
+          description: [
+             "Navigate to App.js file.",
+            "Create a functional component named App.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 3: Implement the useEffect Hook",
+          titleDescription: "",
+          description: [
+            "Inside the App component, use the useEffect hook to run code after the component mounts.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 4: Define handleMouseMove Function",
+          titleDescription: "",
+          description: [
+            "Inside the useEffect hook, define a function handleMouseMove that takes an event object as a parameter.",
+            "Capture the pageX and pageY properties from the event object.",
+            "Select the .card element using document.querySelector('.card').",
+            "Update the style.transform property of the .card element to apply the rotation based on the x and y coordinates.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 5: Define handleTouchMove Function",
+          titleDescription: "",
+          description: [
+            "Inside the same useEffect hook, define a function handleTouchMove that takes an event object as a parameter.",
+             "Capture the pageX and pageY properties from e.touches[0] (the first touch point).",
+            "Select the .card element using document.querySelector('.note').",
+            "Update the style.transform property of the .note element to apply the rotation based on the x and y coordinates.",
+          
+          ],
+        },{
+          stepTitle: "Step 6: Add Cleanup Logic",
+          titleDescription: "",
+          description: [
+            "Inside the same useEffect hook, add event listeners to document.body for the mousemove event and to document for the touchmove event, linking them to handleMouseMove and handleTouchMove, respectively.",
+             "Return a cleanup function from the useEffect hook that removes the event listeners for mousemove and touchmove.",
+          
+          ],
+        },{
+          stepTitle: "Step 7: Define the JSX Structure",
+          titleDescription: "",
+          description: [
+            "Inside the return statement of the App component, create a div with the class name App.",
+             "Inside this div, add another div with the class name card.",
+            "Inside the card div, add two more divs with class names front and back.",
+            "Place img elements inside these divs to display the images for the front and back of the card. Use the src attribute to point to the respective image paths and the alt attribute for accessibility.",
+           
+          ],
+        },{
+          stepTitle: "Step 8: CSS Styling",
+          titleDescription: "",
+          description: [
+            "In a CSS file (index.css)  style the .card, .front, and .back elements.",
+             "Ensure the .card element has a 3D transformation perspective and any necessary styling for rotation.",
+            "Import the CSS file into your component to apply the styles.",
+           
+          ],
+        },{
+          stepTitle: "Step 9: Images",
+          titleDescription: "",
+          description: [
+            "Place the images (image1.jpg and image2.jpg) in the appropriate directory (public/img).",
+           
+          ],
+        },{
+          stepTitle: "Step 10: Test the Component",
+          titleDescription: "",
+          description: [
+            "Run your React project using npm start.",
+             "Open your browser to see the component.",
+            "Move your mouse or touch the screen to see the rotation effect.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "",
+      img: require("../images/ReactLesson40.webp"),
+      link: "https://www.dropbox.com/scl/fi/qad21wuttv9mocekrjdu8/3dRotateCardStyles40.css?rlkey=5dl9a1id5w2aeqpga6k950hen&st=0dbianeo&dl=0",
+    },
     
   ],
 };
