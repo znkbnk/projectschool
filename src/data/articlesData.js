@@ -45,7 +45,7 @@ const blogCards = [
       "This step-by-step guide provides detailed instructions on installing Git and Visual Studio Code, configuring Git, managing repositories, and performing common Git operations such as staging, committing, and pushing changes to a remote repository. Ideal for beginners, this guide ensures a smooth start to using Git in your development workflow.",
     date: "13 July 2024",
     image:
-      "https://previews.dropbox.com/p/thumb/ACVsWSdi2QVvfAwDVlef1T6OikObpg-ZzV7xLzRMR0xoboGuiL8GHESCenjDcQOFhDezj21qWp2w80wX-C0w0yOWfI-V5bGvUe1_3ci6HxAoiG25sjnRBYMLOQqJk6IrTpaAFe4CMiSeuxN6J9Kq6DyLJ3a1PVX9dD9l_9-GJbuMJzdO3juHBrWRzWaPBER3X0rapasNP9R8isUl8UQF8Xk9hpPXTruYo9PItJDYUWeWPa24nIQ6DDPYuErMRBSGBIv9UdqUqGxAPddKhUZmQZoKXzCYla3C8knsUtIiUUE7ez_z3d4Gb9gkOKCmgfqnBfiEBhSD0NdY_st7AP7fhTgp/p.png",
+      "./images/articleImg/5/title.webp",
   },
 ];
 
@@ -277,7 +277,7 @@ const articles = [
   {
     id: 5,
     title: "Git with VSCode",
-    image: "/images/articleImg/gitLogo.webp",
+    image: "/images/articleImg/5/gitLogo.webp",
     paragraphs: [
       {
         type: "text",

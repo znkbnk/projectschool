@@ -4465,7 +4465,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "",
+      codesandboxUrl: "https://codesandbox.io/embed/hch2kt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson40.webp"),
       link: "https://www.dropbox.com/scl/fi/qad21wuttv9mocekrjdu8/3dRotateCardStyles40.css?rlkey=5dl9a1id5w2aeqpga6k950hen&st=0dbianeo&dl=0",
     },
