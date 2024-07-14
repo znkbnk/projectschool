@@ -138,7 +138,7 @@ const articles = [
     id: 3,
     title: "Mastering JavaScript Pagination",
     image:
-      "https://previews.dropbox.com/p/thumb/ACUycNzocrtt-i2wPHZQGrpViqvMrOSe5RJP-yiH9mSGhAikew_TOoMQunFh8Dn53qAtTgvfplrianDM0C6DM2T3ot9KnB4WvgEOUQtKja1pfH7KYPQhQJZ8MYfHR12V3APVFnW1KRXQfk5Oz-yJKhvKl6YnJGSfcx5NWTWAiFbD-WId9uB3MZGXjskfWBInwwQoGC9xpJIL5Kqc_bArxQLorpkwSl1n5AUJ_rLnpgks3pdnxGl2Fv6ULyIOzfSe6vWfdtG2_sTg_9mwdvGKXg7MVKoAXyNAOKJuFFrmDIAa8sGTsEyYWQLSYhoWvv_ua_ZtJ5eJ5vWqohgZYw_5gfVr8O5ph0yxJv8A4ZDjl46g-HgVPgVgsP8YMENvBrLCwTQ/p.png",
+      "https://previews.dropbox.com/p/thumb/ACXrBScqRi8LQFFNcxhL37zoUkA46dW_n7G-H5a0nlBpn3giwrgIwHKw-b9XET6KeV5LPQDnLcD_AkotBUxVDZocTn4dHtl_EZqIQxNqIkWJO2NNaLEsxv0GLGF3nS_7uzbDMSRZUanoU5rbm1hHf9fVSA6pXKK0vYQRbCtDrLyoxYiMhq0iQTbAC_mWO6dM4oUz003FgPU_lyeD76L69CHys4kUyRx38NUSLRKh3naEIex0e-AKB1sV8BHQKaW7M4YUTWkf9S1_dD9l0WERDxfKP0-Ti_RxVYkj-o0BAvCEu4C5NmKnKPfFb6ziEiECzOdNAoBUbzDsNYW0IMaHjHMEp5CU84RzQVsHb7axpPbbmfBPVdPPnl8_gWWCuOX57d8/p.png",
     paragraphs: [
       {
         type: "text",
@@ -159,23 +159,23 @@ const articles = [
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACVh6WCzo4T2P_-_k0IHayPrduhCW_JoBxixZRZ80NXudH75XUiLT29xPIMPxTSi--zuwxL7l_7yLM2itO0WL4Qd_TUrFVPKcZD7QK3ZqaHF9Gz7xSZZsqYd66kIv0LwfdTn0vi4JESrElcHtz5Tu48L_KleuVaN8dRtrRYE6LYIEqmVL63Hckywu2njbcEH0J41yUmZq081eSd4z_EVmO6gdHnsLtTH-Pa0Kenzz3NVlcGO-EMzQ7cdiw1ktLcExzPew08IfJj5jvbD9nv6_FNhaswMs9N83ZJiyvjaMIN4Lh7lxzq8ZRRzvMZTukBkG5Dzeu33bLovcX33UjoXWR0yj6k6EwNiKPreuhdBJCV9PYXfa6LWcs-FF4qqrKIhUco/p.png",
-        alt: "React Icon",
+        src: "https://previews.dropbox.com/p/thumb/ACXHdMOCCWgQ6zf9cSXmkZ_PvHMT8PpMlXUzZKhJog6jxTcLXjvDuGNYsaLswHfa8VmFLBY4zAyUKpBiVM8suJ8inHQtrUB9RF9bs4VGlzRzO9nSvJyhDvwQoKB2SN0SwPzYbmMYmW8v1FEvRPdxQyTAMCpWzyNM570FaiqdWotwSo0dKurb6vcPO3Rf3If3ZVHN-glK2YPO3IewftrzJINYunoD_fovYhsyqfJMKFw2n4lJ-SCXXhdLBEZi6ErTB4HjRfnMl_jvhQgQCqD4GU00A_-bsiUsPAu3uO-AvMf2ZLrk5vu8DB6oOh4EHWqWH0m_ypmFZrf2DY41QTsX0kTf/p.png",
+        alt: "Pic1",
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACXMwtzFvZBeY97WyrEz6LR5h5rNK71TGjWQo_Rn6ufMmtYRvwJuOUwLAuLqypB5-BMoJptTdihVxY1RK5HvmCs4EzYEf-Y4hyBOkjpD9rWezfBLRF27o27OEdj7V57Nexv13JtQ-SM0zqmUewjeV3OcahttPe4IFWo5vRsuxGJMLn5KH7kSZsFNrUM0P2yiijXHNWgNulgbOxsQ1-u4V9R97YXC9Y7_sucwEWl6JORm_rmgNo3RieaJJyGQEAnsOzj4gBR7i_c-KDkaKxdcgHSv1K1uVZa-_nOCe_4dItMiOnJlNdFvR66MlKDSIz4IbO5hQdzSMvWCqgE8z6bz0y-BRac3F-2i2c9y5va94ylSTqXJr07vno30OnyFqMg9k6o/p.png",
-        alt: "React Icon",
+        src: "https://previews.dropbox.com/p/thumb/ACVUaAMahE8cJeZQrYunVXJIzqyQ75gFow75L5m5CgfgFsAm0cw0w9NXciCqGwTK5sf2GfXdsPekkMcXeRxEwk1PSjGUOlHgFdrkxG7M57UXBhCwJOiuaG_yFv_uqiAIvFNaVSFwpIamSdBAVIO7jv2QiVpMoFNnUY3DVXBCsEu-o4N2EIdRk-7iawCz0Ytc7t9xNBNjDdYmW_LQ1l-jzCtfv5aOXnaVrmwbXSlDIHjZeSFwkRyejjZbticqFw49w_vpAiADSudQWzEk9mQSkWJN0sfbLFV_bcDvAplnkU2gRu0nIUZx0N7KV2iUxmt-M_mDpHldn3xYh2_4PYThvrPIaZ2srbAb9czEgEF7xDQ3TB4-5ew_ZCwyVj38aCmHS3g/p.png",
+        alt: "Pic2",
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACWb8ll9aiGicdF4bbizHsveu4IY7NcgyK66d5D-tTK7nSRQ31wiptdAEW-5jqqyCJvf9hvPvaXKqUdjZ5F1XQLUEurb2r_ROD82Lf647g8E4F25Adn4XHXUWLI40iJMm13LnGXqvoz1uaQ_VfWuCyZZJnhbZVY-njfWPcOKMKM_uEgPLADswC0L1g-Zk7kIszqyaAZLrGiObQAjQj8vXr-2gIMHrxT5Ww_yHqqg3bHF9iJZ6y-NtK9kv51SkJlvI1RtNjf8K2tEgqmJS20oGgGWsocESWKa_ccb8vVRRXzpzTI8qiiTsaLYXXPgm4iOdc9WXh5YrP_Wnae0Z-jLkUUQYlgdU87knSzVMtAdFHJTreF7JfLxZEoCuSKt5yKpMvs/p.png",
-        alt: "React Icon",
+        src: "https://previews.dropbox.com/p/thumb/ACXOMvrUrk0fC_jqaXD_Ndgs4NuWDjoaH5TmQ4-5vnutYVJqgcd4-50s6_I3MC6OYmhXh0BRQw0tqFOLGQed659zZg7p83YyvvUTCLNWFlPycXg7W3HsGze2z2pLGVQX4K7_LPrZRkFuJcjtdv7CLD_DSQQDXQQLK0CwTU4bQ6jjIVhD8Mwz9Ij5kyIkahsGfjGfL08sZkAMzdJfEluDUFdsxYWUn2frscVKrfRgt-yM_rIKPWQ8xMILntJt1BN3ljZkh8CU-zTUhmXpJ5PCaQWJBkQiObq_A9qVjlIsBJ8AQJnsEeyLFbcnTDHVBJ-ubtn9grs_UEMq5NFIgQJ4eP2EgtIK6r2wc7PypMrNQZc03cj5QHJYHoRDZqx0Vqzhj4c/p.png",
+        alt: "Pic3",
       },
       {
         type: "image",
-        src: "https://previews.dropbox.com/p/thumb/ACUGaDiLGUCbeqOvn4zeAEp6g95-HTYb7yICcv05F8eZMCignrd9Mv-7RfLbfE8A1SZVSKDEl5LuYydaGqGi_jltUKfPUEilmbCF2eYCUI1a4OB_spPXzNC6RKm3bpc3oTEBBsn-rfEcpej9atAfw8VUNyWLYNVZIpFC-d2lTInU-RDtt8KI3B1N4TckxDF7cNEu2PiCHl3umPkQeVwRJrS730h62vQwr57TLTNnnwnsfWbSAesljfJ9aEqwHgkMEKzEFoNY8Pq1ZiGGBK5EVOc10ncO3FP4Ic3DVkTu40KyNNwWJ-be4wl-PPT7jdLMQ4BUXN6VwbO9SnRiA5ofG-pUMUw9l9MNwCXJdab8EF7ZfywblT5ZLzjqUVIyoeyVN-I/p.png",
-        alt: "React Icon",
+        src: "https://previews.dropbox.com/p/thumb/ACUM0vklbuI69AeOcRi3N0GmHrGlLJMEcVlHa38mJ2UwR6ZIYkKkPRRCaS2jt2YIB5ylk2j8YbwbuhzhWnqu_4zgmqrIzmnG_1cuBhAo1zdVOV6996V8USGWdwwr2Pt7Q2kCIsHxqEFw_Z9dNw_l0NC0udiJJLS0WRzit9f2uKIelBTjVa5Jd8EO1keMQEP2PL6bBMzF7Ihundm8U1iWskjCt8k7L0zxBlkTgRoST6ve2DuYQM0jGjQ7acXrVGquDdlRK6k7SNwn-vobAR2UKKivx0JrKecgSopYVY6ZgXAId9tsE2fnFJcYD3rgESfJEBo65U2a9hJ-dCrpNkdlo8dRcfMxPV6jZMOzYFOMurOzGU6rNoatUlW7Qtw7_fHCejM/p.png",
+        alt: "Pic4",
       },
       {
         type: "text",
