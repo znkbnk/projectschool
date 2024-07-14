@@ -205,7 +205,7 @@ const articles = [
     id: 4,
     title: "Going Live with Stripe in Your React Project",
     image:
-      "https://previews.dropbox.com/p/thumb/ACWHrEEocOeW4a-se9v5ZB2A4IgtzDV-ffgPB3ZXgOY5nXqty900BOwFI2V1ROvpekL97p66MRr3LO11-RqlQdbzAbgV7j9BprfzL-MortkYmgk3MVCnH2psZUvRRD0GE82QSRxrClvqaF10_aeF7gKqw5h7i_POnz-oBIggdC3CYeYGTElGrLvjKsqND8WtVMEM8vXzTDtrYJfF8DbjEGNpqNKLNGhN00zOWr39-QcbpjVGsnJrw0EZkSaYCm0eYIKfu82tJrxpcrENz4PwvMLSq5pIZGCnLdCREE6WFpf_a9kiGuhSjG4yc1XH1u9vs4hOiTwopLhy_mgGkH3iG4cy_heT8isARGjN06KuREX_m-OEs3AHHYSaElsM-ToAOOE/p.png",
+      "https://previews.dropbox.com/p/thumb/ACXVLpoSw9Vig8CjWqPFcL-xV5YSsFrrklllhD5vPORvyMWOuahnYpzBQFbmNGHsar3ksKVW2qB6K1wx0XAsrM6WuFUjVOfaerFfcyP1v5oA53n4zDZjglje9CrVFyIMK8TQmj_71E8zoE6AxgVQlUpqvJjEisQzKbDLegwsTXWr_nNqJw_j9KNQxCV19R7B-Yzz9HOf6dDHaPQ4cvBqEITOrkm6USXiOup38dsw1LBHcrA72P2iXdyqRf0r0Ibnt8LNCh7N5eiAKFH6wSHOCe5IHBCYakU9ZK4sJ07S9zWFvLzYa6gIupZ-JxTPdYpwHzGwUSWgCdcqSlJ25GXDbczvlzycAfmIRO5VajbyjFdvZdkiMKCItTvUIZxYwaDhzog/p.png",
     paragraphs: [
       {
         type: "text",
