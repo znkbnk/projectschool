@@ -4469,6 +4469,147 @@ const tasksData = {
       img: require("../images/ReactLesson40.webp"),
       link: "https://www.dropbox.com/scl/fi/qad21wuttv9mocekrjdu8/3dRotateCardStyles40.css?rlkey=5dl9a1id5w2aeqpga6k950hen&st=0dbianeo&dl=0",
     },
+    {
+      taskId: "reacttask41",
+      taskTitle: "DevPortfolio",
+      introduction: "DevPortfolio is a personal portfolio website designed for web developers to showcase their skills, projects, and contact information in a clean and professional manner. It features smooth navigation, interactive project filters, and a responsive design, making it an ideal platform for highlighting your digital portfolio.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: ",
+          titleDescription: "Setup Your React Project",
+          description: [
+            "Use 'create-react-app' to set up a new React project.",
+            "Navigate to the project directory.",
+            "Install 'react-router-dom' using npm to handle the routing in your application.",
+            "Create a 'components' directory inside the 'src' folder.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Navbar Component",
+          titleDescription: "Navbar.js",
+          description: [
+             "Navigate to the 'components' directory.",
+            "Create a new file named Navbar.js.",
+            "Import 'React', 'useState', 'useEffect' from 'react'.",
+            "Import 'Link' from 'react-router-dom'.",
+            "Define a state to track the scroll position.",
+            "Set up an effect to handle scroll events.",
+            "In return statement: Create a 'nav' element. Add a 'div' for the logo using 'Link' to navigate to the home page. Create an unordered list with 'Link' elements for Home, About, Portfolio, and Contact.",
+            "Add a class to the 'nav' element based on the scroll position.",
+            "Export the 'Navbar' component for use in other parts of the app.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 3: Home Component",
+          titleDescription: "Home.js",
+          description: [
+            "Navigate to the 'components' directory.",
+           "Create a new file named Home.js.",
+            "Import 'React' and 'Link' from 'react-router-dom'.",
+            "in return statement: Create a section element for the home content. Add a heading for the welcome message. Add a paragraph describing yourself. Add a 'Link' element styled as a button to navigate to the Portfolio page.",
+            "Export the 'Home' component for use in other parts of the app.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 4: About Component",
+          titleDescription: "About.js",
+          description: [
+            "Navigate to the 'components' directory.",
+            "Create a new file named About.js.",
+            "Import 'React'.",
+            "Create an array of skills (e.g., HTML, CSS, JavaScript, etc.).",
+            "In return statement: Create a section element for the about content. Add a heading for the About section. Add a paragraph describing yourself. Create a subsection for skills. Use an unordered list to display skills dynamically.",
+            "Export the 'About' component for use in other parts of the app.",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Portfolio Component",
+          titleDescription: "Portfolio.js",
+          description: [
+            "Navigate to the 'components' directory.",
+             "Create a new file named Portfolio.js.",
+            "Import 'React' and 'useState'.",
+            "Create a state to track the selected filter.",
+            "Create an array of projects with properties like id, title, category, and image URL.",
+            "Filter the projects based on the selected filter.",
+            "In return statement: Create a section element for the portfolio content. Add a heading for the Portfolio section. Add buttons for filtering projects (All, Web, Mobile, Design). Create a grid to display the filtered projects. Use project data to dynamically generate project cards.",
+            "Export the 'Portfolio' component for use in other parts of the app.",
+
+          ],
+        },{
+          stepTitle: "Step 6: Contact Component",
+          titleDescription: "Contact.js",
+          description: [
+            "Navigate to the 'components' directory.",
+             "Create a new file named Contact.js.",
+            "Import 'React' and 'useState'.",
+            "Create a state to manage form data (name, email, message).",
+            "Define functions to handle form changes and form submission.",
+            "In return statement: Create a section element for the contact content. Add a heading for the Contact section. Create a form with input fields for name, email, and message. Add a submit button.",
+            "Export the 'Contact' component for use in other parts of the app.",
+          ],
+        },{
+          stepTitle: "Step 7: Footer Component",
+          titleDescription: "Footer.js",
+          description: [
+            "Navigate to the 'components' directory.",
+             "Create a new file named Footer.js.",
+            "Import 'React'.",
+            "In return statement: Create a footer element. Add a paragraph with copyright information. Add links to social media profiles (GitHub, LinkedIn, Twitter).",
+            "Export the 'Footer' component for use in other parts of the app.",
+           
+          ],
+        },{
+          stepTitle: "Step 8: Setup Routing",
+          titleDescription: "App.js",
+          description: [
+            "Ensure you are in the src directory of your project.",
+             "Create a new file named App.js if it doesn't already exist.",
+            "Import React from 'react'.",
+            "Import BrowserRouter, Routes, and Route from 'react-router-dom'.",
+            "Import all the components you created: Navbar, Home, About, Portfolio, Contact, and Footer.",
+            "Wrap the entire application inside the BrowserRouter component to enable routing.",
+            "Include the Navbar component at the top so it appears on all pages.",
+            "Use the Routes component to define different Route elements for each page (Home, About, Portfolio, Contact).",
+            "Set the path for each route to match the desired URL (e.g., '/', '/about', '/portfolio', '/contact').",
+           "Set the element for each route to the corresponding component (e.g., Home, About, Portfolio, Contact).",
+           "Include the Footer component at the bottom so it appears on all pages.",
+           "Export the App component as the default export.",
+          
+          ],
+        },{
+          stepTitle: "Step 9: Add Styles",
+          titleDescription: "",
+          description: [
+            "Create a 'styles' directory inside the 'src' folder.",
+             "Add necessary CSS files to style your components.",
+            "Import these CSS files into your respective component files.",
+            
+          ],
+        },{
+          stepTitle: "Step 10: Testing and Final Adjustments",
+          titleDescription: "",
+          description: [
+            "Run your project using 'npm start'.",
+             "Test all the routes and components to ensure they are working as expected.",
+            "Make any final adjustments to styles and functionality.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/xz4mnz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson41.webp"),
+      link: "https://www.dropbox.com/scl/fi/p9ac4rqzkxd26umkaus8k/devPortfolioStyles41.css?rlkey=g99lp00iol89oewka2fnyojwa&st=bkpj1345&dl=0",
+    },
     
   ],
 };
