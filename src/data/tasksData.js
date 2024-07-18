@@ -4610,6 +4610,150 @@ const tasksData = {
       img: require("../images/ReactLesson41.webp"),
       link: "https://www.dropbox.com/scl/fi/p9ac4rqzkxd26umkaus8k/devPortfolioStyles41.css?rlkey=g99lp00iol89oewka2fnyojwa&st=bkpj1345&dl=0",
     },
+    {
+      taskId: "reacttask42",
+      taskTitle: "Fruit Carousel",
+      introduction: "Fruit Carousel is an interactive image carousel component that showcases a variety of fruit images. Users can navigate through the carousel using scroll gestures or navigation buttons, with a dynamic progress bar indicating the current slide position.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up Your Project",
+          titleDescription: "",
+          description: [
+            "Use Create React App or any other React setup to initialize your project.",
+            "Open a terminal and run 'npx create-react-app my-carousel-app'.",
+            "If you don't have them already, install the packages you need using npm.",
+            "For instance, run npm install in your project directory.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create a New Component File",
+          titleDescription: "Carousel.js",
+          description: [
+             "Navigate to your 'src' folder.",
+            "Create a file named Carousel.js.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 3: Define the Component Structure",
+          titleDescription: "",
+          description: [
+            "At the top of Carousel.js, import React, and the hooks useState, useEffect, and useCallback from the react library.",
+           "Create a functional component named Carousel. This component will receive 'items' as a prop, which is an array of objects representing each carousel item.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 4: Initialize State",
+          titleDescription: "",
+          description: [
+            "'activeIndex': Use 'useState' to define this state variable, initializing it to '1'. This will track the index of the currently active item.",
+            "'visibleItems': Define another state variable to hold the items currently visible in the carousel. Initialize it as an empty array.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 5: Handle Visible Items",
+          titleDescription: "",
+          description: [
+            "Create a function named 'updateVisibleItems' that takes 'index' as a parameter.",
+             "Compute the indices for the previous, current, and next items, accounting for circular navigation (wrap-around using modular arithmetic).",
+            "Set 'visibleItems' to an array containing the previous, current, and next items.",
+            "Use 'useCallback' to memoize 'updateVisibleItems' so it only changes when 'items' changes.",
+            "Use 'useEffect' to call 'updateVisibleItems' whenever 'activeIndex' changes. This ensures the visible items are updated accordingly.",
+          
+          ],
+        },{
+          stepTitle: "Step 6: Add Navigation Logic",
+          titleDescription: "",
+          description: [
+            "'nextSlide': Define a function to increment 'activeIndex' and handle wrap-around to the beginning of the list.",
+             "'prevSlide': Define a function to decrement 'activeIndex' and handle wrap-around to the end of the list.",
+            "Use 'useCallback' to memoize 'nextSlide' and 'prevSlide' functions so they only re-create when 'items.length' changes.",
+           
+          ],
+        },{
+          stepTitle: "Step 7: Handle Scrolling",
+          titleDescription: "",
+          description: [
+            "Define a function named 'handleScroll' that determines scroll direction and calls either 'nextSlide' or 'prevSlide' accordingly.",
+             "Use 'useCallback' to memoize 'handleScroll' so it doesn't get re-created unnecessarily.",
+            "Use 'useEffect' to attach a 'wheel' event listener to the carousel container.",
+            "Ensure the event listener is removed when the component unmounts to avoid memory leaks.",
+           
+          ],
+        },{
+          stepTitle: "Step 8: Render the Carousel Items",
+          titleDescription: "",
+          description: [
+            "Inside the return statement of the component, map over 'visibleItems' to render each item.",
+             "Assign a unique 'key' to each item, and conditionally apply CSS classes to indicate the item's position (e.g., active, prev, next).",
+            "Attach an 'onClick' event handler to each item that updates 'activeIndex' to the index of the clicked item.",
+           
+          ],
+        },{
+          stepTitle: "Step 9: Add Navigation Buttons",
+          titleDescription: "",
+          description: [
+            "Add two buttons for navigation: one for moving to the previous slide and one for moving to the next slide.",
+             "Attach the 'prevSlide' and 'nextSlide' functions to the 'onClick' event handlers of these buttons.",
+          
+          ],
+        },{
+          stepTitle: "Step 10: Add a Progress Bar",
+          titleDescription: "",
+          description: [
+            "Add a progress bar element below or above the carousel items.",
+             "Style the progress bar to visually indicate the current slide position based on 'activeIndex'. Adjust its width proportionally to the total number of items.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 11: Add Styles",
+          titleDescription: "",
+          description: [
+            "Inside the src folder, create a new CSS file named Carousel.css.",
+             "Add styles for the carousel container, items, navigation buttons, and progress bar.",
+            "Use appropriate class names in the JSX of your 'Carousel' component to apply these styles.",
+            "Import the Carousel.css file into your Carousel.js file.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 12: Use the Carousel Component",
+          titleDescription: "App.js",
+          description: [
+            "Open the App.js file and import the Carousel component.",
+             "Define an array of objects representing the items you want to display in the carousel. Each object should include properties like 'title', 'num', and 'img'.",
+            "Pass the array of items as a prop to the Carousel component in your App component.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 13: Test the Component",
+          titleDescription: "",
+          description: [
+            "Start your React development server by running 'npm start'.",
+             "Open your browser and navigate to http://localhost:3000 to see your carousel in action.",
+            "Ensure that the navigation buttons work correctly.",
+            "Check that the items update appropriately when scrolled using the mouse wheel.",
+            "Verify that clicking on an item updates the active index.",
+           
+          ],
+        },
+        
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/3k8v5w?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson42.webp"),
+      link: "https://www.dropbox.com/scl/fi/3zmbt7rd0hl9n7i9fya98/fruitCarouselStyles42.css?rlkey=fd4uapnbjql7bct0z47trq6h6&st=ywle4l8y&dl=0",
+    },
     
   ],
 };
