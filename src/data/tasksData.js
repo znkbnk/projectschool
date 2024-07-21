@@ -4776,6 +4776,8 @@ const tasksData = {
              "Run 'npm install react-router-dom'.",
             "Run 'npm install react-slick slick-carousel'.",
             "Run 'npm install @fortawesome/fontawesome-free'. Make sure you add <link> in your index.html file",
+            "Run 'npm install react-scroll'.",
+
           
           ],
         },
