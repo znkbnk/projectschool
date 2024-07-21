@@ -4754,6 +4754,175 @@ const tasksData = {
       img: require("../images/ReactLesson42.webp"),
       link: "https://www.dropbox.com/scl/fi/3zmbt7rd0hl9n7i9fya98/fruitCarouselStyles42.css?rlkey=fd4uapnbjql7bct0z47trq6h6&st=ywle4l8y&dl=0",
     },
+    {
+      taskId: "reacttask43",
+      taskTitle: "FitLife Website",
+      introduction: "FitLife is a modern and dynamic fitness website designed to provide personalized fitness programs, expert trainer insights, and seamless user interaction. With a focus on engaging visuals and smooth navigation, FitLife aims to inspire and support users on their fitness journey.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setup React Application",
+          titleDescription: "",
+          description: [
+            "Run 'npx create-react-app your-app-name' in your terminal.",
+            "Navigate to the project directory using 'cd your-app-name'.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 2: Install Required Dependencies",
+          titleDescription: "",
+          description: [
+             "Run 'npm install react-router-dom'.",
+            "Run 'npm install react-slick slick-carousel'.",
+            "Run 'npm install @fortawesome/fontawesome-free'. Make sure you add <link> in your index.html file",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create Navbar Component",
+          titleDescription: "Navbar.js",
+          description: [
+            "File Location: src/components/Navbar.js",
+           "Create a functional component named 'Navbar'.",
+            "Import 'useState' and 'useEffect' from React for managing state and side effects.",
+            "Import 'Link' from 'react-scroll' for smooth scrolling links.",
+            "Create state variables 'isNavOpen' (to handle the toggle state of the navbar in mobile view) and 'isScrolled' (to apply a sticky effect on scroll).",
+            "Set up an event listener for the window's scroll event inside 'useEffect'.",
+            "Create a function to update 'isScrolled' based on the window's scroll position.",
+            "Remove the event listener in the cleanup function of 'useEffect'.",
+            "Define a 'nav' element with conditional class names based on 'isScrolled'.",
+            "Include a brand logo wrapped in a 'Link' component for scrolling to the home section.",
+            "Add a button for the hamburger menu to toggle 'isNavOpen'.",
+            "Create a 'div' for the collapsible navbar content with conditional class names based on 'isNavOpen'.",
+            "Inside the 'div', add 'ul' with 'li' elements for navigation links to different sections.",
+            "Write CSS to style the navbar, making it responsive and adding a sticky effect.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create HeroSection Component",
+          titleDescription: "HeroSection.js",
+          description: [
+            "File Location: src/components/HeroSection.js.",
+            "Create a functional component named 'HeroSection'.",
+            "Import 'Link' from 'react-scroll' for the call-to-action button.",
+            "Define a 'div' element with a class 'hero-section'.",
+            "Add a 'video' element for the background video.",
+            "Create a 'div' for the content, including a heading, a paragraph, and a 'Link' button for smooth scrolling to the contact section.",
+            "Include a 'div' with a 'Link' element for smooth scrolling to the about section, representing the scroll-down indicator.",
+            "Write CSS to style the hero section, ensuring the video covers the entire background and the content is centered and visually appealing.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create AboutSection Component",
+          titleDescription: "AboutSection.js",
+          description: [
+            "File Location: src/components/AboutSection.js.",
+             "Create a functional component named 'AboutSection'.",
+            "This function has an empty body. Next steps must be achieved in return statements.",
+            "Define a 'section' element with an id 'about' and class 'about-section'.",
+            "Add a 'div' with a class 'container' to center the content.",
+            "Create a 'h2' element for the section heading.",
+            "Add a 'div' with a class 'about-cards' to contain the service cards.",
+            "Inside the 'about-cards' div, create multiple 'div' elements with a class 'about-card', each containing an icon, a 'h3' element for the service title, and a 'p' element for the service description.",
+            "Write CSS to style the about section and cards, ensuring they are visually appealing and responsive.",
+           
+          ],
+        },{
+          stepTitle: "Step 6: Create TrainersSection Component",
+          titleDescription: "TrainersSection.js",
+          description: [
+            "File Location: src/components/TrainersSection.js.",
+             "Create a functional component named 'TrainersSection'.",
+            "Import 'Slider' from 'react-slick' and the necessary CSS files for the carousel.",
+            "Define the settings for the carousel, including properties like 'dots', 'infinite', 'speed', 'slidesToShow', 'slidesToScroll', and responsive breakpoints.",
+            "Define a 'section' element with an id 'trainers' and class 'trainers-section'.",
+            "Add a 'div' with a class 'container' to center the content.",
+            "Create a 'h2' element for the section heading.",
+            "Add the 'Slider' component and map through the trainers' data to generate 'div' elements for each trainer card.",
+            "Each trainer card should contain an 'img' element for the trainer's image, a 'div' for trainer info, including the trainer's name, a 'p' element for the trainer's role, and a 'div' for social media links.",
+            "Write CSS to style the trainers section and cards, ensuring the carousel is visually appealing and responsive.",
+          
+          ],
+        },{
+          stepTitle: "Step 7: Create ContactForm Component",
+          titleDescription: "ContactForm.js",
+          description: [
+            "File Location: src/components/ContactForm.js.",
+             "Create a functional component named 'ContactForm'.",
+            "Import 'useState' from React for managing form data and submission state.",
+            "Create state variables for form data (name, email, message) and a submission state (isSubmitted).",
+            "Define 'handleChange' function to update form data state on input change.",
+            "Define 'handleSubmit' function to handle form submission, prevent default form behavior, log form data, and set 'isSubmitted' to 'true'.",
+            "Define a 'section' element with an id 'contact' and class 'contact-section'.",
+            "Add a 'div' with a class 'container' to center the content.",
+            "Create a 'h2' element for the section heading.",
+            "Conditionally render a success message or the form based on 'isSubmitted'.",
+            "Define the form structure with 'div' elements for each form group (input fields for name, email, and a textarea for the message).",
+            "Add a submit button to the form.",
+            "Write CSS to style the contact form and success message, ensuring they are visually appealing and responsive.",
+            
+          ],
+        },{
+          stepTitle: "Step 8: Create Footer Component ",
+          titleDescription: "Footer.js",
+          description: [
+            "File Location: src/components/Footer.js.",
+             "Create a functional component named 'Footer'.",
+            "Import 'Link' from 'react-scroll' for smooth scrolling.",
+            "This function has an empty body. Next steps must be achieved in return statements.",
+            "Define a 'footer' element with a class 'footer'.",
+            "Add a 'div' with a class 'container' to center the content.",
+            "Create 'div' elements for footer content sections: brand info, quick links, and newsletter subscription.",
+            "In the quick links section, use 'Link' components for smooth scrolling to different sections.",
+            "In the newsletter section, create a form with an input field for email and a submit button.",
+            "Add a 'div' for social media icons, including links to social platforms.",
+            "Add a 'div' for the footer bottom content, including a copyright notice and a back-to-top button using a 'Link' component.",
+            "Write CSS to style the footer, ensuring it is visually appealing and responsive.",
+            "",
+          ],
+        },{
+          stepTitle: "Step 9: Assemble Components in App Component",
+          titleDescription: "App.js",
+          description: [
+            "File Location: src/App.js.",
+             "Import BrowserRouter from react-router-dom.",
+            "Wrap the entire return statement in App with BrowserRouter.",
+            "Import all created components: Navbar, HeroSection, AboutSection, TrainersSection, ContactForm, and Footer.",
+            "Inside the div with class App, arrange the imported components in the following order: <Navbar /> <HeroSection /> <AboutSection /> <TrainersSection /> <ContactForm /> <Footer />",
+            "Ensure the overall layout and styling in App.css to maintain consistency and responsiveness across all sections.",
+            
+          ],
+        },{
+          stepTitle: "Step 10: Configure React Slick adn Smooth Scrolling",
+          titleDescription: "",
+          description: [
+            "Import 'slick-carousel/slick/slick.css' and 'slick-carousel/slick/slick-theme.css' in TrainersSection.js.",
+             "Import Link from react-scroll in components where smooth scrolling is needed.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 11: Configure React Slick adn Smooth Scrolling",
+          titleDescription: "",
+          description: [
+            "Run npm start to start the development server.",
+             "Ensure each component renders correctly and functionalities like form submission, smooth scrolling, and the carousel work as expected.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/q38qf8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson43.webp"),
+      link: "https://www.dropbox.com/scl/fi/hss5y8g4imrp6e1bu8599/fitLifeWebsiteStyles43.css?rlkey=f6p5xjadpst8bxp8eo0afp1jd&st=46rlozwl&dl=0",
+    },
     
   ],
 };
