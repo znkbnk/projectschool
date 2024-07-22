@@ -4925,6 +4925,107 @@ const tasksData = {
       img: require("../images/ReactLesson43.webp"),
       link: "https://www.dropbox.com/scl/fi/hss5y8g4imrp6e1bu8599/fitLifeWebsiteStyles43.css?rlkey=f6p5xjadpst8bxp8eo0afp1jd&st=46rlozwl&dl=0",
     },
+    {
+      taskId: "reacttask44",
+      taskTitle: "React FAQ Toggle",
+      introduction: "A dynamic FAQ component built with React that allows users to expand and collapse answers to frequently asked questions, providing a clean and interactive way to present information. This project demonstrates efficient state management and conditional rendering using React hooks.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setting Up Your React Project",
+          titleDescription: "",
+          description: [
+            "Open your terminal and run: 'npx create-react-app faq-project' then 'cd faq-project' and to run it use this command: 'npm start'",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create the FAQ Component",
+          titleDescription: "",
+          description: [
+             " In your src directory, create a new file called FAQ.js.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 3: Import Necessary React Modules",
+          titleDescription: "",
+          description: [
+            " Import the useState hook from React at the top of your FAQ.js file.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 4: Set Up State for Active FAQ Item",
+          titleDescription: "",
+          description: [
+            "Use useState to manage the active FAQ item's index. Initialize it to null.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 5: Define the FAQ Data",
+          titleDescription: "",
+          description: [
+            "Each object in the array should represent a question and its corresponding answer. (You can make it in separate file if you want).",
+           
+          ],
+        },{
+          stepTitle: "Step 6: Create a Function to Toggle FAQ Items",
+          titleDescription: "This function will handle the logic for expanding or collapsing the FAQ items when a question is clicked.",
+          description: [
+            "Compare the passed index with the current active index stored in the state.",
+             "If the passed index matches the current active index, it means the same item is being clicked again, so set the active index to null (collapse the item).",
+            "If the passed index does not match the current active index, set the active index to the passed index (expand the new item).",
+          
+          ],
+        },{
+          stepTitle: "Step 7: Render the FAQ List",
+          titleDescription: "",
+          description: [
+            "Use the map method to iterate over the array of FAQ data.",
+             "For each item in the array, generate a list item element.",
+            "Wrap each FAQ item (question and answer) in a list item element.",
+            "Create a button element that displays the FAQ question.",
+            "Attach an onClick event listener to the button, which calls the toggle function with the current index as the argument.",
+            "Within the list item, conditionally render the FAQ answer based on the active index.",
+            "Check if the current index matches the active index.",
+            "If it matches, render the answer.",
+            "If it does not match, do not render the answer (or render it in a hidden state).",
+        
+          ],
+        },{
+          stepTitle: "Step 8: Add CSS for Styling",
+          titleDescription: "",
+          description: [
+            "Create a new CSS file (e.g., FAQ.css) and import it into your FAQ.js file. Add styles for the FAQ container, list, items, questions, and answers. Include styles for the active state to show and hide the answers appropriately.",
+          
+          ],
+        },{
+          stepTitle: "Step 9: Integrate the FAQ Component",
+          titleDescription: "",
+          description: [
+            "Import and use the FAQ component in your App.js file.",
+           
+          ],
+        },{
+          stepTitle: "Step 10: Test Your Application",
+          titleDescription: "",
+          description: [
+            "Test the FAQ component in your browser to ensure it works as expected. Each question should toggle the visibility of its answer when clicked.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/gc2rr9?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson44.webp"),
+      link: "https://www.dropbox.com/scl/fi/zzttfwhebm19xhtovltz6/FAQStyles44.css?rlkey=bjn41i22taygvx7z5jvtvjyqn&st=ezegm8sb&dl=0",
+    },
     
   ],
 };
