@@ -4868,7 +4868,7 @@ const tasksData = {
             
           ],
         },{
-          stepTitle: "Step 8: Create Footer Component ",
+          stepTitle: "Step 8: Create Footer Component",
           titleDescription: "Footer.js",
           description: [
             "File Location: src/components/Footer.js.",

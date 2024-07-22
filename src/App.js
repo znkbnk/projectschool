@@ -1,4 +1,3 @@
-// App.js
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -24,6 +23,7 @@ import Success from "./Stripe/Success";
 import Cancel from "./Stripe/Cancel";
 import Articles from "./Blog/Articles";
 import LaravelLessons from "./Exercises/LaravelLessons";
+import usePageTracking from './usePageTracking'; // Import the custom hook
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -33,6 +33,8 @@ function ScrollToTopOnNavigation() {
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
+
+  usePageTracking(); // Use the custom hook
 
   useEffect(() => {
     const fetchUserData = async (user, retries = 5, delay = 3000) => {
