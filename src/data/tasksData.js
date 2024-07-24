@@ -4002,9 +4002,11 @@ const tasksData = {
             "Add another <a> element with href='/', data-target='mobile-demo', and class sidenav-trigger button-collapse. Inside this <a>, use an <i> element with class material-icons and text 'menu' for the mobile menu toggle icon.",
             "Create two <ul> elements.",
             "The first <ul> with class right hide-on-med-and-down for desktop navigation.",
-            "Inside, include <li> elements with <a> tags and href="/". Each <a> represents a navigation link (Intro, Header, Footer).",
+            "Inside, include <li> elements with <a> tags and href=" /
+              ". Each <a> represents a navigation link (Intro, Header, Footer).",
             "The second <ul> with class sidenav and id='mobile-demo' for mobile navigation.",
-            "Inside, include <li> elements with <a> tags and href="/", similar to the desktop navigation.",
+            "Inside, include <li> elements with <a> tags and href=" /
+              ", similar to the desktop navigation.",
           ],
         },
         {
@@ -4039,7 +4041,8 @@ const tasksData = {
             "Use <div className='col s12'> to create columns that span the entire width on small screens and adjust based on screen size (s12 for small screens, m6 for medium screens, etc.).",
             "Inside each column (<div className='col s12'>): Include <h2> elements for headings (Intro, header, Add more stuff here, Directions).",
             "Use <p> elements for paragraphs (Lorem ipsum... text).",
-            "Use <span> elements with nested <a> tags for clickable links (Clickable Link: <a href="/">link text</a>).",
+            "Use <span> elements with nested <a> tags for clickable links (Clickable Link: <a href=" /
+              ">link text</a>).",
             "Include <div> elements with class divider to create visual dividers.",
             "Use <div> elements with class img-box for image boxes (<div className='img-box'><img ... /><div className='text'>...</div></div>).",
             "Use <img> elements with class responsive-img materialboxed for responsive images with MaterializeCSS styles.",
@@ -4074,24 +4077,24 @@ const tasksData = {
             "Return a <div> element as the root element (<div> wraps all the content).",
             "Inside the <div>, include the imported components: <Navbar />, <Header />, <Content />, <Footer />.",
             "Feel free to use any other elements from MaterializeCSS.",
-          
           ],
         },
-       
       ],
       taskType: "React",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/ttfk2x?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/ttfk2x?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson37.webp"),
       link: "https://www.dropbox.com/scl/fi/7mx73bv5jmwrwm2o1dc3u/MaterializePorfolioStyles.css?rlkey=rw3ql2v2oweo4blr5jw0tozwx&st=03lht5j2&dl=0",
     },
     {
       taskId: "reacttask38",
       taskTitle: "React File Uploader",
-      introduction: "React File Uploader is a user-friendly component designed for easy file selection, display, download, and deletion. It leverages React's hooks for state management and provides a seamless interface for managing files within a web application. In real-world applications, files are usually saved in the backend, but for learning purposes, this project does not include backend integration and temporarily stores files in the browser's memory.",
+      introduction:
+        "React File Uploader is a user-friendly component designed for easy file selection, display, download, and deletion. It leverages React's hooks for state management and provides a seamless interface for managing files within a web application. In real-world applications, files are usually saved in the backend, but for learning purposes, this project does not include backend integration and temporarily stores files in the browser's memory.",
 
       steps: [
         {
@@ -4101,16 +4104,14 @@ const tasksData = {
             "If you don't have 'create-react-app' installed, install it using 'npm install -g create-react-app'.",
             "Create a new project using 'create-react-app file-upload-app'.",
             "Navigate into your project directory using 'cd file-upload-app'.",
-           
           ],
         },
         {
           stepTitle: "Step 2: Set Up Component Structure",
           titleDescription: "",
           description: [
-             "Inside the 'src' directory, create a new file named FileUploadComponent.js.",
+            "Inside the 'src' directory, create a new file named FileUploadComponent.js.",
             "At the top of your file, import 'useRef' and 'useState' from React.",
-           
           ],
         },
         {
@@ -4118,9 +4119,8 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Create a functional component named 'FileUploadComponent'.",
-           "Use the 'useRef' hook to create a reference for the file input element.",
+            "Use the 'useRef' hook to create a reference for the file input element.",
             "Use the 'useState' hook to create a state variable to hold an array of file data.",
-         
           ],
         },
         {
@@ -4130,7 +4130,6 @@ const tasksData = {
             "Inside your 'FileUploadComponent' function, define a function named 'handleButtonClick'.",
             "Access the file input element using 'fileInputRef.current'.",
             "Call the 'click' method on this element.",
-          
           ],
         },
         {
@@ -4138,61 +4137,61 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Inside your 'FileUploadComponent' function, define a function named 'handleFileChange'.",
-             "Access the selected files using 'fileInputRef.current.files'.",
+            "Access the selected files using 'fileInputRef.current.files'.",
             "Convert the 'FileList' to an array using 'Array.from'.",
             "Map over the array to create a new array of objects containing 'name' and 'url' properties for each file.",
             "Use 'URL.createObjectURL' to create a URL for each file.",
             "Update the state with the new array of file data objects.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Handle File Deletion",
           titleDescription: "",
           description: [
             "Inside your 'FileUploadComponent' function, define a function named 'handleFileDelete'.",
-             "Accept the index of the file to be deleted as a parameter.",
+            "Accept the index of the file to be deleted as a parameter.",
             "Use the 'filter' method to create a new array excluding the file at the specified index.",
             "Update the state with the new array.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Display Selected Files",
           titleDescription: "",
           description: [
             "In your JSX, conditionally render the file names if there are any files selected.",
-             "Check if 'filesData' array has any elements.",
+            "Check if 'filesData' array has any elements.",
             "If yes, map over the 'filesData' array to render a list of file names.",
             "If no, display a message indicating that no files are selected.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Enable File Download",
           titleDescription: "",
           description: [
             "In your JSX, 'map' over the 'filesData' array to create download links for each file.",
-             "Use the map method on the 'filesData' array to create download links.",
+            "Use the map method on the 'filesData' array to create download links.",
             "For each file, use an anchor (<a>) tag with 'href' set to the file's URL and 'download' attribute set to the file's name.",
             "Next to each download link, include a button to delete the file, wired to the 'handleFileDelete' function.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Style the Component",
           titleDescription: "",
           description: [
             "Create a CSS file, e.g., FileUploadComponent.css, to style the component.",
-             "Import this CSS file into your FileUploadComponent.js.",
+            "Import this CSS file into your FileUploadComponent.js.",
             "Or simply download the styles from the link provided below.",
-        
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Export, Use and test the Component",
           titleDescription: "",
           description: [
             "Export the 'FileUploadComponent' at the end of your file.",
-             "Open 'App.js' and import the FileUploadComponent.",
+            "Open 'App.js' and import the FileUploadComponent.",
             "Use the component inside the 'App' component's JSX.",
             "Start your React development server with 'npm start'.",
             "Open your browser and navigate to 'http://localhost:3000' to test the file upload functionality.",
-           
           ],
         },
       ],
@@ -4201,14 +4200,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/ympqz7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/ympqz7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson38.webp"),
       link: "https://www.dropbox.com/scl/fi/ev1q8sptptruyjujramev/FileUploadStyles.css?rlkey=a9ry3oeydjadfkzx6ox9rx3v2&st=3p49abh4&dl=0",
     },
-     {
+    {
       taskId: "reacttask39",
       taskTitle: "Cake Website",
-      introduction: "This project is a responsive React application designed to simulate the online presence of a bakery. It includes essential components like a dynamic navigation bar, a rotating showcase of bakery specials, and a footer with contact information and social media links. Utilizing React hooks such as useState and useEffect, along with custom hooks for scroll and email validation, the application enhances user interaction and responsiveness, offering a seamless browsing experience for potential customers exploring the bakery's offerings and services.",
+      introduction:
+        "This project is a responsive React application designed to simulate the online presence of a bakery. It includes essential components like a dynamic navigation bar, a rotating showcase of bakery specials, and a footer with contact information and social media links. Utilizing React hooks such as useState and useEffect, along with custom hooks for scroll and email validation, the application enhances user interaction and responsiveness, offering a seamless browsing experience for potential customers exploring the bakery's offerings and services.",
 
       steps: [
         {
@@ -4218,26 +4219,24 @@ const tasksData = {
             "Use 'create-react-app' to set up a new React project.",
             " Install necessary packages for icons. 'npm install 'react-icons''",
             "Organize your components in a components folder and hooks in a hooks folder.",
-            
           ],
         },
         {
           stepTitle: "Step 2: Implement NavBar Component",
           titleDescription: "NavBar.js",
           description: [
-             "Navigate to the src/components directory in your project.",
+            "Navigate to the src/components directory in your project.",
             "Create a new file named Navbar.js.",
             "Import React and the necessary hooks (useState, useEffect).",
             "Import the required icons from 'react-icons'.",
             "Import the 'useScrollEffect' custom hook (refer to step 6).",
-            "Define a functional component named Navbar.", 
+            "Define a functional component named Navbar.",
             "Inside the component: Create a state variable to manage the open/close state of the navigation menu.",
             "Use the 'useScrollEffect' hook to manage the scroll effect.",
             "Create a state variable to manage the number of items in the cart (for simulation purposes only).",
-             "Use 'useEffect' to set the cart items with a random number for now.", 
+            "Use 'useEffect' to set the cart items with a random number for now.",
             "Define a function to toggle the navigation menu.",
             "Return JSX for the Navbar, including a logo, a button to toggle the menu, navigation links, and a cart icon with a count.",
-            
           ],
         },
         {
@@ -4245,7 +4244,7 @@ const tasksData = {
           titleDescription: "MainSection.js",
           description: [
             "Navigate to the src/components directory.",
-           "Create a new file named MainSection.js.",
+            "Create a new file named MainSection.js.",
             "Import React and the necessary hooks (useState, useEffect).",
             "Import icons from 'react-icons'.",
             "Define a functional component named MainSection.",
@@ -4253,7 +4252,6 @@ const tasksData = {
             "Define an array of image URLs.",
             "Use 'useEffect' to set an interval that changes the image index every few seconds.",
             "Return JSX for the main section, including the background image, a welcome message, and feature icons with text.",
-           
           ],
         },
         {
@@ -4268,7 +4266,6 @@ const tasksData = {
             "Inside the 'SpecialCard' component: Create a state variable to manage the hover state.",
             "Return JSX for the special card, including an icon, title, description, price, and a conditional 'Order Now' button.",
             "Inside the 'Specials' component: Return JSX for the specials section, including multiple 'SpecialCard' components and additional offers.",
-           
           ],
         },
         {
@@ -4276,7 +4273,7 @@ const tasksData = {
           titleDescription: "Footer.js",
           description: [
             "Navigate to the src/components directory.",
-             "Create a new file named Footer.js.",
+            "Create a new file named Footer.js.",
             "Import React and the necessary hooks (useState).",
             "Import icons from 'react-icons'.",
             "Import the 'useEmailValidation' custom hook (refer to step 7). ",
@@ -4285,14 +4282,14 @@ const tasksData = {
             "Use the 'useEmailValidation' hook to validate the email.",
             "Define a function to handle form submission and display an alert based on email validity.",
             "Return JSX for the footer, including contact information, a newsletter subscription form, and social media icons.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Implement useScrollEffect Hook",
           titleDescription: "useScrollEffect.js",
           description: [
             "Navigate to the src/hooks directory.",
-             "Create a new file named useScrollEffect.js.",
+            "Create a new file named useScrollEffect.js.",
             "Import 'useEffect' and 'useState' from the 'react' library. These will be used to manage side effects and state within your custom hook.",
             "Create a function named 'useScrollEffect' that accepts an optional 'threshold' parameter. This parameter will determine the scroll position beyond which the hook will consider the user as having scrolled.",
             "Inside the 'useScrollEffect' function, use the 'useState' hook to initialize a state variable 'scrolled' with an initial value of 'false'. This state will indicate whether the user has scrolled past the threshold.",
@@ -4300,56 +4297,55 @@ const tasksData = {
             "Within the 'useEffect' hook, add the 'handleScroll' function as an event listener to the 'scroll' event on 'window'.",
             "Return a cleanup function from the 'useEffect' hook using 'return () => { ... }' syntax. Inside this cleanup function, remove the 'handleScroll' function as an event listener using 'window.removeEventListener'.",
             "Finally, return the scrolled state variable from the custom hook. This will allow components using the hook to know whether the user has scrolled past the threshold.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Implement useEmailValidation Hook",
           titleDescription: "useEmailValidation.js",
           description: [
             "Navigate to the src/hooks directory.",
-             "Create a new file named useEmailValidation.js.",
+            "Create a new file named useEmailValidation.js.",
             " Import 'useState' and 'useEffect' from the 'react' library. These are necessary for managing state and performing side effects within your custom hook.",
             "Create a function named 'useEmailValidation' that takes an 'email' parameter. This parameter represents the email address to be validated.",
             " Inside the 'useEmailValidation' function, use the 'useState' hook to initialize a state variable 'isValid' with an initial value of 'false'. This state will indicate whether the provided 'email' is valid according to the defined regular expression.",
-            "Use the 'useEffect' hook to perform the email validation whenever the 'email' parameter changes. Define a function within 'useEffect' that creates a regular expression (emailRegex) to validate the email format (/^([A-Za-z\d_-]+)@([A-Za-z\d_-]+)\.([A-Za-z]{2,14})(\.[A-Za-z]{2,8})?$/). Use 'emailRegex.test(email)' to check if the provided 'email' matches the regex pattern and update the 'isValid' state accordingly using 'setIsValid'.",
+            "Use the 'useEffect' hook to perform the email validation whenever the 'email' parameter changes. Define a function within 'useEffect' that creates a regular expression (emailRegex) to validate the email format (/^([A-Za-zd_-]+)@([A-Za-zd_-]+).([A-Za-z]{2,14})(.[A-Za-z]{2,8})?$/). Use 'emailRegex.test(email)' to check if the provided 'email' matches the regex pattern and update the 'isValid' state accordingly using 'setIsValid'.",
             "Return the 'isValid' state variable from the custom hook. This allows components using the hook to know whether the provided email is valid.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Implement EmailInput Hook",
           titleDescription: "EmailInput.js",
           description: [
             "Navigate to the src/hooks directory.",
-             "Create a new file named EmailInput.js.",
+            "Create a new file named EmailInput.js.",
             "Import 'useState' from react and the 'useEmailValidation' custom hook from './hooks/useEmailValidation'. This allows the EmailInput component to use state management and email validation logic provided by the custom hook.",
-             "Define the 'EmailInput' functional component.",
+            "Define the 'EmailInput' functional component.",
             "Use 'useState' to manage 'email' (current input value) initialized to ''. Use 'useEmailValidation(email)' to get 'isValidEmail'.",
             "Render: <input> for email with: 'type='email'' and 'value={email}'. 'onChange={(e) => setEmail(e.target.value)}'. 'className={isValidEmail ? 'valid' : 'invalid'}'. ",
             "Conditional <p> for '!isValidEmail'.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Apply Styles",
           titleDescription: "",
           description: [
             "Create a src/styles directory.",
-             "Create CSS files for each component (Navbar.css, MainSection.css, Specials.css, Footer.css).",
+            "Create CSS files for each component (Navbar.css, MainSection.css, Specials.css, Footer.css).",
             "Open each CSS file.",
             "Write styles for each component, including layout, colors, typography, and responsive design.",
             "Make sure to include styles for different states like hover, active, and focus.",
             "Open each component file.",
             "Import the corresponding CSS file at the top.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Test the Application",
           titleDescription: "",
           description: [
             "Open your terminal.",
-             "Navigate to your project directory.",
+            "Navigate to your project directory.",
             "Run the command to start your development server (usually 'npm start').",
             "Open your browser and go to the URL where your app is running (usually http://localhost:3000).",
-            
           ],
         },
       ],
@@ -4358,14 +4354,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/j7jpf2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/j7jpf2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson39.webp"),
       link: "https://www.dropbox.com/scl/fi/5341920t1y5svtm1zfmq3/cakeWebsiteStyles.css?rlkey=xnj3290vh1bpy0whuw70xm4u1&st=z2lwyyas&dl=0",
     },
     {
       taskId: "reacttask40",
       taskTitle: "Interactive 3D Card Viewer",
-      introduction: "An interactive React application that visually enhances user engagement by rotating a 3D-rendered card in response to mouse movements and touch gestures, showcasing both the front and back images dynamically.",
+      introduction:
+        "An interactive React application that visually enhances user engagement by rotating a 3D-rendered card in response to mouse movements and touch gestures, showcasing both the front and back images dynamically.",
 
       steps: [
         {
@@ -4374,16 +4372,14 @@ const tasksData = {
           description: [
             "Initialize a new React project using 'create-react-app' or ensure your existing project is ready.",
             "Make sure you have the necessary files for the project.",
-          
           ],
         },
         {
           stepTitle: "Step 2: Define the Component",
           titleDescription: "",
           description: [
-             "Navigate to App.js file.",
+            "Navigate to App.js file.",
             "Create a functional component named App.",
-           
           ],
         },
         {
@@ -4391,7 +4387,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Inside the App component, use the useEffect hook to run code after the component mounts.",
-          
           ],
         },
         {
@@ -4402,7 +4397,6 @@ const tasksData = {
             "Capture the pageX and pageY properties from the event object.",
             "Select the .card element using document.querySelector('.card').",
             "Update the style.transform property of the .card element to apply the rotation based on the x and y coordinates.",
-           
           ],
         },
         {
@@ -4410,53 +4404,52 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Inside the same useEffect hook, define a function handleTouchMove that takes an event object as a parameter.",
-             "Capture the pageX and pageY properties from e.touches[0] (the first touch point).",
+            "Capture the pageX and pageY properties from e.touches[0] (the first touch point).",
             "Select the .card element using document.querySelector('.note').",
             "Update the style.transform property of the .note element to apply the rotation based on the x and y coordinates.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Add Cleanup Logic",
           titleDescription: "",
           description: [
             "Inside the same useEffect hook, add event listeners to document.body for the mousemove event and to document for the touchmove event, linking them to handleMouseMove and handleTouchMove, respectively.",
-             "Return a cleanup function from the useEffect hook that removes the event listeners for mousemove and touchmove.",
-          
+            "Return a cleanup function from the useEffect hook that removes the event listeners for mousemove and touchmove.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Define the JSX Structure",
           titleDescription: "",
           description: [
             "Inside the return statement of the App component, create a div with the class name App.",
-             "Inside this div, add another div with the class name card.",
+            "Inside this div, add another div with the class name card.",
             "Inside the card div, add two more divs with class names front and back.",
             "Place img elements inside these divs to display the images for the front and back of the card. Use the src attribute to point to the respective image paths and the alt attribute for accessibility.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: CSS Styling",
           titleDescription: "",
           description: [
             "In a CSS file (index.css)  style the .card, .front, and .back elements.",
-             "Ensure the .card element has a 3D transformation perspective and any necessary styling for rotation.",
+            "Ensure the .card element has a 3D transformation perspective and any necessary styling for rotation.",
             "Import the CSS file into your component to apply the styles.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Images",
           titleDescription: "",
           description: [
             "Place the images (image1.jpg and image2.jpg) in the appropriate directory (public/img).",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Test the Component",
           titleDescription: "",
           description: [
             "Run your React project using npm start.",
-             "Open your browser to see the component.",
+            "Open your browser to see the component.",
             "Move your mouse or touch the screen to see the rotation effect.",
-           
           ],
         },
       ],
@@ -4465,14 +4458,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/hch2kt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/hch2kt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson40.webp"),
       link: "https://www.dropbox.com/scl/fi/qad21wuttv9mocekrjdu8/3dRotateCardStyles40.css?rlkey=5dl9a1id5w2aeqpga6k950hen&st=0dbianeo&dl=0",
     },
     {
       taskId: "reacttask41",
       taskTitle: "DevPortfolio",
-      introduction: "DevPortfolio is a personal portfolio website designed for web developers to showcase their skills, projects, and contact information in a clean and professional manner. It features smooth navigation, interactive project filters, and a responsive design, making it an ideal platform for highlighting your digital portfolio.",
+      introduction:
+        "DevPortfolio is a personal portfolio website designed for web developers to showcase their skills, projects, and contact information in a clean and professional manner. It features smooth navigation, interactive project filters, and a responsive design, making it an ideal platform for highlighting your digital portfolio.",
 
       steps: [
         {
@@ -4483,14 +4478,13 @@ const tasksData = {
             "Navigate to the project directory.",
             "Install 'react-router-dom' using npm to handle the routing in your application.",
             "Create a 'components' directory inside the 'src' folder.",
-           
           ],
         },
         {
           stepTitle: "Step 2: Navbar Component",
           titleDescription: "Navbar.js",
           description: [
-             "Navigate to the 'components' directory.",
+            "Navigate to the 'components' directory.",
             "Create a new file named Navbar.js.",
             "Import 'React', 'useState', 'useEffect' from 'react'.",
             "Import 'Link' from 'react-router-dom'.",
@@ -4499,7 +4493,6 @@ const tasksData = {
             "In return statement: Create a 'nav' element. Add a 'div' for the logo using 'Link' to navigate to the home page. Create an unordered list with 'Link' elements for Home, About, Portfolio, and Contact.",
             "Add a class to the 'nav' element based on the scroll position.",
             "Export the 'Navbar' component for use in other parts of the app.",
-           
           ],
         },
         {
@@ -4507,11 +4500,10 @@ const tasksData = {
           titleDescription: "Home.js",
           description: [
             "Navigate to the 'components' directory.",
-           "Create a new file named Home.js.",
+            "Create a new file named Home.js.",
             "Import 'React' and 'Link' from 'react-router-dom'.",
             "in return statement: Create a section element for the home content. Add a heading for the welcome message. Add a paragraph describing yourself. Add a 'Link' element styled as a button to navigate to the Portfolio page.",
             "Export the 'Home' component for use in other parts of the app.",
-         
           ],
         },
         {
@@ -4531,44 +4523,45 @@ const tasksData = {
           titleDescription: "Portfolio.js",
           description: [
             "Navigate to the 'components' directory.",
-             "Create a new file named Portfolio.js.",
+            "Create a new file named Portfolio.js.",
             "Import 'React' and 'useState'.",
             "Create a state to track the selected filter.",
             "Create an array of projects with properties like id, title, category, and image URL.",
             "Filter the projects based on the selected filter.",
             "In return statement: Create a section element for the portfolio content. Add a heading for the Portfolio section. Add buttons for filtering projects (All, Web, Mobile, Design). Create a grid to display the filtered projects. Use project data to dynamically generate project cards.",
             "Export the 'Portfolio' component for use in other parts of the app.",
-
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Contact Component",
           titleDescription: "Contact.js",
           description: [
             "Navigate to the 'components' directory.",
-             "Create a new file named Contact.js.",
+            "Create a new file named Contact.js.",
             "Import 'React' and 'useState'.",
             "Create a state to manage form data (name, email, message).",
             "Define functions to handle form changes and form submission.",
             "In return statement: Create a section element for the contact content. Add a heading for the Contact section. Create a form with input fields for name, email, and message. Add a submit button.",
             "Export the 'Contact' component for use in other parts of the app.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Footer Component",
           titleDescription: "Footer.js",
           description: [
             "Navigate to the 'components' directory.",
-             "Create a new file named Footer.js.",
+            "Create a new file named Footer.js.",
             "Import 'React'.",
             "In return statement: Create a footer element. Add a paragraph with copyright information. Add links to social media profiles (GitHub, LinkedIn, Twitter).",
             "Export the 'Footer' component for use in other parts of the app.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Setup Routing",
           titleDescription: "App.js",
           description: [
             "Ensure you are in the src directory of your project.",
-             "Create a new file named App.js if it doesn't already exist.",
+            "Create a new file named App.js if it doesn't already exist.",
             "Import React from 'react'.",
             "Import BrowserRouter, Routes, and Route from 'react-router-dom'.",
             "Import all the components you created: Navbar, Home, About, Portfolio, Contact, and Footer.",
@@ -4576,28 +4569,27 @@ const tasksData = {
             "Include the Navbar component at the top so it appears on all pages.",
             "Use the Routes component to define different Route elements for each page (Home, About, Portfolio, Contact).",
             "Set the path for each route to match the desired URL (e.g., '/', '/about', '/portfolio', '/contact').",
-           "Set the element for each route to the corresponding component (e.g., Home, About, Portfolio, Contact).",
-           "Include the Footer component at the bottom so it appears on all pages.",
-           "Export the App component as the default export.",
-          
+            "Set the element for each route to the corresponding component (e.g., Home, About, Portfolio, Contact).",
+            "Include the Footer component at the bottom so it appears on all pages.",
+            "Export the App component as the default export.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Add Styles",
           titleDescription: "",
           description: [
             "Create a 'styles' directory inside the 'src' folder.",
-             "Add necessary CSS files to style your components.",
+            "Add necessary CSS files to style your components.",
             "Import these CSS files into your respective component files.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Testing and Final Adjustments",
           titleDescription: "",
           description: [
             "Run your project using 'npm start'.",
-             "Test all the routes and components to ensure they are working as expected.",
+            "Test all the routes and components to ensure they are working as expected.",
             "Make any final adjustments to styles and functionality.",
-           
           ],
         },
       ],
@@ -4606,14 +4598,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/xz4mnz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/xz4mnz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson41.webp"),
       link: "https://www.dropbox.com/scl/fi/p9ac4rqzkxd26umkaus8k/devPortfolioStyles41.css?rlkey=g99lp00iol89oewka2fnyojwa&st=bkpj1345&dl=0",
     },
     {
       taskId: "reacttask42",
       taskTitle: "Fruit Carousel",
-      introduction: "Fruit Carousel is an interactive image carousel component that showcases a variety of fruit images. Users can navigate through the carousel using scroll gestures or navigation buttons, with a dynamic progress bar indicating the current slide position.",
+      introduction:
+        "Fruit Carousel is an interactive image carousel component that showcases a variety of fruit images. Users can navigate through the carousel using scroll gestures or navigation buttons, with a dynamic progress bar indicating the current slide position.",
 
       steps: [
         {
@@ -4624,16 +4618,14 @@ const tasksData = {
             "Open a terminal and run 'npx create-react-app my-carousel-app'.",
             "If you don't have them already, install the packages you need using npm.",
             "For instance, run npm install in your project directory.",
-         
           ],
         },
         {
           stepTitle: "Step 2: Create a New Component File",
           titleDescription: "Carousel.js",
           description: [
-             "Navigate to your 'src' folder.",
+            "Navigate to your 'src' folder.",
             "Create a file named Carousel.js.",
-          
           ],
         },
         {
@@ -4641,8 +4633,7 @@ const tasksData = {
           titleDescription: "",
           description: [
             "At the top of Carousel.js, import React, and the hooks useState, useEffect, and useCallback from the react library.",
-           "Create a functional component named Carousel. This component will receive 'items' as a prop, which is an array of objects representing each carousel item.",
-          
+            "Create a functional component named Carousel. This component will receive 'items' as a prop, which is an array of objects representing each carousel item.",
           ],
         },
         {
@@ -4651,7 +4642,6 @@ const tasksData = {
           description: [
             "'activeIndex': Use 'useState' to define this state variable, initializing it to '1'. This will track the index of the currently active item.",
             "'visibleItems': Define another state variable to hold the items currently visible in the carousel. Initialize it as an empty array.",
-          
           ],
         },
         {
@@ -4659,55 +4649,54 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Create a function named 'updateVisibleItems' that takes 'index' as a parameter.",
-             "Compute the indices for the previous, current, and next items, accounting for circular navigation (wrap-around using modular arithmetic).",
+            "Compute the indices for the previous, current, and next items, accounting for circular navigation (wrap-around using modular arithmetic).",
             "Set 'visibleItems' to an array containing the previous, current, and next items.",
             "Use 'useCallback' to memoize 'updateVisibleItems' so it only changes when 'items' changes.",
             "Use 'useEffect' to call 'updateVisibleItems' whenever 'activeIndex' changes. This ensures the visible items are updated accordingly.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Add Navigation Logic",
           titleDescription: "",
           description: [
             "'nextSlide': Define a function to increment 'activeIndex' and handle wrap-around to the beginning of the list.",
-             "'prevSlide': Define a function to decrement 'activeIndex' and handle wrap-around to the end of the list.",
+            "'prevSlide': Define a function to decrement 'activeIndex' and handle wrap-around to the end of the list.",
             "Use 'useCallback' to memoize 'nextSlide' and 'prevSlide' functions so they only re-create when 'items.length' changes.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Handle Scrolling",
           titleDescription: "",
           description: [
             "Define a function named 'handleScroll' that determines scroll direction and calls either 'nextSlide' or 'prevSlide' accordingly.",
-             "Use 'useCallback' to memoize 'handleScroll' so it doesn't get re-created unnecessarily.",
+            "Use 'useCallback' to memoize 'handleScroll' so it doesn't get re-created unnecessarily.",
             "Use 'useEffect' to attach a 'wheel' event listener to the carousel container.",
             "Ensure the event listener is removed when the component unmounts to avoid memory leaks.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Render the Carousel Items",
           titleDescription: "",
           description: [
             "Inside the return statement of the component, map over 'visibleItems' to render each item.",
-             "Assign a unique 'key' to each item, and conditionally apply CSS classes to indicate the item's position (e.g., active, prev, next).",
+            "Assign a unique 'key' to each item, and conditionally apply CSS classes to indicate the item's position (e.g., active, prev, next).",
             "Attach an 'onClick' event handler to each item that updates 'activeIndex' to the index of the clicked item.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Add Navigation Buttons",
           titleDescription: "",
           description: [
             "Add two buttons for navigation: one for moving to the previous slide and one for moving to the next slide.",
-             "Attach the 'prevSlide' and 'nextSlide' functions to the 'onClick' event handlers of these buttons.",
-          
+            "Attach the 'prevSlide' and 'nextSlide' functions to the 'onClick' event handlers of these buttons.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Add a Progress Bar",
           titleDescription: "",
           description: [
             "Add a progress bar element below or above the carousel items.",
-             "Style the progress bar to visually indicate the current slide position based on 'activeIndex'. Adjust its width proportionally to the total number of items.",
-           
+            "Style the progress bar to visually indicate the current slide position based on 'activeIndex'. Adjust its width proportionally to the total number of items.",
           ],
         },
         {
@@ -4715,10 +4704,9 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Inside the src folder, create a new CSS file named Carousel.css.",
-             "Add styles for the carousel container, items, navigation buttons, and progress bar.",
+            "Add styles for the carousel container, items, navigation buttons, and progress bar.",
             "Use appropriate class names in the JSX of your 'Carousel' component to apply these styles.",
             "Import the Carousel.css file into your Carousel.js file.",
-           
           ],
         },
         {
@@ -4726,9 +4714,8 @@ const tasksData = {
           titleDescription: "App.js",
           description: [
             "Open the App.js file and import the Carousel component.",
-             "Define an array of objects representing the items you want to display in the carousel. Each object should include properties like 'title', 'num', and 'img'.",
+            "Define an array of objects representing the items you want to display in the carousel. Each object should include properties like 'title', 'num', and 'img'.",
             "Pass the array of items as a prop to the Carousel component in your App component.",
-          
           ],
         },
         {
@@ -4736,28 +4723,28 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Start your React development server by running 'npm start'.",
-             "Open your browser and navigate to http://localhost:3000 to see your carousel in action.",
+            "Open your browser and navigate to http://localhost:3000 to see your carousel in action.",
             "Ensure that the navigation buttons work correctly.",
             "Check that the items update appropriately when scrolled using the mouse wheel.",
             "Verify that clicking on an item updates the active index.",
-           
           ],
         },
-        
       ],
       taskType: "React",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/3k8v5w?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/3k8v5w?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson42.webp"),
       link: "https://www.dropbox.com/scl/fi/3zmbt7rd0hl9n7i9fya98/fruitCarouselStyles42.css?rlkey=fd4uapnbjql7bct0z47trq6h6&st=ywle4l8y&dl=0",
     },
     {
       taskId: "reacttask43",
       taskTitle: "FitLife Website",
-      introduction: "FitLife is a modern and dynamic fitness website designed to provide personalized fitness programs, expert trainer insights, and seamless user interaction. With a focus on engaging visuals and smooth navigation, FitLife aims to inspire and support users on their fitness journey.",
+      introduction:
+        "FitLife is a modern and dynamic fitness website designed to provide personalized fitness programs, expert trainer insights, and seamless user interaction. With a focus on engaging visuals and smooth navigation, FitLife aims to inspire and support users on their fitness journey.",
 
       steps: [
         {
@@ -4766,19 +4753,16 @@ const tasksData = {
           description: [
             "Run 'npx create-react-app your-app-name' in your terminal.",
             "Navigate to the project directory using 'cd your-app-name'.",
-          
           ],
         },
         {
           stepTitle: "Step 2: Install Required Dependencies",
           titleDescription: "",
           description: [
-             "Run 'npm install react-router-dom'.",
+            "Run 'npm install react-router-dom'.",
             "Run 'npm install react-slick slick-carousel'.",
             "Run 'npm install @fortawesome/fontawesome-free'. Make sure you add <link> in your index.html file",
             "Run 'npm install react-scroll'.",
-
-          
           ],
         },
         {
@@ -4786,7 +4770,7 @@ const tasksData = {
           titleDescription: "Navbar.js",
           description: [
             "File Location: src/components/Navbar.js",
-           "Create a functional component named 'Navbar'.",
+            "Create a functional component named 'Navbar'.",
             "Import 'useState' and 'useEffect' from React for managing state and side effects.",
             "Import 'Link' from 'react-scroll' for smooth scrolling links.",
             "Create state variables 'isNavOpen' (to handle the toggle state of the navbar in mobile view) and 'isScrolled' (to apply a sticky effect on scroll).",
@@ -4799,7 +4783,6 @@ const tasksData = {
             "Create a 'div' for the collapsible navbar content with conditional class names based on 'isNavOpen'.",
             "Inside the 'div', add 'ul' with 'li' elements for navigation links to different sections.",
             "Write CSS to style the navbar, making it responsive and adding a sticky effect.",
-            
           ],
         },
         {
@@ -4814,7 +4797,6 @@ const tasksData = {
             "Create a 'div' for the content, including a heading, a paragraph, and a 'Link' button for smooth scrolling to the contact section.",
             "Include a 'div' with a 'Link' element for smooth scrolling to the about section, representing the scroll-down indicator.",
             "Write CSS to style the hero section, ensuring the video covers the entire background and the content is centered and visually appealing.",
-            
           ],
         },
         {
@@ -4822,7 +4804,7 @@ const tasksData = {
           titleDescription: "AboutSection.js",
           description: [
             "File Location: src/components/AboutSection.js.",
-             "Create a functional component named 'AboutSection'.",
+            "Create a functional component named 'AboutSection'.",
             "This function has an empty body. Next steps must be achieved in return statements.",
             "Define a 'section' element with an id 'about' and class 'about-section'.",
             "Add a 'div' with a class 'container' to center the content.",
@@ -4830,14 +4812,14 @@ const tasksData = {
             "Add a 'div' with a class 'about-cards' to contain the service cards.",
             "Inside the 'about-cards' div, create multiple 'div' elements with a class 'about-card', each containing an icon, a 'h3' element for the service title, and a 'p' element for the service description.",
             "Write CSS to style the about section and cards, ensuring they are visually appealing and responsive.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Create TrainersSection Component",
           titleDescription: "TrainersSection.js",
           description: [
             "File Location: src/components/TrainersSection.js.",
-             "Create a functional component named 'TrainersSection'.",
+            "Create a functional component named 'TrainersSection'.",
             "Import 'Slider' from 'react-slick' and the necessary CSS files for the carousel.",
             "Define the settings for the carousel, including properties like 'dots', 'infinite', 'speed', 'slidesToShow', 'slidesToScroll', and responsive breakpoints.",
             "Define a 'section' element with an id 'trainers' and class 'trainers-section'.",
@@ -4846,14 +4828,14 @@ const tasksData = {
             "Add the 'Slider' component and map through the trainers' data to generate 'div' elements for each trainer card.",
             "Each trainer card should contain an 'img' element for the trainer's image, a 'div' for trainer info, including the trainer's name, a 'p' element for the trainer's role, and a 'div' for social media links.",
             "Write CSS to style the trainers section and cards, ensuring the carousel is visually appealing and responsive.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Create ContactForm Component",
           titleDescription: "ContactForm.js",
           description: [
             "File Location: src/components/ContactForm.js.",
-             "Create a functional component named 'ContactForm'.",
+            "Create a functional component named 'ContactForm'.",
             "Import 'useState' from React for managing form data and submission state.",
             "Create state variables for form data (name, email, message) and a submission state (isSubmitted).",
             "Define 'handleChange' function to update form data state on input change.",
@@ -4865,14 +4847,14 @@ const tasksData = {
             "Define the form structure with 'div' elements for each form group (input fields for name, email, and a textarea for the message).",
             "Add a submit button to the form.",
             "Write CSS to style the contact form and success message, ensuring they are visually appealing and responsive.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Create Footer Component",
           titleDescription: "Footer.js",
           description: [
             "File Location: src/components/Footer.js.",
-             "Create a functional component named 'Footer'.",
+            "Create a functional component named 'Footer'.",
             "Import 'Link' from 'react-scroll' for smooth scrolling.",
             "This function has an empty body. Next steps must be achieved in return statements.",
             "Define a 'footer' element with a class 'footer'.",
@@ -4885,25 +4867,25 @@ const tasksData = {
             "Write CSS to style the footer, ensuring it is visually appealing and responsive.",
             "",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Assemble Components in App Component",
           titleDescription: "App.js",
           description: [
             "File Location: src/App.js.",
-             "Import BrowserRouter from react-router-dom.",
+            "Import BrowserRouter from react-router-dom.",
             "Wrap the entire return statement in App with BrowserRouter.",
             "Import all created components: Navbar, HeroSection, AboutSection, TrainersSection, ContactForm, and Footer.",
             "Inside the div with class App, arrange the imported components in the following order: <Navbar /> <HeroSection /> <AboutSection /> <TrainersSection /> <ContactForm /> <Footer />",
             "Ensure the overall layout and styling in App.css to maintain consistency and responsiveness across all sections.",
-            
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Configure React Slick adn Smooth Scrolling",
           titleDescription: "",
           description: [
             "Import 'slick-carousel/slick/slick.css' and 'slick-carousel/slick/slick-theme.css' in TrainersSection.js.",
-             "Import Link from react-scroll in components where smooth scrolling is needed.",
-           
+            "Import Link from react-scroll in components where smooth scrolling is needed.",
           ],
         },
         {
@@ -4911,8 +4893,7 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Run npm start to start the development server.",
-             "Ensure each component renders correctly and functionalities like form submission, smooth scrolling, and the carousel work as expected.",
-           
+            "Ensure each component renders correctly and functionalities like form submission, smooth scrolling, and the carousel work as expected.",
           ],
         },
       ],
@@ -4921,14 +4902,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/q38qf8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/q38qf8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson43.webp"),
       link: "https://www.dropbox.com/scl/fi/hss5y8g4imrp6e1bu8599/fitLifeWebsiteStyles43.css?rlkey=f6p5xjadpst8bxp8eo0afp1jd&st=46rlozwl&dl=0",
     },
     {
       taskId: "reacttask44",
       taskTitle: "React FAQ Toggle",
-      introduction: "A dynamic FAQ component built with React that allows users to expand and collapse answers to frequently asked questions, providing a clean and interactive way to present information. This project demonstrates efficient state management and conditional rendering using React hooks.",
+      introduction:
+        "A dynamic FAQ component built with React that allows users to expand and collapse answers to frequently asked questions, providing a clean and interactive way to present information. This project demonstrates efficient state management and conditional rendering using React hooks.",
 
       steps: [
         {
@@ -4936,15 +4919,13 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Open your terminal and run: 'npx create-react-app faq-project' then 'cd faq-project' and to run it use this command: 'npm start'",
-           
           ],
         },
         {
           stepTitle: "Step 2: Create the FAQ Component",
           titleDescription: "",
           description: [
-             " In your src directory, create a new file called FAQ.js.",
-          
+            " In your src directory, create a new file called FAQ.js.",
           ],
         },
         {
@@ -4952,7 +4933,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             " Import the 'useState' hook from 'React' at the top of your FAQ.js file.",
-           
           ],
         },
         {
@@ -4960,7 +4940,6 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Use 'useState' to manage the active FAQ item's index. Initialize it to 'null'.",
-           
           ],
         },
         {
@@ -4968,23 +4947,24 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Each object in the array should represent a question and its corresponding answer. (You can make it in separate file if you want).",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Create a Function to Toggle FAQ Items",
-          titleDescription: "This function will handle the logic for expanding or collapsing the FAQ items when a question is clicked.",
+          titleDescription:
+            "This function will handle the logic for expanding or collapsing the FAQ items when a question is clicked.",
           description: [
             "Compare the passed 'index' with the current active 'index' stored in the state.",
-             "If the passed 'index' matches the current active 'index', it means the same item is being clicked again, so set the active 'index' to 'null' (collapse the item).",
+            "If the passed 'index' matches the current active 'index', it means the same item is being clicked again, so set the active 'index' to 'null' (collapse the item).",
             "If the passed 'index' does not match the current active 'index', set the active 'index' to the passed 'index' (expand the new item).",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Render the FAQ List",
           titleDescription: "",
           description: [
             "Use the 'map' method to iterate over the array of FAQ data.",
-             "For each item in the array, generate a list item element.",
+            "For each item in the array, generate a list item element.",
             "Wrap each FAQ item (question and answer) in a list item element.",
             "Create a button element that displays the FAQ question.",
             "Attach an 'onClick' event listener to the button, which calls the toggle function with the current 'index' as the argument.",
@@ -4992,28 +4972,27 @@ const tasksData = {
             "Check if the current 'index' matches the active 'index'.",
             "If it matches, render the answer.",
             "If it does not match, do not render the answer (or render it in a hidden state).",
-        
           ],
-        },{
+        },
+        {
           stepTitle: "Step 8: Add CSS for Styling",
           titleDescription: "",
           description: [
             "Create a new CSS file (e.g., FAQ.css) and import it into your FAQ.js file. Add styles for the FAQ container, list, items, questions, and answers. Include styles for the active state to show and hide the answers appropriately.",
-          
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Integrate the FAQ Component",
           titleDescription: "",
           description: [
             "Import and use the FAQ component in your App.js file.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Test Your Application",
           titleDescription: "",
           description: [
             "Test the FAQ component in your browser to ensure it works as expected. Each question should toggle the visibility of its answer when clicked.",
-           
           ],
         },
       ],
@@ -5022,14 +5001,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/gc2rr9?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/gc2rr9?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson44.webp"),
       link: "https://www.dropbox.com/scl/fi/zzttfwhebm19xhtovltz6/FAQStyles44.css?rlkey=bjn41i22taygvx7z5jvtvjyqn&st=ezegm8sb&dl=0",
     },
     {
       taskId: "reacttask45",
       taskTitle: "Pomodoro Focus Timer",
-      introduction: "A simple and interactive Pomodoro Timer designed to help users improve productivity by alternating between focused work sessions and short breaks, with customizable durations and a rotating visual countdown.",
+      introduction:
+        "A simple and interactive Pomodoro Timer designed to help users improve productivity by alternating between focused work sessions and short breaks, with customizable durations and a rotating visual countdown.",
 
       steps: [
         {
@@ -5038,17 +5019,15 @@ const tasksData = {
           description: [
             "Ensure you have Node.js and npm installed on your system.",
             "Open your terminal and run the 'npx create-react-app pomodoro-timer' command to create a new React application.",
-            "Navigate to the project directory ysing this 'cd pomodoro-timer' command.",
-           
+            "Navigate to the project directory using this 'cd pomodoro-timer' command.",
           ],
         },
         {
           stepTitle: "Step 2: Create the Pomodoro Timer Component",
           titleDescription: "",
           description: [
-             "Open the project in your preferred code editor.",
+            "Open the project in your preferred code editor.",
             "Navigate to the 'src' directory and create a new file named PomodoroTimer.js.",
-          
           ],
         },
         {
@@ -5056,8 +5035,7 @@ const tasksData = {
           titleDescription: "",
           description: [
             "At the top of PomodoroTimer.js, ensure you import useState and useEffect from the 'react' library. These hooks are essential for managing state and side effects in your component.",
-           "Declare a functional component named 'PomodoroTimer' using the ES6 arrow function syntax.",
-         
+            "Declare a functional component named 'PomodoroTimer' using the ES6 arrow function syntax.",
           ],
         },
         {
@@ -5069,62 +5047,64 @@ const tasksData = {
             "'seconds': Initialize this state variable to workTime * 60, converting the work duration to seconds.",
             "'isActive': Initialize this state variable to false, indicating whether the timer is running.",
             "'isRotating': Initialize this state variable to false, controlling the rotation effect for the timer UI.",
-           
           ],
         },
         {
-          stepTitle: "Step 5: Set up the useEffect hook for the timer countdown",
+          stepTitle:
+            "Step 5: Set up the useEffect hook for the timer countdown",
           titleDescription: "",
           description: [
             "Use the useEffect hook to manage the timer's behavior.",
-             "Declare a variable interval initialized to null.",
+            "Declare a variable interval initialized to null.",
             "Check if isActive is true. If so, use setInterval to update the seconds state every second.",
             "Inside the setInterval callback, decrease the seconds state by 1.",
             "If seconds reaches 0, clear the interval, set isActive and isRotating to false.",
             "Ensure the interval is cleared when the timer is not active or the component unmounts to prevent memory leaks.",
             "Pass [isActive, seconds] as the dependency array to the useEffect hook to re-run the effect when either of these values changes.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 6: Define the reset function",
           titleDescription: "",
           description: [
             "Create a function named reset that stops the timer and resets the seconds state to the initial workTime value.",
-             "Set isActive and isRotating to false to ensure the timer stops and the rotation effect is reset.",
-           
+            "Set isActive and isRotating to false to ensure the timer stops and the rotation effect is reset.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 7: Define the startCountdown function",
           titleDescription: "",
           description: [
             "Create a function named startCountdown that accepts a duration parameter in minutes.",
-             "Set the seconds state to duration * 60 to convert the duration to seconds.",
+            "Set the seconds state to duration * 60 to convert the duration to seconds.",
             "Set isActive to true to start the timer.",
             "Reset isRotating to false, then use setTimeout to set it to true after a short delay (e.g., 50 milliseconds) to trigger the rotation effect.",
-         
           ],
-        },{
-          stepTitle: "Step 8: Create functions to start work and break countdowns",
+        },
+        {
+          stepTitle:
+            "Step 8: Create functions to start work and break countdowns",
           titleDescription: "",
           description: [
             "Define startWorkCountdown to call startCountdown with the workTime value.",
-             "Define startBreakCountdown to call startCountdown with the breakTime value.",
-          
+            "Define startBreakCountdown to call startCountdown with the breakTime value.",
           ],
-        },{
+        },
+        {
           stepTitle: "Step 9: Format time function",
           titleDescription: "",
           description: [
             "Create a function named formatTime that takes the seconds state as an argument.",
-             "Convert seconds to minutes and remaining seconds.",
+            "Convert seconds to minutes and remaining seconds.",
             "Return a formatted string in MM:SS format, ensuring both minutes and seconds are always two digits.",
-           
           ],
-        },{
+        },
+        {
           stepTitle: "Step 10: Render the Component",
           titleDescription: "",
           description: [
             "Use a <main> element as the container for the entire timer.",
-             "Inside the <main> element, add a <h1> element with the text 'Pomodoro Timer' as the header.",
+            "Inside the <main> element, add a <h1> element with the text 'Pomodoro Timer' as the header.",
             "Create a <section> element with an id of 'pomodoro' to contain the timer display and settings.",
             "Inside the <section>, create a <div> with an id of 'clock-container' for the visual timer.",
             "Add another <div> inside 'clock-container' with an id of 'clockBody' to apply rotation effect, using the isRotating state to conditionally apply a 'rotating' CSS class.",
@@ -5132,32 +5112,30 @@ const tasksData = {
             "Create a <div> with an id of 'settings' for the input fields and buttons.",
             "Add a <label> which should have the text 'Work' and link to the input with htmlFor='work'.",
             "Add an <input> which should have an id of 'work', type of 'number', value bound to workTime, and constraints with max='60' and min='0'.",
-           "Attach an onChange handler to update workTime when the input value changes.",
-           "Add a <button> to start the work countdown, with an onClick handler calling startWorkCountdown.",
-           "Add a <label> which should have the text 'Break' and link to the input with htmlFor='breakT'.",
-           "Add an <input> which should have an id of 'breakT', type of 'number', value bound to breakTime, and constraints with max='60' and min='0'.",
-           "Attach an onChange handler to update breakTime when the input value changes.",
-           "Add a <button> to start the break countdown, with an onClick handler calling startBreakCountdown.",
-           "Add a <button> with an id of 'reset' and type of 'reset' to reset the timer, with an onClick handler calling the reset function.",
-           {
-            stepTitle: "Step 11: Add CSS for Rotation Effect",
-            titleDescription: "",
-            description: [
-              "Add styles for the rotating effect and other styles to enhance the UI.",
-             
-            ],
-          },
-          {
-            stepTitle: "Step 12:  Integrate the Component in the App and Run it",
-            titleDescription: "",
-            description: [
-              "Open App.js in the src directory.",
-              "Import and use the PomodoroTimer component inside the App component.",
-              "In the terminal, start the development server using this 'npm start' command.",
-              "Open your browser and navigate to http://localhost:3000 to see your Pomodoro Timer in action.",
-             
-            ],
-          },
+            "Attach an onChange handler to update workTime when the input value changes.",
+            "Add a <button> to start the work countdown, with an onClick handler calling startWorkCountdown.",
+            "Add a <label> which should have the text 'Break' and link to the input with htmlFor='breakT'.",
+            "Add an <input> which should have an id of 'breakT', type of 'number', value bound to breakTime, and constraints with max='60' and min='0'.",
+            "Attach an onChange handler to update breakTime when the input value changes.",
+            "Add a <button> to start the break countdown, with an onClick handler calling startBreakCountdown.",
+            "Add a <button> with an id of 'reset' and type of 'reset' to reset the timer, with an onClick handler calling the reset function.",
+          ],
+        },
+        {
+          stepTitle: "Step 11: Add CSS for Rotation Effect",
+          titleDescription: "",
+          description: [
+            "Add styles for the rotating effect and other styles to enhance the UI.",
+          ],
+        },
+        {
+          stepTitle: "Step 12:  Integrate the Component in the App and Run it",
+          titleDescription: "",
+          description: [
+            "Open App.js in the src directory.",
+            "Import and use the PomodoroTimer component inside the App component.",
+            "In the terminal, start the development server using this 'npm start' command.",
+            "Open your browser and navigate to http://localhost:3000 to see your Pomodoro Timer in action.",
           ],
         },
       ],
@@ -5166,11 +5144,11 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/m454vt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/m454vt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson45.webp"),
       link: "https://www.dropbox.com/scl/fi/c828xk0dyg741lpi7fwa8/pomodoroTimerStyles45.css?rlkey=riin1i6biv7wf2nww9w49qjl6&st=pqwkkmrv&dl=0",
     },
-    
   ],
 };
 
