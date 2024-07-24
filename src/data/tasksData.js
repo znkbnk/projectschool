@@ -4951,7 +4951,7 @@ const tasksData = {
           stepTitle: "Step 3: Import Necessary React Modules",
           titleDescription: "",
           description: [
-            " Import the useState hook from React at the top of your FAQ.js file.",
+            " Import the 'useState' hook from 'React' at the top of your FAQ.js file.",
            
           ],
         },
@@ -4959,7 +4959,7 @@ const tasksData = {
           stepTitle: "Step 4: Set Up State for Active FAQ Item",
           titleDescription: "",
           description: [
-            "Use useState to manage the active FAQ item's index. Initialize it to null.",
+            "Use 'useState' to manage the active FAQ item's index. Initialize it to 'null'.",
            
           ],
         },
@@ -4974,22 +4974,22 @@ const tasksData = {
           stepTitle: "Step 6: Create a Function to Toggle FAQ Items",
           titleDescription: "This function will handle the logic for expanding or collapsing the FAQ items when a question is clicked.",
           description: [
-            "Compare the passed index with the current active index stored in the state.",
-             "If the passed index matches the current active index, it means the same item is being clicked again, so set the active index to null (collapse the item).",
-            "If the passed index does not match the current active index, set the active index to the passed index (expand the new item).",
+            "Compare the passed 'index' with the current active 'index' stored in the state.",
+             "If the passed 'index' matches the current active 'index', it means the same item is being clicked again, so set the active 'index' to 'null' (collapse the item).",
+            "If the passed 'index' does not match the current active 'index', set the active 'index' to the passed 'index' (expand the new item).",
           
           ],
         },{
           stepTitle: "Step 7: Render the FAQ List",
           titleDescription: "",
           description: [
-            "Use the map method to iterate over the array of FAQ data.",
+            "Use the 'map' method to iterate over the array of FAQ data.",
              "For each item in the array, generate a list item element.",
             "Wrap each FAQ item (question and answer) in a list item element.",
             "Create a button element that displays the FAQ question.",
-            "Attach an onClick event listener to the button, which calls the toggle function with the current index as the argument.",
-            "Within the list item, conditionally render the FAQ answer based on the active index.",
-            "Check if the current index matches the active index.",
+            "Attach an 'onClick' event listener to the button, which calls the toggle function with the current 'index' as the argument.",
+            "Within the list item, conditionally render the FAQ answer based on the active 'index'.",
+            "Check if the current 'index' matches the active 'index'.",
             "If it matches, render the answer.",
             "If it does not match, do not render the answer (or render it in a hidden state).",
         
@@ -5025,6 +5025,150 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/embed/gc2rr9?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson44.webp"),
       link: "https://www.dropbox.com/scl/fi/zzttfwhebm19xhtovltz6/FAQStyles44.css?rlkey=bjn41i22taygvx7z5jvtvjyqn&st=ezegm8sb&dl=0",
+    },
+    {
+      taskId: "reacttask45",
+      taskTitle: "Pomodoro Focus Timer",
+      introduction: "A simple and interactive Pomodoro Timer designed to help users improve productivity by alternating between focused work sessions and short breaks, with customizable durations and a rotating visual countdown.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the Project",
+          titleDescription: "",
+          description: [
+            "Ensure you have Node.js and npm installed on your system.",
+            "Open your terminal and run the 'npx create-react-app pomodoro-timer' command to create a new React application.",
+            "Navigate to the project directory ysing this 'cd pomodoro-timer' command.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create the Pomodoro Timer Component",
+          titleDescription: "",
+          description: [
+             "Open the project in your preferred code editor.",
+            "Navigate to the 'src' directory and create a new file named PomodoroTimer.js.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 3: Implement the Pomodoro Timer Component",
+          titleDescription: "",
+          description: [
+            "At the top of PomodoroTimer.js, ensure you import useState and useEffect from the 'react' library. These hooks are essential for managing state and side effects in your component.",
+           "Declare a functional component named 'PomodoroTimer' using the ES6 arrow function syntax.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 4: Initialize state variables using useState",
+          titleDescription: "",
+          description: [
+            "'workTime': Initialize this state variable to 25, representing the work duration in minutes.",
+            "'breakTime': Initialize this state variable to 5, representing the break duration in minutes.",
+            "'seconds': Initialize this state variable to workTime * 60, converting the work duration to seconds.",
+            "'isActive': Initialize this state variable to false, indicating whether the timer is running.",
+            "'isRotating': Initialize this state variable to false, controlling the rotation effect for the timer UI.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 5: Set up the useEffect hook for the timer countdown",
+          titleDescription: "",
+          description: [
+            "Use the useEffect hook to manage the timer's behavior.",
+             "Declare a variable interval initialized to null.",
+            "Check if isActive is true. If so, use setInterval to update the seconds state every second.",
+            "Inside the setInterval callback, decrease the seconds state by 1.",
+            "If seconds reaches 0, clear the interval, set isActive and isRotating to false.",
+            "Ensure the interval is cleared when the timer is not active or the component unmounts to prevent memory leaks.",
+            "Pass [isActive, seconds] as the dependency array to the useEffect hook to re-run the effect when either of these values changes.",
+          ],
+        },{
+          stepTitle: "Step 6: Define the reset function",
+          titleDescription: "",
+          description: [
+            "Create a function named reset that stops the timer and resets the seconds state to the initial workTime value.",
+             "Set isActive and isRotating to false to ensure the timer stops and the rotation effect is reset.",
+           
+          ],
+        },{
+          stepTitle: "Step 7: Define the startCountdown function",
+          titleDescription: "",
+          description: [
+            "Create a function named startCountdown that accepts a duration parameter in minutes.",
+             "Set the seconds state to duration * 60 to convert the duration to seconds.",
+            "Set isActive to true to start the timer.",
+            "Reset isRotating to false, then use setTimeout to set it to true after a short delay (e.g., 50 milliseconds) to trigger the rotation effect.",
+         
+          ],
+        },{
+          stepTitle: "Step 8: Create functions to start work and break countdowns",
+          titleDescription: "",
+          description: [
+            "Define startWorkCountdown to call startCountdown with the workTime value.",
+             "Define startBreakCountdown to call startCountdown with the breakTime value.",
+          
+          ],
+        },{
+          stepTitle: "Step 9: Format time function",
+          titleDescription: "",
+          description: [
+            "Create a function named formatTime that takes the seconds state as an argument.",
+             "Convert seconds to minutes and remaining seconds.",
+            "Return a formatted string in MM:SS format, ensuring both minutes and seconds are always two digits.",
+           
+          ],
+        },{
+          stepTitle: "Step 10: Render the Component",
+          titleDescription: "",
+          description: [
+            "Use a <main> element as the container for the entire timer.",
+             "Inside the <main> element, add a <h1> element with the text 'Pomodoro Timer' as the header.",
+            "Create a <section> element with an id of 'pomodoro' to contain the timer display and settings.",
+            "Inside the <section>, create a <div> with an id of 'clock-container' for the visual timer.",
+            "Add another <div> inside 'clock-container' with an id of 'clockBody' to apply rotation effect, using the isRotating state to conditionally apply a 'rotating' CSS class.",
+            "Add a <div> with an id of 'timer' to display the formatted time using the formatTime function.",
+            "Create a <div> with an id of 'settings' for the input fields and buttons.",
+            "Add a <label> which should have the text 'Work' and link to the input with htmlFor='work'.",
+            "Add an <input> which should have an id of 'work', type of 'number', value bound to workTime, and constraints with max='60' and min='0'.",
+           "Attach an onChange handler to update workTime when the input value changes.",
+           "Add a <button> to start the work countdown, with an onClick handler calling startWorkCountdown.",
+           "Add a <label> which should have the text 'Break' and link to the input with htmlFor='breakT'.",
+           "Add an <input> which should have an id of 'breakT', type of 'number', value bound to breakTime, and constraints with max='60' and min='0'.",
+           "Attach an onChange handler to update breakTime when the input value changes.",
+           "Add a <button> to start the break countdown, with an onClick handler calling startBreakCountdown.",
+           "Add a <button> with an id of 'reset' and type of 'reset' to reset the timer, with an onClick handler calling the reset function.",
+           {
+            stepTitle: "Step 11: Add CSS for Rotation Effect",
+            titleDescription: "",
+            description: [
+              "Add styles for the rotating effect and other styles to enhance the UI.",
+             
+            ],
+          },
+          {
+            stepTitle: "Step 12:  Integrate the Component in the App and Run it",
+            titleDescription: "",
+            description: [
+              "Open App.js in the src directory.",
+              "Import and use the PomodoroTimer component inside the App component.",
+              "In the terminal, start the development server using this 'npm start' command.",
+              "Open your browser and navigate to http://localhost:3000 to see your Pomodoro Timer in action.",
+             
+            ],
+          },
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/m454vt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson45.webp"),
+      link: "https://www.dropbox.com/scl/fi/c828xk0dyg741lpi7fwa8/pomodoroTimerStyles45.css?rlkey=riin1i6biv7wf2nww9w49qjl6&st=pqwkkmrv&dl=0",
     },
     
   ],
