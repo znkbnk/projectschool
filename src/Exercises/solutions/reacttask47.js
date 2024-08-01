@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 const solutionCode1 = `
 //App.js 
 
@@ -63,4 +64,4 @@ export default App;
 
 
 
-export default solutionCode1;
+export default [solutionCode1];
