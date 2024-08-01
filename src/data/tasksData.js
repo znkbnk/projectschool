@@ -5359,7 +5359,7 @@ const tasksData = {
     },
 
     {
-      taskId: "reacttask",
+      taskId: "reacttask47",
       taskTitle: "Animated Progress Loader",
       introduction: "This React application features an engaging loading animation using Framer Motion, transitioning seamlessly from a progress indicator to the main content. It demonstrates how to create smooth, visually appealing user experiences with state management and CSS animations.",
 
