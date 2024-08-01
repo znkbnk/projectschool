@@ -5357,6 +5357,111 @@ const tasksData = {
       img: require("../images/ReactLesson46.webp"),
       link: "https://www.dropbox.com/scl/fi/8cu87jjc8on72lhvvfo58/profolioStyles46.css?rlkey=cnl0oi96p58e8v9g3zi8tgk2b&st=ym0bdqct&dl=0",
     },
+
+    {
+      taskId: "reacttask",
+      taskTitle: "Animated Progress Loader",
+      introduction: "This React application features an engaging loading animation using Framer Motion, transitioning seamlessly from a progress indicator to the main content. It demonstrates how to create smooth, visually appealing user experiences with state management and CSS animations.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up Your React Project",
+          titleDescription: "",
+          description: [
+            "If you haven't already, download and install Node.js from the official website.",
+            "Open your terminal.",
+            "Run 'npx create-react-app progress-loader'.",
+            "Navigate into your project directory by running 'cd progress-loader'.",
+            "In the terminal, run npm install 'framer-motion'.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Implement the App Component",
+          titleDescription: "",
+          description: [
+             "Open src/App.js.",
+            "Ensure that you import 'useState' and 'useEffect' from React to manage the component's state and lifecycle.",
+            "Import 'motion' and 'AnimatePresence' from Framer Motion to handle animations.",
+            "Create a state variable called 'loading' initialized to 'true' to keep track of whether the content is still loading.",
+            "Create a state variable called 'progress' initialized to '0' to track the loading progress percentage.",
+            "Use the 'useEffect' hook to start an interval that updates the 'progress' state variable every 30 milliseconds.",
+            "Inside the interval function, increment the 'progress' state by 1.",
+            "When the 'progress' state reaches 100, clear the interval and set 'loading' to false.",
+            "Return a cleanup function from 'useEffect' to clear the interval when the component unmounts.",
+            "Wrap the main JSX structure in a 'div' with a class name like 'app-container'.",
+            "Use 'AnimatePresence' to enable animations when components mount and unmount.",
+            "Conditionally render either the loader or the main content based on the 'loading' state.",
+            "If 'loading' is true, render a 'motion.div' for the loader.",
+            "If 'loading' is false, render a 'motion.div' for the main content.",
+
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create the Loader Animation",
+          titleDescription: "",
+          description: [
+            "Within the loader 'motion.div', create a circular progress indicator.",
+           "Use CSS to style this circular progress component.",
+            "Utilize the 'conic-gradient' CSS property to visually represent the progress based on the 'progress' state. The gradient should start from a base color and transition to another color as the progress increases.",
+            "Use 'motion.div' properties to define initial, animate, and exit states for the loader.",
+            "Set the initial scale to 0.8 and opacity to 0.",
+            "Animate the scale to 1 and opacity to 1.",
+            "On exit, animate the scale to 1.2 and opacity to 0.",
+            "Inside the loader 'motion.div', add a 'div' to display the current progress percentage.",
+            "Style this text to be easily readable and position it appropriately within the loader.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create the Main Content",
+          titleDescription: "",
+          description: [
+            "Within the main content 'motion.div', add elements like headings and paragraphs to represent your primary content.",
+            "Ensure this content is well-structured and easy to read.",
+            "Use 'motion.div' properties to define the initial, animate, and transition states for the main content.",
+            "Set the initial opacity to 0 and y-position (vertical position) to 20 pixels.",
+            "Animate the opacity to 1 and y-position to 0.",
+            "Define a transition duration to smooth out the animation effect.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 5: Add CSS Styles",
+          titleDescription: "",
+          description: [
+            "Style the .app-container to center the content vertically and horizontally.",
+             "Style the loader and main content components appropriately.",
+            "Import the CSS file into App.js.",
+         
+          ],
+        },{
+          stepTitle: "Step 6: Run the Application",
+          titleDescription: "",
+          description: [
+            "Run 'npm start' to start the development server.",
+             "Observe the loading animation and the transition to the main content once loading completes.",
+          
+          ],
+        },{
+          stepTitle: "Step 7: Customize and Extend",
+          titleDescription: "",
+          description: [
+            "Customize the styles and animations to fit your design preferences.",
+             "Add more content to the main content section as needed.",
+            "Test and refine the application to ensure smooth transitions and animations.",
+           
+          ],
+        }
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/d6dcwc?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson47.webp"),
+      link: "https://www.dropbox.com/scl/fi/m19oop6z8n3izv49ti7u9/animatedProgressLoaderStyles.css?rlkey=wbfjok8c9b3foo0d5ibrz0r99&st=t53ga66q&dl=0",
+    },
   
   ],
 };
