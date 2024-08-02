@@ -5462,6 +5462,118 @@ const tasksData = {
       img: require("../images/ReactLesson47.webp"),
       link: "https://www.dropbox.com/scl/fi/m19oop6z8n3izv49ti7u9/animatedProgressLoaderStyles.css?rlkey=wbfjok8c9b3foo0d5ibrz0r99&st=t53ga66q&dl=0",
     },
+     {
+      taskId: "reacttask48",
+      taskTitle: "DynamicLoader",
+      introduction: "DynamicLoader is a React application featuring a sophisticated animated loader that transitions smoothly into the main content, showcasing the power of Framer Motion for creating visually engaging user experiences.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up Your React Project",
+          titleDescription: "",
+          description: [
+             "If you haven't already, download and install Node.js from the official website.",
+            "Open your terminal.",
+            "Run 'npx create-react-app dynamic-loader'.",
+            "Navigate into your project directory by running 'cd dynamic-loader'.",
+            "In the terminal, run npm install 'framer-motion'.",
+          ],
+        },
+        {
+          stepTitle: "Step 2: Creating the LoaderShape Component",
+          titleDescription: "",
+          description: [
+             "Ensure that you import 'useState' and 'useEffect' from React. Also import as an object 'motion' and 'AnimatePresence' from 'framer-motion'",
+            "Create a functional component named 'LoaderShape' which receives 'progress' as a prop.",
+            "Inside this component, return an 'svg' element with a 'className' of 'loader-shape' and a 'viewBox' attribute of '0 0 100 100'.",
+            "Add a 'motion.circle' element.",
+            "Set its center at 'cx=50', 'cy=50', and radius 'r=45'.",
+            "Remove the fill, set the stroke color to cyan (#00ffff), and stroke width to 2.",
+              "Initialize the path length to 0 and rotate to 0 degrees.",
+            "Animate the path length based on the 'progress' prop (i.e., pathLength: progress / 100) and rotate to 360 degrees continuously over 4 seconds.",
+            "Add another 'motion.circle' element.",
+            "Set its center at 'cx=50', 'cy=50', and radius 'r=35'.",
+              "Remove the fill, set the stroke color to magenta (#ff00ff), and stroke width to 4.",
+            "Initialize the path length to 0 and rotate to 0 degrees.",
+            "Animate the path length based on the 'progress' prop (i.e., pathLength: progress / 100) and rotate to -360 degrees continuously over 6 seconds.",
+            "Add a 'motion.path' element with a path definition forming a circle (d attribute).",
+               "Remove the fill, set the stroke color to green (#00ff00), and stroke width to 3.",
+            "Initialize the path length to 0.",
+            "Animate the path length based on the 'progress' prop.",
+            "Map over an array of four elements (indices 0, 1, 2, 3) to create four 'motion.circle' elements.",
+               "Set their center at 'cx=50' and 'cy=50', and radius 'r=5'.",
+            "Fill color is set to white (#ffffff).",
+            "Initialize their scale to 0.5 and opacity to 0.5.",
+            "Animate their scale and opacity with a pulsating effect (scale: [0.5, 1, 0.5] and opacity: [0.5, 1, 0.5]), each with a 2-second duration and repeating infinitely.",
+               "Apply a rotation transformation to position them around the central circle, each offset by 90 degrees.",
+          
+
+          ],
+        },
+        {
+          stepTitle: "Step 3: Setting Up the Main App Component",
+          titleDescription: "",
+          description: [
+            "Create a functional component named App.",
+           "Use the 'useState' hook to create two state variables: 'loading' (initially set to true) and 'progress' (initially set to 0).",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 4: Managing Progress with useEffect",
+          titleDescription: "",
+          description: [
+            "Inside the 'useEffect' hook, define an interval function that increments the 'progress' state by 1 every 30 milliseconds.",
+            "If 'progress' reaches or exceeds 100, clear the interval and set 'loading' to 'false'.",
+            "Ensure the interval is cleared when the component unmounts by returning a cleanup function from the 'useEffect' hook.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 5: Conditional Rendering Based on Loading State",
+          titleDescription: "",
+          description: [
+            "Use the 'AnimatePresence' component to handle the conditional rendering.",
+             "If 'loading' is 'true', render a 'motion.div' with a 'className' of 'loader'.",
+            "Inside this 'motion.div', include the 'LoaderShape' component, passing 'progress' as a prop.",
+            "Add a 'motion.div' with a 'className' of 'progress-text' to display the 'progress' percentage.",
+            "If 'loading' is 'false', render a different 'motion.div' with a 'className' of 'content'.",
+            "Inside this 'motion.div', add an 'h1' element with the text 'Welcome' and a 'p' element with the text 'Your future awaits.'",
+           
+          ],
+        },{
+          stepTitle: "Step 6: Adding Animation Effects",
+          titleDescription: "",
+          description: [
+            "Apply initial, animate, and exit properties to the 'motion.div' containing the loader:",
+             "'initial={{ opacity: 0 }}' to start with zero opacity.",
+            "'animate={{ opacity: 1 }}' to fade in to full opacity.",
+            "'exit={{ opacity: 0 }}' to fade out to zero opacity when exiting.",
+            "Set a transition duration of 0.3 seconds for smooth transitions.",
+            "Apply initial and animate properties to the 'motion.div' containing the main content:",
+            "'initial={{ opacity: 0 }}' to start with zero opacity.",
+            "'animate={{ opacity: 1 }}' to fade in to full opacity.",
+            "Set a transition duration of 0.3 seconds for smooth transitions.",
+         
+          ],
+        },{
+          stepTitle: "Step 7: Exporting the App Component",
+          titleDescription: "",
+          description: [
+            "Export the 'App' component as the default export so it can be rendered by the application.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "",
+      img: require("../images/ReactLesson48.webp"),
+      link: "pathStyles",
+    },
   
   ],
 };
