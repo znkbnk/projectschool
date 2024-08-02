@@ -5570,9 +5570,9 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "",
+      codesandboxUrl: "https://codesandbox.io/embed/y58dqv?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson48.webp"),
-      link: "pathStyles",
+      link: "https://www.dropbox.com/scl/fi/2utipgcrdot1nfn0ku8ey/dynamicLoader48.css?rlkey=wlzwdwkdcjqz2ydns4azeaknf&st=k861ornm&dl=0",
     },
   
   ],
