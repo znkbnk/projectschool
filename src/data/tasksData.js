@@ -5763,7 +5763,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/p/devbox/xenodochial-firefly-3h6rxy?embed=1&file=%2Fsrc%2FApp.jsx",
+      codesandboxUrl: "https://codesandbox.io/embed/c6f9lk?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson49.webp"),
       link: "https://www.dropbox.com/scl/fi/d3i7fsev6pyxnpkbmz2lj/speechSynthStyles.css?rlkey=mpcogwmbt1xq97cjxv362m7fp&st=27hhv5n1&dl=0",
     },
