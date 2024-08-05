@@ -5574,6 +5574,195 @@ const tasksData = {
       img: require("../images/ReactLesson48.webp"),
       link: "https://www.dropbox.com/scl/fi/2utipgcrdot1nfn0ku8ey/dynamicLoader48.css?rlkey=wlzwdwkdcjqz2ydns4azeaknf&st=k861ornm&dl=0",
     },
+    {
+      taskId: "reacttask49",
+      taskTitle: "SpeechSynth",
+      introduction: "SpeechSynth is a web application that converts text into speech using a React-based front end and a Node.js back end with gTTs Text-to-Speech integration. Users can input text and download the generated speech as an MP3 file with a simple and intuitive interface.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the React Front End",
+          titleDescription: "",
+          description: [
+            "Use 'create-react-app' to set up a new React project.",
+            "Navigate to your project directory and run the following command: 'npx create-react-app text-to-speech-app' then 'cd text-to-speech-app'.",
+            "Install Axios using this command: 'npm install axios'. Axios is used to make HTTP requests from the React app to the Node.js server.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create the Text-to-Speech Component",
+          titleDescription: "Front End",
+          description: [
+             "Open your terminal or command prompt.",
+            "Change the current directory to the 'src' folder within your React project. This is where all your component files will be stored.",
+            "In the 'src' directory, create a new file named TextToSpeechApp.js. This file will contain the code for your Text-to-Speech component. ( In my case I contain all my Front End code in App.js file. ).",
+                    
+          ],
+        },
+        {
+          stepTitle: "Step 3: Set Up Imports",
+          titleDescription: "",
+          description: [
+            "Open TextToSpeechApp.js in your code editor.",
+           "At the top of the file, import the React library.",
+            "Import the 'useState' hook to manage state within the component.",
+            "Import the 'useEffect' hook to perform side effects, such as updating the symbol count.",
+            "Import Axios to make HTTP requests to the back-end server.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 4: Initialize State Variables",
+          titleDescription: "",
+          description: [
+            "Within the component function, use the useState hook to create three state variables:",
+            "'inputText': Stores the text input by the user.",
+            "'loading': A boolean indicating whether the text-to-speech generation is in progress.",
+            "'symbolCount': Stores the number of characters in the 'inputText'.",
+        
+          ],
+        },
+        {
+          stepTitle: "Step 5: Implement useEffect Hook",
+          titleDescription: "",
+          description: [
+            "Use the 'useEffect' hook to monitor changes to 'inputText'.",
+             "Whenever 'inputText' changes, update 'symbolCount' with the length of 'inputText'.",
+            "Ensure that this effect runs only when 'inputText' changes by including it in the dependency array of 'useEffect'.",
+          
+          ],
+        },{
+          stepTitle: "Step 6: Create Input Change Handler",
+          titleDescription: "",
+          description: [
+            "Define a function to handle changes to the text input field.",
+             "This function should update the 'inputText' state variable with the value from the input event.",
+        
+          ],
+        },{
+          stepTitle: "Step 7: Create the Speak Handler",
+          titleDescription: "",
+          description: [
+            "Define an asynchronous function to handle the click event of the 'Generate Speech' button.",
+             "Within this function, check if 'inputText' is not empty and proceed only if it contains text.",
+            "Set 'loading' to 'true' to indicate that the process has started.",
+            "Use Axios to send a POST request to the back-end server, including the 'inputText' as the request body.",
+            "Handle the response by creating a URL from the received blob data and triggering a download.",
+            "Use a try-catch block to manage errors and ensure 'loading' is set back to 'false' after the request completes.",
+           
+          ],
+        },{
+          stepTitle: "Step 8: Create the JSX Structure",
+          titleDescription: "",
+          description: [
+            "In the return statement of the component function, create a heading element to display the title of the app.",
+             "A paragraph element to explain what the app does.",
+            "A textarea element for user input, with an event handler for changes.",
+            "A paragraph element to display the current symbol count.",
+            "A button element to trigger the text-to-speech generation, with conditional text to show 'Processing...' when 'loading' is 'true' and 'Generate Speech' when 'loading' is 'false'.",
+            
+          ],
+        },{
+          stepTitle: "Step 9: Export the Component",
+          titleDescription: "",
+          description: [
+            "At the end of the file, export the component as the default export so that it can be imported and used in other parts of the application.",
+         
+          ],
+        },{
+          stepTitle: "Step 10: Create the Server Script",
+          titleDescription: "Back End",
+          description: [
+            "Open your terminal or command prompt.",
+             "Change the current directory to where you want to set up the Node.js server. ( In my case I created server.js file in the root of my project, next to the package.json file. ).",
+            "In the server directory, create a new file named server.js. This file will contain the code for your back-end server.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 11: Set Up Imports",
+          titleDescription: "",
+          description: [
+            "Open server.js in your code editor.",
+            "Import the Express framework to create the server and handle HTTP requests.",
+            "Import the CORS middleware to enable cross-origin requests from the front-end server.",
+            "Import the fs module to perform file system operations, such as saving and deleting files.",
+            "Import the path module to handle and manipulate file paths.",
+            "Import the gtts package to use the Google Text-to-Speech API for generating speech from text.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 12: Initialize Express App",
+          titleDescription: "",
+          description: [
+             "Create an instance of the Express app.",
+            "Define a port number for the server to listen on, such as 3001.",
+        
+          ],
+        },
+        {
+          stepTitle: "Step 13: Set Up Middleware",
+          titleDescription: "",
+          description: [
+            "Use the CORS middleware to allow requests from the front-end server running on a different port.",
+           "Use Express's built-in middleware to parse JSON request bodies so that you can access the text field from the client's request.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 14: Create Synthesize Route",
+          titleDescription: "",
+          description: [
+            "Define a POST route at /synthesize to handle incoming text-to-speech requests.",
+            "Extract the text field from the request body.",
+            "Create an instance of gtts with the extracted text and specify the language for speech synthesis.",
+            "Define a file path where the generated speech file will be saved temporarily.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 15: Generate and Send Speech File",
+          titleDescription: "",
+          description: [
+            "Use the gtts.save method to save the generated speech to the specified file path.",
+             "Handle any errors that occur during the saving process.",
+            "If the file is saved successfully, send it as a download to the client.",
+            "Ensure the temporary file is deleted from the server after it has been sent to the client.",
+            
+          ],
+        },{
+          stepTitle: "Step 16: Start the Server",
+          titleDescription: "",
+          description: [
+            "Create a start script that runs both the backend and frontend when you type 'npm start' in the terminal.",
+             "Ensure you have concurrently installed as a dev dependency.",
+            "Open your package.json file.",
+            "Find the scripts section.",
+            "Add a start script: 'concurrently \'npm run server\' \'npm run client\'', that uses concurrently to run both the backend and frontend scripts. ( Make sure that you use double quotes in package.json file. ).",
+           
+          ],
+        },{
+          stepTitle: "Step 17: Bonus Step",
+          titleDescription: "",
+          description: [
+            "Install Nodemon using this command: 'npm install --save-dev nodemon'. ",
+             "'nodemon' is a useful tool for development as it automatically restarts your Node.js server whenever you make changes to the code.",
+            "Update your package.json and add to the 'scripts' section the following entry: 'server': 'nodemon server.js' ( Do not fotget to use double quotes in the package.json file. ).",
+          
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Hard",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "",
+      img: require("../images/ReactLesson49.webp"),
+      link: "pathStyles",
+    },
   
   ],
 };
