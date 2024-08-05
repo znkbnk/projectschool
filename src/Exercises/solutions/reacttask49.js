@@ -112,18 +112,6 @@ app.listen(port, () => {
 
 `;
 
-const solutionCode3 = `
-//package.json
-
-"scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "client": "react-scripts start",
-    "server": "nodemon server.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-`;
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default [solutionCode1, solutionCode2, solutionCode3];
+export default [solutionCode1, solutionCode2];
