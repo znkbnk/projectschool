@@ -5687,9 +5687,9 @@ const tasksData = {
             "Open server.js in your code editor.",
             "Import the Express framework to create the server and handle HTTP requests.",
             "Import the CORS middleware to enable cross-origin requests from the front-end server.",
-            "Import the fs module to perform file system operations, such as saving and deleting files.",
-            "Import the path module to handle and manipulate file paths.",
-            "Import the gtts package to use the Google Text-to-Speech API for generating speech from text.",
+            "Import the 'fs' module to perform file system operations, such as saving and deleting files.",
+            "Import the 'path' module to handle and manipulate file paths.",
+            "Import the 'gtts' package to use the Google Text-to-Speech API for generating speech from text.",
            
           ],
         },
@@ -5707,7 +5707,7 @@ const tasksData = {
           titleDescription: "",
           description: [
             "Use the CORS middleware to allow requests from the front-end server running on a different port.",
-           "Use Express's built-in middleware to parse JSON request bodies so that you can access the text field from the client's request.",
+           "Use Express's built-in middleware to parse JSON request bodies so that you can access the 'text' field from the client's request.",
           
           ],
         },
@@ -5715,9 +5715,9 @@ const tasksData = {
           stepTitle: "Step 14: Create Synthesize Route",
           titleDescription: "",
           description: [
-            "Define a POST route at /synthesize to handle incoming text-to-speech requests.",
-            "Extract the text field from the request body.",
-            "Create an instance of gtts with the extracted text and specify the language for speech synthesis.",
+            "Define a POST route at '/synthesize' to handle incoming text-to-speech requests.",
+            "Extract the 'text' field from the request body.",
+            "Create an instance of 'gtts' with the extracted text and specify the language for speech synthesis.",
             "Define a file path where the generated speech file will be saved temporarily.",
            
           ],
@@ -5726,7 +5726,7 @@ const tasksData = {
           stepTitle: "Step 15: Generate and Send Speech File",
           titleDescription: "",
           description: [
-            "Use the gtts.save method to save the generated speech to the specified file path.",
+            "Use the 'gtts.save' method to save the generated speech to the specified file path.",
              "Handle any errors that occur during the saving process.",
             "If the file is saved successfully, send it as a download to the client.",
             "Ensure the temporary file is deleted from the server after it has been sent to the client.",
@@ -5734,13 +5734,14 @@ const tasksData = {
           ],
         },{
           stepTitle: "Step 16: Start the Server",
-          titleDescription: "",
+          titleDescription: "package.json",
           description: [
-            "Create a start script that runs both the backend and frontend when you type 'npm start' in the terminal.",
-             "Ensure you have concurrently installed as a dev dependency.",
+            "Create a 'start script' that runs both the backend and frontend when you type 'npm start' in the terminal.",
+             "Ensure you have 'concurrently' installed as a dev dependency.",
             "Open your package.json file.",
-            "Find the scripts section.",
-            "Add a start script: 'concurrently \'npm run server\' \'npm run client\'', that uses concurrently to run both the backend and frontend scripts. ( Make sure that you use double quotes in package.json file. ).",
+            "Find the 'scripts' section.",
+            "Include 'client': 'react-scripts start' in the 'scripts' section to ensure the frontend server can be started with 'npm run client'.",
+            "Add a start script: 'concurrently \'npm run server\' \'npm run client\'', that uses 'concurrently' to run both the backend and frontend scripts. ( Make sure that you use double quotes in package.json file. ).",
            
           ],
         },{
@@ -5750,6 +5751,7 @@ const tasksData = {
             "Install Nodemon using this command: 'npm install --save-dev nodemon'. ",
              "'nodemon' is a useful tool for development as it automatically restarts your Node.js server whenever you make changes to the code.",
             "Update your package.json and add to the 'scripts' section the following entry: 'server': 'nodemon server.js' ( Do not fotget to use double quotes in the package.json file. ).",
+            "Update your package.json and add to the 'scripts' section the following entry: 'client': 'react-scripts start' ( Do not fotget to use double quotes in the package.json file. ).",
           
           ],
         },
