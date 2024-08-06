@@ -1,4 +1,3 @@
-// src/pages/Signup.js
 import React, { useState, useEffect } from "react";
 import "../styles/login.css";
 import Navbar from "../components/Navbar";
@@ -80,31 +79,26 @@ const Signup = () => {
     }
   };
 
-  const onGoogleSignUp = () => {
-    signInWithPopup(auth, googleProvider)
-      .then(async (result) => {
-        const user = result.user;
-        await sendVerificationEmail(user);
-        setIsSignUpSuccess(true);
+  const onGoogleSignUp = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      await sendVerificationEmail(user);
+      setIsSignUpSuccess(true);
 
-        // Send a POST request to the Netlify Function 
-        const { uid } = user;
-        try {
-          await axios.post('https://projectschool.dev/.netlify/functions/create-user', {
-            firebaseUid: uid,
-            email: user.email,
-          });
-          console.log('User created in database');
-          toast.success("User signed up successfully! Please verify your email.");
-        } catch (error) {
-          console.error('Error creating user in database:', error);
-        }
-      })
-      .catch((error) => {
-        const errorMessage = error.message;
-        toast.error("Error: " + errorMessage);
-        console.error(error.message);
+      // Send a POST request to the Netlify Function 
+      const { uid } = user;
+      await axios.post('https://projectschool.dev/.netlify/functions/create-user', {
+        firebaseUid: uid,
+        email: user.email,
       });
+      console.log('User created in database');
+      toast.success("User signed up successfully! Please verify your email.");
+    } catch (error) {
+      const errorMessage = error.message;
+      toast.error("Error: " + errorMessage);
+      console.error(error.message);
+    }
   };
 
   if (loggedIn) {
