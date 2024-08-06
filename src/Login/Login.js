@@ -1,8 +1,9 @@
+// src/pages/Login.js
 import React, { useState } from "react";
 import "../styles/login.css";
 import Navbar from "../components/Navbar";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../components/firebase";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, googleProvider } from "../components/firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Footer from "../components/Footer";
@@ -38,50 +39,65 @@ const Login = () => {
         }
       });
   };
-  
+
+  const onGoogleLogin = () => {
+    signInWithPopup(auth, googleProvider)
+      .then(() => {
+        navigate("/");
+        toast.success("Logged in successfully");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        toast.error("Error: " + errorMessage);
+        console.error(error.message);
+      });
+  };
 
   return (
     <div>
       <Navbar />
-      <div className='login-container'>
-        <section id='entry-page'>
+      <div className="login-container">
+        <section id="entry-page">
           <form onSubmit={onLogin}>
             <h2>Welcome Back!</h2>
             <fieldset>
               <legend>Log In</legend>
               <ul>
                 <li>
-                  <label htmlFor='email'>Email:</label>
+                  <label htmlFor="email">Email:</label>
                   <input
-                    id='email-address'
-                    name='email'
-                    type='email'
+                    id="email-address"
+                    name="email"
+                    type="email"
                     required
-                    placeholder='Email address'
+                    placeholder="Email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </li>
                 <li>
-                  <label htmlFor='password'>Password:</label>
+                  <label htmlFor="password">Password:</label>
                   <input
-                    id='password'
-                    name='password'
-                    type='password'
+                    id="password"
+                    name="password"
+                    type="password"
                     required
-                    placeholder='Password'
+                    placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </li>
               </ul>
             </fieldset>
-            <div className='forgot-password'>
-              <Link to='/resetPassword'>Forgot Password?</Link>
+            <div className="forgot-password">
+              <Link to="/resetPassword">Forgot Password?</Link>
             </div>
-            <button type='submit'>Login</button>
-            <Link to='/signup'>
-              <button className='login-button' type='button'>
+            <button type="submit">Login</button>
+            <button type="button" onClick={onGoogleLogin}>
+              Login with Google
+            </button>
+            <Link to="/signup">
+              <button className="login-button" type="button">
                 Create an Account
               </button>
             </Link>

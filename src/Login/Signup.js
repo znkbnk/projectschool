@@ -1,4 +1,4 @@
-import axios from 'axios';
+// src/pages/Signup.js
 import React, { useState, useEffect } from "react";
 import "../styles/login.css";
 import Navbar from "../components/Navbar";
@@ -6,16 +6,18 @@ import { Link } from "react-router-dom";
 import {
   createUserWithEmailAndPassword,
   sendEmailVerification,
+  signInWithPopup,
 } from "firebase/auth";
-import { auth } from "../components/firebase";
+import { auth, googleProvider } from "../components/firebase";
 import { toast } from "react-toastify";
 import Footer from "../components/Footer";
+import axios from 'axios';
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false); 
-  const [loggedIn, setLoggedIn] = useState(false); 
+  const [isSignUpSuccess, setIsSignUpSuccess] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -49,7 +51,7 @@ const Signup = () => {
       const user = userCredential.user;
       await sendVerificationEmail(user);
       setIsSignUpSuccess(true);
-  
+
       // Send a POST request to the Netlify Function 
       const { uid } = user;
       try {
@@ -78,15 +80,42 @@ const Signup = () => {
     }
   };
 
+  const onGoogleSignUp = () => {
+    signInWithPopup(auth, googleProvider)
+      .then(async (result) => {
+        const user = result.user;
+        await sendVerificationEmail(user);
+        setIsSignUpSuccess(true);
+
+        // Send a POST request to the Netlify Function 
+        const { uid } = user;
+        try {
+          await axios.post('https://projectschool.dev/.netlify/functions/create-user', {
+            firebaseUid: uid,
+            email: user.email,
+          });
+          console.log('User created in database');
+          toast.success("User signed up successfully! Please verify your email.");
+        } catch (error) {
+          console.error('Error creating user in database:', error);
+        }
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        toast.error("Error: " + errorMessage);
+        console.error(error.message);
+      });
+  };
+
   if (loggedIn) {
     return (
       <div>
         <Navbar />
-        <div className='login-container'>
-          <section id='entry-page'>
+        <div className="login-container">
+          <section id="entry-page">
             <h2>You are already logged in!</h2>
-            <Link to='/'>
-              <button className='login-button' type='button'>
+            <Link to="/">
+              <button className="login-button" type="button">
                 Go to Home
               </button>
             </Link>
@@ -101,15 +130,15 @@ const Signup = () => {
     return (
       <div>
         <Navbar />
-        <div className='login-container'>
-          <section id='entry-page'>
+        <div className="login-container">
+          <section id="entry-page">
             <h2>Sign Up Successful!</h2>
             <p>
               Please check your email for the verification link before logging
               in.
             </p>
-            <Link to='/login'>
-              <button className='login-button' type='button'>
+            <Link to="/login">
+              <button className="login-button" type="button">
                 Login
               </button>
             </Link>
@@ -123,40 +152,43 @@ const Signup = () => {
   return (
     <div>
       <Navbar />
-      <div className='login-container'>
-        <section id='entry-page'>
+      <div className="login-container">
+        <section id="entry-page">
           <form onSubmit={onSubmit}>
             <h2>Sign Up!</h2>
             <fieldset>
               <legend>Create Account</legend>
               <ul>
                 <li>
-                  <label htmlFor='email'>Email:</label>
+                  <label htmlFor="email">Email:</label>
                   <input
-                    type='email'
-                    label='Email address'
+                    type="email"
+                    label="Email address"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    placeholder='Email address'
+                    placeholder="Email address"
                   />
                 </li>
                 <li>
-                  <label htmlFor='password'>Password:</label>
+                  <label htmlFor="password">Password:</label>
                   <input
-                    type='password'
-                    label='Create password'
+                    type="password"
+                    label="Create password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    placeholder='Password'
+                    placeholder="Password"
                   />
                 </li>
               </ul>
             </fieldset>
-            <button type='submit'>Sign up</button>
-            <Link to='/login'>
-              <button className='login-button' type='button'>
+            <button type="submit">Sign up</button>
+            <button type="button" onClick={onGoogleSignUp}>
+              Sign up with Google
+            </button>
+            <Link to="/login">
+              <button className="login-button" type="button">
                 Have an Account?
               </button>
             </Link>
