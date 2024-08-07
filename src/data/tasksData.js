@@ -5880,7 +5880,7 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/6wnq7t?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson50.webp"),
-      link: "pathStyles",
+      link: "https://www.dropbox.com/scl/fi/zy7gzeevt64xk3vpcjkio/SmoothScroll-NavigatorStyles50.css?rlkey=e3dqqusxbtezfwljgk04h2ny0&st=4nw2hkgd&dl=0",
     },
   
   ],
