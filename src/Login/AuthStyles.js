@@ -1,4 +1,4 @@
-// src/components/AuthStyles.js
+// src/Login/AuthStyles.js
 import styled from "styled-components";
 import { motion } from "framer-motion";
 

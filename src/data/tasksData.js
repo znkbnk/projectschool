@@ -5767,6 +5767,121 @@ const tasksData = {
       img: require("../images/ReactLesson49.webp"),
       link: "https://www.dropbox.com/scl/fi/d3i7fsev6pyxnpkbmz2lj/speechSynthStyles.css?rlkey=mpcogwmbt1xq97cjxv362m7fp&st=27hhv5n1&dl=0",
     },
+    {
+      taskId: "reacttask50",
+      taskTitle: "SmoothScroll Navigator",
+      introduction: "SmoothScroll Navigator is a React application that features a dynamic navigation bar with smooth scrolling and automatic section highlighting. This project demonstrates an intuitive user interface, enhancing the user experience by visually guiding them through different sections of the webpage.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up Your Project",
+          titleDescription: "",
+          description: [
+            "Initialize your React project if you haven't already. You can do this using Create React App: 'npx create-react-app scroll-navigation'.",
+            "Install react-scroll package: 'npm install react-scroll'.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Your Sections Array",
+          titleDescription: "Define an array of section objects. Each object should include:",
+          description: [
+            "'id': Unique identifier for the section.",
+            "'label': Name to be displayed in the navigation.",
+            "'height': Minimum height for the section.",
+            "'icon': Icon to be displayed in the navigation.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 3: Implement the Scroll Logic",
+          titleDescription: "",
+          description: [
+            "Use 'useState' to create a state variable for the active index ('activeIndex').",
+           "Use 'useState' to create a state variable for the current scroll position ('scrollY').",
+            "Use 'useEffect' to add a scroll event listener to the window.",
+            "In the scroll event handler, get the current scroll position ('window.scrollY').",
+            "Loop through each section and compare the current scroll position with the top offset of each section.",
+            "Use 'element.offsetTop' to get the vertical position of each section.",
+            "Update 'activeIndex' based on the current scroll position relative to section positions.",
+            "Set the state variables ('scrollY' and 'activeIndex') inside the scroll event handler.",
+            "Ensure the scroll event listener is cleaned up when the component unmounts.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 4: Handle Click Events for Navigation",
+          titleDescription: "Create Click Handler Function",
+          description: [
+            "Define a function that takes an index and a section ID as parameters.",
+            "Update 'activeIndex' to the index of the clicked navigation item.",
+            "Use 'scroller.scrollTo' from 'react-scroll' to scroll to the section with the provided ID.",
+            "Configure 'scroller.scrollTo' with options for smooth scrolling, duration, and offset.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 5: Build the Navigation UI",
+          titleDescription: "",
+          description: [
+            "Iterate over the sections array to create a list item ('li') for each section.",
+             "Attach the click handler function to each navigation item.",
+            "Use the 'activeIndex' state to conditionally apply an 'active' class to the currently active navigation item.",
+            "Use CSS to style the navigation bar, items, and active state.",
+            "Position the navigation bar at the top or side of the page.",
+          
+          ],
+        },{
+          stepTitle: "Step 6: Build the Content Sections",
+          titleDescription: "",
+          description: [
+            "Iterate over the sections array to create a 'div' for each section.",
+             "Set the 'id' attribute of each 'div' to the corresponding section ID.",
+            "Apply the 'height' value from each section object to the corresponding 'div' using inline styles or a CSS class.",
+            "Use the 'activeIndex' state to conditionally apply an 'active' class to the currently active section.",
+            "Include headings, text, and other content within each section 'div'.",
+          
+          ],
+        },{
+          stepTitle: "Step 7: Add a Scroll-to-Top Button",
+          titleDescription: "",
+          description: [
+            "Add a button or link element at the bottom of the page.",
+             "Style the button for visibility and positioning.",
+            "Attach an 'onClick' event handler to the button.",
+            "Use 'scroll.scrollToTop' from 'react-scroll' to scroll smoothly to the top of the page.",
+            
+          ],
+        },{
+          stepTitle: "Step 8: Style Your Components",
+          titleDescription: "Apply necessary CSS styles for:",
+          description: [
+            "Navigation bar and items.",
+             "Active states for both navigation and sections.",
+            "Content sections to ensure proper layout and spacing.",
+            "Scroll-to-top button for visibility and functionality.",
+           
+          ],
+        },{
+          stepTitle: "Step 9: Test Your Application",
+          titleDescription: "Run your React application and verify the following:",
+          description: [
+            "Navigation bar highlights the correct section as you scroll.",
+             "Clicking on a navigation item smoothly scrolls to the correct section.",
+            "Scroll-to-top button functions correctly.",
+           
+          ],
+        }
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/6wnq7t?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson50.webp"),
+      link: "pathStyles",
+    },
   
   ],
 };
