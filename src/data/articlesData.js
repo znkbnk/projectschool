@@ -1,6 +1,6 @@
 const blogCards = [
   {
-    id: 1,
+    id: 'How-to-create-Authentication-Guard-Component',
     category: "React",
     title: "How to create Authentication Guard Component",
     extract:
@@ -51,7 +51,7 @@ const blogCards = [
 
 const articles = [
   {
-    id: 1,
+    id: 'How-to-create-Authentication-Guard-Component',
     title: "How to create Authentication Guard Component",
     image: "/images/articleImg/AuthGuard1.webp",
     paragraphs: [
