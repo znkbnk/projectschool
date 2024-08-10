@@ -6124,7 +6124,7 @@ const tasksData = {
             "Ensure that your site is served over 'HTTPS' by configuring 'SSL' certificates.",
             "Set up monitoring to keep track of your site's performance and availability.",
             "Regularly update your dependencies and application to keep it secure and up-to-date.",
-            "",
+           
           ],
         },
       ],

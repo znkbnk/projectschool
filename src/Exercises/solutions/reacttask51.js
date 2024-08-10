@@ -1,5 +1,7 @@
 const solutionCode1 = `
-//App.js import React from 'react';
+//App.js
+
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Header from './components/Header';
