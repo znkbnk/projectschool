@@ -23,7 +23,8 @@ import Success from "./Stripe/Success";
 import Cancel from "./Stripe/Cancel";
 import Articles from "./Blog/Articles";
 import LaravelLessons from "./Exercises/LaravelLessons";
-import usePageTracking from './usePageTracking'; // Import the custom hook
+import usePageTracking from './usePageTracking'; 
+import MobileMessage from "./Exercises/MobileMessage";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -34,7 +35,7 @@ const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
 
-  usePageTracking(); // Use the custom hook
+  usePageTracking(); 
 
   useEffect(() => {
     const fetchUserData = async (user, retries = 5, delay = 3000) => {
@@ -48,7 +49,7 @@ const App = () => {
             setTimeout(
               () => fetchUserData(user, retries - 1, delay * 2),
               delay
-            ); // Exponential backoff
+            ); 
             return;
           }
           throw new Error(`Error: ${response.statusText}`);
@@ -164,6 +165,7 @@ const App = () => {
           path='/cancel'
           element={isLoggedIn ? <Cancel /> : <Navigate to='/login' />}
         />
+        <Route path='/mobile-message' element={isLoggedIn ? <MobileMessage /> : <Navigate to='/login' />} />
       </Routes>
     </div>
   );

@@ -1,13 +1,9 @@
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import LessonsCards from "./LessonsCards";
 
-const MobileMessage = () => (
-  <div style={{ textAlign: "center", padding: "20px", fontSize: "2rem" }}>
-    <h3>Please use a desktop or laptop for a better learning experience.</h3>
-  </div>
-);
+
 
 const FilteredTasks = ({
   tasks,
@@ -16,22 +12,7 @@ const FilteredTasks = ({
   showEasy,
   showHard,
 }) => {
- const [isMobile, setIsMobile] = useState(window.innerWidth < 460);
-   useEffect(() => {
-     const handleResize = () => {
-       setIsMobile(window.innerWidth < 460);
-     };
 
-     window.addEventListener("resize", handleResize);
-
-     return () => {
-       window.removeEventListener("resize", handleResize);
-     };
-   }, []);
-
-   if (isMobile) {
-     return <MobileMessage />;
-   }
 
   const isTaskAvailable = (task) => {
     const completedTasks =
