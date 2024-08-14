@@ -6137,6 +6137,186 @@ const tasksData = {
       img: require("../images/ReactLesson51.webp"),
       link: "https://www.dropbox.com/scl/fi/s0to93ewakfkmk0tlegny/teslaExperienceStyles51.css?rlkey=zbjaqvwh1g9k6molh922y0jzc&st=5jyxbdjl&dl=0",
     },
+    {
+      taskId: "reacttask52",
+      taskTitle: "Dynamic Dashboard",
+      introduction: "Dynamic Dashboard is a modern web application that provides an interactive and responsive interface for managing and visualizing various types of data. It features a sidebar navigation, day-based tabbed views, and animated components for displaying schedules, user information, and application details.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setup React Project",
+          titleDescription: "",
+          description: [
+            "Create a new React project using Create React App or any other method you prefer.",
+            "Install necessary dependencies: React Router, Framer Motion, and React Icons.",
+        
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create Project Structure",
+          titleDescription: "",
+          description: [
+             "Organize your project structure with the following folders and files:",
+            "src/components: For reusable components like Header, Sidebar, DayTabs, LoadingSpinner, Table.",
+            "src/pages: For page components like Home, Users, Schedule, Info.",
+            "src/App.js: Main app component to set up routing and layout.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create a Header Component",
+          titleDescription: "components/Header.js",
+          description: [
+            "Name the component Header.",
+           "Add a button element.",
+            "Use a state handler (passed as a prop) for the onClick event to toggle the sidebar menu state.",
+            "Add a link element (<Link> from React Router or a plain <a> tag).",
+            "Ensure the link opens in a new tab (using target='_blank' and rel='noopener noreferrer' if necessary).",
+            "Use an icon library like react-icons (e.g., FaBars).",
+            "Import and include the icon inside the button element.",
+          ],
+        },
+        {
+          stepTitle: "Step 4: Implement a Sidebar Component",
+          titleDescription: "components/Sidebar.js",
+          description: [
+            "Name the component Sidebar.",
+            "Use a library like Framer Motion to animate the sidebar.",
+            "Set initial, animate, and transition properties for smooth opening and closing.",
+            "Use NavLink from React Router for navigation links.",
+            "Define links for Home, Users, Schedule, and Info pages.",
+            "Add an onClick handler to each link to close the sidebar.",
+            "Ensure the sidebar is hidden or slides out when not open; (optional).",
+          ],
+        },
+        {
+          stepTitle: "Step 5: Define a DayTabs Component",
+          titleDescription: "components/DayTabs.js",
+          description: [
+            "Name the component DayTabs.",
+             "Use useState to manage the active day state.",
+            "Define an array with the days of the week.",
+            "Map through the array to create a button for each day.",
+            "Set the onClick event for each button to update the active day state.",
+            "Apply conditional styling to indicate the active day (e.g., highlight the active button).",
+          ],
+        },{
+          stepTitle: "Step 6: Create a LoadingSpinner Component",
+          titleDescription: "components/LoadingSpinner.js",
+          description: [
+            "Name the component LoadingSpinner.",
+             "Install a library like react-loader-spinner.",
+            "Import and use the appropriate spinner component (e.g., Oval).",
+            "Center the spinner in the middle of the container.",
+            "Set dimensions and colors as needed.",
+           
+          ],
+        },{
+          stepTitle: "Step 7: Define a Table Component",
+          titleDescription: "components/Table.js",
+          description: [
+            "Name the component Table.",
+             "Define data for the table, either statically or dynamically generated.",
+            "Create a table structure with headers.",
+            "Map through the data to create rows and cells.",
+            "Use Framer Motion to animate the table's appearance.",
+            "Set initial, animate, and transition properties for smooth entry.",
+          ],
+        },{
+          stepTitle: "Step 8: Implement a Home Component",
+          titleDescription: "pages/Home.js",
+          description: [
+            "Name the component Home.",
+             "Import and render the DayTabs component at the top.",
+            "Import and render the Table component below the DayTabs.",
+          
+          ],
+        },{
+          stepTitle: "Step 9: Declare a Users Component ",
+          titleDescription: "pages/Users.js",
+          description: [
+            "Name the component Users.",
+             "Use useState to manage the users' state.",
+            "Use useEffect to simulate data fetching.",
+            "Set a timeout to mimic an API call and update the state with user data.",
+            "Create a table structure to display the fetched user data.",
+            "Map through the user data to create table rows.",
+            "Render the LoadingSpinner component while the data is loading.",
+          ],
+        },{
+          stepTitle: "Step 10: Create a Schedule Component",
+          titleDescription: "pages/Schedule.js",
+          description: [
+            "Name the component Schedule.",
+             "Use useState to manage the schedule data.",
+            "Use useEffect to simulate data fetching.",
+            "Set a timeout to mimic an API call and update the state with schedule data.",
+            "Create a layout to display the schedule data.",
+            "Map through the schedule data to create schedule items.",
+            "Render the LoadingSpinner component while the data is loading.",
+            "Use Framer Motion to animate the appearance of schedule items.",
+            "Set initial, animate, and transition properties for smooth entry.",
+          ],
+        },
+        {
+          stepTitle: "Step 11: Implement a Info Component",
+          titleDescription: "pages/Info.js",
+          description: [
+            "Name the component Info.",
+             "Use useState to manage the info data.",
+            "Use useEffect to simulate data fetching.",
+            "Set a timeout to mimic an API call and update the state with info data.",
+            "Create a layout to display the information data.",
+            "Structure the data into sections (e.g., About, Version, Author, Features).",
+            "Render the LoadingSpinner component while the data is loading.",
+            "Use Framer Motion to animate the appearance of info content.",
+            "Set initial, animate, and transition properties for smooth entry.",
+          ],
+        },
+        {
+          stepTitle: "Step 12: Set Up Routing",
+          titleDescription: "App.js",
+          description: [
+            "Import BrowserRouter, Routes, and Route from React Router.",
+             "Wrap the application in a BrowserRouter component.",
+            "Use the Routes and Route components to define routes.",
+            "Map the Home component to the root path (/).",
+            "Map the Users component to the /users path.",
+            "Map the Schedule component to the /schedule path.",
+            "Map the Info component to the /info path.",
+            "Render the Header and Sidebar components outside the Routes component.",
+            "Ensure they are always visible regardless of the active route.",
+            "Ensure the NavLink elements in the Sidebar match the defined routes.",
+          ],
+        },
+        {
+          stepTitle: "Step 13: Styling",
+          titleDescription: "",
+          description: [
+            "Add CSS styles for layout and design; (or download from the link below).",
+             "Ensure responsiveness and a consistent look and feel across components.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 14: Testing and Debugging",
+          titleDescription: "",
+          description: [
+            "Test the application to ensure all components and routes work as expected.",
+             "Debug any issues that arise during development.",
+          
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/h66drj?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson52.webp"),
+      link: "https://www.dropbox.com/scl/fi/6to1naqx1n06l2iv017ak/tableDashboardStyles52.css?rlkey=fx72zufi3wb7lz6v33oxcpo5h&st=lqk2p1sm&dl=0",
+    },
   
   ],
 };
