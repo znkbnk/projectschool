@@ -6317,6 +6317,124 @@ const tasksData = {
       img: require("../images/ReactLesson52.webp"),
       link: "https://www.dropbox.com/scl/fi/6to1naqx1n06l2iv017ak/tableDashboardStyles52.css?rlkey=fx72zufi3wb7lz6v33oxcpo5h&st=lqk2p1sm&dl=0",
     },
+    {
+      taskId: "reacttask",
+      taskTitle: "React Quiz Master",
+      introduction: "React Quiz Master is an interactive quiz application designed to test and enhance your knowledge of React concepts. Featuring dynamic animations and detailed feedback, it provides a seamless and engaging learning experience for React enthusiasts.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up Your Project",
+          titleDescription: "",
+          description: [
+            " Use 'create-react-app' to set up a new React project.",
+            "Make sure you have 'framer-motion' installed to handle animations.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create the Basic Structure",
+          titleDescription: "",
+          description: [
+             "Set up the App.js, quizData.js, and Quiz.js files",
+            "Add any necessary CSS to style your components (e.g., App.css or Quiz.css).",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 3: Build the App Component",
+          titleDescription: "App.js",
+          description: [
+            "Inside the 'src' folder of your React project, create a file named App.js.",
+           "Import React, quizData and the Quiz components.",
+            "Create a functional component named App.",
+            "In your App component, create a 'div' with the class name App.",
+            "Add a 'div' with the class name 'react-logo' for any React logo or icon you might want to display.",
+            "Inside the main di'v, add a 'header' element with the class name App-header.",
+            "Within the 'header', include an 'h1' tag with the text 'React Mastery Challenge' to serve as the title.",
+            "Render the Quiz component inside the 'header' element.",
+            "Ensure the 'App' class, 'App-header' class, and any other elements are styled to your preference (e.g., centering, spacing, font sizes).",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 4: Prepare Quiz Data",
+          titleDescription: "data/quizData.js",
+          description: [
+            "Inside the src folder, create a data directory and a file named quizData.js.",
+            "Define an array of objects, each representing a quiz question. Each object should contain:",
+            "'q': The question text.",
+            "'o': An array of options (strings) for the question.",
+            "'a': The index of the correct option in the 'o' array.",
+            "Use export default to export the quizData array from quizData.js so it can be imported into other components.",
+            
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create the Quiz Component",
+          titleDescription: "components/Quiz.js",
+          description: [
+            "Create a file named Quiz.js in the 'src' directory.",
+             "Import React and hooks like 'useState' and 'useEffect', and also import 'motion' and 'AnimatePresence' from 'Framer Motion'.",
+            "Set up state variables using 'useState':",
+            "'currentQuestion' to track the current question index.",
+            "'score' to track the user's score.",
+            "'selectedOption' to store the index of the currently selected answer.",
+            "'startTime' to record when the user starts answering a question.",
+            "'questionTimes' to keep a record of the time taken for each question and whether the answer was correct.",
+            "'quizFinished' to indicate if the quiz is over.",
+            " Implement a 'useEffect' that sets 'startTime' to the current time whenever 'currentQuestion' changes or when the quiz is restarted.",
+            "Inside 'useEffect' hook create a function called 'handleOptionClick' that will be triggered when a user clicks on an answer option.",
+            "Within 'handleOptionClick', first check if an option is already selected or if the quiz is finished. If either condition is true, exit the function early.",
+            "Capture the current time 'using Date.now()' to determine the end time of the current question. Compute the time taken by subtracting 'startTime' from this end time.",
+            "Compare the index of the clicked option with the correct answer index stored in your quiz data. This determines if the user's selection was correct.",
+            " If the selected option is correct, increment the 'score' state variable by 1.",
+            "Update 'questionTimes' by appending an object containing:",
+            "The current question index.",
+            "The time taken to answer.",
+            "A boolean indicating if the answer was correct.",
+            "Update 'selectedOption' with the index of the clicked option.",
+            "Use 'setTimeout' to introduce a brief delay (e.g., 500 milliseconds) before proceeding. This delay allows the user to see the result of their selection before moving to the next question or ending the quiz.",
+            "Within 'setTimeout' check if 'currentQuestion' is less than the last question index (i.e., quizData.length - 1), increment 'currentQuestion' to load the next question.",
+            " If the current question is the last one, set the 'quizFinished' flag to true to indicate that the quiz has ended.",
+            "Define a restartQuiz function that resets the state variables (currentQuestion, score, selectedOption, questionTimes, startTime, and quizFinished).",
+            "After the quiz is finished, calculate The number of correct and incorrect answers from 'questionTimes', and the total time taken for the quiz.",
+          ],
+        },{
+          stepTitle: "Step 6: Implement Animation",
+          titleDescription: "",
+          description: [
+            " Import and use 'motion' and 'AnimatePresence' from 'framer-motion' to animate question transitions and option selections.",
+             "Apply animations to the quiz question (fade in/out), options (scale on hover/tap), and results to enhance user experience.",
+            
+          ],
+        },{
+          stepTitle: "Step 7: Testing",
+          titleDescription: "",
+          description: [
+            "Ensure that the quiz progresses correctly, animations work as expected, and the final results are displayed properly.",
+             "Fix any issues that arise during testing.",
+           
+          ],
+        },{
+          stepTitle: "Step 8: Refine and Style",
+          titleDescription: "",
+          description: [
+            "Make any final adjustments to styling and layout for a polished look.",
+             "Ensure the application runs smoothly and efficiently.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/m7xfwj?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson53.webp"),
+      link: "https://www.dropbox.com/scl/fi/h5s0wwmu4n9xbkewmpuzj/quizStyles53.css?rlkey=b8pfn43wdtf3tof4giv4suekp&st=xnv9hdku&dl=0",
+    },
   
   ],
 };
