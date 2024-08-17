@@ -23,7 +23,7 @@ const solutionCode2 = `
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import quizData from '../data/quizdata';
+import quizData from '../data/quizData';
 
 
 const Quiz = () => {

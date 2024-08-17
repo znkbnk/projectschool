@@ -6433,7 +6433,7 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/m7xfwj?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson53.webp"),
-      link: "https://www.dropbox.com/scl/fi/h5s0wwmu4n9xbkewmpuzj/quizStyles53.css?rlkey=b8pfn43wdtf3tof4giv4suekp&st=xnv9hdku&dl=0",
+      link: "https://www.dropbox.com/scl/fi/mp09j9gsho3mq9ylhkusa/quizStyles53.css?rlkey=s9l3biiqems1zgg86yvzexlzs&st=nmys6zbf&dl=0",
     },
   
   ],
