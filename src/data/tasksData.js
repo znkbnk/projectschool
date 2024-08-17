@@ -6318,7 +6318,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/6to1naqx1n06l2iv017ak/tableDashboardStyles52.css?rlkey=fx72zufi3wb7lz6v33oxcpo5h&st=lqk2p1sm&dl=0",
     },
     {
-      taskId: "reacttask",
+      taskId: "reacttask53",
       taskTitle: "React Quiz Master",
       introduction: "React Quiz Master is an interactive quiz application designed to test and enhance your knowledge of React concepts. Featuring dynamic animations and detailed feedback, it provides a seamless and engaging learning experience for React enthusiasts.",
 
