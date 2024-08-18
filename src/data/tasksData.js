@@ -6435,6 +6435,104 @@ const tasksData = {
       img: require("../images/ReactLesson53.webp"),
       link: "https://www.dropbox.com/scl/fi/mp09j9gsho3mq9ylhkusa/quizStyles53.css?rlkey=s9l3biiqems1zgg86yvzexlzs&st=nmys6zbf&dl=0",
     },
+    {
+      taskId: "reacttask54",
+      taskTitle: "Profile Popup Animation",
+      introduction: "A React-based web application that showcases user profile information with an animated popup using Framer Motion and Font Awesome icons. The popup provides additional details about the user, featuring smooth animations for an engaging user experience.",
+
+      steps: [
+        {
+          stepTitle: "Step 1: Setup Your React Environment",
+          titleDescription: "",
+          description: [
+            "Open your terminal and run: 'npx create-react-app popup-animation-app'.",
+            "Navigate into your project directory: 'cd popup-animation-app'.",
+            "In your project directory, open terminal and run: 'npm install framer-motion @fortawesome/fontawesome-free'.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Implement the Main Component",
+          titleDescription: "App.js",
+          description: [
+             "Open src/App.js in your code editor.",
+            "Import 'React' and 'useState' from 'react'.",
+            "Import 'motion' and 'AnimatePresence' from 'framer-motion'.",
+            "Import Font Awesome CSS.",
+            "Define the component using an arrow function.",
+            "Use the useS'tate hook to manage the state for showing/hiding the popup.",
+            "Create a table inside the component to display user information:",
+            "Use the <table>, <tbody>, <tr>, and <td> elements to structure the table.",
+            "Populate the table with sample data (e.g., Name: John Doe, Age: 30, Occupation: Software Developer).",
+            "Create a button inside the component that toggles the popup:",
+            "Use the <motion.button> element for the button.",
+            "Add 'onClick' event handler to toggle the popup state.",
+            "Use Framer Motion properties (whileHover and whileTap) to add hover and tap animations.",
+            "Use AnimatePresence to conditionally render the popup:",
+            "Wrap the popup component with <AnimatePresence> to handle the mounting and unmounting of the popup with animations.",
+            "Use a <motion.div> element for the overlay.",
+            "Add initial, animate, and exit properties to handle opacity transitions.",
+            "Use another <motion.div> element inside the overlay for the popup container.",
+            "Add initial, animate, and exit properties to handle scale and opacity transitions.",
+            "Use 'transition' property with type, stiffness, and damping for a spring effect.",
+            "Create a <motion.h1> element for the title inside the popup container.",
+            "Use initial, animate, and transition properties for animation.",
+            "Create two <motion.p> elements for the popup paragraphs.",
+            "Use initial, animate, and transition properties for animation with delays.",
+            "Use a <motion.button> element for the close button.",
+            "Add 'onClick' event handler to toggle the popup state.",
+            "Use Framer Motion properties (whileHover and whileTap) for hover and tap animations.",
+            "Add a Font Awesome icon for the close button.",
+          
+          ],
+        },
+        {
+          stepTitle: "Step 3: Styling the Components",
+          titleDescription: "index.css",
+          description: [
+            "Add styles for the container, table, buttons, and popup.",
+           "Ensure the popup has an overlay to cover the background when displayed.",
+           
+          ],
+        },
+        {
+          stepTitle: "Step 4: Using Font Awesome Icons",
+          titleDescription: "",
+          description: [
+            "Import Font Awesome CSS in your src/App.js file.",
+         
+          ],
+        },
+        {
+          stepTitle: "Step 5: Running the Application",
+          titleDescription: "",
+          description: [
+            "In your project directory, run: 'npm start'",
+             "Open your browser and navigate to http://localhost:3000 to see your application in action.",
+         
+          ],
+        },{
+          stepTitle: "Step 6: Testing and Debugging",
+          titleDescription: "",
+          description: [
+            "Click the 'Read more' button to open the popup.",
+             "Ensure the popup displays with animations.",
+            "Click the close button to hide the popup with animations.",
+            "Check the console for any errors and address them.",
+            "Adjust animations and styles to your preference.",
+           
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/74py2f?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson54.webp"),
+      link: "https://www.dropbox.com/scl/fi/g1nw3wj9qb0m38c1ze0wd/popupStyles54.css?rlkey=hewx1gphkm9ih58xs54qksqul&st=6lra75z9&dl=0",
+    },
   
   ],
 };
