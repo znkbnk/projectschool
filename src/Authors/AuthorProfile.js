@@ -4,7 +4,7 @@ import imageBackground from "../images/authorBackground.webp";
 import { Link } from "react-router-dom";
 
 const AuthorProfile = ({ author }) => {
-  const { name, description, position, picture } = author;
+  const { name, description, position, picture, social } = author;
 
   return (
     <div>
@@ -26,11 +26,11 @@ const AuthorProfile = ({ author }) => {
               <div className='headertext'></div>
               <h2 className='title'>{`${name.first} ${name.last}`}</h2>
 
-              <p className='status'>{`${position}`}</p>
+              <p className='status'>{position}</p>
             </div>
 
             <div className='description-container'>
-              <p className='description'>{`${description}`}</p>
+              <p className='description'>{description}</p>
             </div>
             <div className='social-container'>
               <Link to='/exercises'>
@@ -41,22 +41,26 @@ const AuthorProfile = ({ author }) => {
                 <div>
                   <div className='sociallogos'>
                     <div className='logobox'>
-                      <a
-                        href='https://instagram.com/reactlessons'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        aria-label='Visit Instagram profile of reactlessons'
-                      >
-                        <i className='fab fa-instagram'></i> 
-                      </a>
-                      <a
-                        href='https://github.com/znkbnk'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        aria-label='Visit GitHub profile of ZNKBNK'
-                      >
-                        <i className='fa-brands fa-github'></i> 
-                      </a>
+                      {social.instagram && (
+                        <a
+                          href={social.instagram}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          aria-label={`Visit Instagram profile of ${name.first}`}
+                        >
+                          <i className='fab fa-instagram'></i>
+                        </a>
+                      )}
+                      {social.github && (
+                        <a
+                          href={social.github}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          aria-label={`Visit GitHub profile of ${name.first}`}
+                        >
+                          <i className='fa-brands fa-github'></i>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const LessonsCards = ({
   header,
@@ -31,7 +32,15 @@ const LessonsCards = ({
           <p>{introduction}</p>
           <div className='authorDifficulty'>
             <h5>
-              Author: {name.first} {name.last}
+              Author:&nbsp;  <Link 
+                to="/authors"
+                style={{ 
+                  color: 'white', 
+                  textDecoration: 'none' 
+                }}
+              >
+                {name.first} {name.last}
+              </Link>
             </h5>
             <h5>Difficulty: {difficulty}</h5>
           </div>
