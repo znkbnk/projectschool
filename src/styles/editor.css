@@ -31,9 +31,7 @@
   margin-top: 60px;
   width: 100%;
   height: calc(100vh - 60px);
-
   border: 1px solid #ccc;
-
   flex: 1;
 }
  
@@ -44,8 +42,15 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
+
 }
 
+
+.text-window p {
+  padding: 0 0 0 25px;
+  font-weight: 800;
+
+}
 
 
 .text-window h1 {
@@ -55,12 +60,23 @@
 }
 .text-window h3 {
   margin: 20px 0;
-  padding: 10px;
 }
 
 .text-window h4 {
   padding: 10px;
 }
+
+
+
+.section ul {
+  list-style-type: disc; 
+  padding: 0 10px 0 25px; 
+}
+
+.section ul li {
+  margin-bottom: 8px; 
+}
+
 
 .task-button-container {
   display: flex;
@@ -69,9 +85,7 @@
   align-items: center;
 }
 
-.task p {
-  padding: 20px;
-}
+
 
 .prerequisites {
   margin-top: 20px;
@@ -142,6 +156,26 @@
   background-color: #2adf12;
 }
 
+.step-title-container {
+  display: flex;
+  align-items: flex-start; /* Change from 'flex-start' to 'center' */
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.step-title-container h3 {
+  margin: 0;
+  font-size: 1.2rem; /* Adjust the font size as needed */
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] + label {
+  display: inline-block;
+}
 
 
 
