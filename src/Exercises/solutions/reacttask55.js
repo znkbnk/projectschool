@@ -21,7 +21,7 @@ export default App;
 `;
 
 const solutionCode2 = `
-//components/Headers.js
+//components/Header.js
 import React, { useState } from 'react';
 
 const Header = ({ onSearch }) => {

@@ -9277,7 +9277,7 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/p94546?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson55.webp"),
-      link: "https://www.dropbox.com/scl/fi/d37j8ax9mcbifaiyf9wat/movies4uStyles55.css?rlkey=32l98a29g2imx28cwkdiekzst&st=khvnvgh2&dl=0",
+      link: "https://www.dropbox.com/scl/fi/9xhpvyac6et282hydu3dq/movies4uStyles55.css?rlkey=p9azkuai0t3ghilfbl6327nc7&st=o0sepx3v&dl=0",
     },
     
   
