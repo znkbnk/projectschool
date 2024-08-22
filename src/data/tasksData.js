@@ -125,7 +125,7 @@ const tasksData = {
   React: [
     
     {
-      taskId: "reacttask1",
+      taskId: "3D-Interactive-Card",
       taskTitle: "React 3D Interactive Card",
       introduction:
         "In this lesson, we'll be building a React functional component called Card. We'll implement mouse movement handling and event listeners for mouse enter and leave actions to create engaging visual effects and interactions within the component.",
@@ -242,7 +242,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/ttc2uqnhaxzmky587jj0w/3dHoverStyles.css?rlkey=gbdk8jfuexgcu5z1e52efhj4m&st=3zoceprl&dl=0",
     },
     {
-      taskId: "reacttask2",
+      taskId: "BMI-Tracker",
       taskTitle: "BMI Tracker",
       introduction:
         "Welcome to the BMI Calculator! This React component allows you to input your weight and height, then calculates your Body Mass Index (BMI) and provides a message indicating your BMI category.",
@@ -345,8 +345,8 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/03e0si4h3xgxgg74ygra3/BMIstyles.css.css?rlkey=v7kz0wgjp8qtyhfr7ttco3vqx&dl=0",
     },
     {
-      taskId: "reacttask3",
-      taskTitle: "React Dark-Light Mode Toggle",
+      taskId: "Dark-Light-Mode-Toggle",
+      taskTitle: "Dark-Light Mode Toggle",
       introduction:
         "This tutorial guides you through setting up a React project to display articles with a toggleable light and dark theme. By following these steps, you'll create a structured application with styled components and basic functionality.",
         steps: [
@@ -457,7 +457,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/knoeb48ov2on7o1p7qcim/DarkLight.css?rlkey=s5xlzw4l86ugerz5w9v0e5w07&st=hnajvomv&dl=0",
     },
     {
-      taskId: "reacttask4",
+      taskId: "Sortify-Search-by-Name",
       taskTitle: "Sortify: Search by Name",
       introduction:
         "Sortify is a simple yet powerful web application designed for effortlessly sorting contact names. Built with React and Bootstrap, Sortify enables users to efficiently manage their contacts by organizing them alphabetically based on first names. With its intuitive interface and seamless functionality, Sortify streamlines the process of maintaining an organized contact list.",
@@ -551,7 +551,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/ggr71m0hhr7dwqbxsn7zb/filterContactList.css?rlkey=ze15q78lxoiocw6z84o2c12cb&st=zw4011an&dl=0",
     },
     {
-      taskId: "reacttask5",
+      taskId: "Simple-Quiz-App",
       taskTitle: "Simple Quiz App",
       introduction:
         "In this guide, you will embark on a journey to create an interactive quiz app. Follow along as we guide you through the process of building your very own quiz application from scratch.",
@@ -650,8 +650,8 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/x993b93wtivxvs24vu2gh/quizApp.css?rlkey=ugoc9v64xrxs7a82giuyj0d21&st=5nhhq4ti&dl=0",
     },
     {
-      taskId: "reacttask6",
-      taskTitle: "ReactFAQ",
+      taskId: "FAQ",
+      taskTitle: "FAQ",
       introduction:
         "ReactFAQ is a user-friendly React application designed to provide quick access to frequently asked questions and their detailed answers. With collapsible sections and intuitive navigation, users can easily find the information they need within a sleek and modern interface.",
 
@@ -751,7 +751,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
     },
     {
-      taskId: "reacttask7",
+      taskId: "Birthday-Reminder",
       taskTitle: "Birthday Reminder",
       introduction:
         "In this task, you'll explore building a dynamic 'Birthday Reminder' app using React. You'll dive into concepts such as state management with useState, filtering data based on dates, and structuring components effectively. By the end, you'll have a practical understanding of React fundamentals and be equipped to create your own personalized applications.",
@@ -867,7 +867,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/57ns2zldn9w6jud6hbstj/birthdayStyles.css?rlkey=j24jn3vqz5vg144vl0hbj0z51&st=5yn64tby&dl=0",
     },
     {
-      taskId: "reacttask8",
+      taskId: "Dynamic-Box-Shadow-Generator",
       taskTitle: "Dynamic Box Shadow Generator",
       introduction:
         "In this project, we'll be creating a dynamic box shadow generator. We'll implement an App component to manage the state of box shadows and controls, and a ControlBox component to allow users to customize shadow properties.",
@@ -986,7 +986,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/4afgt9yycn142ivtclsm9/shadowStyles.css?rlkey=p92gydd9wnxlt46r4n3b1vjaw&st=nmib5hqn&dl=0",
     },
     {
-      taskId: "reacttask9",
+      taskId: "Memory-Game",
       taskTitle: "Memory Game",
       introduction:
         "In this Memory Game implementation using React, we'll explore how to create a Memory Game using React. The game will involve flipping pairs of cards to find matches. We'll break down the process into steps, focusing on managing game state, rendering the game board, and implementing the card interactions. ",
@@ -1108,7 +1108,7 @@ const tasksData = {
         "https://www.dropbox.com/scl/fo/xun1wmslf3nuok6kjslto/AJAoOoiDotzvxhHAdeA20co?rlkey=lfo67u2afk1bsaouc41azfd5p&st=cfmm90r4&dl=0",
     },
     {
-      taskId: "reacttask10",
+      taskId: "Color-Generator",
       taskTitle: "Color Generator",
       introduction:
         "In this tutorial, you will learn how to build a React application for generating and displaying color palettes. We'll create two components: App, which handles user input and color generation, and SingleColor, responsible for rendering individual color swatches with the ability to copy color values to the clipboard. ",
@@ -1208,7 +1208,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/y011c3db1gyww9io1b31k/colorStyles.css?rlkey=xqydm3kozk30nac0tt4d7bozv&st=dhj5uhv0&dl=0",
     },
     {
-      taskId: "reacttask11",
+      taskId: "Range-Slider",
       taskTitle: "Range Slider",
       introduction:
         "'Range Slider' is a versatile React project that features a customizable double range slider component. With intuitive user interaction and adjustable minimum and maximum values, it offers a seamless way to select a range of values within a specified range.",
@@ -1396,8 +1396,8 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/cewx3sj8qajjwgt6sen28/rangeStyles.css?rlkey=tbx8czemili7mitcw0i47l3x7&st=xjsbkrzb&dl=0",
     },
     {
-      taskId: "reacttask12",
-      taskTitle: "React Form Validation Component",
+      taskId: "Form-Validation-Component",
+      taskTitle: "Form Validation Component",
       introduction:
         "This React task designed to facilitate form input validation within a user interface. It employs conditional logic to validate user input for fields such as username, email, password, and confirm password, displaying corresponding error messages and dynamically adjusting border colors to indicate validation status.",
 
@@ -1587,7 +1587,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/oh478sruh4coo1niwb2c4/formValidationStyles.css?rlkey=7b9v41wez31d5fqgzgl53qmoe&st=nfdqrklr&dl=0",
     },
     {
-      taskId: "reacttask13",
+      taskId: "Markdown-Preview-App",
       taskTitle: "Markdown Preview App",
       introduction:
         "The Markdown Preview app is a simple yet powerful tool built using React, a popular JavaScript library for building user interfaces. Markdown is a lightweight markup language with plain-text formatting syntax, often used to format text on the web. This app allows users to input Markdown syntax in a textarea and instantly preview the formatted output in real-time.",
@@ -1690,8 +1690,8 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/iim1mrxbiomqdfu6a8534/markdownStyles.css?rlkey=x702xjplsx1lmje9xlxsmnztl&st=tjk1d94n&dl=0",
     },
     {
-      taskId: "reacttask14",
-      taskTitle: "React Menu App",
+      taskId: "Menu-App",
+      taskTitle: "Menu App",
       introduction:
         "React Menu App is a responsive web application. It provides users with a dynamic menu interface, allowing them to explore a variety of food items categorized into different sections. Users can easily navigate through the menu, filter items based on categories, and view detailed information such as item descriptions and prices. With its intuitive design and interactive features, ReactMenuApp offers a delightful browsing experience for discovering delicious dishes.",
 
@@ -1824,7 +1824,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/tuz5g26aze4lf3y9xixfq/menuStyles.css?rlkey=7tqcib3pn704k93ezqeqi5di5&st=cbhgezxb&dl=0",
     },
     {
-      taskId: "reacttask15",
+      taskId: "Responsive-Navbar",
       taskTitle: "Responsive Navbar",
       introduction:
         "This project is a simple React application focused on building a responsive navbar component. It includes a logo, navigation links, and social icons. It's designed to repeat the basics of React component creation, state management, and rendering dynamic data. This hands-on project offers a step-by-step guide to help understand the fundamentals of web development using React.js.",
@@ -1908,7 +1908,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/ks97vsqcdxhjg236ystvp/navbarStyles.css?rlkey=zcqeskq64ip14h2l07ouf2lt8&st=s8s2fkc7&dl=0",
     },
     {
-      taskId: "reacttask16",
+      taskId: "Pagination-Page",
       taskTitle: "Pagination Page",
       introduction:
         "This project is a React application designed to showcase pagination functionality while fetching and displaying a list of GitHub followers. Through the use of React hooks, specifically useState and useEffect, it efficiently manages state and data fetching. The main component, App, orchestrates the pagination logic, rendering follower cards dynamically with the help of the Follower component. The useFetch custom hook handles fetching data from the GitHub API, while a utility function called paginate organizes the fetched data into pages for easier navigation. By studying and implementing this project, you will gain valuable insights into React state management, data fetching, and pagination techniques.",
@@ -2028,7 +2028,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/8g5fg5okeku604k3v1ijv/paginationStyles.css?rlkey=gxh2ah4lqq2v9qb7im9bnqmgr&st=ymt2ym6v&dl=0",
     },
     {
-      taskId: "reacttask17",
+      taskId: "Search-Bar",
       taskTitle: "Search Bar",
       introduction:
         "This project is a React-based web application designed to facilitate user searches within a given dataset. The core functionality revolves around a SearchBar component, allowing users to input search queries. As users type into the search bar, the application dynamically fetches data from an external API and filters the results based on the user's input. The search results are then displayed in a list format, enabling users to browse and select relevant items.",
@@ -2184,7 +2184,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/wj8mbt35tzthwb59t0fpp/searchBarStyles.css?rlkey=1ssb43swqlr20wm3e5nkugzzk&st=s1gbhfpy&dl=0",
     },
     {
-      taskId: "reacttask18",
+      taskId: "Dropdown",
       taskTitle: "Dropdown",
       introduction:
         "This project is a React application that implements a dropdown menu for selecting programming languages. Users can click on an input field, triggering the appearance of a dropdown menu containing a list of programming languages. They can then select a language from the list, and the selected language will be displayed in the input field. The dropdown menu can be toggled open and closed by clicking on the input field. Overall, this project provides a user-friendly interface for selecting programming languages within a React environment.",
@@ -2347,7 +2347,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/a4s2nemre2jjzb30u75u5/dropdownStyles.css?rlkey=12wx0dim604hwgarpnjssr8qu&st=har5kkyl&dl=0",
     },
     {
-      taskId: "reacttask19",
+      taskId: "Sidebar",
       taskTitle: "Sidebar",
       introductions:
         "This is a React-based web application featuring a dynamic sidebar navigation menu, offering users easy access to various sections and functionalities. With a customizable and expandable structure, it enhances user experience by providing seamless navigation within the application.",
@@ -2469,7 +2469,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/gkczh6ps4swxpr1cebv3m/sidebarStyles.css?rlkey=1gn09lghyev6h92r4vzm143ny&st=sjjt66f6&dl=0",
     },
     {
-      taskId: "reacttask20",
+      taskId: "Dynamic-Table-with-Sorting-and-Copy-Functionality",
       taskTitle: "Dynamic Table with Sorting and Copy Functionality",
       introduction:
         "This project is a React application that demonstrates the implementation of a dynamic table using the react-table library. The table is populated with mock data imported from a JSON file. Each row in the table represents an object from the mock data, with columns corresponding to the object properties. The table provides sorting functionality for each column and allows users to copy row data to the clipboard. Overall, this project serves as a practical example of creating interactive tables in React applications with sorting and copy functionality.",
@@ -2624,7 +2624,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/241kvmwi5uw8j7oxizpq3/tableStyles.css?rlkey=9usdl7n6wu7vqxv1pjpehtukl&st=7fl30hco&dl=0",
     },
     {
-      taskId: "reacttask21",
+      taskId: "To-Do-App",
       taskTitle: "To-Do App",
       introduction:
         "The To-Do application is a simple task management tool built using React. It allows users to add, delete, edit, and mark tasks as complete. The application provides a clean and intuitive user interface, with separate components for adding new tasks, displaying existing tasks, and editing tasks. Users can interact with each task individually, marking them as completed or editing their details as needed. The application also features toast notifications to provide real-time feedback to users when tasks are completed or edited.",
@@ -2822,7 +2822,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/jbdlfwibc4fi9jnesjevt/todoStyles.css?rlkey=8khn7jf4fbes6dl82vhw9g7cq&st=hu1wmyz0&dl=0",
     },
     {
-      taskId: "reacttask22",
+      taskId: "Testimonials",
       taskTitle: "Testimonials",
       introduction:
         " This React project called 'Testimonials' designed to showcase customer feedback. It includes a dynamic testimonial display with navigation buttons for users to cycle through testimonials, enhanced with animated background color for added visual appeal.",
@@ -2952,7 +2952,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/y1yc1mh9isqrbktm5adfh/testimonialsStyles.css?rlkey=85uofxm5xfuv4a4iu5mvzqgi3&st=pmq8ylyh&dl=0",
     },
     {
-      taskId: "reacttask23",
+      taskId: "Voice-to-Text",
       taskTitle: "Voice to Text",
       introduction:
         "This React application utilizes speech recognition to convert spoken words into text in real-time, enabling users to interact with the interface through voice commands. Additionally, users can conveniently copy the recognized text to their clipboard with the click of a button.",
@@ -3117,7 +3117,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/axg1uy5ds3m3fnzf6u8fe/voiceToTextStyles.css?rlkey=95c02402dkkcl12qj75qf82it&st=mhgahg76&dl=0",
     },
     {
-      taskId: "reacttask24",
+      taskId: "Text-to-Voice",
       taskTitle: "Text to Voice",
       introduction:
         "Introducing TextToSpeechApp, a React application that enables users to convert typed text into speech effortlessly. Using the browser's built-in SpeechSynthesis API, users can input text, click a button, and hear their words spoken aloud in real-time, offering a seamless and interactive text-to-speech experience.",
@@ -3221,7 +3221,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/tarvsoi5fgx8c4kar8gs7/textToVoiceStyles.css?rlkey=87sk3e7qtill3m205gfjhr6cv&st=5jhx5kjf&dl=0",
     },
     {
-      taskId: "reacttask25",
+      taskId: "Course-Finder",
       taskTitle: "CourseFinder",
       introduction:
         "CourseFinder is an intuitive web application designed to simplify the process of discovering and selecting online courses. With powerful filtering options based on category, price range, and search queries, CourseFinder helps users navigate through a diverse range of educational offerings, empowering them to find the perfect learning experience tailored to their interests and needs.",
@@ -3480,7 +3480,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/q4wtsg840xgeapkcf14c5/courseFinderStyles.css?rlkey=8730yrzni5wtv4utdc0eebgek&st=zt7m1rbq&dl=0",
     },
     {
-      taskId: "reacttask26",
+      taskId: "Course-Shop",
       taskTitle: "Course Shop",
       introduction:
         "In this guide, we'll walk through the process of creating essential components for a React-based e-commerce application: a context for managing the shopping cart state, individual cart items, the overall cart view, and individual product displays. These components will work together to provide a seamless shopping experience, allowing users to add, update, and manage items in their cart.",
@@ -3671,7 +3671,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/2ztcyxpl23euc4621pgrk/courseShopStyles.css?rlkey=nfu7b3lsl98w0asmlwu80omio&st=swxaihy0&dl=0",
     },
     {
-      taskId: "reacttask27",
+      taskId: "MATERIALIZECSS-Portfolio",
       taskTitle: "MATERIALIZECSS Portfolio",
       introduction:
         "This React project utilizes Materialize CSS to create a sleek and responsive web application featuring a dynamic navigation bar, captivating parallax sections, informative content sections (including About, Projects, and Contact), and a polished footer. With its modern design and intuitive user interface, it offers a seamless browsing experience for showcasing personal or professional portfolios.",
@@ -3843,8 +3843,8 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/qzlk1srk93y1ut98cw1q2/materializecssStyles.css?rlkey=orbzl27hvw1ao3vnl7yps07y4&st=th9ekx3n&dl=0",
     },
     {
-      taskId: "reacttask28",
-      taskTitle: "React-MaterializeCSS Web Toolkit",
+      taskId: "MaterializeCSS-Web-Toolkit",
+      taskTitle: "MaterializeCSS Web Toolkit",
       introduction:
         "This project employs React and Materialize CSS to craft a user-friendly web interface. It offers a responsive navbar, collapsible sidebar, dynamic content sections with tabs, and a customizable footer. It's designed to empower developers in constructing versatile web applications with contemporary styling and interactive elements.",
 
@@ -3971,8 +3971,8 @@ const tasksData = {
       img: require("../images/ReactLesson28.webp"),
     },
     {
-      taskId: "reacttask29",
-      taskTitle: "TradeHub: React Trading Dashboard.",
+      taskId: "TradeHub-React-Trading-Dashboard",
+      taskTitle: "TradeHub: React Trading Dashboard",
       introduction:
         "Our React trading dashboard application offers users a comprehensive platform for managing their investments, executing trades, and monitoring market data. With intuitive navigation, real-time price updates, and personalized user profiles, traders can make informed decisions and track their portfolios efficiently.",
 
@@ -4399,7 +4399,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/pb18ki5xovtd5fud36d4d/index.js?rlkey=luh3f3pa2xx2ldiaao6xfdfux&st=2xvsaaph&dl=0",
     },
     {
-      taskId: "reacttask30",
+      taskId: "Cube-Image-Gallery",
       taskTitle: "Cube Image Gallery",
       introduction:
         "The Cube Image Gallery project utilizes advanced CSS transformations such as transform and rotate to create an interactive 3D cube that displays different images on its faces. These techniques allow for dynamic positioning and orientation of elements, enhancing user engagement and providing a visually compelling experience on the web.",
@@ -4503,7 +4503,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/33r850r4goal6buln22oh/CubeImageGallery.css?rlkey=5sgt95oxccgxptvla3r1fqc01&st=psdl8ajb&dl=0",
     },
     {
-      taskId: "reacttask31",
+      taskId: "Analog-Clock",
       taskTitle: "ReactAnalogClock",
       introduction:
         " ReactAnalogClock is a React application that simulates an analog clock. It dynamically updates in real-time, displaying the current hour, minute, and second hands based on the system time. It's designed to be visually appealing and educational, showcasing how to manage time updates and animations in a React environment.",
@@ -4615,7 +4615,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/uzsyfdeozqlsfzu86ay93/analogAclockStyles.css?rlkey=0t401f0u20wo4uwafu5lbxarn&st=opsjjj4s&dl=0",
     },
     {
-      taskId: "reacttask32",
+      taskId: "Dynamic-Menu-Highlighter",
       taskTitle: "Dynamic Menu Highlighter",
       introduction:
         "Dynamic Menu Highlighter is a visually engaging React application that features an interactive menu with dynamic highlighting and animated border positioning. Each menu item changes the background color of the page, providing a seamless and intuitive user experience.",
@@ -4750,7 +4750,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/25t69epiuon93hvlcvqfg/DynamicMenuStyles.css?rlkey=2njugn8md2enysmdvobyj2mhl&st=70468e4e&dl=0",
     },
     {
-      taskId: "reacttask33",
+      taskId: "Order-Tracker-Mobile-App",
       taskTitle: "Order Tracker Mobile App",
       introduction:
         "Order Tracker React Drawer is a responsive mobile application, designed to provide users with real-time tracking of their orders. Featuring an interactive drawer interface, users can easily access detailed order information and manage their delivery status seamlessly.",
@@ -4946,8 +4946,8 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/uzifjuktv19fa3k8v56s2/OrderTrackerMobileAppStyles.css?rlkey=gmlwxq43r0oyziy1vg3vgi0rq&st=lv7mwm5a&dl=0",
     },
     {
-      taskId: "reacttask34",
-      taskTitle: "React Timer App",
+      taskId: "Timer-App",
+      taskTitle: "Timer App",
       introduction:
         "React Timer App is a user-friendly React-based countdown timer, providing seamless start, pause, and reset functions to help you stay on track.",
 
@@ -5101,7 +5101,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/t2zue89djpsi26joppy1u/TimerAppStyles.css?rlkey=8gbliwc0a6rjmm0bshzynkqmx&st=0c8va7gv&dl=0",
     },
     {
-      taskId: "reacttask35",
+      taskId: "Portfolio-Website",
       taskTitle: "My Portfolio Website",
       introduction:
         "This React project showcases a personal portfolio website featuring sections such as a Hero banner with a downloadable CV, an About Me section highlighting skills and personal interests, Services offered with detailed descriptions, a Portfolio section with filterable image galleries, a Clients section displaying client logos, a Contact form for user inquiries, and a Footer with social media links. The project integrates responsive design and uses React's component-based architecture to create a cohesive and interactive user experience.",
@@ -5291,7 +5291,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/41ar1xizn0bhnfhaajxqb/PorfolioStyles.css?rlkey=7fklfm02vvgvmqitd0z9cec15&st=ug62zdl7&dl=0",
     },
     {
-      taskId: "reacttask36",
+      taskId: "Celestial-Canvas",
       taskTitle: "Celestial Canvas",
       introduction:
         "Celestial Canvas is a dynamic visual simulation that brings the night sky to life on a web canvas, featuring twinkling stars, drifting nebulae, and occasional comets. This interactive and animated experience allows users to toggle the starry display on and off, creating an immersive celestial atmosphere.",
@@ -5548,8 +5548,8 @@ const tasksData = {
       img: require("../images/ReactLesson36.webp"),
     },
     {
-      taskId: "reacttask37",
-      taskTitle: "React Materialize Portfolio",
+      taskId: "Materialize-Portfolio",
+      taskTitle: "Materialize Portfolio",
       introduction:
         "A dynamic portfolio website built using React and styled with Materialize CSS, showcasing responsive design, interactive elements, and seamless navigation.",
 
@@ -5711,8 +5711,8 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/7mx73bv5jmwrwm2o1dc3u/MaterializePorfolioStyles.css?rlkey=rw3ql2v2oweo4blr5jw0tozwx&st=03lht5j2&dl=0",
     },
     {
-      taskId: "reacttask38",
-      taskTitle: "React File Uploader",
+      taskId: "File-Uploader",
+      taskTitle: "File Uploader",
       introduction:
         "React File Uploader is a user-friendly component designed for easy file selection, display, download, and deletion. It leverages React's hooks for state management and provides a seamless interface for managing files within a web application. In real-world applications, files are usually saved in the backend, but for learning purposes, this project does not include backend integration and temporarily stores files in the browser's memory.",
 
@@ -5866,7 +5866,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/ev1q8sptptruyjujramev/FileUploadStyles.css?rlkey=a9ry3oeydjadfkzx6ox9rx3v2&st=3p49abh4&dl=0",
     },
     {
-      taskId: "reacttask39",
+      taskId: "Cake-Website",
       taskTitle: "Cake Website",
       introduction:
         "This project is a responsive React application designed to simulate the online presence of a bakery. It includes essential components like a dynamic navigation bar, a rotating showcase of bakery specials, and a footer with contact information and social media links. Utilizing React hooks such as useState and useEffect, along with custom hooks for scroll and email validation, the application enhances user interaction and responsiveness, offering a seamless browsing experience for potential customers exploring the bakery's offerings and services.",
@@ -6060,7 +6060,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/5341920t1y5svtm1zfmq3/cakeWebsiteStyles.css?rlkey=xnj3290vh1bpy0whuw70xm4u1&st=z2lwyyas&dl=0",
     },
     {
-      taskId: "reacttask40",
+      taskId: "Interactive-3D-Card-Viewer",
       taskTitle: "Interactive 3D Card Viewer",
       introduction:
         "An interactive React application that visually enhances user engagement by rotating a 3D-rendered card in response to mouse movements and touch gestures, showcasing both the front and back images dynamically.",
@@ -6204,7 +6204,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/qad21wuttv9mocekrjdu8/3dRotateCardStyles40.css?rlkey=5dl9a1id5w2aeqpga6k950hen&st=0dbianeo&dl=0",
     },
     {
-      taskId: "reacttask41",
+      taskId: "Dev-Portfolio",
       taskTitle: "DevPortfolio",
       introduction:
         "DevPortfolio is a personal portfolio website designed for web developers to showcase their skills, projects, and contact information in a clean and professional manner. It features smooth navigation, interactive project filters, and a responsive design, making it an ideal platform for highlighting your digital portfolio.",
@@ -6384,7 +6384,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/p9ac4rqzkxd26umkaus8k/devPortfolioStyles41.css?rlkey=g99lp00iol89oewka2fnyojwa&st=bkpj1345&dl=0",
     },
     {
-      taskId: "reacttask42",
+      taskId: "Fruit-Carousel",
       taskTitle: "Fruit Carousel",
       introduction:
         "Fruit Carousel is an interactive image carousel component that showcases a variety of fruit images. Users can navigate through the carousel using scroll gestures or navigation buttons, with a dynamic progress bar indicating the current slide position.",
@@ -6573,7 +6573,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/3zmbt7rd0hl9n7i9fya98/fruitCarouselStyles42.css?rlkey=fd4uapnbjql7bct0z47trq6h6&st=ywle4l8y&dl=0",
     },
     {
-      taskId: "reacttask43",
+      taskId: "FitLife-Website",
       taskTitle: "FitLife Website",
       introduction:
         "FitLife is a modern and dynamic fitness website designed to provide personalized fitness programs, expert trainer insights, and seamless user interaction. With a focus on engaging visuals and smooth navigation, FitLife aims to inspire and support users on their fitness journey.",
@@ -6784,8 +6784,8 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/hss5y8g4imrp6e1bu8599/fitLifeWebsiteStyles43.css?rlkey=f6p5xjadpst8bxp8eo0afp1jd&st=46rlozwl&dl=0",
     },
     {
-      taskId: "reacttask44",
-      taskTitle: "React FAQ Toggle",
+      taskId: "FAQ-Toggle",
+      taskTitle: "FAQ Toggle",
       introduction:
         "A dynamic FAQ component built with React that allows users to expand and collapse answers to frequently asked questions, providing a clean and interactive way to present information. This project demonstrates efficient state management and conditional rendering using React hooks.",
 
@@ -6923,7 +6923,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/zzttfwhebm19xhtovltz6/FAQStyles44.css?rlkey=bjn41i22taygvx7z5jvtvjyqn&st=ezegm8sb&dl=0",
     },
     {
-      taskId: "reacttask45",
+      taskId: "Pomodoro-Focus-Timer",
       taskTitle: "Pomodoro Focus Timer",
       introduction:
         "A simple and interactive Pomodoro Timer designed to help users improve productivity by alternating between focused work sessions and short breaks, with customizable durations and a rotating visual countdown.",
@@ -7112,7 +7112,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/c828xk0dyg741lpi7fwa8/pomodoroTimerStyles45.css?rlkey=riin1i6biv7wf2nww9w49qjl6&st=pqwkkmrv&dl=0",
     },
      {
-      taskId: "reacttask46",
+      taskId: "Profolio",
       taskTitle: "Profolio",
       introduction: "Profolio is a dynamic and visually appealing personal portfolio website built with React and Framer Motion. It showcases professional skills, projects, and contact information with engaging animations and a sleek, modern design.",
 
@@ -7373,7 +7373,7 @@ const tasksData = {
     },
 
     {
-      taskId: "reacttask47",
+      taskId: "Animated-Progress-Loader",
       taskTitle: "Animated Progress Loader",
       introduction: "This React application features an engaging loading animation using Framer Motion, transitioning seamlessly from a progress indicator to the main content. It demonstrates how to create smooth, visually appealing user experiences with state management and CSS animations.",
 
@@ -7508,7 +7508,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/m19oop6z8n3izv49ti7u9/animatedProgressLoaderStyles.css?rlkey=wbfjok8c9b3foo0d5ibrz0r99&st=t53ga66q&dl=0",
     },
      {
-      taskId: "reacttask48",
+      taskId: "Dynamic-Loader",
       taskTitle: "DynamicLoader",
       introduction: "DynamicLoader is a React application featuring a sophisticated animated loader that transitions smoothly into the main content, showcasing the power of Framer Motion for creating visually engaging user experiences.",
 
@@ -7651,7 +7651,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/2utipgcrdot1nfn0ku8ey/dynamicLoader48.css?rlkey=wlzwdwkdcjqz2ydns4azeaknf&st=k861ornm&dl=0",
     },
     {
-      taskId: "reacttask49",
+      taskId: "Speech-Synth",
       taskTitle: "SpeechSynth",
       introduction: "SpeechSynth is a web application that converts text into speech using a React-based front end and a Node.js back end with gTTs Text-to-Speech integration. Users can input text and download the generated speech as an MP3 file with a simple and intuitive interface.",
 
@@ -7919,7 +7919,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/d3i7fsev6pyxnpkbmz2lj/speechSynthStyles.css?rlkey=mpcogwmbt1xq97cjxv362m7fp&st=27hhv5n1&dl=0",
     },
     {
-      taskId: "reacttask50",
+      taskId: "Smooth-Scroll-Navigator",
       taskTitle: "SmoothScroll Navigator",
       introduction: "SmoothScroll Navigator is a React application that features a dynamic navigation bar with smooth scrolling and automatic section highlighting. This project demonstrates an intuitive user interface, enhancing the user experience by visually guiding them through different sections of the webpage.",
 
@@ -8075,7 +8075,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/zy7gzeevt64xk3vpcjkio/SmoothScroll-NavigatorStyles50.css?rlkey=e3dqqusxbtezfwljgk04h2ny0&st=5rdtw8ue&dl=0",
     },
     {
-      taskId: "reacttask51",
+      taskId: "Tesla-Experience",
       taskTitle: "Tesla Experience",
       introduction: "Tesla Experience is a sleek and engaging web application that presents Tesla's innovative electric vehicles, featuring detailed model information and immersive animations. Navigate through Tesla's offerings and discover the unique advantages of each model with an intuitive and visually appealing interface.",
 
@@ -8375,7 +8375,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/s0to93ewakfkmk0tlegny/teslaExperienceStyles51.css?rlkey=zbjaqvwh1g9k6molh922y0jzc&st=5jyxbdjl&dl=0",
     },
     {
-      taskId: "reacttask52",
+      taskId: "Dynamic-Dashboard",
       taskTitle: "Dynamic Dashboard",
       introduction: "Dynamic Dashboard is a modern web application that provides an interactive and responsive interface for managing and visualizing various types of data. It features a sidebar navigation, day-based tabbed views, and animated components for displaying schedules, user information, and application details.",
 
@@ -8616,8 +8616,8 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/6to1naqx1n06l2iv017ak/tableDashboardStyles52.css?rlkey=fx72zufi3wb7lz6v33oxcpo5h&st=lqk2p1sm&dl=0",
     },
     {
-      taskId: "reacttask53",
-      taskTitle: "React Quiz Master",
+      taskId: "Quiz-Master",
+      taskTitle: "Quiz Master",
       introduction: "React Quiz Master is an interactive quiz application designed to test and enhance your knowledge of React concepts. Featuring dynamic animations and detailed feedback, it provides a seamless and engaging learning experience for React enthusiasts.",
 
       steps: [
@@ -8770,7 +8770,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/mp09j9gsho3mq9ylhkusa/quizStyles53.css?rlkey=s9l3biiqems1zgg86yvzexlzs&st=nmys6zbf&dl=0",
     },
     {
-      taskId: "reacttask54",
+      taskId: "Profile-Popup-Animation",
       taskTitle: "Profile Popup Animation",
       introduction: "A React-based web application that showcases user profile information with an animated popup using Framer Motion and Font Awesome icons. The popup provides additional details about the user, featuring smooth animations for an engaging user experience.",
 
@@ -8894,7 +8894,7 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/g1nw3wj9qb0m38c1ze0wd/popupStyles54.css?rlkey=hewx1gphkm9ih58xs54qksqul&st=6lra75z9&dl=0",
     },
     {
-      taskId: "reacttask55",
+      taskId: "Movies4u",
       taskTitle: "Movies4u",
       introduction: "Movies4u is a dynamic React web application that allows users to explore and search through a collection of movie-related images. The app features a responsive header with a search bar and navigation menu, a carousel slider that filters images based on user queries, and an interactive modal for viewing image details.",
 
