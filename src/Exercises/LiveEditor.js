@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
 import { auth } from "../components/firebase";
 import axios from "axios";
+import { throttle } from 'lodash';
+import { debounce } from 'lodash';
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -20,10 +22,12 @@ const LiveEditor = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    let isMounted = true;
+  
     const fetchSubscriptionStatus = async () => {
       try {
         const user = auth.currentUser;
-        if (user) {
+        if (user && isMounted) {
           const { uid } = user;
           const response = await axios.get(
             `${process.env.REACT_APP_API_URL}/api/users/${uid}/subscription-status`
@@ -32,13 +36,20 @@ const LiveEditor = () => {
           setSubscriptionStatus(response.data.subscriptionStatus);
         }
       } catch (error) {
-        console.error("Error fetching subscription status:", error);
-        toast.error("Error fetching subscription status");
+        if (isMounted) {
+          console.error("Error fetching subscription status:", error);
+          toast.error("Error fetching subscription status");
+        }
       }
     };
-
+  
     fetchSubscriptionStatus();
+  
+    return () => {
+      isMounted = false; // Cleanup function to mark component as unmounted
+    };
   }, []);
+  
 
   useEffect(() => {
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
@@ -92,16 +103,20 @@ const LiveEditor = () => {
   const handleNext = () => {
     if (
       lessonType &&
+      tasksData[lessonType] &&
       currentTaskIndex < (tasksData[lessonType]?.length || 0) - 1
     ) {
       if (!isCompleted) {
         toast.warn("Please complete the current task first.");
       } else {
-        const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
-        navigate(`/editor/${lessonType}/${nextTaskId}`);
+        const nextTask = tasksData[lessonType][currentTaskIndex + 1];
+        if (nextTask) {
+          navigate(`/editor/${lessonType}/${nextTask.taskId}`);
+        }
       }
     }
   };
+  
 
   const handlePrevious = () => {
     if (currentTaskIndex > 0) {
@@ -112,21 +127,25 @@ const LiveEditor = () => {
     }
   };
 
-  const handleComplete = () => {
+  const debouncedToastSuccess = debounce((message) => {
+    toast.success(message);
+  }, 300); // Adjust delay as needed
+
+  const handleComplete = throttle(() => {
     if (isCompleted) {
       toast.info(`This task is already completed.`);
       return;
     }
-
+  
     const taskIndex = tasksData[lessonType]?.findIndex(
       (task) => task.taskId === taskId
     );
-
+  
     if (taskIndex !== -1) {
       const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
       const updatedTasksData = { ...tasksData };
       updatedTasksData[lessonType][taskIndex].completed = true;
-
+  
       const completedTasks =
         JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
       completedTasks[taskId] = true;
@@ -134,14 +153,14 @@ const LiveEditor = () => {
         lessonCompletedTasksKey,
         JSON.stringify(completedTasks)
       );
-
+  
       console.log(`Task ${taskId} marked as completed.`);
-      toast.success(`Lesson ${lessonType} is completed!`);
+      debouncedToastSuccess(`Lesson ${lessonType} is completed!`);
       setIsCompleted(true);
     } else {
       console.log(`Task ${taskId} not found.`);
     }
-  };
+  }, 500); // Adjust the debounce time as needed
 
   const handleDownloadStyles = () => {
     const styleLink = currentTask?.link;
@@ -267,24 +286,25 @@ const LiveEditor = () => {
               )}
             </div>
           </div>
-          {lessonType && lessonType.length > 0 && (
-            <div className='task-buttons'>
-              <button className='button-28 previous' onClick={handlePrevious}>
-                Previous
-              </button>
-              <button
-                className={`button-28 complete ${
-                  isCompleted ? "completed" : ""
-                }`}
-                onClick={handleComplete}
-              >
-                {isCompleted ? "Completed" : "Complete"}
-              </button>
-              <button className='button-28 next' onClick={handleNext}>
-                Next
-              </button>
-            </div>
-          )}
+          {lessonType && tasksData[lessonType]?.length > 0 && (
+  <div className='task-buttons'>
+    <button className='button-28 previous' onClick={handlePrevious}>
+      Previous
+    </button>
+    <button
+      className={`button-28 complete ${
+        isCompleted ? "completed" : ""
+      }`}
+      onClick={handleComplete}
+    >
+      {isCompleted ? "Completed" : "Complete"}
+    </button>
+    <button className='button-28 next' onClick={handleNext}>
+      Next
+    </button>
+  </div>
+)}
+
         </div>
         <iframe
           src={codesandboxUrl}

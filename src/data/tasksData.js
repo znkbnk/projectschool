@@ -9279,6 +9279,317 @@ const tasksData = {
       img: require("../images/ReactLesson55.webp"),
       link: "https://www.dropbox.com/scl/fi/9xhpvyac6et282hydu3dq/movies4uStyles55.css?rlkey=p9azkuai0t3ghilfbl6327nc7&st=o0sepx3v&dl=0",
     },
+    {
+      taskId: "Natures-Beauty",
+      taskTitle: "Nature's Beauty",
+      introduction: "Nature's Beauty is a React-based web project that showcases the elegance and tranquility of nature through a visually appealing interface. It features a responsive navigation bar, immersive content sections, and smooth interactivity to enhance the user experience.",
+
+      steps: [
+       {
+          stepTitle: "Step 1: Set Up the Development Environment",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Ensure you have Node.js and 'npm' installed on your computer.",
+                "Open a terminal or command prompt.",
+                "Use 'npx create-react-app <project-name>' to generate a new React project.",
+                "Navigate into the project directory using cd <project-name>.",
+               
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 2: Organize the Project Structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Create a components folder inside the src directory.",
+                "Plan to create separate component files for each logical section of your HTML structure: Navbar.js, Main.js, Links.js.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 3: Create the Navbar Component",
+          titleDescription: "components/Navbar.js",
+          sections: [
+            {
+              subtitleDescription: "Navigate to the components Folder",
+              descriptions: [
+                "In your project, go to the src/components directory.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Create the Navbar.js File",
+              descriptions: [
+                "Create a new file named Navbar.js within the components folder.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Define the Navbar Structure",
+              descriptions: [
+                "Include a 'div' with a class of 'navbar' to serve as the container for the navbar.",
+                "Inside this, add another 'div' with a class of 'menu' to group the logo and hamburger menu together.",
+                "Create an 'h3' element with the class 'logo' to display the text 'Nature' with a 'span' element around the word 'Beauty' to style it separately.",
+                "Add a div with the class 'hamburger-menu', and inside it, create another 'div' with the class 'bar' to represent the lines of the hamburger icon.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Implement the Menu Toggle Functionality",
+              descriptions: [
+                "Use React's 'useState' hook or a simple method to handle the toggle functionality.",
+                "Add an 'onClick' event to the 'hamburger-menu' 'div' to toggle a class on the container 'div'. This will control the opening and closing of the menu.",
+              ],
+            },
+            {
+              subtitleDescription: "Export the Navbar Component",
+              descriptions: [
+                "At the bottom of Navbar.js, ensure you export the component so it can be imported into App.js.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Create the Main Component",
+          titleDescription: "components/Main.js",
+          sections: [
+            {
+              subtitleDescription: "Create the Main.js File",
+              descriptions: [
+                "In the 'components' folder, create a new file named Main.js.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Set Up the Main Structure",
+              descriptions: [
+                "Create a 'div' with a class of 'main' to wrap the main content.",
+                "Inside this, create a 'header' element to serve as the top section of your main content.",
+                "Add a 'div' with the class 'overlay' inside the 'header' to darken or style the background.",
+                "Inside the 'overlay', add a 'div' with the class 'inner' to center the content.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Add the Header Content",
+              descriptions: [
+                "Inside the 'inner' 'div', include: An 'h2' element with a class of 'title' for the heading 'Embrace the Beauty of Nature'.",
+                "Then add a 'p' element to hold the paragraph text describing nature's beauty.",
+                "Create a 'button' element with a class of 'btn' that will serve as the 'Explore Nature' button."
+              ],
+            },
+            {
+              subtitleDescription: "Export the Main Component",
+              descriptions: [
+                "As with Navbar.js, ensure the 'Main' component is exported at the end of the file.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Create the Links Component",
+          titleDescription: "components/Links.js",
+          sections: [
+            {
+              subtitleDescription: "Create the Links.js File",
+              descriptions: [
+                "Inside the 'components' folder, create a new file named Links.js.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Structure the Links Section",
+              descriptions: [
+                "Inside Links.js, create a 'div' with the class 'links'.",
+                "Inside this 'div', add a 'ul' element to hold the list of navigation links.",
+              ],
+            },
+            {
+              subtitleDescription: "Add List Items for Each Link",
+              descriptions: [
+                "Within the 'ul', create 'li' elements for each link, such as 'Home', 'Services', 'About', and 'Contact'.",
+                "Each 'li' element should contain an 'a' element with the 'href' attribute set to '#' or a relevant link. Style the links with inline 'style' props to add animation delays using the '--i' CSS variable.",
+              ],
+            },
+            {
+              subtitleDescription: "Export the Links Component",
+              descriptions: [
+                "Like the other components, make sure to export Links.js so it can be used in App.js.",
+               
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: Assemble Components in App.js",
+          titleDescription: "App.js",
+          sections: [
+            {
+              subtitleDescription: "Import the Components",
+              descriptions: [
+                "Open the App.js file in the src directory.",
+                "Import 'Navbar', 'Main', and 'Links' at the top of the file using ES6 import syntax.",
+              ],
+            },
+            {
+              subtitleDescription: "Structure the App Component",
+              descriptions: [
+                "Inside the App function, structure the JSX to render the 'Navbar', 'Main', and 'Links' components.",
+                "Wrap these components within a 'div' with the class 'container'. This 'div' will serve as the main wrapper for all content.",
+              ],
+            },
+            {
+              subtitleDescription: "Include Additional Elements",
+              descriptions: [
+                "Below the 'Main' component, add two additional 'div' elements with classes 'shadow one' and 'shadow two' to replicate any shadow effects or overlays used in the original design.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Ensure Proper Export",
+              descriptions: [
+                "Confirm that App.js properly exports the App function as the default export.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Run the Application",
+              descriptions: [
+                "Start the development server using 'npm start' and open the application in your browser to see the assembled components working together.",
+               
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: Transfer and Adapt CSS",
+          titleDescription: "index.css",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Copy your original CSS into the App.css file within the src directory.",
+                "Adjust the CSS classes to ensure they apply correctly to the React components.",
+                "Test and modify any class selectors or styles to match the React component structure."
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 8: Add Interactivity with JavaScript",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Set Up State Management for Menu Toggle",
+              descriptions: [
+                "In Navbar.js, import the 'useState' hook from React.",
+                "Create a state variable (e.g., isMenuOpen) to track whether the menu is open or closed.",
+                "Set the initial state to 'false' (menu closed).",
+                "Use the 'setState' function (e.g., setIsMenuOpen) to toggle the state between 'true' and 'false' when the hamburger menu is clicked.",
+              ],
+            },
+            {
+              subtitleDescription: "Toggle CSS Classes Based on State",
+              descriptions: [
+                "Use a conditional expression within the 'className' prop of the container 'div' in App.js or Navbar.js.",
+                "If 'isMenuOpen' is 'true', apply an additional class like 'active' to the container 'div', which can control the visibility of the menu in your CSS.",
+                "Ensure the CSS for the 'active' class modifies the layout or visibility of the elements as intended."
+              ],
+            },
+            {
+              subtitleDescription: "Attach the Event Handler to the Hamburger Menu",
+              descriptions: [
+                "Add an 'onClick' event listener to the 'hamburger-menu' 'div' in Navbar.js.",
+                "The event handler should call the function that toggles the 'isMenuOpen' state.",
+                "This will trigger the conditional rendering or class application in the component."
+              ],
+            },
+            {
+              subtitleDescription: "Animate the Menu Transition",
+              descriptions: [
+                "Use CSS transitions in App.css to animate changes in properties like 'height', 'width', 'opacity', or 'transform' when the 'active' class is added or removed.",
+                "Ensure the menu opens and closes with a smooth transition rather than a sudden jump.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Handle Outside Clicks (Optional)",
+              descriptions: [
+                "Use an event listener to detect clicks outside the menu.",
+                "In Navbar.js, use a useEffect hook to add an event listener to the document that listens for clicks.",
+                "If the click is outside the menu (i.e., not on the hamburger icon or within the menu), set isMenuOpen to false.",
+                "Remember to clean up the event listener in the useEffect return function to avoid memory leaks."
+              ],
+            },
+            {
+              subtitleDescription: "Make the Button Functional (Optional)",
+              descriptions: [
+                "Add an 'onClick' event to the button element in Main.js.",
+                "This could navigate the user to a different page, open a modal, or scroll to another section of the page.",
+                "Depending on the action, you may need to implement additional logic or import navigation functions from React Router if navigating to a different route."
+              ],
+            },
+            {
+              subtitleDescription: "Refactor for Reusability (Optional)",
+              descriptions: [
+                "If the toggle logic or event handling can be reused, consider abstracting it into a custom hook or utility function.",
+                "This makes the component more modular and easier to manage as your application grows.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 9: Run and Test the Application",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Start the development server using 'npm start'.",
+                "Test the application in your browser to ensure everything works as expected.",
+                "Debug any issues related to component rendering, CSS styling, or JavaScript interactivity."
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 10: Refine and Optimize",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Refactor code as needed for better readability or performance.",
+                "Optimize the CSS and JS for responsiveness and smooth transitions.",
+                "Prepare the project for deployment or further development as required."
+              ],
+            },
+          
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 1,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/3tx6y3?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson56.webp"),
+      link: "https://www.dropbox.com/scl/fi/nrotfgjumv4gmon4jf0me/natureBeautyStyles56.css?rlkey=zj78gycemvqafvlldmobf9gyt&st=kj2d6ym8&dl=0",
+    },
     
   
   ],
@@ -9298,222 +9609,222 @@ React: [
       steps: [
        {
           stepTitle: "Step 1: ",
-          titleDescription: "Main Title Description for Step 1",
+          titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 1",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                "",
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 1",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                "",
               ],
-            }
+            },
           ],
         },
          {
           stepTitle: "Step 2: ",
-          titleDescription: "Main Title Description for Step 2",
+          titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 2",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                "",
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 2",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                "",
               ],
-            }
+            },
           ],
         },
          {
           stepTitle: "Step 3: ",
-          titleDescription: "Main Title Description for Step 3",
+          titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 3",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                "",
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 3",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                "",
               ],
-            }
+            },
           ],
         },
          {
           stepTitle: "Step 4: ",
-          titleDescription: "Main Title Description for Step 4",
+          titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 4",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                "",
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 4",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                "",
               ],
-            }
+            },
           ],
         },
          {
           stepTitle: "Step 5: ",
-          titleDescription: "Main Title Description for Step 5",
+          titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 5",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                "",
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 5",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                "",
               ],
-            }
+            },
           ],
         },
          {
           stepTitle: "Step 6: ",
-          titleDescription: "Main Title Description for Step 6",
+          titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 6",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                "",
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 6",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                "",
               ],
-            }
+            },
           ],
         },
          {
           stepTitle: "Step 7: ",
-          titleDescription: "Main Title Description for Step 7",
+          titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 7",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                "",
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 7",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                "",
               ],
-            }
+            },
           ],
         },
          {
           stepTitle: "Step 8: ",
-          titleDescription: "Main Title Description for Step 8",
+           titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 8",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                "",
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 8",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                "",
               ],
-            }
+            },
           ],
         },
          {
           stepTitle: "Step 9: ",
-          titleDescription: "Main Title Description for Step 9",
+          titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 9",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                "",
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 9",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                "",
               ],
-            }
+            },
           ],
         },
          {
           stepTitle: "Step 10: ",
-          titleDescription: "Main Title Description for Step 10",
+           titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Subtitle 1 for Step 10",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 1.1",
-                "Detail 1.2",
-                "Detail 1.3"
+                "",
+                "",
+                ""
               ],
             },
             {
-              subtitleDescription: "Subtitle 2 for Step 10",
+              subtitleDescription: "",
               descriptions: [
-                "Detail 2.1",
-                "Detail 2.2",
-                "Detail 2.3"
+                "",
+                "",
+                ""
               ],
-            }
+            },
           ],
         },
       ],

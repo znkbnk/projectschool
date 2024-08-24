@@ -9,7 +9,7 @@ const LessonsCards = ({
   introduction,
   difficulty,
   taskId,
-  completedTasksKey, 
+  completedTasksKey,
 }) => {
   const { name } = authorInfo;
   const [isCompleted, setIsCompleted] = useState(false);
@@ -18,7 +18,7 @@ const LessonsCards = ({
     const completedTasks =
       JSON.parse(localStorage.getItem(completedTasksKey)) || {};
     setIsCompleted(completedTasks[taskId] || false);
-  }, [taskId, completedTasksKey]); 
+  }, [taskId, completedTasksKey]);
 
   return (
     <div>
@@ -32,11 +32,12 @@ const LessonsCards = ({
           <p>{introduction}</p>
           <div className='authorDifficulty'>
             <h5>
-              Author:&nbsp;  <Link 
-                to="/authors"
-                style={{ 
-                  color: 'white', 
-                  textDecoration: 'none' 
+              Author:&nbsp;{" "}
+              <Link
+                to='/authors'
+                style={{
+                  color: "white",
+                  textDecoration: "none",
                 }}
               >
                 {name.first} {name.last}
