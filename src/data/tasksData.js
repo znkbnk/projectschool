@@ -236,6 +236,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      videoLink : 'https://youtu.be/NeOENY_qvvg?si=5GT9uGF5Exyr7Ukk',
       codesandboxUrl:
         "https://codesandbox.io/embed/vywdxt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson1.webp"),
@@ -339,6 +340,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      videoLink: 'https://youtu.be/kBHOfLsAZwA?si=ICMApQXKw4AFC2UN',
       codesandboxUrl:
         "https://codesandbox.io/embed/2fxd29?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson2.webp"),
@@ -9590,6 +9592,301 @@ const tasksData = {
       img: require("../images/ReactLesson56.webp"),
       link: "https://www.dropbox.com/scl/fi/nrotfgjumv4gmon4jf0me/natureBeautyStyles56.css?rlkey=zj78gycemvqafvlldmobf9gyt&st=kj2d6ym8&dl=0",
     },
+    {
+      taskId: "Captcha-Guard",
+      taskTitle: "Captcha Guard",
+      introduction: "CaptchaGuard is a simple yet effective React-based captcha validation tool that enhances security by generating random character captchas. It ensures users are not bots by verifying their input against a dynamically generated string, providing immediate visual feedback on success or failure.",
+
+      steps: [
+       {
+          stepTitle: "Step 1: Project Setup",
+          sections: [
+            {
+              subtitleDescription: "Initialize a New React Project",
+              descriptions: [
+                "If you haven't already, start by setting up a new React project using create-react-app. This will provide you with the necessary files and structure to build the application.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Install Required Packages",
+              descriptions: [
+                "Ensure that you have the @fortawesome/react-fontawesome package installed, as it will be used for icons. You can install it using npm.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 2: Component Structure",
+          titleDescription: "Create the Main Component",
+          sections: [
+            {
+              descriptions: [
+                "Start by creating a new file for your main component, typically named App.js or App.jsx, inside the src directory of your React project.",
+                "Inside this file, set up a functional component using the React useState and useEffect hooks, as they will be essential for managing state and lifecycle events in your application.",
+              ],
+            },
+            {
+              subtitleDescription: "Captcha State",
+              descriptions: [
+                "Define a state variable to store the generated captcha string. This state will hold the captcha that the user needs to match.",
+               
+              ],
+            }, {
+              subtitleDescription: "User Input State",
+              descriptions: [
+                "Define another state variable to capture and store the user's input. This will track what the user types into the input field.",
+                
+              ],
+            }, {
+              subtitleDescription: "Message State",
+              descriptions: [
+                "Set up a state variable to manage feedback messages. This will be updated based on whether the user correctly matches the captcha or not.",
+               
+              ],
+            }, {
+              subtitleDescription: "Success State",
+              descriptions: [
+                "Create a boolean state variable to indicate whether the captcha was successfully matched. This can be used to control the display of success or error messages.",
+                
+              ],
+            }, {
+              subtitleDescription: "Layout Setup",
+              descriptions: [
+                "Inside your component, define the overall layout structure using basic HTML elements such as 'div', 'h3', 'input', and 'button'.",
+                "Add a title or header for your captcha validator, which could include an icon (e.g., a robot) to make the interface more engaging.",
+                "Include a section where the captcha string will be displayed prominently, ensuring it's easy for users to read and type out.",
+                "Place an input field where users will enter the captcha. Make sure this input field is clearly labeled or has a placeholder to guide the user on what to do.",
+                "Add at least two buttons: one for the user to submit their captcha input for verification and another to refresh or regenerate the captcha if they want a new one.",
+                "Include an area below the input field and buttons to display success or error messages based on the user's input.",
+              
+              ],
+            },{
+              subtitleDescription: "Event Handling Functions",
+              descriptions: [
+                "Plan out functions that will handle specific user actions.",
+                "A function to handle changes in the input field, updating the corresponding state variable.",
+                "A function to verify the captcha when the user clicks the 'Verify' button.",
+                "A function to generate a new captcha when the user clicks the 'Refresh' button.",
+              ],
+            },{
+              subtitleDescription: "Use of FontAwesome Icons",
+              descriptions: [
+                "Import FontAwesome icons that you'll use for visual elements like the title and feedback messages. This adds a user-friendly and professional touch to your interface.",
+                "Plan where each icon will be used, such as a robot icon for the title, a checkmark for success, and an exclamation mark for errors.",
+              ],
+            },{
+              subtitleDescription: "Component Export",
+              descriptions: [
+                "Ensure your component is exported so it can be rendered by your React application. If this is the main component, it should be imported and used in the index.js or index.jsx file to render your application.",
+              
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 3: Captcha Generation Logic",
+          sections: [
+            {
+              subtitleDescription: "Character Set Definition",
+              descriptions: [
+                "Decide on the characters that your captcha will use. Include a mix of uppercase letters (A-Z), lowercase letters (a-z), and digits (0-9). This variety makes the captcha more secure and challenging.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Random Character Selection",
+              descriptions: [
+                "Create a function that will generate the captcha.",
+                "Loop a fixed number of times (e.g., 6 times) to create a captcha of a specific length.",
+                "In each iteration of the loop, randomly select one character from your predefined character set.",
+                "Concatenate each selected character into a string.",
+                "Optionally, add spaces between characters to enhance readability for the user.",
+              ],
+            },
+            {
+              subtitleDescription: "Captcha State Management",
+              descriptions: [
+                "Store the generated captcha string in a state variable. This will allow the captcha to be displayed on the UI and used for verification later.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Captcha Display",
+              descriptions: [
+                "Ensure that the generated captcha is rendered prominently on the UI, perhaps using a large, bold font to make it easy to read.",
+                
+              ],
+            }, {
+              subtitleDescription: "Captcha Refresh Function",
+              descriptions: [
+                "Create a separate function to regenerate the captcha whenever needed, such as when the user requests a new one or when they successfully complete the current one. This function should follow the same logic as the initial generation.",
+               
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: User Input Handling",
+          sections: [
+            {
+              subtitleDescription: "Input Field Creation",
+              descriptions: [
+                "Add an input field where users will enter the captcha text. This field should be clearly labeled to avoid confusion.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Input State Management",
+              descriptions: [
+                "Use a state variable to keep track of what the user types into the input field. Update this state variable every time the user changes the input.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Input Validation",
+              descriptions: [
+                "When the user submits their input (e.g., by clicking a 'Verify' button), create a function to validate the input against the generated captcha.",
+                "Remove any spaces from both the user's input and the generated captcha string to ensure they are compared accurately.",
+                "Check if the cleaned input matches the cleaned captcha.",
+              ],
+            },
+            {
+              subtitleDescription: "Handle Incorrect Input",
+              descriptions: [
+                "If the user's input does not match the captcha display an error message informing them that the captcha was incorrect.",
+                "Allow the user to try again without immediately regenerating the captcha unless desired.",
+                "Reset the input field so they can re-enter their attempt.",
+              ],
+            },
+            {
+              subtitleDescription: "Handle Correct Input",
+              descriptions: [
+                "If the user's input matches the captcha display a success message indicating that the captcha was correct.",
+                "Consider triggering an automatic captcha refresh after a short delay (e.g., 2.5 seconds) so the user can proceed to the next step or try again.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Message Display and Feedback",
+          sections: [
+            {
+              subtitleDescription: "Message State Management",
+              descriptions: [
+                "Use a state variable to store feedback messages. This will dynamically change depending on whether the captcha was entered correctly or incorrectly.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Visual Feedback",
+              descriptions: [
+                "Create visual cues for the user.",
+                "Use success indicators (like green checkmarks) when the captcha is correct.",
+                "Use error indicators (like red warning signs) when the captcha is incorrect.",
+                "Utilize icons from FontAwesome to enhance the visual clarity of these messages.",
+              ],
+            },
+            {
+              subtitleDescription: "Dynamic Message Display",
+              descriptions: [
+                "Ensure that the feedback message and corresponding icon are displayed only after the user attempts to verify the captcha.",
+                "The message should be positioned close to the input field and buttons so the user sees it immediately.",
+              ],
+            },
+            {
+              subtitleDescription: "Message Clearing on New Captcha",
+              descriptions: [
+                "When a new captcha is generated (either manually by the user or automatically after success), clear the previous message so the user starts fresh.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Smooth User Experience",
+              descriptions: [
+                "Consider adding subtle animations or transitions when showing or hiding messages to enhance the user experience.",
+                "Optionally, disable the 'Verify' button after a correct input to prevent double submissions during the auto-refresh delay.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: User Interface and Styling",
+          sections: [
+            {
+              subtitleDescription: "Design the Layout",
+              descriptions: [
+                "Structure your component's layout using basic HTML elements like div, h3, input, and button.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Styling",
+              descriptions: [
+                "Style your application using CSS classes for various elements like the captcha display, input field, buttons, and messages. Ensure that the UI is user-friendly and accessible.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Add Icons",
+              descriptions: [
+                "Use FontAwesome icons in your component for a visual touch, especially next to the captcha title and in the success/error messages.",
+               
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: Initialize the Captcha on Load",
+          sections: [
+            {
+              subtitleDescription: "Use the useEffect Hook",
+              descriptions: [
+                "Ensure the captcha is generated as soon as the component mounts by using the useEffect hook. This will automatically call the captcha generation function when the component loads.",
+                
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 8: Testing and Final Touches",
+          sections: [
+            {
+              subtitleDescription: "Test Functionality",
+              descriptions: [
+                "Manually test your application by entering different values to ensure the captcha verification works correctly.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Edge Cases",
+              descriptions: [
+                "Consider edge cases like empty inputs, multiple attempts, and refresh scenarios.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Adjust and Improve",
+              descriptions: [
+                "Make any necessary adjustments to improve the usability, such as handling case sensitivity or adding more visual enhancements.",
+               
+              ],
+            },
+          ],
+        },
+        
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 1,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/y9zdzc?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson57.webp"),
+      link: "https://www.dropbox.com/scl/fi/jm87f7fe1xin02szd6x80/captchaGuardStyles57.css?rlkey=epzvl31qpayg1xfog253m3310&st=9cf892g5&dl=0",
+    },
     
   
   ],
@@ -9836,6 +10133,7 @@ React: [
       codesandboxUrl: "",
       img: require("../images/ReactLesson1.webp"),
       link: "pathStyles",
+      videoLink: '', 
     },
    
   ],  

@@ -199,6 +199,15 @@ const LiveEditor = () => {
     }
   };
 
+  const handleVideoLesson = () => {
+    const videoLink = currentTask?.videoLink;
+    if (videoLink) {
+      window.open(videoLink, "_blank");
+    } else {
+      toast.error("No video lesson found.");
+    }
+  };
+
   const currentTask = tasksData[lessonType]?.[currentTaskIndex];
   const codesandboxUrl = currentTask?.codesandboxUrl || "";
 
@@ -260,6 +269,11 @@ const LiveEditor = () => {
                 <button className='button-84' onClick={handleToggleSolution}>
                   Solution
                 </button>
+                {currentTask?.videoLink && (
+                  <button className='button-84' onClick={handleVideoLesson}>
+                    Video Lesson
+                  </button>
+                )}
               </div>
               {showSolution && (
                 <div className='solution-popup'>
