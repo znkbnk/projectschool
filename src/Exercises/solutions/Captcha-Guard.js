@@ -3,6 +3,7 @@ const solutionCode1 = `
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRobot, faCircleCheck, faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
+import './styles.css'
 
 const App = () => {
   const captchaCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'.split('');
