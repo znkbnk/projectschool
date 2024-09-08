@@ -74,7 +74,7 @@ const PriceCardsList = () => {
         />
         <PriceCard
           title='Monthly'
-          price='5'
+          price='14.99'
           advantages={[
             "Access to all course materials.",
             "Receive 5 or more new tasks every month.",
@@ -85,11 +85,11 @@ const PriceCardsList = () => {
           ]}
           buttonText='Get started'
           trialDays=''
-          onButtonClick={() => handleCheckout("price_1PUY142NvwaBESkufgVpQic7")}
+          onButtonClick={() => handleCheckout("price_1Pwqdd2NvwaBESkuxTiU3ozx")}
         />
         <PriceCard
           title='Annual'
-          price='50'
+          price='100'
           advantages={[
             "Access to all course materials.",
             "Receive 5 or more new tasks every month.",
@@ -100,7 +100,7 @@ const PriceCardsList = () => {
           ]}
           buttonText='Get started'
           trialDays=''
-          onButtonClick={() => handleCheckout("price_1PUY3f2NvwaBESkuS8hZLwkb")}
+          onButtonClick={() => handleCheckout("price_1PwqmY2NvwaBESkuFDHCkFbd")}
         />
       </div>
       <div className='terms-links'>
