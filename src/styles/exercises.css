@@ -18,9 +18,13 @@
   transition: transform 200ms ease-in;
 }
 .wrapper .exercises-card__image {
+  padding: 25px;
   height: 12rem;
-  width: 100%;
-  object-fit: cover;
+  object-fit: contain; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; 
 }
 .wrapper .exercises-card__title {
   padding: 1rem;

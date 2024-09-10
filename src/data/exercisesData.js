@@ -18,7 +18,7 @@ const exercisesData = [
     //   to: "/csslessons",
     // },
     {
-      img: "https://www.freecodecamp.org/news/content/images/2022/04/featured.jpg",
+      img: "./images/React-icon.webp",
       title: "Building Dynamic User Interfaces",
       desc: "Explore React, the widely-used JavaScript library designed for crafting dynamic and engaging user interfaces. Discover its core concepts such as components and state management, alongside navigating the diverse React ecosystem, empowering you to construct contemporary web applications.",
       to: "/reactlessons",

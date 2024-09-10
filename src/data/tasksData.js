@@ -9887,6 +9887,167 @@ const tasksData = {
       img: require("../images/ReactLesson57.webp"),
       link: "https://www.dropbox.com/scl/fi/jm87f7fe1xin02szd6x80/captchaGuardStyles57.css?rlkey=epzvl31qpayg1xfog253m3310&st=9cf892g5&dl=0",
     },
+
+    {
+      taskId: "Calculator",
+      taskTitle: "Calculator",
+      introduction: "This project is a simple calculator built using React. It allows users to input numbers and basic operators, display the current expression, and calculate the result using the mathjs library. Features include adding, deleting, resetting inputs, and evaluating mathematical expressions with error handling for invalid inputs.",
+
+      steps: [
+       {
+          stepTitle: "Step 1: Set Up the Project",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Use 'create-react-app' to start a new project by running npx 'create-react-app calculator-app' in your terminal.",
+                "Install 'mathjs' for evaluating expressions by running 'npm install mathjs'.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 2: Create the Component and State",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Inside 'src/', create a new component called Calculator.js.",
+                "In this component, use the 'useState' hook to create a 'display' state. This will store the user's input and the result.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Handle Button Clicks",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Create a function 'showBtn(value)' that updates the 'display' state by appending the button value (numbers or operators) to the current display value.",
+                "Pass this function to the number and operator buttons so that clicking them updates the display.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 4: Evaluate the Expression",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Use the 'evaluate' function from 'mathjs' inside a 'calculateResult' function.",
+                "When the user clicks the '=' button, the function should evaluate the current expression, convert it to a string, and update the display.",
+                "Add error handling using a 'try-catch' block to show 'Error' if the expression is invalid.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 5: Create a Reset Function",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Implement a 'resetDisplay' function to clear the 'display' state when the 'reset' button is clicked. This function should set the 'display' back to an empty string.",
+              
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 6: Implement Delete Function",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Add a 'deleteLast' function that removes the last character from the 'display'. This allows users to correct mistakes.",
+                "Bind this function to a 'del' button.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 7: Design the Calculator Layout",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Use JSX to create a basic structure for the calculator:",
+              descriptions: [
+                "You will need a display section to show the input/result.",
+                "Also, a grid of buttons for numbers (0-9), operators (+, -, *, /), a delete button (del), and other controls like reset and equal (=).",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Loop through an array of button values to generate the buttons dynamically."
+
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 8: Style the Calculator",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Add a CSS file to style the calculator, ensuring the layout is clean and buttons are easy to interact with.",
+                "Style the display to resemble a digital calculator, showing numbers clearly as they are entered.",
+              ],
+            },
+            
+            
+          ],
+        },
+         {
+          stepTitle: "Step 9: Test the Application",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Run your project with npm start and test all functions:",
+              descriptions: [
+                "Entering numbers and operators.",
+                "Calculating results.",
+                "Resetting and deleting entries.",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Ensure that invalid expressions display an error message.",
+             
+              ],
+            },
+          ],
+        },
+         
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 1,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/rfdkfz?view=editor+%2B+preview",
+      img: require("../images/ReactLesson58.webp"),
+      link: "https://www.dropbox.com/scl/fi/h4tco98677wmesqptnocm/calculatorStyle58.css?rlkey=r8jnc5pmznq7snfsun2cgqrvx&st=130a0xfi&dl=0",
+      videoLink: '', 
+    },
     
   
   ],
