@@ -10048,6 +10048,171 @@ const tasksData = {
       link: "https://www.dropbox.com/scl/fi/h4tco98677wmesqptnocm/calculatorStyle58.css?rlkey=r8jnc5pmznq7snfsun2cgqrvx&st=130a0xfi&dl=0",
       videoLink: '', 
     },
+
+    {
+      taskId: "Copy-To-Clipboard",
+      taskTitle: "Copy To Clipboard",
+      introduction: "This React project features a simple clipboard tool that allows users to copy text from a textarea to their clipboard with a single click. It provides immediate feedback by changing the button text to 'Copied!' when the copy operation is successful.",
+
+      steps: [
+       {
+          stepTitle: "Step 1: Set Up Your React Project",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Ensure you have a React project set up. If not, create one using a tool like Create React App or Vite.",
+                
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 2: Install Clipboard.js",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Install the Clipboard.js library using npm command in your terminal: 'npm install clipboard'",
+               
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Import Necessary Libraries",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Import 'React', 'useState', 'useEffect', 'useRef' from React.",
+                "Import the Clipboard.js library.",
+                "Import any required CSS files for styling.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 4: Initialize State and Refs",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Use 'useState' to manage the 'copied' state.",
+                "Use 'useRef' to create a reference for the 'textarea' element.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 5: Set Up Clipboard.js in useEffect",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Initialize Clipboard.js inside the 'useEffect' hook.",
+                "Pass the button selector (.clipboard-button) and a function to retrieve the text to copy from the 'textarea' ref.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Handle Success and Error Events",
+              descriptions: [
+                "Add event listeners for the 'success' and 'error' events of Clipboard.js.",
+                "On success, update the 'copied' state to 'true' and use 'setTimeout' to revert it after 2 seconds.",
+                "On error, log the error to the console.",
+              ],
+            },
+            {
+              subtitleDescription: "Clean Up",
+              descriptions: [
+                "Ensure you clean up Clipboard.js when the component unmounts by calling 'clipboard.destroy()'.",
+               
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 6: Create the JSX Structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Create a container 'div' for your component.",
+                "Add a card with a title and content section.",
+                "Include a 'textarea' for input, referencing it with 'useRef'.",
+                "Add a button with the class 'clipboard-button' and adjust its text based on the 'copied' state.",
+                "Add a second 'textarea' for pasting and testing the copied content.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 7: Add Styling",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Ensure your styles.css file contains styles for the container, card, title, textareas, and button. ",
+                "Additionally, you can download the styles using the link provided below.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 8: Export Your Component",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Export the component as the default export from the file.",
+             
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 9: Integrate the Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Use this component in your main application file or any other part of your application where you want it to appear.",
+               
+              ],
+            },
+          
+          ],
+        },
+       
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/6hlym8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson59.webp"),
+      link: "https://www.dropbox.com/scl/fi/kf4z81g0bmmru6axhv78l/copyToClipboard59.css?rlkey=b2m01ax1irixi1ixaxh9c5std&st=4fwf1h4l&dl=0",
+      videoLink: '', 
+    },
     
   
   ],
