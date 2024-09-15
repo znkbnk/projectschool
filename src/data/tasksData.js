@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 /* eslint-disable no-useless-escape */
 const authorsData = [
   {
@@ -10212,6 +10213,291 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/embed/6hlym8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson59.webp"),
       link: "https://www.dropbox.com/scl/fi/kf4z81g0bmmru6axhv78l/copyToClipboard59.css?rlkey=b2m01ax1irixi1ixaxh9c5std&st=4fwf1h4l&dl=0",
+      videoLink: '', 
+    },
+    {
+      taskId: "English-Dictionary",
+      taskTitle: "English Dictionary",
+      introduction: "This React dictionary app allows users to search for the meaning, phonetic transcription, example sentences, and synonyms of words using an external dictionary API. It provides a dynamic user interface with animated transitions for search results, enhancing the overall user experience.",
+
+      steps: [
+       {
+          stepTitle: "Step 1: Set Up the React Project",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the Project",
+              descriptions: [
+                "Use Create React App (npx create-react-app dictionary-app) to set up a new React project.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Install Dependencies",
+              descriptions: [
+                "Install 'framer-motio'n using npm (npm install framer-motion).",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 2: Create the Main Component Structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create App.js",
+              descriptions: [
+                "This will be your main component file where all the logic resides.",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Import React and Framer Motion",
+              descriptions: [
+                "Import 'useState', and 'AnimatePresence' from 'react', and 'motion' from 'framer-motion'.",
+               
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 3: Set Up State Management",
+          titleDescription: "Define State Variables",
+          sections: [
+            {
+              subtitleDescription: "Use useState to initialize these states.",
+              descriptions: [
+                "'word': To store the user's input.",
+                "'result': To store the search result fetched from the API.",
+                "'infoText': To store informational messages for the user.",
+             
+              ],
+            },
+            {
+              subtitleDescription: "State Initialization",
+              descriptions: [
+                "Initialize 'word' as an empty string.",
+                "Initialize 'result' as 'null' since there is no result initially.",
+                "Set 'infoText' with a default instructional message.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Implement the API Fetching Logic",
+          titleDescription: "Define the fetchApi Function",
+          sections: [
+            {
+              subtitleDescription: "Create the fetchApi Function",
+              descriptions: [
+                "This function will handle the process of fetching the word's definition and related information from the dictionary API.",
+                "It accepts one argument: 'word' (the word entered by the user).",
+              ],
+            },
+            {
+              subtitleDescription: "Set Informational Text",
+              descriptions: [
+                "Update 'infoText' to inform the user that the app is searching for the word.",
+                "This gives feedback to the user that the search is in progress.",
+              ],
+            },
+            {
+              subtitleDescription: "Use the Fetch API",
+              descriptions: [
+                "Use the 'fetch' function to make a GET request to the dictionary API with the user-provided word.",
+                "The API endpoint will look like this: 'https://api.dictionaryapi.dev/api/v2/entries/en/${word}'.",
+                "This call returns a promise that resolves with the response, which is then converted to JSON.",
+              ],
+            },
+            {
+              subtitleDescription: "Check for Errors",
+              descriptions: [
+                "The API may return an error if the word is not found or the request fails.",
+                "If the API returns an object with a 'title' property (indicating an error), update infoText to notify the user that the word was not found and set 'result' to 'null'.",
+              ],
+            },
+            {
+              subtitleDescription: "Extract Word Data",
+              descriptions: [
+                "If the API call is successful, extract the relevant information from the response.",
+                "'wordData.word': The word itself.",
+                "'phonetics': Phonetic transcription, if available (wordData.phonetics[0]?.text).",
+                "'meanings': Array of meanings, extract the first definition (wordData.meanings[0].definitions[0]).",
+                "Create an object to store these extracted details.",
+              ],
+            },
+            {
+              subtitleDescription: "Update the State",
+              descriptions: [
+                "Update the 'result' state with the extracted word data to be displayed in the UI.",
+                "Clear 'infoText' since the word has been successfully fetched and processed.",
+              ],
+            },
+            {
+              subtitleDescription: "Catch Network Errors",
+              descriptions: [
+                "Use '.catch' to handle any network or other errors that occur during the fetch operation.",
+                "Update 'infoText' to inform the user that the search failed.",
+                "Set 'result' to 'null' to clear any previous search results.",
+              ],
+            },
+                    ],
+        },
+         {
+          stepTitle: "Step 5: Handle User Interactions",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Search Button Logic",
+              descriptions: [
+                "Create handleSearch function.",
+                "Check if the word input is not empty.",
+                "Call fetchApi with the trimmed word if valid.",
+                "Update infoText if the input is empty."
+              ],
+            },
+            {
+              subtitleDescription: "Clear Button Logic",
+              descriptions: [
+                "Create handleRemove function.",
+                "Clear the word input.",
+                "Reset result to null.",
+                "Reset infoText to the default instructional message."
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: Build the JSX Structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Input Field",
+              descriptions: [
+                "Render an input element bound to word state for user input.",
+                "Include an onChange event to update the word state as the user types.",
+              ],
+            },
+            {
+              subtitleDescription: "Search and Clear Buttons",
+              descriptions: [
+                "Render a Search button with an onClick event to trigger handleSearch.",
+                "Include a Clear button (or icon) with an onClick event to trigger handleRemove.",
+              ],
+            },
+            {
+              subtitleDescription: "Info Text",
+              descriptions: [
+                "Display infoText in a paragraph element to provide user guidance and feedback.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Search Results",
+              descriptions: [
+                "Use AnimatePresence and motion from Framer Motion to animate the search results.",
+                "Render a list (ul) of results if result is not null.",
+                "Display the word and its phonetic transcription.",
+                "Display the definition.",
+                "Display an example sentence if available.",
+                "If available, display clickable synonyms that trigger a new search when clicked.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: Implement Animations with Framer Motion",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Wrap Results in AnimatePresence",
+              descriptions: [
+                "Use AnimatePresence to manage the mounting and unmounting of search result elements.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Use motion components to apply animations to list items",
+              descriptions: [
+                "Initial state: Hidden (e.g., opacity: 0, scale: 0, x: -20).",
+                "Animate to visible state (e.g., opacity: 1, scale: 1, x: 0).",
+                "Define transitions for smooth animations.",
+              ],
+            },
+            {
+              subtitleDescription: "Customize Animations",
+              descriptions: [
+                "Adjust durations and easing for animations to match the desired look and feel.",
+              
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 8: Apply Styling",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define CSS",
+              descriptions: [
+                "Style the input field, buttons, and results list for a clean layout.",
+                "Use flexbox or grid to arrange elements neatly.",
+              ],
+            },
+            {
+              subtitleDescription: "Integrate Animations",
+              descriptions: [
+                "Ensure the transitions and animations are well integrated into the UI design.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 9: Testing and Refinement",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Test the App",
+              descriptions: [
+                "Test different words to ensure the app fetches and displays results correctly.",
+                "Test edge cases like entering a non-existent word, using special characters, and handling network errors.",
+              ],
+            },
+            {
+              subtitleDescription: "Debug and Refine",
+              descriptions: [
+                "Ensure the app handles errors gracefully and provides user-friendly feedback.",
+                "Make refinements to the UI and animations based on testing results.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 10: Final Review and Deployment",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Go through the app to check for any final improvements.",
+                "Deploy the app to a hosting platform like Vercel, Netlify, or GitHub Pages to make it accessible.",
+                ""
+              ],
+            },
+          
+          ],
+        },
+      ],
+      taskType: "React",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["React Basics"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/czpt6f?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/ReactLesson60.webp"),
+      link: "https://www.dropbox.com/scl/fi/hz8gmjpo3wannh8vihskh/engDictionary60.css?rlkey=gcz78xr2efr4s9rv55inkp4am&st=3anpi0oe&dl=0",
       videoLink: '', 
     },
     
