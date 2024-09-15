@@ -11,12 +11,12 @@ const App = () => {
   );
 
   const fetchApi = (word) => {
-    setInfoText("Searching the meaning of \\"" + word + "\\"");
+    setInfoText("Searching the meaning of \"" + word + "\"");
     fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + word)
       .then((response) => response.json())
       .then((result) => {
         if (result.title) {
-          setInfoText("Can't find the meaning of \\"" + word + "\\". Please, try to search for another word.");
+          setInfoText("Can't find the meaning of \"" + word + "\". Please, try to search for another word.");
           setResult(null);
         } else {
           const wordData = result[0];
@@ -35,7 +35,7 @@ const App = () => {
         }
       })
       .catch(() => {
-        setInfoText("Can't find the meaning of \\"" + word + "\\". Please, try to search for another word.");
+        setInfoText("Can't find the meaning of \"" + word + "\". Please, try to search for another word.");
         setResult(null);
       });
   };
