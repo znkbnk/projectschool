@@ -1,9 +1,6 @@
 const solutionCode1 = `
-//App.js 
-
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import './styles.css'
 
 const App = () => {
   const [word, setWord] = useState("");
@@ -13,20 +10,20 @@ const App = () => {
   );
 
   const fetchApi = (word) => {
-    setInfoText(Searching the meaning of "\${word}");
-    fetch(https://api.dictionaryapi.dev/api/v2/entries/en/\${word})
+    setInfoText(\`Searching the meaning of "\${word}"\`);
+    fetch(\`https://api.dictionaryapi.dev/api/v2/entries/en/\${word}\`)
       .then((response) => response.json())
       .then((result) => {
         if (result.title) {
           setInfoText(
-            Can't find the meaning of "\${word}". Please, try to search for another word.
+            \`Can't find the meaning of "\${word}". Please, try to search for another word.\`
           );
           setResult(null);
         } else {
           const wordData = result[0];
           const definitions = wordData.meanings[0].definitions[0];
           const phonetics = wordData.phonetics[0]?.text
-            ? \${wordData.meanings[0].partOfSpeech} /\${wordData.phonetics[0].text}/
+            ? \`\${wordData.meanings[0].partOfSpeech} /\${wordData.phonetics[0].text}/\`
             : "No phonetic transcription available";
           setResult({
             word: wordData.word,
@@ -40,7 +37,7 @@ const App = () => {
       })
       .catch(() => {
         setInfoText(
-          Can't find the meaning of "\${word}". Please, try to search for another word.
+          \`Can't find the meaning of "\${word}". Please, try to search for another word.\`
         );
         setResult(null);
       });
@@ -72,7 +69,6 @@ const App = () => {
           value={word}
           onChange={(e) => setWord(e.target.value)}
         />
-
         <span className='material-icons' onClick={handleRemove}>
           clear
         </span>
@@ -154,7 +150,4 @@ const App = () => {
 export default App;
 `;
 
-
-
-// eslint-disable-next-line import/no-anonymous-default-export
 export default solutionCode1;
