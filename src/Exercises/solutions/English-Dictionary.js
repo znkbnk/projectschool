@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 const solutionCode1 = `
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,20 +11,18 @@ const App = () => {
   );
 
   const fetchApi = (word) => {
-    setInfoText(\`Searching the meaning of "\${word}"\`);
-    fetch(\`https://api.dictionaryapi.dev/api/v2/entries/en/\${word}\`)
+    setInfoText("Searching the meaning of \"" + word + "\"");
+    fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + word)
       .then((response) => response.json())
       .then((result) => {
         if (result.title) {
-          setInfoText(
-            \`Can't find the meaning of "\${word}". Please, try to search for another word.\`
-          );
+          setInfoText("Can't find the meaning of \"" + word + "\". Please, try to search for another word.");
           setResult(null);
         } else {
           const wordData = result[0];
           const definitions = wordData.meanings[0].definitions[0];
           const phonetics = wordData.phonetics[0]?.text
-            ? \`\${wordData.meanings[0].partOfSpeech} /\${wordData.phonetics[0].text}/\`
+            ? wordData.meanings[0].partOfSpeech + " /" + wordData.phonetics[0].text + "/"
             : "No phonetic transcription available";
           setResult({
             word: wordData.word,
@@ -36,9 +35,7 @@ const App = () => {
         }
       })
       .catch(() => {
-        setInfoText(
-          \`Can't find the meaning of "\${word}". Please, try to search for another word.\`
-        );
+        setInfoText("Can't find the meaning of \"" + word + "\". Please, try to search for another word.");
         setResult(null);
       });
   };
@@ -60,23 +57,23 @@ const App = () => {
   };
 
   return (
-    <div className='wrapper'>
+    <div className="wrapper">
       <header>English Dictionary</header>
-      <div className='search'>
+      <div className="search">
         <input
-          type='text'
-          placeholder='Search a word'
+          type="text"
+          placeholder="Search a word"
           value={word}
           onChange={(e) => setWord(e.target.value)}
         />
-        <span className='material-icons' onClick={handleRemove}>
+        <span className="material-icons" onClick={handleRemove}>
           clear
         </span>
       </div>
-      <button onClick={handleSearch} className='search-btn'>
+      <button onClick={handleSearch} className="search-btn">
         Search
       </button>
-      <p className='info-text'>{infoText}</p>
+      <p className="info-text">{infoText}</p>
       <AnimatePresence>
         {result && (
           <motion.ul
@@ -86,49 +83,49 @@ const App = () => {
             transition={{ duration: 0.3 }}
           >
             <motion.li
-              className='word'
+              className="word"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className='details'>
+              <div className="details">
                 <p>{result.word}</p>
                 <span>{result.phonetics}</span>
               </div>
             </motion.li>
-            <div className='content'>
+            <div className="content">
               <motion.li
-                className='meaning'
+                className="meaning"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className='details'>
+                <div className="details">
                   <p>Meaning</p>
                   <span>{result.meaning}</span>
                 </div>
               </motion.li>
               <motion.li
-                className='example'
+                className="example"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className='details'>
+                <div className="details">
                   <p>Example</p>
                   <span>{result.example}</span>
                 </div>
               </motion.li>
               {result.synonyms.length > 0 && (
                 <motion.li
-                  className='synonyms'
+                  className="synonyms"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className='details'>
+                  <div className="details">
                     <p>Synonyms</p>
-                    <div className='list'>
+                    <div className="list">
                       {result.synonyms.slice(0, 5).map((synonym, index) => (
                         <span key={index} onClick={() => fetchApi(synonym)}>
                           {synonym}
@@ -149,5 +146,6 @@ const App = () => {
 
 export default App;
 `;
+
 
 export default solutionCode1;

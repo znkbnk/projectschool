@@ -9,6 +9,3 @@ solution
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [solutionCode1, solutionCode2];
 
-
-
-// const todayFormatted = \`\${today.getMonth() + 1}-\${today.getDate()}\`;
