@@ -8895,7 +8895,7 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/74py2f?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson54.webp"),
-      link: "https://www.dropbox.com/scl/fi/g1nw3wj9qb0m38c1ze0wd/popupStyles54.css?rlkey=hewx1gphkm9ih58xs54qksqul&st=6lra75z9&dl=0",
+      link: "https://www.dropbox.com/scl/fi/869qkslymi27b5c7y0l28/popupWindowStyles54.css?rlkey=becnz8l0b6lo4qqqqhl6yj0f9&st=542fidii&dl=0",
     },
     {
       taskId: "Movies4u",
