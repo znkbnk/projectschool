@@ -10483,7 +10483,6 @@ const tasksData = {
               descriptions: [
                 "Go through the app to check for any final improvements.",
                 "Deploy the app to a hosting platform like Vercel, Netlify, or GitHub Pages to make it accessible.",
-                ""
               ],
             },
           
