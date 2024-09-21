@@ -127,7 +127,8 @@ section {
 }
 
 .button-28.completed {
-  background-color: #4efd54;
+  background: linear-gradient(#71df75, #29862d);
+
 }
 .button-28.completed:hover {
   background-color: #dd1818;

@@ -549,6 +549,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      videoLink: 'https://www.youtube.com/watch?v=3WWUL7TEzAM&ab_channel=ProjectSchool',
       codesandboxUrl:
         "https://codesandbox.io/embed/rjhv9j?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson4.webp"),

@@ -8,8 +8,11 @@ import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
 import { auth } from "../components/firebase";
 import axios from "axios";
-import { throttle } from 'lodash';
-import { debounce } from 'lodash';
+import { throttle } from "lodash";
+import { debounce } from "lodash";
+import { motion, AnimatePresence } from "framer-motion";
+import "../styles/cheatsheet.css";
+import cheatsheetData from "../data/cheatsheetData.js";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -19,11 +22,14 @@ const LiveEditor = () => {
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
   const [subscriptionStatus, setSubscriptionStatus] = useState(null);
+  const [showCheatsheet, setShowCheatsheet] = useState(false); // State for cheatsheet popup
+  const [cheatsheetContent, setCheatsheetContent] = useState(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
     let isMounted = true;
-  
+
     const fetchSubscriptionStatus = async () => {
       try {
         const user = auth.currentUser;
@@ -42,14 +48,13 @@ const LiveEditor = () => {
         }
       }
     };
-  
+
     fetchSubscriptionStatus();
-  
+
     return () => {
       isMounted = false; // Cleanup function to mark component as unmounted
     };
   }, []);
-  
 
   useEffect(() => {
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
@@ -71,22 +76,23 @@ const LiveEditor = () => {
       } else {
         console.error(`Task with ID ${taskId} not found.`);
       }
+      setShowSolution(false);
     }
   }, [lessonType, taskId]);
 
   useEffect(() => {
     import(`./solutions/${taskId}`)
-      .then((module) => {
-        if (Array.isArray(module.default)) {
-          setSolutionCodes(module.default);
-        } else {
-          setSolutionCodes([module.default]);
-        }
-      })
-      .catch((error) => {
-        console.error("Error loading solution:", error);
-        setSolutionCodes(["Solution not found"]);
-      });
+    .then((module) => {
+      if (Array.isArray(module.default)) {
+        setSolutionCodes(module.default);
+      } else {
+        setSolutionCodes([module.default]);
+      }
+    })
+    .catch((error) => {
+      console.error("Error loading solution:", error);
+      setSolutionCodes(["Solution not found"]);
+    });
   }, [taskId]);
 
   const handleCheckboxChange = (stepId) => {
@@ -116,7 +122,6 @@ const LiveEditor = () => {
       }
     }
   };
-  
 
   const handlePrevious = () => {
     if (currentTaskIndex > 0) {
@@ -136,16 +141,16 @@ const LiveEditor = () => {
       toast.info(`This task is already completed.`);
       return;
     }
-  
+
     const taskIndex = tasksData[lessonType]?.findIndex(
       (task) => task.taskId === taskId
     );
-  
+
     if (taskIndex !== -1) {
       const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
       const updatedTasksData = { ...tasksData };
       updatedTasksData[lessonType][taskIndex].completed = true;
-  
+
       const completedTasks =
         JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
       completedTasks[taskId] = true;
@@ -153,7 +158,7 @@ const LiveEditor = () => {
         lessonCompletedTasksKey,
         JSON.stringify(completedTasks)
       );
-  
+
       console.log(`Task ${taskId} marked as completed.`);
       debouncedToastSuccess(`Lesson ${lessonType} is completed!`);
       setIsCompleted(true);
@@ -191,7 +196,7 @@ const LiveEditor = () => {
 
   const handleToggleSolution = () => {
     if (subscriptionStatus === "subscribed") {
-      setShowSolution(!showSolution);
+      setShowSolution((prevShowSolution) => !prevShowSolution);
     } else {
       toast.info(
         "Access to solutions requires an active subscription. Please subscribe to unlock this feature."
@@ -208,7 +213,22 @@ const LiveEditor = () => {
     }
   };
 
-  const currentTask = tasksData[lessonType]?.[currentTaskIndex];
+  const handleToggleCheatsheet = () => {
+    const currentCheatsheet = cheatsheetData.find(
+      (cheat) => cheat.taskId === taskId
+    );
+
+    if (!currentCheatsheet) {
+      toast.error("Cheatsheet not found for this task.");
+      return;
+    }
+
+    setCheatsheetContent(currentCheatsheet);
+    setShowCheatsheet(!showCheatsheet);
+  };
+
+  const currentTask = tasksData[lessonType]?.[currentTaskIndex] || {};
+
   const codesandboxUrl = currentTask?.codesandboxUrl || "";
 
   return (
@@ -251,6 +271,9 @@ const LiveEditor = () => {
                   </div>
                 ))}
               <div className='task-button-container'>
+                <button className='button-84' onClick={handleToggleCheatsheet}>
+                  Cheatsheet
+                </button>
                 {currentTask?.link && (
                   <button className='button-84' onClick={handleDownloadStyles}>
                     Download Styles
@@ -275,6 +298,46 @@ const LiveEditor = () => {
                   </button>
                 )}
               </div>
+              <AnimatePresence>
+                {showCheatsheet && cheatsheetContent && (
+                  <motion.div
+                    className='cheatsheet-popup'
+                    initial={{ opacity: 0, x: "-50%" }}
+                    animate={{ opacity: 1, x: "0%" }}
+                    exit={{ opacity: 0, x: "50%" }}
+                  >
+                    <div className='cheatsheet-content'>
+                      <div className='cheatsheet-text'>
+                        {cheatsheetContent.content?.map((section, index) => (
+                          <div key={index} className='cheatsheet-section'>
+                            <h3>{section.title}</h3>
+                            {section.subtitle && <h2>{section.subtitle}</h2>}
+                            <ul>
+                              {section.details?.map((detail, idx) => (
+                                <li key={idx}>{detail}</li>
+                              ))}
+                            </ul>
+                            {section.image && (
+                              <img
+                                src={section.image}
+                                alt={`cheatsheet-${index}`}
+                                className='cheatsheet-image'
+                              />
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <button
+                      className='cheatsheet-close-button'
+                      onClick={handleToggleCheatsheet}
+                    >
+                      Close
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
               {showSolution && (
                 <div className='solution-popup'>
                   <div className='solution-container'>
@@ -301,24 +364,23 @@ const LiveEditor = () => {
             </div>
           </div>
           {lessonType && tasksData[lessonType]?.length > 0 && (
-  <div className='task-buttons'>
-    <button className='button-28 previous' onClick={handlePrevious}>
-      Previous
-    </button>
-    <button
-      className={`button-28 complete ${
-        isCompleted ? "completed" : ""
-      }`}
-      onClick={handleComplete}
-    >
-      {isCompleted ? "Completed" : "Complete"}
-    </button>
-    <button className='button-28 next' onClick={handleNext}>
-      Next
-    </button>
-  </div>
-)}
-
+            <div className='task-buttons'>
+              <button className='button-28 previous' onClick={handlePrevious}>
+                Previous
+              </button>
+              <button
+                className={`button-28 complete ${
+                  isCompleted ? "completed" : ""
+                }`}
+                onClick={handleComplete}
+              >
+                {isCompleted ? "Completed" : "Complete"}
+              </button>
+              <button className='button-28 next' onClick={handleNext}>
+                Next
+              </button>
+            </div>
+          )}
         </div>
         <iframe
           src={codesandboxUrl}

@@ -24,11 +24,10 @@ const CodeBlock = ({ code }) => {
           </code>
         </pre>
         <div className="copy-button">
-          <button className="button-84" onClick={handleCopy}>
+        <button className={`button-84 ${copied ? 'copied' : ''}`} onClick={handleCopy}>
             {copied ? "Copied!" : "Copy Code"}
           </button>
         </div>
-        {copied && <div className="copied-message">Copied!</div>}
       </div>
     </div>
   );
