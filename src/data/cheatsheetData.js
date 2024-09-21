@@ -210,6 +210,74 @@ const cheatsheetData = [
     ],
   },
 
+  {
+    taskId: "Simple-Quiz-App",
+    content: [
+      {
+        title: "State Management",
+        subtitle: "",
+        details: [
+          "State: A way to store and manage dynamic values in React.",
+          "'useState': This hook allows you to create a state variable and a function to update it.",
+          "'currentQuestion': Tracks the current question index.",
+          "'score': Tracks the total score of the quiz.",
+          "'correctAnswers': Tracks the number of correct answers.",
+          "'incorrectAnswers': Tracks the number of incorrect answers.",
+        ],
+        image: "./cheatsheetImages/task5/1.webp"
+      },
+         {
+        title: "Array of Questions",
+        subtitle: "",
+        details: [
+          "Array: Stores a collection of objects, each containing a 'questionText' and an 'answerOptions' array.",
+          "'answerOptions': Each object inside 'answerOptions' holds an answerText and a boolean 'isCorrect' to mark if the answer is correct.",
+        
+        ],
+        image: "./cheatsheetImages/task5/2.webp"
+      },
+         {
+        title: "Rendering Questions and Answers",
+        subtitle: "",
+        details: [
+          "Displaying Questions: Access the 'questionText' of the current question using currentQuestion.",
+          "Mapping over answer options: map() iterates over each answer option and renders a button for each one.",
+          "onClick Event: When a button is clicked, it calls 'handleAnswerButtonClick', passing whether the selected answer is correct.",
+        ],
+        image: "./cheatsheetImages/task5/3.webp"
+      },
+         {
+        title: "Answer Button Handling",
+        subtitle: "",
+        details: [
+          "Event Handler: Handles what happens when an answer is clicked.",
+          "isCorrect: Passed in to check if the selected answer is correct.",
+          "State Updates: Increments 'score' and 'correctAnswers' if correct, or 'incorrectAnswers' if incorrect.",
+          "Next Question: Moves to the next question or calls 'finishQuiz' if the quiz is over.",
+        ],
+        image: "./cheatsheetImages/task5/4.webp"
+      },
+         {
+        title: "Finishing the Quiz",
+        subtitle: "",
+        details: [
+          "finishQuiz: Updates 'currentQuestion' to a value beyond the number of questions, which triggers the score section to render.",
+          
+        ],
+        image: "./cheatsheetImages/task5/5.webp"
+      },
+         {
+        title: "Conditional Rendering",
+        subtitle: "",
+        details: [
+          "Conditional Rendering: Displays either the score section or the question section based on whether the quiz is finished (currentQuestion >= questions.length).",
+          
+        ],
+        image: "./cheatsheetImages/task5/6.webp"
+      },
+    ],
+  },
+
 
 
 
