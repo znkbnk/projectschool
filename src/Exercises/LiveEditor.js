@@ -82,17 +82,19 @@ const LiveEditor = () => {
 
   useEffect(() => {
     import(`./solutions/${taskId}`)
-    .then((module) => {
-      if (Array.isArray(module.default)) {
-        setSolutionCodes(module.default);
-      } else {
-        setSolutionCodes([module.default]);
-      }
-    })
-    .catch((error) => {
-      console.error("Error loading solution:", error);
-      setSolutionCodes(["Solution not found"]);
-    });
+      .then((module) => {
+        if (module && Array.isArray(module.default)) {
+          setSolutionCodes(module.default);
+        } else if (module) {
+          setSolutionCodes([module.default]);
+        } else {
+          setSolutionCodes(["Solution not found"]);
+        }
+      })
+      .catch((error) => {
+        console.error("Error loading solution:", error);
+        setSolutionCodes(["Solution not found"]);
+      });
   }, [taskId]);
 
   const handleCheckboxChange = (stepId) => {
@@ -168,29 +170,34 @@ const LiveEditor = () => {
   }, 500); // Adjust the debounce time as needed
 
   const handleDownloadStyles = () => {
-    const styleLink = currentTask?.link;
-    if (styleLink) {
-      window.open(styleLink, "_blank");
+    if (currentTask && currentTask.link) {
+      window.open(currentTask.link, "_blank");
     } else {
       toast.error("No styles found for download.");
     }
   };
 
   const handleDownloadImg = () => {
-    const imgLink = currentTask?.linkImg;
-    if (imgLink) {
-      window.open(imgLink, "_blank");
+    if (currentTask && currentTask.linkImg) {
+      window.open(currentTask.linkImg, "_blank");
     } else {
       toast.error("No images found for download.");
     }
   };
 
   const handleDownloadData = () => {
-    const dataLink = currentTask?.linkData;
-    if (dataLink) {
-      window.open(dataLink, "_blank");
+    if (currentTask && currentTask.linkData) {
+      window.open(currentTask.linkData, "_blank");
     } else {
       toast.error("No data found for download.");
+    }
+  };
+
+  const handleVideoLesson = () => {
+    if (currentTask && currentTask.videoLink) {
+      window.open(currentTask.videoLink, "_blank");
+    } else {
+      toast.error("No video lesson found.");
     }
   };
 
@@ -201,15 +208,6 @@ const LiveEditor = () => {
       toast.info(
         "Access to solutions requires an active subscription. Please subscribe to unlock this feature."
       );
-    }
-  };
-
-  const handleVideoLesson = () => {
-    const videoLink = currentTask?.videoLink;
-    if (videoLink) {
-      window.open(videoLink, "_blank");
-    } else {
-      toast.error("No video lesson found.");
     }
   };
 
@@ -239,6 +237,22 @@ const LiveEditor = () => {
           <div className='task'>
             <div className='text-window'>
               <h1>{currentTask?.taskTitle}</h1>
+              {currentTask?.task &&
+                Object.keys(currentTask.task).length > 0 && (
+                  <div className='section' >
+                    <h4>Task Description:</h4>
+                    <p>{currentTask.task.taskDescription}</p>
+                    <h4>Platform: </h4>
+                    <p>{currentTask.task.platform}</p>
+                    <h4>Requirements:</h4>
+                    <ul className='text-window-list'>
+                      {currentTask.task.requirements?.map((requirement, index) => (
+                        <li key={index}>{requirement}</li>
+                      ))}
+                    </ul>
+                    <h4>Steps:</h4>
+                  </div>
+                )}
               {lessonType &&
                 currentTask?.steps?.map((step, index) => (
                   <div className='taskText-container' key={index}>
@@ -395,3 +409,4 @@ const LiveEditor = () => {
 };
 
 export default LiveEditor;
+

@@ -23,6 +23,12 @@ const exercisesData = [
       desc: "Explore React, the widely-used JavaScript library designed for crafting dynamic and engaging user interfaces. Discover its core concepts such as components and state management, alongside navigating the diverse React ecosystem, empowering you to construct contemporary web applications.",
       to: "/reactlessons",
     },
+    {
+      img: "./images/live-trans.webp",
+      title: "Live React Projects",
+      desc: "Join live sessions where real-world React projects come to life. Watch as we explore websites like Freelancer and Fiverr to find exciting projects, and then build them step-by-step in real-time. Perfect for learning React in a hands-on, practical way.",
+      to: "/livelessons",
+    }
   ];
 
   export {exercisesData}

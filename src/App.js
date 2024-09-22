@@ -25,6 +25,7 @@ import Articles from "./Blog/Articles";
 import LaravelLessons from "./Exercises/LaravelLessons";
 import usePageTracking from './usePageTracking'; 
 import MobileMessage from "./Exercises/MobileMessage";
+import LiveLessons from "./Exercises/LiveLessons";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -132,6 +133,10 @@ const App = () => {
         <Route
           path='/reactlessons'
           element={isLoggedIn ? <ReactLessons /> : <Navigate to='/login' />}
+        />
+         <Route
+          path='/livelessons'
+          element={isLoggedIn ? <LiveLessons /> : <Navigate to='/login' />}
         />
         <Route
           path='/laravellessons'

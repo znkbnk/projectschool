@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import "../styles/lessons.css";
 import Navbar from "../components/Navbar";
@@ -11,8 +12,6 @@ import ReactTitle from "./ReactTitle";
 function ReactLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
-
-  // eslint-disable-next-line no-unused-vars
   const [filters, setFilters] = useState(["All", "Easy", "Hard"]);
   const numLessons = tasksData.React.length;
 
@@ -45,7 +44,7 @@ function ReactLessons() {
       </div>
       <ProgressBar
         numStages={numLessons}
-        completedTasks={getCompletedTasksCount({ lessonType: "React" })}
+        completedTasks={getCompletedTasksCount()}
       />
       <FilterSortButtons
         filters={filters}
@@ -58,8 +57,8 @@ function ReactLessons() {
           completedTasksKey='React_completedTasks'
           showEasy={showEasy}
           showHard={showHard}
-          getCompletedTasksCount={getCompletedTasksCount}
           getAuthorInfo={getAuthorInfo}
+          showDifficulty={true} // Show difficulty
         />
       </div>
       <Footer />
