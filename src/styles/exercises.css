@@ -115,6 +115,11 @@
   font-size: 5rem;
 }
 
+.space {
+  display: inline-block; /* Ensure it takes space like a letter */
+  width: 10px; /* Adjust the width as needed */
+}
+
 @media screen and (max-width: 460px) {
   .wrapper .exercises-card {
     width: 100%;

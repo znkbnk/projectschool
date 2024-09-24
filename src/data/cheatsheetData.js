@@ -277,7 +277,66 @@ const cheatsheetData = [
       },
     ],
   },
-
+  {
+    taskId: "FAQ",
+    content: [
+      {
+        title: "useState Hook",
+        subtitle: "useStat': React's useState hook is used to add state to functional components.",
+        details: [
+          "Here, 'questions' holds the state of the d'ata, and 'setQuestions' is the function used to update that state.",
+          "State is used to store information that changes over time, and it re-renders the component when updated.",
+        ],
+        image: "./cheatsheetImages/task6/1.webp"
+      },
+         {
+        title: "Mapping Over an Array",
+        subtitle: "map(): The 'map()' function loops over the questions array and renders a Question component for each element.",
+        details: [
+          "This allows dynamic rendering of multiple 'Question' components based on the 'data'.",
+          "'key={question.id}' ensures each item has a unique identifier, which is important for React’s reconciliation process to optimize rendering.",
+          "'{...question}' passes all properties of the 'question' object (like 'title' and 'info') as props to the 'Question' component.",
+        ],
+        image: "./cheatsheetImages/task6/2.webp"
+      },
+         {
+        title: "Component Props",
+        subtitle: "",
+        details: [
+          "Props are arguments passed from parent components to child components. Here, title and info are destructured from the props object.",
+          "Props allow data to be passed from the App component to each Question component.",
+        ],
+        image: "./cheatsheetImages/task6/3.webp"
+      },
+         {
+        title: "Event Handling",
+        subtitle: "onClick Event: The button listens for a click event, and when clicked, the 'setShowInfo' function toggles the value of 'showInfo' (true/false).",
+        details: [
+          "Clicking the button switches between showing (true) and hiding (false) the information.",
+          "This is a common way to toggle visibility in React using the component’s state.",
+        ],
+        image: "./cheatsheetImages/task6/4.webp"
+      },
+         {
+        title: "Conditional Rendering",
+        subtitle: "Conditional Rendering: This line conditionally renders the <p> element. If 'showInfo' is true, the paragraph containing 'info' is displayed; otherwise, it is hidden.",
+        details: [
+          "This is used to show or hide the question’s details based on the user's interaction.",
+        
+        ],
+        image: "./cheatsheetImages/task6/5.webp"
+      },
+         {
+        title: "Icons for UI Feedback",
+        subtitle: "Ternary Operator: The ? : syntax is used to display one of two icons based on the state of showInfo. If showInfo is true, it shows the 'minus' icon, otherwise it shows the 'plus' icon.",
+        details: [
+          "This provides visual feedback to the user, indicating whether the question’s details are visible or not.",
+         
+        ],
+        image: "./cheatsheetImages/task6/6.webp"
+      },
+    ],
+  },
 
 
 

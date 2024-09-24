@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap, Back } from "gsap";
 import "../styles/welcomeWord.css";
 
-const ReactTitle = () => {
+const LiveTitle = () => {
   const titleRef = useRef(null);
 
   useEffect(() => {
@@ -33,10 +33,19 @@ const ReactTitle = () => {
           <span>i</span>
           <span>v</span>
           <span>e</span>
+          <span className="space"> </span>
+          <span>P</span>
+          <span>r</span>
+          <span>o</span>
+          <span>j</span>
+          <span>e</span>
+          <span>c</span>
+          <span>t</span>
+          <span>s</span>
         </h1>
       </div>
     </div>
   );
 };
 
-export default ReactTitle;
+export default LiveTitle;
