@@ -105,14 +105,8 @@ const App = () => {
           path='/articles/:id'
           element={isLoggedIn ? <Articles /> : <Navigate to='/login' />}
         />
-        <Route
-          path='/terms'
-          element={isLoggedIn ? <Terms /> : <Navigate to='/login' />}
-        />
-        <Route
-          path='/privacy'
-          element={isLoggedIn ? <Privacy /> : <Navigate to='/login' />}
-        />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
         <Route
           path='/resetPassword'
           element={ <ResetPassword /> }
