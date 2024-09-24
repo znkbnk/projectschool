@@ -8,7 +8,7 @@ const Card = ({ img, title, desc, to }) => {
 
   // Function to check if the screen width is less than 640px
   const isMobileScreen = () => {
-    return window.innerWidth < 640;
+    return window.innerWidth < 769 ;
   };
 
   const handleStartClick = (event) => {
