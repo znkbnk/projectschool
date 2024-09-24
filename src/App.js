@@ -91,19 +91,19 @@ const App = () => {
         />
         <Route
           path='/pricing'
-          element={isLoggedIn ? <Pricing /> : <Navigate to='/login' />}
+          element={<Pricing /> }
         />
         <Route
           path='/faq'
-          element={isLoggedIn ? <Faq /> : <Navigate to='/login' />}
+          element={<Faq />}
         />
         <Route
           path='/blog'
-          element={isLoggedIn ? <Blog /> : <Navigate to='/login' />}
+          element={<Blog /> }
         />
         <Route
           path='/articles/:id'
-          element={isLoggedIn ? <Articles /> : <Navigate to='/login' />}
+          element={<Articles />}
         />
       <Route path="/terms" element={<Terms />} />
       <Route path="/privacy" element={<Privacy />} />
