@@ -12,11 +12,11 @@ const Card = ({ img, title, desc, to }) => {
   };
 
   const handleStartClick = (event) => {
-    event.preventDefault(); // Prevent default link behavior
+    event.preventDefault(); 
     if (isMobileScreen()) {
-      navigate('/mobile-message'); // Navigate to MobileMessage component if on mobile
+      navigate('/mobile-message'); 
     } else {
-      navigate(to); // Navigate to the lesson if not mobile
+      navigate(to); 
     }
   };
 

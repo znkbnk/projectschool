@@ -338,6 +338,76 @@ const cheatsheetData = [
     ],
   },
 
+  {
+    taskId: "Birthday-Reminder",
+    content: [
+      {
+        title: "",
+        subtitle: "useState Hook",
+        details: [
+          "'useState' is used to manage the state of the people array, which holds the list of individuals. 'data' is initially imported and assigned as the default value.",
+          "'setPeople([])' clears the list when the 'clear all' button is clicked.",
+        ],
+        image: "./cheatsheetImages/task7/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling",
+        details: [
+          "'onClick' is an event handler that listens for button clicks. When clicked, the state of 'people' is updated to an empty array, clearing the list.",
+        ],
+        image: "./cheatsheetImages/task7/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Rendering Components",
+        details: [
+          "The List component is responsible for displaying the filtered list of people who have birthdays today, which is calculated using BirthdayLogic.",
+        ],
+        image: "./cheatsheetImages/task7/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Date Manipulation",
+        details: [
+          "'Date' objects are used to get today's date and format it as MM-DD to compare with each person’s date of birth (DOB).",
+        ],
+        image: "./cheatsheetImages/task7/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Filtering an Array",
+        details: [
+          "The 'filter()' function is used to create a new array, 'birthdaysToday', by checking whether each person’s birthday matches today’s date.",
+        ],
+        image: "./cheatsheetImages/task7/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Props",
+        details: [
+          "The 'List' component receives 'people' as props, which contains an array of people who have birthdays today. Props allow data to be passed down from parent components (like App) to child components (like List).",
+        ],
+        image: "./cheatsheetImages/task7/6.webp"
+      },
+      {
+        title: "",
+        subtitle: "Conditional Rendering",
+        details: [
+          "Conditional rendering is used to display the list only if there are birthdays today (people.length > 0).",
+        ],
+        image: "./cheatsheetImages/task7/7.webp"
+      },
+      {
+        title: "",
+        subtitle: "Rendering a List",
+        details: [
+          "The 'map()' function iterates over the 'people' array and returns JSX for each person, which includes their 'id', 'name', 'age', and 'image'.",
+        ],
+        image: "./cheatsheetImages/task7/8.webp"
+      },
+    ],
+  },
 
 
 ];
