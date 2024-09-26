@@ -27,7 +27,7 @@ function Footer() {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <p>Term and conditions</p>
+                <p>Terms and Conditions</p>
               </Link>
               <Link
                 to='/privacy'
