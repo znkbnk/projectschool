@@ -216,7 +216,7 @@ const LiveEditor = () => {
     );
 
     if (!currentCheatsheet) {
-      toast.error("Cheatsheet not found for this task.");
+      toast.error("Cheatsheet not available for this task.");
       return;
     }
 
