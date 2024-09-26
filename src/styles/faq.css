@@ -104,3 +104,15 @@
     line-height: 20px;
   } 
 }
+
+@media only screen and (max-device-width: 768px) {
+  .headerWrapper {
+    width: 70rem;
+  }
+
+  .faq-container-answer p {
+    font-size: 20px;
+    line-height:normal;
+
+  }
+}

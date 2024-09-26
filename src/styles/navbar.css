@@ -172,6 +172,7 @@ nav img {
 
 .responsive-links.open {
   display: flex;
+  z-index: 999;
 }
 
 .responsive-links a {

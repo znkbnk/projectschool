@@ -410,6 +410,71 @@ const cheatsheetData = [
   },
 
 
+  {
+    taskId: "Dynamic-Box-Shadow-Generator",
+    content: [
+      {
+        title: "",
+        subtitle: "State Management: useState Hook",
+        details: [
+          "useState: The useState hook is used to manage component state. shadows and controls are initialized with an empty array and an initial control respectively. The setShadows and setControls functions update these states when changes occur.",
+          "shadows: Stores an array of shadow styles as strings. Each string represents one layer of a CSS box-shadow.",
+          "controls: Manages the number of ControlBox components dynamically rendered on the UI. Each control corresponds to a box shadow layer.",
+        ],
+        image: "./cheatsheetImages/task8/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Updating Box Shadows: updateShadow Function",
+        details: [
+          "If the inset property is true, the shadow string will include inset. Otherwise, it's a regular shadow.",
+          "The corresponding shadow in the shadows array is updated, and the state is set with setShadows.",
+          "s: Object representing shadow properties (x, y, blur, spread, color, and inset).",
+          "id: Index of the shadow layer being updated.",
+         
+        ],
+        image: "./cheatsheetImages/task8/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Adding New Shadow Layers: addShadow Function",
+        details: [
+          "A new control is appended to the controls array, allowing another ControlBox to render.",
+          "A blank shadow string is added to the shadows array, ready to be filled in when the user interacts with the new ControlBox.",
+        ],
+        image: "./cheatsheetImages/task8/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Undo Last Shadow Layer: undoAddLayer Function",
+        details: [
+          "Checks if there is more than one layer present.",
+          "Uses pop() to remove the last control and shadow, updating the state with setControls and setShadows.",
+        ],
+        image: "./cheatsheetImages/task8/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Dynamic Control Box Components: ControlBox",
+        details: [
+          "key={index}: React requires a key prop when rendering lists of elements to uniquely identify each component.",
+          "id={index}: The id prop is passed to identify which shadow is being updated.",
+          "updateShadow={updateShadow}: Passes the updateShadow function as a prop, allowing ControlBox to update the corresponding shadow in the parent component (App).",
+        ],
+        image: "./cheatsheetImages/task8/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling for Adding and Undoing Layers",
+        details: [
+          "The onClick event handler is used to call the respective function. addShadow adds a new shadow layer, and undoAddLayer removes the last one.",
+         
+        ],
+        image: "./cheatsheetImages/task8/6.webp"
+      },
+    ],
+  },
+
 ];
 
 export default cheatsheetData;

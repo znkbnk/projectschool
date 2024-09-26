@@ -96,3 +96,11 @@
   background-color: #333;
   color: #fff;
 }
+
+
+@media screen and (max-width: 768px) {
+  .cheatsheet-popup {
+    max-width: 500px;
+    left: 20%;
+  }
+}
