@@ -41,10 +41,17 @@
     display: inline-block;
     animation: textFloat 2s ease-in-out infinite;
     background: linear-gradient(45deg, #525252, #ffffff);
-    -webkit-background-clip: text;
+    
+    /* Vendor prefixes for background-clip */
+    -webkit-background-clip: text; /* For WebKit browsers (Safari, older Chrome) */
+    background-clip: text; /* Standard property */
+    
+    /* Text fill for transparent effect */
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  }
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
   
   @keyframes textFloat {
     0%, 100% { transform: translateY(0); }
