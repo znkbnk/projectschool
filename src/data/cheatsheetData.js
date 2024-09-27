@@ -474,6 +474,115 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Memory-Game",
+    content: [
+      {
+        title: "App Component",
+        subtitle: "State",
+        details: [
+          "useState(false) creates a 'startAgain' state, which controls when the game should reset.",
+         
+        ],
+        image: "./cheatsheetImages/task9/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Function handleStartAgain",
+        details: [
+          "When the 'Start Again' button is clicked, the 'startAgain' state is set to 'true', which triggers a reset of the game.",
+          "After 100 milliseconds, it resets to false, allowing the user to start the game again.",
+        ],
+        image: "./cheatsheetImages/task9/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Passing Props",
+        details: [
+          "The 'Cards' component is passed the 'startAgain' prop, which tells it to shuffle and reset the cards when the game restarts.",
+         
+        ],
+        image: "./cheatsheetImages/task9/3.webp"
+      },
+         {
+        title: "Card Component",
+        subtitle: "Props",
+        details: [
+          "The 'Card' component receives 3 props: item, id, and handleClick. Props are used to pass data from the 'Cards' component.",
+         
+        ],
+        image: "./cheatsheetImages/task9/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Dynamic Class",
+        details: [
+          "The card's class changes based on its status (item.stat). It can be 'correct', 'wrong', or '' (empty).",
+        
+        ],
+        image: "./cheatsheetImages/task9/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling",
+        details: [
+          "onClick={() => handleClick(id)} is an event handler that calls the 'handleClick' function from 'Cards' when a card is clicked.",
+          
+        ],
+        image: "./cheatsheetImages/task9/6.webp"
+      },
+      {
+        title: "Cards Component",
+        subtitle: "Shuffling Items",
+        details: [
+          "setItems([...items].sort(() => Math.random() - 0.5)) shuffles the card array at the beginning and when the game restarts.",
+        
+        ],
+        image: "./cheatsheetImages/task9/7.webp"
+      },
+      {
+        title: "",
+        subtitle: "useEffect for Reset",
+        details: [
+          "useEffect listens for changes in the startAgain prop. When it's true, it resets the items and previous selection.",
+         
+        ],
+        image: "./cheatsheetImages/task9/8.webp"
+      },
+      {
+        title: "",
+        subtitle: "State 'prev'",
+        details: [
+          "'prev' holds the index of the previously clicked card. If no card has been clicked, 'prev' is -1.",
+         
+        ],
+        image: "./cheatsheetImages/task9/9.webp"
+      },
+      {
+        title: "",
+        subtitle: "Matching Logic",
+        details: [
+          "The 'check' function compares the 'id' of the current card with the previous card. If they match, both are marked as 'correct', otherwise, they are temporarily marked 'wrong'.",
+          
+        ],
+        image: "./cheatsheetImages/task9/10.webp"
+      },
+      {
+        title: "",
+        subtitle: "Click Handling",
+        details: [
+          "The handleClick function controls the logic when a card is clicked. If it's the first card, its stat is set to 'active'. If it's the second card, the check function compares them.",
+         
+        ],
+        image: "./cheatsheetImages/task9/11.webp"
+      },
+    ],
+  },
+
+
+
+
+
 
 ];
 

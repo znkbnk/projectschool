@@ -1,6 +1,18 @@
 .editor-container {
   display: flex;
+}
 
+.text-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-window::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.text-window::-webkit-scrollbar-track {
+  background-color: #333;
 }
 
 .task-container {
@@ -14,6 +26,8 @@
   margin-top: 60px;
 
 }
+
+
 
 .task {
   flex: 1;
