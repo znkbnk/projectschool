@@ -581,6 +581,89 @@ const cheatsheetData = [
 
 
 
+  {
+    taskId: "Color-Generator",
+    content: [
+      {
+        title: "App Component",
+        subtitle: "Setting up State and Default Color List",
+        details: [
+          "color: Stores the user's input (the hex code).",
+          "error: Boolean state for handling invalid input.",
+          "list: Stores a list of shades generated from the input color using the 'Values' library.",
+        ],
+        image: "./cheatsheetImages/task10/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handling Form Submission and Color Generation",
+        details: [
+          "e.preventDefault(): Prevents the form from refreshing the page.",
+          "new Values(color).all(20): Uses the 'Values' library to generate a color palette with 20 variations of the input color.",
+          "setList(colors): Updates the state to hold the new color palette.",
+          "setError(true): Displays an error when an invalid color is input.",
+          "Use 'try...catch' for error handling when working with external libraries or user inputs.",
+        ],
+        image: "./cheatsheetImages/task10/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Form and User Input",
+        details: [
+          "The 'input' field captures user input for a hex color code and updates the 'color' state via 'setColor'.",
+          "The onSubmit event on the 'form' triggers the 'handleSubmit' function.",
+          "{error ? 'error' : null} conditionally adds the error class if the user enters invalid input.",
+        ],
+        image: "./cheatsheetImages/task10/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Displaying the Color List",
+        details: [
+          "The list state holds the array of colors. The map method iterates through each color, rendering the SingleColor component.",
+          "key={index}: A unique key for each item.",
+          "{...color}: Destructures and passes all color properties as props.",
+          "hexColor: Specific prop for the color's hex value."
+        ],
+        image: "./cheatsheetImages/task10/4.webp"
+      },
+         {
+        title: "SingleColor Component",
+        subtitle: "Managing Single Color Display",
+        details: [
+          "alert: State to handle when the user copies the hex value to the clipboard.",
+          "rgb.join(','): Converts the RGB array into a comma-separated string for the background color.",
+          "hexValue: The hex string of the color, prefixed with #.",
+          "The 'rgb' and 'hexColor' props are derived from the parent 'App' component and used to display and style the color.",
+        ],
+        image: "./cheatsheetImages/task10/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Clipboard Copy Functionality",
+        details: [
+          "navigator.clipboard.writeText(hexValue): Copies the hex color code to the clipboard.",
+          "setAlert(true): Displays an alert message confirming the color has been copied.",
+        ],
+        image: "./cheatsheetImages/task10/6.webp"
+      },
+      {
+        title: "",
+        subtitle: "Rendering Single Color Box",
+        details: [
+          "The className conditionally adds the color-light class for colors with a light background (based on the index).",
+          "The style prop sets the backgroundColor using the RGB values.",
+          "onClick={copyToClipboard} triggers the copyToClipboard function when the user clicks the color box.",
+         
+        ],
+        image: "./cheatsheetImages/task10/7.webp"
+      },
+    
+    ],
+  },
+
+
+
 
 
 

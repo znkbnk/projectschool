@@ -176,13 +176,7 @@ const LiveEditor = () => {
     }
   };
 
-  const handleDownloadImg = () => {
-    if (currentTask && currentTask.linkImg) {
-      window.open(currentTask.linkImg, "_blank");
-    } else {
-      toast.error("No images found for download.");
-    }
-  };
+
 
   const handleDownloadData = () => {
     if (currentTask && currentTask.linkData) {
@@ -292,11 +286,7 @@ const LiveEditor = () => {
                     Download Styles
                   </button>
                 )}
-                {currentTask?.linkImg && (
-                  <button className='button-84' onClick={handleDownloadImg}>
-                    Download Images
-                  </button>
-                )}
+               
                 {currentTask?.linkData && (
                   <button className='button-84' onClick={handleDownloadData}>
                     Download Data
