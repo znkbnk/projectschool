@@ -1,11 +1,5 @@
 .scroll-indicator {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 15px 30px;
     border-radius: 50px;
     font-family: 'Arial', sans-serif;
     font-size: 24px;
@@ -13,7 +7,6 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     z-index: 1000;
   }
   
@@ -115,9 +108,3 @@
     }
   }
   
-  @media (max-width: 768px) {
-    .scroll-indicator {
-      font-size: 20px;
-      padding: 12px 24px;
-    }
-  }
