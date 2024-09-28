@@ -1,71 +1,48 @@
-import React, { useEffect} from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import image1 from "../images/pic5.webp";
-import image2 from "../images/pic6.webp";
+import React from "react";
+import { motion } from "framer-motion";
 import image3 from "../images/pic7.webp";
-import image4 from "../images/pic7.webp";
+import image4 from "../images/pic7.webp"; // Ensure this is different from image3
 import image5 from "../images/sectionPicture2.webp";
 import "../styles/section1.css";
 import WelcomeWord from "./WelcomeWord";
-import { Link } from "react-router-dom";
 import CrazyScrollPhrase from "./CrazyScrollPhrase";
-
+import { Link } from "react-router-dom";
 
 function Section1() {
- 
+  // Define animation variants
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+  };
 
-    function animateFrom(elem, direction) {
-      direction = direction || 1;
-      var x = 0,
-        y = direction * 100;
-      if (elem.classList.contains("gs_reveal_fromLeft")) {
-        x = -100;
-        y = 0;
-      } else if (elem.classList.contains("gs_reveal_fromRight")) {
-        x = 100;
-        y = 0;
-      }
-      elem.style.transform = "translate(" + x + "px, " + y + "px)";
-      elem.style.opacity = "0";
-      gsap.fromTo(
-        elem,
-        { x: x, y: y, autoAlpha: 0 },
-        {
-          duration: 1,
-          x: 0,
-          y: 0,
-          autoAlpha: 1,
-          ease: "expo",
-          overwrite: "auto",
-        }
-      );
-    }
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 100 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
 
-    function hide(elem) {
-      gsap.set(elem, { autoAlpha: 0 });
-    }
+  const staggerContainer = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
 
-    gsap.utils.toArray(".gs_reveal").forEach(function (elem) {
-      hide(elem);
-
-      ScrollTrigger.create({
-        trigger: elem,
-        onEnter: function () {
-          animateFrom(elem);
-        },
-        onEnterBack: function () {
-          animateFrom(elem, -1);
-        },
-        onLeave: function () {
-          hide(elem);
-        },
-      });
-    });
-  }, []);
+  const parallaxEffect = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 100, damping: 30 },
+    },
+  };
 
   return (
     <div className='container'>
@@ -73,11 +50,24 @@ function Section1() {
         <WelcomeWord />
         <CrazyScrollPhrase />
       </header>
+
       <main>
-        <section className='content-section'>
-          <div className='feature  ipsGrid ipsGrid_collapsePhone'>
-            <div className='ipsGrid_span7 ipsType_right'>
-              <p>
+        <motion.section
+          className='content-section'
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: false, amount: 0.5 }} // Ensure 'once' is false
+          variants={staggerContainer}
+        >
+          <div className='feature ipsGrid ipsGrid_collapsePhone'>
+            <motion.div
+              className='ipsGrid_span7 ipsType_right'
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: false, amount: 0.5 }}
+              variants={fadeInUp}
+            >
+               <p>
                 <span>
                   Welcome to our React language upgrade school, where we focus
                   on practical learning rather than overwhelming you with
@@ -104,174 +94,127 @@ function Section1() {
                   practical and rewarding!
                 </span>
               </p>
+            </motion.div>
+
+            <motion.div
+              className='  ipsGrid_span5'
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: false, amount: 0.5 }}
+              variants={parallaxEffect}
+            >
+              <img
+                src={image5}
+                alt='Sample'
+                className='section2-image neon-flash short-circuit'
+              />
+            </motion.div>
+          </div>
+        </motion.section>
+
+        <motion.div
+          className='citate'
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: false, amount: 0.5 }}
+          variants={fadeInUp}
+        >
+          <h1 className='header-section ipsType_center'>
+            "The only way to learn a new programming language is by writing
+            programs in it." - Dennis Ritchie
+          </h1>
+        </motion.div>
+
+        <motion.div
+          className='features'
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: false, amount: 0.5 }} // Ensure 'once' is false
+          variants={staggerContainer}
+        >
+          {/* Feature 3 */}
+          <motion.div
+            className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'
+            variants={fadeInLeft}
+          >
+            <div className='  ipsGrid_span5'>
+              <img className='section1-image' src={image3} alt='' />
             </div>
-
-            <div className='featured-image-container ipsGrid_span5'>
-              <div>
-                <div className='image-container'>
-                  <img
-                    src={image5}
-                    alt='Sample'
-                    className='section2-image neon-flash short-circuit'
-                  />
-                </div>
-              </div>
+            <div className='ipsGrid_span7 ipsType_left'>
+              <h2 className='heading_large'>
+                Introduction to React and Building Components:
+              </h2>
+              <motion.ul
+                className='section1-list'
+                initial={{ opacity: 0, visibility: "hidden" }}
+                animate={{ opacity: 1, visibility: "visible" }}
+                transition={{ duration: 1 }}
+              >
+                <li>
+                  Overview of React.js and its benefits for building dynamic web
+                  applications
+                </li>
+                <li>Setting up a React development environment</li>
+                <li>Understanding React components and their lifecycle</li>
+                <li>
+                  Hands-on exercises to build basic React components and compose
+                  them into larger applications
+                </li>
+              </motion.ul>
             </div>
-          </div>
-        </section>
-      </main>
-      <div className='citate'>
-        <h1 className='header-section gs_reveal ipsType_center'>
-          "The only way to learn a new programming language is by writing
-          programs in it." - Dennis Ritchie
-        </h1>
-      </div>
-      <div className='features'>
-        <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
-          <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft'>
-            <div className='card'>
-              <div className='image-container'>
-                <img className='section1-image' src={image1} alt='' />
-              </div>
+          </motion.div>
+
+          {/* Feature 4 */}
+          <motion.div
+            className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'
+            variants={fadeInRight}
+          >
+            <div className='ipsGrid_span7 ipsType_right'>
+              <h2 className='heading_large'>
+                State Management and Interactivity with React
+              </h2>
+              <motion.ul
+                className='section1-list'
+                initial={{ opacity: 0, visibility: "hidden" }}
+                animate={{ opacity: 1, visibility: "visible" }}
+                transition={{ duration: 1 }}
+              >
+                <li>Managing state and props in React components</li>
+                <li>
+                  Handling user interactions and events in React applications
+                </li>
+                <li>
+                  Introduction to React hooks for functional component state
+                  management
+                </li>
+                <li>
+                  Hands-on exercises to create interactive user interfaces and
+                  manage application state with React
+                </li>
+              </motion.ul>
             </div>
-          </div>
-
-          <div className='ipsGrid_span7 ipsType_left'>
-            <h2 className='heading_large gs_reveal'>
-              Dynamic Web Development with JavaScript
-            </h2>
-            <ul className='gs_reveal section1-list'>
-              <li>
-                Understanding functions as first-class citizens, closures, and
-                scope.
-              </li>
-              <li>
-                {" "}
-                Interacting with the Document Object Model (DOM) to dynamically
-                update web pages.
-              </li>
-              <li>
-                Handling asynchronous operations using callbacks, Promises, and
-                async/await.
-              </li>
-              <li>
-                Exploring JavaScript's object-oriented features like classes,
-                inheritance, and prototypes.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
-          <div className='ipsGrid_span7 ipsType_right'>
-            <h2 className='heading_large gs_reveal'>
-              CSS Styling and Design <strong>Challenges:</strong>
-            </h2>
-
-            <ul className='gs_reveal section1-list'>
-              <li>Understanding CSS selectors, properties, and values</li>
-              <li>Applying CSS styles to JSX elements</li>
-              <li>
-                Creating layouts and designing responsive web pages using CSS
-              </li>
-              <li>
-                Hands-on exercises to style web pages and solve design
-                challenges
-              </li>
-            </ul>
-          </div>
-
-          <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight'>
-            <div className='card'>
-              <div className='image-container'>
-                <img className='section1-image' src={image2} alt='' />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
-          <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft'>
-            <div className='card'>
-              <div className='image-container'>
-                <img className='section1-image' src={image3} alt='' />
-              </div>
-            </div>
-          </div>
-
-          <div className='ipsGrid_span7 ipsType_left'>
-            <h2 className='heading_large gs_reveal'>
-              Introduction to React and Building Components:
-            </h2>
-            <ul className='gs_reveal section1-list'>
-              <li>
-                Overview of React.js and its benefits for building dynamic web
-                applications
-              </li>
-              <li>Setting up a React development environment</li>
-              <li>Understanding React components and their lifecycle</li>
-              <li>
-                Hands-on exercises to build basic React components and compose
-                them into larger applications
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className='feature ipsSpacer_bottom_double ipsGrid ipsGrid_collapsePhone'>
-          <div className='ipsGrid_span7 ipsType_right'>
-            <h2 className='heading_large gs_reveal'>
-              State Management and Interactivity with React
-            </h2>
-            <ul className='gs_reveal section1-list'>
-              <li>Managing state and props in React components</li>
-              <li>
-                Handling user interactions and events in React applications
-              </li>
-              <li>
-                Introduction to React hooks for functional component state
-                management
-              </li>
-              <li>
-                Hands-on exercises to create interactive user interfaces and
-                manage application state with React
-              </li>
-            </ul>
-          </div>
-
-          <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromRight'>
-            <div className='card'>
+            <div className='  ipsGrid_span5'>
               <img className='section1-image' src={image4} alt='' />
             </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h1 className='header-section gs_reveal ipsType_center'>
-          Have questions or need help?{" "}
-          <Link to='/livechat' className='section1-chat'>
-            Chat
-          </Link>{" "}
-          with us live!
-        </h1>
-      </div>
-      {/* <div>
-        <div className='slide-container'>
-          <div className='slide'>
-            <div className='slide__title'>
-              <h1 ref={titleRef}>{slides[currentSlide].title}</h1>
-            </div>
-            <div className='slide__content' ref={contentRef}>
-              <div className='slide__image'>
-                <img src={slides[currentSlide].imageSrc} alt='Slide' />
-              </div>
-              <div className='slide__content--para'>
-                {slides[currentSlide].content}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+          </motion.div>
+        </motion.div>
+
+        <motion.div
+          className='citate'
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: false, amount: 0.5 }}
+          variants={fadeInUp}
+        >
+          <h1 className='header-section ipsType_center'>
+            Have questions or need help?{" "}
+            <Link to='/livechat' className='section1-chat'>
+              Chat
+            </Link>{" "}
+            with us live!
+          </h1>
+        </motion.div>
+      </main>
     </div>
   );
 }

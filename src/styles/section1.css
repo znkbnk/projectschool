@@ -1,102 +1,134 @@
 /* Styles for sections */
+@import url("https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+:root {
+  --bg: hsl(0 0% 2%);
+  --color: hsl(0 0% 100% / 0.1);
+  --underline-width: 1lh;
+  --underline-block-width: 200vmax;
+  --underline-color: hsl(0 0% 50% / 0.15);
+  --underline-color-hover: hsl(180 100% 50% / 1);
+  --underline-transition: 5s;
+  --finish-fill: hsl(0 0% 100%);
+  --accent: hsl(0 0% 100%);
+  --fill: hsl(0 0% 50%);
+  --fill2: hsl(0, 0%, 20%);
+  --color2: hsl(0 0% 100% / 0.1);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
 
 .container {
   width: 100%;
   padding: 0;
 }
+
 .ipsType_right p {
   padding: 2rem;
 }
-.ipsType_right p span{
+
+.ipsType_right p span {
   font-size: 1.75rem;
 }
 
 .ipsType_right {
   text-align: left;
 }
+
 .ipsType_center {
   text-align: center;
 }
+
 .cInnerContent {
   max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
-  
 }
+
 .ipsSpacer_bottom_double {
   margin-bottom: 30px;
 }
+
 .ipsGrid {
-  display: inline-block;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
+
 .ipsGrid::before,
 .ipsGrid::after {
   display: table;
   content: "";
   line-height: 0;
 }
+
 .ipsGrid > [class*="ipsGrid_span"] {
   display: block;
   width: 100%;
   min-height: 30px;
   box-sizing: border-box;
 }
-.ipsGrid > .ipsGrid_span5 {
-  width: 40.42553191489362%;
-}
+
 .ipsGrid > .ipsGrid_span7 {
-  width: 57.44680851063829%;
+  width: 58%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.ipsGrid > .ipsGrid_span5 {
+  width: 40%;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-.ipsGrid > [class*="ipsGrid_span"] {
-  float: left;
-  margin-left: 2%;
-}
+
 .ipsGrid > [class*="ipsGrid_span"]:first-child {
   margin-left: 0;
 }
 
 .feature {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
-  
-  
+  position: relative;
+  margin-bottom: 2rem;
 }
+
+.content-section {
+  position: relative;
+  z-index: 1;
+  padding: 20px 0;
+}
+
 .card {
   overflow: hidden;
 }
-.featured-image-container .card {
-  height: 0;
-  padding-bottom: calc(100% - 10px);
-}
+
 h2.heading_large {
   font-size: 2em;
-
-  margin: 20px;
+  margin: 20px 0;
+  padding-left: 50px;
 }
+
 .image-container {
   width: 100%;
   height: 0;
-  padding-bottom: 100%; 
+  padding-bottom: 100%;
   position: relative;
   overflow: hidden;
 }
-.section1-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  height: 50%;
-  object-fit: contain; 
 
+.section1-image {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
 }
 
 .section2-image {
@@ -109,10 +141,7 @@ h2.heading_large {
   transform: translate(-50%, -50%) rotate(10deg);
 }
 
-
-
 .header-section {
- 
   margin: 100px auto;
 }
 
@@ -124,26 +153,37 @@ h2.heading_large {
 
 .section1-list {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
-  opacity: 0;
-  visibility: hidden;
-  will-change: transform, opacity;
+  justify-content: center;
   color: #fff;
   font-size: 1.5em;
-  padding: 10px; 
-  margin: 0 100px; 
-  word-wrap: break-word; 
+  padding: 10px;
+  margin: 0 50px;
+  word-wrap: break-word;
 }
 
 .section1-chat {
   color: #fff;
 }
+
 .section1-chat:hover {
   text-decoration: none;
 }
 
+.features {
+  animation: your-animation 1s ease-in-out forwards;
+}
+
+@keyframes your-animation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .neon-flash {
   animation: neon 1.5s ease-in-out infinite alternate,
@@ -175,28 +215,6 @@ h2.heading_large {
   6% {
     opacity: 1;
   }
-}
-@import url("https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-}
-:root {
-  --bg: hsl(0 0% 2%);
-  --color: hsl(0 0% 100% / 0.1);
-  --underline-width: 1lh;
-  --underline-block-width: 200vmax;
-  --underline-color: hsl(0 0% 50% / 0.15);
-  --underline-color-hover: hsl(180 100% 50% / 1);
-  --underline-transition: 5s;
-  --finish-fill: hsl(0 0% 100%);
-  --accent: hsl(0 0% 100%);
-  --fill: hsl(0 0% 50%);
-  --fill2: hsl(0, 0%, 20%);
-  --color2: hsl(0 0% 100% / 0.1);
 }
 
 .slide-container {
@@ -291,6 +309,7 @@ h2.heading_large {
     transform: scale(1) translateX(0);
   }
 }
+
 @keyframes fadeAnimation {
   from {
     opacity: 0;
@@ -300,17 +319,31 @@ h2.heading_large {
   }
 }
 
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  .ipsGrid {
+    flex-direction: column;
+  }
 
+  .ipsGrid > .ipsGrid_span7,
+  .ipsGrid > .ipsGrid_span5 {
+    width: 100%;
+  }
 
-@media only screen and (max-device-width: 768px) {
+  .feature {
+    flex-direction: column;
+  }
+
   .ipsType_right p {
     padding: 0;
     margin: 25px;
   }
+
   .header-section {
     padding: 2rem;
   }
-   .slide-container {
+
+  .slide-container {
     height: 80vh;
   }
 
@@ -328,9 +361,19 @@ h2.heading_large {
   .slide__content--para {
     line-height: 1.5rem;
   }
+
+  .section1-list {
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+
+  h2.heading_large {
+    font-size: 1.8em;
+    text-align: center;
+  }
 }
 
-@media only screen and (max-device-width: 640px)  {
+@media only screen and (max-width: 640px) {
   .sectionImg4 {
     height: 100%;
   }
