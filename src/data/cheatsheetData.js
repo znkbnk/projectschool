@@ -720,14 +720,82 @@ const cheatsheetData = [
         details: [
           "'PropTypes' is used to ensure the 'min', 'max', and 'onChange' props are passed correctly to the component.",
           "This provides type safety, ensuring that the correct types of data are used.",
-          "",
         ],
         image: "./cheatsheetImages/task11/6.webp"
       },
     ],
   },
+  {
+    taskId: "Form-Validation-Component",
+    content: [
+      {
+        title: "",
+        subtitle: "Setting Up the State",
+        details: [
+          "Each 'useState' call creates a state variable and a function to update that state.",
+          "Use 'useState' to manage and track form data.",
+          "Separate state for error messages and styles helps keep the form dynamic.",
+        ],
+        image: "./cheatsheetImages/task12/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Validation Logic",
+        details: [
+          "e.preventDefault() prevents the default form submission behavior.",
+          "Username must be longer than 8 characters.",
+          "Email must include @gmail.",
+          "Password must be at least 8 characters long.",
+          "Password and confirm password must match.",
+          "Use conditionals to check input validity.",
+          "Dynamically update error messages and border colors for a better user experience.",
+        ],
+        image: "./cheatsheetImages/task12/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Form JSX with Dynamic Styling",
+        details: [
+          "Each input's border color is dynamically set based on validation (userColor, emailColor, etc.).",
+          "Error messages are displayed below each input using conditional rendering (errorUserName, errorEmail, etc.).",
+          "The onChange event handler updates the respective state variable whenever the input value changes.",
+          "Use inline styles to change the border color dynamically for better visual feedback.",
+          "Render error messages conditionally to guide the user if inputs are invalid.",
 
-
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "Button Event Handler",
+        details: [
+          "Always use e.preventDefault() to stop the default form behavior if you are handling form submission via JavaScript.",
+          
+        ],
+        image: "./cheatsheetImages/task12/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+    ],
+  },
 
 
 
