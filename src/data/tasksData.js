@@ -308,6 +308,298 @@ const tasksData = {
       link: "pathStyles",
       videoLink: "",
     },
+
+
+    {
+      taskId: "Interactive-Power-BI-Bar-Chart",
+      taskTitle: "Interactive Power BI Bar Chart",
+      introduction: "This project involves creating an interactive Power BI-style bar chart visual using React.js and Chart.js, where user data is segmented by age group. The bar chart will include cross-filtering functionality, allowing users to click on any bar to filter the dataset by the corresponding age group, dynamically updating the chart in response.",
+      task: {
+        taskDescription: "I'm looking for a skilled developer to create an interactive Power BI bar chart visual using React.js. The project will focus on displaying user data, specifically segmented by age group.",
+        platform: 'Freelancer',
+        requirements: [
+        "Display user data segmented by age group in a bar chart.",
+        "Enable users to click on bars to filter data by the selected age group.",
+       "Properly categorize and display user counts for different age groups (e.g., 18-24, 25-34, etc.).",
+       "Ensure the chart dynamically updates when a bar is clicked and reflects filtered results.",
+       "Create a responsive and intuitive chart interface for easy interaction.",
+
+       
+      ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up a React Application",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "Ensure Node.js is installed on your machine. You can download it from nodejs.org.",
+              "Open your terminal/command prompt and run the following command to create a new React project: 'npx create-react-app powerbi-bar-chart'",
+              "Once the project is created, navigate into your project folder: 'cd powerbi-bar-chart'",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Install Required Libraries",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Install 'react-chartjs-2' and 'chart.js': These libraries will help you implement the bar chart. Install them using npm: 'npm install react-chartjs-2 chart.js'",
+              "After installation, check package.json to ensure both react-chartjs-2 and chart.js are listed under dependencies.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Prepare the Data for the Bar Chart",
+          titleDescription: "Before you visualize anything, determine where your user data is coming from. In this case, you'll likely have an array of user information with age values. If the data comes from an API, think about how you'll fetch it and structure it. If you're using mock data, make sure it represents actual user distribution across age groups.",
+          sections: [
+            {
+              subtitleDescription: "Segment Users by Age Group",
+            descriptions: [ 
+              "Identify your age groups. Common segments might be 18-24, 25-34, 35-44, 45-54, 55-64, and 65+.",
+              "For each age group, count how many users fall within that range. If the data comes from an API, you'll need to process this by iterating over the data and sorting users into these groups.",
+              ],
+            },
+            {
+              subtitleDescription: "Prepare Data for the Chart",
+             descriptions: [ 
+              "Your chart will need two main pieces of information: the labels (which will be the age groups) and the data (which is the count of users in each age group).",
+              "Organize your data so that for each label (age group), you have a corresponding data point (user count). The structure of your data must be clear before you start setting up the chart.",
+              ],
+            },
+            {
+              subtitleDescription: "Plan Data Filtering",
+            descriptions: [ 
+              "You'll need to filter user data based on interactions with the chart (i.e., clicking on a bar). Think about how the click action will filter the data.",
+              "For each age group clicked, all other data points should either be hidden or grayed out, showing only the selected group.",
+              ],
+            },
+            {
+              subtitleDescription: "Mock Your Data (if necessary)",
+            descriptions: [ 
+              "If you don't have real data yet, prepare a mock dataset of users segmented by age groups. For testing, you can create static arrays representing user counts in each age group.",
+            
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Configure Chart.js in React",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Understand How Chart.js Works",
+            descriptions: [ 
+              "Chart.js is a JavaScript library that generates charts using HTML <canvas>. Since you are using React, you'll use react-chartjs-2, a wrapper around Chart.js to work natively with React components.",
+              "In a bar chart, you need to configure both the axes (X-axis for age groups, Y-axis for user counts) and the bars (each representing the user count for the corresponding age group).",
+              ],
+            },
+            {
+              subtitleDescription: "Install and Register Chart.js Components",
+             descriptions: [ 
+               "The bar chart will rely on specific Chart.js components such as scales (for the X and Y axes), tooltips (for showing data when hovering over bars), and bar elements (for the bars themselves).",
+                "You will need to register these components in your React project to ensure that Chart.js knows what type of chart you are building and how to render it.",
+              ],
+            },
+            {
+              subtitleDescription: "Define the Chart Layout",
+             descriptions: [ 
+               "You will need to define the layout for your chart. This includes labels (age groups), datasets (user counts), and styling options (like bar color, size, and spacing).",
+                "Plan how your chart will look.",
+                "What will the X-axis represent? (In this case, age groups.)",
+                "What will the Y-axis represent? (In this case, user counts.)",
+                "How will you style the bars? Think about the default color scheme for unfiltered data, and another scheme for filtered data.",
+                "Do you want to show grid lines, tooltips, or a legend? These features add interactivity but can also be optional depending on your design.",
+              ],
+            },
+            {
+              subtitleDescription: "Plan Event Handling for Clicks",
+             descriptions: [ 
+               "Each bar in the chart should be clickable, which will trigger the filtering of data.",
+                "When a bar is clicked, determine how you will capture which bar was clicked (using Chart.js's event system).",
+                "Define how you'll filter the dataset based on the clicked bar.",
+                "Ensure that clicking a bar dynamically updates the visual to show the filtered data.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Set Up Chart Options",
+             descriptions: [ 
+               "Plan how you will configure options",
+                "Responsiveness: Your chart should resize properly on different screen sizes.",
+                "Animations: Decide if you want animations when rendering the chart or updating it.",
+                "Interactions: Will you display tooltips or change the appearance when the user hovers over a bar?",
+                "Click Handling: Ensure the chart handles click events effectively to trigger the filtering.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Implement State Management for Filtering",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Determine How to Manage State",
+             descriptions: [ 
+               "You'll need to manage two main pieces of state.",
+                "The initial dataset: This represents all users across all age groups.",
+                "The filtered dataset: This will update dynamically when a user clicks on a bar to filter data for the selected age group.",
+                "Think about how you will set up the initial state. In React, you can manage state using the useState hook. You'll want to set the initial dataset in state and then allow it to update dynamically when the user interacts with the chart.",
+
+              ],
+            },
+            {
+              subtitleDescription: "Plan the Click Event Handler",
+             descriptions: [ 
+               "When the user clicks on a bar, the click handler will: capture the index of the clicked bar. Chart.js provides an event object that you can use to identify which bar was clicked (based on its index).",
+                "Use the index to find the corresponding age group.",
+                "Filter the data: You'll need to update the dataset, setting all other age groups to zero (or hide them entirely), while showing only the data for the clicked age group.",
+                "Update the state with the new, filtered dataset.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Handle the Chart Update",
+             descriptions: [ 
+               "Once the state updates with the filtered data, the chart will need to re-render to reflect the changes. In React, this happens automatically when state changes, so you don't have to worry about manually re-rendering the chart.",
+                "Ensure that the chart re-renders smoothly without losing the interactive capabilities (e.g., further clicks on different bars should continue to update the chart).",
+              ],
+            },
+            {
+              subtitleDescription: "Decide What Happens After Filtering",
+             descriptions: [ 
+               "After filtering, do you want to allow the user to reset the chart to show all data again? If yes, plan how the user will reset the filter (e.g., clicking outside the chart or providing a 'Reset' button).",
+                "You might also want to think about what happens if the user clicks the same bar twice. Will this re-apply the filter, or will it remove the filter and show the full dataset again?",
+              ],
+            },
+            {
+              subtitleDescription: "Test the Filtered State",
+             descriptions: [ 
+               "Click multiple bars to ensure only one age group is highlighted at a time.",
+                "Ensure that the filtering works correctly across all age groups.",
+                "Handle edge cases like clicking on the same bar repeatedly or trying to click outside the chart.",
+              ],
+            },
+            {
+              subtitleDescription: "Optimize for Performance",
+             descriptions: [ 
+               "If your dataset is large, consider optimizing the way the chart updates. This could involve reducing unnecessary re-renders or simplifying the state changes when the user interacts with the chart.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: Style the Chart",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Choose Colors for the Bars",
+             descriptions: [ 
+               "You can define two sets of colors—one for unfiltered data and another for filtered data. Decide how the bars will look when they are clicked and filtered.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Ensure Responsiveness",
+              descriptions: [ 
+               "Plan for making the chart responsive so that it adjusts to different screen sizes, providing a seamless user experience.",
+               
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 7: Test the Application",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Run Your App",
+             descriptions: [ 
+               "In your terminal, run the React app using: 'npm start'",
+               "This will start a local development server and open your app in the browser."
+              ],
+            },
+            {
+              subtitleDescription: "Test the Chart",
+              descriptions: [ 
+               "Click on different bars and ensure that the data filters correctly based on the age group selected. Check the console (DevTools) for any errors.",
+                
+              ],
+            },
+            
+          ],
+        },
+         {
+          stepTitle: "Step 8: Refine and Optimize",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Handle Edge Cases",
+             descriptions: [ 
+               "What happens if a user clicks the same bar multiple times?",
+                "Should the user be able to reset the filter and see the full dataset again? Plan for how this might work.",
+              ],
+            },
+            {
+              subtitleDescription: "Optimize Rendering",
+             descriptions: [ 
+               "If the chart becomes complex or data-heavy, consider optimizing the rendering process to ensure smooth performance.",
+                
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 9: Integrate with Power BI (Optional)",
+          titleDescription: "If you plan to embed this React app in Power BI or integrate it into a Power BI report.",
+          sections: [
+            {
+              subtitleDescription: "Set Up Power BI Embedded",
+             descriptions: [ 
+               "Use Microsoft Power BI Embedded SDK to embed your React app into Power BI.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Configure Cross-Filtering with Power BI",
+             descriptions: [ 
+               "Plan how you will handle cross-filtering across other visuals in Power BI using JavaScript.",
+              
+              ],
+            },
+          ],
+        },
+        
+       
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/jf4vrt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/livelessons1.webp"),
+      videoLink: "",
+    },
+
+
+   
+
+
+
+
+
   ],
   React: [
     {
@@ -10329,7 +10621,7 @@ React: [
               descriptions: [
                 "",
                 "",
-                ""
+                "",
               ],
             },
             {
@@ -10337,7 +10629,7 @@ React: [
               descriptions: [
                 "",
                 "",
-                ""
+                "",
               ],
             },
           ],
@@ -10395,3 +10687,325 @@ React: [
 
   
   */
+
+
+
+
+/*   
+Live lessons
+
+     {
+      taskId: "LiveTasks",
+      taskTitle: "",
+      introduction: "",
+      task: {
+        taskDescription: "",
+        platform: 'Freelancer',
+        requirements: [
+            "",
+                "",
+                "",
+       
+      ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 2: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 3: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 8: ",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 9: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 10: ",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+       
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/jxrtvq?view=editor&hidenavigation=1&runonclick=1",
+      img: require("../images/livelessons.webp"),
+      link: "pathStyles",
+      videoLink: "",
+    },
+
+
+
+*/
