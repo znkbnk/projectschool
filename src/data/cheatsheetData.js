@@ -774,25 +774,77 @@ const cheatsheetData = [
         ],
         image: "./cheatsheetImages/task12/3.webp"
       },
-         {
+         
+    ],
+  },
+  {
+    taskId: "Interactive-Power-BI-Bar-Chart",
+    content: [
+      {
         title: "",
-        subtitle: "",
+        subtitle: "Imports and Setup",
         details: [
-          "",
-          "",
-          "",
+          "'useState' from React is used to manage state in functional components.",
+          "The 'Bar' component from 'react-chartjs-2' is used to create a bar chart.",
+          "The necessary components from Chart.js are imported and registered to ensure the chart functions correctly.",
+          "Always register Chart.js components like 'CategoryScale', 'LinearScale', 'BarElement', 'Tooltip', and 'Legend' before using them in a React component.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/taskLive2/1.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "State and Initial Data",
         details: [
-          "",
-          "",
-          "",
+          "'ageGroups': An array of age group labels for the x-axis of the bar chart.",
+          "'userData': An array representing the number of users for each age group.",
+          "'useState(null)': 'filteredData' is used to manage the filtered version of the user data. Initially, it's set to 'null' because no filtering is applied when the page first loads.",
+          
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/taskLive2/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Chart Data Setup",
+        details: [
+          "'labels': The x-axis labels representing the age groups.",
+          "'datasets': This array defines the dataset for the chart. The 'data' property represents the number of users for each age group.",
+          "'backgroundColor' and 'borderColor': Define the color scheme for the bars.",
+          "'borderWidth': Defines the thickness of the bar borders.",
+          "The 'data' object is the main configuration for Chart.js, allowing you to customize labels, datasets, and styles.",
+        ],
+        image: "./cheatsheetImages/taskLive2/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Chart Options with Event Handling",
+        details: [
+          "'responsive': Ensures the chart adapts to the size of its container.",
+          "'plugins.legend.display': Controls whether the legend (key) is displayed.",
+          "'onClick': Event handler that captures clicks on a specific bar. It retrieves the index of the clicked bar and uses that to determine which age group was selected.",
+          "'handleBarClick': Called when a bar is clicked to apply filtering.",
+
+        ],
+        image: "./cheatsheetImages/taskLive2/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handle Bar Click for Filtering",
+        details: [
+          "'handleBarClick': This function filters the user data based on the selected age group. It loops through the original 'userData' and sets all values to 0 except for the selected age group.",
+          "'setFilteredData': Updates the chart with the filtered data, changing the dataset to show only the selected age group in a different color.",
+          "You can use 'map' to transform arrays and conditionally filter data. This is useful when dynamically updating charts or UI elements based on user input.",
+        ],
+        image: "./cheatsheetImages/taskLive2/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Return JSX with Chart",
+        details: [
+          "The 'Bar' component from 'react-chartjs-2' is rendered here, displaying the bar chart. If 'filteredData' is available, the chart will show the filtered dataset; otherwise, it defaults to the original dataset (data).",
+          "The chart also uses the 'options' for customization and event handling.",
+          "Use conditional rendering (filteredData || data) to ensure your chart displays the correct data, whether it's the original or filtered version.",
+        ],
+        image: "./cheatsheetImages/taskLive2/6.webp"
       },
     ],
   },
@@ -876,3 +928,6 @@ export default cheatsheetData;
 
 
   */
+
+
+    
