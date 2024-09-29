@@ -663,6 +663,71 @@ const cheatsheetData = [
   },
 
 
+  {
+    taskId: "Range-Slider",
+    content: [
+      {
+        title: "",
+        subtitle: " State Management with useState Hook",
+        details: [
+          "'useState' is used to manage the state of 'minVal' (left slider) and 'maxVal' (right slider).",
+          "Initial state values are set to the 'min' and 'max' props.",
+          "'setMinVal' and 'setMaxVal' are used to update the state whenever the slider values change.",
+        ],
+        image: "./cheatsheetImages/task11/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Refs for Direct DOM Manipulation",
+        details: [
+          "'useRef' is used to directly access and manipulate DOM elements ('leftval', 'rightval', and 'range').",
+          "This allows us to move the sliders dynamically by changing their position in the DOM without causing a full re-render of the component.",
+        ],
+        image: "./cheatsheetImages/task11/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handling Slider Changes",
+        details: [
+          "<input type='range' />: This creates a slider input. The 'min', 'max', and 'value' attributes control the range limits and current value.",
+          "When the slider is moved, the 'onChange' event updates 'minVal' or 'maxVal' using the 'setMinVal' or 'setMaxVal' functions.",
+          "The 'Math.min' and 'Math.max' methods ensure that the sliders don't cross over each other by limiting their values.",
+        ],
+        image: "./cheatsheetImages/task11/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Dynamic CSS with useEffect",
+        details: [
+          "'useEffect' is used to update the slider's CSS based on changes to 'minVal' and 'maxVal'.",
+          "The position (left) and the transform properties are dynamically set on the sliders (leftval, rightval) based on the current values.",
+          "This ensures the sliders visually move as the user interacts with them.",
+        ],
+        image: "./cheatsheetImages/task11/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "'useCallback' to Optimize Performance",
+        details: [
+          "useCallback memoizes the getPercent function to avoid recalculating the percentage every time the component renders.",
+          "This is useful for performance optimization when the same function is used multiple times within useEffect.",
+        ],
+        image: "./cheatsheetImages/task11/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "'PropTypes' for Type Checking",
+        details: [
+          "'PropTypes' is used to ensure the 'min', 'max', and 'onChange' props are passed correctly to the component.",
+          "This provides type safety, ensuring that the correct types of data are used.",
+          "",
+        ],
+        image: "./cheatsheetImages/task11/6.webp"
+      },
+    ],
+  },
+
+
 
 
 
