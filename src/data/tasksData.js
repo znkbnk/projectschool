@@ -589,7 +589,7 @@ const tasksData = {
       prerequisites: ["Live Projects"],
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/jf4vrt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
-      img: require("../images/livelessons1.webp"),
+      img: require("../images/livelessons2.webp"),
       videoLink: "",
     },
 
