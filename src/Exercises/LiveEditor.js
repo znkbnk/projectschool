@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { tasksData } from "../data/tasksData";
@@ -26,6 +26,7 @@ const LiveEditor = () => {
   const [cheatsheetContent, setCheatsheetContent] = useState(null);
 
   const navigate = useNavigate();
+  const taskContainerRef = useRef(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -106,6 +107,12 @@ const LiveEditor = () => {
   useEffect(() => {
     localStorage.setItem(taskId, JSON.stringify(checkboxStates));
   }, [taskId, checkboxStates]);
+
+  useEffect(() => {
+    if (taskContainerRef.current) {
+      taskContainerRef.current.scrollTop = 0;
+    }
+  }, [taskId]);
 
   const handleNext = () => {
     if (
@@ -226,7 +233,7 @@ const LiveEditor = () => {
     <div>
       <Navbar />
       <div className='editor-container'>
-        <div className='task-container'>
+        <div className='task-container' ref={taskContainerRef}>
           <div className='task'>
             <div className='text-window'>
               <h1>{currentTask?.taskTitle}</h1>
