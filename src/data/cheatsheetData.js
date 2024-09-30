@@ -763,7 +763,6 @@ const cheatsheetData = [
           "Render error messages conditionally to guide the user if inputs are invalid.",
 
         ],
-        image: "./cheatsheetImages/task/.webp"
       },
          {
         title: "",
