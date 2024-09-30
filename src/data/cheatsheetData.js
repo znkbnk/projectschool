@@ -848,6 +848,263 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Markdown-Preview-App",
+    content: [
+      {
+        title: "",
+        subtitle: "State Management with useState",
+        details: [
+          "'useState': This is a React hook used to manage state in functional components.",
+          "'markdown': This is the state variable that holds the current value of the markdown text.",
+          "'setMarkdown': This is the function used to update the value of 'markdown'.",
+          "'# Markdown Preview:': The initial value for the 'markdown' state.",
+          "The state helps React components to keep track of data between renders. When 'setMarkdown' is called, it updates the markd'own value and re-renders the component."
+        ],
+        image: "./cheatsheetImages/task13/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handling User Input (textarea)",
+        details: [
+          "<textarea>: HTML element where the user can type their markdown text.",
+          "value={markdown}: Links the value of the textarea to the 'markdown' state, so the content of the textarea reflects the current state.",
+          "onChange={(e) => setMarkdown(e.target.value)}: This is an event handler that listens for user input. It triggers when the user types, capturing the new value with 'e.target.value' and updating the 'markdown' state.",
+          "Event Handling in React involves passing a function to handle the user interaction (e.g., typing, clicking). The 'onChange' event is used to handle form inputs like 'textarea'.",
+        ],
+        image: "./cheatsheetImages/task13/2.webp"
+      },
+        
+    ],
+  },
+  {
+    taskId: "Menu-App",
+    content: [
+      {
+        title: "App Component",
+        subtitle: "State",
+        details: [
+          "'menuItems': Holds the list of items to be displayed.",
+          "'categories': Stores all the unique categories from 'items' plus 'all'.",
+          "The useState hook is used to manage the state of the menuItems and categories."
+        ],
+        image: "./cheatsheetImages/task14/1.webp"
+      },
+         {
+        title: "Event Handling",
+        subtitle: "",
+        details: [
+          " The filterItems function filters the items based on the selected category.",
+          "When the category is 'all', it resets menuItems to the entire items array. Otherwise, it filters items by category.",
+        ],
+        image: "./cheatsheetImages/task14/2.webp"
+      },
+      {
+        title: "Categories Component",
+        subtitle: "Props",
+        details: [
+          "The Categories component accepts categories (array of categories) and filterItems (function to filter menu items) as props.",
+        ],
+        image: "./cheatsheetImages/task14/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "State",
+        details: [
+          "Manages the currently active category using useState.",
+        ],
+        image: "./cheatsheetImages/task14/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling",
+        details: [
+          "The handleCategoryClick function is called when a category button is clicked.",
+          "This function triggers the 'filterItems' function from 'App' to update the list of menu items and sets the clicked category as the active one.",
+        ],
+        image: "./cheatsheetImages/task14/4.webp"
+      },
+      
+         {
+        title: "",
+        subtitle: "Conditional Styling",
+        details: [
+          "Adds the 'active' class to the button of the currently selected category.",
+        ],
+        image: "./cheatsheetImages/task14/6.webp"
+      },
+      {
+        title: "Menu Component",
+        subtitle: "Props",
+        details: [
+          "The Menu component receives items as props, which is an array of menu items.",
+         
+        ],
+        image: "./cheatsheetImages/task14/7.webp"
+      },
+      {
+        title: "",
+        subtitle: "Rendering Items",
+        details: [
+          " It uses the .map() method to loop through the 'items' array and display each menu item in a structured format.",
+          "Menu item properties like 'id', 'title', 'img', 'desc', and 'price' are destructured for easier use within the JSX."
+          
+        ],
+        image: "./cheatsheetImages/task14/8.webp"
+      },
+     
+    ],
+  },
+  {
+    taskId: "Responsive-Navbar",
+    content: [
+      {
+        title: "",
+        subtitle: "State Management: useState Hook",
+        details: [
+          "Initializes a state variable 'showLinks' to control whether the navigation links are displayed or not.",
+          "'useState' is used to declare a piece of state in functional components.",
+          "'showLinks' holds the current state (either 'true' or 'false').",
+          "'setShowLinks' is the function used to update the state.",
+          "'useState(false)' means the links will initially be hidden.",
+        ],
+        image: "./cheatsheetImages/task15/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "References: useRef Hook",
+        details: [
+          "'linksContainerRef' and 'linksRef' are references to DOM elements (<div> and <ul> respectively).",
+          "'useRef' allows you to directly interact with DOM elements without re-rendering the component.",
+          "'useRef' is commonly used when you need direct access to a DOM element.",
+          "It's helpful for manipulating element styles or sizes.",
+          "The 'useRef' doesn't cause re-renders when its value is changed.",
+        ],
+        image: "./cheatsheetImages/task15/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling: toggleLinks Function",
+        details: [
+          "Toggles the state of 'showLinks' between 'true' and 'false' when the menu icon is clicked.",
+          "Event handling in React involves creating functions like 'toggleLinks' and assigning them to event listeners (e.g., 'onClick').",
+          "Inverting the state with '!showLinks' ensures that every click changes the visibility of the links.",
+        ],
+        image: "./cheatsheetImages/task15/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Side Effects: useEffect Hook",
+        details: [
+          "Calculates the height of the 'linksRef' (<ul> element) and dynamically sets the height of the 'linksContainerRef' (<div> element) based on whether the links are visible or not.",
+          "'useEffect' is used to perform side effects like DOM manipulation after the component has rendered.",
+          "The 'useEffect' runs every time 'showLinks' changes, adjusting the height of the container.",
+          "Without this, the height transition for the links container would be static or fixed."
+        ],
+        image: "./cheatsheetImages/task15/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Rendering the JSX Elements",
+        details: [
+          "Renders a button with an event handler attached to toggle the links when clicked. The 'FaBars' component represents the menu icon.",
+          "React components like 'FaBars' from 'react-icons' are reusable pieces of UI, in this case, an icon.",
+          "The 'onClick' event triggers the 'toggleLinks' function to show or hide the navigation links.",
+          "Use components from libraries like 'react-icons' for scalable and lightweight icons.",
+        ],
+        image: "./cheatsheetImages/task15/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Rendering the Links",
+        details: [
+          "Renders a list of navigation links dynamically by mapping over the 'links' array.",
+          "In React, you can render lists using 'map()' to dynamically create elements based on data.",
+          "Each child in a list must have a unique 'key' prop ('id' in this case) to help React optimize rendering.",
+          "Use the 'map()' function to easily render multiple elements from an array.",
+        ],
+        image: "./cheatsheetImages/task15/6.webp"
+      },
+    ],
+  },
+  {
+    taskId: "Pagination-Page",
+    content: [
+      {
+        title: "App.js",
+        subtitle: "State Management",
+        details: [
+          "Manage the app's current state, including the current page and followers.",
+          "'useState': Initializes state variables 'page' (current page number) and 'followers' (list of followers to display on the current page).",
+        ],
+        image: "./cheatsheetImages/task16/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "useEffect Hook",
+        details: [
+          "Trigger side effects (e.g., updating followers) when data or page changes.",
+          "'useEffect': Runs when 'data', 'loading', or 'page' changes, updating the list of followers for the current page.",
+          "",
+        ],
+        image: "./cheatsheetImages/task16/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling",
+        details: [
+          "Navigate between pages and jump to a specific page.",
+          "'nextPage': Advances to the next page, looping back to the first if at the end.",
+          "'prevPage': Goes to the previous page, looping to the last if at the first.",
+          "'handlePage': Jumps to a specific page number.",
+        ],
+        image: "./cheatsheetImages/task16/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Rendering Followers",
+        details: [
+          "Display followers for the current page.",
+          "Renders a list of followers by passing follower data to the Follower component for display.",
+        ],
+        image: "./cheatsheetImages/task16/4.webp"
+      },
+         {
+        title: "Follower.js",
+        subtitle: "Follower Component",
+        details: [
+          "Display a single follower's information.",
+          "Receives props (avatar_url, login, html_url) and displays the follower's avatar, username, and profile link.",
+          "",
+        ],
+        image: "./cheatsheetImages/task16/5.webp"
+      },
+         {
+        title: "useFetch.js",
+        subtitle: "Custom Hook",
+        details: [
+          "Fetch follower data from the GitHub API and paginate it.",
+          "'loading': Tracks whether data is still being fetched.",
+          "'data': Stores paginated follower data.",
+          "'getProducts': Fetches the follower data and applies pagination.",
+          "'useEffect': Ensures getProducts runs when the component mounts.",
+        ],
+        image: "./cheatsheetImages/task16/6.webp"
+      },
+      {
+        title: "utils.js",
+        subtitle: "Pagination Logic",
+        details: [
+          "Paginate the followers into smaller chunks for each page.",
+          "Breaks the follower data into smaller arrays, each representing a page with 10 followers.",
+          "",
+        ],
+        image: "./cheatsheetImages/task16/7.webp"
+      },
+    
+    ],
+  },
+
 
 
 
