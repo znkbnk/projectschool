@@ -233,9 +233,9 @@ const LiveEditor = () => {
     <div>
       <Navbar />
       <div className='editor-container'>
-        <div className='task-container' ref={taskContainerRef}>
+        <div className='task-container' >
           <div className='task'>
-            <div className='text-window'>
+            <div className='text-window' ref={taskContainerRef}>
               <h1>{currentTask?.taskTitle}</h1>
               {currentTask?.task &&
                 Object.keys(currentTask.task).length > 0 && (
