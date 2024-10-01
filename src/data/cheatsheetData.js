@@ -1104,6 +1104,111 @@ const cheatsheetData = [
     ],
   },
 
+  {
+    taskId: "Search-Bar",
+    content: [
+      {
+        title: "App Component",
+        subtitle: "Initializing State",
+        details: [
+          "Initializes an empty array 'results' to store search results.",
+          "State is used to store and manage dynamic data (the search results in this case).",
+          "Think of 'useState' as a way to make the UI react to changes in data. When 'results' change, the UI will update accordingly.",
+        ],
+        image: "./cheatsheetImages/task17/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Conditional Rendering of Results",
+        details: [
+          "This checks if there are any results before rendering the 'SearchResultsList' component.",
+          "Prevents rendering the list if no search results exist.",
+          "Conditional rendering is useful when you only want to display certain parts of the UI based on specific conditions (e.g., results existing or not).",
+        ],
+        image: "./cheatsheetImages/task17/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Passing Props to Child Components",
+        details: [
+          "Passes the setResults function as a prop to the SearchBar component.",
+          "This allows the SearchBar component to update the search results in the parent component (App).",
+          "Props allow parent-child communication in React. You can pass functions or data from a parent to a child to handle logic outside the child component.",
+        ],
+        image: "./cheatsheetImages/task17/3.webp"
+      },
+         {
+        title: "SearchBar Component",
+        subtitle: "Handling Input State",
+        details: [
+          "input stores the value typed by the user into the search bar.",
+          "setInput updates the input value when the user types.",
+          "State management is essential for handling user input dynamically.",
+        ],
+        image: "./cheatsheetImages/task17/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Fetching Data Based on User Input",
+        details: [
+          "Fetches user data from an API and filters it based on the 'value' typed by the user.",
+          "Retrieves user data that matches the search query.",
+          "This is a basic example of fetching data asynchronously and updating the UI based on user input.",
+        ],
+        image: "./cheatsheetImages/task17/5.webp"
+      },
+      {
+        title: "",
+        subtitle: "Handling User Typing (Input Change)",
+        details: [
+          "Updates the input value and triggers the 'fetchData' function to search for matching users.",
+          "To fetch data dynamically as the user types.",
+          "'handleChange' is an event handler that allows dynamic interaction with the search input.",
+        ],
+        image: "./cheatsheetImages/task17/6.webp"
+      }, 
+      {
+        title: "",
+        subtitle: "Handling Selection",
+        details: [
+          "Sets the selected result, hides the search results, and clears the search input.",
+          "To update the state when a user selects a result and reset the search bar.",
+          "This function manages the flow after the user has clicked on a search result, updating the app state and UI accordingly.",
+        ],
+        image: "./cheatsheetImages/task17/8.webp"
+      },
+      {
+        title: "",
+        subtitle: "Conditionally Displaying Selected Result",
+        details: [
+          "Conditionally renders the selected result's details only if a result has been selected.",
+          "To display the selected user's information dynamically.",
+          "This is another example of conditional rendering, which is essential when handling dynamic data.",
+        ],
+        image: "./cheatsheetImages/task17/9.webp"
+      }, 
+      
+      {
+        title: "SearchResult Component",
+        subtitle: "Displaying Each User Result",
+        details: [
+          "Displays the name of a user and calls the 'onSelect' function when clicked.",
+          "To display a search result and allow the user to select it.",
+          "Using the 'onClick' event, we can detect when a user selects a search result and handle the selection.",
+        ],
+        image: "./cheatsheetImages/task17/7.webp"
+      },   {
+        title: "SearchResultsList Component",
+        subtitle: "Rendering the List of Results",
+        details: [
+          "Iterates over the 'results' array and renders a 'SearchResult' component for each user.",
+          "To render each user result as an individual clickable item.",
+          "Always use 'key' props when rendering lists in React to ensure each item is uniquely identified by React for performance optimization.",
+        ],
+        image: "./cheatsheetImages/task17/10.webp"
+      },
+    ],
+  },
 
 
 
