@@ -1209,6 +1209,87 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Dropdown",
+    content: [
+      {
+        title: "",
+        subtitle: "Setting Up State with useState",
+        details: [
+          "'isOpenSelect' is a state variable that tracks whether the dropdown options are visible.",
+          "'setIsOpenSelect' is the function used to update 'isOpenSelect'.",
+          "'useState(false)' initializes the dropdown as closed (false).",
+          "You can toggle the dropdown's visibility by updating the state ('true' for open, 'false' for closed).",
+        ],
+        image: "./cheatsheetImages/task18/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Using useRef for Uncontrolled Input",
+        details: [
+          "'languageInput' is a ref that directly references the DOM element (<input>).",
+          "Refs are useful when you want to access or manipulate DOM elements without triggering a re-render.",
+          "'useRef' is ideal for situations like focusing an input field, or in this case, updating the input value without using state.",
+        ],
+        image: "./cheatsheetImages/task18/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handling Input Click Event to Toggle Dropdown",
+        details: [
+          "The input field is used to display the selected language.",
+          "'onClick={toggleOptions}' triggers the dropdown to open or close when clicked.",
+          "'onBlur={() => setIsOpenSelect(false)}' closes the dropdown when the input loses focus.",
+          "'ref={languageInput}' associates the 'input' with the 'useRef' created earlier.",
+          "The 'readOnly' attribute prevents the user from typing directly into the input field.",
+          "Use 'onBlur' to close the dropdown when clicking outside of the input field.",
+        ],
+        image: "./cheatsheetImages/task18/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Toggling Dropdown Options Visibility",
+        details: [
+          "This function toggles the state between 'true' and 'false', effectively opening or closing the dropdown.",
+          "Use '!isOpenSelect' to switch between the current state ('true' or 'false').",
+        ],
+        image: "./cheatsheetImages/task18/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Rendering the Dropdown Options Conditionally",
+        details: [
+          "The dropdown list is shown conditionally based on the value of 'isOpenSelect'. If 'true', the 'options' class receives the 'active' class, making the options visible.",
+          "'optionsArray' is an array of languages that is mapped to a list of <li> elements.",
+          "Each list item triggers the 'selectLanguage' function when clicked, updating the input value.",
+          "Use '.map()' to dynamically render a list of items. Attach event listeners (onClick) to handle user interactions.",
+        ],
+        image: "./cheatsheetImages/task18/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Selecting a Language and Updating the Input",
+        details: [
+          "When an option is clicked, 'e.target.textContent' retrieves the text of the clicked <li> element (the language name).",
+          "'languageInput.current.value' sets the input field's value to the selected language.",
+          "'setIsOpenSelect(false)' closes the dropdown after selection.",
+          "Use 'e.target.textContent' to capture the text of the clicked option.",
+        ],
+        image: "./cheatsheetImages/task18/6.webp"
+      },
+      {
+        title: "",
+        subtitle: "Icon Toggling with Conditional Class",
+        details: [
+          "The <span> contains an icon (faCaretDown) from FontAwesome, which serves as a visual cue for the dropdown.",
+          "The 'className' changes based on the 'isOpenSelect' state. When 'active', the icon rotates or changes styling to indicate the dropdown is open.",
+          "Use conditional classes to style elements based on component state (e.g., for rotating the caret icon).",
+        ],
+        image: "./cheatsheetImages/task18/7.webp"
+      },
+    ],
+  },
+
 
 
 
