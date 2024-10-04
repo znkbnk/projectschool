@@ -1289,7 +1289,74 @@ const cheatsheetData = [
       },
     ],
   },
-
+ {
+      taskId: "Sidebar",
+      content: [
+        {
+          title: "",
+          subtitle: "Props - Passing Data to SidebarItem",
+          details: [
+            "Key Prop: key={index} helps React optimize rendering by uniquely identifying each list item.",
+            "Props: item is passed as a prop to SidebarItem, allowing the child component to receive and use data from its parent.",
+          ],
+          image: "./cheatsheetImages/task19/1.webp"
+        },
+           {
+          title: "",
+          subtitle: "useState Hook - Managing State in SidebarItem",
+          details: [
+            "State Management: open holds the state (whether the sidebar item is expanded). setOpen is used to update the state.",
+            "useState Hook: Initializes the state to false, meaning the sidebar item is collapsed by default.",
+          ],
+          image: "./cheatsheetImages/task19/2.webp"
+        },
+           {
+          title: "",
+          subtitle: "Conditional Rendering - Toggling Sidebar Items",
+          details: [
+            "Conditional Rendering: Uses a ternary operator to apply different classes based on the open state. When open is true, the open class is applied.",
+            "Dynamic Classes: The class name changes depending on the component state, affecting the UI styling (e.g., expanding or collapsing the sidebar item).",
+          ],
+          image: "./cheatsheetImages/task19/3.webp"
+        },
+           {
+          title: "",
+          subtitle: "Event Handling - Toggling State",
+          details: [
+            "Event Handling: The onClick event triggers a function to update the open state. When clicked, setOpen toggles the state between true and false.",
+            "State Toggle: !open inverts the current state (expands or collapses the menu).",
+          ],
+          image: "./cheatsheetImages/task19/4.webp"
+        },
+           {
+          title: "",
+          subtitle: "Recursive Rendering - Nested Sidebar Items",
+          details: [
+            "Recursive Components: If an item has children (item.childrens), it recursively renders SidebarItem for each child, enabling nested submenus.",
+            "Mapping: Loops over the children array and renders each child as a SidebarItem.",
+          ],
+          image: "./cheatsheetImages/task19/5.webp"
+        },
+           {
+          title: "",
+          subtitle: "Conditional Rendering - Render Link if No Children",
+          details: [
+            "No Children: If the item does not have children (!item.childrens), it renders as a clickable link (<a>).",
+            "Optional Props: item.path defines the link's URL; item.icon displays an icon if provided.",
+          ],
+          image: "./cheatsheetImages/task19/6.webp"
+        },
+         {
+          title: "",
+          subtitle: "Sidebar Component - Mapping Items",
+          details: [
+            "Mapping: Iterates over the items array from the sidebar.json file and renders a SidebarItem for each element.",
+            "Key Prop: Provides a unique key to help React track each item during re-renders.",
+          ],
+          image: "./cheatsheetImages/task19/7.webp"
+        },
+      ],
+    },
 
 
 
