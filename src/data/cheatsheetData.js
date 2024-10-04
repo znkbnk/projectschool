@@ -1296,8 +1296,8 @@ const cheatsheetData = [
           title: "",
           subtitle: "Props - Passing Data to SidebarItem",
           details: [
-            "Key Prop: key={index} helps React optimize rendering by uniquely identifying each list item.",
-            "Props: item is passed as a prop to SidebarItem, allowing the child component to receive and use data from its parent.",
+            "Key Prop: 'key={index}' helps React optimize rendering by uniquely identifying each list item.",
+            "Props: 'item' is passed as a prop to 'SidebarItem', allowing the child component to receive and use data from its parent.",
           ],
           image: "./cheatsheetImages/task19/1.webp"
         },
@@ -1305,8 +1305,8 @@ const cheatsheetData = [
           title: "",
           subtitle: "useState Hook - Managing State in SidebarItem",
           details: [
-            "State Management: open holds the state (whether the sidebar item is expanded). setOpen is used to update the state.",
-            "useState Hook: Initializes the state to false, meaning the sidebar item is collapsed by default.",
+            "State Management: 'open' holds the state (whether the sidebar item is expanded). 'setOpen' is used to update the state.",
+            "useState Hook: Initializes the state to 'false', meaning the sidebar item is collapsed by default.",
           ],
           image: "./cheatsheetImages/task19/2.webp"
         },
@@ -1314,7 +1314,7 @@ const cheatsheetData = [
           title: "",
           subtitle: "Conditional Rendering - Toggling Sidebar Items",
           details: [
-            "Conditional Rendering: Uses a ternary operator to apply different classes based on the open state. When open is true, the open class is applied.",
+            "Conditional Rendering: Uses a ternary operator to apply different classes based on the 'open' state. When 'open' is 'true', the 'open' class is applied.",
             "Dynamic Classes: The class name changes depending on the component state, affecting the UI styling (e.g., expanding or collapsing the sidebar item).",
           ],
           image: "./cheatsheetImages/task19/3.webp"
@@ -1323,8 +1323,8 @@ const cheatsheetData = [
           title: "",
           subtitle: "Event Handling - Toggling State",
           details: [
-            "Event Handling: The onClick event triggers a function to update the open state. When clicked, setOpen toggles the state between true and false.",
-            "State Toggle: !open inverts the current state (expands or collapses the menu).",
+            "Event Handling: The 'onClick' event triggers a function to update the 'open' state. When clicked, 'setOpen' toggles the state between 'true' and 'false'.",
+            "State Toggle: '!open' inverts the current state (expands or collapses the menu).",
           ],
           image: "./cheatsheetImages/task19/4.webp"
         },
@@ -1332,8 +1332,8 @@ const cheatsheetData = [
           title: "",
           subtitle: "Recursive Rendering - Nested Sidebar Items",
           details: [
-            "Recursive Components: If an item has children (item.childrens), it recursively renders SidebarItem for each child, enabling nested submenus.",
-            "Mapping: Loops over the children array and renders each child as a SidebarItem.",
+            "Recursive Components: If an item has children (item.childrens), it recursively renders 'SidebarItem' for each child, enabling nested submenus.",
+            "Mapping: Loops over the children array and renders each child as a 'SidebarItem'.",
           ],
           image: "./cheatsheetImages/task19/5.webp"
         },
@@ -1342,7 +1342,7 @@ const cheatsheetData = [
           subtitle: "Conditional Rendering - Render Link if No Children",
           details: [
             "No Children: If the item does not have children (!item.childrens), it renders as a clickable link (<a>).",
-            "Optional Props: item.path defines the link's URL; item.icon displays an icon if provided.",
+            "Optional Props: 'item.path' defines the link's URL; 'item.icon' displays an icon if provided.",
           ],
           image: "./cheatsheetImages/task19/6.webp"
         },
@@ -1350,13 +1350,95 @@ const cheatsheetData = [
           title: "",
           subtitle: "Sidebar Component - Mapping Items",
           details: [
-            "Mapping: Iterates over the items array from the sidebar.json file and renders a SidebarItem for each element.",
-            "Key Prop: Provides a unique key to help React track each item during re-renders.",
+            "Mapping: Iterates over the 'items' array from the 'sidebar.json' file and renders a 'SidebarItem' for each element.",
+            "Key Prop: Provides a unique 'key' to help React track each item during re-renders.",
           ],
           image: "./cheatsheetImages/task19/7.webp"
         },
       ],
     },
+    {
+      taskId: "Dynamic-Table-with-Sorting-and-Copy-Functionality",
+      content: [
+        {
+          title: "",
+          subtitle: "useTable Hook - Creating a Table",
+          details: [
+            "useTable Hook: 'useTable' is a hook provided by 'react-table' for managing table functionalities like rows and columns.",
+            "Destructuring: Functions like 'getTableProps', 'headerGroups', and 'rows' are extracted to manage table rendering, sorting, and row preparation.",
+            "useSortBy: Hook used to add sorting capabilities to the table.",
+          ],
+          image: "./cheatsheetImages/task20/1.webp"
+        },
+           {
+          title: "",
+          subtitle: "Defining Columns for the Table",
+          details: [
+            "Columns Definition: Each object inside the array defines a column, with 'Header' being the column name and 'accessor' being the key from the data used to display the corresponding value.",
+            "Memoization: 'React.useMemo' is used to optimize performance by memoizing the column structure.",
+          ],
+          image: "./cheatsheetImages/task20/2.webp"
+        },
+           {
+          title: "",
+          subtitle: "Memoizing Data",
+          details: [
+            "Memoizing Data: The useMemo hook is used to avoid recalculating the data on every render.",
+            "fakeData: This variable holds mock data (from MOCK_DATA.json), which is then passed into the table as the data source.",
+          ],
+          image: "./cheatsheetImages/task20/3.webp"
+        },
+           {
+          title: "",
+          subtitle: "Rendering Table Headers",
+          details: [
+            "Dynamic Rendering: Uses 'headerGroups.map()' to dynamically render the table headers.",
+            "Sorting Indicators: Shows sorting indicators (🔽 for descending and 🔼 for ascending) based on the sorting state.",
+            "Sorting Props: 'getSortByToggleProps' adds sorting capabilities to the column headers.",
+          ],
+          image: "./cheatsheetImages/task20/4.webp"
+        },
+           {
+          title: "",
+          subtitle: "Rendering Table Body",
+          details: [
+            "Row Mapping: Loops through 'rows' and calls 'prepareRow(row)' to prepare each row for rendering.",
+            "Cell Rendering: For each row, the cells are rendered dynamically with 'row.cells.map(cell => ... )'.",
+          ],
+          image: "./cheatsheetImages/task20/5.webp"
+        },
+           {
+          title: "",
+          subtitle: "Cell with Actions - Custom Button",
+          details: [
+            "Custom Cell Render: The 'Cell' property allows you to define custom content for a cell. In this case, a 'CopyButton' component is rendered, passing the full name as the text.",
+            "Accessing Row Data: 'row.original' gives you access to the row's original data (in this case, first_name and last_name).",
+          ],
+          image: "./cheatsheetImages/task20/6.webp"
+        },
+        {
+          title: "",
+          subtitle: "CopyButton Component - Copying Text to Clipboard",
+          details: [
+            "Clipboard API: 'navigator.clipboard.writeText()' copies the provided text to the user's clipboard.",
+            "Button Component: This reusable 'CopyButton' displays a button and triggers the 'copyToClipboard' function on click.",
+          ],
+          image: "./cheatsheetImages/task/.webp"
+        },
+        {
+          title: "",
+          subtitle: "React-Table Sorting Example",
+          details: [
+            "Sorting Indicator: Shows an arrow indicating whether the column is sorted in ascending or descending order based on the 'isSorted' and 'isSortedDesc' properties.",
+            
+          ],
+          image: "./cheatsheetImages/task/.webp"
+        },
+      ],
+    },
+
+
+
 
 
 
