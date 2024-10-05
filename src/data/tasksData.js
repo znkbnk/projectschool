@@ -1181,10 +1181,11 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      videoLink: 'https://youtu.be/yxBXK2YmsZE',
       codesandboxUrl:
         "https://codesandbox.io/embed/jwgpwd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson6.webp"),
-      link: "https://www.dropbox.com/scl/fi/6cblzwczzki50yxwaxszo/style.css?rlkey=bydjjmcbwquipvhhlw470mbkb&dl=0",
+      link: "https://www.dropbox.com/scl/fi/amj4ve7hqeayj09yc88g9/reactFAQStyles6.css?rlkey=dqulaiq4ixiuxopz97ejziq6u&st=igw9by9s&dl=0",
     },
     {
       taskId: "Birthday-Reminder",
