@@ -1436,7 +1436,48 @@ const cheatsheetData = [
         },
       ],
     },
-
+    {
+      taskId: "Activity-Management-Dashboard",
+      content: [
+        {
+          title: "",
+          subtitle: "Display Activity Name",
+          details: [
+            "Use Material-UI's Typography component for consistent text styling and sizing throughout the application.",
+            
+          ],
+          image: "./cheatsheetImages/taskLive3/1.webp"
+        },
+           {
+          title: "",
+          subtitle: "Display List of Records",
+          details: [
+            "The 'map()' function is essential for rendering lists in React. It ensures that each record is uniquely identified with a 'key' prop, which helps React optimize rendering performance.",
+            
+          ],
+          image: "./cheatsheetImages/taskLive3/2.webp"
+        },
+           {
+          title: "",
+          subtitle: "Display User Claims",
+          details: [
+            "Combining user names with dates in the displayed text provides a clear context for the claims, improving user understanding.",
+           
+          ],
+          image: "./cheatsheetImages/taskLive3/3.webp"
+        },
+           {
+          title: "",
+          subtitle: "Display Rules List",
+          details: [
+            "Using a simple list format for rules enhances readability and helps participants easily find important information.",
+          
+          ],
+          image: "./cheatsheetImages/taskLive3/4.webp"
+        },
+         
+      ],
+    },
 
 
 
