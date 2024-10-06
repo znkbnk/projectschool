@@ -1478,6 +1478,93 @@ const cheatsheetData = [
          
       ],
     },
+    {
+      taskId: "To-Do-App",
+      content: [
+        {
+          title: "",
+          subtitle: "Managing State with useState",
+          details: [
+            "'useState' is a React Hook used to manage state in functional components.",
+            "Here, 'todos' holds the list of todo items, and 'setTodos' is the function to update this state.",
+            "To initialize state, pass the default value as an argument to 'useState'.",
+          ],
+          image: "./cheatsheetImages/task21/1.webp"
+        },
+           {
+          title: "",
+          subtitle: "Adding Todos",
+          details: [
+            "This function adds a new todo item to the 'todos' state.",
+            "It creates a new todo object with a unique ID (using uuidv4), a task description, and initial values for 'completed' and 'isEditing'.",
+            "Always spread the existing state when updating it to maintain its previous values.",
+          ],
+          image: "./cheatsheetImages/task21/2.webp"
+        },
+           {
+          title: "",
+          subtitle: "Deleting Todos",
+          details: [
+            "This function removes a todo from the list by filtering out the todo with the given ID.",
+            "'filter' creates a new array excluding the todo that matches the ID.",
+            "Use 'filter' for immutability; it returns a new array instead of modifying the existing state.",
+          ],
+          image: "./cheatsheetImages/task21/3.webp"
+        },
+           {
+          title: "",
+          subtitle: "Toggling Completion Status",
+          details: [
+            "This function toggles the 'completed' status of a todo item by updating the relevant todo's state.",
+            "It uses 'map' to create a new array with the updated todo.",
+            "Always return a new object when updating state to ensure React can detect changes.",
+          ],
+          image: "./cheatsheetImages/task21/4.webp"
+        },
+           {
+          title: "",
+          subtitle: "Editing Todos",
+          details: [
+            "This function updates the task of a todo and toggles its editing state.",
+            "Similar to toggling completion, it uses 'map' to create a new array with the updated todo.",
+            "When modifying objects in state, always use spread syntax to preserve immutability.",
+          ],
+          image: "./cheatsheetImages/task21/5.webp"
+        },
+           {
+          title: "",
+          subtitle: "Handling Form Submission",
+          details: [
+            "This function handles the form submission for adding a new todo.",
+            "'e.preventDefault()' prevents the default form submission behavior, allowing for custom handling.",
+            "It checks if the input value is not empty before calling 'addTodo'.",
+          ],
+          image: "./cheatsheetImages/task21/6.webp"
+        },
+        {
+          title: "",
+          subtitle: "Using Props",
+          details: [
+            "Props allow data to be passed from parent components to child components.",
+            "Here, 'editTodo' and 'task' are received as props, enabling the 'EditTodoForm' to access the necessary functionality and data.",
+            "Use destructuring to easily access props in functional components.",
+          ],
+          image: "./cheatsheetImages/task21/7.webp"
+        },
+        {
+          title: "",
+          subtitle: "Displaying Toast Notifications",
+          details: [
+            "The application uses 'react-toastify' to display notifications when todos are marked as completed or incomplete.",
+            "'toast.success()' creates a success notification.",
+            "Notifications improve user experience by providing feedback on actions taken.",
+          ],
+          image: "./cheatsheetImages/task21/8.webp"
+        },
+      ],
+    },
+
+
 
 
 
