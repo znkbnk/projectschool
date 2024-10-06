@@ -844,7 +844,7 @@ const tasksData = {
       prerequisites: ["Live Projects"],
       completed: false,
       codesandboxUrl:
-        "https://codesandbox.io/embed/jxrtvq?view=editor&hidenavigation=1&runonclick=1",
+        "https://codesandbox.io/embed/j37fnh?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons3.webp"),
       link: "pathStyles",
       videoLink: "",
@@ -11246,7 +11246,7 @@ Live lessons
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/jxrtvq?view=editor&hidenavigation=1&runonclick=1",
+      codesandboxUrl: "codesandbox",
       img: require("../images/livelessons.webp"),
       link: "pathStyles",
       videoLink: "",
