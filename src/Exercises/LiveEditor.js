@@ -8,8 +8,9 @@ import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
 import { auth } from "../components/firebase";
 import axios from "axios";
-import { throttle } from "lodash";
-import { debounce } from "lodash";
+import debounce from 'lodash/debounce';
+import throttle from 'lodash/throttle';
+
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/cheatsheet.css";
 import cheatsheetData from "../data/cheatsheetData.js";

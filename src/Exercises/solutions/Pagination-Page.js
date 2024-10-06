@@ -40,7 +40,7 @@ function App() {
   return (
     <main>
       <div className='section-title'>
-        <h1>{loading ? 'loading...' : 'Practice PAgination'}</h1>
+        <h1>{loading ? 'loading...' : 'Practice Pagination'}</h1>
         <div className='underline'></div>
       </div>
       <section className='followers'>
