@@ -293,7 +293,7 @@ const tasksData = {
       prerequisites: ["Live Projects"],
       completed: false,
       codesandboxUrl:
-        "https://codesandbox.io/embed/jxrtvq?view=editor&hidenavigation=1&runonclick=1",
+        "https://codesandbox.io/embed/gy7pcn?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons1.webp"),
       link: "pathStyles",
       videoLink: "",
