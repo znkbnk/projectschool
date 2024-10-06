@@ -44,18 +44,10 @@ function Footer() {
           <h1>Social Media</h1>
           <div className='sociallogos'>
             <div className='logobox'>
-              <a
-                href='https://instagram.com/reactlessons'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
+            <a href="https://instagram.com/reactlessons" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">Follow us on Instagram
                 <i className='fab fa-instagram'></i>
               </a>
-              <a
-                href='https://github.com/znkbnk'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
+              <a href="https://github.com/znkbnk" target="_blank" rel="noopener noreferrer" aria-label="View our GitHub Repository">View our GitHub Repository
                 <i className='fa-brands fa-github'></i>
               </a>
             </div>

@@ -109,6 +109,10 @@
   margin: 25px 0 50px;
 }
 
+.terms-input {
+  margin: 10px;
+}
+
 .terms-links {
   display: flex;
   flex-direction: column;
@@ -119,10 +123,13 @@
 }
 
 .terms-links a {
+  font-weight: 18px;
   color: inherit;
-
   text-decoration: underline;  
   font-size: large;
+  display: inline-block; /* Makes the link behave like a block */
+  margin: 8px;          /* Adds space between touch targets */
+  border-radius: 5px;
 }
 
 .terms-links a:visited {

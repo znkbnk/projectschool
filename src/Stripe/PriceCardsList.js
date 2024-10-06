@@ -110,12 +110,14 @@ const PriceCardsList = () => {
         
         <label>
           <input
+          className="terms-input"
             type='checkbox'
             checked={isTermsAccepted}
             onChange={() => setIsTermsAccepted(!isTermsAccepted)}
           />
           I have read and agree to the{" "}
           <a
+          className="touch-target"
             href='https://projectschool.dev/#/terms'
             target='_blank'
             rel='noopener noreferrer'
@@ -124,6 +126,7 @@ const PriceCardsList = () => {
           </a>{" "}
           and{" "}
           <a
+          className="touch-target"
             href='https://projectschool.dev/#/privacy'
             target='_blank'
             rel='noopener noreferrer'

@@ -64,8 +64,12 @@ footer a {
   color: #f1f1f1;
   margin-right: 10px;
 }
-.sociallogos {
-  padding: 20px 0;
+.sociallogos .logobox {
+  display: flex;
+  flex-direction: column;
+}
+.sociallogos .logobox  a{
+  margin: 5px;
 }
 .sociallogos .logobox i {
   padding: 0 10px;
