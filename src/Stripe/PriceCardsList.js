@@ -4,6 +4,7 @@ import PriceCard from "./PriceCard";
 import "../styles/checkout.css";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../components/firebase";
+import { toast } from "react-toastify";
 
 // Initialize Stripe with your API key
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
@@ -14,21 +15,20 @@ const PriceCardsList = () => {
 
   const handleCheckout = async (priceId) => {
     if (!isTermsAccepted) {
-      alert(
-        "You must agree to the terms and conditions and privacy policy before proceeding."
-      );
+      toast.error("Please accept the terms and conditions to proceed.");
       return;
     }
-
+  
     try {
       const stripe = await stripePromise;
       const user = auth.currentUser;
-
+  
       if (!user) {
-        console.error("User not authenticated");
+        toast.error("Please log in to proceed with checkout.");
+        navigate("/login"); // Redirect to login page if user isn't authenticated
         return;
       }
-
+  
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
@@ -36,23 +36,26 @@ const PriceCardsList = () => {
         successUrl: `${window.location.origin}/#success`,
         cancelUrl: `${window.location.origin}/#cancel`,
       });
-
+  
       if (error) {
-        console.error("Stripe Error:", error);
+        toast.error("There was an error with the checkout. Please try again.");
         console.error("Error Message:", error.message);
-        console.error("Error Type:", error.type);
-        // Log any additional properties of the error object
+      } else {
+        toast.success("Redirecting to checkout...");
       }
     } catch (error) {
+      toast.error("Checkout process failed. Please try again.");
       console.error("Checkout Error:", error);
-      console.error("Error Message:", error.message);
-      console.error("Error Name:", error.name);
-      console.error("Error Stack:", error.stack);
     }
   };
 
   const handleFreeButtonClick = () => {
-    navigate("/signup");
+    const user = auth.currentUser;
+    if (user) {
+      navigate("/dashboard"); // Example: redirect logged-in users to a dashboard
+    } else {
+      navigate("/signup");
+    }
   };
 
   return (
