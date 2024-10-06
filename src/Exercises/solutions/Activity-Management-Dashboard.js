@@ -133,33 +133,8 @@ const UserClaimRecords = ({ claims }) => {
 export default UserClaimRecords;
 
 `;
-const solutionCode6 = `
-// src/data.js
 
-export const activityDetails = {
-    name: "React Coding Challenge",
-    description: "A challenge to test your React coding skills",
-    startDate: "2024-10-01",
-    endDate: "2024-10-10",
-  };
-  
-  export const activityRecords = [
-    { id: 1, date: "2024-10-01", description: "Registered for the challenge" },
-    { id: 2, date: "2024-10-02", description: "Submitted initial solution" },
-  ];
-  
-  export const userClaimRecords = [
-    { id: 1, date: "2024-10-05", claim: "Submitted Final Solution" },
-  ];
-  
-  export const activityRules = [
-    "Rule 1: Complete the tasks within the timeline.",
-    "Rule 2: Follow best coding practices.",
-    "Rule 3: Ensure cross-browser compatibility.",
-  ];
-  
-`;
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default [solutionCode1, solutionCode2, solutionCode3, solutionCode4, solutionCode5, solutionCode6];
+export default [solutionCode1, solutionCode2, solutionCode3, solutionCode4, solutionCode5];
 
