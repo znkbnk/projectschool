@@ -203,7 +203,7 @@ const LiveEditor = () => {
 
   const handleToggleSolution = () => {
     if (subscriptionStatus === "subscribed") {
-      setShowSolution((prevShowSolution) => !prevShowSolution);
+      setShowSolution((prev) => !prev);
     } else {
       toast.info(
         "Access to solutions requires an active subscription. Please subscribe to unlock this feature."
@@ -215,14 +215,15 @@ const LiveEditor = () => {
     const currentCheatsheet = cheatsheetData.find(
       (cheat) => cheat.taskId === taskId
     );
-
+  
     if (!currentCheatsheet) {
       toast.error("Cheatsheet not available for this task.");
+      setShowCheatsheet(false); // Close the popup if no cheatsheet
       return;
     }
-
+  
     setCheatsheetContent(currentCheatsheet);
-    setShowCheatsheet(!showCheatsheet);
+    setShowCheatsheet((prev) => !prev);
   };
 
   const currentTask = tasksData[lessonType]?.[currentTaskIndex] || {};
