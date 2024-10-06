@@ -27,15 +27,16 @@ const authorsData = [
 export default authorsData;
 
 const tasksData = {
-  
   Live: [
     {
       taskId: "Basic-Android-React-Native-App-with-Google-Login",
       taskTitle: "Basic Android React-Native App with Google Login",
-      introduction: "A simple and minimalistic Android app built with React-Native and Expo, featuring Google Sign-In, a basic home screen, a user profile page displaying the user's photo and name, and a logout button to return to the home screen.",
+      introduction:
+        "A simple and minimalistic Android app built with React-Native and Expo, featuring Google Sign-In, a basic home screen, a user profile page displaying the user's photo and name, and a logout button to return to the home screen.",
       task: {
-        taskDescription: "I'm looking for a simple and minimalistic Android app developed using React-Native and Expo. The app should have a Google login button, a basic home screen, a user profile page, and a logout button.",
-        platform: 'Freelancer',
+        taskDescription:
+          "I'm looking for a simple and minimalistic Android app developed using React-Native and Expo. The app should have a Google login button, a basic home screen, a user profile page, and a logout button.",
+        platform: "Freelancer",
         requirements: [
           "Google Sign-In functionality",
           "User profile page displaying profile picture and full name",
@@ -43,7 +44,7 @@ const tasksData = {
           "Logout button functionality",
           "The app should be simple and minimalistic",
           "The app must run smoothly on emulator",
-      ],
+        ],
       },
       steps: [
         {
@@ -52,24 +53,28 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Install Expo CLI",
-              descriptions: ["Open your terminal.", "Run the command to install Expo globally."],
+              descriptions: [
+                "Open your terminal.",
+                "Run the command to install Expo globally.",
+              ],
             },
             {
               subtitleDescription: "Create a New Expo Project",
-              descriptions: ["Use the terminal to create a new project using the Expo command.", "Choose a blank template for simplicity."],
+              descriptions: [
+                "Use the terminal to create a new project using the Expo command.",
+                "Choose a blank template for simplicity.",
+              ],
             },
             {
               subtitleDescription: "Navigate into Your Project",
               descriptions: [
                 "Once the project is created, navigate into the project directory.",
-               
               ],
             },
             {
               subtitleDescription: "Start the Development Server",
               descriptions: [
                 "Run the project using Expo, which will open a browser with options for testing on an emulator or device.",
-               
               ],
             },
           ],
@@ -89,19 +94,17 @@ const tasksData = {
               subtitleDescription: "Install Expo Google Authentication",
               descriptions: [
                 "Install Expo's Google authentication package. This will handle Google login.",
-              
               ],
             },
             {
               subtitleDescription: "Install WebBrowser",
               descriptions: [
                 "WebBrowser from Expo helps complete the authentication process in the background.",
-                
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Set Up Basic Project Structure",
           titleDescription: "",
           sections: [
@@ -109,19 +112,17 @@ const tasksData = {
               subtitleDescription: "Create components Folder",
               descriptions: [
                 "Inside the 'components' folder, you'll create two main components: one for the home screen and another for the profile screen.",
-               
               ],
             },
             {
               subtitleDescription: "Create styles Folder",
               descriptions: [
                 "Create a folder called 'styles' for managing your app's styles separately from the logic.",
-                
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Create the Home Screen Component",
           titleDescription: "",
           sections: [
@@ -129,7 +130,6 @@ const tasksData = {
               subtitleDescription: "Create a New JavaScript File",
               descriptions: [
                 "Inside the 'components' folder, create a new file for the HomeScreen component.",
-               
               ],
             },
             {
@@ -141,7 +141,7 @@ const tasksData = {
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Create the Profile Screen Component",
           titleDescription: "",
           sections: [
@@ -149,7 +149,6 @@ const tasksData = {
               subtitleDescription: "Create a New JavaScript File",
               descriptions: [
                 "Inside the 'components' folder, create a new file for the ProfileScreen component.",
-              
               ],
             },
             {
@@ -161,7 +160,7 @@ const tasksData = {
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Handle Authentication in App.js",
           titleDescription: "",
           sections: [
@@ -169,7 +168,6 @@ const tasksData = {
               subtitleDescription: "Import Authentication Libraries",
               descriptions: [
                 "Import the necessary Expo libraries for Google sign-in and AsyncStorage for saving user information.",
-            
               ],
             },
             {
@@ -190,19 +188,17 @@ const tasksData = {
               subtitleDescription: "Handle Logout",
               descriptions: [
                 "Implement a function to clear user data from both the app's state and AsyncStorage when the logout button is pressed.",
-              
               ],
             },
             {
               subtitleDescription: "Switch Between Screens",
               descriptions: [
                 "If the user is authenticated, render the profile screen; otherwise, show the home screen.",
-                
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Move Styles to a Separate File",
           titleDescription: "",
           sections: [
@@ -210,7 +206,6 @@ const tasksData = {
               subtitleDescription: "Create a styles.js File",
               descriptions: [
                 "Inside the 'styles' folder, create a JavaScript file for your app's styles.",
-                
               ],
             },
             {
@@ -224,20 +219,18 @@ const tasksData = {
               subtitleDescription: "Import Styles into Components",
               descriptions: [
                 "Import the styles from the styles.js file into both the HomeScreen and ProfileScreen components.",
-                
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Run and Test the App",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Run the App",
               descriptions: [
                 "Use Expo to start your app and open it in an emulator or on your phone.",
-              
               ],
             },
             {
@@ -251,12 +244,11 @@ const tasksData = {
               subtitleDescription: "Test Logout",
               descriptions: [
                 "Ensure that pressing the logout button returns you to the home screen and clears the stored user information.",
-            
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Debug and Fine-Tune",
           titleDescription: "",
           sections: [
@@ -276,56 +268,53 @@ const tasksData = {
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 10: Deploy or Share the App",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Create a Build",
               descriptions: [
                 "If you're ready to share your app, follow Expo's guide to build an APK for Android or publish the app to Expo's platform.",
-              
               ],
             },
             {
               subtitleDescription: "Share the Source Code",
               descriptions: [
                 "Once you're happy with the result, share the source code with collaborators or save it to a repository.",
-             
               ],
             },
           ],
         },
-       
       ],
       taskType: "Live",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/jxrtvq?view=editor&hidenavigation=1&runonclick=1",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/jxrtvq?view=editor&hidenavigation=1&runonclick=1",
       img: require("../images/livelessons1.webp"),
       link: "pathStyles",
       videoLink: "",
     },
 
-
     {
       taskId: "Interactive-Power-BI-Bar-Chart",
       taskTitle: "Interactive Power BI Bar Chart",
-      introduction: "This project involves creating an interactive Power BI-style bar chart visual using React.js and Chart.js, where user data is segmented by age group. The bar chart will include cross-filtering functionality, allowing users to click on any bar to filter the dataset by the corresponding age group, dynamically updating the chart in response.",
+      introduction:
+        "This project involves creating an interactive Power BI-style bar chart visual using React.js and Chart.js, where user data is segmented by age group. The bar chart will include cross-filtering functionality, allowing users to click on any bar to filter the dataset by the corresponding age group, dynamically updating the chart in response.",
       task: {
-        taskDescription: "I'm looking for a skilled developer to create an interactive Power BI bar chart visual using React.js. The project will focus on displaying user data, specifically segmented by age group.",
-        platform: 'Freelancer',
+        taskDescription:
+          "I'm looking for a skilled developer to create an interactive Power BI bar chart visual using React.js. The project will focus on displaying user data, specifically segmented by age group.",
+        platform: "Freelancer",
         requirements: [
-        "Display user data segmented by age group in a bar chart.",
-        "Enable users to click on bars to filter data by the selected age group.",
-       "Properly categorize and display user counts for different age groups (e.g., 18-24, 25-34, etc.).",
-       "Ensure the chart dynamically updates when a bar is clicked and reflects filtered results.",
-       "Create a responsive and intuitive chart interface for easy interaction.",
-
-       
-      ],
+          "Display user data segmented by age group in a bar chart.",
+          "Enable users to click on bars to filter data by the selected age group.",
+          "Properly categorize and display user counts for different age groups (e.g., 18-24, 25-34, etc.).",
+          "Ensure the chart dynamically updates when a bar is clicked and reflects filtered results.",
+          "Create a responsive and intuitive chart interface for easy interaction.",
+        ],
       },
       steps: [
         {
@@ -334,13 +323,12 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-              "Ensure Node.js is installed on your machine. You can download it from nodejs.org.",
-              "Open your terminal/command prompt and run the following command to create a new React project: 'npx create-react-app powerbi-bar-chart'",
-              "Once the project is created, navigate into your project folder: 'cd powerbi-bar-chart'",
+              descriptions: [
+                "Ensure Node.js is installed on your machine. You can download it from nodejs.org.",
+                "Open your terminal/command prompt and run the following command to create a new React project: 'npx create-react-app powerbi-bar-chart'",
+                "Once the project is created, navigate into your project folder: 'cd powerbi-bar-chart'",
               ],
             },
-           
           ],
         },
         {
@@ -349,70 +337,69 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Install 'react-chartjs-2' and 'chart.js': These libraries will help you implement the bar chart. Install them using npm: 'npm install react-chartjs-2 chart.js'",
-              "After installation, check package.json to ensure both react-chartjs-2 and chart.js are listed under dependencies.",
+              descriptions: [
+                "Install 'react-chartjs-2' and 'chart.js': These libraries will help you implement the bar chart. Install them using npm: 'npm install react-chartjs-2 chart.js'",
+                "After installation, check package.json to ensure both react-chartjs-2 and chart.js are listed under dependencies.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Prepare the Data for the Bar Chart",
-          titleDescription: "Before you visualize anything, determine where your user data is coming from. In this case, you'll likely have an array of user information with age values. If the data comes from an API, think about how you'll fetch it and structure it. If you're using mock data, make sure it represents actual user distribution across age groups.",
+          titleDescription:
+            "Before you visualize anything, determine where your user data is coming from. In this case, you'll likely have an array of user information with age values. If the data comes from an API, think about how you'll fetch it and structure it. If you're using mock data, make sure it represents actual user distribution across age groups.",
           sections: [
             {
               subtitleDescription: "Segment Users by Age Group",
-            descriptions: [ 
-              "Identify your age groups. Common segments might be 18-24, 25-34, 35-44, 45-54, 55-64, and 65+.",
-              "For each age group, count how many users fall within that range. If the data comes from an API, you'll need to process this by iterating over the data and sorting users into these groups.",
+              descriptions: [
+                "Identify your age groups. Common segments might be 18-24, 25-34, 35-44, 45-54, 55-64, and 65+.",
+                "For each age group, count how many users fall within that range. If the data comes from an API, you'll need to process this by iterating over the data and sorting users into these groups.",
               ],
             },
             {
               subtitleDescription: "Prepare Data for the Chart",
-             descriptions: [ 
-              "Your chart will need two main pieces of information: the labels (which will be the age groups) and the data (which is the count of users in each age group).",
-              "Organize your data so that for each label (age group), you have a corresponding data point (user count). The structure of your data must be clear before you start setting up the chart.",
+              descriptions: [
+                "Your chart will need two main pieces of information: the labels (which will be the age groups) and the data (which is the count of users in each age group).",
+                "Organize your data so that for each label (age group), you have a corresponding data point (user count). The structure of your data must be clear before you start setting up the chart.",
               ],
             },
             {
               subtitleDescription: "Plan Data Filtering",
-            descriptions: [ 
-              "You'll need to filter user data based on interactions with the chart (i.e., clicking on a bar). Think about how the click action will filter the data.",
-              "For each age group clicked, all other data points should either be hidden or grayed out, showing only the selected group.",
+              descriptions: [
+                "You'll need to filter user data based on interactions with the chart (i.e., clicking on a bar). Think about how the click action will filter the data.",
+                "For each age group clicked, all other data points should either be hidden or grayed out, showing only the selected group.",
               ],
             },
             {
               subtitleDescription: "Mock Your Data (if necessary)",
-            descriptions: [ 
-              "If you don't have real data yet, prepare a mock dataset of users segmented by age groups. For testing, you can create static arrays representing user counts in each age group.",
-            
+              descriptions: [
+                "If you don't have real data yet, prepare a mock dataset of users segmented by age groups. For testing, you can create static arrays representing user counts in each age group.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Configure Chart.js in React",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Understand How Chart.js Works",
-            descriptions: [ 
-              "Chart.js is a JavaScript library that generates charts using HTML <canvas>. Since you are using React, you'll use react-chartjs-2, a wrapper around Chart.js to work natively with React components.",
-              "In a bar chart, you need to configure both the axes (X-axis for age groups, Y-axis for user counts) and the bars (each representing the user count for the corresponding age group).",
+              descriptions: [
+                "Chart.js is a JavaScript library that generates charts using HTML <canvas>. Since you are using React, you'll use react-chartjs-2, a wrapper around Chart.js to work natively with React components.",
+                "In a bar chart, you need to configure both the axes (X-axis for age groups, Y-axis for user counts) and the bars (each representing the user count for the corresponding age group).",
               ],
             },
             {
               subtitleDescription: "Install and Register Chart.js Components",
-             descriptions: [ 
-               "The bar chart will rely on specific Chart.js components such as scales (for the X and Y axes), tooltips (for showing data when hovering over bars), and bar elements (for the bars themselves).",
+              descriptions: [
+                "The bar chart will rely on specific Chart.js components such as scales (for the X and Y axes), tooltips (for showing data when hovering over bars), and bar elements (for the bars themselves).",
                 "You will need to register these components in your React project to ensure that Chart.js knows what type of chart you are building and how to render it.",
               ],
             },
             {
               subtitleDescription: "Define the Chart Layout",
-             descriptions: [ 
-               "You will need to define the layout for your chart. This includes labels (age groups), datasets (user counts), and styling options (like bar color, size, and spacing).",
+              descriptions: [
+                "You will need to define the layout for your chart. This includes labels (age groups), datasets (user counts), and styling options (like bar color, size, and spacing).",
                 "Plan how your chart will look.",
                 "What will the X-axis represent? (In this case, age groups.)",
                 "What will the Y-axis represent? (In this case, user counts.)",
@@ -422,18 +409,17 @@ const tasksData = {
             },
             {
               subtitleDescription: "Plan Event Handling for Clicks",
-             descriptions: [ 
-               "Each bar in the chart should be clickable, which will trigger the filtering of data.",
+              descriptions: [
+                "Each bar in the chart should be clickable, which will trigger the filtering of data.",
                 "When a bar is clicked, determine how you will capture which bar was clicked (using Chart.js's event system).",
                 "Define how you'll filter the dataset based on the clicked bar.",
                 "Ensure that clicking a bar dynamically updates the visual to show the filtered data.",
-               
               ],
             },
             {
               subtitleDescription: "Set Up Chart Options",
-             descriptions: [ 
-               "Plan how you will configure options",
+              descriptions: [
+                "Plan how you will configure options",
                 "Responsiveness: Your chart should resize properly on different screen sizes.",
                 "Animations: Decide if you want animations when rendering the chart or updating it.",
                 "Interactions: Will you display tooltips or change the appearance when the user hovers over a bar?",
@@ -442,164 +428,427 @@ const tasksData = {
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Implement State Management for Filtering",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Determine How to Manage State",
-             descriptions: [ 
-               "You'll need to manage two main pieces of state.",
+              descriptions: [
+                "You'll need to manage two main pieces of state.",
                 "The initial dataset: This represents all users across all age groups.",
                 "The filtered dataset: This will update dynamically when a user clicks on a bar to filter data for the selected age group.",
                 "Think about how you will set up the initial state. In React, you can manage state using the useState hook. You'll want to set the initial dataset in state and then allow it to update dynamically when the user interacts with the chart.",
-
               ],
             },
             {
               subtitleDescription: "Plan the Click Event Handler",
-             descriptions: [ 
-               "When the user clicks on a bar, the click handler will: capture the index of the clicked bar. Chart.js provides an event object that you can use to identify which bar was clicked (based on its index).",
+              descriptions: [
+                "When the user clicks on a bar, the click handler will: capture the index of the clicked bar. Chart.js provides an event object that you can use to identify which bar was clicked (based on its index).",
                 "Use the index to find the corresponding age group.",
                 "Filter the data: You'll need to update the dataset, setting all other age groups to zero (or hide them entirely), while showing only the data for the clicked age group.",
                 "Update the state with the new, filtered dataset.",
-                
               ],
             },
             {
               subtitleDescription: "Handle the Chart Update",
-             descriptions: [ 
-               "Once the state updates with the filtered data, the chart will need to re-render to reflect the changes. In React, this happens automatically when state changes, so you don't have to worry about manually re-rendering the chart.",
+              descriptions: [
+                "Once the state updates with the filtered data, the chart will need to re-render to reflect the changes. In React, this happens automatically when state changes, so you don't have to worry about manually re-rendering the chart.",
                 "Ensure that the chart re-renders smoothly without losing the interactive capabilities (e.g., further clicks on different bars should continue to update the chart).",
               ],
             },
             {
               subtitleDescription: "Decide What Happens After Filtering",
-             descriptions: [ 
-               "After filtering, do you want to allow the user to reset the chart to show all data again? If yes, plan how the user will reset the filter (e.g., clicking outside the chart or providing a 'Reset' button).",
+              descriptions: [
+                "After filtering, do you want to allow the user to reset the chart to show all data again? If yes, plan how the user will reset the filter (e.g., clicking outside the chart or providing a 'Reset' button).",
                 "You might also want to think about what happens if the user clicks the same bar twice. Will this re-apply the filter, or will it remove the filter and show the full dataset again?",
               ],
             },
             {
               subtitleDescription: "Test the Filtered State",
-             descriptions: [ 
-               "Click multiple bars to ensure only one age group is highlighted at a time.",
+              descriptions: [
+                "Click multiple bars to ensure only one age group is highlighted at a time.",
                 "Ensure that the filtering works correctly across all age groups.",
                 "Handle edge cases like clicking on the same bar repeatedly or trying to click outside the chart.",
               ],
             },
             {
               subtitleDescription: "Optimize for Performance",
-             descriptions: [ 
-               "If your dataset is large, consider optimizing the way the chart updates. This could involve reducing unnecessary re-renders or simplifying the state changes when the user interacts with the chart.",
-                
+              descriptions: [
+                "If your dataset is large, consider optimizing the way the chart updates. This could involve reducing unnecessary re-renders or simplifying the state changes when the user interacts with the chart.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Style the Chart",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Choose Colors for the Bars",
-             descriptions: [ 
-               "You can define two sets of colors—one for unfiltered data and another for filtered data. Decide how the bars will look when they are clicked and filtered.",
-              
+              descriptions: [
+                "You can define two sets of colors—one for unfiltered data and another for filtered data. Decide how the bars will look when they are clicked and filtered.",
               ],
             },
             {
               subtitleDescription: "Ensure Responsiveness",
-              descriptions: [ 
-               "Plan for making the chart responsive so that it adjusts to different screen sizes, providing a seamless user experience.",
-               
+              descriptions: [
+                "Plan for making the chart responsive so that it adjusts to different screen sizes, providing a seamless user experience.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Test the Application",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Run Your App",
-             descriptions: [ 
-               "In your terminal, run the React app using: 'npm start'",
-               "This will start a local development server and open your app in the browser."
+              descriptions: [
+                "In your terminal, run the React app using: 'npm start'",
+                "This will start a local development server and open your app in the browser.",
               ],
             },
             {
               subtitleDescription: "Test the Chart",
-              descriptions: [ 
-               "Click on different bars and ensure that the data filters correctly based on the age group selected. Check the console (DevTools) for any errors.",
-                
+              descriptions: [
+                "Click on different bars and ensure that the data filters correctly based on the age group selected. Check the console (DevTools) for any errors.",
               ],
             },
-            
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Refine and Optimize",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Handle Edge Cases",
-             descriptions: [ 
-               "What happens if a user clicks the same bar multiple times?",
+              descriptions: [
+                "What happens if a user clicks the same bar multiple times?",
                 "Should the user be able to reset the filter and see the full dataset again? Plan for how this might work.",
               ],
             },
             {
               subtitleDescription: "Optimize Rendering",
-             descriptions: [ 
-               "If the chart becomes complex or data-heavy, consider optimizing the rendering process to ensure smooth performance.",
-                
+              descriptions: [
+                "If the chart becomes complex or data-heavy, consider optimizing the rendering process to ensure smooth performance.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Integrate with Power BI (Optional)",
-          titleDescription: "If you plan to embed this React app in Power BI or integrate it into a Power BI report.",
+          titleDescription:
+            "If you plan to embed this React app in Power BI or integrate it into a Power BI report.",
           sections: [
             {
               subtitleDescription: "Set Up Power BI Embedded",
-             descriptions: [ 
-               "Use Microsoft Power BI Embedded SDK to embed your React app into Power BI.",
-               
+              descriptions: [
+                "Use Microsoft Power BI Embedded SDK to embed your React app into Power BI.",
               ],
             },
             {
               subtitleDescription: "Configure Cross-Filtering with Power BI",
-             descriptions: [ 
-               "Plan how you will handle cross-filtering across other visuals in Power BI using JavaScript.",
-              
+              descriptions: [
+                "Plan how you will handle cross-filtering across other visuals in Power BI using JavaScript.",
               ],
             },
           ],
         },
-        
-       
       ],
       taskType: "Live",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/jf4vrt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/jf4vrt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons2.webp"),
       videoLink: "",
     },
 
-
-   
-
-
-
-
-
+    {
+      taskId: "Activity-Management-Dashboard",
+      taskTitle: "Activity Management Dashboard",
+      introduction:
+        "The Activity Management Dashboard is a robust React application designed to provide users with a comprehensive overview of various activities. Featuring detailed insights into activity specifics, historical records, user claims, and associated rules, this dashboard leverages Material-UI components to deliver a modern and responsive user interface. The modular architecture allows for seamless integration of future enhancements, ensuring an adaptable solution for activity management.",
+      task: {
+        taskDescription:
+          "I need to create an activity page using React+MaterialUI. I already have a figma document that includes simple pages such as activity details, activity records, user claim records, activity rules, etc. ,You can use simulated data to bind data to the page, and I will interface it later. You only need to complete the static page.",
+        platform: "Freelancer",
+        requirements: [
+          "Components for Activity Details, Records, Claims, and Rules",
+          "Use of simulated data for static content",
+          "Responsive design using Material-UI",
+          "Navigation between components (if applicable)",
+        ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the React Environment",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create a New React App",
+              descriptions: [
+                "Open a terminal, navigate to your preferred directory, and run: 'npx create-react-app activity-page'.",
+                "This command creates the initial project structure with all the necessary dependencies to build a React application.",
+              ],
+            },
+            {
+              subtitleDescription: "Navigate into the Project",
+              descriptions: [
+                "Once the app is created, move into the project directory: 'cd activity-page'.",
+              ],
+            },
+            {
+              subtitleDescription: "Install Material-UI",
+              descriptions: [
+                "Install the required Material-UI packages: 'npm install @mui/material @emotion/react @emotion/styled'.",
+                "Material-UI (MUI) is a component library used to build modern UI elements quickly.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create the Components Folder",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Inside the 'src' folder, create a new folder called 'components'. This will be used to store all the individual component files.",
+                "React applications are modular, and each part of the UI (like activity details, activity records) will be separated into reusable components.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 3: Create the ActivityDetails Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the File",
+              descriptions: [
+                "Inside the 'components' folder, create a new file called ActivityDetails.js.",
+              ],
+            },
+            {
+              subtitleDescription: "Structure the Component",
+              descriptions: [
+                "Import React and necessary Material-UI components like 'Card', 'Typography'.",
+                "Use a 'Card' from Material-UI to display activity details.",
+              ],
+            },
+            {
+              subtitleDescription: "Add Dummy Data",
+              descriptions: [
+                "Inside 'ActivityDetails', define and display static (simulated) data like the name of the activity, description, and dates.",
+              ],
+            },
+            {
+              subtitleDescription: "Return JSX",
+              descriptions: [
+                "Write the JSX structure that uses Material-UI components.",
+                "Use a 'Card' to wrap the content.",
+                "Inside the 'Card', use 'Typography' components to display the activity name and description.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 4: Create the ActivityRecords Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the File",
+              descriptions: [
+                "Inside the 'components' folder, create a new file called ActivityRecords.js.",
+              ],
+            },
+            {
+              subtitleDescription: "Simulate Data",
+              descriptions: [
+                "Define some static data (e.g., an array of record objects) inside the component. These records could represent actions taken by users.",
+              ],
+            },
+            {
+              subtitleDescription: "Use Material-UI List Components",
+              descriptions: [
+                "Use Material-UI's 'List' and 'ListItem' components to display the records.",
+                "For each record, use 'ListItem' to create individual list elements.",
+              ],
+            },
+            {
+              subtitleDescription: "Map Over the Data",
+              descriptions: [
+                "Use JavaScript's 'map()' function to iterate over the array of records and dynamically create a list of records to display.",
+              ],
+            },
+            {
+              subtitleDescription: "Return JSX",
+              descriptions: [
+                "In the JSX, use a 'List' component and render each record inside 'ListItem'.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 5: Create the UserClaimRecords Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the File",
+              descriptions: [
+                "Inside the 'components' folder, create a new file called UserClaimRecords.js.",
+              ],
+            },
+            {
+              subtitleDescription: "Add Dummy Claim Data",
+              descriptions: [
+                "Define some claim records (static data) inside the component. Each record could represent a user claim, with details like the user name and the date of the claim.",
+              ],
+            },
+            {
+              subtitleDescription: "Use Material-UI for Layout",
+              descriptions: [
+                "Use 'Card' and 'List' components to create a layout similar to ActivityRecords.",
+              ],
+            },
+            {
+              subtitleDescription: "Map Through Claim Records",
+              descriptions: [
+                "Iterate over the static data using the 'map()' function, rendering each user claim as a list item.",
+              ],
+            },
+            {
+              subtitleDescription: "Return JSX",
+              descriptions: [
+                "Write the JSX structure using 'List' and 'ListItem' components to display each claim.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 6: Create the ActivityRules Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the File",
+              descriptions: [
+                "Inside the 'components' folder, create a new file called ActivityRules.js.",
+              ],
+            },
+            {
+              subtitleDescription: "Define Static Rules",
+              descriptions: [
+                "Define an array of rules for the activity as static data. Each rule can be a simple string or an object (if you want to add more info).",
+              ],
+            },
+            {
+              subtitleDescription: "Display Rules Using a List",
+              descriptions: [
+                "Use Material-UI's 'List' and 'ListItem' to display the rules in a list format.",
+              ],
+            },
+            {
+              subtitleDescription: "Map Through Rules",
+              descriptions: [
+                "Use the 'map()' function to iterate over the rules array and dynamically render each rule.",
+              ],
+            },
+            {
+              subtitleDescription: "Return JSX",
+              descriptions: [
+                "Write the JSX using Material-UI components like 'Typography' for headings and 'List' for displaying rules.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 7: Main App.js Integration",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Organize Imports",
+              descriptions: [
+                "Open App.js and import the four components you've created: ActivityDetails, ActivityRecords, UserClaimRecords, and ActivityRules.",
+              ],
+            },
+            {
+              subtitleDescription: "Pass Data via Props (Optional)",
+              descriptions: [
+                "Although for now, you're using static data inside the components, consider refactoring later to pass data via props from App.js.",
+              ],
+            },
+            {
+              subtitleDescription: "Layout the Page",
+              descriptions: [
+                "Use Material-UI's 'Container' or 'Box' to structure the layout of the page. Inside the container, render the four components in order.",
+              ],
+            },
+            {
+              subtitleDescription: "Add Basic Styling",
+              descriptions: [
+                "Apply some basic styling to organize the layout (e.g., margins, padding) using the 'sx' prop in Material-UI.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 8: Create a Simulated Data File (Optional)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create data.js",
+              descriptions: [
+                "Instead of writing static data inside each component, you can create a data.js file in the 'src' folder where all the simulated data (activity details, records, claims, rules) will be stored.",
+              ],
+            },
+            {
+              subtitleDescription: "Export Data",
+              descriptions: [
+                "Define the data as JavaScript objects/arrays and export them for use in other files.",
+              ],
+            },
+            {
+              subtitleDescription: "Import and Use Data",
+              descriptions: [
+                "In the components (ActivityDetails, ActivityRecords, etc.), import the data from data.js and pass it via props or use it directly inside the component.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 9: Run the Application",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Start the App",
+              descriptions: [
+                "In your terminal, run the following command to start the development server: 'npm start'.",
+              ],
+            },
+            {
+              subtitleDescription: "View the Page",
+              descriptions: [
+                "Open a browser and go to http://localhost:3000 to see your static activity page with all four components rendered.",
+              ],
+            },
+          ],
+        },
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl:
+        "https://codesandbox.io/embed/jxrtvq?view=editor&hidenavigation=1&runonclick=1",
+      img: require("../images/livelessons3.webp"),
+      link: "pathStyles",
+      videoLink: "",
+    },
   ],
   React: [
     {
@@ -1085,7 +1334,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      videoLink: 'https://youtu.be/4Wc7FGl1eyI',
+      videoLink: "https://youtu.be/4Wc7FGl1eyI",
       codesandboxUrl:
         "https://codesandbox.io/embed/grf285?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson5.webp"),
@@ -1181,7 +1430,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      videoLink: 'https://youtu.be/yxBXK2YmsZE',
+      videoLink: "https://youtu.be/yxBXK2YmsZE",
       codesandboxUrl:
         "https://codesandbox.io/embed/jwgpwd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson6.webp"),
@@ -1518,7 +1767,6 @@ const tasksData = {
         "https://codesandbox.io/embed/56gy36?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson9.webp"),
       link: "https://www.dropbox.com/scl/fi/mqd7ggdarkm4fl704iun1/memoryStyles.css?rlkey=9amnv9br4g9t7iz3w4iz9e8h8&st=xopph5bz&dl=0",
-      
     },
     {
       taskId: "Color-Generator",
@@ -10688,9 +10936,6 @@ React: [
 
   
   */
-
-
-
 
 /*   
 Live lessons
