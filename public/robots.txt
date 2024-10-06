@@ -1,3 +1,5 @@
+Sitemap: https://www.projectschool.dev/sitemap.xml
+
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
