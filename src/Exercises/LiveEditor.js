@@ -25,6 +25,8 @@ const LiveEditor = () => {
   const [subscriptionStatus, setSubscriptionStatus] = useState(null);
   const [showCheatsheet, setShowCheatsheet] = useState(false); // State for cheatsheet popup
   const [cheatsheetContent, setCheatsheetContent] = useState(null);
+  // eslint-disable-next-line no-unused-vars
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
   const taskContainerRef = useRef(null);
@@ -33,6 +35,7 @@ const LiveEditor = () => {
     let isMounted = true;
 
     const fetchSubscriptionStatus = async () => {
+      setLoading(true);
       try {
         const user = auth.currentUser;
         if (user && isMounted) {
@@ -43,10 +46,10 @@ const LiveEditor = () => {
           setSubscriptionStatus(response.data.subscriptionStatus);
         }
       } catch (error) {
-        if (isMounted) {
-          console.error("Error fetching subscription status:", error);
-          toast.error("Error fetching subscription status");
-        }
+        console.error("Error fetching subscription status:", error);
+        toast.error("Error fetching subscription status");
+      } finally {
+        setLoading(false); // Set loading to false after fetching
       }
     };
 
