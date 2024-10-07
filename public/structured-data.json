@@ -1,0 +1,960 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "React Lessons Catalog",
+    "description": "A comprehensive list of React programming lessons covering various topics and difficulty levels.",
+    "numberOfItems": 60,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Course",
+          "name": "3D Interactive Card",
+          "description": "Building a React functional component called Card with mouse movement handling and event listeners.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/3D-Interactive-Card"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Course",
+          "name": "BMI Tracker",
+          "description": "A React component for calculating Body Mass Index (BMI) based on user input.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/BMI-Tracker"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Course",
+          "name": "Dark-Light Mode Toggle",
+          "description": "Setting up a React project to display articles with a toggleable light and dark theme.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Dark-Light-Mode-Toggle"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Course",
+          "name": "Sortify: Search by Name",
+          "description": "A React and Bootstrap application for sorting and managing contact names.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Sortify-Search-by-Name"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "Course",
+          "name": "Simple Quiz App",
+          "description": "Creating an interactive quiz application from scratch using React.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Simple-Quiz-App"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "Course",
+          "name": "FAQ",
+          "description": "Building a user-friendly React application for displaying frequently asked questions with collapsible sections.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/FAQ"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "Course",
+          "name": "Birthday Reminder",
+          "description": "Creating a dynamic 'Birthday Reminder' app using React, focusing on state management and data filtering.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Birthday-Reminder"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "Course",
+          "name": "Dynamic Box Shadow Generator",
+          "description": "Implementing a dynamic box shadow generator with customizable shadow properties.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Dynamic-Box-Shadow-Generator"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "Course",
+          "name": "Memory Game",
+          "description": "Creating a Memory Game using React, focusing on game state management and card interactions.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Memory-Game"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "Course",
+          "name": "Color Generator",
+          "description": "Building a React application for generating and displaying color palettes with clipboard functionality.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Color-Generator"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "item": {
+          "@type": "Course",
+          "name": "Range Slider",
+          "description": "Creating a customizable double range slider component in React.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Range-Slider"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "item": {
+          "@type": "Course",
+          "name": "Form Validation Component",
+          "description": "Implementing a form input validation component with conditional logic and dynamic styling.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Form-Validation-Component"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 13,
+        "item": {
+          "@type": "Course",
+          "name": "Markdown Preview App",
+          "description": "Building a Markdown preview application with real-time rendering using React.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Markdown-Preview-App"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 14,
+        "item": {
+          "@type": "Course",
+          "name": "Menu App",
+          "description": "Developing a responsive web application for displaying and filtering menu items.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/Menu-App"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 15,
+        "item": {
+          "@type": "Course",
+          "name": "Responsive Navbar",
+          "description": "Creating a responsive navbar component with logo, navigation links, and social icons.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Responsive-Navbar"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 16,
+        "item": {
+          "@type": "Course",
+          "name": "Pagination Page",
+          "description": "Implementing pagination functionality for displaying GitHub followers using React hooks.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/Pagination-Page"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 17,
+        "item": {
+          "@type": "Course",
+          "name": "Search Bar",
+          "description": "Building a dynamic search bar component with API integration and result filtering.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/Search-Bar"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 18,
+        "item": {
+          "@type": "Course",
+          "name": "Dropdown",
+          "description": "Creating a dropdown menu for selecting programming languages with toggle functionality.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Dropdown"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 19,
+        "item": {
+          "@type": "Course",
+          "name": "Sidebar",
+          "description": "Implementing a sidebar component in React.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Sidebar"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 20,
+        "item": {
+          "@type": "Course",
+          "name": "Dynamic Table with Sorting and Copy Functionality",
+          "description": "Building a dynamic table using react-table with sorting and copy-to-clipboard features.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/Dynamic-Table-with-Sorting-and-Copy-Functionality"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 21,
+        "item": {
+          "@type": "Course",
+          "name": "To-Do App",
+          "description": "Creating a task management application with add, delete, edit, and complete functionality.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/To-Do-App"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 22,
+        "item": {
+          "@type": "Course",
+          "name": "Testimonials",
+          "description": "Building a dynamic testimonial display with navigation and animated background.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Testimonials"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 23,
+        "item": {
+          "@type": "Course",
+          "name": "Voice to Text",
+          "description": "Implementing speech recognition for real-time voice-to-text conversion.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Voice-to-Text"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 24,
+        "item": {
+          "@type": "Course",
+          "name": "Text to Voice",
+          "description": "Creating a text-to-speech application using the SpeechSynthesis API.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Text-to-Voice"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 25,
+        "item": {
+          "@type": "Course",
+          "name": "CourseFinder",
+          "description": "Developing a web application for discovering and filtering online courses.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/Course-Finder"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 26,
+        "item": {
+          "@type": "Course",
+          "name": "Course Shop",
+          "description": "Building e-commerce components for managing a shopping cart and displaying products.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/Course-Shop"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 27,
+        "item": {
+          "@type": "Course",
+          "name": "MATERIALIZECSS Portfolio",
+          "description": "Creating a portfolio website using React and Materialize CSS.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/MATERIALIZECSS-Portfolio"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 28,
+        "item": {
+          "@type": "Course",
+          "name": "MaterializeCSS Web Toolkit",
+          "description": "Building a web interface with React and Materialize CSS, featuring responsive components.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/MaterializeCSS-Web-Toolkit"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 29,
+        "item": {
+          "@type": "Course",
+          "name": "TradeHub: React Trading Dashboard",
+          "description": "Developing a comprehensive trading dashboard for managing investments and monitoring market data.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/TradeHub-React-Trading-Dashboard"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 30,
+        "item": {
+          "@type": "Course",
+          "name": "Cube Image Gallery",
+          "description": "Creating an interactive 3D cube image gallery using CSS transformations.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Cube-Image-Gallery"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 31,
+        "item": {
+          "@type": "Course",
+          "name": "ReactAnalogClock",
+          "description": "Building a real-time analog clock simulation using React.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Analog-Clock"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 32,
+        "item": {
+          "@type": "Course",
+          "name": "Dynamic Menu Highlighter",
+          "description": "Implementing an interactive menu with dynamic highlighting and animated border positioning.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Dynamic-Menu-Highlighter"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "item": {
+          "@type": "Course",
+          "name": "Order Tracker Mobile App",
+          "description": "Creating a responsive mobile application for real-time order tracking with a drawer interface.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/Order-Tracker-Mobile-App"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 34,
+        "item": {
+          "@type": "Course",
+          "name": "Timer App",
+          "description": "Developing a React-based countdown timer with start, pause, and reset functions.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Timer-App"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 35,
+        "item": {
+          "@type": "Course",
+          "name": "My Portfolio Website",
+          "description": "Building a personal portfolio website with various sections using React's component-based architecture.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Portfolio-Website"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 36,
+        "item": {
+          "@type": "Course",
+          "name": "Celestial Canvas",
+          "description": "Creating a dynamic visual simulation of the night sky with interactive elements.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/Celestial-Canvas"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 37,
+        "item": {
+          "@type": "Course",
+          "name": "Materialize Portfolio",
+          "description": "Building a dynamic portfolio website using React and Materialize CSS with responsive design and interactive elements.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Materialize-Portfolio"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 38,
+        "item": {
+          "@type": "Course",
+          "name": "File Uploader",
+          "description": "Developing a user-friendly file upload component with display, download, and deletion functionality.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/File-Uploader"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 39,
+        "item": {
+          "@type": "Course",
+          "name": "Cake Website",
+          "description": "Creating a responsive React application simulating a bakery's online presence with dynamic components.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Cake-Website"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 40,
+        "item": {
+          "@type": "Course",
+          "name": "Interactive 3D Card Viewer",
+          "description": "Building an interactive React application that rotates a 3D-rendered card based on user interactions.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Interactive-3D-Card-Viewer"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 41,
+        "item": {
+          "@type": "Course",
+          "name": "DevPortfolio",
+          "description": "Designing a personal portfolio website for web developers with interactive project filters and responsive design.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Dev-Portfolio"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 42,
+        "item": {
+          "@type": "Course",
+          "name": "Fruit Carousel",
+          "description": "Creating an interactive image carousel component showcasing fruit images with navigation and progress indicators.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Fruit-Carousel"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 43,
+        "item": {
+          "@type": "Course",
+          "name": "FitLife Website",
+          "description": "Developing a modern fitness website with personalized programs and smooth navigation.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/FitLife-Website"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 44,
+        "item": {
+          "@type": "Course",
+          "name": "FAQ Toggle",
+          "description": "Building a dynamic FAQ component with expandable and collapsible answers using React hooks.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/FAQ-Toggle"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 45,
+        "item": {
+          "@type": "Course",
+          "name": "Pomodoro Focus Timer",
+          "description": "Creating an interactive Pomodoro Timer for productivity with customizable durations and visual countdown.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Pomodoro-Focus-Timer"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 46,
+        "item": {
+          "@type": "Course",
+          "name": "Profolio",
+          "description": "Developing a visually appealing personal portfolio website with React and Framer Motion animations.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Profolio"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 47,
+        "item": {
+          "@type": "Course",
+          "name": "Animated Progress Loader",
+          "description": "Implementing an engaging loading animation using Framer Motion in a React application.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Animated-Progress-Loader"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 48,
+        "item": {
+          "@type": "Course",
+          "name": "DynamicLoader",
+          "description": "Creating a sophisticated animated loader with smooth transitions using Framer Motion in React.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Dynamic-Loader"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 49,
+        "item": {
+          "@type": "Course",
+          "name": "SpeechSynth",
+          "description": "Building a text-to-speech web application with React frontend and Node.js backend using gTTs integration.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Hard",
+          "url": "https://projectschool.dev/#/editor/React/Speech-Synth"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 50,
+        "item": {
+          "@type": "Course",
+          "name": "SmoothScroll Navigator",
+          "description": "Developing a React application with a dynamic navigation bar featuring smooth scrolling and section highlighting.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Smooth-Scroll-Navigator"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 51,
+        "item": {
+          "@type": "Course",
+          "name": "Tesla Experience",
+          "description": "Creating a web application to showcase Tesla's electric vehicles with detailed information and animations.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Tesla-Experience"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 52,
+        "item": {
+          "@type": "Course",
+          "name": "Dynamic Dashboard",
+          "description": "Building a modern web application with an interactive interface for managing and visualizing various types of data.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Dynamic-Dashboard"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 53,
+        "item": {
+          "@type": "Course",
+          "name": "Quiz Master",
+          "description": "Developing an interactive quiz application for testing React concepts with animations and detailed feedback.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Quiz-Master"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 54,
+        "item": {
+          "@type": "Course",
+          "name": "Profile Popup Animation",
+          "description": "Creating a React-based web application with an animated user profile popup using Framer Motion.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Profile-Popup-Animation"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 55,
+        "item": {
+          "@type": "Course",
+          "name": "Movies4u",
+          "description": "Building a dynamic React web application for exploring and searching movie-related images with interactive features.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Movies4u"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 56,
+        "item": {
+          "@type": "Course",
+          "name": "Nature's Beauty",
+          "description": "Developing a React-based web project showcasing nature's beauty with responsive design and smooth interactivity.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Natures-Beauty"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 57,
+        "item": {
+          "@type": "Course",
+          "name": "Captcha Guard",
+          "description": "Implementing a simple yet effective React-based captcha validation tool with dynamic character generation.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Captcha-Guard"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 58,
+        "item": {
+          "@type": "Course",
+          "name": "Calculator",
+          "description": "Building a simple calculator using React with basic arithmetic operations and error handling.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Calculator"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 59,
+        "item": {
+          "@type": "Course",
+          "name": "Copy To Clipboard",
+          "description": "Creating a React-based clipboard tool for copying text with instant user feedback.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/Copy-To-Clipboard"
+
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 60,
+        "item": {
+          "@type": "Course",
+          "name": "English Dictionary",
+          "description": "Developing a React dictionary app that fetches word meanings, phonetics, and examples from an external API.",
+          "author": {
+            "@type": "Person",
+            "name": "www.projectschool.dev"
+          },
+          "difficulty": "Easy",
+          "url": "https://projectschool.dev/#/editor/React/English-Dictionary"
+
+        }
+      }
+    ]
+  }
