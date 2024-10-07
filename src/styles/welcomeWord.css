@@ -14,13 +14,13 @@
   display: flex;
   justify-content: center;
   max-width: 100%;
-  margin-top: 1rem;
-  transform: rotate(10deg);
+  margin-top: 3rem;
+  transform: rotate(8deg);
 }
 
 .welcomeWord,
 .toTheWord {
-  width: 150%;
+  width: 100%;
   position: absolute;
   text-align: center;
 }
@@ -259,11 +259,11 @@
 
 @media only screen and (max-device-width: 768px) {
   .twoWords {
-    margin-top: 50px;
+    margin-top: 2rem;
+    transform: rotate(5deg);
   }
   .word-title span {
-    font-size: 7rem;
-    line-height: 0%;
+    font-size: 5rem;
   }
 
   .back-button {
@@ -324,5 +324,22 @@
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1920px) {
   .toTheWord span {
     margin: 55px 0;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .twoWords {
+    margin-top: 1rem;
+    transform: rotate(3deg);
+  }
+  .word-title span {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .word-title span {
+    font-size: 3rem;
   }
 }
