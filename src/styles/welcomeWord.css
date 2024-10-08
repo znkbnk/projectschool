@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-
 .word-container {
   position: relative;
   width: 100%;
@@ -10,11 +9,12 @@
   align-items: center;
   height: 100vh;
 }
+
 .twoWords {
   display: flex;
   justify-content: center;
   max-width: 100%;
-  margin-top: 3rem;
+  margin-top: 4rem;
   transform: rotate(8deg);
 }
 
@@ -31,7 +31,6 @@
 }
 
 .toTheWord {
-  position: relative;
   margin-top: 6rem;
   z-index: 3;
 }
@@ -48,12 +47,10 @@
   display: inline-block;
   background: linear-gradient(var(--finish-fill), var(--fill));
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-clip: text;
   color: transparent;
   font-family: "Shadows Into Light", cursive;
   font-weight: 200;
-  font-style: normal;
   font-size: 7rem;
   text-align: center;
 }
@@ -64,7 +61,6 @@
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: auto;
 }
 
 .sectionImg7 {
@@ -77,73 +73,18 @@
 }
 
 @keyframes shake {
-  0%,
-  100% {
+  0%, 100% {
     transform: rotate(0);
   }
-  5% {
+  5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
     transform: rotate(15deg);
   }
-  10% {
+  10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {
     transform: rotate(-15deg);
-  }
-  15% {
-    transform: rotate(15deg);
-  }
-  20% {
-    transform: rotate(-15deg);
-  }
-  25% {
-    transform: rotate(15deg);
-  }
-  30% {
-    transform: rotate(-15deg);
-  }
-  35% {
-    transform: rotate(15deg);
-  }
-  40% {
-    transform: rotate(-15deg);
-  }
-  45% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-15deg);
-  }
-  55% {
-    transform: rotate(15deg);
-  }
-  60% {
-    transform: rotate(-15deg);
-  }
-  65% {
-    transform: rotate(15deg);
-  }
-  70% {
-    transform: rotate(-15deg);
-  }
-  75% {
-    transform: rotate(15deg);
-  }
-  80% {
-    transform: rotate(-15deg);
-  }
-  85% {
-    transform: rotate(15deg);
-  }
-  90% {
-    transform: rotate(-15deg);
-  }
-  95% {
-    transform: rotate(15deg);
   }
 }
 
 .projectschoolImg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   max-width: 450px;
   position: absolute;
   z-index: 5;
@@ -153,9 +94,6 @@
 }
 
 .sectionImg3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 800px;
   top: -50%;
   left: 50%;
@@ -172,78 +110,12 @@
   z-index: 6;
 }
 
-
-
-@media only screen and (max-device-width: 769px) {
- 
-  .sectionImg7 {
-    left: 15%;
-    top: 37%;
-  }
-  .section1-list {
-    margin: 0 50px;
-  }
-  
-
-  .projectschoolImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 350px;
-    position: absolute;
-    z-index: 5;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .sectionImg3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 600px;
-    top: -50%;
-    left: 50%;
-    position: absolute;
-    z-index: 2;
-    transform: translate(-50%, -50%);
-  }
-}
-@media only screen and (max-device-width: 460px) {
-
- 
-  
-  .sectionImg7 {
-    left: 15%;
-    top: 42%;
-  }
-  .sectionImg3 {
-    width: 80%;
-  }
-  .projectschoolImg {
-    width: 50%;
-  }
-  .ipsType_right p span {
-    font-size: 0.8rem;
-  }
-  .section1-list {
-    font-size: 1rem;
-    margin: 0 20px;
-  }
-  h2.heading_large {
-    font-size: 1.5em;
-  }
-
-  .slide__content--para {
-    font-size: 1rem;
-    padding: 0.75rem;
-  }
-  
-}
-@media only screen and (max-device-width: 1024px) {
+/* Combined Media Queries to Reduce Repetition */
+@media only screen and (max-width: 1024px) {
   .sectionImg4 {
     width: 80%;
   }
+
   .sectionImg7 {
     left: 15%;
     top: 40%;
@@ -253,93 +125,56 @@
     font-size: 9rem;
     margin-top: 75px;
   }
-  
- 
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-width: 768px) {
   .twoWords {
     margin-top: 2rem;
     transform: rotate(5deg);
   }
+
   .word-title span {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
-  .back-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 50px;
-    z-index: 999;
-  }
-  
-  .back-button:hover {
-    background-color: #0056b3;
-  }
- 
-}
-
-
-@media only screen and (max-device-width: 640px) {
-  .twoWords {
-    margin-top: 50px;
-  }
-  .word-title span {
-    font-size: 7rem;
-    line-height: 0%;
+  .projectschoolImg {
+    max-width: 350px;
   }
 
-  .back-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin-top: 50px;
-    z-index: 999;
-  }
-  
-  .back-button:hover {
-    background-color: #0056b3;
-  }
- 
- 
-}
-
-@media only screen and (max-device-width: 375px) {
- .important-red h3{
-  font-size: 1.5rem;
-  z-index: 45633;
- }
-}
-@media only screen and (max-device-width: 640px) {
-  .container, .content-section {
-    height: 100vh;
+  .sectionImg3 {
+    width: 600px;
   }
 }
 
+@media only screen and (max-width: 640px) {
+  .sectionImg7 {
+    top: 42%;
+  }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1920px) {
-  .toTheWord span {
-    margin: 55px 0;
+  .sectionImg3 {
+    width: 80%;
+  }
+
+  .projectschoolImg {
+    width: 50%;
   }
 }
-
 
 @media only screen and (max-width: 480px) {
   .twoWords {
     margin-top: 1rem;
     transform: rotate(3deg);
   }
+
   .word-title span {
     font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .important-red h3 {
+    font-size: 1.5rem;
+    z-index: 45633;
   }
 }
 
