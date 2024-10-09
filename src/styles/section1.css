@@ -28,6 +28,7 @@
 .container {
   width: 100%;
   padding: 0;
+  overflow: hidden;
 }
 
 ul {
@@ -216,7 +217,7 @@ h2.heading_large {
     top: 50%;
     left: 20%;
     transform: translate(-50%, -50%) rotate(10deg);
-    width: 140%;
+    width: 130%;
   }
 
   .ipsGrid > .ipsGrid_span7 {

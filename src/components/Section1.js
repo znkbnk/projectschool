@@ -105,7 +105,7 @@ function Section1() {
             >
               <img
                 src={image5}
-                alt='Sample'
+                alt='Educational scene showcasing practical learning'
                 className='section2-image neon-flash short-circuit'
               />
             </motion.div>
@@ -138,7 +138,7 @@ function Section1() {
             variants={fadeInLeft}
           >
             <div className='  ipsGrid_span5'>
-              <img className='section1-image' src={image3} alt='' />
+              <img className='section1-image' src={image3} alt='Introduction to React' />
             </div>
             <div className='ipsGrid_span7 ipsType_left'>
               <h2 className='heading_large'>
@@ -194,7 +194,7 @@ function Section1() {
               </motion.ul>
             </div>
             <div className='  ipsGrid_span5'>
-              <img className='section1-image' src={image4} alt='' />
+              <img className='section1-image' src={image4} alt='State Management in React' />
             </div>
           </motion.div>
         </motion.div>
