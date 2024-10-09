@@ -168,12 +168,18 @@
   .word-title span {
     font-size: 3.5rem;
   }
+  .sectionImg4 {
+    width: 60%;
+  }
 }
 
 @media only screen and (max-width: 375px) {
   .important-red h3 {
     font-size: 1.5rem;
     z-index: 45633;
+  }
+  .sectionImg4 {
+    width: 60%;
   }
 }
 
