@@ -124,7 +124,6 @@ const WelcomeComponent = () => {
           alt='logo'
           className='sectionImg7'
           ref={sectionImg7Ref}
-          loading='lazy'
         />
         <img
           src={sectionImg2}
