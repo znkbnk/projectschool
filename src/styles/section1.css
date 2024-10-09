@@ -211,10 +211,16 @@ h2.heading_large {
     margin: 0 40px;
   }
 
- 
+  .section2-image {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%) rotate(10deg);
+    width: 140%;
+  }
 
   .ipsGrid > .ipsGrid_span7 {
-    width: 60%;
+    width: 50%;
   }
 
   .ipsGrid > .ipsGrid_span5 {
