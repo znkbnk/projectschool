@@ -6,7 +6,7 @@ import sectionImg2 from "../images/sectionImg2.webp";
 import sectionImg3 from "../images/sectionImg3.webp";
 import sectionImg4 from "../images/sectionImg4.webp";
 import sectionImg7 from "../images/sectionImg7.webp";
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 
 const MobileMessage = () => {
   const logo = useRef(null);
@@ -17,7 +17,10 @@ const MobileMessage = () => {
   const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
-    animation();
+    window.addEventListener("load", animation);
+    return () => {
+      window.removeEventListener("load", animation);
+    };
   }, []);
 
   const animation = () => {
@@ -83,25 +86,25 @@ const MobileMessage = () => {
           {
             visibility: "visible",
             opacity: 1,
-            x: screenWidth - 100,
+            x: screenWidth + 100,
             y: 260,
             rotation: 20,
             duration: 1.5,
             ease: "linear",
             onComplete: () => {
-              // After animation is complete, remove the element
               sectionImg2Element.remove();
             },
           },
-          "-=1.5"
+          "-=1"
         )
         .to(
           picture,
           {
             visibility: "visible",
             opacity: 1,
+            duration: 0.5,
           },
-          "-=0.5"
+          "-=1"
         );
     }
   };
@@ -113,14 +116,14 @@ const MobileMessage = () => {
 
   return (
     <div className='word-container'>
-      <button 
-        className='back-button' 
-        onClick={handleBackClick}
-      >
+      <button className='back-button' onClick={handleBackClick}>
         Back
       </button>
 
-      <div style={{ textAlign: "center", padding: "50px", fontSize: "2rem" }} className="important-red">
+      <div
+        style={{ textAlign: "center", padding: "50px", fontSize: "2rem" }}
+        className='important-red'
+      >
         <h3>
           Please use a desktop or laptop for a better learning experience.
         </h3>
@@ -139,7 +142,8 @@ const MobileMessage = () => {
           alt='logo'
           className='sectionImg7'
           ref={sectionImg7Ref}
-        ></img>
+          loading='lazy'
+        />
         <img
           src={sectionImg2}
           alt='logo'

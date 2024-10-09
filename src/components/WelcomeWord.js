@@ -16,7 +16,10 @@ const WelcomeComponent = () => {
   const sectionImg2Ref = useRef(null);
 
   useEffect(() => {
-    animation();
+    window.addEventListener("load", animation);
+    return () => {
+      window.removeEventListener("load", animation);
+    };
   }, []);
 
   const animation = () => {
@@ -88,7 +91,7 @@ const WelcomeComponent = () => {
             duration: 1.5,
             ease: "linear",
             onComplete: () => {
-              sectionImg2Element.remove(); // After animation is complete, remove the element
+              sectionImg2Element.remove();
             },
           },
           "-=1"
@@ -121,7 +124,8 @@ const WelcomeComponent = () => {
           alt='logo'
           className='sectionImg7'
           ref={sectionImg7Ref}
-        ></img>
+          loading='lazy'
+        />
         <img
           src={sectionImg2}
           alt='logo'

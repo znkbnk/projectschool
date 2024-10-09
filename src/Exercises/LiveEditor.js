@@ -229,6 +229,7 @@ const LiveEditor = () => {
     setCheatsheetContent(currentCheatsheet);
     setShowCheatsheet((prev) => !prev);
   };
+  
 
   const currentTask = tasksData[lessonType]?.[currentTaskIndex] || {};
 
