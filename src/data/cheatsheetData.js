@@ -1563,6 +1563,71 @@ const cheatsheetData = [
         },
       ],
     },
+    {
+      taskId: "Testimonials",
+      content: [
+        {
+          title: "",
+          subtitle: "State Initialization",
+          details: [
+            "'currentIndex': Tracks which testimonial is currently displayed.",
+            "'setCurrentIndex': Updates the value of currentIndex.",
+            "'useState(0)': Initializes the state variable 'currentIndex' to 0, meaning the first testimonial will be displayed initially.",
+          ],
+          image: "./cheatsheetImages/task22/4.webp"
+        },
+        {
+          title: "",
+          subtitle: "GSAP Animation using useEffect",
+          details: [
+            "'useEffect': This Hook runs after the component renders. The empty [] ensures it runs only once (on mount).",
+            "'gsap.to': Animates the '.testimonials' class by changing the background color over 4 seconds, repeating infinitely (repeat: -1) with a 'yoyo' effect (reverses the animation).",
+            "GSAP is highly customizable for adding animations and transitions.",
+          ],
+          image: "./cheatsheetImages/task22/1.webp"
+        },
+           {
+          title: "",
+          subtitle: "Navigation Functions",
+          details: [
+            "'handlePrevClick': Decreases the current index to show the previous testimonial. Uses modulus (%) to loop back to the last item when reaching the beginning.",
+            "'handleNextClick': Increases the current index to show the next testimonial. Loops back to the first item when reaching the end.",
+            "Using 'modulus' (%) is a common trick for creating circular navigation.",
+          ],
+          image: "./cheatsheetImages/task22/2.webp"
+        },
+           {
+          title: "",
+          subtitle: "Rendering the Testimonials",
+          details: [
+            "'testimonials[currentIndex]': Displays the current testimonial's quote and author based on the 'currentIndex' state.",
+          
+          ],
+          image: "./cheatsheetImages/task22/3.webp"
+        },
+       
+           {
+          title: "",
+          subtitle: "",
+          details: [
+            "",
+            "",
+            "",
+          ],
+          image: "./cheatsheetImages/task/.webp"
+        },
+           {
+          title: "",
+          subtitle: "",
+          details: [
+            "",
+            "",
+            "",
+          ],
+          image: "./cheatsheetImages/task/.webp"
+        },
+      ],
+    },
 
 
 
