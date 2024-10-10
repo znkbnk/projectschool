@@ -1606,26 +1606,7 @@ const cheatsheetData = [
           image: "./cheatsheetImages/task22/3.webp"
         },
        
-           {
-          title: "",
-          subtitle: "",
-          details: [
-            "",
-            "",
-            "",
-          ],
-          image: "./cheatsheetImages/task/.webp"
-        },
-           {
-          title: "",
-          subtitle: "",
-          details: [
-            "",
-            "",
-            "",
-          ],
-          image: "./cheatsheetImages/task/.webp"
-        },
+         
       ],
     },
 
