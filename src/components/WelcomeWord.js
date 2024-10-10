@@ -116,7 +116,6 @@ const WelcomeComponent = () => {
         alt='logo'
         className='sectionImg4'
         ref={sectionImg4Ref}
-        loading="eager"
       ></img>
 
       <div className='sectionImages-container'>
