@@ -1,5 +1,4 @@
-// src/pages/Login.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // include useEffect
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ParticlesBackground from "./ParticlesBackground";
@@ -15,6 +14,16 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Disable scrolling when the login page is active
+    document.body.style.overflow = "hidden";
+
+    // Cleanup function to restore scrolling
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   const onLogin = (e) => {
     e.preventDefault();

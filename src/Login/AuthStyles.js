@@ -9,6 +9,8 @@ export const StyledContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
+  height: 100vh;
 `;
 
 export const StyledForm = styled(motion.form)`
@@ -20,6 +22,9 @@ export const StyledForm = styled(motion.form)`
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 100%;
   max-width: 400px;
+  box-sizing: border-box;
+
+  
 `;
 
 export const StyledInput = styled.input`
@@ -32,7 +37,7 @@ export const StyledInput = styled.input`
   transition: all 0.3s ease;
   border: 1px solid transparent;
   margin-bottom: 1rem;
- 
+
   &:focus {
     outline: none;
     background: rgba(30, 144, 255, 0.1);

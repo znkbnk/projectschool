@@ -1,5 +1,5 @@
 // src/Login/ResetPassword.js
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ParticlesBackground from "./ParticlesBackground";
@@ -13,6 +13,16 @@ import { toast } from "react-toastify";
 
 const ResetPassword = () => {
   const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    // Disable scrolling when the login page is active
+    document.body.style.overflow = "hidden";
+
+    // Cleanup function to restore scrolling
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   const handlePasswordReset = async (e) => {
     e.preventDefault();
