@@ -26,6 +26,7 @@ article {
 .articles-section p {
   color: white;
   margin: 20px 0;
+  text-align: start;
 }
 
 .articles-section ul {

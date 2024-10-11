@@ -25,7 +25,7 @@ const Articles = () => {
 
       <Navbar />
       <main>
-        <div id='articles-main'>
+        <div id='articles-main' className="wrapper">
           <article key={article.id}>
             <section className='articles-section'>
               <h1>{article.title}</h1>

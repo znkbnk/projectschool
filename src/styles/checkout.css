@@ -1,67 +1,68 @@
+/* Global Styles */
 * {
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
+/* Price Card Wrapper */
 .card-wrapper {
-  box-shadow: -4px 8px 12px 0px rgba(179, 179, 179, 1);
-  width: 230px;
-  height: 550px;
+  max-width: 350px;
+  margin: 20px;
   border: 1px solid silver;
-  margin: 0 15px;
-  transition: transform 0.5s;
+  border-radius: 10px;
+  background-color: #000000;
+  box-shadow: -4px 8px 12px rgba(179, 179, 179, 0.8);
+  transition: transform 0.3s ease;
 }
 
 .card-wrapper:hover {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
+/* Card Header */
 .card-header {
   text-align: center;
-  margin: 30px 0 20px 0;
+  margin: 20px 0;
 }
 
-.card-title {
-  margin: 0;
-}
-
+/* Card Price Styling */
 .card-price {
   color: #fff;
   display: flex;
-  height: 55px;
   align-items: center;
   justify-content: center;
-}
-
-.card-price.monthly {
-  background-color: #369be6;
+  height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
 }
 
 .card-price.free {
   background-color: #7d7f8c;
 }
 
+.card-price.monthly {
+  background-color: #369be6;
+}
+
 .card-price.annual {
-  background-color: #7d7f8c;
+  background-color: #4caf50;
 }
 
 .price-number {
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 36px;
+  font-weight: 600;
 }
 
-.price-text {
-  font-size: 12px;
-}
-
+/* Advantages List */
 .advantages-list {
+  padding: 20px;
+  color: #ffffff;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 25px 0;
-  padding: 20px;
-  color: white;
 }
 
 .advantage-item {
@@ -70,92 +71,103 @@
 
 .crossed-text {
   text-decoration: line-through;
+  color: #bbb;
 }
 
-
+/* Card Footer */
 .card-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
+/* Card Button */
 .card-button {
-  width: 70%;
+  width: 80%;
   background-color: #369be6;
   color: #fff;
-  text-transform: uppercase;
   border: none;
-  border-radius: 3px;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 12px;
   cursor: pointer;
-  transition: background-color 0.5s, box-shadow 0.5s;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-button:hover {
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  background-color: rgb(100, 141, 174);
+  background-color: #2a82b7;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card-trial-text {
-  font-size: 13px;
-  margin: 15px 0;
+/* Terms Links */
+.terms-links {
+  text-align: center;
+  color: white;
+  padding: 20px;
 }
 
-.price-cards-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 25px 0 50px;
-}
+
 
 .terms-input {
-  margin: 10px;
-}
-
-.terms-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 200px;
-  color: white;
+  margin-right: 10px;
 }
 
 .terms-links a {
-  font-weight: 18px;
+  font-weight: bold;
   color: inherit;
-  text-decoration: underline;  
-  font-size: large;
-  display: inline-block; /* Makes the link behave like a block */
-  margin: 8px;          /* Adds space between touch targets */
-  border-radius: 5px;
+  text-decoration: underline;
+  font-size: 16px;
 }
 
-.terms-links a:visited {
-  text-decoration: none;
-  color: inherit;
+/* Price Cards Container */
+.price-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
 }
 
-@media only screen and (max-device-width: 640px) {
+/* Responsive Design */
+@media (max-width: 768px) {
   .price-cards-container {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-   height: auto;
-   padding: 85px;
+    padding: 20px;
   }
+
   .card-wrapper {
-    margin: 25px 0;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .card-price {
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .advantages-list {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .card-button {
+    width: 90%;
+    padding: 10px;
   }
 
   .terms-links {
-    padding: 50px;
+    padding: 30px;
   }
 }
 
-@media only screen and (max-device-width: 768px) {
-  .terms-links {
-    padding: 50px;
+/* Medium to Large Screens */
+@media (min-width: 769px) {
+  .price-cards-container {
+    padding: 40px 60px;
   }
- }
+
+  .terms-links {
+    padding: 50px 200px;
+  }
+}

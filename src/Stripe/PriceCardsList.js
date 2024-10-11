@@ -52,7 +52,7 @@ const PriceCardsList = () => {
   const handleFreeButtonClick = () => {
     const user = auth.currentUser;
     if (user) {
-      navigate("/dashboard"); // Example: redirect logged-in users to a dashboard
+      navigate("/exercises"); 
     } else {
       navigate("/signup");
     }
