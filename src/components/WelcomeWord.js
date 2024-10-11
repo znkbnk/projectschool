@@ -17,9 +17,7 @@ const WelcomeComponent = () => {
 
   useEffect(() => {
     window.addEventListener("load", animation);
-    return () => {
-      window.removeEventListener("load", animation);
-    };
+    
   }, []);
 
   const animation = () => {
