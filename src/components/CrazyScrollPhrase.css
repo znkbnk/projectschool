@@ -1,14 +1,18 @@
 .scroll-indicator {
-    color: white;
-    border-radius: 50px;
-    font-family: 'Arial', sans-serif;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    z-index: 1000;
-  }
+  position: fixed; /* Make it fixed to the screen */
+  bottom: 20px; /* Push it 20px above the bottom of the viewport */
+  left: 50%; /* Horizontally center it */
+  transform: translateX(-50%); /* Adjust to perfectly center */
+  color: white;
+  border-radius: 50px;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
   
   .scroll-indicator.hidden {
     opacity: 0;

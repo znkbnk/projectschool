@@ -109,6 +109,18 @@
   z-index: 6;
 }
 
+.pslogosmall {
+  display: none;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+
+
 /* Combined Media Queries to Reduce Repetition */
 @media only screen and (max-width: 1024px) {
   .sectionImg4 {
@@ -146,16 +158,16 @@
 }
 
 @media only screen and (max-width: 640px) {
-  .sectionImg7 {
-    top: 42%;
-  }
-
-  .sectionImg3 {
-    width: 80%;
-  }
-
+  .sectionImg4,
+  .sectionImg7,
+  .sectionImg3,
+  .sectionImg2,
   .projectschoolImg {
-    width: 50%;
+    display: none;
+  }
+
+  .pslogosmall {
+    display: block;
   }
 }
 

@@ -6,7 +6,8 @@ import sectionImg2 from "../images/sectionImg2.webp";
 import sectionImg3 from "../images/sectionImg3.webp";
 import sectionImg4 from "../images/sectionImg4.webp";
 import sectionImg7 from "../images/sectionImg7.webp";
-import SimplifiedWelcomeComponent from "./SimplifiedWelcomeComponent";
+import pslogosmall from "../images/pslogosmall.webp";
+import CrazyScrollPhrase from "./CrazyScrollPhrase";
 
 const WelcomeComponent = () => {
   const logo = useRef(null);
@@ -16,8 +17,7 @@ const WelcomeComponent = () => {
   const sectionImg2Ref = useRef(null);
 
   useEffect(() => {
-    window.addEventListener("load", animation);
-    
+    animation(); // Run animation directly after rendering
   }, []);
 
   const animation = () => {
@@ -89,7 +89,7 @@ const WelcomeComponent = () => {
             duration: 1.5,
             ease: "linear",
             onComplete: () => {
-              sectionImg2Element.remove();
+              gsap.set(sectionImg2Element, { display: "none" });
             },
           },
           "-=1"
@@ -108,7 +108,7 @@ const WelcomeComponent = () => {
 
   return (
     <div className='word-container'>
-      <SimplifiedWelcomeComponent />
+      {/* Existing images */}
       <img
         src={sectionImg4}
         alt='logo'
@@ -142,6 +142,16 @@ const WelcomeComponent = () => {
           ref={logo}
         ></img>
       </div>
+
+      {/* Mobile logo */}
+      <img
+        src={pslogosmall}
+        alt="pslogo small"
+        className="pslogosmall"
+        ref={logo}
+      ></img>
+
+      <CrazyScrollPhrase />
     </div>
   );
 };

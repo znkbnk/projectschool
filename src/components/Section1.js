@@ -5,7 +5,6 @@ import image4 from "../images/pic7.webp"; // Ensure this is different from image
 import image5 from "../images/sectionPicture2.webp";
 import "../styles/section1.css";
 import WelcomeWord from "./WelcomeWord";
-import CrazyScrollPhrase from "./CrazyScrollPhrase";
 import { Link } from "react-router-dom";
 
 function Section1() {
@@ -48,7 +47,6 @@ function Section1() {
     <div className='container'>
       <header>
         <WelcomeWord />
-        <CrazyScrollPhrase />
       </header>
 
       <main>
@@ -65,7 +63,7 @@ function Section1() {
               initial='hidden'
               whileInView='visible'
               viewport={{ once: false, amount: 0.5 }}
-              variants={fadeInUp}
+              variants={fadeInLeft}
             >
                <p>
                 <span>
