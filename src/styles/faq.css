@@ -17,13 +17,13 @@
 .faq-title {
   display: block;
   position: relative;
-  font-size: 7rem;
+  font-size: 2rem;
 }
 
 .faqContainer {
-  padding: 20px 32px 120px 32px;
   width: 100%;
   max-width: 900px;
+  margin: 20px 0;
 }
 
 .headerWrapper {

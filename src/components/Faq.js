@@ -33,14 +33,12 @@ const Faq = () => {
     <div>
       <Navbar />
       <div className='faq-container'>
-          <div>
-            <h1 className='faq-title' ref={titleRef}>
-              <span>F</span>
-              <span>A</span>
-              <span>Q</span>
-            </h1>
-            <h1>Frequently asked questions</h1>
-          </div>
+        <div>
+          <h1 className='faq-title' ref={titleRef}>
+            {" "}
+            Frequently asked questions
+          </h1>
+        </div>
         <div className='faqContainer'>
           <div className='headerWrapper'>
             {faqData.map((faq, index) => (
