@@ -3736,7 +3736,7 @@ const tasksData = {
     },
     {
       taskId: "Course-Finder",
-      taskTitle: "CourseFinder",
+      taskTitle: "Course Finder",
       introduction:
         "CourseFinder is an intuitive web application designed to simplify the process of discovering and selecting online courses. With powerful filtering options based on category, price range, and search queries, CourseFinder helps users navigate through a diverse range of educational offerings, empowering them to find the perfect learning experience tailored to their interests and needs.",
 

@@ -1614,7 +1614,111 @@ const cheatsheetData = [
        
     ],
   },
-
+  {
+    taskId: "Text-to-Voice",
+    content: [
+      {
+        title: "Event Handlers",
+        subtitle: "Handling Input Changes",
+        details: [
+          "Updates 'inputText' when the user types in the textarea.",
+          "'event' Object: Contains information about the event, such as the current value of the input.",
+          "Event Handling allows your application to respond to user interactions.",
+          "Always extract necessary data from the event object to update the state accordingly.",
+        ],
+        image: "./cheatsheetImages/task24/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handling the Speak Action",
+        details: [
+          "Checks if 'inputText' is not empty or just whitespace.",
+          "'SpeechSynthesisUtterance': Creates a speech request with the provided text.",
+          "'speechSynthesis.speak': Initiates the speech.",
+          "Conditional Logic ensures that actions are performed only when appropriate.",
+          "Always validate user input before performing actions to enhance user experience and prevent errors."
+        ],
+        image: "./cheatsheetImages/task24/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Speech Synthesis API",
+        details: [
+          "'SpeechSynthesisUtterance': An interface representing a speech request.",
+          "'speechSynthesis': The controller interface for the Speech Synthesis API.",
+          "Web APIs can be integrated with React to add advanced functionalities.",
+          "Familiarize yourself with browser APIs to extend the capabilities of your React applications."
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+        
+    ],
+  },
+  {
+    taskId: "Course-Finder",
+    content: [
+      {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+    ],
+  },
 
 
 
