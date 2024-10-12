@@ -1659,63 +1659,91 @@ const cheatsheetData = [
     content: [
       {
         title: "",
-        subtitle: "",
+        subtitle: "State Management with Hooks",
         details: [
-          "",
-          "",
-          "",
+          "State management is crucial for managing and tracking dynamic data in a React application. It allows components to respond to user input and render updated information.",
+          "React provides the 'useState' hook to manage state in functional components. When you call 'useState', it returns a pair: the current state value and a function that lets you update it. Every time the state updates, React re-renders the component with the new state.",
+          "Use meaningful names for state variables to reflect their purpose.",
+          "Avoid mutating state directly; always use the setter function provided by 'useState'."
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task25/1.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Component Composition",
         details: [
-          "",
-          "",
-          "",
+          "Component composition allows you to build complex UIs from simple components. This approach promotes code reusability and maintainability.",
+          "In React, components can be nested within one another, allowing you to break down the UI into smaller, manageable pieces. This separation of concerns makes it easier to manage the application.",
+          "Keep components small and focused on a single responsibility.",
+          "Use props to pass data and functions down to child components."
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task25/2.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Handling Events",
         details: [
-          "",
-          "",
-          "",
+          "Handling events is essential for creating interactive user interfaces. React provides a way to handle events in a declarative manner.",
+          "You can add event listeners to JSX elements directly, similar to how you would in regular HTML. React normalizes events so that they behave consistently across different browsers.",
+          "Use arrow functions or bind methods to avoid losing context for this.",
+          "Consider using useCallback for optimizing performance with event handlers.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task25/3.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Conditional Rendering",
         details: [
-          "",
-          "",
-          "",
+          "Conditional rendering allows you to render different UI elements based on the state of your application, enhancing user experience.",
+          "You can use JavaScript expressions to conditionally render elements in React. This can be done using logical operators or ternary expressions.",
+          "Keep conditional logic simple; consider creating separate components for complex conditions.",
+          "Use short-circuit evaluation for cleaner code.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task25/4.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Lifting State Up",
         details: [
-          "",
-          "",
-          "",
+          "Lifting state up helps manage shared state between components, ensuring data consistency across the application.",
+          "When multiple components need to share state, you can lift the state up to their closest common ancestor. This ancestor component will then pass the state down as props.",
+          "Only lift state up when necessary to avoid prop drilling.",
+          "Use context or state management libraries for deep component trees.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task25/5.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Using Effect Hook",
         details: [
-          "",
-          "",
-          "",
+          "The useEffect hook manages side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM.",
+          "The useEffect hook runs after the render, allowing you to perform operations that might not be directly related to rendering. You can also clean up effects when components unmount.",
+          "Always clean up effects that subscribe to external data sources to prevent memory leaks.",
+          "Use dependencies in the effect array wisely to control when the effect runs.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task25/6.webp"
+      },
+      {
+        title: "",
+        subtitle: "Managing Styles",
+        details: [
+          "Styling components properly enhances user experience and improves the visual appeal of your application.",
+          "React supports various ways to style components, including CSS stylesheets, inline styles, CSS modules, and styled-components. Choose a method that suits your project's needs.",
+          "Use BEM (Block Element Modifier) methodology for class naming to maintain clarity.",
+          "Consider using a CSS-in-JS library for dynamic styling based on props."
+        ],
+        image: "./cheatsheetImages/task25/7.webp"
+      },
+      {
+        title: "",
+        subtitle: "PropTypes for Type Checking",
+        details: [
+          "PropTypes help ensure that components receive the correct data types, making your code more robust and easier to debug.",
+          "React's prop-types library allows you to define the expected data types for props. This feature helps catch bugs by warning you when the wrong data types are passed.",
+          "Use default props for optional props.",
+          "Consider TypeScript for more advanced type checking in larger applications."
+        ],
+        image: "./cheatsheetImages/task25/8.webp"
       },
     ],
   },
