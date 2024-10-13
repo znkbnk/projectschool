@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { tasksData } from "../data/tasksData";
@@ -10,7 +10,6 @@ import { auth } from "../components/firebase";
 import axios from "axios";
 import debounce from "lodash/debounce";
 import throttle from "lodash/throttle";
-
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/cheatsheet.css";
 import cheatsheetData from "../data/cheatsheetData.js";
@@ -23,22 +22,18 @@ const LiveEditor = () => {
   const [solutionCodes, setSolutionCodes] = useState([]);
   const [showSolution, setShowSolution] = useState(false);
   const [subscriptionStatus, setSubscriptionStatus] = useState(null);
-  const [showCheatsheet, setShowCheatsheet] = useState(false); // State for cheatsheet popup
+  const [showCheatsheet, setShowCheatsheet] = useState(false);
   const [cheatsheetContent, setCheatsheetContent] = useState(null);
-  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
-
-  const navigate = useNavigate();
   const taskContainerRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    let isMounted = true;
-
     const fetchSubscriptionStatus = async () => {
       setLoading(true);
       try {
         const user = auth.currentUser;
-        if (user && isMounted) {
+        if (user) {
           const { uid } = user;
           const response = await axios.get(
             `${process.env.REACT_APP_API_URL}/api/users/${uid}/subscription-status`
@@ -47,35 +42,25 @@ const LiveEditor = () => {
         }
       } catch (error) {
         console.error("Error fetching subscription status:", error);
-        toast.error("Error fetching subscription status");
+        toast.error("Failed to fetch subscription status. Please try again later.");
       } finally {
-        setLoading(false); // Set loading to false after fetching
+        setLoading(false);
       }
     };
 
     fetchSubscriptionStatus();
-
-    return () => {
-      isMounted = false; // Cleanup function to mark component as unmounted
-    };
   }, []);
 
   useEffect(() => {
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
-    const completedTasks =
-      JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+    const completedTasks = JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
     setIsCompleted(completedTasks[taskId] || false);
-  }, [lessonType, taskId]);
 
-  useEffect(() => {
     if (lessonType && taskId) {
-      const index = tasksData[lessonType]?.findIndex(
-        (task) => task.taskId === taskId
-      );
+      const index = tasksData[lessonType]?.findIndex((task) => task.taskId === taskId);
       if (index !== undefined && index >= 0) {
         setCurrentTaskIndex(index);
-        const storedCheckboxStates =
-          JSON.parse(localStorage.getItem(taskId)) || {};
+        const storedCheckboxStates = JSON.parse(localStorage.getItem(taskId)) || {};
         setCheckboxStates(storedCheckboxStates);
       } else {
         console.error(`Task with ID ${taskId} not found.`);
@@ -87,13 +72,7 @@ const LiveEditor = () => {
   useEffect(() => {
     import(`./solutions/${taskId}`)
       .then((module) => {
-        if (module && Array.isArray(module.default)) {
-          setSolutionCodes(module.default);
-        } else if (module) {
-          setSolutionCodes([module.default]);
-        } else {
-          setSolutionCodes(["Solution not found"]);
-        }
+        setSolutionCodes(Array.isArray(module.default) ? module.default : [module.default]);
       })
       .catch((error) => {
         console.error("Error loading solution:", error);
@@ -101,12 +80,12 @@ const LiveEditor = () => {
       });
   }, [taskId]);
 
-  const handleCheckboxChange = (stepId) => {
+  const handleCheckboxChange = useCallback((stepId) => {
     setCheckboxStates((prevState) => ({
       ...prevState,
       [stepId]: !prevState[stepId],
     }));
-  };
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(taskId, JSON.stringify(checkboxStates));
@@ -118,12 +97,8 @@ const LiveEditor = () => {
     }
   }, [taskId]);
 
-  const handleNext = () => {
-    if (
-      lessonType &&
-      tasksData[lessonType] &&
-      currentTaskIndex < (tasksData[lessonType]?.length || 0) - 1
-    ) {
+  const handleNext = useCallback(() => {
+    if (lessonType && tasksData[lessonType] && currentTaskIndex < (tasksData[lessonType]?.length || 0) - 1) {
       if (!isCompleted) {
         toast.warn("Please complete the current task first.");
       } else {
@@ -133,7 +108,7 @@ const LiveEditor = () => {
         }
       }
     }
-  };
+  }, [lessonType, currentTaskIndex, isCompleted, navigate]);
 
   const handlePrevious = () => {
     if (currentTaskIndex > 0) {
@@ -146,91 +121,52 @@ const LiveEditor = () => {
 
   const debouncedToastSuccess = debounce((message) => {
     toast.success(message);
-  }, 300); // Adjust delay as needed
+  }, 300);
 
-  const handleComplete = throttle(() => {
+  const throttledComplete = throttle(() => {
     if (isCompleted) {
       toast.info(`This task is already completed.`);
       return;
     }
 
-    const taskIndex = tasksData[lessonType]?.findIndex(
-      (task) => task.taskId === taskId
-    );
-
+    const taskIndex = tasksData[lessonType]?.findIndex((task) => task.taskId === taskId);
     if (taskIndex !== -1) {
       const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
-      const updatedTasksData = { ...tasksData };
-      updatedTasksData[lessonType][taskIndex].completed = true;
-
-      const completedTasks =
-        JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+      const completedTasks = JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
       completedTasks[taskId] = true;
-      localStorage.setItem(
-        lessonCompletedTasksKey,
-        JSON.stringify(completedTasks)
-      );
-
-      console.log(`Task ${taskId} marked as completed.`);
+      localStorage.setItem(lessonCompletedTasksKey, JSON.stringify(completedTasks));
       debouncedToastSuccess(`Lesson ${lessonType} is completed!`);
       setIsCompleted(true);
     } else {
       console.log(`Task ${taskId} not found.`);
     }
-  }, 500); // Adjust the debounce time as needed
+  }, 500);
 
-  const handleDownloadStyles = () => {
-    if (currentTask && currentTask.link) {
-      window.open(currentTask.link, "_blank");
-    } else {
-      toast.error("No styles found for download.");
-    }
-  };
-
-  const handleDownloadData = () => {
-    if (currentTask && currentTask.linkData) {
-      window.open(currentTask.linkData, "_blank");
-    } else {
-      toast.error("No data found for download.");
-    }
-  };
-
-  const handleVideoLesson = () => {
-    if (currentTask && currentTask.videoLink) {
-      window.open(currentTask.videoLink, "_blank");
-    } else {
-      toast.error("No video lesson found.");
-    }
-  };
+  const handleComplete = useCallback(() => {
+    throttledComplete();
+  }, [throttledComplete]);
 
   const handleToggleSolution = () => {
     if (subscriptionStatus === "subscribed") {
       setShowSolution((prev) => !prev);
     } else {
-      toast.info(
-        "Access to solutions requires an active subscription. Please subscribe to unlock this feature."
-      );
+      toast.info("Access to solutions requires an active subscription. Please subscribe to unlock this feature.");
     }
   };
 
   const handleToggleCheatsheet = () => {
-    const currentCheatsheet = cheatsheetData.find(
-      (cheat) => cheat.taskId === taskId
-    );
-
+    const currentCheatsheet = cheatsheetData.find((cheat) => cheat.taskId === taskId);
     if (!currentCheatsheet) {
       toast.error("Cheatsheet not available for this task.");
-      setShowCheatsheet(false); // Close the popup if no cheatsheet
+      setShowCheatsheet(false);
       return;
     }
-
     setCheatsheetContent(currentCheatsheet);
     setShowCheatsheet((prev) => !prev);
   };
 
   const currentTask = tasksData[lessonType]?.[currentTaskIndex] || {};
-
-  const codesandboxUrl = currentTask?.codesandboxUrl || "";
+  const { taskTitle, task, steps, link, linkData, videoLink, codesandboxUrl } = currentTask;
 
   return (
     <div>
@@ -239,80 +175,73 @@ const LiveEditor = () => {
         <div className='task-container'>
           <div className='task'>
             <div className='text-window' ref={taskContainerRef}>
-              <h1>{currentTask?.taskTitle}</h1>
-              {currentTask?.task &&
-                Object.keys(currentTask.task).length > 0 && (
-                  <div className='section'>
-                    <h4>Task Description:</h4>
-                    <p>{currentTask.task.taskDescription}</p>
-                    <h4>Platform: </h4>
-                    <p>{currentTask.task.platform}</p>
-                    <h4>Project Name: </h4>
-                    <p>{currentTask.task.projectName}</p>
-                    <h4>Bidding ends:</h4>
-                    <p>{currentTask.task.biddingEnds}</p>
-                    <h4>Requirements:</h4>
-                    <ul className='text-window-list'>
-                      {currentTask.task.requirements?.map(
-                        (requirement, index) => (
-                          <li key={index}>{requirement}</li>
-                        )
-                      )}
-                    </ul>
-                    <h4>Steps:</h4>
-                  </div>
-                )}
-              {lessonType &&
-                currentTask?.steps?.map((step, index) => (
-                  <div className='taskText-container' key={index}>
-                    <div className='step-title-container'>
-                      <div className='checkbox-container'>
-                        <input
-                          type='checkbox'
-                          id={`step${index}`}
-                          checked={checkboxStates[`step${index}`] || false}
-                          onChange={() => handleCheckboxChange(`step${index}`)}
-                        />
-                        <label htmlFor={`step${index}`}></label>
-                      </div>
-                      <h3>{step.stepTitle}</h3>
-                    </div>
-
-                    <p>{step.titleDescription}</p>
-                    {step.sections?.map((section, secIndex) => (
-                      <div className='section' key={secIndex}>
-                        <h4>{section.subtitleDescription}</h4>
-                        <ul className='text-window-list'>
-                          {section.descriptions?.map((desc, descIndex) => (
-                            <li key={descIndex}>{desc}</li>
-                          ))}
-                        </ul>
-                      </div>
+              <h1>{taskTitle}</h1>
+              {task && Object.keys(task).length > 0 && (
+                <div className='section'>
+                  <h4>Task Description:</h4>
+                  <p>{task.taskDescription}</p>
+                  <h4>Platform: </h4>
+                  <p>{task.platform}</p>
+                  <h4>Project Name: </h4>
+                  <p>{task.projectName}</p>
+                  <h4>Bidding ends:</h4>
+                  <p>{task.biddingEnds}</p>
+                  <h4>Requirements:</h4>
+                  <ul className='text-window-list'>
+                    {task.requirements?.map((requirement, index) => (
+                      <li key={index}>{requirement}</li>
                     ))}
-
-                    <br />
+                  </ul>
+                  <h4>Steps:</h4>
+                </div>
+              )}
+              {steps?.map((step, index) => (
+                <div className='taskText-container' key={index}>
+                  <div className='step-title-container'>
+                    <div className='checkbox-container'>
+                      <input
+                        type='checkbox'
+                        id={`step${index}`}
+                        checked={checkboxStates[`step${index}`] || false}
+                        onChange={() => handleCheckboxChange(`step${index}`)}
+                      />
+                      <label htmlFor={`step${index}`}></label>
+                    </div>
+                    <h3>{step.stepTitle}</h3>
                   </div>
-                ))}
+                  <p>{step.titleDescription}</p>
+                  {step.sections?.map((section, secIndex) => (
+                    <div className='section' key={secIndex}>
+                      <h4>{section.subtitleDescription}</h4>
+                      <ul className='text-window-list'>
+                        {section.descriptions?.map((desc, descIndex) => (
+                          <li key={descIndex}>{desc}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                  <br />
+                </div>
+              ))}
               <div className='task-button-container'>
-                <button className='button-84' onClick={handleToggleCheatsheet}>
+                <button className='button-84' onClick={handleToggleCheatsheet} aria-label="Toggle Cheatsheet">
                   Cheatsheet
                 </button>
-                {currentTask?.link && (
-                  <button className='button-84' onClick={handleDownloadStyles}>
+                {link && (
+                  <button className='button-84' onClick={() => window.open(link, "_blank")} aria-label="Download Styles">
                     Download Styles
                   </button>
                 )}
-
-                {currentTask?.linkData && (
-                  <button className='button-84' onClick={handleDownloadData}>
+                {linkData && (
+                  <button className='button-84' onClick={() => window.open(linkData, "_blank")} aria-label="Download Data">
                     Download Data
                   </button>
                 )}
-                <button className='button-84' onClick={handleToggleSolution}>
+                <button className='button-84' onClick={handleToggleSolution} aria-label="Toggle Solution">
                   Solution
                 </button>
-                {currentTask?.videoLink && (
-                  <button className='button-84' onClick={handleVideoLesson}>
+                {videoLink && (
+                  <button className='button-84' onClick={() => window.open(videoLink, "_blank")} aria-label="Video Lesson">
                     Video Lesson
                   </button>
                 )}
@@ -361,8 +290,7 @@ const LiveEditor = () => {
                 <div className='solution-popup'>
                   <div className='solution-container'>
                     <h2 className='solution-title'>
-                      Solution code for:{" "}
-                      {currentTask?.taskTitle || "Task Title"}
+                      Solution code for: {taskTitle || "Task Title"}
                     </h2>
                     {solutionCodes.map((code, index) => (
                       <CodeBlock
@@ -388,9 +316,7 @@ const LiveEditor = () => {
                 Previous
               </button>
               <button
-                className={`button-28 complete ${
-                  isCompleted ? "completed" : ""
-                }`}
+                className={`button-28 complete ${isCompleted ? "completed" : ""}`}
                 onClick={handleComplete}
               >
                 {isCompleted ? "Completed" : "Complete"}
