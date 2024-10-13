@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
-const CubeGallery = () => {
-  return <div>CubeGallery</div>; // comment
-};
+const InputForm  = () => {
+  return (
+    <div>InputForm </div>
+  )
+}
 
-export default CubeGallery;
+export default InputForm 

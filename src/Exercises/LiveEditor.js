@@ -8,8 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "./solutions/CodeBlock";
 import { auth } from "../components/firebase";
 import axios from "axios";
-import debounce from 'lodash/debounce';
-import throttle from 'lodash/throttle';
+import debounce from "lodash/debounce";
+import throttle from "lodash/throttle";
 
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/cheatsheet.css";
@@ -187,8 +187,6 @@ const LiveEditor = () => {
     }
   };
 
-
-
   const handleDownloadData = () => {
     if (currentTask && currentTask.linkData) {
       window.open(currentTask.linkData, "_blank");
@@ -219,17 +217,16 @@ const LiveEditor = () => {
     const currentCheatsheet = cheatsheetData.find(
       (cheat) => cheat.taskId === taskId
     );
-  
+
     if (!currentCheatsheet) {
       toast.error("Cheatsheet not available for this task.");
       setShowCheatsheet(false); // Close the popup if no cheatsheet
       return;
     }
-  
+
     setCheatsheetContent(currentCheatsheet);
     setShowCheatsheet((prev) => !prev);
   };
-  
 
   const currentTask = tasksData[lessonType]?.[currentTaskIndex] || {};
 
@@ -239,22 +236,28 @@ const LiveEditor = () => {
     <div>
       <Navbar />
       <div className='editor-container'>
-        <div className='task-container' >
+        <div className='task-container'>
           <div className='task'>
             <div className='text-window' ref={taskContainerRef}>
               <h1>{currentTask?.taskTitle}</h1>
               {currentTask?.task &&
                 Object.keys(currentTask.task).length > 0 && (
-                  <div className='section' >
+                  <div className='section'>
                     <h4>Task Description:</h4>
                     <p>{currentTask.task.taskDescription}</p>
                     <h4>Platform: </h4>
                     <p>{currentTask.task.platform}</p>
+                    <h4>Project Name: </h4>
+                    <p>{currentTask.task.projectName}</p>
+                    <h4>Bidding ends:</h4>
+                    <p>{currentTask.task.biddingEnds}</p>
                     <h4>Requirements:</h4>
                     <ul className='text-window-list'>
-                      {currentTask.task.requirements?.map((requirement, index) => (
-                        <li key={index}>{requirement}</li>
-                      ))}
+                      {currentTask.task.requirements?.map(
+                        (requirement, index) => (
+                          <li key={index}>{requirement}</li>
+                        )
+                      )}
                     </ul>
                     <h4>Steps:</h4>
                   </div>
@@ -299,7 +302,7 @@ const LiveEditor = () => {
                     Download Styles
                   </button>
                 )}
-               
+
                 {currentTask?.linkData && (
                   <button className='button-84' onClick={handleDownloadData}>
                     Download Data
@@ -411,4 +414,3 @@ const LiveEditor = () => {
 };
 
 export default LiveEditor;
-

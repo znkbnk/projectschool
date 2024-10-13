@@ -849,6 +849,257 @@ const tasksData = {
       link: "pathStyles",
       videoLink: "",
     },
+    {
+      taskId: "Construction-Cost-Calculator",
+      taskTitle: "Construction Cost Calculator",
+      introduction: "The Construction Cost Calculator is a user-friendly React application designed to help users estimate construction costs based on key parameters such as plot size, number of floors, construction type, and materials. By utilizing Formik for form management and Yup for validation, the application ensures accurate input and a seamless user experience.",
+      task: {
+        taskDescription: "This project involves building a web application that allows users to input various parameters related to construction and receive an estimated cost along with a detailed breakdown.",
+        platform: "Freelancer",
+        projectName: "House Construction Cost Calculator Website",
+        biddingEnds: 'Saturday, October 19, 2024',
+        requirements: [
+          "React for the front-end framework",
+          "Formik for form management",
+          "Yup for form validation",
+          "Basic knowledge of CSS for styling"
+        ]
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the React Project",
+          titleDescription: "Setting up the initial project structure.",
+          sections: [
+            {
+              subtitleDescription: "Create a new React app",
+              descriptions: [
+                "Use Create React App to scaffold a new project.",
+                "Run `npx create-react-app construction-cost-calculator`.",
+                "Navigate to the project directory using `cd construction-cost-calculator`."
+              ]
+            },
+            {
+              subtitleDescription: "Install dependencies",
+              descriptions: [
+                "Install 'Formik' for form management using `npm install formik`.",
+                "Install 'Yup' for validation using `npm install yup`."
+              ]
+            }
+          ]
+        },
+        {
+          stepTitle: "Step 2: Create the App Component",
+          titleDescription: "Set up the main application component.",
+          sections: [
+            {
+              subtitleDescription: "Define the App component",
+              descriptions: [
+                "Create a new file named `App.js` in the `src` folder.",
+                "Import necessary components and styles.",
+                "Define the main layout, including a 'header' and 'footer'."
+              ]
+            },
+            {
+              subtitleDescription: "Render the ConstructionCalculator component",
+              descriptions: [
+                "Import the 'ConstructionCalculator' component into `App.js`.",
+                "Use the component within the main return statement."
+              ]
+            }
+          ]
+        },
+        {
+          stepTitle: "Step 3: Create the ConstructionCalculator Component",
+          titleDescription: "Manage cost calculations and user interactions.",
+          sections: [
+            {
+              subtitleDescription: "Define the state and functions",
+              descriptions: [
+                "In `ConstructionCalculator.js`, import React and 'useState' from React.",
+                "Initialize state variables using 'useState' to hold the following values:",
+                "`materialCost` (initially set to 0): to track the cost of materials.",
+                "`laborCost` (initially set to 0): to track the cost of labor.",
+                "`permitCost` (initially set to 0): to track the cost of permits.",
+                "`miscCost` (initially set to 0): for any miscellaneous expenses.",
+                "`totalCost` (initially set to 0): to calculate the total cost based on inputs."
+              ]
+            },
+            {
+              subtitleDescription: "Implement the handleFormSubmit function",
+              descriptions: [
+                "Create a function named `handleFormSubmit` that takes the 'form' values as arguments.",
+                "Inside the function, extract values for materials, labor, permits, and miscellaneous costs from the form input.",
+                "Convert the input values to numbers using `parseFloat` to ensure accurate calculations.",
+                "Calculate the total cost as follows:",
+                "`totalCost = materialCost + laborCost + permitCost + miscCost`.",
+                "Use the `setTotalCost` function to update the total cost in state."
+              ]
+            },
+            {
+              subtitleDescription: "Render the user interface",
+              descriptions: [
+                "Return JSX that includes:",
+                "A header or title for the cost calculator.",
+                "An 'InputForm' component, passing necessary props such as state variables and the 'handleFormSubmit' function.",
+                "A 'CostBreakdown' component to display the breakdown of costs based on the state variables.",
+                "Ensure the 'CostBreakdown' component receives 'totalCost' and individual cost states (materialCost, laborCost, permitCost, miscCost) as props."
+              ]
+            },
+            {
+              subtitleDescription: "Add input validation",
+              descriptions: [
+                "In `handleFormSubmit`, implement validation logic to ensure that all inputs are valid numbers.",
+                "Check if any input is negative or not a number, and provide feedback to the user (e.g., alert or error message).",
+                "If validation fails, prevent the calculation from proceeding."
+              ]
+            },
+           
+          ]
+        },
+        
+        {
+          stepTitle: "Step 4: Implement the InputForm Component",
+          titleDescription: "Create a form to gather user input for cost calculations.",
+          sections: [
+            {
+              subtitleDescription: "Set up the InputForm structure",
+              descriptions: [
+                "Create a new file named `InputForm.js` in the components directory.",
+                "Import React, the `useFormik` hook from 'Formik', and `Yup` for validation.",
+                "Define the `InputForm` functional component, accepting an `onSubmit` prop to handle form submission."
+              ]
+            },
+            {
+              subtitleDescription: "Initialize Formik",
+              descriptions: [
+                "Use `useFormik` to manage form state and validation:",
+                "Set `initialValues` to include: `plotSize`, `floors`, `constructionType`, `material`, and `location`.",
+                "Define the `validationSchema` using `Yup` to ensure `plotSize`, `floors`, and `location` are required fields, and `floors` must be at least 1."
+              ]
+            },
+            {
+              subtitleDescription: "Create input fields",
+              descriptions: [
+                "Render a form element using JSX and set its `onSubmit` to `formik.handleSubmit`:",
+                "Plot Size: Add a number input for `plotSize`. Bind its value to `formik.values.plotSize` and handle changes with `formik.handleChange`.",
+                "Number of Floors: Add a number input for `floors`, also binding its value and change handler to Formik.",
+                "Construction Type: Create a select input for `constructionType` with options for 'Standard' and 'Luxury', binding it to Formik.",
+                "Material: Create a select input for `material` with options for 'Brick' and 'Wood', binding it to Formik.",
+                "Location: Add a text input for `location`, binding its value and change handler to Formik."
+              ]
+            },
+            {
+              subtitleDescription: "Add error handling",
+              descriptions: [
+                "Display error messages for required fields:",
+                "For each input field, check if there are validation errors using `formik.errors`. If an error exists, display it below the corresponding input field."
+              ]
+            },
+            {
+              subtitleDescription: "Add a submit button",
+              descriptions: [
+                "Include a button of type 'submit' with the text 'Calculate Cost'.",
+                "When the button is clicked, it triggers the form submission via `formik.handleSubmit`, which will call the `onSubmit` function passed in as a prop with the form values."
+              ]
+            },
+           
+          ]
+        }
+        ,
+        {
+          stepTitle: "Step 5: Create the CostBreakdown Component",
+          titleDescription: "Display the cost breakdown.",
+          sections: [
+            {
+              subtitleDescription: "Define the CostBreakdown component",
+              descriptions: [
+                "Create a new file named `CostBreakdown.js` in the `src/components` folder.",
+                "Accept 'totalCost' and breakdown as props.",
+                "Render the estimated total cost and breakdown categories."
+              ]
+            }
+          ]
+        },
+        {
+          stepTitle: "Step 6: Style the Application",
+          titleDescription: "Enhance the UI.",
+          sections: [
+            {
+              subtitleDescription: "Add CSS styles",
+              descriptions: [
+                "Create a CSS file for each component.",
+                "Style the header, footer, and form elements for better user experience."
+              ]
+            }
+          ]
+        },
+        {
+          stepTitle: "Step 7: Test the Application",
+          titleDescription: "Ensure functionality.",
+          sections: [
+            {
+              subtitleDescription: "Run and verify",
+              descriptions: [
+                "Start the application using `npm start`.",
+                "Test each form input for validation and calculation accuracy."
+              ]
+            }
+          ]
+        },
+        {
+          stepTitle: "Step 8: Debugging",
+          titleDescription: "Fix any issues.",
+          sections: [
+            {
+              subtitleDescription: "Identify and resolve bugs",
+              descriptions: [
+                "Check for console errors and warnings.",
+                "Fix any issues with state management or rendering."
+              ]
+            }
+          ]
+        },
+        {
+          stepTitle: "Step 9: Deployment",
+          titleDescription: "Deploy the application.",
+          sections: [
+            {
+              subtitleDescription: "Prepare for production",
+              descriptions: [
+                "Build the application using `npm run build`.",
+                "Choose a hosting service like Vercel or Netlify for deployment."
+              ]
+            }
+          ]
+        },
+        {
+          stepTitle: "Step 10: Maintenance",
+          titleDescription: "Ensure ongoing functionality.",
+          sections: [
+            {
+              subtitleDescription: "Monitor and update",
+              descriptions: [
+                "Regularly check for updates to dependencies.",
+                "Fix any bugs reported by users."
+              ]
+            }
+          ]
+        }
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/r4fphm?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/livelessons4.webp"),
+      link: "https://www.dropbox.com/scl/fi/raw54nbg5kdtgtsaln6ys/constructionCalculatorStylesLive4.css?rlkey=17weziikvwk4x46ukba2daqgs&st=0hgu8ywx&dl=0",
+    }
+    
+
+
+
+
   ],
   React: [
     {
@@ -8947,7 +9198,7 @@ const tasksData = {
                 "A boolean indicating if the answer was correct.",
                 "Update 'selectedOption' with the index of the clicked option.",
                 "Use 'setTimeout' to introduce a brief delay (e.g., 500 milliseconds) before proceeding. This delay allows the user to see the result of their selection before moving to the next question or ending the quiz.",
-                "Within 'setTimeout' check if 'currentQuestion' is less than the last question index (i.e., quizData.length - 1), increment 'currentQuestion' to load the next question.",
+                "Within 'setTimeout' check if 'currentQuestion' is less than the last question index (i.e., quizData.length -1), increment 'currentQuestion' to load the next question.",
                 " If the current question is the last one, set the 'quizFinished' flag to true to indicate that the quiz has ended.",
                 "Define a restartQuiz function that resets the state variables (currentQuestion, score, selectedOption, questionTimes, startTime, and quizFinished).",
                 "After the quiz is finished, calculate The number of correct and incorrect answers from 'questionTimes', and the total time taken for the quiz.",
@@ -10647,7 +10898,7 @@ export { tasksData, authorsData };
 
 /* Task description example template:
 
----------------------- REACT, js
+----------------------REACT, js
 React: [
     {
       taskId: "reacttask",
@@ -10948,6 +11199,8 @@ Live lessons
       task: {
         taskDescription: "",
         platform: 'Freelancer',
+        projectName: "",
+        biddingEnds: '',
         requirements: [
             "",
                 "",
