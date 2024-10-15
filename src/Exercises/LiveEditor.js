@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { tasksData } from "../data/tasksData";
@@ -24,6 +24,7 @@ const LiveEditor = () => {
   const [subscriptionStatus, setSubscriptionStatus] = useState(null);
   const [showCheatsheet, setShowCheatsheet] = useState(false);
   const [cheatsheetContent, setCheatsheetContent] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const taskContainerRef = useRef(null);
   const navigate = useNavigate();
@@ -165,7 +166,29 @@ const LiveEditor = () => {
     setShowCheatsheet((prev) => !prev);
   };
 
-  const currentTask = tasksData[lessonType]?.[currentTaskIndex] || {};
+  const handleCloseCheatsheet = () => {
+    setShowCheatsheet(false);
+  };
+
+  // Add this useEffect to handle clicks outside the cheatsheet popup
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const cheatsheetPopup = document.querySelector('.cheatsheet-popup');
+      if (cheatsheetPopup && !cheatsheetPopup.contains(event.target)) {
+        handleCloseCheatsheet();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  const currentTask = useMemo(() => {
+    return tasksData[lessonType]?.[currentTaskIndex] || {};
+  }, [lessonType, currentTaskIndex]);
+
   const { taskTitle, task, steps, link, linkData, videoLink, codesandboxUrl } = currentTask;
 
   return (

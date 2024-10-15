@@ -79,7 +79,7 @@ const cheatsheetData = [
         title: "Reset Form",
         subtitle: "",
         details: [
-          "Providing a reset button allows users to clear all the data from the form and reset the component’s state. This enhances user experience by allowing users to quickly start over with new inputs.",
+          "Providing a reset button allows users to clear all the data from the form and reset the component's state. This enhances user experience by allowing users to quickly start over with new inputs.",
         ],
         image: "./cheatsheetImages/task2/5.webp",
       },
@@ -1649,7 +1649,7 @@ const cheatsheetData = [
           "Web APIs can be integrated with React to add advanced functionalities.",
           "Familiarize yourself with browser APIs to extend the capabilities of your React applications."
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task24/3.webp"
       },
         
     ],
@@ -1747,7 +1747,71 @@ const cheatsheetData = [
       },
     ],
   },
-
+  {
+    taskId: "Course-Shop",
+    content: [
+      {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+    ],
+  },
 
 
 
