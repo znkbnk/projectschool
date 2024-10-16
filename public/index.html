@@ -71,7 +71,7 @@
         var script = document.createElement("script");
         script.type = "application/ld+json";
 
-        fetch("%PUBLIC_URL%/structured-data.json")
+        fetch("./structured-data.json")
           .then((response) => response.json())
           .then((data) => {
             script.text = JSON.stringify(data);
