@@ -1,13 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import image3 from "../images/pic7.webp";
-import image4 from "../images/pic7.webp"; // Ensure this is different from image3
 import image5 from "../images/sectionPicture2.webp";
 import "../styles/section1.css";
 import WelcomeWord from "./WelcomeWord";
 import { Link } from "react-router-dom";
 
-function Section1() {
+function Section1({ isLoggedIn }) {
   // Define animation variants
   const fadeInLeft = {
     hidden: { opacity: 0, x: -100 },
@@ -46,6 +45,15 @@ function Section1() {
   return (
     <div className='container'>
       <header>
+        <h1 className='main-header'>
+          <div className='decorator'></div>
+          <div className='decorator'></div>
+          <div className='content'>
+            Master <span className='react'>React</span> Development <br />
+            <span className='highlight'>by Building, Not Just Learning</span>
+          </div>
+        </h1>
+
         <WelcomeWord />
       </header>
 
@@ -65,7 +73,7 @@ function Section1() {
               viewport={{ once: false, amount: 0.5 }}
               variants={fadeInLeft}
             >
-               <p>
+              <p>
                 <span>
                   Welcome to our React language upgrade school, where we focus
                   on practical learning rather than overwhelming you with
@@ -110,6 +118,12 @@ function Section1() {
           </div>
         </motion.section>
 
+        {!isLoggedIn && (
+          <a href='#/signup' className='getStartedButton'>
+            Get Started
+          </a>
+        )}
+
         <motion.div
           className='citate'
           initial='hidden'
@@ -136,7 +150,11 @@ function Section1() {
             variants={fadeInLeft}
           >
             <div className='  ipsGrid_span5'>
-              <img className='section1-image' src={image3} alt='Introduction to React' />
+              <img
+                className='section1-image'
+                src={image3}
+                alt='Introduction to React'
+              />
             </div>
             <div className='ipsGrid_span7 ipsType_left'>
               <h2 className='heading_large'>
@@ -192,7 +210,11 @@ function Section1() {
               </motion.ul>
             </div>
             <div className='  ipsGrid_span5'>
-              <img className='section1-image' src={image4} alt='State Management in React' />
+              <img
+                className='section1-image'
+                src={image3}
+                alt='State Management in React'
+              />
             </div>
           </motion.div>
         </motion.div>

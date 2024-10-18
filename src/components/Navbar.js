@@ -18,6 +18,7 @@ const Navbar = () => {
     auth
       .signOut()
       .then(() => {
+        setIsLoggedIn(false); // Reset state on logout
         toast.success("You have been signed out successfully!");
       })
       .catch((error) => {
