@@ -119,9 +119,11 @@ function Section1({ isLoggedIn }) {
         </motion.section>
 
        
-        <Link to='/signup' className='getStartedButton'>
-          Get Started
-        </Link>
+        {!isLoggedIn && (
+          <Link to='/signup' className='getStartedButton'>
+            Get Started
+          </Link>
+        )}
        
 
         <motion.div
