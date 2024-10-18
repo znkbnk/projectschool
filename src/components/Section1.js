@@ -119,7 +119,7 @@ function Section1({ isLoggedIn }) {
         </motion.section>
 
         {!isLoggedIn && (
-          <a href='#/signup' className='getStartedButton'>
+          <a href='/signup' className='getStartedButton'>
             Get Started
           </a>
         )}
