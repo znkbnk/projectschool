@@ -182,7 +182,6 @@ const Signup = () => {
           </StyledForm>
         </animated.div>
       </StyledContainer>
-      <Footer />
     </div>
   );
 };

@@ -169,7 +169,6 @@ const Login = () => {
           </StyledForm>
         </animated.div>
       </StyledContainer>
-      <Footer />
     </div>
   );
 };
