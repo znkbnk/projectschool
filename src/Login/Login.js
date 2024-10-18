@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"; // include useEffect
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import ParticlesBackground from "./ParticlesBackground";
 import { StyledContainer, StyledForm, StyledInput, StyledButton } from "./AuthStyles";
 import { motion } from "framer-motion";

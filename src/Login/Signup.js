@@ -1,7 +1,6 @@
 // src/Login/Signup.js
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import ParticlesBackground from "./ParticlesBackground";
 import { StyledContainer, StyledForm, StyledInput, StyledButton } from "./AuthStyles";
 import { motion } from "framer-motion";
