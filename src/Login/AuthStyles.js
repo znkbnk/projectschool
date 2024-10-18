@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 export const StyledContainer = styled.div`
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 100dvh;
 `;
 
 export const StyledForm = styled(motion.form)`

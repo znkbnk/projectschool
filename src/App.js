@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,15 +17,14 @@ import Faq from "./components/Faq";
 import Pricing from "./components/Pricing";
 import Terms from "./components/Terms";
 import Privacy from "./components/Privacy";
-import { auth } from "./components/firebase";
 import Blog from "./Blog/Blog";
 import Success from "./Stripe/Success";
 import Cancel from "./Stripe/Cancel";
 import Articles from "./Blog/Articles";
 import LaravelLessons from "./Exercises/LaravelLessons";
-import usePageTracking from './usePageTracking'; 
 import MobileMessage from "./Exercises/MobileMessage";
 import LiveLessons from "./Exercises/LiveLessons";
+import useAuth from "./Login/useAuth";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -33,47 +32,7 @@ function ScrollToTopOnNavigation() {
 }
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
-
-  usePageTracking(); 
-
-  useEffect(() => {
-    const fetchUserData = async (user, retries = 5, delay = 3000) => {
-      try {
-        const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/api/users/${user.uid}/subscription-status`
-        );
-        if (!response.ok) {
-          if (response.status === 404 && retries > 0) {
-            console.warn("User not found, retrying...");
-            setTimeout(
-              () => fetchUserData(user, retries - 1, delay * 2),
-              delay
-            ); 
-            return;
-          }
-          throw new Error(`Error: ${response.statusText}`);
-        }
-        const userData = await response.json();
-        setIsAdmin(userData.isAdmin);
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-      }
-    };
-
-    const unsubscribe = auth.onAuthStateChanged(async (user) => {
-      if (user) {
-        setIsLoggedIn(true);
-        await fetchUserData(user);
-      } else {
-        setIsLoggedIn(false);
-        setIsAdmin(false);
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
+  const { isLoggedIn, isAdmin } = useAuth();
 
   return (
     <div>

@@ -41,8 +41,9 @@ const Navbar = () => {
   }, []);
 
   const toggleMenu = () => {
-    setShowLinks(!showLinks); 
-    setIsMenuOpen(!isMenuOpen); 
+    const newValue = !showLinks;
+    setShowLinks(newValue);
+    setIsMenuOpen(newValue);
   };
 
   return (
