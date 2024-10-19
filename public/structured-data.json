@@ -24,6 +24,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -52,6 +57,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -82,6 +92,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -110,6 +125,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -140,6 +160,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -168,6 +193,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -198,6 +228,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -226,6 +261,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -256,6 +296,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -284,6 +329,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -314,6 +364,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -342,6 +397,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -372,6 +432,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -400,6 +465,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -430,6 +500,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -458,6 +533,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -488,6 +568,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -516,6 +601,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -546,6 +636,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -574,6 +669,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -604,6 +704,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -632,6 +737,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -662,6 +772,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -690,6 +805,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -720,6 +840,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -748,6 +873,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -778,6 +908,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -806,6 +941,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -836,6 +976,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -864,6 +1009,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -894,6 +1044,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -922,6 +1077,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -952,6 +1112,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -980,6 +1145,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1010,6 +1180,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1038,6 +1213,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1068,6 +1248,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1096,6 +1281,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1126,6 +1316,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1154,6 +1349,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1184,6 +1384,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1212,6 +1417,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1242,6 +1452,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1270,6 +1485,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1300,6 +1520,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1328,6 +1553,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1358,6 +1588,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1386,6 +1621,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1416,6 +1656,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1444,6 +1689,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1474,6 +1724,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1502,6 +1757,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1532,6 +1792,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1560,6 +1825,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1590,6 +1860,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1618,6 +1893,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1648,6 +1928,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1676,6 +1961,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
@@ -1706,6 +1996,11 @@
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
         },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -1734,6 +2029,11 @@
           "courseMode": "Online",
           "startDate": "2023-01-01",
           "endDate": "2023-12-31"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
         },
         "offers": {
           "@type": "Offer",
