@@ -293,7 +293,7 @@ const tasksData = {
       prerequisites: ["Live Projects"],
       completed: false,
       codesandboxUrl:
-        "https://codesandbox.io/embed/gy7pcn?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+        "https://codesandbox.io/embed/ztq35d?view=editor&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons1.webp"),
       link: "pathStyles",
       videoLink: "",
@@ -1094,7 +1094,275 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/embed/r4fphm?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons4.webp"),
       link: "https://www.dropbox.com/scl/fi/raw54nbg5kdtgtsaln6ys/constructionCalculatorStylesLive4.css?rlkey=17weziikvwk4x46ukba2daqgs&st=0hgu8ywx&dl=0",
-    }
+    },
+    {
+      taskId: "React-Firebase-Application-with-ML-and-Payments",
+      taskTitle: "React Firebase Application with ML and Payments",
+      introduction: "This project involves building a robust React application that utilizes Firebase for user authentication, Firestore for data storage, and Firebase Storage for managing media files. Additionally, it incorporates Google Analytics for tracking user behavior, Google ML for content classification, and Stripe for secure payment processing, providing a comprehensive solution for modern web applications.",
+      task: {
+        taskDescription: "We're looking for a skilled individual to integrate Firebase, Google Analytics, and Stripe services into our project.",
+        platform: 'Freelancer',
+        projectName: "Firebase Integration with React Native App",
+        biddingEnds: 'Sunday, October 27, 2024',
+        requirements: [
+            "Implement Firebase Auth for user authentication",
+                "Set up Firestore for data storage",
+                "Use Firebase Storage for media",
+                "Integrate Google Analytics for user insights",
+                "Implement Google ML for content classification",
+                "Set up Stripe for payments",
+                "Integrate Ads resources",
+       
+      ],
+      },
+      steps: [
+        {
+            stepTitle: "Step 1: Set Up Your React Project",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Create a New React Application",
+                    descriptions: [
+                        "Open your terminal or command prompt.",
+                        "Run the command: npx create-react-app your-app-name",
+                        "Navigate into your project directory: cd your-app-name"
+                    ],
+                },
+                {
+                    subtitleDescription: "Install Necessary Packages",
+                    descriptions: [
+                        "Install Firebase and Stripe libraries using npm:",
+                        "npm install firebase @stripe/react-stripe-js @stripe/stripe-js",
+                    ],
+                },
+               
+            ],
+        },
+        {
+            stepTitle: "Step 2: Create and Configure Firebase Project",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Sign In to Firebase Console",
+                    descriptions: [
+                        "Go to the Firebase Console and create a new project.",
+                        
+                    ],
+                },
+                {
+                    subtitleDescription: "Add a Web App to Your Firebase Project",
+                    descriptions: [
+                        "Click on the web icon (</>) to register your web app.",
+                        "Follow the prompts to give your app a nickname and optionally set up Firebase Hosting.",
+                        "Copy the Firebase configuration object for later use."
+                    ],
+                },
+                {
+                    subtitleDescription: "Enable Authentication",
+                    descriptions: [
+                        "In the Firebase Console, navigate to the Authentication section.",
+                        "Enable email/password authentication or other providers as needed.",
+                        "Check the option to allow users to register for email/password."
+                    ],
+                },
+            ],
+        },
+        {
+            stepTitle: "Step 3: Set Up Firestore Database",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Create Firestore Database",
+                    descriptions: [
+                        "Navigate to the Firestore Database section in Firebase Console.",
+                        "Click 'Create database' and choose your security rules.",
+                        "Start in test mode for development or production mode for security."
+                    ],
+                },
+                {
+                    subtitleDescription: "Set Up Firestore Rules",
+                    descriptions: [
+                        "Define your Firestore rules according to your app’s needs.",
+                        "Start with basic rules for development and refine them later.",
+                    ],
+                },
+            ],
+        },
+        {
+            stepTitle: "Step 4: Set Up Firebase Storage",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Enable Firebase Storage",
+                    descriptions: [
+                        "Navigate to the Storage section in the Firebase Console.",
+                        "Click 'Get Started' to enable Firebase Storage.",
+                        "Adjust the storage rules based on your application’s needs."
+                    ],
+                },
+                {
+                    subtitleDescription: "Configure Storage Rules",
+                    descriptions: [
+                        "Set rules to control access to stored media files.",
+                        "Make sure to test access levels during development.",
+                    ],
+                },
+            ],
+        },
+        {
+            stepTitle: "Step 5: Enable Google Analytics",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Enable Analytics for Your Project",
+                    descriptions: [
+                        "In the Firebase Console, navigate to the Analytics section.",
+                        "Click 'Get Started' to enable Google Analytics for your project.",
+                        "Configure settings and get your tracking ID."
+                    ],
+                },
+                {
+                    subtitleDescription: "Add Tracking Code to Your React App",
+                    descriptions: [
+                        "Implement the Google Analytics tracking script in your app.",
+                        "Use event tracking to log user interactions (page views, clicks).",
+                    ],
+                },
+            ],
+        },
+        {
+            stepTitle: "Step 6: Set Up Google Cloud for Machine Learning (ML)",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Create a Google Cloud Project",
+                    descriptions: [
+                        "Go to the Google Cloud Console and create a new project.",
+                        "Link it to your Firebase project.",
+                    ],
+                },
+                {
+                    subtitleDescription: "Enable Google ML Services",
+                    descriptions: [
+                        "Navigate to the API Library in Google Cloud Console.",
+                        "Enable the necessary ML APIs (e.g., Cloud Vision, AutoML).",
+                    ],
+                },
+                {
+                    subtitleDescription: "Set Up Authentication",
+                    descriptions: [
+                        "Create service account credentials for secure API access.",
+                        "Generate a JSON key for the service account.",
+                    ],
+                },
+            ],
+        },
+        {
+            stepTitle: "Step 7: Set Up Stripe for Payments",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Create a Stripe Account",
+                    descriptions: [
+                        "Go to the Stripe website and sign up for an account.",
+                        "Log in to the Stripe Dashboard.",
+                    ],
+                },
+                {
+                    subtitleDescription: "Create a Product or Service",
+                    descriptions: [
+                        "In the Stripe Dashboard, navigate to 'Products' and click 'Add Product'.",
+                        "Fill in product details and save.",
+                    ],
+                },
+                {
+                    subtitleDescription: "Get Stripe API Keys",
+                    descriptions: [
+                        "Navigate to 'Developers' > 'API keys' in your Stripe Dashboard.",
+                        "Copy your publishable and secret API keys.",
+                    ],
+                },
+            ],
+        },
+        {
+            stepTitle: "Step 8: Integrate Everything in Your React App",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Import Firebase Configuration",
+                    descriptions: [
+                        "Create a new file (e.g., firebase.js) in your src directory.",
+                        "Paste the Firebase configuration object and initialize Firebase services.",
+                    ],
+                },
+                {
+                    subtitleDescription: "Implement Authentication",
+                    descriptions: [
+                        "Create user registration and login components.",
+                        "Use Firebase Authentication methods to handle user actions.",
+                    ],
+                },
+                {
+                    subtitleDescription: "Set Up Firestore Integration",
+                    descriptions: [
+                        "Create functions to add, retrieve, update, and delete data from Firestore.",
+                        "Implement these functions in your components as needed.",
+                    ],
+                },
+            ],
+        },
+        {
+            stepTitle: "Step 9: Testing and Deployment",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Test Each Functionality Individually",
+                    descriptions: [
+                        "Test authentication by creating and logging in users.",
+                        "Verify data storage and retrieval from Firestore.",
+                        "Check that media uploads work with Firebase Storage."
+                    ],
+                },
+                {
+                    subtitleDescription: "Deploy Your Application",
+                    descriptions: [
+                        "Choose a hosting service (like Vercel, Netlify, or Firebase Hosting).",
+                        "Follow the deployment guidelines to deploy your React application.",
+                    ],
+                },
+            ],
+        },
+        {
+            stepTitle: "Step 10: Review and Iterate",
+            titleDescription: "",
+            sections: [
+                {
+                    subtitleDescription: "Gather Feedback from Users",
+                    descriptions: [
+                        "Encourage users to provide feedback on their experience.",
+                        "Consider implementing feedback forms or surveys.",
+                    ],
+                },
+                {
+                    subtitleDescription: "Iterate Based on Feedback",
+                    descriptions: [
+                        "Use feedback to make improvements and iterate on your application.",
+                        "Add new features or optimize existing ones as needed.",
+                    ],
+                },
+            ],
+        },
+    ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/szg3f3?view=editor",
+      img: require("../images/livelessons5.webp"),
+      link: "pathStyles",
+      videoLink: "",
+    },
     
 
 

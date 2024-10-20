@@ -1,4 +1,10 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useMemo,
+} from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { tasksData } from "../data/tasksData";
@@ -24,6 +30,8 @@ const LiveEditor = () => {
   const [subscriptionStatus, setSubscriptionStatus] = useState(null);
   const [showCheatsheet, setShowCheatsheet] = useState(false);
   const [cheatsheetContent, setCheatsheetContent] = useState(null);
+  const [showVideoPopup, setShowVideoPopup] = useState(false);
+
   // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
   const taskContainerRef = useRef(null);
@@ -43,7 +51,9 @@ const LiveEditor = () => {
         }
       } catch (error) {
         console.error("Error fetching subscription status:", error);
-        toast.error("Failed to fetch subscription status. Please try again later.");
+        toast.error(
+          "Failed to fetch subscription status. Please try again later."
+        );
       } finally {
         setLoading(false);
       }
@@ -54,14 +64,18 @@ const LiveEditor = () => {
 
   useEffect(() => {
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
-    const completedTasks = JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+    const completedTasks =
+      JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
     setIsCompleted(completedTasks[taskId] || false);
 
     if (lessonType && taskId) {
-      const index = tasksData[lessonType]?.findIndex((task) => task.taskId === taskId);
+      const index = tasksData[lessonType]?.findIndex(
+        (task) => task.taskId === taskId
+      );
       if (index !== undefined && index >= 0) {
         setCurrentTaskIndex(index);
-        const storedCheckboxStates = JSON.parse(localStorage.getItem(taskId)) || {};
+        const storedCheckboxStates =
+          JSON.parse(localStorage.getItem(taskId)) || {};
         setCheckboxStates(storedCheckboxStates);
       } else {
         console.error(`Task with ID ${taskId} not found.`);
@@ -73,7 +87,9 @@ const LiveEditor = () => {
   useEffect(() => {
     import(`./solutions/${taskId}`)
       .then((module) => {
-        setSolutionCodes(Array.isArray(module.default) ? module.default : [module.default]);
+        setSolutionCodes(
+          Array.isArray(module.default) ? module.default : [module.default]
+        );
       })
       .catch((error) => {
         console.error("Error loading solution:", error);
@@ -99,7 +115,11 @@ const LiveEditor = () => {
   }, [taskId]);
 
   const handleNext = useCallback(() => {
-    if (lessonType && tasksData[lessonType] && currentTaskIndex < (tasksData[lessonType]?.length || 0) - 1) {
+    if (
+      lessonType &&
+      tasksData[lessonType] &&
+      currentTaskIndex < (tasksData[lessonType]?.length || 0) - 1
+    ) {
       if (!isCompleted) {
         toast.warn("Please complete the current task first.");
       } else {
@@ -130,12 +150,18 @@ const LiveEditor = () => {
       return;
     }
 
-    const taskIndex = tasksData[lessonType]?.findIndex((task) => task.taskId === taskId);
+    const taskIndex = tasksData[lessonType]?.findIndex(
+      (task) => task.taskId === taskId
+    );
     if (taskIndex !== -1) {
       const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
-      const completedTasks = JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+      const completedTasks =
+        JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
       completedTasks[taskId] = true;
-      localStorage.setItem(lessonCompletedTasksKey, JSON.stringify(completedTasks));
+      localStorage.setItem(
+        lessonCompletedTasksKey,
+        JSON.stringify(completedTasks)
+      );
       debouncedToastSuccess(`Lesson ${lessonType} is completed!`);
       setIsCompleted(true);
     } else {
@@ -151,12 +177,16 @@ const LiveEditor = () => {
     if (subscriptionStatus === "subscribed") {
       setShowSolution((prev) => !prev);
     } else {
-      toast.info("Access to solutions requires an active subscription. Please subscribe to unlock this feature.");
+      toast.info(
+        "Access to solutions requires an active subscription. Please subscribe to unlock this feature."
+      );
     }
   };
 
   const handleToggleCheatsheet = () => {
-    const currentCheatsheet = cheatsheetData.find((cheat) => cheat.taskId === taskId);
+    const currentCheatsheet = cheatsheetData.find(
+      (cheat) => cheat.taskId === taskId
+    );
     if (!currentCheatsheet) {
       toast.error("Cheatsheet not available for this task.");
       setShowCheatsheet(false);
@@ -170,18 +200,35 @@ const LiveEditor = () => {
     setShowCheatsheet(false);
   };
 
+  const handleToggleVideoPopup = () => {
+    setShowVideoPopup((prev) => !prev);
+  };
+
+  const getEmbedLink = (videoLink) => {
+    // Check if it's a short youtu.be link
+    if (videoLink.includes("youtu.be")) {
+      // Extract the video ID after 'youtu.be/'
+      const videoId = videoLink.split("/").pop();
+      // Return the embed URL format
+      return `https://www.youtube.com/embed/${videoId}`;
+    } else {
+      // If it's already an embed link, return it as is
+      return videoLink;
+    }
+  };
+
   // Add this useEffect to handle clicks outside the cheatsheet popup
   useEffect(() => {
     const handleClickOutside = (event) => {
-      const cheatsheetPopup = document.querySelector('.cheatsheet-popup');
+      const cheatsheetPopup = document.querySelector(".cheatsheet-popup");
       if (cheatsheetPopup && !cheatsheetPopup.contains(event.target)) {
         handleCloseCheatsheet();
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
@@ -189,7 +236,8 @@ const LiveEditor = () => {
     return tasksData[lessonType]?.[currentTaskIndex] || {};
   }, [lessonType, currentTaskIndex]);
 
-  const { taskTitle, task, steps, link, linkData, videoLink, codesandboxUrl } = currentTask;
+  const { taskTitle, task, steps, link, linkData, videoLink, codesandboxUrl } =
+    currentTask;
 
   return (
     <div>
@@ -247,28 +295,75 @@ const LiveEditor = () => {
                 </div>
               ))}
               <div className='task-button-container'>
-                <button className='button-84' onClick={handleToggleCheatsheet} aria-label="Toggle Cheatsheet">
+                <button
+                  className='button-84'
+                  onClick={handleToggleCheatsheet}
+                  aria-label='Toggle Cheatsheet'
+                >
                   Cheatsheet
                 </button>
                 {link && (
-                  <button className='button-84' onClick={() => window.open(link, "_blank")} aria-label="Download Styles">
+                  <button
+                    className='button-84'
+                    onClick={() => window.open(link, "_blank")}
+                    aria-label='Download Styles'
+                  >
                     Download Styles
                   </button>
                 )}
                 {linkData && (
-                  <button className='button-84' onClick={() => window.open(linkData, "_blank")} aria-label="Download Data">
+                  <button
+                    className='button-84'
+                    onClick={() => window.open(linkData, "_blank")}
+                    aria-label='Download Data'
+                  >
                     Download Data
                   </button>
                 )}
-                <button className='button-84' onClick={handleToggleSolution} aria-label="Toggle Solution">
+                <button
+                  className='button-84'
+                  onClick={handleToggleSolution}
+                  aria-label='Toggle Solution'
+                >
                   Solution
                 </button>
                 {videoLink && (
-                  <button className='button-84' onClick={() => window.open(videoLink, "_blank")} aria-label="Video Lesson">
+                  <button
+                    className='button-84'
+                    onClick={handleToggleVideoPopup}
+                    aria-label='Video Lesson'
+                  >
                     Video Lesson
                   </button>
                 )}
               </div>
+              <AnimatePresence>
+                {showVideoPopup && (
+                 <motion.div
+                 className="video-popup"
+                 initial={{ opacity: 0 }}
+                 animate={{ opacity: 1 }}
+                 exit={{ opacity: 0 }}
+               >
+                 <div className="video-popup-content">
+                   <div className="video-container">
+                     <iframe
+                       src={getEmbedLink(videoLink)}
+                       title="Video Lesson"
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                       allowFullScreen
+                     ></iframe>
+                   </div>
+                   <button
+                     className="video-close-button"
+                     onClick={handleToggleVideoPopup}
+                   >
+                     &times;
+                   </button>
+                 </div>
+               </motion.div>
+                )}
+              </AnimatePresence>
               <AnimatePresence>
                 {showCheatsheet && cheatsheetContent && (
                   <motion.div
@@ -339,7 +434,9 @@ const LiveEditor = () => {
                 Previous
               </button>
               <button
-                className={`button-28 complete ${isCompleted ? "completed" : ""}`}
+                className={`button-28 complete ${
+                  isCompleted ? "completed" : ""
+                }`}
                 onClick={handleComplete}
               >
                 {isCompleted ? "Completed" : "Complete"}

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const InputForm  = () => {
+const Stripe = () => {
   return (
-    <div>InputForm </div>
+    <div>Stripe</div>
   )
 }
 
-export default InputForm 
+export default Stripe
