@@ -306,33 +306,47 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px; /* Fixed width */
-  height: auto; /* Fixed height */
-  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  z-index: 100000; /* Ensure it's above other content */
-  display: flex; /* Flexbox to center content */
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  width: 1000px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 100000;
+  display: flex;
+  border: #777 solid 0.1px;
+  padding: 40px; 
+  box-shadow: 10px 10px 25px rgba(175, 175, 175, 0.5);
+  align-items: center;
+  justify-content: center;
 }
 
 .video-container {
-  width: 100%; /* Full width */
-  height: auto;
+  width: 100%;
+  max-height: 600px; /* Adjust as needed */
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
 }
 
+.video-container iframe {
+  width: 100%;
+  max-height: 500px; /* Adjust this value */
+  border: none; /* Remove default iframe border */
+  border-radius: 10px;
+
+}
 
 .video-close-button {
-  position: absolute; /* Positioning */
-  top: 10px; /* Positioning from the top */
-  right: 10px; /* Positioning from the right */
-  background: none; /* Remove default button styles */
-  color: white; /* Close button color */
-  font-size: 24px; /* Size of close button */
-  border: none; /* Remove border */
-  cursor: pointer; /* Pointer cursor on hover */
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
 }
+
 
 
 
