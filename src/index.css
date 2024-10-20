@@ -301,68 +301,41 @@ section {
 
 /* video popup */
 
-.video-popup {
+.video-popup-window {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.video-popup-content {
-  position: relative;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 1000px;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px; /* Fixed width */
+  height: auto; /* Fixed height */
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  z-index: 100000; /* Ensure it's above other content */
+  display: flex; /* Flexbox to center content */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
 
 .video-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Full width */
+  height: auto;
 }
-
 
 
 .video-close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(244, 67, 54, 0.7);
-  border: none;
-  color: white;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.3s;
-  z-index: 10;
+  position: absolute; /* Positioning */
+  top: 10px; /* Positioning from the top */
+  right: 10px; /* Positioning from the right */
+  background: none; /* Remove default button styles */
+  color: white; /* Close button color */
+  font-size: 24px; /* Size of close button */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
-.close-button:hover {
-  background-color: rgba(244, 67, 54, 1);
-}
 
-@media (max-width: 768px) {
-  .video-popup-content {
-    width: 95%;
-  }
-}
+
 
 
 
