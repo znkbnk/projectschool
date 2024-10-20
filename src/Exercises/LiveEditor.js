@@ -221,8 +221,14 @@ const LiveEditor = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       const cheatsheetPopup = document.querySelector(".cheatsheet-popup");
+      const videoPopup = document.querySelector(".video-popup-window");
       if (cheatsheetPopup && !cheatsheetPopup.contains(event.target)) {
         handleCloseCheatsheet();
+      }
+
+      // Check if the video popup is open and if the click was outside of it
+      if (videoPopup && !videoPopup.contains(event.target)) {
+        handleToggleVideoPopup(); // Close the video popup
       }
     };
 
@@ -338,27 +344,27 @@ const LiveEditor = () => {
                 )}
               </div>
               <AnimatePresence>
-  {showVideoPopup && (
-    <motion.div
-      className='video-popup-window'
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <button className='video-close-button' onClick={handleToggleVideoPopup}>
-        &times;
-      </button>
-      <div className='video-container'>
-        <iframe
-          src={getEmbedLink(videoLink)}
-          title='Video Lesson'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowFullScreen
-        ></iframe>
-      </div>
-    </motion.div>
-  )}
-</AnimatePresence>
+                {showVideoPopup && (
+                  <motion.div
+                    className='video-popup-window'
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <button className='video-close-button' onClick={handleToggleVideoPopup}>
+                      &times;
+                    </button>
+                    <div className='video-container'>
+                      <iframe
+                        src={getEmbedLink(videoLink)}
+                        title='Video Lesson'
+                        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
               <AnimatePresence>
                 {showCheatsheet && cheatsheetContent && (

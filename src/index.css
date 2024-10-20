@@ -306,7 +306,7 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
+  width: 900px;
   height: auto;
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 25px;
@@ -314,7 +314,7 @@ section {
   z-index: 100000;
   display: flex;
   border: #777 solid 0.1px;
-  padding: 40px; 
+  padding: 20px; 
   box-shadow: 10px 10px 25px rgba(175, 175, 175, 0.5);
   align-items: center;
   justify-content: center;
