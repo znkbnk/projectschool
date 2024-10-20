@@ -1748,67 +1748,124 @@ const cheatsheetData = [
     ],
   },
   {
-    taskId: "Course-Shop",
+    taskId: "React-Firebase-Application-with-ML-and-Payments",
     content: [
       {
-        title: "",
+        title: "Project Setup",
+        subtitle: "Creating a React App",
+        details: [
+          "Create a new React app using 'npx create-react-app'.",
+          "This command sets up a new React application with a default configuration, including a basic file structure, development server, and build tools.",
+          "npx runs the package directly without installing it globally. This command creates a directory named your-app-name and initializes a new React app inside it.",
+          "Choose a meaningful app name to reflect the functionality or purpose of the app."
+        ],
+      },
+         {
+        title: "Firebase Configuration",
         subtitle: "",
         details: [
-          "",
-          "",
-          "",
+          "This code initializes Firebase in your application, allowing access to Firebase services.",
+          "You import Firebase and specific services (Auth, Firestore, Storage). The firebaseConfig object contains your project-specific configuration values obtained from the Firebase Console. Calling firebase.initializeApp(firebaseConfig) connects your app to Firebase.",
+          "Ensure you include all necessary Firebase services according to your application needs.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/taskLive5/1.webp"
+      },
+         {
+        title: "Authentication with Firebase",
+        subtitle: "User Registration",
+        details: [
+          "This function handles user registration via Firebase Authentication.",
+          "The createUserWithEmailAndPassword method creates a new user account with the provided email and password. If successful, a success message is logged; if an error occurs, it is caught and logged.",
+          "Implement input validation for email and password to enhance security and user experience.",
+        ],
+        image: "./cheatsheetImages/taskLive5/2.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Event Handling",
         details: [
-          "",
-          "",
-          "",
+          "This function handles the form submission event.",
+          "'e.preventDefault()' prevents the default form submission behavior, allowing you to handle the registration logic programmatically. It calls the registerUser function with the email and password values.",
+          "Bind event handlers to component state to dynamically update the UI based on user input.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/taskLive5/3.webp"
+      },
+         {
+        title: "Firestore Database Operations",
+        subtitle: "Adding Data",
+        details: [
+          "This function adds a new document to a Firestore collection.",
+          "It uses the Firestore instance to access a specified collection and adds a new document with the data passed as an argument. If successful, a success message is logged; otherwise, it catches and logs any errors.",
+          "Structure your data logically to optimize query performance and ensure ease of use in the application.",
+        ],
+        image: "./cheatsheetImages/taskLive5/4.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Fetching Data",
         details: [
-          "",
-          "",
-          "",
+          "This function retrieves all documents from a Firestore collection.",
+          "The 'get()' method retrieves the documents, and snapshot.docs.map() transforms the documents into a more usable format by extracting the data and adding the document ID. This array is then logged to the console.",
+          "Handle loading states to improve user experience while data is being fetched; consider using local state to manage this.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/taskLive5/5.webp"
       },
-         {
-        title: "",
+      {
+        title: "Handling File Uploads with Firebase Storage",
         subtitle: "",
         details: [
-          "",
-          "",
-          "",
+          "This function uploads files to Firebase Storage.",
+          "The put() method uploads the specified file to the storage reference created with storageRef.child(file.name). If successful, a success message is logged; if an error occurs, it is caught and logged.",
+          "Implement file type and size validation before uploads to ensure compatibility and provide user feedback for better interaction.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/taskLive5/6.webp"
       },
-         {
-        title: "",
-        subtitle: "",
+      {
+        title: "Using State and Props",
+        subtitle: "State Management",
         details: [
-          "",
-          "",
-          "",
+          "The useState hook allows functional components to manage local state.",
+          "useState(0) initializes the count state variable to 0. The incrementCount function updates the state when called, triggering a re-render with the new count.",
+          "Keep state updates functional to avoid stale state issues, especially in asynchronous operations.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/taskLive5/7.webp"
       },
-         {
+      {
         title: "",
+        subtitle: "Using Props",
+        details: [
+          "Props are used to pass data and event handlers from parent to child components.",
+          "The Greeting component receives a name prop and renders a greeting message. This allows for dynamic content based on the passed prop.",
+          "Validate props using PropTypes to catch issues early in development and ensure the component receives the expected data type.",
+        ],
+        image: "./cheatsheetImages/taskLive5/8.webp"
+      },
+      {
+        title: "Event Handling",
         subtitle: "",
         details: [
-          "",
-          "",
-          "",
+          "Controlled components keep form inputs in sync with component state.",
+          "The onChange event handler updates the email state with the current input value, ensuring the input reflects the state.",
+          "Consider using useEffect to perform side effects based on state changes, such as validation or API calls.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/taskLive5/9.webp"
+      },
+      {
+        title: "Testing and Deployment",
+        subtitle: "Testing Functionality",
+        details: [
+          "Ensure each feature works as intended before going live to provide a smooth user experience.",
+          "Use browser developer tools to monitor console logs, network requests, and state changes during development.",
+        ],
+      },
+      {
+        title: "",
+        subtitle: "Deployment",
+        details: [
+          "Firebase Hosting provides a simple way to deploy web apps globally.",
+          "Running the firebase deploy command uploads your app files to Firebase and makes them accessible via a hosting URL.",
+          "Set up environment variables for sensitive information (like API keys) during deployment to enhance security.",
+        ],
       },
     ],
   },
