@@ -1869,6 +1869,74 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Course-Shop",
+    content: [
+      {
+        title: "",
+        subtitle: "Props",
+        details: [
+          "Props (short for properties) allow components to receive data from parent components, enabling dynamic and reusable UI elements.",
+          "Props are immutable, meaning that a component cannot change its own props. This ensures that data flows in one direction, making the app easier to debug and reason about.",
+        ],
+        image: "./cheatsheetImages/task26/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "State",
+        details: [
+          "State is used to manage dynamic data within a component, allowing components to react and re-render when data changes.",
+          "State is mutable and is typically managed using the useState hook in functional components. Changing the state triggers a re-render of the component.",
+        ],
+        image: "./cheatsheetImages/task26/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Context API",
+        details: [
+          "The Context API allows sharing state across the component tree without having to pass props down manually at every level (prop drilling).",
+          "Using the Context API helps manage global state, such as user authentication or themes, making the code cleaner and easier to maintain.",
+        ],
+        image: "./cheatsheetImages/task26/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "React Router",
+        details: [
+          "React Router enables navigation between different components based on the URL, allowing for a multi-page experience in single-page applications (SPAs).",
+          "By defining routes, you can control what components render based on the browser's address, enhancing user experience through client-side routing.",
+        ],
+        image: "./cheatsheetImages/task26/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Hooks",
+        details: [
+          "Hooks allow functional components to manage state and side effects, providing the ability to use state and lifecycle features without class components.",
+          "The useEffect hook is particularly powerful for handling side effects like data fetching or subscriptions, running the provided effect after the component renders.",
+        ],
+        image: "./cheatsheetImages/task26/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Managing Forms",
+        details: [
+          "Managing forms is crucial for handling user inputs, validations, and submitting data to APIs or other services.",
+          "React makes it easy to create controlled components where form data is handled by state, ensuring that the displayed data is always in sync with the state.",
+        ],
+        image: "./cheatsheetImages/task26/7.webp"
+      },
+      {
+        title: "",
+        subtitle: "Error Boundaries",
+        details: [
+          "Error boundaries catch JavaScript errors in child components and provide a fallback UI, improving user experience by preventing the entire app from crashing.",
+          "Error boundaries are implemented using lifecycle methods in class components. They can handle errors gracefully and log errors for further investigation.",
+        ],
+        image: "./cheatsheetImages/task26/8.webp"
+      },
+    ],
+  },
 
 
 
