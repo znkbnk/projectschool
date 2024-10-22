@@ -18,12 +18,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/3D-Interactive-Card",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -52,12 +64,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/BMI-Tracker",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -86,12 +110,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Dark-Light-Mode-Toggle",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -120,12 +156,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Sortify-Search-by-Name",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -154,12 +202,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Simple-Quiz-App",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -188,12 +248,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/FAQ",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -222,12 +294,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Birthday-Reminder",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -256,12 +340,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Dynamic-Box-Shadow-Generator",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -290,12 +386,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Memory-Game",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -324,12 +432,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Color-Generator",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -358,12 +478,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Range-Slider",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -392,12 +524,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Form-Validation-Component",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -426,12 +570,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Markdown-Preview-App",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -460,12 +616,24 @@
         },
         "difficulty": "Hard",
         "url": "https://projectschool.dev/#/editor/React/Menu-App",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -494,12 +662,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Responsive-Navbar",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -528,12 +708,24 @@
         },
         "difficulty": "Hard",
         "url": "https://projectschool.dev/#/editor/React/Pagination-Page",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -562,12 +754,24 @@
         },
         "difficulty": "Hard",
         "url": "https://projectschool.dev/#/editor/React/Search-Bar",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -596,12 +800,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Dropdown",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -630,12 +846,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Sidebar",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -664,12 +892,24 @@
         },
         "difficulty": "Hard",
         "url": "https://projectschool.dev/#/editor/React/Dynamic-Table-with-Sorting-and-Copy-Functionality",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -698,12 +938,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/To-Do-App",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -732,12 +984,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Testimonials",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -766,12 +1030,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Voice-to-Text",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -800,12 +1076,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Text-to-Voice",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -834,12 +1122,24 @@
         },
         "difficulty": "Hard",
         "url": "https://projectschool.dev/#/editor/React/Course-Finder",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -868,12 +1168,24 @@
         },
         "difficulty": "Hard",
         "url": "https://projectschool.dev/#/editor/React/Course-Shop",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -902,12 +1214,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/MATERIALIZECSS-Portfolio",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -936,12 +1260,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/MaterializeCSS-Web-Toolkit",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -970,12 +1306,24 @@
         },
         "difficulty": "Hard",
         "url": "https://projectschool.dev/#/editor/React/TradeHub-React-Trading-Dashboard",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1004,12 +1352,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Cube-Image-Gallery",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1038,12 +1398,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Analog-Clock",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1072,12 +1444,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Dynamic-Menu-Highlighter",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1106,12 +1490,24 @@
         },
         "difficulty": "Hard",
         "url": "https://projectschool.dev/#/editor/React/Order-Tracker-Mobile-App",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1140,12 +1536,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Timer-App",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1174,12 +1582,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Portfolio-Website",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1208,12 +1628,24 @@
         },
         "difficulty": "Hard",
         "url": "https://projectschool.dev/#/editor/React/Celestial-Canvas",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1242,12 +1674,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Materialize-Portfolio",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1276,12 +1720,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/File-Uploader",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1310,12 +1766,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Cake-Website",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1344,12 +1812,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Interactive-3D-Card-Viewer",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1378,12 +1858,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Dev-Portfolio",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1412,12 +1904,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Fruit-Carousel",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1446,12 +1950,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/FitLife-Website",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1480,12 +1996,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/FAQ-Toggle",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1514,12 +2042,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Pomodoro-Focus-Timer",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1548,12 +2088,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Profolio",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1582,12 +2134,24 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/#/editor/React/Animated-Progress-Loader",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1608,20 +2172,32 @@
       "position": 48,
       "item": {
         "@type": "Course",
-        "name": "DynamicLoader",
-        "description": "Creating a sophisticated animated loader with smooth transitions using Framer Motion in React.",
+        "name": "Weather App",
+        "description": "Creating a weather application that fetches data from a weather API and displays it dynamically.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
         "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Dynamic-Loader",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "url": "https://projectschool.dev/#/editor/React/Weather-App",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1633,7 +2209,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Dynamic-Loader"
+          "url": "https://projectschool.dev/#/editor/React/Weather-App"
         }
       }
     },
@@ -1642,20 +2218,32 @@
       "position": 49,
       "item": {
         "@type": "Course",
-        "name": "SpeechSynth",
-        "description": "Building a text-to-speech web application with React frontend and Node.js backend using gTTs integration.",
+        "name": "Expense Tracker",
+        "description": "Building an expense tracking application with features for adding, editing, and deleting expenses.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
-        "difficulty": "Hard",
-        "url": "https://projectschool.dev/#/editor/React/Speech-Synth",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "difficulty": "Easy",
+        "url": "https://projectschool.dev/#/editor/React/Expense-Tracker",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1667,7 +2255,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Speech-Synth"
+          "url": "https://projectschool.dev/#/editor/React/Expense-Tracker"
         }
       }
     },
@@ -1676,20 +2264,32 @@
       "position": 50,
       "item": {
         "@type": "Course",
-        "name": "SmoothScroll Navigator",
-        "description": "Developing a React application with a dynamic navigation bar featuring smooth scrolling and section highlighting.",
+        "name": "Chat Application",
+        "description": "Developing a real-time chat application using React and WebSocket for instant messaging.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
-        "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Smooth-Scroll-Navigator",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/Chat-Application",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1701,7 +2301,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Smooth-Scroll-Navigator"
+          "url": "https://projectschool.dev/#/editor/React/Chat-Application"
         }
       }
     },
@@ -1710,20 +2310,32 @@
       "position": 51,
       "item": {
         "@type": "Course",
-        "name": "Tesla Experience",
-        "description": "Creating a web application to showcase Tesla's electric vehicles with detailed information and animations.",
+        "name": "E-commerce Store",
+        "description": "Creating a fully functional e-commerce store with product listings, cart functionality, and checkout process.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
-        "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Tesla-Experience",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/E-commerce-Store",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1735,7 +2347,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Tesla-Experience"
+          "url": "https://projectschool.dev/#/editor/React/E-commerce-Store"
         }
       }
     },
@@ -1744,20 +2356,32 @@
       "position": 52,
       "item": {
         "@type": "Course",
-        "name": "Dynamic Dashboard",
-        "description": "Building a modern web application with an interactive interface for managing and visualizing various types of data.",
+        "name": "Recipe Finder",
+        "description": "Building a recipe finder application that fetches recipes based on user input and dietary preferences.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
         "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Dynamic-Dashboard",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "url": "https://projectschool.dev/#/editor/React/Recipe-Finder",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1769,7 +2393,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Dynamic-Dashboard"
+          "url": "https://projectschool.dev/#/editor/React/Recipe-Finder"
         }
       }
     },
@@ -1778,20 +2402,32 @@
       "position": 53,
       "item": {
         "@type": "Course",
-        "name": "Quiz Master",
-        "description": "Developing an interactive quiz application for testing React concepts with animations and detailed feedback.",
+        "name": "Fitness Tracker",
+        "description": "Creating a fitness tracking application that allows users to log workouts and monitor progress.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
         "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Quiz-Master",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "url": "https://projectschool.dev/#/editor/React/Fitness-Tracker",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1803,7 +2439,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Quiz-Master"
+          "url": "https://projectschool.dev/#/editor/React/Fitness-Tracker"
         }
       }
     },
@@ -1812,20 +2448,32 @@
       "position": 54,
       "item": {
         "@type": "Course",
-        "name": "Profile Popup Animation",
-        "description": "Creating a React-based web application with an animated user profile popup using Framer Motion.",
+        "name": "Travel Journal",
+        "description": "Building a travel journal application that allows users to document their trips and experiences.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
         "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Profile-Popup-Animation",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "url": "https://projectschool.dev/#/editor/React/Travel-Journal",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1837,7 +2485,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Profile-Popup-Animation"
+          "url": "https://projectschool.dev/#/editor/React/Travel-Journal"
         }
       }
     },
@@ -1846,20 +2494,32 @@
       "position": 55,
       "item": {
         "@type": "Course",
-        "name": "Movies4u",
-        "description": "Building a dynamic React web application for exploring and searching movie-related images with interactive features.",
+        "name": "Online Quiz",
+        "description": "Creating an online quiz application with multiple-choice questions and scoring functionality.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
         "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Movies4u",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "url": "https://projectschool.dev/#/editor/React/Online-Quiz",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "WebDevWizard",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1871,7 +2531,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Movies4u"
+          "url": "https://projectschool.dev/#/editor/React/Online-Quiz"
         }
       }
     },
@@ -1880,20 +2540,32 @@
       "position": 56,
       "item": {
         "@type": "Course",
-        "name": "Nature's Beauty",
-        "description": "Developing a React-based web project showcasing nature's beauty with responsive design and smooth interactivity.",
+        "name": "Portfolio Website",
+        "description": "Creating a personal portfolio website to showcase projects and skills using React.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
         "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Natures-Beauty",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "url": "https://projectschool.dev/#/editor/React/Portfolio-Website",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "WebDevWizard",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1905,7 +2577,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Natures-Beauty"
+          "url": "https://projectschool.dev/#/editor/React/Portfolio-Website"
         }
       }
     },
@@ -1914,20 +2586,32 @@
       "position": 57,
       "item": {
         "@type": "Course",
-        "name": "Captcha Guard",
-        "description": "Implementing a simple yet effective React-based captcha validation tool with dynamic character generation.",
+        "name": "Dynamic Form Builder",
+        "description": "Building a dynamic form builder application that allows users to create and manage forms.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
-        "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Captcha-Guard",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/Dynamic-Form-Builder",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "WebDevWizard",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1939,7 +2623,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Captcha-Guard"
+          "url": "https://projectschool.dev/#/editor/React/Dynamic-Form-Builder"
         }
       }
     },
@@ -1948,20 +2632,32 @@
       "position": 58,
       "item": {
         "@type": "Course",
-        "name": "Calculator",
-        "description": "Building a simple calculator using React with basic arithmetic operations and error handling.",
+        "name": "Social Media Dashboard",
+        "description": "Creating a social media dashboard that aggregates posts and interactions from various platforms.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
-        "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Calculator",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/Social-Media-Dashboard",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "WebDevWizard",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -1973,7 +2669,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Calculator"
+          "url": "https://projectschool.dev/#/editor/React/Social-Media-Dashboard"
         }
       }
     },
@@ -1982,20 +2678,32 @@
       "position": 59,
       "item": {
         "@type": "Course",
-        "name": "Copy To Clipboard",
-        "description": "Creating a React-based clipboard tool for copying text with instant user feedback.",
+        "name": "Event Management System",
+        "description": "Developing an event management system that allows users to create, manage, and RSVP to events.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
-        "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Copy-To-Clipboard",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/Event-Management-System",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -2007,7 +2715,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Copy-To-Clipboard"
+          "url": "https://projectschool.dev/#/editor/React/Event-Management-System"
         }
       }
     },
@@ -2016,20 +2724,32 @@
       "position": 60,
       "item": {
         "@type": "Course",
-        "name": "English Dictionary",
-        "description": "Developing a React dictionary app that fetches word meanings, phonetics, and examples from an external API.",
+        "name": "Online Learning Platform",
+        "description": "Creating a comprehensive online learning platform with course management and user authentication.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
-        "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/English-Dictionary",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31"
-        },
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/Online-Learning-Platform",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
         "provider": {
           "@type": "Organization",
           "name": "Project School",
@@ -2041,7 +2761,7 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/English-Dictionary"
+          "url": "https://projectschool.dev/#/editor/React/Online-Learning-Platform"
         }
       }
     }
