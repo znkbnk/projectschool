@@ -2028,7 +2028,6 @@ const cheatsheetData = [
         details: [
           "A 'div' with a dynamic class name that includes both a static class (initial-position) and a state-driven class (cubeImageClass).",
           "The 'img' tags represent each face of the cube. The images will rotate based on the current class set in the state.",
-          "",
         ],
         image: "./cheatsheetImages/task30/3.webp"
       },
@@ -2077,11 +2076,55 @@ const cheatsheetData = [
         subtitle: "Cleanup Function",
         details: [
           "Clears the interval when the component unmounts to prevent memory leaks.",
-          "",
-          "",
         ],
         image: "./cheatsheetImages/task31/3.webp"
       },
+    ],
+  },
+  {
+    taskId: "Dynamic-Menu-Highlighter",
+    content: [
+      {
+        title: "",
+        subtitle: "Refs for DOM Manipulation",
+        details: [
+          "'menuRef': A reference to the menu DOM element for direct manipulation.",
+          "'borderRef': A reference for the menu border to animate its position.",
+        ],
+        image: "./cheatsheetImages/task32/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Click Event Handler",
+        details: [
+          "'clickItem': A function that handles the click events on menu items.",
+          "'setActiveIndex': Updates the state to the clicked index.",
+          "Dynamically changes the body background color based on the selected menu item.",
+          "'offsetMenuBorder': Adjusts the position of the menu border according to the active item.",
+        ],
+        image: "./cheatsheetImages/task32/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Positioning the Menu Border",
+        details: [
+          "'getBoundingClientRect': Provides the size of an element and its position relative to the viewport.",
+          "Calculating Left Position: Computes the left offset for the menu border so that it is centered under the active menu item.",
+          "Uses CSS transform to animate the border position.",
+        ],
+        image: "./cheatsheetImages/task32/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Effect Hook for Resize Handling",
+        details: [
+          "'useEffect': Runs the 'offsetMenuBorder' function when the component mounts and whenever the 'activeIndex' changes.",
+          "'handleResize': Updates the border position on window resize events.",
+          "Returns a function to remove the event listener when the component unmounts to prevent memory leaks.",
+        ],
+        image: "./cheatsheetImages/task32/4.webp"
+      },
+        
     ],
   },
 
