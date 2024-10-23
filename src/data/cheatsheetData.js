@@ -1942,6 +1942,17 @@ const cheatsheetData = [
     content: [
       {
         title: "",
+        subtitle: "Importing Dependencies",
+        details: [
+          "import React from 'react';: This imports the React library, which is essential for creating React components and managing the component lifecycle.",
+          "import 'materialize-css/dist/css/materialize.min.css': This imports the CSS file for Materialize, a modern responsive front-end framework. It provides predefined styles and components for building user interfaces.",
+          "import 'material-icons/iconfont/material-icons.css': This imports Material Icons, which allows you to use a variety of icons in your app.",
+          "import M from 'materialize-css': This imports the JavaScript functionalities of Materialize CSS, enabling you to use its JavaScript components, such as parallax and sidenav.",
+        ],
+        image: "./cheatsheetImages/task27/0.webp"
+      },
+      {
+        title: "",
         subtitle: "useEffect for Initializing Materialize CSS",
         details: [
           "'useEffect' is used to initialize Materialize CSS components (Parallax and Sidenav) after the component is rendered. The empty array [] ensures this only happens once, mimicking componentDidMount in class components.",
@@ -1959,6 +1970,71 @@ const cheatsheetData = [
         image: "./cheatsheetImages/task27/2.webp"
       },
        
+    ],
+  },
+  {
+    taskId: "MaterializeCSS-Web-Toolkit",
+    content: [
+      {
+        title: "",
+        subtitle: "Setup and Initialization",
+        details: [
+          "The 'M' object is imported from the Materialize CSS library, giving access to its JavaScript components (such as collapsibles).",
+          "The CSS file is imported to style the collapsible elements and other Materialize components.",
+          "Ensure 'materialize-css' is installed via 'npm' or 'yarn' for the imports to work.",
+        ],
+        image: "./cheatsheetImages/task28/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Collapsible Initialization with useEffect",
+        details: [
+          "'useEffect' is a React hook that runs after the component mounts. Here, it's used to ensure that the collapsibles are initialized after the DOM elements are rendered.",
+          "document.querySelectorAll(.collapsible): Selects all elements with the class '.collapsible' to apply Materialize's collapsible functionality.",
+          "M.Collapsible.init: Initializes the collapsible components, applying the following options: 'accordion: false', 'inDuration', 'outDuration.'",
+        ],
+        image: "./cheatsheetImages/task28/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task28/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
     ],
   },
 
