@@ -1937,6 +1937,30 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "MaterializeCSS-Web-Toolkit",
+    content: [
+      {
+        title: "",
+        subtitle: "useEffect for Initializing Materialize CSS",
+        details: [
+          "'useEffect' is used to initialize Materialize CSS components (Parallax and Sidenav) after the component is rendered. The empty array [] ensures this only happens once, mimicking componentDidMount in class components.",
+          "'useEffect' is great for initializing third-party libraries or performing side effects when the component first mounts.",
+        ],
+        image: "./cheatsheetImages/task27/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling for Smooth Scrolling",
+        details: [
+          "This function prevents the default behavior of links and uses 'window.scrollTo' to smoothly scroll to the targeted section of the page. The 'section' parameter determines which part of the page to scroll to.",
+          "Use event handling with 'window.scrollTo' for smooth navigation between sections. event.preventDefault() prevents reloading the page when a button is clicked.",
+        ],
+        image: "./cheatsheetImages/task27/2.webp"
+      },
+       
+    ],
+  },
 
 
 
