@@ -1938,7 +1938,7 @@ const cheatsheetData = [
     ],
   },
   {
-    taskId: "MaterializeCSS-Web-Toolkit",
+    taskId: "MATERIALIZECSS-Portfolio",
     content: [
       {
         title: "",
