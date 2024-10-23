@@ -2127,6 +2127,71 @@ const cheatsheetData = [
         
     ],
   },
+  {
+    taskId: "Order-Tracker-Mobile-App",
+    content: [
+      {
+        title: "",
+        subtitle: "Using useRef for DOM Manipulation",
+        details: [
+          "useRef Hook: This hook creates mutable objects that persist for the full lifetime of the component. 'ctaRef' and 'drawerRef' are references to specific DOM elements.",
+          "Useful for directly manipulating DOM elements without causing re-renders.",
+        ],
+        image: "./cheatsheetImages/task33/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Side Effects with useEffect",
+        details: [
+          "useEffect Hook: Used to perform side effects in function components, such as setting initial styles with GSAP.",
+          "The empty array [] ensures this effect runs only once when the component mounts.",
+        ],
+        image: "./cheatsheetImages/task33/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Animating Elements with GSAP",
+        details: [
+          "This function animates the CTA button and text, changing their position and opacity.",
+          "y: Vertical position.",
+          "opacity: Visibility.",
+          "duration: Duration of the animation.",
+          "ease: Easing function for smoothness.",
+          "stagger: Creates a delay between animations of multiple elements.",
+          "onComplete: Callback function triggered after the animation completes.",
+        
+        ],
+        image: "./cheatsheetImages/task33/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling",
+        details: [
+          " The 'onClick' prop is used to specify a function (hideCTA) to run when the button is clicked. Event handlers are crucial for user interactions.",
+         
+        ],
+        image: "./cheatsheetImages/task33/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Conditional Rendering and Logic",
+        details: [
+          "This logic checks if the 'drawerOpen' state is true and executes the 'slideDown' function if so. This pattern can help manage what to render based on component state.",
+          
+        ],
+        image: "./cheatsheetImages/task33/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Dynamic Classes and Styles",
+        details: [
+          "Using classList.add() to change the classes of a DOM element dynamically based on interactions or state. This allows for more complex styles and behaviors.",
+          
+        ],
+        image: "./cheatsheetImages/task33/6.webp"
+      },
+    ],
+  },
 
 
 
