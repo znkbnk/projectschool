@@ -1995,46 +1995,54 @@ const cheatsheetData = [
         ],
         image: "./cheatsheetImages/task28/2.webp"
       },
-         {
+        
+    ],
+  },
+
+
+  {
+    taskId: "Cube-Image-Gallery",
+    content: [
+      {
         title: "",
-        subtitle: "",
+        subtitle: "State Management",
         details: [
-          "",
-          "",
-          "",
+          "This state will control which cube face image is currently visible.",
+         
         ],
-        image: "./cheatsheetImages/task28/3.webp"
+        image: "./cheatsheetImages/task30/1.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Event Handler Function",
         details: [
-          "",
-          "",
-          "",
+          "This function handles image click events.",
+          "It checks if the clicked image class (targetClass) is different from the current cubeImageClass.",
+          "If they are different, it logs the image number and updates the state to show the selected image.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task30/2.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Cube Image Display",
         details: [
-          "",
-          "",
+          "A 'div' with a dynamic class name that includes both a static class (initial-position) and a state-driven class (cubeImageClass).",
+          "The 'img' tags represent each face of the cube. The images will rotate based on the current class set in the state.",
           "",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task30/3.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Image Thumbnails",
         details: [
-          "",
-          "",
-          "",
+          "Renders a series of image inputs as buttons. Each button: Is of type image, displaying a thumbnail of the cube faces.",
+          "Has an onClick event that triggers the handleImageClick function with the respective class name.",
+          "This allows users to click thumbnails to change the visible cube face.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task30/4.webp"
       },
+        
     ],
   },
 
