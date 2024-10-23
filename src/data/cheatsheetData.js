@@ -2045,6 +2045,45 @@ const cheatsheetData = [
         
     ],
   },
+  {
+    taskId: "Analog-Clock",
+    content: [
+      {
+        title: "",
+        subtitle: "useEffect Hook",
+        details: [
+          "Sets up the clock to update every second.",
+          "'getCurrentTime' Function: Retrieves the current time from the system and converts it into degrees for the clock hands.",
+          "seconds * 6: Converts seconds to degrees (360 degrees / 60 seconds = 6 degrees per second).",
+          "(minutes + seconds / 60) * 6: Converts minutes to degrees.",
+          "(hours + (minutes + seconds / 60) / 60) * 30: Converts hours to degrees (360 degrees / 12 hours = 30 degrees per hour).",
+        ],
+        image: "./cheatsheetImages/task31/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Interval Setup",
+        details: [
+          "'setInterval': Calls a function every 1000 milliseconds (1 second).",
+          "Uses the previous state (prevTime) to increment the angles for each hand",
+          "prevTime.seconds + 6: Updates seconds.",
+          "prevTime.minutes + 6 / 60: Updates minutes.",
+          "prevTime.hours + 30 / 3600: Updates hours.",
+        ],
+        image: "./cheatsheetImages/task31/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Cleanup Function",
+        details: [
+          "Clears the interval when the component unmounts to prevent memory leaks.",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task31/3.webp"
+      },
+    ],
+  },
 
 
 
