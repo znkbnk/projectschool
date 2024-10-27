@@ -47,7 +47,9 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/3D-Interactive-Card"
+          "url": "https://projectschool.dev/#/editor/React/3D-Interactive-Card",
+          "category": "Free"  
+
         }
       }
     },
@@ -93,7 +95,9 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/BMI-Tracker"
+          "url": "https://projectschool.dev/#/editor/React/BMI-Tracker",
+          "category": "Free"  
+
         }
       }
     },
@@ -139,7 +143,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Dark-Light-Mode-Toggle"
+          "url": "https://projectschool.dev/#/editor/React/Dark-Light-Mode-Toggle",
+          "category": "Free"  
         }
       }
     },
@@ -185,7 +190,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Sortify-Search-by-Name"
+          "url": "https://projectschool.dev/#/editor/React/Sortify-Search-by-Name",
+          "category": "Free"  
         }
       }
     },
@@ -231,7 +237,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Simple-Quiz-App"
+          "url": "https://projectschool.dev/#/editor/React/Simple-Quiz-App",
+          "category": "Free"  
         }
       }
     },
@@ -277,7 +284,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/FAQ"
+          "url": "https://projectschool.dev/#/editor/React/FAQ",
+          "category": "Free"  
         }
       }
     },
@@ -323,7 +331,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Birthday-Reminder"
+          "url": "https://projectschool.dev/#/editor/React/Birthday-Reminder",
+          "category": "Free"  
         }
       }
     },
@@ -369,7 +378,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Dynamic-Box-Shadow-Generator"
+          "url": "https://projectschool.dev/#/editor/React/Dynamic-Box-Shadow-Generator",
+          "category": "Free"  
         }
       }
     },
@@ -415,7 +425,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Memory-Game"
+          "url": "https://projectschool.dev/#/editor/React/Memory-Game",
+          "category": "Free"  
         }
       }
     },
@@ -461,7 +472,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Color-Generator"
+          "url": "https://projectschool.dev/#/editor/React/Color-Generator",
+          "category": "Free"  
         }
       }
     },
@@ -507,7 +519,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Range-Slider"
+          "url": "https://projectschool.dev/#/editor/React/Range-Slider",
+          "category": "Free"  
         }
       }
     },
@@ -553,7 +566,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Form-Validation-Component"
+          "url": "https://projectschool.dev/#/editor/React/Form-Validation-Component",
+          "category": "Free"  
         }
       }
     },
@@ -599,7 +613,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Markdown-Preview-App"
+          "url": "https://projectschool.dev/#/editor/React/Markdown-Preview-App",
+          "category": "Free"  
         }
       }
     },
@@ -645,7 +660,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Menu-App"
+          "url": "https://projectschool.dev/#/editor/React/Menu-App",
+          "category": "Free"  
         }
       }
     },
@@ -691,7 +707,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Responsive-Navbar"
+          "url": "https://projectschool.dev/#/editor/React/Responsive-Navbar",
+          "category": "Free"  
         }
       }
     },
@@ -737,7 +754,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Pagination-Page"
+          "url": "https://projectschool.dev/#/editor/React/Pagination-Page",
+          "category": "Free"  
         }
       }
     },
@@ -783,7 +801,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Search-Bar"
+          "url": "https://projectschool.dev/#/editor/React/Search-Bar",
+          "category": "Free"  
         }
       }
     },
@@ -829,7 +848,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Dropdown"
+          "url": "https://projectschool.dev/#/editor/React/Dropdown",
+          "category": "Free"  
         }
       }
     },
@@ -875,7 +895,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Sidebar"
+          "url": "https://projectschool.dev/#/editor/React/Sidebar",
+          "category": "Free"  
         }
       }
     },
@@ -921,7 +942,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Dynamic-Table-with-Sorting-and-Copy-Functionality"
+          "url": "https://projectschool.dev/#/editor/React/Dynamic-Table-with-Sorting-and-Copy-Functionality",
+          "category": "Free"  
         }
       }
     },
@@ -967,7 +989,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/To-Do-App"
+          "url": "https://projectschool.dev/#/editor/React/To-Do-App",
+          "category": "Free"  
         }
       }
     },
@@ -1013,7 +1036,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Testimonials"
+          "url": "https://projectschool.dev/#/editor/React/Testimonials",
+          "category": "Free"  
         }
       }
     },
@@ -1059,7 +1083,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Voice-to-Text"
+          "url": "https://projectschool.dev/#/editor/React/Voice-to-Text",
+          "category": "Free"  
         }
       }
     },
@@ -1105,7 +1130,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Text-to-Voice"
+          "url": "https://projectschool.dev/#/editor/React/Text-to-Voice",
+          "category": "Free"  
         }
       }
     },
@@ -1151,7 +1177,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Course-Finder"
+          "url": "https://projectschool.dev/#/editor/React/Course-Finder",
+          "category": "Free"  
         }
       }
     },
@@ -1197,7 +1224,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Course-Shop"
+          "url": "https://projectschool.dev/#/editor/React/Course-Shop",
+          "category": "Free"  
         }
       }
     },
@@ -1243,7 +1271,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/MATERIALIZECSS-Portfolio"
+          "url": "https://projectschool.dev/#/editor/React/MATERIALIZECSS-Portfolio",
+          "category": "Free"  
         }
       }
     },
@@ -1289,7 +1318,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/MaterializeCSS-Web-Toolkit"
+          "url": "https://projectschool.dev/#/editor/React/MaterializeCSS-Web-Toolkit",
+          "category": "Free"  
         }
       }
     },
@@ -1335,7 +1365,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/TradeHub-React-Trading-Dashboard"
+          "url": "https://projectschool.dev/#/editor/React/TradeHub-React-Trading-Dashboard",
+          "category": "Free"  
         }
       }
     },
@@ -1381,7 +1412,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Cube-Image-Gallery"
+          "url": "https://projectschool.dev/#/editor/React/Cube-Image-Gallery",
+          "category": "Free"  
         }
       }
     },
@@ -1427,7 +1459,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Analog-Clock"
+          "url": "https://projectschool.dev/#/editor/React/Analog-Clock",
+          "category": "Free"  
         }
       }
     },
@@ -1473,7 +1506,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Dynamic-Menu-Highlighter"
+          "url": "https://projectschool.dev/#/editor/React/Dynamic-Menu-Highlighter",
+          "category": "Free"  
         }
       }
     },
@@ -1519,7 +1553,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Order-Tracker-Mobile-App"
+          "url": "https://projectschool.dev/#/editor/React/Order-Tracker-Mobile-App",
+          "category": "Free"  
         }
       }
     },
@@ -1565,7 +1600,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Timer-App"
+          "url": "https://projectschool.dev/#/editor/React/Timer-App",
+          "category": "Free"  
         }
       }
     },
@@ -1611,7 +1647,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Portfolio-Website"
+          "url": "https://projectschool.dev/#/editor/React/Portfolio-Website",
+          "category": "Free"  
         }
       }
     },
@@ -1657,7 +1694,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Celestial-Canvas"
+          "url": "https://projectschool.dev/#/editor/React/Celestial-Canvas",
+          "category": "Free"  
         }
       }
     },
@@ -1703,7 +1741,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Materialize-Portfolio"
+          "url": "https://projectschool.dev/#/editor/React/Materialize-Portfolio",
+          "category": "Free"  
         }
       }
     },
@@ -1749,7 +1788,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/File-Uploader"
+          "url": "https://projectschool.dev/#/editor/React/File-Uploader",
+          "category": "Free"  
         }
       }
     },
@@ -1795,7 +1835,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Cake-Website"
+          "url": "https://projectschool.dev/#/editor/React/Cake-Website",
+          "category": "Free"  
         }
       }
     },
@@ -1841,7 +1882,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Interactive-3D-Card-Viewer"
+          "url": "https://projectschool.dev/#/editor/React/Interactive-3D-Card-Viewer",
+          "category": "Free"  
         }
       }
     },
@@ -1887,7 +1929,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Dev-Portfolio"
+          "url": "https://projectschool.dev/#/editor/React/Dev-Portfolio",
+          "category": "Free"  
         }
       }
     },
@@ -1933,7 +1976,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Fruit-Carousel"
+          "url": "https://projectschool.dev/#/editor/React/Fruit-Carousel",
+          "category": "Free"  
         }
       }
     },
@@ -1979,7 +2023,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/FitLife-Website"
+          "url": "https://projectschool.dev/#/editor/React/FitLife-Website",
+          "category": "Free"  
         }
       }
     },
@@ -2025,7 +2070,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/FAQ-Toggle"
+          "url": "https://projectschool.dev/#/editor/React/FAQ-Toggle",
+          "category": "Free"  
         }
       }
     },
@@ -2071,7 +2117,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Pomodoro-Focus-Timer"
+          "url": "https://projectschool.dev/#/editor/React/Pomodoro-Focus-Timer",
+          "category": "Free"  
         }
       }
     },
@@ -2117,7 +2164,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Profolio"
+          "url": "https://projectschool.dev/#/editor/React/Profolio",
+          "category": "Free"  
         }
       }
     },
@@ -2163,7 +2211,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Animated-Progress-Loader"
+          "url": "https://projectschool.dev/#/editor/React/Animated-Progress-Loader",
+          "category": "Free"  
         }
       }
     },
@@ -2209,7 +2258,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Weather-App"
+          "url": "https://projectschool.dev/#/editor/React/Weather-App",
+          "category": "Free"  
         }
       }
     },
@@ -2219,7 +2269,7 @@
       "item": {
         "@type": "Course",
         "name": "Expense Tracker",
-        "description": "Building an expense tracking application with features for adding, editing, and deleting expenses.",
+        "description": "Building a personal expense tracker application with React, focusing on state management.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
@@ -2255,7 +2305,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Expense-Tracker"
+          "url": "https://projectschool.dev/#/editor/React/Expense-Tracker",
+          "category": "Free"  
         }
       }
     },
@@ -2264,100 +2315,8 @@
       "position": 50,
       "item": {
         "@type": "Course",
-        "name": "Chat Application",
-        "description": "Developing a real-time chat application using React and WebSocket for instant messaging.",
-        "author": {
-          "@type": "Person",
-          "name": "www.projectschool.dev"
-        },
-        "difficulty": "Hard",
-        "url": "https://projectschool.dev/#/editor/React/Chat-Application",
-        "hasCourseInstance": [
-          {
-            "@type": "CourseInstance",
-            "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
-            "instructor": {
-              "@type": "Person",
-              "name": "Jevin",
-              "description": "Instructor for React courses at Project School"
-            },
-            "courseWorkload": "PT5H",
-            "location": {
-              "@type": "Place",
-              "name": "Online"
-            }
-          }
-        ],
-        "provider": {
-          "@type": "Organization",
-          "name": "Project School",
-          "url": "https://www.projectschool.dev"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD",
-          "itemCondition": "http://schema.org/NewCondition",
-          "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Chat-Application"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 51,
-      "item": {
-        "@type": "Course",
-        "name": "E-commerce Store",
-        "description": "Creating a fully functional e-commerce store with product listings, cart functionality, and checkout process.",
-        "author": {
-          "@type": "Person",
-          "name": "www.projectschool.dev"
-        },
-        "difficulty": "Hard",
-        "url": "https://projectschool.dev/#/editor/React/E-commerce-Store",
-        "hasCourseInstance": [
-          {
-            "@type": "CourseInstance",
-            "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
-            "instructor": {
-              "@type": "Person",
-              "name": "Jevin",
-              "description": "Instructor for React courses at Project School"
-            },
-            "courseWorkload": "PT5H",
-            "location": {
-              "@type": "Place",
-              "name": "Online"
-            }
-          }
-        ],
-        "provider": {
-          "@type": "Organization",
-          "name": "Project School",
-          "url": "https://www.projectschool.dev"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD",
-          "itemCondition": "http://schema.org/NewCondition",
-          "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/E-commerce-Store"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 52,
-      "item": {
-        "@type": "Course",
         "name": "Recipe Finder",
-        "description": "Building a recipe finder application that fetches recipes based on user input and dietary preferences.",
+        "description": "Creating a recipe finder application that fetches and displays recipes based on user input.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
@@ -2393,7 +2352,102 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Recipe-Finder"
+          "url": "https://projectschool.dev/#/editor/React/Recipe-Finder",
+          "category": "Free"  
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 51,
+      "item": {
+        "@type": "Course",
+        "name": "Chat Application",
+        "description": "Building a real-time chat application using React and WebSocket for communication.",
+        "author": {
+          "@type": "Person",
+          "name": "www.projectschool.dev"
+        },
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/Chat-Application",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD",
+          "itemCondition": "http://schema.org/NewCondition",
+          "availability": "http://schema.org/InStock",
+          "url": "https://projectschool.dev/#/editor/React/Chat-Application",
+          "category": "Free"  
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 52,
+      "item": {
+        "@type": "Course",
+        "name": "E-commerce Store",
+        "description": "Creating a fully functional e-commerce store with product listings, cart, and checkout features.",
+        "author": {
+          "@type": "Person",
+          "name": "www.projectschool.dev"
+        },
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/E-commerce-Store",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD",
+          "itemCondition": "http://schema.org/NewCondition",
+          "availability": "http://schema.org/InStock",
+          "url": "https://projectschool.dev/#/editor/React/E-commerce-Store",
+          "category": "Free"  
         }
       }
     },
@@ -2402,14 +2456,14 @@
       "position": 53,
       "item": {
         "@type": "Course",
-        "name": "Fitness Tracker",
-        "description": "Creating a fitness tracking application that allows users to log workouts and monitor progress.",
+        "name": "Blog Platform",
+        "description": "Building a blogging platform with user authentication, post creation, and commenting features.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
-        "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Fitness-Tracker",
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/Blog-Platform",
         "hasCourseInstance": [
           {
             "@type": "CourseInstance",
@@ -2439,7 +2493,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Fitness-Tracker"
+          "url": "https://projectschool.dev/#/editor/React/Blog-Platform",
+          "category": "Free"  
         }
       }
     },
@@ -2448,100 +2503,8 @@
       "position": 54,
       "item": {
         "@type": "Course",
-        "name": "Travel Journal",
-        "description": "Building a travel journal application that allows users to document their trips and experiences.",
-        "author": {
-          "@type": "Person",
-          "name": "www.projectschool.dev"
-        },
-        "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Travel-Journal",
-        "hasCourseInstance": [
-          {
-            "@type": "CourseInstance",
-            "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
-            "instructor": {
-              "@type": "Person",
-              "name": "Jevin",
-              "description": "Instructor for React courses at Project School"
-            },
-            "courseWorkload": "PT5H",
-            "location": {
-              "@type": "Place",
-              "name": "Online"
-            }
-          }
-        ],
-        "provider": {
-          "@type": "Organization",
-          "name": "Project School",
-          "url": "https://www.projectschool.dev"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD",
-          "itemCondition": "http://schema.org/NewCondition",
-          "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Travel-Journal"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 55,
-      "item": {
-        "@type": "Course",
-        "name": "Online Quiz",
-        "description": "Creating an online quiz application with multiple-choice questions and scoring functionality.",
-        "author": {
-          "@type": "Person",
-          "name": "www.projectschool.dev"
-        },
-        "difficulty": "Easy",
-        "url": "https://projectschool.dev/#/editor/React/Online-Quiz",
-        "hasCourseInstance": [
-          {
-            "@type": "CourseInstance",
-            "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
-            "instructor": {
-              "@type": "Person",
-              "name": "WebDevWizard",
-              "description": "Instructor for React courses at Project School"
-            },
-            "courseWorkload": "PT5H",
-            "location": {
-              "@type": "Place",
-              "name": "Online"
-            }
-          }
-        ],
-        "provider": {
-          "@type": "Organization",
-          "name": "Project School",
-          "url": "https://www.projectschool.dev"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD",
-          "itemCondition": "http://schema.org/NewCondition",
-          "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Online-Quiz"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 56,
-      "item": {
-        "@type": "Course",
         "name": "Portfolio Website",
-        "description": "Creating a personal portfolio website to showcase projects and skills using React.",
+        "description": "Creating a personal portfolio website to showcase projects and skills with a modern design.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
@@ -2556,7 +2519,7 @@
             "endDate": "2023-12-31",
             "instructor": {
               "@type": "Person",
-              "name": "WebDevWizard",
+              "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
             "courseWorkload": "PT5H",
@@ -2577,7 +2540,102 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Portfolio-Website"
+          "url": "https://projectschool.dev/#/editor/React/Portfolio-Website",
+          "category": "Free"  
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 55,
+      "item": {
+        "@type": "Course",
+        "name": "Celestial Canvas",
+        "description": "Creating a dynamic visual simulation of the night sky with interactive elements.",
+        "author": {
+          "@type": "Person",
+          "name": "www.projectschool.dev"
+        },
+        "difficulty": "Hard",
+        "url": "https://projectschool.dev/#/editor/React/Celestial-Canvas",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD",
+          "itemCondition": "http://schema.org/NewCondition",
+          "availability": "http://schema.org/InStock",
+          "url": "https://projectschool.dev/#/editor/React/Celestial-Canvas",
+          "category": "Free"  
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 56,
+      "item": {
+        "@type": "Course",
+        "name": "Materialize Portfolio",
+        "description": "Building a dynamic portfolio website using React and Materialize CSS with responsive design and interactive elements.",
+        "author": {
+          "@type": "Person",
+          "name": "www.projectschool.dev"
+        },
+        "difficulty": "Easy",
+        "url": "https://projectschool.dev/#/editor/React/Materialize-Portfolio",
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
+          }
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD",
+          "itemCondition": "http://schema.org/NewCondition",
+          "availability": "http://schema.org/InStock",
+          "url": "https://projectschool.dev/#/editor/React/Materialize-Portfolio",
+          "category": "Free"  
         }
       }
     },
@@ -2586,106 +2644,14 @@
       "position": 57,
       "item": {
         "@type": "Course",
-        "name": "Dynamic Form Builder",
-        "description": "Building a dynamic form builder application that allows users to create and manage forms.",
+        "name": "File Uploader",
+        "description": "Developing a user-friendly file upload component with display, download, and deletion functionality.",
         "author": {
           "@type": "Person",
           "name": "www.projectschool.dev"
         },
-        "difficulty": "Hard",
-        "url": "https://projectschool.dev/#/editor/React/Dynamic-Form-Builder",
-        "hasCourseInstance": [
-          {
-            "@type": "CourseInstance",
-            "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
-            "instructor": {
-              "@type": "Person",
-              "name": "WebDevWizard",
-              "description": "Instructor for React courses at Project School"
-            },
-            "courseWorkload": "PT5H",
-            "location": {
-              "@type": "Place",
-              "name": "Online"
-            }
-          }
-        ],
-        "provider": {
-          "@type": "Organization",
-          "name": "Project School",
-          "url": "https://www.projectschool.dev"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD",
-          "itemCondition": "http://schema.org/NewCondition",
-          "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Dynamic-Form-Builder"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 58,
-      "item": {
-        "@type": "Course",
-        "name": "Social Media Dashboard",
-        "description": "Creating a social media dashboard that aggregates posts and interactions from various platforms.",
-        "author": {
-          "@type": "Person",
-          "name": "www.projectschool.dev"
-        },
-        "difficulty": "Hard",
-        "url": "https://projectschool.dev/#/editor/React/Social-Media-Dashboard",
-        "hasCourseInstance": [
-          {
-            "@type": "CourseInstance",
-            "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
-            "instructor": {
-              "@type": "Person",
-              "name": "WebDevWizard",
-              "description": "Instructor for React courses at Project School"
-            },
-            "courseWorkload": "PT5H",
-            "location": {
-              "@type": "Place",
-              "name": "Online"
-            }
-          }
-        ],
-        "provider": {
-          "@type": "Organization",
-          "name": "Project School",
-          "url": "https://www.projectschool.dev"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD",
-          "itemCondition": "http://schema.org/NewCondition",
-          "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Social-Media-Dashboard"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 59,
-      "item": {
-        "@type": "Course",
-        "name": "Event Management System",
-        "description": "Developing an event management system that allows users to create, manage, and RSVP to events.",
-        "author": {
-          "@type": "Person",
-          "name": "www.projectschool.dev"
-        },
-        "difficulty": "Hard",
-        "url": "https://projectschool.dev/#/editor/React/Event-Management-System",
+        "difficulty": "Easy",
+        "url": "https://projectschool.dev/#/editor/React/File-Uploader",
         "hasCourseInstance": [
           {
             "@type": "CourseInstance",
@@ -2715,53 +2681,8 @@
           "priceCurrency": "USD",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Event-Management-System"
-        }
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 60,
-      "item": {
-        "@type": "Course",
-        "name": "Online Learning Platform",
-        "description": "Creating a comprehensive online learning platform with course management and user authentication.",
-        "author": {
-          "@type": "Person",
-          "name": "www.projectschool.dev"
-        },
-        "difficulty": "Hard",
-        "url": "https://projectschool.dev/#/editor/React/Online-Learning-Platform",
-        "hasCourseInstance": [
-          {
-            "@type": "CourseInstance",
-            "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
-            "instructor": {
-              "@type": "Person",
-              "name": "Jevin",
-              "description": "Instructor for React courses at Project School"
-            },
-            "courseWorkload": "PT5H",
-            "location": {
-              "@type": "Place",
-              "name": "Online"
-            }
-          }
-        ],
-        "provider": {
-          "@type": "Organization",
-          "name": "Project School",
-          "url": "https://www.projectschool.dev"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD",
-          "itemCondition": "http://schema.org/NewCondition",
-          "availability": "http://schema.org/InStock",
-          "url": "https://projectschool.dev/#/editor/React/Online-Learning-Platform"
+          "url": "https://projectschool.dev/#/editor/React/File-Uploader",
+          "category": "Free"  
         }
       }
     }
