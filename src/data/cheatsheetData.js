@@ -2254,7 +2254,71 @@ const cheatsheetData = [
       },
     ],
   },
-
+  {
+    taskId: "Portfolio-Website",
+    content: [
+      {
+        title: "Header.js Component",
+        subtitle: "Defining the Functional Component and State",
+        details: [
+          "To define the Header component and initialize the state variable isNavOpen to manage the navigation menu's open or closed status.",
+          "Use descriptive state names to enhance code readability.",
+          "Initialize state with a relevant default value.",
+        ],
+        image: "./cheatsheetImages/task35/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Toggle Navigation Function",
+        details: [
+          "To define a function that toggles the value of isNavOpen, allowing the navigation menu to open or close.",
+          "Keep functions concise to improve maintainability.",
+          "Consider using 'useCallback' for optimization in larger components.",
+        ],
+        image: "./cheatsheetImages/task35/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Structuring the Header Layout",
+        details: [
+          "To create the main structure of the header, including the logo and a conditional class based on the navigation state.",
+          "Use semantic elements like <header> for better accessibility.",
+          "Utilize conditional classes to manage styles dynamically.",
+        ],
+        image: "./cheatsheetImages/task35/3.webp"
+      },
+         {
+        title: "Portfolio.js Component",
+        subtitle: "Defining the Functional Component and State",
+        details: [
+          "To define the Portfolio component and initialize the state variable currentFilter to track the active filter.",
+          "Use descriptive state names to clarify their purpose in the component.",
+          "Initialize state with a relevant default value.",
+        ],
+        image: "./cheatsheetImages/task35/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Filter Click Handler",
+        details: [
+          "To define a function that updates the 'currentFilter' state based on user interaction.",
+          "Keep the handler function concise and focused on a single task.",
+          "Use arrow functions for cleaner syntax.",
+        ],
+        image: "./cheatsheetImages/task35/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Filter Button Group",
+        details: [
+          "To create a group of buttons for filtering portfolio items by category, highlighting the active filter.",
+          "Use conditional class names for dynamic styling based on the state.",
+          "Ensure button elements are keyboard accessible for improved usability.",
+        ],
+        image: "./cheatsheetImages/task35/6.webp"
+      },
+    ],
+  },
 
 
 ];
