@@ -2319,6 +2319,71 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Celestial-Canvas",
+    content: [
+      {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+    ],
+  },
 
 
 ];
