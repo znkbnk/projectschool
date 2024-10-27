@@ -42,11 +42,15 @@
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Lato:wght@100;300;400;700;900&family=Piazzolla:wght@300&family=Ubuntu&display=swap"
       />
-      <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;700&display=swap"
+        rel="stylesheet"
+      />
     </noscript>
     <meta name="theme-color" content="#ffffff" />
-    <title>ProjectSchool - Learn React with Real Projects & Hands-on Tasks</title>
-
+    <title>
+      ProjectSchool - Learn React with Real Projects & Hands-on Tasks
+    </title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -72,14 +76,19 @@
         var script = document.createElement("script");
         script.type = "application/ld+json";
 
-        fetch("./structured-data.json")
-          .then((response) => response.json())
+        fetch("./structured-data.json") 
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json(); 
+          })
           .then((data) => {
             script.text = JSON.stringify(data);
-            document.head.appendChild(script);
+            document.head.appendChild(script); 
           })
           .catch((error) => {
-            console.error("Error loading JSON-LD data:", error);
+            console.error("Error loading JSON-LD data:", error); 
           });
       });
     </script>
