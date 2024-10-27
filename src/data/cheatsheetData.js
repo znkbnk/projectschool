@@ -2192,6 +2192,68 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Timer-App",
+    content: [
+      {
+        title: "",
+        subtitle: "Initializing State",
+        details: [
+          "This block initializes the state for the timer (time) and the timer's active status (isActive). The timer is set to 600 seconds (10 minutes).",
+          "'setTime' and 'setIsActive' are functions that update the respective state variables.",
+          "Adjust the initial value of 'time' as needed for different countdown durations.",
+        ],
+        image: "./cheatsheetImages/task34/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Setting Up the Effect Hook",
+        details: [
+          "This block manages the timer's countdown logic. It sets up an interval that decrements the timer every second when active. It also cleans up the interval to avoid memory leaks when the component unmounts or when the timer is paused.",
+          "The dependency array ([isActive, time]) ensures that the effect runs only when these values change.",
+          "Be careful to clear the interval to prevent multiple intervals from running simultaneously.",
+        ],
+        image: "./cheatsheetImages/task34/2.webp"
+      },
+         {
+        title: "Timer Control Functions",
+        subtitle: "Start Timer",
+        details: [
+          "Activates the timer, allowing it to start counting down.",
+          "This function can be linked to a button click to enable user control over the timer.",
+        ],
+        image: "./cheatsheetImages/task34/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Pause Timer",
+        details: [
+          "Pauses the timer, stopping the countdown without resetting the time.",
+          "This function helps users take breaks without losing their progress.",
+        ],
+        image: "./cheatsheetImages/task34/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Reset Timer",
+        details: [
+          "Stops the timer and resets the countdown back to the initial state (10 minutes).",
+          "Reset functionality is essential for user experience, allowing users to restart the timer easily",
+        ],
+        image: "./cheatsheetImages/task34/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "Converts the time in seconds to a string formatted as 'MM' for easier readability.",
+          "'padStart(2, '0')' ensures that single-digit minutes or seconds are displayed with a leading zero.",
+          "This formatting enhances user experience by providing a familiar time display.",
+        ],
+        image: "./cheatsheetImages/task34/6.webp"
+      },
+    ],
+  },
 
 
 
