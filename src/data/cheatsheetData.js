@@ -2320,68 +2320,37 @@ const cheatsheetData = [
     ],
   },
   {
-    taskId: "Celestial-Canvas",
+    taskId: "Materialize-Portfolio",
     content: [
       {
         title: "",
-        subtitle: "",
+        subtitle: "Setting Up Materialize CSS",
         details: [
-          "",
-          "",
-          "",
+          "The Materialize CSS library is imported for easy access to pre-designed components and JavaScript functionality, helping us style the app without extensive custom CSS.",
+         
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task37/1.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Initializing Materialize",
         details: [
-          "",
-          "",
-          "",
+          "'useEffect' is a React hook that runs code after the component renders. Here, it initializes Materialize components when the app loads using 'M.AutoInit()'.",
+          "This auto-initializes any Materialize elements used in the app, saving manual initialization of individual components.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task37/2.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Handling Button Clicks and Smooth Scrolling",
         details: [
-          "",
-          "",
+          "'handleDirectionsClick' is a function triggered when the button is clicked. It uses 'scrollIntoView' to smoothly scroll to the element with the id='googleMapIframe'.",
+          "Use scrollIntoView to focus on specific sections. Great for user experience in single-page apps.",
           "",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task37/3.webp"
       },
-         {
-        title: "",
-        subtitle: "",
-        details: [
-          "",
-          "",
-          "",
-        ],
-        image: "./cheatsheetImages/task/.webp"
-      },
-         {
-        title: "",
-        subtitle: "",
-        details: [
-          "",
-          "",
-          "",
-        ],
-        image: "./cheatsheetImages/task/.webp"
-      },
-         {
-        title: "",
-        subtitle: "",
-        details: [
-          "",
-          "",
-          "",
-        ],
-        image: "./cheatsheetImages/task/.webp"
-      },
+       
     ],
   },
 
