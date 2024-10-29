@@ -2354,6 +2354,76 @@ const cheatsheetData = [
     ],
   },
 
+  {
+    taskId: "File-Uploader",
+    content: [
+      {
+        title: "",
+        subtitle: "Setting Up Component State",
+        details: [
+          "Initializes a state variable filesData as an empty array.",
+          "Stores metadata for each uploaded file, like its name and URL, which are needed to display the file information and enable download.",
+          "You can update this array to add or remove files as they’re selected or deleted.",
+        ],
+        image: "./cheatsheetImages/task38/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Creating a Reference for the File Input",
+        details: [
+          "Creates a 'ref' for the file input element.",
+          "Allows control over the <input> element without using the DOM directly.",
+          "Using refs can be helpful when you need direct access to an element (e.g., to trigger a click programmatically).",
+        ],
+        image: "./cheatsheetImages/task38/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "File Upload Button Handler",
+        details: [
+          "This function triggers a click on the file input.",
+          "Opens the file dialog without the need for a visible input field.",
+          "This approach improves the user interface by using a custom button instead of a standard file input.",
+        ],
+        image: "./cheatsheetImages/task38/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handling File Selection and Updating State",
+        details: [
+          "This function handles file selection by:",
+          "Reading selected files from the input.",
+          "Mapping each file to an object with 'name' and a 'url' for preview/download.",
+          "Updating 'filesData' state with the new files, preserving any previously selected files.",
+          "URL.createObjectURL(file): Generates a temporary URL for the file, allowing it to be displayed or downloaded.",
+          "...prevFilesData: Ensures previous files are not overwritten by new selections.",
+          
+        ],
+        image: "./cheatsheetImages/task38/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Deleting a File",
+        details: [
+          "Removes a file from 'filesData' by filtering it out based on its index.",
+          "Updating the state this way ensures React re-renders the component without the deleted file.",
+        ],
+        image: "./cheatsheetImages/task38/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Rendering the Component UI",
+        details: [
+          "The <input type='file' multiple> allows multiple files to be selected.",
+          "'onChange' triggers 'handleFileChange', updating 'filesData' whenever files are selected.",
+          "Set multiple to allow multiple file selection at once.",
+        ],
+        image: "./cheatsheetImages/task38/6.webp"
+      },
+    ],
+  },
+
+
 
 ];
 
