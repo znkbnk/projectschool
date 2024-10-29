@@ -2420,6 +2420,16 @@ const cheatsheetData = [
         ],
         image: "./cheatsheetImages/task38/6.webp"
       },
+      {
+        title: "",
+        subtitle: "Displaying Download Links and Delete Button",
+        details: [
+          "Download Link: Uses the 'file.url' and 'file.name' for each file to create a download link.",
+          "Delete Button: Triggers handleFileDelete, removing the file from filesData.",
+          "Each file requires a unique key (index is used here) to help React efficiently re-render only the updated items.",
+        ],
+        image: "./cheatsheetImages/task38/7.webp"
+      },
     ],
   },
 
