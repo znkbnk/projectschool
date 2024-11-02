@@ -322,17 +322,19 @@ section {
 
 .video-container {
   width: 100%;
-  max-height: 600px; /* Adjust as needed */
-  display: flex; /* Enable flexbox */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
+  max-height: 600px; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
 }
 
 .video-container iframe {
   width: 100%;
-  max-height: 500px; /* Adjust this value */
-  border: none; /* Remove default iframe border */
+  max-height: 500px; 
+  border: none; 
+  outline: none;
   border-radius: 10px;
+  box-shadow: none;
 
 }
 

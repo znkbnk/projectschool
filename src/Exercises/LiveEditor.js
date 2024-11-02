@@ -360,6 +360,7 @@ const LiveEditor = () => {
                         title='Video Lesson'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                         allowFullScreen
+                        style={{ border: 'none' }}
                       ></iframe>
                     </div>
                   </motion.div>

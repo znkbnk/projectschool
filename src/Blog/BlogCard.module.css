@@ -1,80 +1,57 @@
-/* Wrapper for the card grid */
-.wrapper {
+/* BlogCard.module.css */
+.cardMasonry {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
   padding: 2rem;
   max-width: 1000px;
-  margin: 0 auto 10rem auto;
+  margin: 0 auto 10rem;
   background-color: #0a0a0a;
 }
 
-/* Exercise card container */
-.exercises-card {
+.cardContainer {
   position: relative;
   background: #151515;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  list-style: none;
   border: 2px solid rgba(255, 255, 255, 0.1);
-  animation: cardAppear 0.6s ease backwards;
 }
 
-.exercises-card:hover {
+.cardContainer:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 40px rgba(255, 192, 203, 0.15);
   border-color: rgba(245, 192, 255, 0.4);
 }
 
-.exercises-card::before {
+.cardContainer::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 100%;
-  background: linear-gradient(45deg, transparent, rgba(255, 192, 203, 0.03));
+  background: linear-gradient(45deg, 
+    transparent,
+    rgba(255, 192, 203, 0.03)
+  );
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-.exercises-card:hover::before {
+.cardContainer:hover::before {
   opacity: 1;
 }
 
-/* Card body content */
-.exercises-card__body {
+.cardContainerContent {
   padding: 2rem;
   position: relative;
   z-index: 1;
 }
 
-/* Card image */
-.exercises-card__image {
-  padding: 25px;
-  height: 15rem;
-  object-fit: contain; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto; 
-  transition: transform 0.5s ease;
-}
-
-.exercises-card:hover .exercises-card__image {
-  transform: scale(1.05);
-}
-
-.exercises-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 25vh;
-  font-size: 2rem;
-}
-/* Card title */
-.exercises-card__title {
+.cardHeaderTitle {
   color: #ffffff;
   font-size: 1.6rem;
   margin: 0 0 1rem 0;
@@ -89,7 +66,7 @@
   display: inline-block;
 }
 
-.exercises-card__title::after {
+.cardHeaderTitle::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -100,16 +77,15 @@
   transition: width 0.3s ease;
 }
 
-.exercises-card:hover .exercises-card__title {
+.cardContainer:hover .cardHeaderTitle {
   opacity: 1;
 }
 
-.exercises-card:hover .exercises-card__title::after {
+.cardContainer:hover .cardHeaderTitle::after {
   width: 100%;
 }
 
-/* Card description */
-.exercises-card__description {
+.cardMainText {
   color: #a0a0a0;
   line-height: 1.7;
   margin-bottom: 1.8rem;
@@ -117,12 +93,11 @@
   transition: color 0.3s ease;
 }
 
-.exercises-card:hover .exercises-card__description {
+.cardContainer:hover .cardMainText {
   color: #ffffff;
 }
 
-/* Start button */
-.exercises-card__btn {
+.cardButton {
   display: inline-flex;
   align-items: center;
   color: #ffffff;
@@ -136,16 +111,15 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
 
-.exercises-card__btn:hover {
+.cardButton:hover {
   background: rgba(248, 192, 255, 0.1);
   border-color: rgba(253, 192, 255, 0.3);
   padding-right: 1.8rem;
 }
 
-.exercises-card__btn::after {
+.cardButton::after {
   content: '→';
   margin-left: 0.5rem;
   transition: all 0.3s ease;
@@ -154,29 +128,24 @@
   transform: translateX(-10px);
 }
 
-.exercises-card__btn:hover::after {
+.cardButton:hover::after {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* Ripple effect */
-.ripple {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(0);
-  animation: ripple 0.6s linear;
-  pointer-events: none;
-}
-
-@keyframes ripple {
-  to {
-    transform: scale(4);
-    opacity: 0;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cardMasonry {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .cardContainer {
+    margin: 0 1rem;
   }
 }
 
-/* Card appear animation */
+/* Staggered animation on page load */
 @keyframes cardAppear {
   from {
     opacity: 0;
@@ -188,23 +157,14 @@
   }
 }
 
-/* Staggered animation delays */
-.exercises-card:nth-child(2) {
+.cardContainer {
+  animation: cardAppear 0.6s ease backwards;
+}
+
+.cardContainer:nth-child(2) {
   animation-delay: 0.1s;
 }
 
-.exercises-card:nth-child(3) {
+.cardContainer:nth-child(3) {
   animation-delay: 0.2s;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .wrapper {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  
-  .exercises-card {
-    margin: 0 1rem;
-  }
 }

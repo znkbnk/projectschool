@@ -71,7 +71,7 @@ const Navbar = () => {
               <Link to='/pricing' className='nav-link'>
                 Pricing
               </Link>
-              <Link to='/blog' className='nav-link'>
+              <Link to='/blogs' className='nav-link'>
                 Articles
               </Link>
               <Link to='/authors' className='nav-link'>
@@ -85,7 +85,7 @@ const Navbar = () => {
           )}
           {!isLoggedIn && (
             <>
-              <Link to='/blog' className='nav-link'>
+              <Link to='/blogs' className='nav-link'>
                 Articles
               </Link>
               <Link to='/pricing' className='nav-link'>
@@ -128,7 +128,7 @@ const Navbar = () => {
       <div className={showLinks ? "responsive-links open" : "responsive-links"}>
         {!isLoggedIn && (
           <>
-            <Link to='/blog' className='nav-link'>
+            <Link to='/blogs' className='nav-link'>
               Articles
             </Link>
             <Link to='/pricing' className='nav-link'>
@@ -147,7 +147,7 @@ const Navbar = () => {
             <Link to='/livechat' className='nav-link'>
               LiveChat
             </Link>
-            <Link to='/blog' className='nav-link'>
+            <Link to='/blogs' className='nav-link'>
               Articles
             </Link>
             <Link to='/authors' className='nav-link'>

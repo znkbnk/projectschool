@@ -17,12 +17,16 @@ body {
 .blog-cards {
   display: flex;
   flex-direction: column;
+  
 }
 
 .cards-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 40px;
+
+  
 }
 .cards-flex a {
   display: flex;

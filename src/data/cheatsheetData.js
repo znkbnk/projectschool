@@ -2346,7 +2346,6 @@ const cheatsheetData = [
         details: [
           "'handleDirectionsClick' is a function triggered when the button is clicked. It uses 'scrollIntoView' to smoothly scroll to the element with the id='googleMapIframe'.",
           "Use scrollIntoView to focus on specific sections. Great for user experience in single-page apps.",
-          "",
         ],
         image: "./cheatsheetImages/task37/3.webp"
       },
