@@ -208,3 +208,12 @@
     margin: 0 1rem;
   }
 }
+
+
+@media (max-width: 375px) {
+  .exercises-title {
+    margin-top: 50px;
+    font-size: 2rem;
+  }
+}
+

@@ -1,23 +1,19 @@
-/* ReactExplained.module.css */
-
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw; 
+  width: 100vw;
   overflow: hidden;
   padding-bottom: 15rem;
-
 }
 
 .carousel {
   position: relative;
-  width: 23rem; 
-  height: 23rem; 
+  width: 23rem;
+  height: 23rem;
   perspective: 500px;
   transform-style: preserve-3d;
   z-index: 1;
-
 }
 
 .cardContainer {
@@ -31,17 +27,14 @@
     translateX(calc(var(--direction) * -5rem));
   filter: blur(calc(var(--abs-offset) * 1rem));
   transition: all 0.3s ease-out;
-  
 }
-
-
 
 .nav {
   color: #8B5CF6;
   font-size: 5rem;
   position: absolute;
   top: 50%;
-  z-index: 2; 
+  z-index: 2;
   cursor: pointer;
   user-select: none;
   background: unset;
@@ -50,13 +43,73 @@
   transition: color 0.3s ease;
 }
 
-
 .nav.left {
   left: -5rem;
 }
 
 .nav.right {
-  right: -5rem; 
+  right: -5rem;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel {
+    height: 18rem;
+  }
 
+  .nav {
+    font-size: 4rem;
+  }
+
+  .nav.left {
+    left: -3rem;
+  }
+
+  .nav.right {
+    right: -3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    width: 80%;
+    height: 50vh;
+  }
+
+  .nav {
+    font-size: 3rem;
+  }
+
+  .nav.left {
+    left: -2rem;
+  }
+
+  .nav.right {
+    right: -2rem;
+  }
+
+  .container {
+    padding-bottom: 10rem;
+  }
+
+  @media (max-width: 375px) { .carousel {
+    width: 80%;
+    height: 80vh;
+  }
+
+  .nav {
+    font-size: 3rem;
+  }
+
+  .nav.left {
+    left: -2rem;
+  }
+
+  .nav.right {
+    right: -2rem;
+  }
+
+  .container {
+    padding-bottom: 10rem;
+  }}
+}
