@@ -6,7 +6,7 @@
 }
 
 .inputContainer {
-    position: relative; /* Allows absolute positioning of the clear icon */
+    position: relative; 
 }
 
 .searchInput {
@@ -18,15 +18,15 @@
     background: rgba(255, 192, 203, 0.05);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.377);
-    width: 100%; /* Ensure the input takes full width */
+    width: 100%; 
 }
 
 .clearIcon {
     position: absolute;
-    right: 10px; /* Adjust as necessary for spacing */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Center the icon */
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); 
     cursor: pointer;
-    color: #ffffff; /* Change color to match your design */
-    font-size: 1.2rem; /* Adjust size as necessary */
+    color: #ffffff; 
+    font-size: 1.2rem; 
 }

@@ -28,6 +28,7 @@ import useAuth from "./Login/useAuth";
 import BlogCardList from "./Blog/BlogCardList";
 import ReactExplained from "./Blog/ReactExplained";
 import DevEssentials from "./Blog/DevEssentials";
+import NotFound from "./components/NotFound";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -62,6 +63,10 @@ const App = () => {
         <Route
           path='/blog'
           element={<Blog /> }
+        />
+         <Route
+          path='/notavailable'
+          element={<NotFound /> }
         />
         <Route
           path='/devessentials'

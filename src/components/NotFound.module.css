@@ -1,0 +1,66 @@
+.body {
+    background-color: #2F3242;
+}
+
+.notFoundContainer {
+    position: fixed; /* Change to fixed to center it relative to the viewport */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the element */
+    text-align: center;
+}
+
+.svg {
+    width: 280px; /* Adjust width if necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+.messageBox {
+    min-height: 100px; /* Set a minimum height */
+    width: 700px;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    padding: 20px; /* Add some padding */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    overflow: auto; /* Add this to handle overflow if necessary */
+}
+
+.messageBox h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.polygon {
+    animation: float 1s infinite ease-in-out alternate;
+}
+
+.polygon2 {
+    animation-delay: 0.2s; 
+}
+
+.polygon3 {
+    animation-delay: 0.4s; 
+}
+
+.polygon4 {
+    animation-delay: 0.6s; 
+}
+
+.polygon5 {
+    animation-delay: 0.8s; 
+}
+
+@keyframes float {
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+@media (max-width: 450px) {
+    .svg {
+        width: 190px; /* Adjust size for small screens */
+    }
+    .messageBox {
+        width: 100%; /* Allow full width on smaller screens */
+    }
+}

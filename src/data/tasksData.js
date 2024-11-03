@@ -1563,6 +1563,200 @@ const tasksData = {
       videoLink: "",
     },
 
+    {
+      "taskId": "Deploying-React-Website-on-GoDaddy",
+      "taskTitle": "Deploy Your React App to GoDaddy",
+      "introduction": "This task outlines the steps to deploy your React application to a GoDaddy hosting account.",
+      "task": {
+        "taskDescription": "I require assistance with deploying my already built React website on my GoDaddy hosting account. The domain name has been set up.",
+        "platform": "Freelancer",
+        "projectName": "Deploying React Website on GoDaddy",
+        "biddingEnds": "Friday, November 8, 2024",
+        "requirements": [
+          "A GoDaddy hosting account",
+          "A domain name set up with GoDaddy",
+          "React application built with npm",
+          "Basic knowledge of web hosting and file management"
+        ]
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Build Your React Application",
+          titleDescription: "Create an optimized build of your React app.",
+          sections: [
+            {
+              subtitleDescription: "Navigate to Your React App Directory",
+              descriptions: [
+                "Open your terminal or command prompt and navigate to the root directory of your React application.",
+                "Run: cd path/to/your/react-app",
+              ],
+            },
+            {
+              subtitleDescription: "Build the Application",
+              descriptions: [
+                "Run the following command to create an optimized production build of your React app.",
+                "This will generate a build folder containing the static files needed for deployment.",
+                "Run: npm run build",
+                "This command will create a build directory in your project folder.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 2: Prepare Your GoDaddy Account",
+          titleDescription: "Get your GoDaddy hosting account ready.",
+          sections: [
+            {
+              subtitleDescription: "Log In to Your GoDaddy Account",
+              descriptions: [
+                "Go to GoDaddy.com and log in to your account.",
+              ],
+            },
+            {
+              subtitleDescription: "Access Your Hosting Dashboard",
+              descriptions: [
+                "Click on your username in the top right corner, and select My Products.",
+                "Under Web Hosting, click on Manage next to the hosting account you want to use.",
+              ],
+            },
+            {
+              subtitleDescription: "Open cPanel",
+              descriptions: [
+                "In your hosting dashboard, look for the cPanel option and click on it.",
+                "This will take you to the cPanel interface.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 3: Upload Your Build Files to GoDaddy",
+          titleDescription: "Transfer your build files to your hosting account.",
+          sections: [
+            {
+              subtitleDescription: "Open the File Manager",
+              descriptions: [
+                "In cPanel, find the File Manager tool and click on it.",
+              ],
+            },
+            {
+              subtitleDescription: "Navigate to the Root Directory",
+              descriptions: [
+                "Navigate to the public_html directory or a subfolder depending on your domain setup.",
+                "If you're using the main domain, upload your files to public_html.",
+              ],
+            },
+            {
+              subtitleDescription: "Upload the Build Files",
+              descriptions: [
+                "Click on the Upload option in the top menu.",
+                "Upload all files from the build directory created in Step 1.",
+                "You can drag and drop the files or click Choose File to select them.",
+              ],
+            },
+            {
+              subtitleDescription: "Extract if Necessary",
+              descriptions: [
+                "If you zipped your build files, upload the zip file and then extract it in cPanel.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 4: Configure Your Domain Settings (if necessary)",
+          titleDescription: "Ensure your domain points to the right directory.",
+          sections: [
+            {
+              subtitleDescription: "Check Your Domain Settings",
+              descriptions: [
+                "Make sure that your domain is pointing to the correct directory.",
+                "GoDaddy usually does this automatically, but it's good to confirm.",
+              ],
+            },
+            {
+              subtitleDescription: "Setup Redirects (if applicable)",
+              descriptions: [
+                "If you want to redirect traffic from www to non-www or vice versa, set this up using the Redirects option in cPanel.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 5: Test Your Website",
+          titleDescription: "Verify that your website is functioning correctly.",
+          sections: [
+            {
+              subtitleDescription: "Access Your Domain",
+              descriptions: [
+                "Open a web browser and go to your domain (e.g., http://yourdomain.com).",
+              ],
+            },
+            {
+              subtitleDescription: "Check Functionality",
+              descriptions: [
+                "Ensure all aspects of your React application are working as expected.",
+                "Look for any broken links or missing assets.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 6: Troubleshooting Tips",
+          titleDescription: "Common issues and how to fix them.",
+          sections: [
+            {
+              subtitleDescription: "404 Errors",
+              descriptions: [
+                "If encountering 404 errors when navigating routes, create a .htaccess file in your public_html folder.",
+                "Add the following lines to redirect all requests to index.html:",
+                "RewriteEngine On",
+                "RewriteBase /",
+                "RewriteRule ^index\\.html$ - [L]",
+                "RewriteCond %{REQUEST_FILENAME} !-f",
+                "RewriteCond %{REQUEST_FILENAME} !-d",
+                "RewriteRule . /index.html [L]",
+              ],
+            },
+            {
+              subtitleDescription: "Caching Issues",
+              descriptions: [
+                "If you face caching issues, clear your browser cache or test your site in incognito mode.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 7: Finalize Your Setup",
+          titleDescription: "Ensure your site is secure and ready for users.",
+          sections: [
+            {
+              subtitleDescription: "SSL Certificate",
+              descriptions: [
+                "Consider setting up an SSL certificate for security.",
+                "GoDaddy usually provides a free SSL certificate for your domain.",
+                "Enable this through the hosting dashboard.",
+              ],
+            },
+            {
+              subtitleDescription: "Monitor Your Website",
+              descriptions: [
+                "After deployment, monitor your website for any performance issues or bugs that may arise.",
+              ],
+            },
+          ],
+        },
+      ],
+      taskType: "Live",
+      difficulty: "Medium",
+      authorIndex: 0,
+      prerequisites: ["Basic understanding of React and web hosting"],
+      completed: false,
+      codesandboxUrl: "#/notavailable",
+      img: require("../images/livelessons7.webp"),
+      link: "pathStyles",
+      videoLink: "",
+    }
+    
+
 
 
 
