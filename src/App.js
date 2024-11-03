@@ -25,9 +25,9 @@ import LaravelLessons from "./Exercises/LaravelLessons";
 import MobileMessage from "./Exercises/MobileMessage";
 import LiveLessons from "./Exercises/LiveLessons";
 import useAuth from "./Login/useAuth";
-import HowTo from "./Blog/HowTo";
 import BlogCardList from "./Blog/BlogCardList";
 import ReactExplained from "./Blog/ReactExplained";
+import DevEssentials from "./Blog/DevEssentials";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -64,8 +64,8 @@ const App = () => {
           element={<Blog /> }
         />
         <Route
-          path='/howto'
-          element={<HowTo /> }
+          path='/devessentials'
+          element={<DevEssentials /> }
         />
          <Route
           path='/reactexplained'

@@ -30,15 +30,21 @@ const WelcomeComponent = () => {
       <div>
         <h1 className='exercises-title' ref={titleRef}>
 
-          <span>H</span>
-          <span>o</span>
-          <span>w</span>
+          <span>D</span>
+          <span>e</span>
+          <span>v</span>
           <span className="space"> </span>
 
+          <span>E</span>
+          <span>s</span>
+          <span>s</span>
+          <span>e</span>
+          <span>n</span>
           <span>t</span>
-          <span>o</span>
-          <span>?</span>
-          
+          <span>i</span>
+          <span>a</span>
+          <span>l</span>
+          <span>s</span>          
         </h1>
       </div>
     </div>

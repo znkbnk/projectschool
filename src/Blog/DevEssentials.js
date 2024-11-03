@@ -6,9 +6,9 @@ import { blogCards } from "../data/articlesData";
 import "../styles/blog.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import HowToTitle from "./HowToTitle";
+import DevEssentialsTitle from "./DevEssentialsTitle";
 
-function HowTo() {
+function DevEssentials() {
   function ScrollToTopOnNavigation() {
     window.scrollTo(0, 0);
     return null;
@@ -21,7 +21,7 @@ function HowTo() {
     <div className='blog-container'>
       
       <div className='blog-cards'>
-        <HowToTitle />
+        <DevEssentialsTitle />
         <div className="cards-flex"> 
           {blogCards.map((item, index) => (
             <Link key={index} to={`/articles/${item.id}`}>
@@ -47,4 +47,4 @@ function HowTo() {
   );
 }
 
-export default HowTo;
+export default DevEssentials;

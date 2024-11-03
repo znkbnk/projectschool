@@ -6,14 +6,15 @@
       property="og:title"
       content="React Practical Learning at ProjectSchool"
     />
+    <meta property="og:title" content="Learn React with Hands-on Projects - ProjectSchool" />
     <meta
       property="og:description"
-      content="Master React with 60+ hands-on projects. Boost your skills with practical exercises and project-based learning."
+      content="Boost your React skills with hands-on projects. Join ProjectSchool for 60+ real-world React exercises. Master React, improve your portfolio, and learn through doing."
     />
     <meta property="og:url" content="https://www.projectschool.dev" />
     <meta
       property="og:image"
-      content="https://www.projectschool.dev/path-to-social-share-image.jpg"
+      content="https://projectschool.dev/#/"
     />
     <meta property="og:type" content="website" />
 
@@ -92,13 +93,35 @@
           });
       });
     </script>
+    <script>
+      window.addEventListener("load", function () {
+        var script = document.createElement("script");
+        script.type = "application/ld+json";
+    
+        fetch("./faq-structured-data.json")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            script.text = JSON.stringify(data);
+            document.head.appendChild(script);
+          })
+          .catch((error) => {
+            console.error("Error loading JSON-LD FAQ data:", error);
+          });
+      });
+    </script>
+    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
         "name": "ProjectSchool",
         "url": "https://www.projectschool.dev",
-        "logo": "https://www.projectschool.dev/path-to-logo.jpg",
+        "logo": "https://projectschool.dev/#/",
         "description": "ProjectSchool offers practical React projects to help you learn React with real-world hands-on coding tasks.",
         "sameAs": [
           "https://twitter.com/projectschool",
