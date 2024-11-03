@@ -2,10 +2,7 @@ import React from "react";
 import styles from "./NotFound.module.css";
 
 const NotFound = () => {
-  const handleGoBack = () => {
-    window.history.back();
-  };
-
+ 
   return (
     <div className={styles.notFoundContainer}>
       <svg
