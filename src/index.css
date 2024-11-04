@@ -43,7 +43,7 @@ header,
   font-size: clamp(2rem, 4vw + 1rem, 12rem);
 }
 
-/* Ultra-Modern, Elegant Black and White Header Styles */
+
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;700&display=swap");
 
 .main-header {
@@ -52,7 +52,7 @@ header,
   align-items: center;
   height: auto;
   font-family: "Playfair Display", serif;
-  font-size: 4.5rem; /* Adjust this for smaller screens in media queries */
+  font-size: 4.5rem; 
   font-weight: 900;
   text-align: center;
   letter-spacing: -0.02em;
@@ -102,17 +102,17 @@ header,
   white-space: nowrap;
 }
 
-/* Make header responsive for smaller screens */
+
 @media (max-width: 1024px) {
   .main-header {
-    font-size: 3.5rem; /* Reduce font size for medium screens */
+    font-size: 3.5rem;
     padding: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .main-header {
-    font-size: 2.5rem; /* Further reduce font size for tablets */
+    font-size: 2.5rem; 
     padding: 1rem;
     margin-top: 80px;
   }
@@ -124,7 +124,7 @@ header,
 
 @media (max-width: 480px) {
   .main-header {
-    font-size: 2rem; /* Further reduce font size for mobile screens */
+    font-size: 2rem; 
     padding: 1rem;
     margin-top: 80px;
   }
@@ -420,20 +420,19 @@ section {
 }
 @media only screen and (max-width: 375px) {
   h1.main-header {
-    font-size: 1.8rem; /* Adjust font size for smaller screens */
-    margin-top: 60px;
+    font-size: 1.8rem; 
   }
 
   .main-header .content {
-    font-size: 1.5rem; /* Smaller text inside the header */
+    font-size: 1.5rem; 
   }
 
   .main-header .react {
-    font-size: 1.7rem; /* React text size adjustment */
+    font-size: 1.7rem; 
   }
 
   .main-header .highlight {
-    font-size: 1rem; /* Reduce the size of the highlighted text */
+    font-size: 1rem; 
     margin: 0;
     padding: 5px;
     letter-spacing: 0;
