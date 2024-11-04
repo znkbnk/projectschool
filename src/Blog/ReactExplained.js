@@ -15,6 +15,11 @@ const ReactExplained = () => {
   const [activeList, setActiveList] = useState(0);
   const [searchTerm, setSearchTerm] = useState('');
 
+  function ScrollToTopOnNavigation() {
+    window.scrollTo(0, 0);
+    return null;
+  }
+
   // Filter cards based on the search term
   const filteredCards = cardsData.filter(card =>
     card.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -77,6 +82,8 @@ const ReactExplained = () => {
 
   return (
     <div>
+      <ScrollToTopOnNavigation />
+
       <Navbar />
       <ReactExplainedTitle />
       <SearchReactFAQ searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
