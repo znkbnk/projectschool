@@ -14,10 +14,8 @@
   align-items: center;
   transition: all 0.3s ease-out;
   max-height: 40rem; 
-  overflow-y: auto; 
   overflow-x: hidden; 
-  word-wrap: break-word; 
-  
+  word-wrap: break-word;   
   transform: 
     rotateY(calc(var(--offset) * 50deg)) 
     scaleY(calc(1 + var(--abs-offset) * -0.4))
@@ -25,6 +23,8 @@
     translateX(calc(var(--direction) * -5rem));
   filter: blur(calc(var(--abs-offset) * 1rem));
 }
+
+
 
 /* Text Styling */
 .card h2 {

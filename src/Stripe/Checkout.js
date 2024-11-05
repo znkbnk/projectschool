@@ -7,8 +7,13 @@ import PriceCardsList from "./PriceCardsList";
 import CheckoutTitle from "./CheckoutTitle";
 
 const Checkout = () => {
+  function ScrollToTopOnNavigation() {
+    window.scrollTo(0, 0);
+    return null;
+  }
   return (
     <div>
+      <ScrollToTopOnNavigation />
       <Navbar />
       <CheckoutTitle />
       <PriceCardsList  />

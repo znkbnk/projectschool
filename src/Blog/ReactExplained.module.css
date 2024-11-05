@@ -1,3 +1,5 @@
+/* ReactExplained.module */
+
 .container {
   display: flex;
   align-items: center;
@@ -7,7 +9,7 @@
   padding-bottom: 15rem;
 }
 
-.carousel {
+.carousel {  
   position: relative;
   width: 23rem;
   height: 23rem;
@@ -30,6 +32,7 @@
 }
 
 .nav {
+  
   color: #8B5CF6;
   font-size: 5rem;
   position: absolute;
