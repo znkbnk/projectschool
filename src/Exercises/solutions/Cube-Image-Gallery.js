@@ -3,6 +3,8 @@ const solutionCode1 = `
 
 import React from 'react';
 import CubeGallery from './CubeGallery';
+import './styles.css'
+
 
 function App() {
   return (

@@ -1,8 +1,11 @@
 const solutionCode1 = `
-import "./styles.css";
+//App.js
+
 import fakeData from "./MOCK_DATA.json";
 import * as React from "react";
 import { useTable, useSortBy } from "react-table";
+import './styles.css'
+
 
 function App() {
   const data = React.useMemo(() => fakeData, []);

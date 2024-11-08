@@ -4,6 +4,8 @@ const solutionCode1 = `
 import { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import './styles.css'
+
 
 function App() {
   const optionsArray = ["JavaScript", "Python", "Java", "C++", "Swift", "Ruby"];

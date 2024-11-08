@@ -1,8 +1,8 @@
 const solutionCode1 = `
 //App.js
 
-import "./App.css";
 import { TodoWrapper } from "./TodoWrapper";
+import './styles.css'
 
 function App() {
   return (

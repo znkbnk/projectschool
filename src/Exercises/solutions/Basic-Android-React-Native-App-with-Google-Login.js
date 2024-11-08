@@ -8,7 +8,7 @@ import * as WebBrowser from 'expo-web-browser';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import HomeScreen from './components/HomeScreen';
 import ProfileScreen from './components/ProfileScreen';
-import styles from './styles/styles'; // Import styles
+import styles from './styles/styles'; 
 
 WebBrowser.maybeCompleteAuthSession();
 

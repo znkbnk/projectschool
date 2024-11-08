@@ -374,6 +374,8 @@ import AboutSection from './components/AboutSection';
 import TrainersSection from './components/TrainersSection';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import './styles.css'
+
 
 const App = () => {
   return (

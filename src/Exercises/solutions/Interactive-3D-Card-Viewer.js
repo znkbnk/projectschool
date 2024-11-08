@@ -1,8 +1,8 @@
 const solutionCode1 = `
 //App.js 
 
-
 import React, { useEffect } from 'react';
+import './styles.css'
 
 const App = () => {
     

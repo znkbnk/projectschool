@@ -2,8 +2,8 @@ const solutionCode1 = `
 //App.js 
 
 import React from 'react';
-
 import PomodoroTimer from './PomodoroTimer';
+import './styles.css'
 
 const App = () => (
   <div>

@@ -4,6 +4,8 @@ const solutionCode1 = `
 import React, { useState, useEffect } from 'react'
 import { useFetch } from './useFetch'
 import Follower from './Follower'
+import './styles.css'
+
 function App() {
   const { loading, data } = useFetch()
   const [page, setPage] = useState(0)

@@ -3,6 +3,8 @@ const solutionCode1 = `
 
 import React, { useState } from 'react'
 import ReactMarkdown from 'react-markdown'
+import './styles.css'
+
 
 function App() {
   const [markdown, setMarkdown] = useState('# Markdown Preview:')

@@ -420,6 +420,7 @@ import Portfolio from './components/Portfolio';
 import Clients from './components/Clients';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import './styles.css'
 
 function App() {
   return (

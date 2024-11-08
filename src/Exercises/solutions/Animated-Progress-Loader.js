@@ -3,6 +3,8 @@ const solutionCode1 = `
 
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import './styles.css'
+
 
 const App = () => {
   const [loading, setLoading] = useState(true);

@@ -1,5 +1,5 @@
 const solutionCode1 = `
-// src/App.js
+//src/App.js
 
 import React from 'react';
 import { Container, Typography } from '@mui/material';
@@ -7,6 +7,8 @@ import ActivityDetails from './components/ActivityDetails';
 import ActivityRecords from './components/ActivityRecords';
 import UserClaimRecords from './components/UserClaimRecords';
 import ActivityRules from './components/ActivityRules';
+import './styles.css'
+
 
 import { activityDetails, activityRecords, userClaimRecords, activityRules } from './data';
 

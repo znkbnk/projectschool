@@ -4,6 +4,8 @@ const solutionCode1 = `
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Slider from './components/Slider';
+import './styles.css'
+
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('');

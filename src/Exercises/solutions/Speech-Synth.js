@@ -4,6 +4,7 @@ const solutionCode1 = `
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './styles.css'
 
 const TextToSpeechApp = () => {
   const [inputText, setInputText] = useState('');

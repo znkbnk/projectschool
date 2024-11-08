@@ -4,7 +4,8 @@ const solutionCode1 = `
 import React, { useState } from 'react';
 import data from './data';
 import Question from './Question';
-import './index.css'
+import './styles.css'
+
 function App() {
   const [questions, setQuestions] = useState(data);
   return (

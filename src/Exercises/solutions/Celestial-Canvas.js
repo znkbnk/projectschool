@@ -1,5 +1,7 @@
 const solutionCode1 = `
 import React, { useEffect, useState, useRef, useCallback } from 'react';
+import './styles.css'
+
 
 const Stars = () => {
   const [starsOn, setStarsOn] = useState(true);

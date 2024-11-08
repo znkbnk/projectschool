@@ -2,6 +2,7 @@ const solutionCode1 = `
 //App.js
 
 import React, { useState } from 'react';
+import './styles.css'
 
 const TextToSpeechApp = () => {
     const [inputText, setInputText] = useState('');

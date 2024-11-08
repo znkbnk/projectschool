@@ -2,7 +2,8 @@ const solutionCode1 = `
 //App.js
 
 import Main from "./Main";
-import "./index.css";
+import './styles.css'
+
 
 const App = () => {
   return <Main />;

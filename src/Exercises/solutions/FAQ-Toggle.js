@@ -2,6 +2,8 @@ const solutionCode1 = `
 // FAQ.js
 
 import React, { useState } from 'react';
+import './styles.css'
+
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);

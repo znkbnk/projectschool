@@ -6,7 +6,7 @@ const solutionCode1 = `
 import React, { useState, useEffect } from "react";
 import data from "./data";
 import Article from "./Article";
-import './index.css'
+import './styles.css'
 
 const getStorageTheme = () => {
   let theme = "light-theme";

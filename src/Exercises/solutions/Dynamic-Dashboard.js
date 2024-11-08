@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import Users from './pages/Users';
 import Schedule from './pages/Schedule';
 import Info from './pages/Info';
+import './styles.css'
+
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);

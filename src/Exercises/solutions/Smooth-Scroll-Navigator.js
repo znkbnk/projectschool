@@ -3,6 +3,7 @@ const solutionCode1 = `
 
 import React, { useEffect, useState } from 'react';
 import { animateScroll as scroll, scroller } from 'react-scroll';
+import './styles.css'
 
 const sections = [
   { id: 'row1', label: 'Home', height: 300, icon: '🏠' },

@@ -2,6 +2,7 @@ const solutionCode1 = `
 //App.js
 
 import Testimonials from "./Testimonials";
+import './styles.css'
 
 function App() {
   return <Testimonials />;

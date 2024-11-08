@@ -5,6 +5,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Links from './components/Links';
+import './styles.css'
 
 function App() {
   return (

@@ -3,8 +3,7 @@ const solutionCode1 = `
 
 import React from 'react';
 import Carousel from './Carousel';
-
-
+import './styles.css'
 
 const App = () => {
   const items = [

@@ -5,7 +5,8 @@ import React, { useState } from "react";
 import data from "./data";
 import List from "./List";
 import BirthdayLogic from "./BirthdayLogic";
-import "./index.css";
+import './styles.css'
+
 
 function App() {
   const [people, setPeople] = useState(data);

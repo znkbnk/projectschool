@@ -9,6 +9,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { data } from "./data.js";
+import './styles.css'
 
 function App() {
   const [search, setSearch] = useState("");

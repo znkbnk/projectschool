@@ -1,7 +1,8 @@
 const solutionCode1 = `
+//App.js
 
-import './App.css';
 import DoubleRangeSlider from './DoubleRangeSlider';
+import './styles.css'
 
 function App() {
   return (

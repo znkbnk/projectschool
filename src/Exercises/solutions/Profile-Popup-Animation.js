@@ -4,6 +4,7 @@ const solutionCode1 = `
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import './styles.css'
 
 const App = () => {
   const [showPopup, setShowPopup] = useState(false);

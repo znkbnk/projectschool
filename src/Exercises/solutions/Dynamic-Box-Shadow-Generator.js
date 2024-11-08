@@ -3,6 +3,8 @@ const solutionCode1 = `
 
 import React, { useState } from "react";
 import ControlBox from "./ControlBox.js";
+import './styles.css'
+
 
 function App() {
   const [shadows, setShadows] = useState([]);

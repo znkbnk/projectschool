@@ -1,6 +1,10 @@
 const solutionCode1 = `
+//App.js
+
 import React, { useState } from 'react'
 import SingleColor from './SingleColor'
+import './styles.css'
+
 
 import Values from 'values.js'
 

@@ -1,7 +1,10 @@
 const solutionCode1 = `
+//Dashboard.js
+
 import React, { useEffect } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
+import './styles.css'
 
 const Dashboard = () => {
   useEffect(() => {

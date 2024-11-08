@@ -2,10 +2,10 @@ const solutionCode1 = `
 //App.js
 
 import React, { useState } from 'react';
-import "./App.css"
 import Menu from './Menu';
 import Categories from './Categories';
 import items from './data';
+import './styles.css'
 const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 
 

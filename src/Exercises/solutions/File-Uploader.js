@@ -3,6 +3,7 @@ const solutionCode1 = `
 
 import React from "react";
 import FileUploadComponent from "./FileUploadComponent";
+import './styles.css'
 
 const App = () => {
   return (

@@ -3,6 +3,7 @@ const solutionCode1 = `
 
 import React from 'react';
 import Quiz from './components/Quiz';
+import './styles.css'
 
 const App = () => (
   <div className="App">

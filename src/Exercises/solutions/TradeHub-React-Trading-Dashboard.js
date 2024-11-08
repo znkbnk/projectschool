@@ -4,6 +4,7 @@ const solutionCode1 = `
 import  React  from "react";
 import Dashboard from "./Dashboard";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import './styles.css'
 
 import Support from "./Support";
 import TransactionPage from "./Transaction";

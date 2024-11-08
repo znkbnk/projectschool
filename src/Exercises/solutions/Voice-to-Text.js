@@ -2,10 +2,10 @@ const solutionCode1 = `
 //App.js
 
 import 'regenerator-runtime/runtime'; 
-import "./App.css"
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import useClipboard from "react-use-clipboard";
 import {useState} from "react";
+import './styles.css'
 
 
 const App = () => {

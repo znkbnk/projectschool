@@ -3,6 +3,8 @@ const solutionCode1 = `
 
 import React, { useState } from "react";
 import Cards from "./Cards";
+import './styles.css'
+
 
 function App() {
   const [startAgain, setStartAgain] = useState(false);

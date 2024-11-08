@@ -5,6 +5,7 @@ const solutionCode1 = `
 
 import React from 'react';
 import Card from './Card'; 
+import './styles.css'
 
 const App = () => {
   return (

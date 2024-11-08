@@ -1,5 +1,7 @@
 /* eslint-disable no-useless-escape */
 const solutionCode1 = `
+//App.js
+
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import './styles.css'

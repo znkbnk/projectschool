@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Model from './components/Model';
 import Footer from './components/Footer';
 import models from './data/models';
+import './styles.css'
 
 const App = () => {
   return (

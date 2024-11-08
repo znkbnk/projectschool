@@ -1,13 +1,14 @@
 const solutionCode1 = `
 //App.js
 
-import "./styles.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./Navbar";
 import { Shop } from "./Shop";
 import { Contact } from "./Contact";
 import { Cart } from "./Cart";
 import { ShopContextProvider } from "./ShopContext";
+import './styles.css'
+
 
 function App() {
   return (

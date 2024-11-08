@@ -7,6 +7,8 @@ import NavBar from './components/Navbar';
 import MainSection from './components/MainSection';
 import Specials from './components/Specials';
 import Footer from './components/Footer';
+import './styles.css'
+
 
 const App = () => {
     const [scrolled, setScrolled] = useState(false);
