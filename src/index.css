@@ -330,7 +330,7 @@ section {
   display: flex;
   border: #777 solid 0.1px;
   padding: 20px; 
-  box-shadow: 10px 10px 25px rgba(175, 175, 175, 0.5);
+  box-shadow: 5px 5px 10px rgba(175, 175, 175, 0.349);
   align-items: center;
   justify-content: center;
 }

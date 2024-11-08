@@ -295,7 +295,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/ztq35d?view=editor&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons1.webp"),
-      link: "pathStyles",
       videoLink: "",
     },
 
@@ -846,7 +845,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/j37fnh?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons3.webp"),
-      link: "pathStyles",
       videoLink: "",
     },
     {
@@ -1093,7 +1091,6 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/r4fphm?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons4.webp"),
-      link: "https://www.dropbox.com/scl/fi/raw54nbg5kdtgtsaln6ys/constructionCalculatorStylesLive4.css?rlkey=17weziikvwk4x46ukba2daqgs&st=0hgu8ywx&dl=0",
     },
     {
       taskId: "React-Firebase-Application-with-ML-and-Payments",
@@ -1360,7 +1357,6 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/szg3f3?view=editor",
       img: require("../images/livelessons5.webp"),
-      link: "pathStyles",
       videoLink: "",
     },
     {
@@ -1559,7 +1555,6 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/fgvp8z?view=editor&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons6.webp"),
-      link: "pathStyles",
       videoLink: "",
     },
 
@@ -1752,7 +1747,6 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "#/notavailable",
       img: require("../images/livelessons7.webp"),
-      link: "pathStyles",
       videoLink: "",
     }
     
@@ -1867,7 +1861,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/vywdxt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson1.webp"),
-      link: "https://www.dropbox.com/scl/fi/ttc2uqnhaxzmky587jj0w/3dHoverStyles.css?rlkey=gbdk8jfuexgcu5z1e52efhj4m&st=3zoceprl&dl=0",
     },
     {
       taskId: "BMI-Tracker",
@@ -1961,7 +1954,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/2fxd29?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson2.webp"),
-      link: "https://www.dropbox.com/scl/fi/03e0si4h3xgxgg74ygra3/BMIstyles.css.css?rlkey=v7kz0wgjp8qtyhfr7ttco3vqx&dl=0",
     },
     {
       taskId: "Dark-Light-Mode-Toggle",
@@ -2066,7 +2058,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/cf8936?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson3.webp"),
-      link: "https://www.dropbox.com/scl/fi/knoeb48ov2on7o1p7qcim/DarkLight.css?rlkey=s5xlzw4l86ugerz5w9v0e5w07&st=hnajvomv&dl=0",
     },
     {
       taskId: "Sortify-Search-by-Name",
@@ -2155,7 +2146,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/rjhv9j?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson4.webp"),
-      link: "https://www.dropbox.com/scl/fi/ggr71m0hhr7dwqbxsn7zb/filterContactList.css?rlkey=ze15q78lxoiocw6z84o2c12cb&st=zw4011an&dl=0",
     },
     {
       taskId: "Simple-Quiz-App",
@@ -2249,7 +2239,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/grf285?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson5.webp"),
-      link: "https://www.dropbox.com/scl/fi/x993b93wtivxvs24vu2gh/quizApp.css?rlkey=ugoc9v64xrxs7a82giuyj0d21&st=5nhhq4ti&dl=0",
     },
     {
       taskId: "FAQ",
@@ -2345,7 +2334,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/jwgpwd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson6.webp"),
-      link: "https://www.dropbox.com/scl/fi/amj4ve7hqeayj09yc88g9/reactFAQStyles6.css?rlkey=dqulaiq4ixiuxopz97ejziq6u&st=igw9by9s&dl=0",
     },
     {
       taskId: "Birthday-Reminder",
@@ -2454,7 +2442,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/7lx22x?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson7.webp"),
-      link: "https://www.dropbox.com/scl/fi/57ns2zldn9w6jud6hbstj/birthdayStyles.css?rlkey=j24jn3vqz5vg144vl0hbj0z51&st=5yn64tby&dl=0",
     },
     {
       taskId: "Dynamic-Box-Shadow-Generator",
@@ -2568,7 +2555,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/5pts5h?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson8.webp"),
-      link: "https://www.dropbox.com/scl/fi/4afgt9yycn142ivtclsm9/shadowStyles.css?rlkey=p92gydd9wnxlt46r4n3b1vjaw&st=nmib5hqn&dl=0",
     },
     {
       taskId: "Memory-Game",
@@ -2680,7 +2666,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/56gy36?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson9.webp"),
-      link: "https://www.dropbox.com/scl/fi/mqd7ggdarkm4fl704iun1/memoryStyles.css?rlkey=9amnv9br4g9t7iz3w4iz9e8h8&st=xopph5bz&dl=0",
     },
     {
       taskId: "Color-Generator",
@@ -2774,7 +2759,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/33th26?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson10.webp"),
-      link: "https://www.dropbox.com/scl/fi/y011c3db1gyww9io1b31k/colorStyles.css?rlkey=xqydm3kozk30nac0tt4d7bozv&st=dhj5uhv0&dl=0",
     },
     {
       taskId: "Range-Slider",
@@ -2948,7 +2932,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/frqg9y?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson11.webp"),
-      link: "https://www.dropbox.com/scl/fi/cewx3sj8qajjwgt6sen28/rangeStyles.css?rlkey=tbx8czemili7mitcw0i47l3x7&st=xjsbkrzb&dl=0",
     },
     {
       taskId: "Form-Validation-Component",
@@ -3121,7 +3104,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/x6fmlz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson12.webp"),
-      link: "https://www.dropbox.com/scl/fi/oh478sruh4coo1niwb2c4/formValidationStyles.css?rlkey=7b9v41wez31d5fqgzgl53qmoe&st=nfdqrklr&dl=0",
     },
     {
       taskId: "Markdown-Preview-App",
@@ -3216,7 +3198,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/l8sft7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson13.webp"),
-      link: "https://www.dropbox.com/scl/fi/iim1mrxbiomqdfu6a8534/markdownStyles.css?rlkey=x702xjplsx1lmje9xlxsmnztl&st=tjk1d94n&dl=0",
     },
     {
       taskId: "Menu-App",
@@ -3341,7 +3322,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/5yphtm?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson14.webp"),
-      link: "https://www.dropbox.com/scl/fi/tuz5g26aze4lf3y9xixfq/menuStyles.css?rlkey=7tqcib3pn704k93ezqeqi5di5&st=cbhgezxb&dl=0",
     },
     {
       taskId: "Responsive-Navbar",
@@ -3420,7 +3400,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/ccxl9t?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson15.webp"),
-      link: "https://www.dropbox.com/scl/fi/ks97vsqcdxhjg236ystvp/navbarStyles.css?rlkey=zcqeskq64ip14h2l07ouf2lt8&st=s8s2fkc7&dl=0",
     },
     {
       taskId: "Pagination-Page",
@@ -3533,7 +3512,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/kcsm88?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson16.webp"),
-      link: "https://www.dropbox.com/scl/fi/8g5fg5okeku604k3v1ijv/paginationStyles.css?rlkey=gxh2ah4lqq2v9qb7im9bnqmgr&st=ymt2ym6v&dl=0",
     },
     {
       taskId: "Search-Bar",
@@ -3680,7 +3658,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/ltj77r?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson17.webp"),
-      link: "https://www.dropbox.com/scl/fi/wj8mbt35tzthwb59t0fpp/searchBarStyles.css?rlkey=1ssb43swqlr20wm3e5nkugzzk&st=s1gbhfpy&dl=0",
     },
     {
       taskId: "Dropdown",
@@ -3832,7 +3809,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/5rsfxk?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson18.webp"),
-      link: "https://www.dropbox.com/scl/fi/a4s2nemre2jjzb30u75u5/dropdownStyles.css?rlkey=12wx0dim604hwgarpnjssr8qu&st=har5kkyl&dl=0",
     },
     {
       taskId: "Sidebar",
@@ -3946,7 +3922,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/7dcynh?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson19.webp"),
-      link: "https://www.dropbox.com/scl/fi/gkczh6ps4swxpr1cebv3m/sidebarStyles.css?rlkey=1gn09lghyev6h92r4vzm143ny&st=sjjt66f6&dl=0",
     },
     {
       taskId: "Dynamic-Table-with-Sorting-and-Copy-Functionality",
@@ -4090,7 +4065,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/nklcs7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson20.webp"),
-      link: "https://www.dropbox.com/scl/fi/241kvmwi5uw8j7oxizpq3/tableStyles.css?rlkey=9usdl7n6wu7vqxv1pjpehtukl&st=7fl30hco&dl=0",
     },
     {
       taskId: "To-Do-App",
@@ -4277,7 +4251,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/dqvxqy?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson21.webp"),
-      link: "https://www.dropbox.com/scl/fi/jbdlfwibc4fi9jnesjevt/todoStyles.css?rlkey=8khn7jf4fbes6dl82vhw9g7cq&st=hu1wmyz0&dl=0",
     },
     {
       taskId: "Testimonials",
@@ -4398,7 +4371,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/zj8n36?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson22.webp"),
-      link: "https://www.dropbox.com/scl/fi/y1yc1mh9isqrbktm5adfh/testimonialsStyles.css?rlkey=85uofxm5xfuv4a4iu5mvzqgi3&st=pmq8ylyh&dl=0",
     },
     {
       taskId: "Voice-to-Text",
@@ -4549,7 +4521,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/9jclqn?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson23.webp"),
-      link: "https://www.dropbox.com/scl/fi/axg1uy5ds3m3fnzf6u8fe/voiceToTextStyles.css?rlkey=95c02402dkkcl12qj75qf82it&st=mhgahg76&dl=0",
     },
     {
       taskId: "Text-to-Voice",
@@ -4645,7 +4616,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/5l526g?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson24.webp"),
-      link: "https://www.dropbox.com/scl/fi/tarvsoi5fgx8c4kar8gs7/textToVoiceStyles.css?rlkey=87sk3e7qtill3m205gfjhr6cv&st=5jhx5kjf&dl=0",
     },
     {
       taskId: "Course-Finder",
@@ -4888,7 +4858,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/4fvyjs?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson25.webp"),
-      link: "https://www.dropbox.com/scl/fi/q4wtsg840xgeapkcf14c5/courseFinderStyles.css?rlkey=8730yrzni5wtv4utdc0eebgek&st=zt7m1rbq&dl=0",
     },
     {
       taskId: "Course-Shop",
@@ -5068,7 +5037,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/6k7zvw?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson26.webp"),
-      link: "https://www.dropbox.com/scl/fi/2ztcyxpl23euc4621pgrk/courseShopStyles.css?rlkey=nfu7b3lsl98w0asmlwu80omio&st=swxaihy0&dl=0",
     },
     {
       taskId: "MATERIALIZECSS-Portfolio",
@@ -5228,7 +5196,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/wp9hkw?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson27.webp"),
-      link: "https://www.dropbox.com/scl/fi/qzlk1srk93y1ut98cw1q2/materializecssStyles.css?rlkey=orbzl27hvw1ao3vnl7yps07y4&st=th9ekx3n&dl=0",
     },
     {
       taskId: "MaterializeCSS-Web-Toolkit",
@@ -5758,7 +5725,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/dtwvpq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson29.webp"),
-      link: "https://www.dropbox.com/scl/fi/pb18ki5xovtd5fud36d4d/index.js?rlkey=luh3f3pa2xx2ldiaao6xfdfux&st=2xvsaaph&dl=0",
     },
     {
       taskId: "Cube-Image-Gallery",
@@ -5859,7 +5825,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/8fv4kq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson30.webp"),
-      link: "https://www.dropbox.com/scl/fi/33r850r4goal6buln22oh/CubeImageGallery.css?rlkey=5sgt95oxccgxptvla3r1fqc01&st=psdl8ajb&dl=0",
     },
     {
       taskId: "Analog-Clock",
@@ -5965,7 +5930,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/knmmp2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson31.webp"),
-      link: "https://www.dropbox.com/scl/fi/uzsyfdeozqlsfzu86ay93/analogAclockStyles.css?rlkey=0t401f0u20wo4uwafu5lbxarn&st=opsjjj4s&dl=0",
     },
     {
       taskId: "Dynamic-Menu-Highlighter",
@@ -6090,7 +6054,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/mfwtx2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson32.webp"),
-      link: "https://www.dropbox.com/scl/fi/25t69epiuon93hvlcvqfg/DynamicMenuStyles.css?rlkey=2njugn8md2enysmdvobyj2mhl&st=70468e4e&dl=0",
     },
     {
       taskId: "Order-Tracker-Mobile-App",
@@ -6279,7 +6242,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/rprym4?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson33.webp"),
-      link: "https://www.dropbox.com/scl/fi/uzifjuktv19fa3k8v56s2/OrderTrackerMobileAppStyles.css?rlkey=gmlwxq43r0oyziy1vg3vgi0rq&st=lv7mwm5a&dl=0",
     },
     {
       taskId: "Timer-App",
@@ -6424,7 +6386,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/gdvhkz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson34.webp"),
-      link: "https://www.dropbox.com/scl/fi/t2zue89djpsi26joppy1u/TimerAppStyles.css?rlkey=8gbliwc0a6rjmm0bshzynkqmx&st=0c8va7gv&dl=0",
     },
     {
       taskId: "Portfolio-Website",
@@ -6613,7 +6574,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/4p4fts?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson35.webp"),
-      link: "https://www.dropbox.com/scl/fi/41ar1xizn0bhnfhaajxqb/PorfolioStyles.css?rlkey=7fklfm02vvgvmqitd0z9cec15&st=ug62zdl7&dl=0",
     },
     {
       taskId: "Celestial-Canvas",
@@ -7025,7 +6985,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/ttfk2x?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson37.webp"),
-      link: "https://www.dropbox.com/scl/fi/7mx73bv5jmwrwm2o1dc3u/MaterializePorfolioStyles.css?rlkey=rw3ql2v2oweo4blr5jw0tozwx&st=03lht5j2&dl=0",
     },
     {
       taskId: "File-Uploader",
@@ -7170,7 +7129,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/ympqz7?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson38.webp"),
-      link: "https://www.dropbox.com/scl/fi/ev1q8sptptruyjujramev/FileUploadStyles.css?rlkey=a9ry3oeydjadfkzx6ox9rx3v2&st=3p49abh4&dl=0",
     },
     {
       taskId: "Cake-Website",
@@ -7361,7 +7319,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/j7jpf2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson39.webp"),
-      link: "https://www.dropbox.com/scl/fi/5341920t1y5svtm1zfmq3/cakeWebsiteStyles.css?rlkey=xnj3290vh1bpy0whuw70xm4u1&st=z2lwyyas&dl=0",
     },
     {
       taskId: "Interactive-3D-Card-Viewer",
@@ -7495,7 +7452,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/hch2kt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson40.webp"),
-      link: "https://www.dropbox.com/scl/fi/qad21wuttv9mocekrjdu8/3dRotateCardStyles40.css?rlkey=5dl9a1id5w2aeqpga6k950hen&st=0dbianeo&dl=0",
     },
     {
       taskId: "Dev-Portfolio",
@@ -7672,7 +7628,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/xz4mnz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson41.webp"),
-      link: "https://www.dropbox.com/scl/fi/p9ac4rqzkxd26umkaus8k/devPortfolioStyles41.css?rlkey=g99lp00iol89oewka2fnyojwa&st=bkpj1345&dl=0",
     },
     {
       taskId: "Fruit-Carousel",
@@ -7850,7 +7805,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/3k8v5w?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson42.webp"),
-      link: "https://www.dropbox.com/scl/fi/3zmbt7rd0hl9n7i9fya98/fruitCarouselStyles42.css?rlkey=fd4uapnbjql7bct0z47trq6h6&st=ywle4l8y&dl=0",
     },
     {
       taskId: "FitLife-Website",
@@ -8056,7 +8010,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/q38qf8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson43.webp"),
-      link: "https://www.dropbox.com/scl/fi/hss5y8g4imrp6e1bu8599/fitLifeWebsiteStyles43.css?rlkey=f6p5xjadpst8bxp8eo0afp1jd&st=46rlozwl&dl=0",
     },
     {
       taskId: "FAQ-Toggle",
@@ -8186,7 +8139,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/gc2rr9?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson44.webp"),
-      link: "https://www.dropbox.com/scl/fi/zzttfwhebm19xhtovltz6/FAQStyles44.css?rlkey=bjn41i22taygvx7z5jvtvjyqn&st=ezegm8sb&dl=0",
     },
     {
       taskId: "Pomodoro-Focus-Timer",
@@ -8365,7 +8317,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/m454vt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson45.webp"),
-      link: "https://www.dropbox.com/scl/fi/c828xk0dyg741lpi7fwa8/pomodoroTimerStyles45.css?rlkey=riin1i6biv7wf2nww9w49qjl6&st=pqwkkmrv&dl=0",
     },
     {
       taskId: "Profolio",
@@ -8612,7 +8563,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/qjhhgd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson46.webp"),
-      link: "https://www.dropbox.com/scl/fi/8cu87jjc8on72lhvvfo58/profolioStyles46.css?rlkey=cnl0oi96p58e8v9g3zi8tgk2b&st=ym0bdqct&dl=0",
     },
 
     {
@@ -8736,7 +8686,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/d6dcwc?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson47.webp"),
-      link: "https://www.dropbox.com/scl/fi/m19oop6z8n3izv49ti7u9/animatedProgressLoaderStyles.css?rlkey=wbfjok8c9b3foo0d5ibrz0r99&st=t53ga66q&dl=0",
     },
     {
       taskId: "Dynamic-Loader",
@@ -8866,7 +8815,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/y58dqv?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson48.webp"),
-      link: "https://www.dropbox.com/scl/fi/2utipgcrdot1nfn0ku8ey/dynamicLoader48.css?rlkey=wlzwdwkdcjqz2ydns4azeaknf&st=k861ornm&dl=0",
     },
     {
       taskId: "Speech-Synth",
@@ -9105,7 +9053,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/c6f9lk?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson49.webp"),
-      link: "https://www.dropbox.com/scl/fi/d3i7fsev6pyxnpkbmz2lj/speechSynthStyles.css?rlkey=mpcogwmbt1xq97cjxv362m7fp&st=27hhv5n1&dl=0",
     },
     {
       taskId: "Smooth-Scroll-Navigator",
@@ -9248,7 +9195,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/6wnq7t?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson50.webp"),
-      link: "https://www.dropbox.com/scl/fi/zy7gzeevt64xk3vpcjkio/SmoothScroll-NavigatorStyles50.css?rlkey=e3dqqusxbtezfwljgk04h2ny0&st=5rdtw8ue&dl=0",
     },
     {
       taskId: "Tesla-Experience",
@@ -9534,7 +9480,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/mtwj4n?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson51.webp"),
-      link: "https://www.dropbox.com/scl/fi/s0to93ewakfkmk0tlegny/teslaExperienceStyles51.css?rlkey=zbjaqvwh1g9k6molh922y0jzc&st=5jyxbdjl&dl=0",
     },
     {
       taskId: "Dynamic-Dashboard",
@@ -9767,7 +9712,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/h66drj?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson52.webp"),
-      link: "https://www.dropbox.com/scl/fi/6to1naqx1n06l2iv017ak/tableDashboardStyles52.css?rlkey=fx72zufi3wb7lz6v33oxcpo5h&st=lqk2p1sm&dl=0",
     },
     {
       taskId: "Quiz-Master",
@@ -9910,7 +9854,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/m7xfwj?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson53.webp"),
-      link: "https://www.dropbox.com/scl/fi/mp09j9gsho3mq9ylhkusa/quizStyles53.css?rlkey=s9l3biiqems1zgg86yvzexlzs&st=nmys6zbf&dl=0",
     },
     {
       taskId: "Profile-Popup-Animation",
@@ -10025,7 +9968,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/74py2f?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson54.webp"),
-      link: "https://www.dropbox.com/scl/fi/869qkslymi27b5c7y0l28/popupWindowStyles54.css?rlkey=becnz8l0b6lo4qqqqhl6yj0f9&st=542fidii&dl=0",
     },
     {
       taskId: "Movies4u",
@@ -10395,7 +10337,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/p94546?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson55.webp"),
-      link: "https://www.dropbox.com/scl/fi/9xhpvyac6et282hydu3dq/movies4uStyles55.css?rlkey=p9azkuai0t3ghilfbl6327nc7&st=o0sepx3v&dl=0",
     },
     {
       taskId: "Natures-Beauty",
@@ -10691,7 +10632,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/3tx6y3?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson56.webp"),
-      link: "https://www.dropbox.com/scl/fi/nrotfgjumv4gmon4jf0me/natureBeautyStyles56.css?rlkey=zj78gycemvqafvlldmobf9gyt&st=kj2d6ym8&dl=0",
     },
     {
       taskId: "Captcha-Guard",
@@ -10971,7 +10911,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/y9zdzc?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson57.webp"),
-      link: "https://www.dropbox.com/scl/fi/jm87f7fe1xin02szd6x80/captchaGuardStyles57.css?rlkey=epzvl31qpayg1xfog253m3310&st=9cf892g5&dl=0",
     },
 
     {
@@ -11122,7 +11061,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/rfdkfz?view=editor+%2B+preview",
       img: require("../images/ReactLesson58.webp"),
-      link: "https://www.dropbox.com/scl/fi/h4tco98677wmesqptnocm/calculatorStyle58.css?rlkey=r8jnc5pmznq7snfsun2cgqrvx&st=130a0xfi&dl=0",
       videoLink: "",
     },
 
@@ -11273,7 +11211,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/6hlym8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson59.webp"),
-      link: "https://www.dropbox.com/scl/fi/kf4z81g0bmmru6axhv78l/copyToClipboard59.css?rlkey=b2m01ax1irixi1ixaxh9c5std&st=4fwf1h4l&dl=0",
       videoLink: "",
     },
     {
@@ -11550,7 +11487,6 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/czpt6f?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson60.webp"),
-      link: "https://www.dropbox.com/scl/fi/hz8gmjpo3wannh8vihskh/engDictionary60.css?rlkey=gcz78xr2efr4s9rv55inkp4am&st=3anpi0oe&dl=0",
       videoLink: "",
     },
   ],
@@ -11805,7 +11741,6 @@ React: [
       completed: false,
       codesandboxUrl: "",
       img: require("../images/ReactLesson1.webp"),
-      link: "pathStyles",
       videoLink: '', 
     },
 
@@ -12164,7 +12099,6 @@ Live lessons
       completed: false,
       codesandboxUrl: "codesandbox",
       img: require("../images/livelessons.webp"),
-      link: "pathStyles",
       videoLink: "",
     },
 

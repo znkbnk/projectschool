@@ -1,0 +1,181 @@
+/* Set a fixed height for the styles popup */
+.styles-popup {
+    position: fixed;
+    top: 10%; 
+    left: 40%;
+    max-width: 700px;
+    transform: translate(-50%, 0); 
+    height: 85vh; 
+    background-color: #000;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(175, 175, 175, 0.349);
+    padding: 40px; 
+    color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    border: #777 solid 0.1px;
+    overflow-y: auto;
+  }
+  
+  .styles-popup::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .styles-popup::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+  }
+  
+  .styles-popup::-webkit-scrollbar-track {
+    background-color: #333;
+  }
+  
+  .styles-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .styles-text {
+    width: 100%;
+    font-family: "Courier New", Courier, monospace;
+    margin-top: 20px;
+  }
+
+  .style-item {
+    width: 100%;
+    margin-bottom: 20px; 
+  }
+  
+  .style-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px; 
+  }
+
+  .styles-text code {
+    display: block;
+    background-color: #2e2e2e;
+    color: #f8f8f2;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: "Courier New", Courier, monospace;
+    border-radius: 8px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    overflow-x: auto; /* Ensure long lines don't break */
+  }
+  
+  .styles-text pre {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  
+  .styles-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-decoration: underline;
+  }
+  
+  .styles-text h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .styles-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .styles-text li {
+    font-size: 14px;
+    padding: 5px 0;
+    margin: 0;
+    list-style-type: disc;
+  }
+  
+  .styles-image {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 20px;
+    object-fit: cover;
+  }
+  
+  /* New button container with equal spacing */
+  .styles-button-container {
+    display: flex;
+    justify-content: space-evenly; /* Evenly space the buttons */
+    width: 100%; /* Ensure the buttons take the full width */
+    margin-top: 20px; /* Add some space above the buttons */
+  }
+  
+  .styles-copy-button,
+  .styles-close-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .styles-copy-button {
+    transition: background-color 0.6s ease, transform 0.3s ease;
+    margin-left: 20px;
+  }
+  
+  .styles-copy-button.copied {
+    background: linear-gradient(#71df75, #29862d);
+    animation: pulse 1s ease-in-out infinite;
+  }
+  
+  .styles-close-button:hover,
+  .styles-copy-button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .styles-close-button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .styles-popup {
+      max-width: 500px;
+      left: 20%;
+    }
+  }
+  

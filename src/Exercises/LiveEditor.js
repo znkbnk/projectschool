@@ -11,14 +11,16 @@ import { tasksData } from "../data/tasksData";
 import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
-import CodeBlock from "./solutions/CodeBlock";
+import CodeBlock from "../Exercises/CodeBlock.js";
 import { auth } from "../components/firebase";
 import axios from "axios";
 import debounce from "lodash/debounce";
 import throttle from "lodash/throttle";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/cheatsheet.css";
+import "../styles/showStyles.css";
 import cheatsheetData from "../data/cheatsheetData.js";
+import stylesData from "../data/stylesData.js";
 
 const LiveEditor = () => {
   const { lessonType, taskId } = useParams();
@@ -31,6 +33,10 @@ const LiveEditor = () => {
   const [showCheatsheet, setShowCheatsheet] = useState(false);
   const [cheatsheetContent, setCheatsheetContent] = useState(null);
   const [showVideoPopup, setShowVideoPopup] = useState(false);
+  const [showStyles, setShowStyles] = useState(false);
+  const [selectedStyle, setSelectedStyle] = useState(null);
+  const [copied, setCopied] = useState(false);
+  const [buttonText, setButtonText] = useState('Solution');
 
   // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
@@ -174,11 +180,27 @@ const LiveEditor = () => {
   }, [throttledComplete]);
 
   const handleToggleSolution = () => {
-    if (subscriptionStatus === "subscribed") {
-      setShowSolution((prev) => !prev);
+    if (subscriptionStatus === 'subscribed') {
+      // Track the current state of showSolution
+      const newSolutionState = !showSolution;
+      setShowSolution(newSolutionState);
+
+      // If the solution is being opened, change the text to "Scroll Down ↓"
+      if (newSolutionState) {
+        setButtonText('Scroll Down ↓');
+
+        // After 2 seconds, change the text back to "Solution"
+        setTimeout(() => {
+          // Set the button text to "Solution" after 2 seconds
+          setButtonText('Solution');
+        }, 1500);
+      } else {
+        // If closing the solution, reset the text immediately
+        setButtonText('Solution');
+      }
     } else {
       toast.info(
-        "Access to solutions requires an active subscription. Please subscribe to unlock this feature."
+        'Access to solutions requires an active subscription. Please subscribe to unlock this feature.'
       );
     }
   };
@@ -194,6 +216,35 @@ const LiveEditor = () => {
     }
     setCheatsheetContent(currentCheatsheet);
     setShowCheatsheet((prev) => !prev);
+  };
+
+  const handleToggleStyles = () => {
+    // Filter styles based on the current taskId
+    const currentStyles = stylesData.filter((style) => style.taskId === taskId);
+
+    if (currentStyles.length === 0) {
+      toast.error("No styles available for this task.");
+      setShowStyles(false);
+      return;
+    }
+
+    setSelectedStyle(currentStyles);
+    setShowStyles((prev) => !prev);
+  };
+
+  const handleCloseStyles = () => {
+    setShowStyles(false);
+  };
+
+  const handleCopyToClipboard = (css) => {
+    navigator.clipboard.writeText(css).then(() => {
+      setCopied(true); // Set copied state to true
+
+      // Reset copied state after 2 seconds
+      setTimeout(() => {
+        setCopied(false); // Reset copied state back to false
+      }, 2000);
+    });
   };
 
   const handleCloseCheatsheet = () => {
@@ -222,6 +273,7 @@ const LiveEditor = () => {
     const handleClickOutside = (event) => {
       const cheatsheetPopup = document.querySelector(".cheatsheet-popup");
       const videoPopup = document.querySelector(".video-popup-window");
+      const showStyles = document.querySelector(".styles-popup");
       if (cheatsheetPopup && !cheatsheetPopup.contains(event.target)) {
         handleCloseCheatsheet();
       }
@@ -229,6 +281,10 @@ const LiveEditor = () => {
       // Check if the video popup is open and if the click was outside of it
       if (videoPopup && !videoPopup.contains(event.target)) {
         handleToggleVideoPopup(); // Close the video popup
+      }
+
+      if (showStyles && !showStyles.contains(event.target)) {
+        handleCloseStyles(); // Close the video popup
       }
     };
 
@@ -242,8 +298,7 @@ const LiveEditor = () => {
     return tasksData[lessonType]?.[currentTaskIndex] || {};
   }, [lessonType, currentTaskIndex]);
 
-  const { taskTitle, task, steps, link, linkData, videoLink, codesandboxUrl } =
-    currentTask;
+  const { taskTitle, task, steps, videoLink, codesandboxUrl } = currentTask;
 
   return (
     <div>
@@ -308,31 +363,20 @@ const LiveEditor = () => {
                 >
                   Cheatsheet
                 </button>
-                {link && (
-                  <button
-                    className='button-84'
-                    onClick={() => window.open(link, "_blank")}
-                    aria-label='Download Styles'
-                  >
-                    Download Styles
-                  </button>
-                )}
-                {linkData && (
-                  <button
-                    className='button-84'
-                    onClick={() => window.open(linkData, "_blank")}
-                    aria-label='Download Data'
-                  >
-                    Download Data
-                  </button>
-                )}
                 <button
                   className='button-84'
-                  onClick={handleToggleSolution}
-                  aria-label='Toggle Solution'
+                  onClick={handleToggleStyles}
+                  aria-label='Toggle Styles'
                 >
-                  Solution
+                  Show Styles
                 </button>
+                <button
+      className='button-84'
+      onClick={handleToggleSolution}
+      aria-label='Toggle Solution'
+    >
+      {buttonText}
+    </button>
                 {videoLink && (
                   <button
                     className='button-84'
@@ -351,7 +395,10 @@ const LiveEditor = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                   >
-                    <button className='video-close-button' onClick={handleToggleVideoPopup}>
+                    <button
+                      className='video-close-button'
+                      onClick={handleToggleVideoPopup}
+                    >
                       &times;
                     </button>
                     <div className='video-container'>
@@ -360,8 +407,46 @@ const LiveEditor = () => {
                         title='Video Lesson'
                         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                         allowFullScreen
-                        style={{ border: 'none' }}
+                        style={{ border: "none" }}
                       ></iframe>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <AnimatePresence>
+                {showStyles && selectedStyle && (
+                  <motion.div
+                    className='styles-popup'
+                    initial={{ opacity: 0, x: "-50%" }}
+                    animate={{ opacity: 1, x: "0%" }}
+                    exit={{ opacity: 0, x: "50%" }}
+                  >
+                    <div className='styles-content'>
+                    <div className='styles-text'>
+  {selectedStyle.map((style, index) => (
+    <div key={index} className="style-item">
+      <div className="style-header">
+        <h3>{style.title}</h3>
+        <button
+          className={`styles-copy-button ${copied ? "copied" : ""}`}
+          onClick={() => handleCopyToClipboard(style.css)}
+        >
+          {copied ? "Copied!" : "Copy Code"}
+        </button>
+      </div>
+      <pre>
+        <code>{style.css}</code>
+      </pre>
+      <button
+        className='styles-close-button'
+        onClick={handleCloseStyles}
+      >
+        Close
+      </button>
+    </div>
+  ))}
+</div>
                     </div>
                   </motion.div>
                 )}
@@ -378,7 +463,7 @@ const LiveEditor = () => {
                     <div className='cheatsheet-content'>
                       <div className='cheatsheet-text'>
                         {cheatsheetContent.content?.map((section, index) => (
-                          <div key={index} className='cheatsheet-section'>
+                          <div key={index}>
                             <h3>{section.title}</h3>
                             {section.subtitle && <h2>{section.subtitle}</h2>}
                             <ul>
@@ -408,27 +493,23 @@ const LiveEditor = () => {
               </AnimatePresence>
 
               {showSolution && (
-                <div className='solution-popup'>
-                  <div className='solution-container'>
-                    <h2 className='solution-title'>
-                      Solution code for: {taskTitle || "Task Title"}
-                    </h2>
-                    {solutionCodes.map((code, index) => (
-                      <CodeBlock
-                        key={index}
-                        code={code}
-                        className='code-block'
-                      />
-                    ))}
-                    <button
-                      className='close-button button-84'
-                      onClick={handleToggleSolution}
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              )}
+        <div className='solution-popup'>
+          <div className='solution-container'>
+            <h2 className='solution-title'>
+              Solution code for: {taskTitle || 'Task Title'}
+            </h2>
+            {solutionCodes.map((code, index) => (
+              <CodeBlock key={index} code={code} className='code-block' />
+            ))}
+            <button
+              className='close-button button-84'
+              onClick={handleToggleSolution}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
             </div>
           </div>
           {lessonType && tasksData[lessonType]?.length > 0 && (

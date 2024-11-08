@@ -1389,7 +1389,7 @@ const cheatsheetData = [
           "Clipboard API: 'navigator.clipboard.writeText()' copies the provided text to the user's clipboard.",
           "Button Component: This reusable 'CopyButton' displays a button and triggers the 'copyToClipboard' function on click.",
         ],
-        image: "./cheatsheetImages/task/.webp",
+        image: "./cheatsheetImages/task20/7.webp",
       },
       {
         title: "",
@@ -1397,7 +1397,7 @@ const cheatsheetData = [
         details: [
           "Sorting Indicator: Shows an arrow indicating whether the column is sorted in ascending or descending order based on the 'isSorted' and 'isSortedDesc' properties.",
         ],
-        image: "./cheatsheetImages/task/.webp",
+        image: "./cheatsheetImages/task20/8.webp",
       },
     ],
   },
