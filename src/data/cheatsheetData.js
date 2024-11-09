@@ -2676,6 +2676,90 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "FitLife-Website",
+    content: [
+      {
+        title: "",
+        subtitle: "State Management with useState Hook",
+        details: [
+          "State is used to store and manage dynamic data that will change over time.",
+          "'useState' is used to declare state variables.",
+          "'formData' is the state object holding the form fields (name, email, message).",
+          "'setFormData' is the function used to update formData.",
+          "The 'useState' hook returns an array: the first element is the state value, and the second is the function to update that state.",
+        ],
+        image: "./cheatsheetImages/task43/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handling Form Inputs",
+        details: [
+          "To update the state based on user input, you use onChange handlers that call state-updating functions.",
+          "The 'handleChange' function updates the 'formData' state whenever an input changes.",
+          "It uses the spread operator (...formData) to retain previous values and updates only the relevant field (name, email, or message) based on e.target.name.",
+          "To manage multiple form fields with the same 'onChange' handler, use dynamic keys (e.g., e.target.name).",
+        ],
+        image: "./cheatsheetImages/task43/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling with onSubmit",
+        details: [
+          "Form submission can trigger events, like sending data to a server.",
+          "'handleSubmit' prevents the default form submission (e.preventDefault()).",
+          "After logging the form data, it triggers 'setIsSubmitted(true)', which could show a success message.",
+          "Always prevent the default behavior of forms using 'e.preventDefault()' when handling form submissions in React.",
+        ],
+        image: "./cheatsheetImages/task43/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Conditional Rendering",
+        details: [
+          "React allows conditionally rendering parts of the UI based on state values.",
+          "The 'isSubmitted' state is used to conditionally render either the success message or the form.",
+          "If 'isSubmitted' is 'true', a success message is shown. Otherwise, the form is displayed.",
+          "Use ternary operators for conditional rendering of components based on state.",
+        ],
+        image: "./cheatsheetImages/task43/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Props for Passing Data",
+        details: [
+          "Props are used to pass data from a parent component to a child component.",
+          "Link is a component from 'react-scroll', and it receives props like 'to', 'smooth', and 'duration'.",
+          "These props are used to scroll smoothly to a section on the page (e.g., 'contact').",
+          "Props are immutable inside the child component. The parent is responsible for passing them down.",
+        ],
+        image: "./cheatsheetImages/task43/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Dynamic Class Names Based on State",
+        details: [
+          "You can apply different class names dynamically based on state or other conditions.",
+          "The 'navbar' class is conditionally combined with the 'scrolled' class if the page has been scrolled.",
+          "'isScrolled' is managed by a scroll event handler that updates state when the page is scrolled.",
+          "Conditional class names help you apply styles dynamically based on component states or conditions.",
+        ],
+        image: "./cheatsheetImages/task43/6.webp"
+      },
+      {
+        title: "",
+        subtitle: "UseEffect Hook for Side Effects",
+        details: [
+          "The 'useEffect' hook runs side effects like fetching data or subscribing to events.",
+          "The 'useEffect' hook listens for scroll events and updates 'isScrolled' when the page is scrolled past 50 pixels.",
+          "The return function inside 'useEffect' cleans up the event listener when the component is unmounted.",
+          "The second argument ([]) to 'useEffect' ensures the effect only runs once, similar to 'componentDidMount' in class components.",
+        ],
+        image: "./cheatsheetImages/task43/7.webp"
+      },
+      
+    ],
+  },
 
 
 
