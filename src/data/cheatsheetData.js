@@ -2431,6 +2431,86 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Cake-Website",
+    content: [
+      {
+        title: "",
+        subtitle: "State Management",
+        details: [
+          "The 'useState' hook initializes 'count' with a default value of 0. The 'count' variable holds the current state, and 'setCount' is the function to update this state.",
+          "The 'increment' function calls 'setCount' to update the 'count' state by 1",
+          "State is used to store and manage dynamic data in functional components, which re-renders the component when updated.",
+        ],
+        image: "./cheatsheetImages/task/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Props (Passing Data)",
+        details: [
+          "Props allow you to pass data from one component to another. Here, 'name' is passed as a prop to the Greeting component.",
+          "Props are read-only and cannot be modified by the receiving component. They are commonly used to customize components by passing in values from parent components.",
+        ],
+        image: "./cheatsheetImages/task/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling",
+        details: [
+          "The onClick attribute is used to handle button clicks. 'handleClick' is the event handler function, which displays an alert when the button is clicked.",
+          "React uses camelCase syntax for event handlers (e.g., onClick, onChange). Events in React are wrapped in a synthetic event system to provide consistent behavior across browsers.",
+        ],
+        image: "./cheatsheetImages/task/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Conditional Rendering",
+        details: [
+          "This example uses the ternary operator to render different messages based on the 'isLoggedIn' prop.",
+          "You can conditionally render components or content using JavaScript expressions, like ternary operators or && for short-circuit evaluation.",
+        ],
+        image: "./cheatsheetImages/task/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Lists and Keys",
+        details: [
+          "Keys are a special prop required when rendering lists to help React identify each element uniquely. Here, 'item.id' is used as the 'key' prop.",
+          "Always provide unique keys for list items to avoid performance issues or unexpected behavior. Keys should be stable and unique across each render.",
+        ],
+        image: "./cheatsheetImages/task/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Form Handling",
+        details: [
+          "The form input is controlled by React state. 'name' represents the current input value, which updates as the user types.",
+          "The 'onChange' event updates the input field's state, and the 'onSubmit' event prevents default form submission behavior, triggering an alert instead.",
+          "Controlled inputs maintain their state in React, which gives you more control over form behavior and validation.",
+        ],
+        image: "./cheatsheetImages/task/6.webp"
+      },
+      {
+        title: "",
+        subtitle: "Component Lifecycle (Using useEffect)",
+        details: [
+          "'useEffect' is a hook that runs side effects in functional components. Here, it's used to increment the 'seconds' state every second.",
+          "The 'clearInterval' function prevents memory leaks by stopping the interval when the component unmounts.",
+          "Use 'useEffect' with an empty dependency array to run the effect once on mount. Add dependencies to re-run the effect when specific values change.",
+        ],
+        image: "./cheatsheetImages/task/7.webp"
+      },
+         {
+        title: "",
+        subtitle: "Default Props",
+        details: [
+          "Setting default values for props ensures a fallback when no value is passed. Here, 'name' defaults to 'Guest' if not provided.",
+          "Use default props to prevent errors or unexpected behavior when props are missing.",
+        ],
+        image: "./cheatsheetImages/task/8.webp"
+      },
+    ],
+  },
 
 
 
