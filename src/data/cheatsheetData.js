@@ -2535,6 +2535,83 @@ const cheatsheetData = [
          
     ],
   },
+  {
+    taskId: "Dev-Portfolio",
+    content: [
+      {
+        title: "",
+        subtitle: "React Router Basics",
+        details: [
+          "'Router' provides routing capabilities, allowing navigation between pages. 'Route' defines the path and the component to render for each route.",
+          "Use 'Routes' to wrap all 'Route' components for React Router v6. Paths like /about, /portfolio, and /contact correspond to the URL paths that render specific components.",
+        ],
+        image: "./cheatsheetImages/task41/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Components Structure and Layout",
+        details: [
+          "This structure allows navigation through Navbar and Routes. Components like Home, About, etc., are loaded based on the path.",
+          "Placing Navbar and Footer outside Routes keeps them static across all pages, while content changes dynamically within Routes.",
+        ],
+        image: "./cheatsheetImages/task41/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "State and Event Handling",
+        details: [
+          "'useState' initializes 'formData' as an object with fields 'name', 'email', and 'message'. 'setFormData' updates this data.",
+          "'useState' to store and manage form data. When the form changes, 'setFormData' is called with the updated field values.",
+        ],
+        image: "./cheatsheetImages/task41/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Form Submission",
+        details: [
+          "'handleSubmit' prevents the page from refreshing and logs the form data when the form is submitted.",
+          "'e.preventDefault()' is crucial to avoid page reloads. It keeps the user on the same page and allows data handling within React.",
+        ],
+        image: "./cheatsheetImages/task41/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Conditional Rendering",
+        details: [
+          "If 'filter' is set to 'all', it displays all projects; otherwise, it filters based on category.",
+          "Use JavaScript array methods like 'filter' to control which data appears based on user actions.",
+        ],
+        image: "./cheatsheetImages/task41/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Listeners and Scroll Handling",
+        details: [
+          "'isScrolled' is updated based on the window's scroll position. If 'scrolled' past 50px, 'isScrolled' becomes 'true', triggering the 'scrolled' CSS class.",
+          "Use 'useEffect' with event listeners for dynamic behaviors like updating 'isScrolled' based on scroll.",
+        ],
+        image: "./cheatsheetImages/task41/6.webp"
+      },
+      {
+        title: "",
+        subtitle: "Passing Props",
+        details: [
+          "'skills' is an array that holds skill names. Using 'map', each 'skill' is rendered in an <li>.",
+          "Use 'key' props for lists to help React track elements. Avoid using array indices as keys for large or dynamic lists.",
+        ],
+        image: "./cheatsheetImages/task41/7.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "<Link> is used for in-app navigation without reloading the page, unlike <a>, which triggers a full reload.",
+          "Use <Link> with 'to' attributes to define the path. It's essential for a smooth single-page app (SPA) experience.",
+        ],
+        image: "./cheatsheetImages/task41/8.webp"
+      },
+    ],
+  },
 
 
 
