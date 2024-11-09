@@ -2442,7 +2442,7 @@ const cheatsheetData = [
           "The 'increment' function calls 'setCount' to update the 'count' state by 1",
           "State is used to store and manage dynamic data in functional components, which re-renders the component when updated.",
         ],
-        image: "./cheatsheetImages/task/1.webp"
+        image: "./cheatsheetImages/task39/1.webp"
       },
          {
         title: "",
@@ -2451,7 +2451,7 @@ const cheatsheetData = [
           "Props allow you to pass data from one component to another. Here, 'name' is passed as a prop to the Greeting component.",
           "Props are read-only and cannot be modified by the receiving component. They are commonly used to customize components by passing in values from parent components.",
         ],
-        image: "./cheatsheetImages/task/2.webp"
+        image: "./cheatsheetImages/task39/2.webp"
       },
          {
         title: "",
@@ -2460,7 +2460,7 @@ const cheatsheetData = [
           "The onClick attribute is used to handle button clicks. 'handleClick' is the event handler function, which displays an alert when the button is clicked.",
           "React uses camelCase syntax for event handlers (e.g., onClick, onChange). Events in React are wrapped in a synthetic event system to provide consistent behavior across browsers.",
         ],
-        image: "./cheatsheetImages/task/3.webp"
+        image: "./cheatsheetImages/task39/3.webp"
       },
          {
         title: "",
@@ -2469,7 +2469,7 @@ const cheatsheetData = [
           "This example uses the ternary operator to render different messages based on the 'isLoggedIn' prop.",
           "You can conditionally render components or content using JavaScript expressions, like ternary operators or && for short-circuit evaluation.",
         ],
-        image: "./cheatsheetImages/task/4.webp"
+        image: "./cheatsheetImages/task39/4.webp"
       },
          {
         title: "",
@@ -2478,7 +2478,7 @@ const cheatsheetData = [
           "Keys are a special prop required when rendering lists to help React identify each element uniquely. Here, 'item.id' is used as the 'key' prop.",
           "Always provide unique keys for list items to avoid performance issues or unexpected behavior. Keys should be stable and unique across each render.",
         ],
-        image: "./cheatsheetImages/task/5.webp"
+        image: "./cheatsheetImages/task39/5.webp"
       },
          {
         title: "",
@@ -2488,7 +2488,7 @@ const cheatsheetData = [
           "The 'onChange' event updates the input field's state, and the 'onSubmit' event prevents default form submission behavior, triggering an alert instead.",
           "Controlled inputs maintain their state in React, which gives you more control over form behavior and validation.",
         ],
-        image: "./cheatsheetImages/task/6.webp"
+        image: "./cheatsheetImages/task39/6.webp"
       },
       {
         title: "",
@@ -2498,7 +2498,7 @@ const cheatsheetData = [
           "The 'clearInterval' function prevents memory leaks by stopping the interval when the component unmounts.",
           "Use 'useEffect' with an empty dependency array to run the effect once on mount. Add dependencies to re-run the effect when specific values change.",
         ],
-        image: "./cheatsheetImages/task/7.webp"
+        image: "./cheatsheetImages/task39/7.webp"
       },
          {
         title: "",
@@ -2507,8 +2507,32 @@ const cheatsheetData = [
           "Setting default values for props ensures a fallback when no value is passed. Here, 'name' defaults to 'Guest' if not provided.",
           "Use default props to prevent errors or unexpected behavior when props are missing.",
         ],
-        image: "./cheatsheetImages/task/8.webp"
+        image: "./cheatsheetImages/task39/8.webp"
       },
+    ],
+  },
+  {
+    taskId: "Interactive-3D-Card-Viewer",
+    content: [
+      {
+        title: "",
+        subtitle: "Event Handlers for Mouse and Touch Movements",
+        details: [
+          "Handles both mouse and touch events to apply 3D rotation on the .card element based on user input coordinates. e.pageX, e.pageY, e.touches[0].pageX, and e.touches[0].pageY retrieve cursor/finger positions for dynamic styling. useEffect is helpful here to manage DOM manipulation in functional components.",
+          
+        ],
+        image: "./cheatsheetImages/task40/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Adding and Removing Event Listeners",
+        details: [
+          "Adds mousemove and touchmove listeners on component mount to allow interaction with the card element. The return cleanup function removes these listeners on unmount, preventing potential memory leaks. When working with useEffect, cleanup is essential to avoid side effects when the component lifecycle ends.",
+          
+        ],
+        image: "./cheatsheetImages/task40/2.webp"
+      },
+         
     ],
   },
 
