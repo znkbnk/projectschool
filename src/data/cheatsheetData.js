@@ -2947,68 +2947,62 @@ const cheatsheetData = [
     ],
   },
   {
-    taskId: "",
+    taskId: "Animated-Progress-Loader",
     content: [
       {
         title: "",
-        subtitle: "",
+        subtitle: "App Setup",
         details: [
-          "",
-          "",
-          "",
+          " Sets up core dependencies. 'useState' and 'useEffect' help manage component states and lifecycle events, while 'AnimatePresence' and 'motion' enable smooth animations.",
+          
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task47/1.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "State Management",
         details: [
-          "",
-          "",
-          "",
+          "'loading': Controls whether the loading screen or main content is displayed.",
+          "'progress': Tracks the progress of the loading animation, updating it from 0 to 100.",
+          "'useState' allows you to define and update component-specific values (e.g., 'loading' and 'progress') over time.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task47/2.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Progress Update Logic with useEffect",
         details: [
-          "",
-          "",
-          "",
+          "This hook triggers the loading animation by periodically updating 'progress' until it reaches 100.",
+          "'setInterval' is used to increment progress every 30 ms.",
+          "'clearInterval' stops the interval once progress reaches 100, and setLoading(false) displays the main content.",
+          "Dependency Array ([]): Ensures 'useEffect' only runs once when the component mounts.",
+          "'useEffect' is a powerful hook for running side effects, such as setting intervals or fetching data when the component loads.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task47/3.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Conditional Rendering with AnimatePresence",
         details: [
-          "",
-          "",
-          "",
+          "Uses conditional rendering to show the loader animation while 'loading' is 'true', then switches to main content.",
+          "Handles animations on elements entering and leaving the DOM, adding a smooth transition when switching from the loader to content.",
+          "'AnimatePresence' helps manage exit animations for conditional components, improving the visual flow.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task47/4.webp"
       },
          {
         title: "",
-        subtitle: "",
+        subtitle: "Main Content Display After Loading Completes",
         details: [
-          "",
-          "",
-          "",
+          "Displays main content with a fade-in and upward motion once loading is complete.",
+          "'initial': Starts 20px down with opacity 0.",
+          "'animate': Fades in and moves into position.",
+          "'transition': Controls animation duration.",
+          "'transition' allows for fine-tuning animation speed and timing, creating a smooth experience.",
         ],
-        image: "./cheatsheetImages/task/.webp"
+        image: "./cheatsheetImages/task47/5.webp"
       },
-         {
-        title: "",
-        subtitle: "",
-        details: [
-          "",
-          "",
-          "",
-        ],
-        image: "./cheatsheetImages/task/.webp"
-      },
+        
     ],
   },
 
