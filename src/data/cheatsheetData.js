@@ -2869,6 +2869,148 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Profolio",
+    content: [
+      {
+        title: "",
+        subtitle: "Framer Motion",
+        details: [
+          "Adds a fade-in animation to the entire app on load, with opacity transitioning from 0 to 1.",
+          "Use Framer Motion's motion.div for easy animations on component load.",
+        ],
+        image: "./cheatsheetImages/task46/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Component Rendering",
+        details: [
+          "Renders each section of the webpage by using individual components (Navbar, Header, About, etc.).",
+          "Organizing each section as separate components keeps the code modular and easier to maintain.",
+        ],
+        image: "./cheatsheetImages/task46/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "State Management",
+        details: [
+          "Uses 'useState' to control the visibility of additional text. Clicking the button toggles the 'showMore' state, causing conditional rendering of extra content.",
+          "'useState' is useful for handling dynamic UI elements based on user interaction.",
+        ],
+        image: "./cheatsheetImages/task46/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Conditional Rendering",
+        details: [
+          "Conditionally displays the additional text only if showMore is true.",
+          "Combine state and conditional rendering to show or hide specific content based on user actions.",
+        ],
+        image: "./cheatsheetImages/task46/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Animated Button",
+        details: [
+          "A button that toggles between “More” and “Less” text based on 'showMore'. Adds hover and tap animations.",
+          "Framer Motion provides 'whileHover' and 'whileTap' props for adding subtle animations that enhance the user experience.",
+        ],
+        image: "./cheatsheetImages/task46/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handler",
+        details: [
+          "Handles clicking on a navbar item to set it as active, update the background color, and smoothly scroll to the target section.",
+          "Use 'window.scrollTo' with an offset for smooth scrolling; 'getBoundingClientRect()' helps adjust for any fixed headers.",
+        ],
+        image: "./cheatsheetImages/task46/6.webp"
+      },
+      {
+        title: "",
+        subtitle: "Dynamic Menu Border Animation",
+        details: [
+          "Positions the animated border underneath the active menu item.",
+          "'transform': 'translate3d' provides smooth, efficient animations.",
+        ],
+        image: "./cheatsheetImages/task46/7.webp"
+      },
+         {
+        title: "",
+        subtitle: "Rendering Menu Items with Icons",
+        details: [
+          "Maps over the 'icons' array to render each icon in the navbar. Each item changes color when active, using dynamic background color and an 'active' class.",
+          "Use 'map' for dynamic content rendering based on an array; this pattern keeps code clean and manageable for components with repeated structures.",
+        ],
+        image: "./cheatsheetImages/task46/8.webp"
+      },
+    ],
+  },
+  {
+    taskId: "",
+    content: [
+      {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "",
+          "",
+          "",
+        ],
+        image: "./cheatsheetImages/task/.webp"
+      },
+    ],
+  },
 
 
 
