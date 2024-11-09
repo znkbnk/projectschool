@@ -36,7 +36,7 @@ const LiveEditor = () => {
   const [showStyles, setShowStyles] = useState(false);
   const [selectedStyle, setSelectedStyle] = useState(null);
   const [copied, setCopied] = useState(false);
-  const [buttonText, setButtonText] = useState('Solution');
+  const [buttonText, setButtonText] = useState("Solution");
 
   // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
@@ -180,27 +180,22 @@ const LiveEditor = () => {
   }, [throttledComplete]);
 
   const handleToggleSolution = () => {
-    if (subscriptionStatus === 'subscribed') {
-      // Track the current state of showSolution
+    if (subscriptionStatus === "subscribed") {
       const newSolutionState = !showSolution;
       setShowSolution(newSolutionState);
 
-      // If the solution is being opened, change the text to "Scroll Down ↓"
       if (newSolutionState) {
-        setButtonText('Scroll Down ↓');
+        setButtonText("Scroll Down ↓");
 
-        // After 2 seconds, change the text back to "Solution"
         setTimeout(() => {
-          // Set the button text to "Solution" after 2 seconds
-          setButtonText('Solution');
+          setButtonText("Solution");
         }, 1500);
       } else {
-        // If closing the solution, reset the text immediately
-        setButtonText('Solution');
+        setButtonText("Solution");
       }
     } else {
       toast.info(
-        'Access to solutions requires an active subscription. Please subscribe to unlock this feature.'
+        "Access to solutions requires an active subscription. Please subscribe to unlock this feature."
       );
     }
   };
@@ -371,12 +366,12 @@ const LiveEditor = () => {
                   Show Styles
                 </button>
                 <button
-      className='button-84'
-      onClick={handleToggleSolution}
-      aria-label='Toggle Solution'
-    >
-      {buttonText}
-    </button>
+                  className='button-84'
+                  onClick={handleToggleSolution}
+                  aria-label='Toggle Solution'
+                >
+                  {buttonText}
+                </button>
                 {videoLink && (
                   <button
                     className='button-84'
@@ -423,30 +418,38 @@ const LiveEditor = () => {
                     exit={{ opacity: 0, x: "50%" }}
                   >
                     <div className='styles-content'>
-                    <div className='styles-text'>
-  {selectedStyle.map((style, index) => (
-    <div key={index} className="style-item">
-      <div className="style-header">
-        <h3>{style.title}</h3>
-        <button
-          className={`styles-copy-button ${copied ? "copied" : ""}`}
-          onClick={() => handleCopyToClipboard(style.css)}
-        >
-          {copied ? "Copied!" : "Copy Code"}
-        </button>
-      </div>
-      <pre>
-        <code>{style.css}</code>
-      </pre>
-      <button
-        className='styles-close-button'
-        onClick={handleCloseStyles}
-      >
-        Close
-      </button>
-    </div>
-  ))}
-</div>
+                      <div className='styles-text'>
+                        {selectedStyle.map((style, index) => (
+                          <div key={index} className='style-item'>
+                            <div className='style-header'>
+                              <h3>{style.title}</h3>
+                              <button
+                                className={`styles-copy-button ${
+                                  copied ? "copied" : ""
+                                }`}
+                                onClick={() => handleCopyToClipboard(style.css)}
+                              >
+                                {copied ? "Copied!" : "Copy Code"}
+                              </button>
+                              <button
+                              className='styles-close-button'
+                              onClick={handleCloseStyles}
+                            >
+                              Close
+                            </button>
+                            </div>
+                            <pre>
+                              <code>{style.css}</code>
+                            </pre>
+                            <button
+                              className='styles-close-button'
+                              onClick={handleCloseStyles}
+                            >
+                              Close
+                            </button>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </motion.div>
                 )}
@@ -493,23 +496,27 @@ const LiveEditor = () => {
               </AnimatePresence>
 
               {showSolution && (
-        <div className='solution-popup'>
-          <div className='solution-container'>
-            <h2 className='solution-title'>
-              Solution code for: {taskTitle || 'Task Title'}
-            </h2>
-            {solutionCodes.map((code, index) => (
-              <CodeBlock key={index} code={code} className='code-block' />
-            ))}
-            <button
-              className='close-button button-84'
-              onClick={handleToggleSolution}
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+                <div className='solution-popup'>
+                  <div className='solution-container'>
+                    <h2 className='solution-title'>
+                      Solution code for: {taskTitle || "Task Title"}
+                    </h2>
+                    {solutionCodes.map((code, index) => (
+                      <CodeBlock
+                        key={index}
+                        code={code}
+                        className='code-block'
+                      />
+                    ))}
+                    <button
+                      className='close-button button-84'
+                      onClick={handleToggleSolution}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
           {lessonType && tasksData[lessonType]?.length > 0 && (
