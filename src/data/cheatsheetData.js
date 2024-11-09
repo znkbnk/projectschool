@@ -2760,6 +2760,53 @@ const cheatsheetData = [
       
     ],
   },
+  {
+    taskId: "FAQ-Toggle",
+    content: [
+      {
+        title: "",
+        subtitle: "State Initialization with useState",
+        details: [
+          "'activeIndex' is the state variable used to store the index of the currently active (expanded) FAQ item.",
+          "'setActiveIndex' is the function that updates the 'activeIndex' state.",
+          "'useState(null)' initializes it to 'null' (meaning no item is active initially).",
+          "State is used to manage dynamic data within the component. In this case, it controls which FAQ answer is shown.",
+        ],
+        image: "./cheatsheetImages/task44/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Toggling Active FAQ",
+        details: [
+          "'toggleFAQ' is a function that toggles the active state when a user clicks on a FAQ question.",
+          "activeIndex === index ? null : index: If the clicked FAQ is already active (i.e., its index is equal to activeIndex), the function will set it to 'null' (closing it). Otherwise, it sets activeIndex to the clicked index (opening it).",
+          "Event handlers like 'toggleFAQ' allow interaction with the component. In this case, it controls which FAQ answer is visible based on user clicks.",
+        ],
+        image: "./cheatsheetImages/task44/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Mapping FAQ Data to Render List",
+        details: [
+          "faqData.map() iterates through the 'faqData' array and renders a list item (<li>) for each FAQ question and answer.",
+          "key={index}: React requires a unique 'key' prop for each item in a list to efficiently update and render components.",
+          "The 'active' class is conditionally applied to the FAQ item if its index matches 'activeIndex'.",
+          "Props are used in lists like this to map over data and generate multiple elements. Here, 'faqData' is the list of FAQs being passed into the component.",
+        ],
+        image: "./cheatsheetImages/task44/3.webp"
+      },
+         {
+        title: "",
+        subtitle: " CSS Class Application Based on State",
+        details: [
+          "Dynamically adds the active class to the FAQ item when its index matches activeIndex. This allows for conditional styling (e.g., showing or hiding the FAQ answer) when the item is active.",
+          "React allows you to dynamically set class names based on state or props. This is useful for applying styles conditionally.",
+        ],
+        image: "./cheatsheetImages/task44/4.webp"
+      },
+        
+    ],
+  },
 
 
 
