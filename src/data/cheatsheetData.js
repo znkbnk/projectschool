@@ -2807,6 +2807,68 @@ const cheatsheetData = [
         
     ],
   },
+  {
+    taskId: "Pomodoro-Focus-Timer",
+    content: [
+      {
+        title: "",
+        subtitle: "Managing State with useState",
+        details: [
+          "'workTime': Time in minutes for the work session (default is 25 minutes).",
+          "'breakTime': Time in minutes for the break session (default is 5 minutes).",
+          "'seconds': Time in seconds, which is used for countdown logic (converted from 'workTime' or 'breakTime').",
+          "'isActive': A boolean that tracks whether the timer is active or paused.",
+          "'isRotating': A boolean to handle animation state for a rotating clock.",
+          "Initializes and updates the state variables. It takes two arguments: the initial state and a function to update that state (setWorkTime, setSeconds, etc.).",
+        ],
+        image: "./cheatsheetImages/task45/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Using useEffect for Side Effects (Timer Countdown)",
+        details: [
+          "This effect starts a countdown when the timer is active (isActive is true). The 'setInterval' function updates the 'seconds' state every second. When the timer reaches 0, it stops and resets the state.",
+          "The effect runs whenever 'isActive' or 'seconds' change, ensuring the countdown updates correctly.",
+        ],
+        image: "./cheatsheetImages/task45/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Starting a Countdown with 'startCountdown'",
+        details: [
+          "This function starts the countdown by setting the 'seconds' based on the given 'duration' (in minutes).",
+          "It resets and triggers the rotation animation (isRotating).",
+        ],
+        image: "./cheatsheetImages/task45/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Starting the Work and Break Timers",
+        details: [
+          "These functions call 'startCountdown' with the respective time ('workTime' for work sessions and 'breakTime' for breaks).",
+        ],
+        image: "./cheatsheetImages/task45/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Resetting the Timer",
+        details: [
+          "The reset function stops the timer and resets the state to the initial values (work session time in seconds).",
+        ],
+        image: "./cheatsheetImages/task45/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Formatting the Timer Display",
+        details: [
+          "This helper function formats the time into a MM:SS format for displaying the countdown.",
+          "'Math.floor(seconds / 60)' gives the total minutes.",
+          "'seconds % 60' gives the remaining seconds.",
+        ],
+        image: "./cheatsheetImages/task45/6.webp"
+      },
+    ],
+  },
 
 
 
