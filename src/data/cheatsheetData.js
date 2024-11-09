@@ -3005,6 +3005,93 @@ const cheatsheetData = [
         
     ],
   },
+  {
+    taskId: "Dynamic-Loader",
+    content: [
+      {
+        title: "",
+        subtitle: "State Management",
+        details: [
+          "'loading': A boolean state that toggles between loading and content display.",
+          "'progress': Tracks the loading progress percentage.",
+        ],
+        image: "./cheatsheetImages/task48/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "useEffect with setInterval",
+        details: [
+          "Automatically increases 'progress' by 1 every 30ms.",
+          "Once 'progress' reaches 100, the interval stops, and 'loading' is set to fals'e.",
+          "The use of 'clearInterval' within the condition prevents memory leaks by stopping the interval when no longer needed.",
+        ],
+        image: "./cheatsheetImages/task48/2.webp"
+      },
+        
+    ],
+  },
+  {
+    taskId: "Speech-Synth",
+    content: [
+      {
+        title: "",
+        subtitle: "Setting Up State and Managing Input Changes",
+        details: [
+          "'inputText': Holds the text the user types in.",
+          "'loading': Controls the button state, showing when speech generation is in progress.",
+          "'symbolCount': Tracks the number of characters (symbols) in 'inputText'.",
+        ],
+        image: "./cheatsheetImages/task49/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Updating Symbol Count with useEffect",
+        details: [
+          "'useEffect' listens for changes in 'inputText'. Whenever 'inputText' changes, it updates 'symbolCount' with the length of the text.",
+          "This ensures 'symbolCount' always reflects the latest number of characters, providing real-time feedback to the user.",
+        ],
+        image: "./cheatsheetImages/task49/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "'handleInputChange' updates inputText state based on user input.",
+          "By passing 'event.target.value', this function ensures 'inputText' reflects the current textarea content.",
+        ],
+        image: "./cheatsheetImages/task49/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "'handleSpeak' makes a POST request to the server with the input text to generate speech.",
+          "The server response (audio file) is temporarily saved as a URL, allowing the user to download it.",
+          "The 'responseType: 'blob'' specifies that we expect binary data (an audio file) in the response, suitable for downloading files.",
+        ],
+        image: "./cheatsheetImages/task49/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Express Server Setup",
+        details: [
+          "Sets up an Express server to handle requests. cors allows cross-origin requests from the React frontend.",
+          "Define the port the server listens on (3001) to avoid conflicts with the frontend.",
+        ],
+        image: "./cheatsheetImages/task49/5.webp"
+      },
+         {
+        title: "",
+        subtitle: " Text-to-Speech Synthesis Endpoint",
+        details: [
+          "Receives the text input and uses 'gTTS' to convert it to speech.",
+          "Saves the speech file as 'output.mp3' and sends it back to the frontend for download.",
+          "The 'fs.unlink' function deletes the file after it's sent, keeping storage clean.",
+        ],
+        image: "./cheatsheetImages/task49/6.webp"
+      },
+    ],
+  },
 
 
 
