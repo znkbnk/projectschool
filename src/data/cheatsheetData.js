@@ -2612,6 +2612,70 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Fruit-Carousel",
+    content: [
+      {
+        title: "",
+        subtitle: "Updating the Visible Items",
+        details: [
+          "This function calculates the previous, current, and next items to display based on the activeIndex.",
+          "(index - 1 + items.length) % items.length: This ensures the carousel wraps around when reaching the beginning of the array.",
+          "setVisibleItems([...]): Updates the visibleItems state with the three items to display.",
+          "'useCallback': Memoizes the 'updateVisibleItems' function, ensuring that it doesn't get recreated on every render, improving performance.",
+        ],
+        image: "./cheatsheetImages/task42/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Setting up useEffect for Initial and Re-render Updates",
+        details: [
+          "'useEffect': Runs the updateVisibleItems function whenever activeIndex changes, ensuring that the visible items are updated.",
+          " It depends on activeIndex and updateVisibleItems to avoid unnecessary re-renders.",
+        ],
+        image: "./cheatsheetImages/task42/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Next and Previous Slide Handlers",
+        details: [
+          "Functions to move to the next or previous carousel item.",
+          "'setActiveIndex': Updates the 'activeIndex' state, cycling through items by using modulo (%).",
+          "'useCallback': Ensures the slide functions are not recreated on every render, improving performance.",
+        ],
+        image: "./cheatsheetImages/task42/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handling Mouse Wheel Scroll for Navigation",
+        details: [
+          "Listens for mouse wheel events to navigate through slides.",
+          "event.deltaY: A positive value indicates scrolling down (next slide), while a negative value indicates scrolling up (previous slide).",
+          "nextSlide() & prevSlide(): Calls the corresponding slide functions to update the carousel.",
+        ],
+        image: "./cheatsheetImages/task42/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Adding Event Listeners with useEffect",
+        details: [
+          "'useEffect': Sets up the event listener when the component mounts and cleans it up when the component unmounts to avoid memory leaks.",
+          "addEventListener('wheel', handleScroll): Listens for the mouse wheel event on the carousel container.",
+          "'removeEventListener': Ensures the event listener is removed when the component is removed from the DOM.",
+        ],
+        image: "./cheatsheetImages/task42/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "'handleItemClick': A function to update the active slide when a carousel item is clicked.",
+          "'setActiveIndex(index)': Sets the clicked item as the active one by updating the 'activeIndex'.",
+        ],
+        image: "./cheatsheetImages/task42/6.webp"
+      },
+    ],
+  },
 
 
 
