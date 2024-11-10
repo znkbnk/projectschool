@@ -850,18 +850,20 @@ const tasksData = {
     {
       taskId: "Construction-Cost-Calculator",
       taskTitle: "Construction Cost Calculator",
-      introduction: "The Construction Cost Calculator is a user-friendly React application designed to help users estimate construction costs based on key parameters such as plot size, number of floors, construction type, and materials. By utilizing Formik for form management and Yup for validation, the application ensures accurate input and a seamless user experience.",
+      introduction:
+        "The Construction Cost Calculator is a user-friendly React application designed to help users estimate construction costs based on key parameters such as plot size, number of floors, construction type, and materials. By utilizing Formik for form management and Yup for validation, the application ensures accurate input and a seamless user experience.",
       task: {
-        taskDescription: "This project involves building a web application that allows users to input various parameters related to construction and receive an estimated cost along with a detailed breakdown.",
+        taskDescription:
+          "This project involves building a web application that allows users to input various parameters related to construction and receive an estimated cost along with a detailed breakdown.",
         platform: "Freelancer",
         projectName: "House Construction Cost Calculator Website",
-        biddingEnds: 'Saturday, October 19, 2024',
+        biddingEnds: "Saturday, October 19, 2024",
         requirements: [
           "React for the front-end framework",
           "Formik for form management",
           "Yup for form validation",
-          "Basic knowledge of CSS for styling"
-        ]
+          "Basic knowledge of CSS for styling",
+        ],
       },
       steps: [
         {
@@ -873,17 +875,17 @@ const tasksData = {
               descriptions: [
                 "Use Create React App to scaffold a new project.",
                 "Run `npx create-react-app construction-cost-calculator`.",
-                "Navigate to the project directory using `cd construction-cost-calculator`."
-              ]
+                "Navigate to the project directory using `cd construction-cost-calculator`.",
+              ],
             },
             {
               subtitleDescription: "Install dependencies",
               descriptions: [
                 "Install 'Formik' for form management using `npm install formik`.",
-                "Install 'Yup' for validation using `npm install yup`."
-              ]
-            }
-          ]
+                "Install 'Yup' for validation using `npm install yup`.",
+              ],
+            },
+          ],
         },
         {
           stepTitle: "Step 2: Create the App Component",
@@ -894,17 +896,18 @@ const tasksData = {
               descriptions: [
                 "Create a new file named `App.js` in the `src` folder.",
                 "Import necessary components and styles.",
-                "Define the main layout, including a 'header' and 'footer'."
-              ]
+                "Define the main layout, including a 'header' and 'footer'.",
+              ],
             },
             {
-              subtitleDescription: "Render the ConstructionCalculator component",
+              subtitleDescription:
+                "Render the ConstructionCalculator component",
               descriptions: [
                 "Import the 'ConstructionCalculator' component into `App.js`.",
-                "Use the component within the main return statement."
-              ]
-            }
-          ]
+                "Use the component within the main return statement.",
+              ],
+            },
+          ],
         },
         {
           stepTitle: "Step 3: Create the ConstructionCalculator Component",
@@ -919,8 +922,8 @@ const tasksData = {
                 "`laborCost` (initially set to 0): to track the cost of labor.",
                 "`permitCost` (initially set to 0): to track the cost of permits.",
                 "`miscCost` (initially set to 0): for any miscellaneous expenses.",
-                "`totalCost` (initially set to 0): to calculate the total cost based on inputs."
-              ]
+                "`totalCost` (initially set to 0): to calculate the total cost based on inputs.",
+              ],
             },
             {
               subtitleDescription: "Implement the handleFormSubmit function",
@@ -930,8 +933,8 @@ const tasksData = {
                 "Convert the input values to numbers using `parseFloat` to ensure accurate calculations.",
                 "Calculate the total cost as follows:",
                 "`totalCost = materialCost + laborCost + permitCost + miscCost`.",
-                "Use the `setTotalCost` function to update the total cost in state."
-              ]
+                "Use the `setTotalCost` function to update the total cost in state.",
+              ],
             },
             {
               subtitleDescription: "Render the user interface",
@@ -940,40 +943,40 @@ const tasksData = {
                 "A header or title for the cost calculator.",
                 "An 'InputForm' component, passing necessary props such as state variables and the 'handleFormSubmit' function.",
                 "A 'CostBreakdown' component to display the breakdown of costs based on the state variables.",
-                "Ensure the 'CostBreakdown' component receives 'totalCost' and individual cost states (materialCost, laborCost, permitCost, miscCost) as props."
-              ]
+                "Ensure the 'CostBreakdown' component receives 'totalCost' and individual cost states (materialCost, laborCost, permitCost, miscCost) as props.",
+              ],
             },
             {
               subtitleDescription: "Add input validation",
               descriptions: [
                 "In `handleFormSubmit`, implement validation logic to ensure that all inputs are valid numbers.",
                 "Check if any input is negative or not a number, and provide feedback to the user (e.g., alert or error message).",
-                "If validation fails, prevent the calculation from proceeding."
-              ]
+                "If validation fails, prevent the calculation from proceeding.",
+              ],
             },
-           
-          ]
+          ],
         },
-        
+
         {
           stepTitle: "Step 4: Implement the InputForm Component",
-          titleDescription: "Create a form to gather user input for cost calculations.",
+          titleDescription:
+            "Create a form to gather user input for cost calculations.",
           sections: [
             {
               subtitleDescription: "Set up the InputForm structure",
               descriptions: [
                 "Create a new file named `InputForm.js` in the components directory.",
                 "Import React, the `useFormik` hook from 'Formik', and `Yup` for validation.",
-                "Define the `InputForm` functional component, accepting an `onSubmit` prop to handle form submission."
-              ]
+                "Define the `InputForm` functional component, accepting an `onSubmit` prop to handle form submission.",
+              ],
             },
             {
               subtitleDescription: "Initialize Formik",
               descriptions: [
                 "Use `useFormik` to manage form state and validation:",
                 "Set `initialValues` to include: `plotSize`, `floors`, `constructionType`, `material`, and `location`.",
-                "Define the `validationSchema` using `Yup` to ensure `plotSize`, `floors`, and `location` are required fields, and `floors` must be at least 1."
-              ]
+                "Define the `validationSchema` using `Yup` to ensure `plotSize`, `floors`, and `location` are required fields, and `floors` must be at least 1.",
+              ],
             },
             {
               subtitleDescription: "Create input fields",
@@ -983,27 +986,25 @@ const tasksData = {
                 "Number of Floors: Add a number input for `floors`, also binding its value and change handler to Formik.",
                 "Construction Type: Create a select input for `constructionType` with options for 'Standard' and 'Luxury', binding it to Formik.",
                 "Material: Create a select input for `material` with options for 'Brick' and 'Wood', binding it to Formik.",
-                "Location: Add a text input for `location`, binding its value and change handler to Formik."
-              ]
+                "Location: Add a text input for `location`, binding its value and change handler to Formik.",
+              ],
             },
             {
               subtitleDescription: "Add error handling",
               descriptions: [
                 "Display error messages for required fields:",
-                "For each input field, check if there are validation errors using `formik.errors`. If an error exists, display it below the corresponding input field."
-              ]
+                "For each input field, check if there are validation errors using `formik.errors`. If an error exists, display it below the corresponding input field.",
+              ],
             },
             {
               subtitleDescription: "Add a submit button",
               descriptions: [
                 "Include a button of type 'submit' with the text 'Calculate Cost'.",
-                "When the button is clicked, it triggers the form submission via `formik.handleSubmit`, which will call the `onSubmit` function passed in as a prop with the form values."
-              ]
+                "When the button is clicked, it triggers the form submission via `formik.handleSubmit`, which will call the `onSubmit` function passed in as a prop with the form values.",
+              ],
             },
-           
-          ]
-        }
-        ,
+          ],
+        },
         {
           stepTitle: "Step 5: Create the CostBreakdown Component",
           titleDescription: "Display the cost breakdown.",
@@ -1013,10 +1014,10 @@ const tasksData = {
               descriptions: [
                 "Create a new file named `CostBreakdown.js` in the `src/components` folder.",
                 "Accept 'totalCost' and breakdown as props.",
-                "Render the estimated total cost and breakdown categories."
-              ]
-            }
-          ]
+                "Render the estimated total cost and breakdown categories.",
+              ],
+            },
+          ],
         },
         {
           stepTitle: "Step 6: Style the Application",
@@ -1026,10 +1027,10 @@ const tasksData = {
               subtitleDescription: "Add CSS styles",
               descriptions: [
                 "Create a CSS file for each component.",
-                "Style the header, footer, and form elements for better user experience."
-              ]
-            }
-          ]
+                "Style the header, footer, and form elements for better user experience.",
+              ],
+            },
+          ],
         },
         {
           stepTitle: "Step 7: Test the Application",
@@ -1039,10 +1040,10 @@ const tasksData = {
               subtitleDescription: "Run and verify",
               descriptions: [
                 "Start the application using `npm start`.",
-                "Test each form input for validation and calculation accuracy."
-              ]
-            }
-          ]
+                "Test each form input for validation and calculation accuracy.",
+              ],
+            },
+          ],
         },
         {
           stepTitle: "Step 8: Debugging",
@@ -1052,10 +1053,10 @@ const tasksData = {
               subtitleDescription: "Identify and resolve bugs",
               descriptions: [
                 "Check for console errors and warnings.",
-                "Fix any issues with state management or rendering."
-              ]
-            }
-          ]
+                "Fix any issues with state management or rendering.",
+              ],
+            },
+          ],
         },
         {
           stepTitle: "Step 9: Deployment",
@@ -1065,10 +1066,10 @@ const tasksData = {
               subtitleDescription: "Prepare for production",
               descriptions: [
                 "Build the application using `npm run build`.",
-                "Choose a hosting service like Vercel or Netlify for deployment."
-              ]
-            }
-          ]
+                "Choose a hosting service like Vercel or Netlify for deployment.",
+              ],
+            },
+          ],
         },
         {
           stepTitle: "Step 10: Maintenance",
@@ -1078,278 +1079,278 @@ const tasksData = {
               subtitleDescription: "Monitor and update",
               descriptions: [
                 "Regularly check for updates to dependencies.",
-                "Fix any bugs reported by users."
-              ]
-            }
-          ]
-        }
+                "Fix any bugs reported by users.",
+              ],
+            },
+          ],
+        },
       ],
       taskType: "Live",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/r4fphm?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/r4fphm?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons4.webp"),
     },
     {
       taskId: "React-Firebase-Application-with-ML-and-Payments",
       taskTitle: "React Firebase Application with ML and Payments",
-      introduction: "This project involves building a robust React application that utilizes Firebase for user authentication, Firestore for data storage, and Firebase Storage for managing media files. Additionally, it incorporates Google Analytics for tracking user behavior, Google ML for content classification, and Stripe for secure payment processing, providing a comprehensive solution for modern web applications.",
+      introduction:
+        "This project involves building a robust React application that utilizes Firebase for user authentication, Firestore for data storage, and Firebase Storage for managing media files. Additionally, it incorporates Google Analytics for tracking user behavior, Google ML for content classification, and Stripe for secure payment processing, providing a comprehensive solution for modern web applications.",
       task: {
-        taskDescription: "We're looking for a skilled individual to integrate Firebase, Google Analytics, and Stripe services into our project.",
-        platform: 'Freelancer',
+        taskDescription:
+          "We're looking for a skilled individual to integrate Firebase, Google Analytics, and Stripe services into our project.",
+        platform: "Freelancer",
         projectName: "Firebase Integration with React Native App",
-        biddingEnds: 'Sunday, October 27, 2024',
+        biddingEnds: "Sunday, October 27, 2024",
         requirements: [
-            "Implement Firebase Auth for user authentication",
-                "Set up Firestore for data storage",
-                "Use Firebase Storage for media",
-                "Integrate Google Analytics for user insights",
-                "Implement Google ML for content classification",
-                "Set up Stripe for payments",
-                "Integrate Ads resources",
-       
-      ],
+          "Implement Firebase Auth for user authentication",
+          "Set up Firestore for data storage",
+          "Use Firebase Storage for media",
+          "Integrate Google Analytics for user insights",
+          "Implement Google ML for content classification",
+          "Set up Stripe for payments",
+          "Integrate Ads resources",
+        ],
       },
       steps: [
         {
-            stepTitle: "Step 1: Set Up Your React Project",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Create a New React Application",
-                    descriptions: [
-                        "Open your terminal or command prompt.",
-                        "Run the command: npx create-react-app your-app-name",
-                        "Navigate into your project directory: cd your-app-name"
-                    ],
-                },
-                {
-                    subtitleDescription: "Install Necessary Packages",
-                    descriptions: [
-                        "Install Firebase and Stripe libraries using npm:",
-                        "npm install firebase @stripe/react-stripe-js @stripe/stripe-js",
-                    ],
-                },
-               
-            ],
+          stepTitle: "Step 1: Set Up Your React Project",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create a New React Application",
+              descriptions: [
+                "Open your terminal or command prompt.",
+                "Run the command: npx create-react-app your-app-name",
+                "Navigate into your project directory: cd your-app-name",
+              ],
+            },
+            {
+              subtitleDescription: "Install Necessary Packages",
+              descriptions: [
+                "Install Firebase and Stripe libraries using npm:",
+                "npm install firebase @stripe/react-stripe-js @stripe/stripe-js",
+              ],
+            },
+          ],
         },
         {
-            stepTitle: "Step 2: Create and Configure Firebase Project",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Sign In to Firebase Console",
-                    descriptions: [
-                        "Go to the Firebase Console and create a new project.",
-                        
-                    ],
-                },
-                {
-                    subtitleDescription: "Add a Web App to Your Firebase Project",
-                    descriptions: [
-                        "Click on the web icon (</>) to register your web app.",
-                        "Follow the prompts to give your app a nickname and optionally set up Firebase Hosting.",
-                        "Copy the Firebase configuration object for later use."
-                    ],
-                },
-                {
-                    subtitleDescription: "Enable Authentication",
-                    descriptions: [
-                        "In the Firebase Console, navigate to the Authentication section.",
-                        "Enable email/password authentication or other providers as needed.",
-                        "Check the option to allow users to register for email/password."
-                    ],
-                },
-            ],
+          stepTitle: "Step 2: Create and Configure Firebase Project",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Sign In to Firebase Console",
+              descriptions: [
+                "Go to the Firebase Console and create a new project.",
+              ],
+            },
+            {
+              subtitleDescription: "Add a Web App to Your Firebase Project",
+              descriptions: [
+                "Click on the web icon (</>) to register your web app.",
+                "Follow the prompts to give your app a nickname and optionally set up Firebase Hosting.",
+                "Copy the Firebase configuration object for later use.",
+              ],
+            },
+            {
+              subtitleDescription: "Enable Authentication",
+              descriptions: [
+                "In the Firebase Console, navigate to the Authentication section.",
+                "Enable email/password authentication or other providers as needed.",
+                "Check the option to allow users to register for email/password.",
+              ],
+            },
+          ],
         },
         {
-            stepTitle: "Step 3: Set Up Firestore Database",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Create Firestore Database",
-                    descriptions: [
-                        "Navigate to the Firestore Database section in Firebase Console.",
-                        "Click 'Create database' and choose your security rules.",
-                        "Start in test mode for development or production mode for security."
-                    ],
-                },
-                {
-                    subtitleDescription: "Set Up Firestore Rules",
-                    descriptions: [
-                        "Define your Firestore rules according to your app's needs.",
-                        "Start with basic rules for development and refine them later.",
-                    ],
-                },
-            ],
+          stepTitle: "Step 3: Set Up Firestore Database",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create Firestore Database",
+              descriptions: [
+                "Navigate to the Firestore Database section in Firebase Console.",
+                "Click 'Create database' and choose your security rules.",
+                "Start in test mode for development or production mode for security.",
+              ],
+            },
+            {
+              subtitleDescription: "Set Up Firestore Rules",
+              descriptions: [
+                "Define your Firestore rules according to your app's needs.",
+                "Start with basic rules for development and refine them later.",
+              ],
+            },
+          ],
         },
         {
-            stepTitle: "Step 4: Set Up Firebase Storage",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Enable Firebase Storage",
-                    descriptions: [
-                        "Navigate to the Storage section in the Firebase Console.",
-                        "Click 'Get Started' to enable Firebase Storage.",
-                        "Adjust the storage rules based on your application's needs."
-                    ],
-                },
-                {
-                    subtitleDescription: "Configure Storage Rules",
-                    descriptions: [
-                        "Set rules to control access to stored media files.",
-                        "Make sure to test access levels during development.",
-                    ],
-                },
-            ],
+          stepTitle: "Step 4: Set Up Firebase Storage",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Enable Firebase Storage",
+              descriptions: [
+                "Navigate to the Storage section in the Firebase Console.",
+                "Click 'Get Started' to enable Firebase Storage.",
+                "Adjust the storage rules based on your application's needs.",
+              ],
+            },
+            {
+              subtitleDescription: "Configure Storage Rules",
+              descriptions: [
+                "Set rules to control access to stored media files.",
+                "Make sure to test access levels during development.",
+              ],
+            },
+          ],
         },
         {
-            stepTitle: "Step 5: Enable Google Analytics",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Enable Analytics for Your Project",
-                    descriptions: [
-                        "In the Firebase Console, navigate to the Analytics section.",
-                        "Click 'Get Started' to enable Google Analytics for your project.",
-                        "Configure settings and get your tracking ID."
-                    ],
-                },
-                {
-                    subtitleDescription: "Add Tracking Code to Your React App",
-                    descriptions: [
-                        "Implement the Google Analytics tracking script in your app.",
-                        "Use event tracking to log user interactions (page views, clicks).",
-                    ],
-                },
-            ],
+          stepTitle: "Step 5: Enable Google Analytics",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Enable Analytics for Your Project",
+              descriptions: [
+                "In the Firebase Console, navigate to the Analytics section.",
+                "Click 'Get Started' to enable Google Analytics for your project.",
+                "Configure settings and get your tracking ID.",
+              ],
+            },
+            {
+              subtitleDescription: "Add Tracking Code to Your React App",
+              descriptions: [
+                "Implement the Google Analytics tracking script in your app.",
+                "Use event tracking to log user interactions (page views, clicks).",
+              ],
+            },
+          ],
         },
         {
-            stepTitle: "Step 6: Set Up Google Cloud for Machine Learning (ML)",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Create a Google Cloud Project",
-                    descriptions: [
-                        "Go to the Google Cloud Console and create a new project.",
-                        "Link it to your Firebase project.",
-                    ],
-                },
-                {
-                    subtitleDescription: "Enable Google ML Services",
-                    descriptions: [
-                        "Navigate to the API Library in Google Cloud Console.",
-                        "Enable the necessary ML APIs (e.g., Cloud Vision, AutoML).",
-                    ],
-                },
-                {
-                    subtitleDescription: "Set Up Authentication",
-                    descriptions: [
-                        "Create service account credentials for secure API access.",
-                        "Generate a JSON key for the service account.",
-                    ],
-                },
-            ],
+          stepTitle: "Step 6: Set Up Google Cloud for Machine Learning (ML)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create a Google Cloud Project",
+              descriptions: [
+                "Go to the Google Cloud Console and create a new project.",
+                "Link it to your Firebase project.",
+              ],
+            },
+            {
+              subtitleDescription: "Enable Google ML Services",
+              descriptions: [
+                "Navigate to the API Library in Google Cloud Console.",
+                "Enable the necessary ML APIs (e.g., Cloud Vision, AutoML).",
+              ],
+            },
+            {
+              subtitleDescription: "Set Up Authentication",
+              descriptions: [
+                "Create service account credentials for secure API access.",
+                "Generate a JSON key for the service account.",
+              ],
+            },
+          ],
         },
         {
-            stepTitle: "Step 7: Set Up Stripe for Payments",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Create a Stripe Account",
-                    descriptions: [
-                        "Go to the Stripe website and sign up for an account.",
-                        "Log in to the Stripe Dashboard.",
-                    ],
-                },
-                {
-                    subtitleDescription: "Create a Product or Service",
-                    descriptions: [
-                        "In the Stripe Dashboard, navigate to 'Products' and click 'Add Product'.",
-                        "Fill in product details and save.",
-                    ],
-                },
-                {
-                    subtitleDescription: "Get Stripe API Keys",
-                    descriptions: [
-                        "Navigate to 'Developers' > 'API keys' in your Stripe Dashboard.",
-                        "Copy your publishable and secret API keys.",
-                    ],
-                },
-            ],
+          stepTitle: "Step 7: Set Up Stripe for Payments",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create a Stripe Account",
+              descriptions: [
+                "Go to the Stripe website and sign up for an account.",
+                "Log in to the Stripe Dashboard.",
+              ],
+            },
+            {
+              subtitleDescription: "Create a Product or Service",
+              descriptions: [
+                "In the Stripe Dashboard, navigate to 'Products' and click 'Add Product'.",
+                "Fill in product details and save.",
+              ],
+            },
+            {
+              subtitleDescription: "Get Stripe API Keys",
+              descriptions: [
+                "Navigate to 'Developers' > 'API keys' in your Stripe Dashboard.",
+                "Copy your publishable and secret API keys.",
+              ],
+            },
+          ],
         },
         {
-            stepTitle: "Step 8: Integrate Everything in Your React App",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Import Firebase Configuration",
-                    descriptions: [
-                        "Create a new file (e.g., firebase.js) in your src directory.",
-                        "Paste the Firebase configuration object and initialize Firebase services.",
-                    ],
-                },
-                {
-                    subtitleDescription: "Implement Authentication",
-                    descriptions: [
-                        "Create user registration and login components.",
-                        "Use Firebase Authentication methods to handle user actions.",
-                    ],
-                },
-                {
-                    subtitleDescription: "Set Up Firestore Integration",
-                    descriptions: [
-                        "Create functions to add, retrieve, update, and delete data from Firestore.",
-                        "Implement these functions in your components as needed.",
-                    ],
-                },
-            ],
+          stepTitle: "Step 8: Integrate Everything in Your React App",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Import Firebase Configuration",
+              descriptions: [
+                "Create a new file (e.g., firebase.js) in your src directory.",
+                "Paste the Firebase configuration object and initialize Firebase services.",
+              ],
+            },
+            {
+              subtitleDescription: "Implement Authentication",
+              descriptions: [
+                "Create user registration and login components.",
+                "Use Firebase Authentication methods to handle user actions.",
+              ],
+            },
+            {
+              subtitleDescription: "Set Up Firestore Integration",
+              descriptions: [
+                "Create functions to add, retrieve, update, and delete data from Firestore.",
+                "Implement these functions in your components as needed.",
+              ],
+            },
+          ],
         },
         {
-            stepTitle: "Step 9: Testing and Deployment",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Test Each Functionality Individually",
-                    descriptions: [
-                        "Test authentication by creating and logging in users.",
-                        "Verify data storage and retrieval from Firestore.",
-                        "Check that media uploads work with Firebase Storage."
-                    ],
-                },
-                {
-                    subtitleDescription: "Deploy Your Application",
-                    descriptions: [
-                        "Choose a hosting service (like Vercel, Netlify, or Firebase Hosting).",
-                        "Follow the deployment guidelines to deploy your React application.",
-                    ],
-                },
-            ],
+          stepTitle: "Step 9: Testing and Deployment",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Test Each Functionality Individually",
+              descriptions: [
+                "Test authentication by creating and logging in users.",
+                "Verify data storage and retrieval from Firestore.",
+                "Check that media uploads work with Firebase Storage.",
+              ],
+            },
+            {
+              subtitleDescription: "Deploy Your Application",
+              descriptions: [
+                "Choose a hosting service (like Vercel, Netlify, or Firebase Hosting).",
+                "Follow the deployment guidelines to deploy your React application.",
+              ],
+            },
+          ],
         },
         {
-            stepTitle: "Step 10: Review and Iterate",
-            titleDescription: "",
-            sections: [
-                {
-                    subtitleDescription: "Gather Feedback from Users",
-                    descriptions: [
-                        "Encourage users to provide feedback on their experience.",
-                        "Consider implementing feedback forms or surveys.",
-                    ],
-                },
-                {
-                    subtitleDescription: "Iterate Based on Feedback",
-                    descriptions: [
-                        "Use feedback to make improvements and iterate on your application.",
-                        "Add new features or optimize existing ones as needed.",
-                    ],
-                },
-            ],
+          stepTitle: "Step 10: Review and Iterate",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Gather Feedback from Users",
+              descriptions: [
+                "Encourage users to provide feedback on their experience.",
+                "Consider implementing feedback forms or surveys.",
+              ],
+            },
+            {
+              subtitleDescription: "Iterate Based on Feedback",
+              descriptions: [
+                "Use feedback to make improvements and iterate on your application.",
+                "Add new features or optimize existing ones as needed.",
+              ],
+            },
+          ],
         },
-    ],
+      ],
       taskType: "Live",
       difficulty: "Easy",
       authorIndex: 0,
@@ -1361,218 +1362,226 @@ const tasksData = {
     },
     {
       taskId: "Payroll-Application-Development",
-      "taskTitle": "Payroll Application Development",
-      "introduction": "The Payroll Application is a user-friendly web platform built with React that enables businesses to efficiently manage employee payment processing. It features a dashboard for viewing employee lists, a payroll form for processing payments, and is designed to comply with specific country tax laws, ensuring accurate and streamlined payroll management.",
-      "task": {
-      "taskDescription": "I'm seeking a developer experienced with React and Node.js to create a payroll application. The main focus of the application will be handling employee payment processing.",
-      "platform": "Freelancer",
-      "projectName": "Payroll Application Development on React & Node.js",
-      "biddingEnds": "2024-11-02",
-      "requirements": [
-        "Design and implement an intuitive interface with React",
-        "Build a robust server-side application with Node.js",
-        "Create functionalities specifically for processing employee payments",
-        "Tailor the application for a single country's tax laws",
-        "Support payment via check"
-    ]
-  },
-  steps: [
-    {
-      stepTitle: "Step 1: Project Setup",
-      titleDescription: "",
-      sections: [
+      taskTitle: "Payroll Application Development",
+      introduction:
+        "The Payroll Application is a user-friendly web platform built with React that enables businesses to efficiently manage employee payment processing. It features a dashboard for viewing employee lists, a payroll form for processing payments, and is designed to comply with specific country tax laws, ensuring accurate and streamlined payroll management.",
+      task: {
+        taskDescription:
+          "I'm seeking a developer experienced with React and Node.js to create a payroll application. The main focus of the application will be handling employee payment processing.",
+        platform: "Freelancer",
+        projectName: "Payroll Application Development on React & Node.js",
+        biddingEnds: "2024-11-02",
+        requirements: [
+          "Design and implement an intuitive interface with React",
+          "Build a robust server-side application with Node.js",
+          "Create functionalities specifically for processing employee payments",
+          "Tailor the application for a single country's tax laws",
+          "Support payment via check",
+        ],
+      },
+      steps: [
         {
-          subtitleDescription: "Frontend",
-          descriptions: [
-            "Set up a new React project using Create React App (or Vite for faster builds).",
-            "Install dependencies like React Router (for page routing) and Axios (for API requests)."
+          stepTitle: "Step 1: Project Setup",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Frontend",
+              descriptions: [
+                "Set up a new React project using Create React App (or Vite for faster builds).",
+                "Install dependencies like React Router (for page routing) and Axios (for API requests).",
+              ],
+            },
+            {
+              subtitleDescription: "Backend",
+              descriptions: [
+                "Set up a Node.js server with Express.",
+                "Use a MongoDB or PostgreSQL database to store employee data, payment history, and other necessary information.",
+                "Add necessary packages for handling data validation, authorization, and payment processing.",
+              ],
+            },
           ],
         },
         {
-          subtitleDescription: "Backend",
-          descriptions: [
-            "Set up a Node.js server with Express.",
-            "Use a MongoDB or PostgreSQL database to store employee data, payment history, and other necessary information.",
-            "Add necessary packages for handling data validation, authorization, and payment processing."
+          stepTitle: "Step 2: Frontend (React)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription:
+                "Setting Up the React Project and Dependencies",
+              descriptions: [
+                "Start by creating a React project. Install dependencies like React Router for managing page navigation and Axios for API calls.",
+                "Organize the project's folder structure into components (e.g., components/EmployeeList, components/PayrollForm), pages (e.g., pages/Dashboard, pages/EmployeeDetails), and services (e.g., services/api.js to handle API calls).",
+              ],
+            },
+            {
+              subtitleDescription: "Routing with React Router",
+              descriptions: [
+                "Set up React Router to manage the app's routes, including paths for different views like the Employee List, Employee Details, and Payroll Form.",
+                "Configure a layout to allow for easy navigation between these main pages.",
+              ],
+            },
+            {
+              subtitleDescription: "Component Design",
+              descriptions: [
+                "Employee List: Design this to display all employees in a list or table format. Each row should include employee details and actions like viewing more information or processing payroll.",
+                "Employee Details: Design a detailed view for each employee, displaying personal info (e.g., name, position, salary), historical payroll data, and options for updating details or initiating payroll processing.",
+                "Payroll Form: Create a form for payroll managers to input payment details, adjust for deductions, and specify the payment method (e.g., 'check'). Include field validation (e.g., amounts should not be negative).",
+                "Dashboard: Design a dashboard showing metrics like total payroll processed, pending payments, and a summary of recent payroll activity.",
+              ],
+            },
+            {
+              subtitleDescription: "API Integration",
+              descriptions: [
+                "Use Axios to handle API requests for each component. For example, when loading the Employee List, make an API call to retrieve all employees.",
+                "Structure all API calls within a 'services/api.js' file to centralize them, making the app modular and easy to maintain.",
+              ],
+            },
+            {
+              subtitleDescription: "Styling and UX",
+              descriptions: [
+                "Prioritize a clean, intuitive UI that makes it easy for payroll administrators to navigate through employee records and initiate payroll.",
+                "Implement basic form validation for accurate data entry and responsive design for different screen sizes.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 3: Backend (Node.js + Express)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Initial Setup and Middleware Configuration",
+              descriptions: [
+                "Create a new Node.js project and set up an Express server. Install middleware like 'body-parser' to 'parse' incoming requests and 'cors' for handling cross-origin requests.",
+                "Create a base route (e.g., /api) where all API endpoints will reside, helping to organize the application's structure.",
+              ],
+            },
+            {
+              subtitleDescription: "Database Setup and Integration",
+              descriptions: [
+                "Choose a database that fits the needs of your payroll application, such as MongoDB or PostgreSQL, to handle the storage of employee data and payroll records",
+                "Establish a connection between the server and the database. Organize models for each key entity: Employee for storing employee details and Payment for managing payroll history.",
+              ],
+            },
+            {
+              subtitleDescription: "API Endpoints Design",
+              descriptions: [
+                "Employee Management: Design endpoints for CRUD operations. The app needs the ability to create new employee records, read and display employee details, update employee information, and delete employees if needed.",
+                "Payroll Processing: Create an endpoint for payroll processing where the admin can initiate a payment. This will handle data validation, check payment methods, calculate the employee's net pay after tax deductions, and save the transaction to the database.",
+                "Tax Calculation: Integrate a helper function within the payroll endpoint to calculate taxes based on the country's tax regulations. This function should be flexible in case tax rules need adjustments later.",
+                "Report Generation: Set up a reporting endpoint that generates summaries for compliance, showing processed payrolls, deductions, and net payments within specific date ranges.",
+              ],
+            },
+            {
+              subtitleDescription: "Error Handling and Validation",
+              descriptions: [
+                "Implement validation for each endpoint to prevent incorrect data submissions. Ensure that salaries are positive numbers and that tax rates do not exceed limits.",
+                "Add structured error handling across routes. Return user-friendly error messages that the frontend can display.",
+              ],
+            },
+            {
+              subtitleDescription: "Authorization and Security",
+              descriptions: [
+                "Implement basic security measures like route protection. Only authorized users (e.g., payroll managers) should access payroll processing endpoints.",
+                "If user authentication is needed, add an authentication layer (JWT or sessions) to secure endpoints and sensitive data.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 4: Database Schema and Tax Calculation",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Employee Schema",
+              descriptions: [
+                "Define fields to capture each employee's essential details: name, employee ID, salary, position, department, and payment method (e.g., check).",
+                "Include fields for tax details, such as a 'tax rate' specific to the employee's earnings bracket and payment preferences.",
+              ],
+            },
+            {
+              subtitleDescription: "Payment Schema",
+              descriptions: [
+                "Define fields to store details of each payment, such as employee ID, gross amount, tax deducted, net amount, payment date, and payment method.",
+                "Ensure that each payment is linked to the relevant employee by storing a reference to the employee's ID.",
+              ],
+            },
+            {
+              subtitleDescription: "Implementing the Tax Calculation",
+              descriptions: [
+                "Design a flexible tax calculation function that can be easily adjusted for future tax rate changes or other payroll policies.",
+                "Use a standard tax rate based on the specific country's rules. Calculate the employee's tax amount during payroll processing by applying this rate to their gross salary.",
+                "Ensure that the tax calculation is accurate and can handle different income brackets if your tax model is progressive.",
+              ],
+            },
+            {
+              subtitleDescription: "Data Validation and Consistency Checks",
+              descriptions: [
+                "Implement validation checks in the database schema to ensure that only valid data is saved.",
+                "Enforce unique constraints where necessary, ensuring employee IDs are unique.",
+              ],
+            },
+            {
+              subtitleDescription:
+                "Testing the Database Structure and Functions",
+              descriptions: [
+                "Test each part of the payroll functionality, particularly the tax calculation and payment processing.",
+                "Verify that all data is stored and retrieved accurately, ensuring application updates records properly.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 5: Testing & Deployment",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Testing",
+              descriptions: [
+                "Use Jest/React Testing Library for frontend tests.",
+                "Employ Mocha/Chai for backend testing.",
+                "Utilize Postman or Swagger to test API endpoints.",
+              ],
+            },
+            {
+              subtitleDescription: "Deployment",
+              descriptions: [
+                "Frontend: Deploy using services like Vercel or Netlify.",
+                "Backend: Deploy using Heroku, DigitalOcean, or AWS.",
+                "Database: Set up a managed database instance in the cloud.",
+              ],
+            },
           ],
         },
       ],
-    },
-    {
-      stepTitle: "Step 2: Frontend (React)",
-      titleDescription: "",
-      sections: [
-        {
-          subtitleDescription: "Setting Up the React Project and Dependencies",
-          descriptions: [
-            "Start by creating a React project. Install dependencies like React Router for managing page navigation and Axios for API calls.",
-            "Organize the project's folder structure into components (e.g., components/EmployeeList, components/PayrollForm), pages (e.g., pages/Dashboard, pages/EmployeeDetails), and services (e.g., services/api.js to handle API calls)."
-          ],
-        },
-        {
-          subtitleDescription: "Routing with React Router",
-          descriptions: [
-            "Set up React Router to manage the app's routes, including paths for different views like the Employee List, Employee Details, and Payroll Form.",
-            "Configure a layout to allow for easy navigation between these main pages."
-          ],
-        },
-        {
-          subtitleDescription: "Component Design",
-          descriptions: [
-            "Employee List: Design this to display all employees in a list or table format. Each row should include employee details and actions like viewing more information or processing payroll.",
-            "Employee Details: Design a detailed view for each employee, displaying personal info (e.g., name, position, salary), historical payroll data, and options for updating details or initiating payroll processing.",
-            "Payroll Form: Create a form for payroll managers to input payment details, adjust for deductions, and specify the payment method (e.g., 'check'). Include field validation (e.g., amounts should not be negative).",
-            "Dashboard: Design a dashboard showing metrics like total payroll processed, pending payments, and a summary of recent payroll activity."
-          ],
-        },
-        {
-          subtitleDescription: "API Integration",
-          descriptions: [
-            "Use Axios to handle API requests for each component. For example, when loading the Employee List, make an API call to retrieve all employees.",
-            "Structure all API calls within a 'services/api.js' file to centralize them, making the app modular and easy to maintain."
-          ],
-        },
-        {
-          subtitleDescription: "Styling and UX",
-          descriptions: [
-            "Prioritize a clean, intuitive UI that makes it easy for payroll administrators to navigate through employee records and initiate payroll.",
-            "Implement basic form validation for accurate data entry and responsive design for different screen sizes."
-          ],
-        },
-      ],
-    },
-    {
-      stepTitle: "Step 3: Backend (Node.js + Express)",
-      titleDescription: "",
-      sections: [
-        {
-          subtitleDescription: "Initial Setup and Middleware Configuration",
-          descriptions: [
-            "Create a new Node.js project and set up an Express server. Install middleware like 'body-parser' to 'parse' incoming requests and 'cors' for handling cross-origin requests.",
-            "Create a base route (e.g., /api) where all API endpoints will reside, helping to organize the application's structure."
-          ],
-        },
-        {
-          subtitleDescription: "Database Setup and Integration",
-          descriptions: [
-            "Choose a database that fits the needs of your payroll application, such as MongoDB or PostgreSQL, to handle the storage of employee data and payroll records",
-            "Establish a connection between the server and the database. Organize models for each key entity: Employee for storing employee details and Payment for managing payroll history."
-          ],
-        },
-        {
-          subtitleDescription: "API Endpoints Design",
-          descriptions: [
-            "Employee Management: Design endpoints for CRUD operations. The app needs the ability to create new employee records, read and display employee details, update employee information, and delete employees if needed.",
-            "Payroll Processing: Create an endpoint for payroll processing where the admin can initiate a payment. This will handle data validation, check payment methods, calculate the employee's net pay after tax deductions, and save the transaction to the database.",
-            "Tax Calculation: Integrate a helper function within the payroll endpoint to calculate taxes based on the country's tax regulations. This function should be flexible in case tax rules need adjustments later.",
-            "Report Generation: Set up a reporting endpoint that generates summaries for compliance, showing processed payrolls, deductions, and net payments within specific date ranges."
-          ],
-        },
-        {
-          subtitleDescription: "Error Handling and Validation",
-          descriptions: [
-            "Implement validation for each endpoint to prevent incorrect data submissions. Ensure that salaries are positive numbers and that tax rates do not exceed limits.",
-            "Add structured error handling across routes. Return user-friendly error messages that the frontend can display."
-          ],
-        },
-        {
-          subtitleDescription: "Authorization and Security",
-          descriptions: [
-            "Implement basic security measures like route protection. Only authorized users (e.g., payroll managers) should access payroll processing endpoints.",
-            "If user authentication is needed, add an authentication layer (JWT or sessions) to secure endpoints and sensitive data."
-          ],
-        },
-      ],
-    },
-    {
-      stepTitle: "Step 4: Database Schema and Tax Calculation",
-      titleDescription: "",
-      sections: [
-        {
-          subtitleDescription: "Employee Schema",
-          descriptions: [
-            "Define fields to capture each employee's essential details: name, employee ID, salary, position, department, and payment method (e.g., check).",
-            "Include fields for tax details, such as a 'tax rate' specific to the employee's earnings bracket and payment preferences."
-          ],
-        },
-        {
-          subtitleDescription: "Payment Schema",
-          descriptions: [
-            "Define fields to store details of each payment, such as employee ID, gross amount, tax deducted, net amount, payment date, and payment method.",
-            "Ensure that each payment is linked to the relevant employee by storing a reference to the employee's ID."
-          ],
-        },
-        {
-          subtitleDescription: "Implementing the Tax Calculation",
-          descriptions: [
-            "Design a flexible tax calculation function that can be easily adjusted for future tax rate changes or other payroll policies.",
-            "Use a standard tax rate based on the specific country's rules. Calculate the employee's tax amount during payroll processing by applying this rate to their gross salary.",
-            "Ensure that the tax calculation is accurate and can handle different income brackets if your tax model is progressive."
-          ],
-        },
-        {
-          subtitleDescription: "Data Validation and Consistency Checks",
-          descriptions: [
-            "Implement validation checks in the database schema to ensure that only valid data is saved.",
-            "Enforce unique constraints where necessary, ensuring employee IDs are unique."
-          ],
-        },
-        {
-          subtitleDescription: "Testing the Database Structure and Functions",
-          descriptions: [
-            "Test each part of the payroll functionality, particularly the tax calculation and payment processing.",
-            "Verify that all data is stored and retrieved accurately, ensuring application updates records properly."
-          ],
-        },
-      ],
-    },
-    {
-      stepTitle: "Step 5: Testing & Deployment",
-      titleDescription: "",
-      sections: [
-        {
-          subtitleDescription: "Testing",
-          descriptions: [
-            "Use Jest/React Testing Library for frontend tests.",
-            "Employ Mocha/Chai for backend testing.",
-            "Utilize Postman or Swagger to test API endpoints."
-          ],
-        },
-        {
-          subtitleDescription: "Deployment",
-          descriptions: [
-            "Frontend: Deploy using services like Vercel or Netlify.",
-            "Backend: Deploy using Heroku, DigitalOcean, or AWS.",
-            "Database: Set up a managed database instance in the cloud."
-          ],
-        },
-      ],
-    },],
       taskType: "Live",
       difficulty: "Hard",
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/fgvp8z?view=editor&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/fgvp8z?view=editor&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons6.webp"),
       videoLink: "",
     },
 
     {
-      "taskId": "Deploying-React-Website-on-GoDaddy",
-      "taskTitle": "Deploy Your React App to GoDaddy",
-      "introduction": "This task outlines the steps to deploy your React application to a GoDaddy hosting account.",
-      "task": {
-        "taskDescription": "I require assistance with deploying my already built React website on my GoDaddy hosting account. The domain name has been set up.",
-        "platform": "Freelancer",
-        "projectName": "Deploying React Website on GoDaddy",
-        "biddingEnds": "Friday, November 8, 2024",
-        "requirements": [
+      taskId: "Deploying-React-Website-on-GoDaddy",
+      taskTitle: "Deploy Your React App to GoDaddy",
+      introduction:
+        "This task outlines the steps to deploy your React application to a GoDaddy hosting account.",
+      task: {
+        taskDescription:
+          "I require assistance with deploying my already built React website on my GoDaddy hosting account. The domain name has been set up.",
+        platform: "Freelancer",
+        projectName: "Deploying React Website on GoDaddy",
+        biddingEnds: "Friday, November 8, 2024",
+        requirements: [
           "A GoDaddy hosting account",
           "A domain name set up with GoDaddy",
           "React application built with npm",
-          "Basic knowledge of web hosting and file management"
-        ]
+          "Basic knowledge of web hosting and file management",
+        ],
       },
       steps: [
         {
@@ -1603,9 +1612,7 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Log In to Your GoDaddy Account",
-              descriptions: [
-                "Go to GoDaddy.com and log in to your account.",
-              ],
+              descriptions: ["Go to GoDaddy.com and log in to your account."],
             },
             {
               subtitleDescription: "Access Your Hosting Dashboard",
@@ -1625,7 +1632,8 @@ const tasksData = {
         },
         {
           stepTitle: "Step 3: Upload Your Build Files to GoDaddy",
-          titleDescription: "Transfer your build files to your hosting account.",
+          titleDescription:
+            "Transfer your build files to your hosting account.",
           sections: [
             {
               subtitleDescription: "Open the File Manager",
@@ -1677,7 +1685,8 @@ const tasksData = {
         },
         {
           stepTitle: "Step 5: Test Your Website",
-          titleDescription: "Verify that your website is functioning correctly.",
+          titleDescription:
+            "Verify that your website is functioning correctly.",
           sections: [
             {
               subtitleDescription: "Access Your Domain",
@@ -1748,12 +1757,421 @@ const tasksData = {
       codesandboxUrl: "#/notavailable",
       img: require("../images/livelessons7.webp"),
       videoLink: "",
-    }
-    
+    },
+    {
+      taskId: "App-with-Contentful-Integration",
+      taskTitle: "Building a React App with Contentful Integration for Content Sharing",
+      introduction:
+        "This project is a content-sharing app built with React and Contentful, allowing users to share various types of content. It utilizes Contentful for dynamic content management, providing real-time updates and seamless interactions with different media types. The app's responsive and user-friendly interface is powered by modern web technologies like React, ensuring a smooth experience for users to explore and engage with content.",
+      task: {
+        taskDescription:
+          "I'm looking for a skilled frontend developer to help me create a single page application (SPA) using React. The primary purpose of this application is to serve as a blog/content sharing platform.",
+        platform: "Freelancer",
+        projectName: "React SPA Development for Blog",
+        biddingEnds: "Synday, November 16, 2024",
+        requirements: [
+          "Knowledge of React",
+          "Experience with Contentful CMS",
+          "Ability to work with API integrations",
+          "Familiarity with asynchronous programming (Promises, async/await)",
+        ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Project Setup",
+          titleDescription:
+            "Initialize a new React app and install necessary dependencies.",
+          sections: [
+            {
+              subtitleDescription: "Initialize the project",
+              descriptions: [
+                "Use create-react-app or your preferred setup to initialize the project.",
+                "Ensure you have Node.js installed and then run `npx create-react-app your-app-name` to set up the project.",
+              ],
+            },
+            {
+              subtitleDescription: "Install necessary dependencies",
+              descriptions: [
+                "React Router for routing: `npm install react-router-dom`",
+                "Framer Motion for animations: `npm install framer-motion` (optional)",
+                "Axios for making API calls: `npm install axios` (if you plan to fetch external data)",
+              ],
+            },
+            {
+              subtitleDescription: "Add content management service",
+              descriptions: [
+                "Install Contentful SDK or a similar service to manage blog content: `npm install contentful`",
+                "Make sure to set up a Contentful account and get the necessary credentials.",
+              ],
+            },
+            {
+              subtitleDescription: "Install styling and notifications",
+              descriptions: [
+                "Install Styled-components for theming: `npm install styled-components` (optional)",
+                "Install React-Toastify for notifications: `npm install react-toastify` (optional)",
+              ],
+            },
+          ],
+        },
 
-
-
-
+        {
+          stepTitle: "Step 2: Create Components",
+          titleDescription: "Create the necessary components for your React app, each with specific functionality.",
+          sections: [
+            {
+              subtitleDescription: "Header Component",
+              descriptions: [ 
+                "Purpose: This component will be used across all pages and will display the site's navigation links, logo, and theme toggle button.",
+                "Tasks:",
+                "Create a functional component Header inside src/components.",
+                "Include the app's logo or title (e.g., 'React Blog App').",
+                "Add navigation links to Home, Login, and other pages.",
+                "Add a theme toggle button to switch between light and dark themes.",
+                "Implement a useContext hook to handle theme switching with context."
+              ],
+            },
+            {
+              subtitleDescription: "PostList Component",
+              descriptions: [ 
+                "Purpose: This component will fetch and display a list of blog posts from the Contentful API.",
+                "Tasks:",
+                "Create a functional component PostList inside src/components.",
+                "State management:",
+                "  - Use useState and useEffect to manage posts, loading status, and errors.",
+                "  - Example state variables: posts (stores the list of posts), loading (tracks loading state), error (tracks fetch errors).",
+                "Fetching Posts:",
+                "  - Use useEffect to fetch posts from the Contentful API on mount.",
+                "  - Display a loading spinner while fetching posts.",
+                "  - Show an error message if the fetch fails.",
+                "Display Posts:",
+                "  - Loop over the posts and display: title, short description, tags/categories, and a link to the post detail page.",
+                "Search Bar:",
+                "  - Implement a simple search bar to filter posts by title or tags.",
+                "Pagination:",
+                "  - Limit the number of posts per page (e.g., 5 or 10).",
+                "  - Add pagination controls to navigate through pages."
+              ],
+            },
+            {
+              subtitleDescription: "PostDetail Component",
+              descriptions: [ 
+                "Purpose: This component displays the detailed content of a single post, including the post's title, content, and comments.",
+                "Tasks:",
+                "Create a PostDetail component inside src/pages.",
+                "Fetch the post data:",
+                "  - Use the useParams hook from react-router-dom to get the post ID from the URL (/post/:id).",
+                "  - Fetch the post data from Contentful using the ID.",
+                "Display Post Details:",
+                "  - Display the full title, content, and tags/categories.",
+                "Add Comments Section:",
+                "  - Display comments related to the post.",
+                "  - Allow users to add comments.",
+                "  - (Optional) Store comments locally or send them to a backend API."
+              ],
+            },
+            {
+              subtitleDescription: "CommentSection Component",
+              descriptions: [ 
+                "Purpose: This component will handle the display of comments for each post and allow users to submit new comments.",
+                "Tasks:",
+                "Create a functional component CommentSection.",
+                "Include:",
+                "  - A text area for users to input their comment.",
+                "  - A submit button to add the comment.",
+                "  - A list of existing comments, either fetched from Contentful or stored locally.",
+                "  - (Optional) Implement validation to ensure the comment is not empty.",
+                "  - Add animations or transitions when a new comment is added using Framer Motion."
+              ],
+            },
+            {
+              subtitleDescription: "Login Component",
+              descriptions: [ 
+                "Purpose: This component will handle user authentication, allowing users to log in.",
+                "Tasks:",
+                "Create a Login component inside src/pages.",
+                "Include fields for username and password.",
+                "On form submission, validate the credentials (mock the backend if needed).",
+                "If login is successful, store the user's authentication status in localStorage or a state management solution like Redux.",
+                "Redirect the user to the homepage or post page upon successful login."
+              ],
+            },
+          ],
+        }
+        ,
+        {
+          stepTitle: "Step 3: Set Up Routing",
+          titleDescription: "Set up React Router for navigation between pages in your app.",
+          sections: [
+            {
+              subtitleDescription: "Configure Routes",
+              descriptions: [ 
+                "Set up React Router to handle navigation between pages.",
+                "Tasks:",
+                "  - Install React Router: `npm install react-router-dom`.",
+                "  - In your App.js, import the necessary components from react-router-dom.",
+                "  - Create routes for the following pages:"
+              ],
+            },
+            {
+              subtitleDescription: "Home Page Route",
+              descriptions: [ 
+                "A route for the home page (/):",
+                "  - Displays the PostList component.",
+                "  - Use <Route path='/' component={PostList} /> for the home route."
+              ],
+            },
+            {
+              subtitleDescription: "Post Detail Page Route",
+              descriptions: [ 
+                "A route for the post detail page (/post/:id):",
+                "  - Displays the PostDetail component.",
+                "  - Use <Route path='/post/:id' component={PostDetail} /> to show individual post details."
+              ],
+            },
+            {
+              subtitleDescription: "Login Page Route",
+              descriptions: [ 
+                "A route for the login page (/login):",
+                "  - Displays the Login component.",
+                "  - Use <Route path='/login' component={Login} /> for the login route."
+              ],
+            },
+          ],
+        }
+        ,
+        {
+          stepTitle: "Step 4: Authentication",
+          titleDescription: "Set up a login mechanism to manage user authentication.",
+          sections: [
+            {
+              subtitleDescription: "Create Login Form",
+              descriptions: [ 
+                "Create a login form where users can enter their credentials.",
+                "Include fields for username and password."
+              ],
+            },
+            {
+              subtitleDescription: "Authenticate User",
+              descriptions: [ 
+                "Authenticate the user using mock data or real authentication methods.",
+                "If using mock data, compare entered credentials to predefined values.",
+                "For real authentication, connect to a backend API to verify the user's credentials."
+              ],
+            },
+            {
+              subtitleDescription: "Update Login Status",
+              descriptions: [ 
+                "On successful login, update the `isLoggedIn` state.",
+                "Persist the login status in localStorage to keep the user logged in even after page reload."
+              ],
+            },
+            {
+              subtitleDescription: "Conditionally Render Components",
+              descriptions: [ 
+                "Conditionally render the Home and PostDetail components based on the login status.",
+                "  - If the user is logged in, render the Home page and PostDetail page.",
+                "  - If the user is not logged in, redirect to the Login page."
+              ],
+            },
+            {
+              subtitleDescription: "Implement Logout Feature",
+              descriptions: [ 
+                "Implement a logout feature to clear the login status.",
+                "  - On logout, remove the login status from localStorage.",
+                "  - Redirect the user to the Login page."
+              ],
+            },
+          ],
+        }
+        ,
+        {
+          stepTitle: "Step 5: Theme Management",
+          titleDescription: "Set up a light/dark theme toggle for the app.",
+          sections: [
+            {
+              subtitleDescription: "Create ThemeProvider Component",
+              descriptions: [ 
+                "Create a ThemeProvider component with context to manage the theme state.",
+                "This component will handle the logic for toggling between light and dark themes."
+              ],
+            },
+            {
+              subtitleDescription: "Pass Theme to the App",
+              descriptions: [ 
+                "Pass the theme to the app through the context provider.",
+                "Update the styles dynamically based on the selected theme, e.g., using styled-components or CSS variables."
+              ],
+            },
+          ],
+        }
+        ,
+        {
+          stepTitle: "Step 6: Data Storage (Optional)",
+          titleDescription: "Set up data storage to manage posts and comments, either using a CMS like Contentful or local storage.",
+          sections: [
+            {
+              subtitleDescription: "Using a CMS (e.g., Contentful)",
+              descriptions: [ 
+                "Set up an API client to fetch posts and comments.",
+                "Add necessary fields in Contentful such as post title, content, tags, and comments."
+              ],
+            },
+            {
+              subtitleDescription: "Using Local Storage",
+              descriptions: [ 
+                "Store the posts, tags, and comments in local storage or simulate a mock API for development purposes."
+              ],
+            },
+          ],
+        }
+        
+        ,
+        {
+          stepTitle: "Step 7: Styling and Layout",
+          titleDescription: "Style the app and create a responsive layout for both mobile and desktop views.",
+          sections: [
+            {
+              subtitleDescription: "Style the App",
+              descriptions: [ 
+                "Style the header, post list, and individual posts using CSS or CSS-in-JS.",
+                "Apply consistent and modern design elements across the app."
+              ],
+            },
+            {
+              subtitleDescription: "Add Animations",
+              descriptions: [ 
+                "Use Framer Motion or other animation libraries to add transitions and animations to components.",
+                "Consider animations for interactions such as button clicks or post transitions."
+              ],
+            },
+            {
+              subtitleDescription: "Create a Responsive Layout",
+              descriptions: [ 
+                "Create a responsive layout that adjusts for both mobile and desktop views.",
+                "Ensure that key components, such as the header and post list, are mobile-friendly."
+              ],
+            },
+            {
+              subtitleDescription: "Style the Login Page",
+              descriptions: [ 
+                "Style the login page to make it look polished and user-friendly.",
+                "Ensure that the form is easy to use and looks consistent with the rest of the app."
+              ],
+            },
+          ],
+        }
+        ,
+        {
+          stepTitle: "Step 8: Testing and Debugging",
+          titleDescription: "Test the app functionality to ensure everything is working as expected.",
+          sections: [
+            {
+              subtitleDescription: "Test Routing",
+              descriptions: [ 
+                "Ensure that routing works correctly between pages, including the home page, post details, and login page."
+              ],
+            },
+            {
+              subtitleDescription: "Test Login Functionality",
+              descriptions: [ 
+                "Check that the login functionality and authentication flow are working as expected.",
+                "Ensure users can log in, maintain their session, and access protected pages."
+              ],
+            },
+            {
+              subtitleDescription: "Test Comment Section",
+              descriptions: [ 
+                "Verify that the comment section is working and comments persist as expected.",
+                "Ensure comments are being displayed and added correctly, and handle edge cases like empty comments."
+              ],
+            },
+            {
+              subtitleDescription: "Test Theme Switching",
+              descriptions: [ 
+                "Test theme switching functionality and ensure it applies correctly across all components.",
+                "Check that both light and dark themes are applied consistently throughout the app."
+              ],
+            },
+          ],
+        }
+        ,
+        {
+          stepTitle: "Steps for Integrating Contentful into a React Project",
+          titleDescription: "Integrate Contentful as a headless CMS into your React app to manage and display dynamic content.",
+          sections: [
+            {
+              subtitleDescription: "Set Up a Contentful Account",
+              descriptions: [
+                "Sign up for a free Contentful account at Contentful.",
+                "Create a new space (project) where you will store your content."
+              ],
+            },
+            {
+              subtitleDescription: "Create a Content Model",
+              descriptions: [
+                "In the Contentful dashboard, go to the 'Content Model' section.",
+                "Define the structure for the content you want to manage, like a blog model with fields for title, body, images, etc."
+              ],
+            },
+            {
+              subtitleDescription: "Add Content to Your Space",
+              descriptions: [
+                "Go to the 'Content' section in Contentful and start adding entries based on the models you created.",
+                "For example, add blog posts with title, content, images, and other relevant fields."
+              ],
+            },
+            {
+              subtitleDescription: "Set Up Contentful in Your React Project",
+              descriptions: [
+                "Install the Contentful SDK in your React project to fetch content from Contentful.",
+                "Set up a service file to manage API calls to Contentful using your Space ID and Access Token."
+              ],
+            },
+            {
+              subtitleDescription: "Fetch Content in React",
+              descriptions: [
+                "Use the Contentful API to request content, specifying which content type (e.g., blog posts) you want to retrieve."
+              ],
+            },
+            {
+              subtitleDescription: "Display the Content",
+              descriptions: [
+                "Map through the fetched content and dynamically render information such as blog post titles, body content, and images."
+              ],
+            },
+            {
+              subtitleDescription: "Handle Dynamic Updates",
+              descriptions: [
+                "Contentful allows dynamic content updates. When content is updated in Contentful, your React app will display the latest content on refresh or via a pull request."
+              ],
+            },
+            {
+              subtitleDescription: "Manage and Update Content",
+              descriptions: [
+                "Return to the Contentful dashboard to update existing content or add new entries like blog posts, changing text, or images."
+              ],
+            },
+            {
+              subtitleDescription: "Optimize Performance",
+              descriptions: [
+                "Use caching and pagination to optimize content fetching, especially with large amounts of content.",
+                "Consider lazy-loading images or using CDNs to speed up content delivery."
+              ],
+            },
+          ],
+        }
+        ,
+       
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/n6ysqk?view=editor&module=%2Fsrc%2FApp.js",
+      img: require("../images/livelessons8.webp"),
+      videoLink: "",
+    },
   ],
   React: [
     {
@@ -2438,7 +2856,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      videoLink: 'https://youtu.be/Dnh6C3wxXjI',
+      videoLink: "https://youtu.be/Dnh6C3wxXjI",
       codesandboxUrl:
         "https://codesandbox.io/embed/7lx22x?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson7.webp"),
@@ -2551,7 +2969,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      videoLink: 'https://youtu.be/2dzlkUoqK6A',
+      videoLink: "https://youtu.be/2dzlkUoqK6A",
       codesandboxUrl:
         "https://codesandbox.io/embed/5pts5h?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson8.webp"),
@@ -2662,7 +3080,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      videoLink: 'https://youtu.be/Cb0Enix4nrY',
+      videoLink: "https://youtu.be/Cb0Enix4nrY",
       codesandboxUrl:
         "https://codesandbox.io/embed/56gy36?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson9.webp"),
@@ -2756,7 +3174,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      videoLink: 'https://youtu.be/u59ezyE_uUc',
+      videoLink: "https://youtu.be/u59ezyE_uUc",
       codesandboxUrl:
         "https://codesandbox.io/embed/33th26?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson10.webp"),
