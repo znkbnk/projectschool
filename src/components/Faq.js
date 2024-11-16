@@ -34,7 +34,7 @@ const Faq = () => {
       <Navbar />
       <div className='faq-container'>
         <div>
-          <h1 className='faq-title' ref={titleRef}>
+          <h1 ref={titleRef}>
             {" "}
             Frequently asked questions
           </h1>

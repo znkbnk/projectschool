@@ -191,10 +191,12 @@ h2.heading_large {
 /* Links */
 .section1-chat {
   color: #fff;
+  text-decoration: underline;
+
 }
 
 .section1-chat:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /* Responsive Styles */
