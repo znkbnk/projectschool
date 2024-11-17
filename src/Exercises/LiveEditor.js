@@ -302,7 +302,7 @@ const LiveEditor = () => {
         <div className='task-container'>
           <div className='task'>
             <div className='text-window' ref={taskContainerRef}>
-              <h1>{taskTitle}</h1>
+              <h6>{taskTitle}</h6>
               {task && Object.keys(task).length > 0 && (
                 <div className='section'>
                   <h4>Task Description:</h4>
@@ -432,11 +432,11 @@ const LiveEditor = () => {
                                 {copied ? "Copied!" : "Copy Code"}
                               </button>
                               <button
-                              className='styles-close-button'
-                              onClick={handleCloseStyles}
-                            >
-                              Close
-                            </button>
+                                className='styles-close-button'
+                                onClick={handleCloseStyles}
+                              >
+                                Close
+                              </button>
                             </div>
                             <pre>
                               <code>{style.css}</code>

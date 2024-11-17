@@ -2172,6 +2172,214 @@ const tasksData = {
       img: require("../images/livelessons8.webp"),
       videoLink: "",
     },
+    
+    {
+      taskId: "Google-Calendar-API-Integration",
+      taskTitle: "Integrate Google Calendar API into a React Website",
+      introduction: "This task will guide you step-by-step through integrating the Google Calendar API into a React application. By the end, your app will display and manage calendar events effectively.",
+      task: {
+        taskDescription: "We are seeking an experienced developer to integrate Google Calendar API into our existing multi-tenant web application. Our application is built using React.js, Node.js, and we have already implemented Google Single Sign-On (SSO). The goal of this project is to enable seamless calendar functionalities directly within our application to enhance user experience and improve scheduling capabilities.",
+        platform: "Upwork.com",
+        projectName: "Google Calendar API Integration in Multi-Tenant Web Application",
+        biddingEnds: "N/A",
+        requirements: [
+          "Basic React knowledge",
+          "Google Cloud Console account",
+          "Familiarity with REST APIs",
+        ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up Google Cloud Project",
+          titleDescription: "Configure your Google Cloud project and enable the Calendar API.",
+          sections: [
+            {
+              subtitleDescription: "Create a new Google Cloud project.",
+              descriptions: [
+                "Log into the Google Cloud Console.",
+                "Click on 'Create Project' and provide a suitable name.",
+                "Save the project and proceed to API setup.",
+              ],
+            },
+            {
+              subtitleDescription: "Enable the Google Calendar API.",
+              descriptions: [
+                "Navigate to 'API & Services > Library' in the console.",
+                "Search for 'Google Calendar API' and click 'Enable'.",
+                "Ensure the API is activated successfully in your project.",
+              ],
+            },
+            {
+              subtitleDescription: "Set up the OAuth consent screen.",
+              descriptions: [
+                "Go to 'API & Services > OAuth Consent Screen'.",
+                "Fill out the app name, user support email, and authorized domains.",
+                "Select the required API scopes for your application.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create API Credentials",
+          titleDescription: "Generate OAuth credentials to authenticate and access Google Calendar API.",
+          sections: [
+            {
+              subtitleDescription: "Create OAuth 2.0 credentials.",
+              descriptions: [
+                "Go to 'API & Services > Credentials'.",
+                "Click 'Create Credentials' and choose 'OAuth 2.0 Client IDs'.",
+                "Set the application type to 'Web Application'.",
+              ],
+            },
+            {
+              subtitleDescription: "Set up authorized origins and redirect URIs.",
+              descriptions: [
+                "Add 'http://localhost:3000' for development in 'Authorized JavaScript origins'.",
+                "Specify a redirect URI to handle OAuth responses.",
+                "Save the credentials and note the Client ID and Client Secret.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 3: Install Required Libraries",
+          titleDescription: "Set up dependencies for the Google Calendar API in your React project.",
+          sections: [
+            {
+              subtitleDescription: "Install required libraries.",
+              descriptions: [
+                "Install `gapi-script` or `googleapis` for API access.",
+                "Add `react-google-login` for managing Google authentication.",
+                "Ensure all libraries are compatible with your React version.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 4: Initialize Google API Client",
+          titleDescription: "Initialize the Google API client to handle user authentication.",
+          sections: [
+            {
+              subtitleDescription: "Configure the API client in your React app.",
+              descriptions: [
+                "Import the required modules from installed libraries.",
+                "Initialize the API client with the Client ID and required scopes.",
+                "Create an authentication function to sign in users.",
+              ],
+            },
+            {
+              subtitleDescription: "Add a Google login button.",
+              descriptions: [
+                "Integrate a login button in your React component.",
+                "Trigger Google OAuth login flow when the button is clicked.",
+                "Handle authentication responses and store tokens securely.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 5: Fetch Calendar Events",
+          titleDescription: "Retrieve calendar events using the Calendar API.",
+          sections: [
+            {
+              subtitleDescription: "Use the API to list events.",
+              descriptions: [
+                "Fetch available calendars for the authenticated user.",
+                "Use the `events.list` endpoint to get upcoming events.",
+                "Display events in a styled calendar component.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 6: Enable Event Management",
+          titleDescription: "Add, edit, and delete calendar events through the API.",
+          sections: [
+            {
+              subtitleDescription: "Implement event addition.",
+              descriptions: [
+                "Create a form for users to input event details.",
+                "Use the `events.insert` endpoint to add events to the calendar.",
+                "Handle the API responses and update the UI accordingly.",
+              ],
+            },
+            {
+              subtitleDescription: "Enable editing and deletion of events.",
+              descriptions: [
+                "Allow users to select and modify existing events.",
+                "Use the `events.update` and `events.delete` endpoints.",
+                "Refresh the displayed calendar events after changes.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 7: Add Real-Time Updates",
+          titleDescription: "Ensure the calendar syncs changes in real-time.",
+          sections: [
+            {
+              subtitleDescription: "Use webhooks or polling for real-time updates.",
+              descriptions: [
+                "Implement the `watch` method from the API to detect changes.",
+                "Set up a server to receive webhook notifications.",
+                "Update the React app dynamically based on received data.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 8: Style the Calendar UI",
+          titleDescription: "Design a user-friendly interface for displaying calendar events.",
+          sections: [
+            {
+              subtitleDescription: "Customize the calendar UI.",
+              descriptions: [
+                "Use libraries like `react-big-calendar` or `fullcalendar`.",
+                "Integrate fetched events into the calendar.",
+                "Ensure the design is responsive and visually appealing.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 9: Test the Application",
+          titleDescription: "Ensure all features function as expected.",
+          sections: [
+            {
+              subtitleDescription: "Validate each feature thoroughly.",
+              descriptions: [
+                "Test the authentication process for multiple scenarios.",
+                "Verify event addition, editing, and deletion functionalities.",
+                "Ensure the app remains responsive and error-free.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 10: Deploy the App",
+          titleDescription: "Deploy the app to a live environment and monitor performance.",
+          sections: [
+            {
+              subtitleDescription: "Prepare the app for deployment.",
+              descriptions: [
+                "Update authorized redirect URIs for production.",
+                "Host the app on platforms like Vercel or Netlify.",
+                "Monitor API usage and handle errors gracefully.",
+              ],
+            },
+          ],
+        },
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/7f5vdp?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/livelessons9.webp"),
+      videoLink: "",
+    }
+    
   ],
   React: [
     {
