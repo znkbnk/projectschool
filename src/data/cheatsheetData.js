@@ -3092,7 +3092,147 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "Smooth-Scroll-Navigator",
+    content: [
+      {
+        title: "",
+        subtitle: "Managing State with useState",
+        details: [
+          "'activeIndex': Tracks the index of the currently active section. Updates when scrolling or clicking navigation buttons.",
+          "'scrollY': Stores the current vertical scroll position (window.scrollY).",
+          "Use 'useState' for values that dynamically change based on user actions.",
+        ],
+        image: "./cheatsheetImages/task50/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Scrolling Event Listener with useEffect",
+        details: [
+          "Tracks the user's scroll position to update the active section dynamically.",
+          "Adds a 'scroll' event listener when the component mounts and removes it during cleanup.",
+          "Updates 'scrollY' and determines 'activeIndex' based on the position of each section.",
+          "Always clean up event listeners in 'useEffect' to prevent memory leaks.",
 
+        ],
+        image: "./cheatsheetImages/task50/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handling Navigation Button Clicks",
+        details: [
+          "Sets 'activeIndex' to the clicked button's index.",
+          "Smoothly scrolls to the target section using the 'react-scroll' library.",
+          "The 'offset' adjusts the scroll position to account for a fixed header or margin.",
+        ],
+        image: "./cheatsheetImages/task50/3.webp"
+      },
+       
+    ],
+  },
+  {
+    taskId: "Tesla-Experience",
+    content: [
+      {
+        title: "",
+        subtitle: "Routing with React Router",
+        details: [
+          "Router: Wraps the entire app to enable routing.",
+          "Routes: Defines a collection of Route components.",
+          "Route: Maps a URL path to a React component.",
+          "models.map: Dynamically generates routes for each model defined in models.js.",
+          "Use useParams from react-router-dom to access dynamic route parameters if needed.",
+        ],
+        image: "./cheatsheetImages/task51/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Dynamic Routing with Props",
+        details: [
+          "Dynamically creates a route for each model.",
+          "Passes the properties of each model (e.g., modelName, speed) to the Model component using the spread operator ...model.",
+          "To debug, log model to check the properties being passed to Model.",
+        ],
+        image: "./cheatsheetImages/task51/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Framer Motion Animations",
+        details: [
+          "initial: The starting state of the animation.",
+          "animate: The final state after animation.",
+          "transition: Defines the duration and easing.",
+          "Use Framer Motion to enhance the user experience with smooth animations.",
+
+        ],
+        image: "./cheatsheetImages/task51/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Home Component Animation with useAnimation",
+        details: [
+          "useAnimation: Hook from Framer Motion for controlling animations programmatically.",
+          "useEffect: Ensures the animation starts when the component mounts.",
+          "This setup is ideal for triggering animations based on user interactions or lifecycle events.",
+        ],
+        image: "./cheatsheetImages/task51/4.webp"
+      },
+       
+    ],
+  },
+  {
+    taskId: "Dynamic-Dashboard",
+    content: [
+      {
+        title: "",
+        subtitle: "",
+        details: [
+          "'useState' manages whether the sidebar menu is open (menuOpen).",
+          "'toggleMenu' toggles the menu state, and 'closeMenu' ensures it closes.",
+        ],
+        image: "./cheatsheetImages/task52/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "Receives 'menuOpen' to toggle the sidebar and 'closeMenu' to handle link clicks.",
+          "'motion.aside' (from framer-motion) adds smooth sidebar transitions.",
+        ],
+        image: "./cheatsheetImages/task52/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "'generateData' creates a table dynamically with 5 rows and 5 columns.",
+          "Adds smooth fade-in effects using 'motion.table'.",
+          "Utilizes <thead> for headers and <tbody> for data rows.",
+        ],
+        image: "./cheatsheetImages/task52/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "Uses 'useState' to track loading and fetched data.",
+          "'useEffect' simulates fetching data with a 'setTimeout'.",
+          "Displays a loading spinner while fetching data.",
+        ],
+        image: "./cheatsheetImages/task52/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "Holds a list of users and loading state.",
+          "Maps over the users array to display each user.",
+        ],
+        image: "./cheatsheetImages/task52/5.webp"
+      },
+        
+    ],
+  },
 
 
 ];
