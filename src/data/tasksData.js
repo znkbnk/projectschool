@@ -2378,7 +2378,483 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/embed/7f5vdp?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons9.webp"),
       videoLink: "",
-    }
+    },
+    {
+      taskId: "Simple-Business-Website",
+      taskTitle: "Simple Business Website",
+      introduction: "This React web application showcases a product catalog, a contact form for customer inquiries, and a customer reviews section, offering a seamless and professional user experience. It is built with reusable components, modern practices, and thoroughly tested for reliability.",
+      task: {
+        taskDescription: "I'm looking for a skilled web developer to create a simple yet effective business website.",
+        platform: 'Freelancer.com',
+        projectName: "Simple Business Website Development",
+        biddingEnds: 'Friday, November 29, 2024',
+        requirements: [
+            "Contact Form: A simple form for customers to reach us.",
+                "Product Catalog: An organized display of our products.",
+                "Customer Reviews: A section dedicated to showcasing customer feedback and testimonials.",
+       
+      ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Plan and Outline the Project",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Purpose",
+              descriptions: [ 
+              "The website will display product information, customer reviews, and a contact form.",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Features Breakdown",
+              descriptions: [ 
+              "Product catalog: Showcase products with images, descriptions, and prices.",
+              "Customer reviews: Display user feedback with ratings.",
+              "Contact form: Allow users to send inquiries.",
+              ],
+            },
+            {
+              subtitleDescription: "Wireframe the Layout",
+            descriptions: [ 
+              "Sketch a simple design or use tools like Figma to decide the placement of each component.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Decide the Tech Stack",
+             descriptions: [ 
+              "Use React for the frontend, React Router for navigation, styled-components for styling, and mock data for products and reviews.",
+              
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 2: Set Up the Project",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Initialize React App",
+             descriptions: [ 
+              "Create the project folder using create-react-app or vite.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Install Required Dependencies",
+              descriptions: [ 
+              "React Router: For managing routing between different pages (e.g., catalog, reviews, contact form). 'npm install react-router-dom'",
+              "Axios: For handling HTTP requests, such as submitting the contact form data or fetching product and review data. 'npm install axios'",
+              "React Bootstrap (Optional): If you want to use pre-built UI components for styling. 'npm install react-bootstrap bootstrap'",
+              "React Testing Library: For writing unit and integration tests. 'npm install --save-dev @testing-library/react @testing-library/jest-dom @testing-library/user-event'",
+              "'styled-components' for styling.",
+              "'react-toastify' for notifications.",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Set Up File Structure",
+            descriptions: [ 
+              "Create folders for 'components', 'pages', 'data', 'utils', and 'assets'.",
+              "Add subfolders inside components for 'ContactForm', 'ProductCatalog', and 'CustomerReviews'.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 3: Configure Routing",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Use react-router-dom to define routes.",
+            descriptions: [ 
+              "Home page (/)",
+              "Product catalog (/products)",
+              "Customer reviews (/reviews)",
+              "Contact form (/contact)",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 4: Build Contact Form Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the Component File",
+            descriptions: [ 
+              "ContactForm.js",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Plan the Form Structure",
+             descriptions: [ 
+               "Fields: Name, Email, Message.",
+                "Buttons: Submit.",
+              ],
+            },
+            {
+              subtitleDescription: "Use State for Form Values",
+             descriptions: [ 
+               "Create 'name', 'email', and 'message' state variables using 'useState'.",
+                "Bind 'value' and 'onChange' to inputs.",
+              ],
+            },
+            {
+              subtitleDescription: "Add Form Validation",
+             descriptions: [ 
+               "Write a 'validateForm' function (imported from src/utils/validateForm.js) to check",
+                "Name is not empty.",
+                "Email is valid.",
+                "Message is not empty.",
+                "Return errors if validation fails.",
+              ],
+            },
+            {
+              subtitleDescription: "Handle Form Submission",
+             descriptions: [ 
+               "Add a 'handleSubmit' function.",
+                "Prevent default form submission behavior.",
+                "Validate form data.",
+                "Show a success message using 'react-toastify' if valid.",
+              ],
+            },
+            {
+              subtitleDescription: "Manage Success/Error Messages",
+             descriptions: [ 
+               "Use 'react-toastify' to show success or error messages.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Add Accessibility Features",
+             descriptions: [ 
+               "Use 'aria-label' attributes for input fields.",
+                "Add 'aria-live' for success/error messages.",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Define Product Catalog Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the Component File",
+             descriptions: [ 
+               "ProductCatalog.js",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Plan the Catalog Structure",
+             descriptions: [ 
+               "Display products in a grid.",
+                "Show: Image, Name, Description, Price.",
+              ],
+            },
+            {
+              subtitleDescription: "Import Product Data",
+             descriptions: [ 
+               "Use mock data from src/data/products.js.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Use State for Product Data",
+             descriptions: [ 
+               "Load 'products' into state using 'useState'",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Map Through Products",
+             descriptions: [ 
+               "Use 'products.map()' to create a card for each product.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Handle Conditional Rendering",
+             descriptions: [ 
+               "If no products exist, display a 'No Products Available' message.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Add Filter/Sorting Logic (Optional)",
+             descriptions: [ 
+               "Create a dropdown for sorting (e.g., by price or name).",
+                "Use a 'useState' variable for the selected filter.",
+                "Apply sorting logic to the products array before rendering.",
+              ],
+            },
+            {
+              subtitleDescription: "Make It Responsive",
+             descriptions: [ 
+               "Use 'styled-components' or CSS grid for a flexible layout.",
+               
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: Create Customer Reviews Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the Component File",
+             descriptions: [ 
+               "CustomerReviews.js",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Plan the Reviews Structure",
+              descriptions: [ 
+               "Display reviews in a card layout.",
+                "Show: Customer Name, Message, Rating.",
+              ],
+            },
+            {
+              subtitleDescription: "Import Review Data",
+             descriptions: [ 
+               "Use mock data from src/data/reviews.js.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Map Through Reviews",
+             descriptions: [ 
+               "Use 'reviews.map()' to render each review.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Add State for Reviews",
+              descriptions: [ 
+               "Use 'useState' to manage the reviews.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Add Pagination (Optional)",
+             descriptions: [ 
+               "Display a limited number of reviews (e.g., 5 per page).",
+                "Use 'useState' for the current page.",
+                "Add Next/Previous buttons to navigate pages.",
+              ],
+            },
+            {
+              subtitleDescription: "Add Accessibility Features",
+             descriptions: [ 
+               "Use semantic elements like <blockquote> for reviews.",
+                "Add 'aria-label' to rating stars.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: Build Home Page Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the Component File",
+             descriptions: [ 
+               "src/pages/Home.js",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Plan the Layout",
+              descriptions: [ 
+               "Add a banner or welcome message.",
+                "Include links or buttons to navigate to:",
+                "Product Catalog",
+                "Customer Reviews",
+                "Contact Form",
+              ],
+            },
+            {
+              subtitleDescription: "Use React Router for Navigation",
+            descriptions: [ 
+               "Import 'Link' from 'react-router-dom'",
+                "Add 'Link' components to navigate between pages.",
+              ],
+            },
+            {
+              subtitleDescription: "Style the Page",
+             descriptions: [ 
+               "Add a hero section with a call-to-action.",
+                "Use styled-components for spacing and layout.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 8: Create Utilities and Hooks",
+           titleDescription: "Define 'validateForm' Utility",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Create a file: src/utils/validateForm.js.",
+                "Write a function to validate:",
+                "Name: Check for non-empty value.",
+                "Email: Use regex for valid email format.",
+                "Message: Check for non-empty value.",
+                
+              ],
+            },
+        
+          ],
+        },
+         {
+          stepTitle: "Step 9: Define App Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Set Up Routing",
+             descriptions: [ 
+               "Import 'BrowserRouter', 'Routes', and 'Route' from 'react-router-dom'.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Define routes for",
+             descriptions: [ 
+               "Home (/)",
+                "Products (/products)",
+                "Reviews (/reviews)",
+                "Contact (/contact)",
+              ],
+            },
+            {
+              subtitleDescription: "Add Navigation",
+             descriptions: [ 
+               "Create a navigation bar using <Link> for each route.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Add Toast Notifications",
+             descriptions: [ 
+               "Import ToastContainer from react-toastify.",
+                "Place <ToastContainer /> inside App.js.",
+              ],
+            },
+            {
+              subtitleDescription: "Global Styling",
+             descriptions: [ 
+               "Import a CSS reset file or normalize.css.",
+                "Use global styles for consistent fonts, colors, and spacing.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 10: Style the Components",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Use styled-components to style",
+             descriptions: [ 
+               "Layouts (grid for the catalog, cards for reviews).",
+                "Form elements (input fields, buttons).",
+              ],
+            },
+            {
+              subtitleDescription: "Ensure styles are responsive",
+             descriptions: [ 
+               "Add media queries to adjust layouts for mobile and tablet screens.",
+                "Add hover effects to buttons and product cards for better user interaction."
+              ],
+            },
+            
+          ],
+        },
+        {
+          stepTitle: "Step 11: Test Each Component",
+           titleDescription: "Test code included in solution.",
+          sections: [
+            {
+              subtitleDescription: "Install Required Dependencies",
+             descriptions: [ 
+               "@testing-library/react: For rendering and interacting with React components.",
+                "@testing-library/jest-dom: For additional matchers like .toBeInTheDocument().",
+                "@testing-library/user-event: For simulating user interactions.",
+              ],
+            },
+            {
+              subtitleDescription: "Verify Jest Configuration",
+             descriptions: [ 
+               "React apps created with create-react-app come pre-configured with Jest. If using a different setup, ensure Jest is configured in package.json or a jest.config.js file.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Run Tests Locally",
+             descriptions: [ 
+               "'npm test'",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Check Code Coverage",
+             descriptions: [ 
+               "'npm test -- --coverage'",
+               "Check the generated coverage report in the coverage/ folder."
+              ],
+            },
+            {
+              subtitleDescription: "Debug Failing Tests",
+             descriptions: [ 
+               "Use console.log or the debug() method from React Testing Library to inspect the DOM.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Automate Tests",
+             descriptions: [ 
+               "Integrate tests into your CI/CD pipeline (e.g., GitHub Actions, CircleCI).",
+              
+              ],
+            },
+         
+          ],
+        },
+        {
+          stepTitle: "Step 12: Optimize for SEO",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Use react-helmet to add meta tags for:",
+             descriptions: [ 
+               "Title",
+                "Description",
+                "Open Graph tags for better sharing on social media.",
+                "Set unique titles for each page."
+              ],
+            },
+         
+          ],
+        },
+       
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/7dykyd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/livelessons10.webp"),
+      videoLink: "",
+    },
     
   ],
   React: [
