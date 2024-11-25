@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
-import styles from './ReactExplained.module.css';
-import ReactExplainedCard from './ReactExplainedCard';
+import styles from './interviewQuestions.module.css';
+import InterviewQuestionsCard from './InterviewQuestionsCard';
 import { TiChevronLeftOutline, TiChevronRightOutline } from 'https://cdn.skypack.dev/react-icons@4.12.0/ti';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import ReactExplainedCardsData from '../data/ReactExplainedCardsData';
-import ReactExplainedTitle from "./ReactExplainedTitle";
-import SearchReactFAQ from './SearchReactFAQ'; 
+import InterviewQuestionsCardsData from '../data/InterviewQuestionsCardsData';
+import InterviewQuestionsTitle from "./InterviewQuestionsTitle";
+import InterviewQuestionsSearch from './InterviewQuestionsSearch';
 
 const MAX_VISIBILITY = 3;
 
-const ReactExplained = () => {
+const InterviewQuestions = () => {
   const [activeRandom, setActiveRandom] = useState(0);
   const [activeList, setActiveList] = useState(0);
   const [searchTerm, setSearchTerm] = useState('');
+  const [showContentState, setShowContentState] = useState({});
 
   function ScrollToTopOnNavigation() {
     window.scrollTo(0, 0);
@@ -21,9 +22,9 @@ const ReactExplained = () => {
   }
 
   // Filter cards based on the search term
-  const filteredCards = ReactExplainedCardsData.filter(card =>
-    card.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    card.content.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredCards = InterviewQuestionsCardsData.filter(card =>
+    card.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    card.answer.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Function to get a random card index
@@ -34,9 +35,11 @@ const ReactExplained = () => {
     if (isListMode) {
       if (activeList < filteredCards.length - 1) {
         setActiveList(activeList + 1);
+        setShowContentState({}); // Reset the show answer state on navigation
       }
     } else {
-      setActiveRandom(getRandomIndex(ReactExplainedCardsData.length));
+      setActiveRandom(getRandomIndex(InterviewQuestionsCardsData.length));
+      setShowContentState({}); // Reset the show answer state on navigation
     }
   };
 
@@ -44,16 +47,23 @@ const ReactExplained = () => {
     if (isListMode) {
       if (activeList > 0) {
         setActiveList(activeList - 1);
+        setShowContentState({}); // Reset the show answer state on navigation
       }
     } else {
-      setActiveRandom(getRandomIndex(ReactExplainedCardsData.length));
+      setActiveRandom(getRandomIndex(InterviewQuestionsCardsData.length));
+      setShowContentState({}); // Reset the show answer state on navigation
     }
   };
 
-  
+  const handleToggleContent = (index) => {
+    setShowContentState(prevState => ({
+      ...prevState,
+      [index]: !prevState[index], // Toggle the visibility for the specific card
+    }));
+  };
+
   const renderCards = (isListMode) => {
-   
-    const cardsToRender = isListMode ? filteredCards : [ReactExplainedCardsData[activeRandom]];
+    const cardsToRender = isListMode ? filteredCards : [InterviewQuestionsCardsData[activeRandom]];
 
     return cardsToRender.map((card, i) => (
       <div
@@ -64,20 +74,20 @@ const ReactExplained = () => {
           '--offset': (activeList - i) / 3,
           '--direction': Math.sign(activeList - i),
           '--abs-offset': Math.abs(activeList - i) / 3,
-          pointerEvents: isListMode && activeList === i ? 'auto' : 'none', // Change this line
           opacity: isListMode && Math.abs(activeList - i) >= MAX_VISIBILITY ? '0' : '1',
           display: isListMode && Math.abs(activeList - i) > MAX_VISIBILITY ? 'none' : 'block',
         }}
       >
-        <ReactExplainedCard
-          title={card.title}
-          content={card.content}
+        <InterviewQuestionsCard
+          question={card.question}
+          answer={card.answer}
+          showContent={showContentState[i]} // Pass the state to each card
+          onToggleContent={() => handleToggleContent(i)} // Toggle function
         />
       </div>
     ));
   };
 
-  
   const isListMode = searchTerm.length > 0;
 
   return (
@@ -85,8 +95,8 @@ const ReactExplained = () => {
       <ScrollToTopOnNavigation />
 
       <Navbar />
-      <ReactExplainedTitle />
-      <SearchReactFAQ searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <InterviewQuestionsTitle />
+      <InterviewQuestionsSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       <div className={styles.container}>
         <div className={styles.carousel}>
@@ -136,7 +146,4 @@ const ReactExplained = () => {
   );
 };
 
-export default ReactExplained;
-
-
-
+export default InterviewQuestions;

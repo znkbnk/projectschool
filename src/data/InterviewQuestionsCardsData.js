@@ -1,0 +1,61 @@
+// InterviewQuestionsCardsData.js
+
+const InterviewQuestionsCardsData = [
+  { question: "What is React?", answer: "React is a JavaScript library for building user interfaces, particularly single-page applications, by creating reusable UI components." },
+  { question: "What are the main features of React?", answer: "Key features include a virtual DOM for efficient rendering, unidirectional data flow, component-based architecture, and support for declarative UI creation." },
+  { question: "What are functional components?", answer: "Functional components are simple JavaScript functions that return React elements. They can use hooks to manage state and lifecycle methods." },
+  { question: "What are class components?", answer: "Class components are ES6 classes that extend React's Component class. They include lifecycle methods and manage state using this.state." },
+  { question: "What is JSX?", answer: "JSX stands for JavaScript XML and allows you to write HTML-like syntax within JavaScript. It is then compiled into regular JavaScript." },
+  { question: "What is the virtual DOM?", answer: "The virtual DOM is a lightweight copy of the real DOM that React uses to determine which parts of the UI need updating." },
+  { question: "What are props in React?", answer: "Props are short for properties and are used to pass data from a parent component to a child component. They are read-only." },
+  { question: "What is state in React?", answer: "State is a built-in object in components that holds data that can change over time, driving re-renders of the UI." },
+  { question: "What are hooks in React?", answer: "Hooks are functions introduced in React 16.8 that allow functional components to manage state and lifecycle methods." },
+  { question: "What is the purpose of useState?", answer: "The useState hook is used to add state to functional components, allowing them to store and update data dynamically." },
+  { question: "What is the useEffect hook?", answer: "The useEffect hook lets you perform side effects, such as data fetching, DOM manipulation, or subscriptions, in functional components." },
+  { question: "What is the difference between state and props?", answer: "State is managed within a component and can change over time, while props are passed from parent to child and are immutable." },
+  { question: "What is lifting state up?", answer: "Lifting state up refers to moving shared state to the closest common ancestor of components that need to access or modify it." },
+  { question: "What is a controlled component?", answer: "A controlled component is one where form inputs are controlled by React's state, ensuring the UI always reflects the state." },
+  { question: "What is an uncontrolled component?", answer: "An uncontrolled component manages its own state internally and uses references to access DOM values directly." },
+  { question: "What is React Router?", answer: "React Router is a library for handling routing in React applications, allowing navigation between different pages or views." },
+  { question: "What is Redux?", answer: "Redux is a state management library that centralizes the application's state in a single store and uses actions to modify it." },
+  { question: "What is a React lifecycle method?", answer: "Lifecycle methods are special functions in class components that run during different stages of a component's existence, such as mounting, updating, and unmounting." },
+  { question: "What are pure components?", answer: "Pure components are components that avoid re-rendering if their props and state have not changed, improving performance." },
+  { question: "What is memoization in React?", answer: "Memoization is a technique to optimize performance by caching the results of expensive computations and reusing them if inputs don't change." },
+  { question: "What are React portals?", answer: "React portals allow you to render a component's output into a DOM node outside its parent component hierarchy." },
+  { question: "What are synthetic events in React?", answer: "Synthetic events are React's cross-browser wrapper around native browser events, ensuring consistent behavior across platforms." },
+  { question: "What is React Context?", answer: "Context provides a way to share data globally across the component tree without passing props at every level." },
+  { question: "What is reconciliation in React?", answer: "Reconciliation is the process React uses to compare the virtual DOM with the real DOM and update only the changed parts." },
+  { question: "What is the significance of keys in React?", answer: "Keys are unique identifiers for elements in a list, helping React efficiently update or re-render items during changes." },
+  { question: "What is the difference between imperative and declarative programming in React?", answer: "Imperative programming specifies how to do something step-by-step, while declarative programming describes what the UI should look like." },
+  { question: "What is server-side rendering (SSR)?", answer: "SSR is the process of rendering React components on the server and sending the HTML to the browser, improving performance and SEO." },
+  { question: "What is static site generation (SSG)?", answer: "SSG generates static HTML files at build time for faster loading and better performance compared to server-side rendering." },
+  { question: "What is hydration in React?", answer: "Hydration is the process where React attaches event listeners to pre-rendered HTML generated by SSR or SSG." },
+  { question: "What is lazy loading in React?", answer: "Lazy loading is a technique for loading components or data only when they are needed, improving the initial load time of the application." },
+  { question: "What are error boundaries in React?", answer: "Error boundaries are components that catch JavaScript errors in their child components and display fallback UI instead of crashing the app." },
+  { question: "What is the difference between useEffect and useLayoutEffect?", answer: "The useEffect hook runs after the browser has painted, while useLayoutEffect runs before the paint for DOM measurement or modifications." },
+  { question: "What is the use of PropTypes in React?", answer: "PropTypes is a library for runtime type-checking of props, ensuring components receive the expected types of data." },
+  { question: "What is React Fiber?", answer: "React Fiber is a reimplementation of React's reconciliation algorithm that improves rendering performance and scheduling." },
+  { question: "What is the difference between a single-page application (SPA) and a multi-page application (MPA)?", answer: "SPAs dynamically update the content without reloading the page, while MPAs load new pages from the server for each navigation." },
+  { question: "What is the use of React.StrictMode?", answer: "React.StrictMode is a development tool that highlights potential issues, such as unsafe lifecycles or deprecated APIs, without affecting the production build." },
+  { question: "What is the purpose of React's Concurrent Mode?", answer: "Concurrent Mode allows React to render components in the background without blocking the main thread, improving responsiveness." },
+  { question: "What is the difference between React.memo and useMemo?", answer: "React.memo optimizes re-rendering of entire components, while useMemo optimizes specific values or computations within a component." },
+  { question: "What is suspense in React?", answer: "Suspense is a feature for handling asynchronous operations, like lazy-loading components, by showing a fallback UI while waiting for content." },
+  { question: "What is component composition in React?", answer: "Component composition is the practice of building complex UIs by combining smaller, reusable components." },
+  { question: "What are higher-order components (HOCs) in React?", answer: "HOCs are functions that take a component as input and return an enhanced component, used for reusing logic across multiple components." },
+  { question: "What is the difference between controlled and uncontrolled components?", answer: "Controlled components rely on React's state for value management, while uncontrolled components manage their own state internally." },
+  { question: "What is React's useRef hook used for?", answer: "The useRef hook creates a reference to access DOM elements or persist mutable values across renders without causing re-renders." },
+  { question: "What is the purpose of React's forwardRef?", answer: "React's forwardRef allows parent components to pass a ref to child components, enabling direct access to the child's DOM node." },
+  { question: "What are render props in React?", answer: "Render props is a pattern where a component receives a function as a prop to determine how it should render its output." },
+  { question: "What is the difference between default props and prop types?", answer: "Default props define fallback values for props, while prop types validate the type and presence of props passed to a component." },
+  { question: "What is context API in React?", answer: "The Context API is a way to manage global data, like theme or authentication, without prop-drilling through every component in the tree." },
+  { question: "What is shallow rendering in React testing?", answer: "Shallow rendering is a testing technique where only a single component is rendered without rendering its child components." },
+  { question: "What is the difference between functional and class components?", answer: "Functional components are simpler and use hooks for state and lifecycle methods, while class components use ES6 classes and have a more complex API." },
+  { question: "What is the purpose of a React key?", answer: "A React key is used to uniquely identify elements in a list, helping React efficiently track changes and re-render only the affected items." }
+];
+
+export default InterviewQuestionsCardsData;
+
+
+  // { question: "", answer: "" },
+
+  

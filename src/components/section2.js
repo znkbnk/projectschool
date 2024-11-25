@@ -111,7 +111,7 @@ function Section1() {
                 <div className='image-container'>
                   <img
                     src={image5}
-                    alt='Sample'
+                    alt='Think about thing differently'
                     className='section2-image neon-flash short-circuit'
                   />
                 </div>
@@ -131,7 +131,7 @@ function Section1() {
           <div className='featured-image-container ipsGrid_span5 gs_reveal gs_reveal_fromLeft'>
             <div className='card'>
               <div className='image-container'>
-                <img className='section1-image' src={image1} alt='' />
+                <img className='section1-image' src={image1} alt='React Logo' />
               </div>
             </div>
           </div>

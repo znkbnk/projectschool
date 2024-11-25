@@ -31,4 +31,5 @@ const exercisesData = [
     }
   ];
 
+
   export {exercisesData}

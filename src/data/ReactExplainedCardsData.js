@@ -1,6 +1,6 @@
 // ReactExplainedCardsData.js
 
-const cardsData = [
+const ReactExplainedCardsData = [
     { title: "Are React class components deprecated?", content: "Component is the base class for the React components defined as JavaScript classes. Class components are still supported by React, but we don’t recommend using them in new code." },
     { title: "Are React and React.js the same?", content: "Truly, the difference between React and React JS is purely in the naming. React is the official name used consistently in documentation and by the developer community. Meanwhile, React JS is a less formal term highlighting Reacts connection to JavaScript." },
     { title: "Are React and React native similar?", content: "React and React Native are both JavaScript frameworks created by Meta that are similar in some ways, but have key differences: Purpose, Features, Syntax, Lifecycle methods, Cost, Realease Process, Sharing code. React Native gives developers better access to a mobile OSs native features, which allows for the development of native-looking apps using a web application language syntax." },
@@ -36,7 +36,7 @@ const cardsData = [
    
   ];
   
-  export default cardsData;
+  export default ReactExplainedCardsData;
 
 
   // { title: "", content: "" },

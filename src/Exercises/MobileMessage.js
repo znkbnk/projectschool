@@ -57,7 +57,7 @@ const MobileMessage = () => {
       <img
         className='pslogosmall'
         src={image1}
-        alt='logo'
+        alt='projectschool.dev Logo'
         ref={logo}
       ></img>
     </div>

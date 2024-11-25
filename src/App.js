@@ -29,6 +29,10 @@ import BlogCardList from "./Blog/BlogCardList";
 import ReactExplained from "./Blog/ReactExplained";
 import DevEssentials from "./Blog/DevEssentials";
 import NotFound from "./components/NotFound";
+import Interview from "./Interview/Interview";
+import InterviewQuestions from "./Interview/InterviewQuestions";
+import InterviewQuestionQuiz from "./Interview/InterviewQuestionQuiz";
+import InterviewTasks from "./Interview/InterviewTasks";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -52,45 +56,37 @@ const App = () => {
           path='/signup'
           element={isLoggedIn ? <Navigate to='/' /> : <Signup />}
         />
+        <Route path='/pricing' element={<Pricing />} />
+        <Route path='/faq' element={<Faq />} />
         <Route
-          path='/pricing'
-          element={<Pricing /> }
-        />
-        <Route
-          path='/faq'
-          element={<Faq />}
+          path='/interview'
+          element={isLoggedIn ? <Interview /> : <Navigate to='/login' />}
         />
         <Route
-          path='/blog'
-          element={<Blog /> }
-        />
-         <Route
-          path='/notavailable'
-          element={<NotFound /> }
+          path='/interviewQuestions'
+          element={
+            isLoggedIn ? <InterviewQuestions /> : <Navigate to='/login' />
+          }
         />
         <Route
-          path='/devessentials'
-          element={<DevEssentials /> }
-        />
-         <Route
-          path='/reactexplained'
-          element={<ReactExplained /> }
+          path='/interviewQuiz'
+          element={
+            isLoggedIn ? <InterviewQuestionQuiz /> : <Navigate to='/login' />
+          }
         />
         <Route
-          path='/blogs'
-          element={<BlogCardList /> }
+          path='/interviewTasks'
+          element={isLoggedIn ? <InterviewTasks /> : <Navigate to='/login' />}
         />
-        <Route
-          path='/articles/:id'
-          element={<Articles />}
-        />
-      <Route path="/terms" element={<Terms />} />
-      <Route path="/privacy" element={<Privacy />} />
-        <Route
-          path='/resetPassword'
-          element={ <ResetPassword /> }
-        />
-
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/notavailable' element={<NotFound />} />
+        <Route path='/devessentials' element={<DevEssentials />} />
+        <Route path='/reactexplained' element={<ReactExplained />} />
+        <Route path='/blogs' element={<BlogCardList />} />
+        <Route path='/articles/:id' element={<Articles />} />
+        <Route path='/terms' element={<Terms />} />
+        <Route path='/privacy' element={<Privacy />} />
+        <Route path='/resetPassword' element={<ResetPassword />} />
         <Route
           path='/exercises'
           element={isLoggedIn ? <Exercises /> : <Navigate to='/login' />}
@@ -107,7 +103,7 @@ const App = () => {
           path='/reactlessons'
           element={isLoggedIn ? <ReactLessons /> : <Navigate to='/login' />}
         />
-         <Route
+        <Route
           path='/livelessons'
           element={isLoggedIn ? <LiveLessons /> : <Navigate to='/login' />}
         />
@@ -143,7 +139,10 @@ const App = () => {
           path='/cancel'
           element={isLoggedIn ? <Cancel /> : <Navigate to='/login' />}
         />
-        <Route path='/mobile-message' element={isLoggedIn ? <MobileMessage /> : <Navigate to='/login' />} />
+        <Route
+          path='/mobile-message'
+          element={isLoggedIn ? <MobileMessage /> : <Navigate to='/login' />}
+        />
       </Routes>
     </div>
   );
