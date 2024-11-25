@@ -5,8 +5,6 @@ import { TiChevronLeftOutline, TiChevronRightOutline } from 'https://cdn.skypack
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import InterviewQuestionsCardsData from '../data/InterviewQuestionsCardsData';
-import InterviewQuestionsTitle from "./InterviewQuestionsTitle";
-import InterviewQuestionsSearch from './InterviewQuestionsSearch';
 
 const MAX_VISIBILITY = 3;
 
@@ -95,8 +93,6 @@ const InterviewQuestions = () => {
       <ScrollToTopOnNavigation />
 
       <Navbar />
-      <InterviewQuestionsTitle />
-      <InterviewQuestionsSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       <div className={styles.container}>
         <div className={styles.carousel}>

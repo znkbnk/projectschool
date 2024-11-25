@@ -119,7 +119,7 @@
 
 
 .important-red h3 {
-  font-size: 2rem;
+  font-size: 1rem;
   color: #e60023; /* Dark red color */
 }
 
@@ -194,7 +194,7 @@
 
 @media only screen and (max-width: 375px) {
   .important-red h3 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     z-index: 45633;
   }
   .sectionImg4 {

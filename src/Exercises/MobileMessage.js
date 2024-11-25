@@ -46,7 +46,7 @@ const MobileMessage = () => {
       </button>
 
       <div
-        style={{ textAlign: "center", padding: "50px", fontSize: "2rem" }}
+        style={{ textAlign: "center", padding: "50px", fontSize: "1rem" }}
         className='important-red'
       >
         <h3>
