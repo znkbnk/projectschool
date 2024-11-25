@@ -28,7 +28,7 @@ const LiveChatNavBar = () => {
 
   return (
     <nav className='nav-bar'>
-      <h1>Live Chat</h1>
+      <h2>Live Chat</h2>
       {user ? (
         <button onClick={signOut} className='button-35' type='button'>
           Sign Out
