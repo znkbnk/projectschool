@@ -207,6 +207,10 @@
   .exercises-card {
     margin: 0 1rem;
   }
+  .exercises-title {
+    margin-top: 50px;
+    font-size: 2rem;
+  }
 }
 
 

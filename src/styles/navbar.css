@@ -99,14 +99,10 @@ nav {
   position: static;
 }
 
-.nav-dropdown:hover .nav-link::after {
-  transform: rotate(180deg);
-  
-}
+
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 0.5rem);
   left: 50%;
   transform: translateX(-50%);
   min-width: 200px;
@@ -116,13 +112,12 @@ nav {
   opacity: 0;
   visibility: hidden;
   transform-origin: top center;
-  animation: dropdownFade 0.2s ease forwards;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
-.nav-dropdown:hover .dropdown-menu,
+ .dropdown-menu,
 .dropdown-menu.show {
   opacity: 1;
   visibility: visible;

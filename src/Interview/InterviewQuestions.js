@@ -5,136 +5,82 @@ import { TiChevronLeftOutline, TiChevronRightOutline } from 'https://cdn.skypack
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import InterviewQuestionsCardsData from '../data/InterviewQuestionsCardsData';
-
-const MAX_VISIBILITY = 3;
+import InterviewQuestionsTitle from './InterviewQuestionsTitle';
 
 const InterviewQuestions = () => {
-  const [activeRandom, setActiveRandom] = useState(0);
-  const [activeList, setActiveList] = useState(0);
-  // eslint-disable-next-line no-unused-vars
-  const [searchTerm, setSearchTerm] = useState('');
+  const [activeIndex, setActiveIndex] = useState(0);
   const [showContentState, setShowContentState] = useState({});
 
-  function ScrollToTopOnNavigation() {
-    window.scrollTo(0, 0);
-    return null;
-  }
+  // Function to get a random index
+  const getRandomIndex = () => {
+    const randomIndex = Math.floor(Math.random() * InterviewQuestionsCardsData.length);
+    return randomIndex;
+  };
 
-  // Filter cards based on the search term
-  const filteredCards = InterviewQuestionsCardsData.filter(card =>
-    card.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    card.answer.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  // Function to get a random card index
-  const getRandomIndex = (length) => Math.floor(Math.random() * length);
-
-  // Function to handle card navigation
-  const handleNextCard = (isListMode) => {
-    if (isListMode) {
-      if (activeList < filteredCards.length - 1) {
-        setActiveList(activeList + 1);
-        setShowContentState({}); // Reset the show answer state on navigation
-      }
+  const handleNextCard = () => {
+    const randomIndex = getRandomIndex();
+    // Ensure we don't pick the same index as the current one
+    if (randomIndex !== activeIndex) {
+      setShowContentState(prevState => ({
+        ...prevState,
+        [activeIndex]: false,
+      }));
+      setActiveIndex(randomIndex);
     } else {
-      setActiveRandom(getRandomIndex(InterviewQuestionsCardsData.length));
-      setShowContentState({}); // Reset the show answer state on navigation
+      // If randomIndex is the same, try again
+      handleNextCard();
     }
   };
 
-  const handlePrevCard = (isListMode) => {
-    if (isListMode) {
-      if (activeList > 0) {
-        setActiveList(activeList - 1);
-        setShowContentState({}); // Reset the show answer state on navigation
-      }
-    } else {
-      setActiveRandom(getRandomIndex(InterviewQuestionsCardsData.length));
-      setShowContentState({}); // Reset the show answer state on navigation
+  const handlePrevCard = () => {
+    if (activeIndex > 0) {
+      setShowContentState(prevState => ({
+        ...prevState,
+        [activeIndex]: false,
+      }));
+      setActiveIndex(activeIndex - 1);
     }
   };
 
-  const handleToggleContent = (index) => {
+  const handleToggleContent = () => {
     setShowContentState(prevState => ({
       ...prevState,
-      [index]: !prevState[index], // Toggle the visibility for the specific card
+      [activeIndex]: !prevState[activeIndex],
     }));
   };
 
-  const renderCards = (isListMode) => {
-    const cardsToRender = isListMode ? filteredCards : [InterviewQuestionsCardsData[activeRandom]];
-
-    return cardsToRender.map((card, i) => (
-      <div
-        key={i}
-        className={styles.cardContainer}
-        style={{
-          '--active': isListMode ? i === activeList ? 1 : 0 : 1,
-          '--offset': (activeList - i) / 3,
-          '--direction': Math.sign(activeList - i),
-          '--abs-offset': Math.abs(activeList - i) / 3,
-          opacity: isListMode && Math.abs(activeList - i) >= MAX_VISIBILITY ? '0' : '1',
-          display: isListMode && Math.abs(activeList - i) > MAX_VISIBILITY ? 'none' : 'block',
-        }}
-      >
-        <InterviewQuestionsCard
-          question={card.question}
-          answer={card.answer}
-          showContent={showContentState[i]} // Pass the state to each card
-          onToggleContent={() => handleToggleContent(i)} // Toggle function
-        />
-      </div>
-    ));
-  };
-
-  const isListMode = searchTerm.length > 0;
-
   return (
     <div>
-      <ScrollToTopOnNavigation />
-
       <Navbar />
+      <InterviewQuestionsTitle />
 
       <div className={styles.container}>
         <div className={styles.carousel}>
-          {isListMode ? (
-            <>
-              {activeList > 0 && (
-                <button
-                  className={`${styles.nav} ${styles.left}`}
-                  onClick={() => handlePrevCard(true)}
-                >
-                  <TiChevronLeftOutline />
-                </button>
-              )}
-              {renderCards(true)}
-              {activeList < filteredCards.length - 1 && (
-                <button
-                  className={`${styles.nav} ${styles.right}`}
-                  onClick={() => handleNextCard(true)}
-                >
-                  <TiChevronRightOutline />
-                </button>
-              )}
-            </>
-          ) : (
-            <>
-              {activeRandom > 0 && (
-                <button
-                  className={`${styles.nav} ${styles.left}`}
-                  onClick={() => handlePrevCard(false)}
-                >
-                  <TiChevronLeftOutline />
-                </button>
-              )}
-              {renderCards(false)}
-              <button
-                className={`${styles.nav} ${styles.right}`}
-                onClick={() => handleNextCard(false)}
-              >
-                <TiChevronRightOutline />
-              </button>
-            </>
+          {activeIndex > 0 && (
+            <button
+              className={`${styles.nav} ${styles.left}`}
+              onClick={handlePrevCard}
+            >
+              <TiChevronLeftOutline />
+            </button>
+          )}
+
+          <div className={styles.cardContainer}>
+            <InterviewQuestionsCard
+              question={InterviewQuestionsCardsData[activeIndex].question}
+              answer={InterviewQuestionsCardsData[activeIndex].answer}
+              showContent={showContentState[activeIndex]} 
+              onToggleContent={handleToggleContent} 
+            />
+          </div>
+
+          {activeIndex < InterviewQuestionsCardsData.length - 1 && (
+            <button
+              className={`${styles.nav} ${styles.right}`}
+              onClick={handleNextCard}
+            >
+              <TiChevronRightOutline />
+            </button>
           )}
         </div>
       </div>

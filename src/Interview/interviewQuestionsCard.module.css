@@ -11,8 +11,10 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease-out;
-  max-height: 40rem;
-  overflow-x: hidden;
+  min-height: 10rem; /* Minimum height */
+  height: auto; /* Allow height to adjust based on content */
+  max-height: 45rem; /* Maximum height to prevent extreme expansion */
+  overflow: hidden;
   word-wrap: break-word;
   transform:
     rotateY(calc(var(--offset) * 50deg))
@@ -23,20 +25,20 @@
 }
 
 .card h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0 0 0.7em;
-  color: #1f2937;
+  text-align: left; /* Ensure the heading text is aligned properly */
+  margin-bottom: 10px; /* Adjust the margin for proper spacing */
+  font-size: 1.5rem; /* You can adjust the size as needed */
+  line-height: 1.4; /* Set an appropriate line-height */
 }
 
 .card p {
+  margin-top: 10px;
   line-height: 1.6;
   word-break: break-word;
   text-align: left;
+  width: 100%;
 }
 
-/* New button styling */
 .toggleButton {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -47,6 +49,7 @@
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  align-self: center;
 }
 
 .toggleButton:hover {

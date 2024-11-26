@@ -48,7 +48,7 @@ const Navbar = () => {
   };
 
   const toggleExercisesDropdown = () => {
-    setShowExercisesDropdown(!showExercisesDropdown);
+    setShowExercisesDropdown((prevState) => !prevState);
   };
 
   const toggleResponsiveDropdown = () => {
