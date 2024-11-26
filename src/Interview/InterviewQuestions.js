@@ -11,6 +11,7 @@ const MAX_VISIBILITY = 3;
 const InterviewQuestions = () => {
   const [activeRandom, setActiveRandom] = useState(0);
   const [activeList, setActiveList] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const [searchTerm, setSearchTerm] = useState('');
   const [showContentState, setShowContentState] = useState({});
 
