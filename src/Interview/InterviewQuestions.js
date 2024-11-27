@@ -69,6 +69,7 @@ const InterviewQuestions = () => {
             <InterviewQuestionsCard
               question={InterviewQuestionsCardsData[activeIndex].question}
               answer={InterviewQuestionsCardsData[activeIndex].answer}
+              showContent={showContentState[activeIndex]} 
               onToggleContent={handleToggleContent} 
             />
           </div>
