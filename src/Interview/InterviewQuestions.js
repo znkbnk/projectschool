@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './interviewQuestions.module.css';
 import InterviewQuestionsCard from './InterviewQuestionsCard';
 import { TiChevronLeftOutline, TiChevronRightOutline } from 'https://cdn.skypack.dev/react-icons@4.12.0/ti';
@@ -10,6 +10,10 @@ import InterviewQuestionsTitle from './InterviewQuestionsTitle';
 const InterviewQuestions = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showContentState, setShowContentState] = useState({});
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Function to get a random index
   const getRandomIndex = () => {
