@@ -6,9 +6,11 @@ import imageSmall from "../images/pslogosmall.webp";
 
 import { auth } from "./firebase";
 import { toast } from "react-toastify";
+import Coffee from "./BuyMeACofee";
 
 const Navbar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [userEmail, setUserEmail] = useState("");
   const [showLinks, setShowLinks] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -116,13 +118,14 @@ const Navbar = () => {
         <div className='right'>
           {isLoggedIn ? (
             <>
-              <span className='userEmail'>{userEmail}</span>
+        <Coffee />
               <button onClick={handleLogout} className='button-35'>
                 Sign Out
               </button>
             </>
           ) : (
             <>
+            <Coffee />
               <Link to='/login' className='button-35'>
                 Login
               </Link>

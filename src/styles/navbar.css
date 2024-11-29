@@ -265,9 +265,9 @@ nav img {
 
 .responsive-links a:hover {
   text-decoration: underline;
-  text-decoration-color: var(--accent); /* Optional: color for the underline */
-  text-decoration-thickness: 2px; /* Adjust thickness of underline */
-  text-underline-offset: 4px; /* Adjust gap between text and underline */
+  text-decoration-color: var(--accent); 
+  text-decoration-thickness: 2px; 
+  text-underline-offset: 4px; 
 }
 
 .responsive-nav-link {
@@ -283,10 +283,10 @@ nav img {
   content: '▾'; 
   font-size: 1rem;
   position: absolute;
-  right: -1.5rem; /* Position the icon to the right of the text */
+  right: -1.5rem; 
   top: 50%;
   transform: translateY(-50%);
-  transition: transform 0.3s ease; /* Smooth rotation transition */
+  transition: transform 0.3s ease; 
 }
 
 /* Rotate the icon on hover */
@@ -361,9 +361,13 @@ nav img {
     font-size: 1rem;
   }
 
+ 
   .middle {
-    gap: 1rem;
-    margin: 0 1rem;
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
   }
 
   .dropdown-menu {
@@ -376,7 +380,7 @@ nav img {
   }
 }
 
-@media only screen and (min-width: 461px) and (max-width: 768px) {
+@media only screen and (min-width: 461px) and (max-width: 767px) {
   nav img {
     width: 150px;
   }

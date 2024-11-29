@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "../styles/welcomeWord.css";
-import image1 from "../images/pslogo.webp";
+import image1 from "../images/pslogosmall.webp";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 
 const MobileMessage = () => {
