@@ -4,7 +4,7 @@ import ParticlesBackground from "./ParticlesBackground";
 import { StyledContainer, StyledForm, StyledInput, StyledButton } from "./AuthStyles";
 import { motion } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../components/firebase";
 import { toast } from "react-toastify";
@@ -13,6 +13,10 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const location = useLocation(); // to access the URL query params
+
+  // Extract redirect query parameter
+  const redirectTo = new URLSearchParams(location.search).get("redirect") || "/"; // Default to "/" if no redirect
 
   useEffect(() => {
     // Disable scrolling when the login page is active
@@ -34,7 +38,8 @@ const Login = () => {
           toast.error("Please verify your email before logging in.");
           return;
         }
-        navigate("/");
+        // Redirect to the originally requested page or default to home
+        navigate(redirectTo);
         toast.success("Logged in successfully");
       })
       .catch((error) => {
@@ -54,7 +59,8 @@ const Login = () => {
   const onGoogleLogin = () => {
     signInWithPopup(auth, googleProvider)
       .then(() => {
-        navigate("/");
+        // Redirect to the originally requested page or default to home
+        navigate(redirectTo);
         toast.success("Logged in successfully");
       })
       .catch((error) => {

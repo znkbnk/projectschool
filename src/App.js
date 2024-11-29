@@ -33,6 +33,7 @@ import Interview from "./Interview/Interview";
 import InterviewQuestions from "./Interview/InterviewQuestions";
 import InterviewQuestionQuiz from "./Interview/InterviewQuestionQuiz";
 import InterviewTasks from "./Interview/InterviewTasks";
+import ProtectedRoute from "./ProtectedRoute";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -60,23 +61,35 @@ const App = () => {
         <Route path='/faq' element={<Faq />} />
         <Route
           path='/interview'
-          element={isLoggedIn ? <Interview /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <Interview />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/interviewQuestions'
           element={
-            isLoggedIn ? <InterviewQuestions /> : <Navigate to='/login' />
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <InterviewQuestions />
+            </ProtectedRoute>
           }
         />
         <Route
           path='/interviewQuiz'
           element={
-            isLoggedIn ? <InterviewQuestionQuiz /> : <Navigate to='/login' />
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <InterviewQuestionQuiz />
+            </ProtectedRoute>
           }
         />
         <Route
           path='/interviewTasks'
-          element={isLoggedIn ? <InterviewTasks /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <InterviewTasks />
+            </ProtectedRoute>
+          }
         />
         <Route path='/blog' element={<Blog />} />
         <Route path='/notavailable' element={<NotFound />} />
@@ -87,61 +100,103 @@ const App = () => {
         <Route path='/terms' element={<Terms />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/resetPassword' element={<ResetPassword />} />
+        
+        {/* Protecting the routes for authenticated users */}
         <Route
           path='/exercises'
-          element={isLoggedIn ? <Exercises /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <Exercises />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/jslessons'
-          element={isLoggedIn ? <JsLessons /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <JsLessons />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/csslessons'
-          element={isLoggedIn ? <CssLessons /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <CssLessons />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/reactlessons'
-          element={isLoggedIn ? <ReactLessons /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <ReactLessons />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/livelessons'
-          element={isLoggedIn ? <LiveLessons /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <LiveLessons />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/laravellessons'
-          element={isLoggedIn ? <LaravelLessons /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <LaravelLessons />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/livechat'
-          element={isLoggedIn ? <LiveChat /> : <Navigate to='/login' />}
-        />
-        <Route
-          path='/resetPassword'
-          element={isLoggedIn ? <ResetPassword /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <LiveChat />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/editor/:lessonType/:taskId'
           element={
-            isLoggedIn || isAdmin ? <LiveEditor /> : <Navigate to='/login' />
+            <ProtectedRoute isLoggedIn={isLoggedIn || isAdmin}>
+              <LiveEditor />
+            </ProtectedRoute>
           }
         />
         <Route
           path='/authors'
           element={
-            isLoggedIn || isAdmin ? <AuthorList /> : <Navigate to='/login' />
+            <ProtectedRoute isLoggedIn={isLoggedIn || isAdmin}>
+              <AuthorList />
+            </ProtectedRoute>
           }
         />
         <Route
           path='/success'
-          element={isLoggedIn ? <Success /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <Success />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/cancel'
-          element={isLoggedIn ? <Cancel /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <Cancel />
+            </ProtectedRoute>
+          }
         />
         <Route
           path='/mobile-message'
-          element={isLoggedIn ? <MobileMessage /> : <Navigate to='/login' />}
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <MobileMessage />
+            </ProtectedRoute>
+          }
         />
       </Routes>
     </div>
