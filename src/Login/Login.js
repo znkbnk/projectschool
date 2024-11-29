@@ -9,7 +9,7 @@ import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleProvider } from "../components/firebase";
 import { toast } from "react-toastify";
 
-const Login = () => {
+const Login = ({ redirectTo }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -34,8 +34,9 @@ const Login = () => {
           toast.error("Please verify your email before logging in.");
           return;
         }
-        navigate("/");
         toast.success("Logged in successfully");
+        // Redirect to the page user originally wanted to visit
+        navigate(redirectTo || "/");
       })
       .catch((error) => {
         const errorCode = error.code;

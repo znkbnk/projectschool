@@ -49,9 +49,11 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Welcome />} />
         <Route
-          path='/login'
-          element={isLoggedIn ? <Navigate to='/' /> : <Login />}
-        />
+  path="/login"
+  element={
+    isLoggedIn ? <Navigate to="/" /> : <Login redirectTo={window.location.pathname} />
+  }
+/>
         <Route
           path='/signup'
           element={isLoggedIn ? <Navigate to='/' /> : <Signup />}
