@@ -43,3 +43,11 @@ serv.js
 src/components/cherviak.js
 src/components/cherviak.js
 src/components/cherviak.js
+src/components/cherviak.js
+.gitignore
+package.json
+src/components/test.js
+package.json
+package.json
+babel.config.json
+babel.config.js

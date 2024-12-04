@@ -5,12 +5,12 @@ const interviewData = [
     desc: "Prepare for your next React interview with curated questions covering essential concepts, best practices, and advanced topics. Gain the confidence to ace your interview!",
     to: "/interviewQuestions",
   },
-  // {
-  //   img: "./images/interviewTasks.webp",
-  //   title: "React Interview Tasks",
-  //   desc: "Test your React skills with hands-on tasks designed to simulate real-world challenges. Perfect for honing your practical knowledge and problem-solving abilities.",
-  //   to: "/InterviewTasks",
-  // },
+  {
+    img: "./images/interviewTasks.webp",
+    title: "JavaScript/React Interview Tasks",
+    desc: "Test your JavaScript/React skills with hands-on tasks designed to simulate real-world challenges. Perfect for honing your practical knowledge and problem-solving abilities.",
+    to: "/InterviewTasks",
+  },
   {
     img: "./images/interviewQuiz.webp",
     title: "React Interview Quiz",
