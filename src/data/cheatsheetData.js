@@ -3233,6 +3233,65 @@ const cheatsheetData = [
         
     ],
   },
+  {
+    taskId: "Quiz-Master",
+    content: [
+      {
+        title: "",
+        subtitle: " State Management with useState",
+        details: [
+          "State in React is used to store data that will change over time. In this quiz app, the state is used to manage the current question, score, selected option, and timing.",
+          "currentQuestion: Tracks which question the user is on (starts at 0).",
+          "score: Tracks the user's score (number of correct answers).",
+          "selectedOption: Stores the index of the option the user selects",
+          "startTime: Marks the time when a question starts",
+          "questionTimes: Stores the time taken for each question and whether it was answered correctly",
+          "quizFinished: Tracks whether the quiz is finished.",
+        ],
+        image: "./cheatsheetImages/task53/1.webp"
+      },
+         {
+        title: "",
+        subtitle: " Effect Hook for Timing",
+        details: [
+          "'useEffect' is used to update the sta'rtTime whenever the question changes and to prevent re-setting it once the quiz is finished.",
+          "This 'useEffect' runs every time 'currentQuestion' changes (i.e., when a user answers a question).",
+          "If the quiz is finished ('quizFinished' is 'true'), it stops updating the start time.",
+        ],
+        image: "./cheatsheetImages/task53/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Prevent Multiple Selections & Track Time",
+        details: [
+          "The check prevents the user from selecting more than one option or interacting with the quiz once it is finished.",
+          "'timeTaken' measures how long the user took to answer the current question by calculating the difference between 'endTime' and 'startTime'.",
+          "The answer is marked as correct if the selected option's index matches the correct answer.",
+          "'setQuestionTimes': This stores information about the current question, how long it took to answer, and whether the answer was correct, allowing later analysis of the quiz results.",
+        ],
+        image: "./cheatsheetImages/task53/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Handle Option Selection & Transition",
+        details: [
+          "'setSelectedOption(index)' highlights the selected option, which helps with UI styling and feedback.",
+          "After a brief delay (500ms), the quiz either moves to the next question or ends. If there are more questions, the currentQuestion state is incremented. If all questions have been answered, 'setQuizFinished(true)' ends the quiz and shows the results.",
+        ],
+        image: "./cheatsheetImages/task54/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Restarting the Quiz",
+        details: [
+          "The 'restartQuiz' function resets the state to allow the user to play the quiz again.",
+          "All relevant states (currentQuestion, score, selectedOption, questionTimes, quizFinished) are reset to their initial values.",
+        ],
+        image: "./cheatsheetImages/task54/5.webp"
+      },
+       
+    ],
+  },
 
 
 ];
