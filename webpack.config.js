@@ -19,6 +19,10 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.js', '.jsx'],
   },
+  externals: {
+    '@babel/standalone': 'Babel', // This will prevent Babel from being bundled
+  },
+  devtool: 'source-map',  // For debugging
 };
