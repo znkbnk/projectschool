@@ -1,6 +1,7 @@
 const questions = [
   {
     id: 1,
+    type: "React",
     text: "Write a React component that takes a list of items as a prop and displays them as a styled list. Each item should have a unique key.",
     solution: `
       const List = ({ items }) => (
@@ -20,6 +21,7 @@ const questions = [
   },
   {
     id: 2,
+    type: "Functions",
     text: "Create a JavaScript function that removes duplicates from an array.",
     solution: `
       const removeDuplicates = (arr) => [...new Set(arr)];
@@ -31,6 +33,7 @@ const questions = [
   },
   {
     id: 3,
+    type: "React",
     text: "Write a React component that displays a greeting message. Pass the message as a prop.",
     solution: `
       const Greeting = (props) => <h1>{props.message}</h1>;
@@ -42,6 +45,7 @@ const questions = [
   },
   {
     id: 4,
+    type: "Functions",
     text: "Create a JavaScript function that takes an array of numbers and returns the sum of all elements.",
     solution: `
       const sumArray = (arr) => arr.reduce((sum, num) => sum + num, 0);
@@ -53,6 +57,7 @@ const questions = [
   },
   {
     id: 5,
+    type: "React",
     text: "Create a React component that takes a number as a prop and displays it as a counter.",
     solution: `
       const Counter = (props) => <p>Counter: {props.count}</p>;
@@ -64,6 +69,7 @@ const questions = [
   },
   {
     id: 6,
+    type: "Functions",
     text: "Write a JavaScript function that takes a string and returns it reversed.",
     solution: `
       const reverseString = (str) => str.split('').reverse().join('');
@@ -75,6 +81,7 @@ const questions = [
   },
   {
     id: 7,
+    type: "React",
     text: "Write a React component that takes an array of strings as a prop and renders them as a list.",
     solution: `
       const StringList = (props) => (
@@ -91,6 +98,7 @@ const questions = [
   },
   {
     id: 8,
+    type: "Functions",
     text: "Create a function that checks if a given string is a palindrome.",
     solution: `
       const isPalindrome = (str) => str === str.split('').reverse().join('');
@@ -100,9 +108,9 @@ const questions = [
       { inputs: ["hello"], expectedOutput: false },
     ],
   },
-    
   {
     id: 9,
+    type: "Functions",
     text: "Write a function that returns the largest number in an array.",
     solution: `
       const findLargest = (arr) => Math.max(...arr);
@@ -114,6 +122,7 @@ const questions = [
   },
   {
     id: 10,
+    type: "Functions",
     text: "Write a JavaScript function that returns a string with the numbers from 1 to 100, but for multiples of three return 'Fizz' instead of the number and for multiples of five return 'Buzz'. For numbers which are multiples of both three and five, return 'FizzBuzz'. The numbers or words should be separated by commas.",
     solution: `
     const fizzBuzz = () => {
@@ -147,9 +156,124 @@ const questions = [
       },
     ],
   },
+  {
+    id: 11,
+    type: "Functions",
+    text: "Write a recursive function that determines if a number is even.",
+    solution: `
+      const isEven = (n) => {
+        if (n === 0) return true;
+        else if (n === 1) return false;
+        else if (n < 0) return isEven(-n);
+        else return isEven(n - 2);
+      };
+    `,
+    testCases: [
+      { inputs: [4], expectedOutput: true },
+      { inputs: [7], expectedOutput: false },
+      { inputs: [-2], expectedOutput: true },
+      { inputs: [-5], expectedOutput: false },
+      { inputs: [0], expectedOutput: true },
+    ],
+  },
+  {
+    id: 12,
+    type: "Functions",
+    text: "Write two functions: one that creates an array of numbers within a range (supporting both increasing and decreasing ranges), and another that calculates the sum of an array of numbers.",
+    solution: `
+    const range = (start, end, step = start < end ? 1 : -1) => {
+      const array = [];
+      if (step > 0) {
+        for (let i = start; i <= end; i += step) array.push(i);
+      } else {
+        for (let i = start; i >= end; i += step) array.push(i);
+      }
+      return array;
+    };
+    
+    const sum = array => array.reduce((total, value) => total + value, 0);
+    `,
+    testCases: [
+      { inputs: [1, 10], expectedOutput: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+      { inputs: [10, 1, -1], expectedOutput: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1] },
+      { inputs: [1, 5], expectedOutput: [1, 2, 3, 4, 5] },
+      { inputs: [5, 1, -1], expectedOutput: [5, 4, 3, 2, 1] },
+    ],
+  },
+{
+  "id": 13,
+  text: "Write a function that compares two objects deeply to check if they are equal. The function should return `true` if the objects are deeply equal, and `false` otherwise. Deep equality means that objects must have the same keys with the same values, including nested objects and arrays.",
+  type: "JavaScript", 
+  solution: `
+  const deepEqual = (a, b) => {
+    if (a === b) return true;
   
+    if (a == null || typeof a !== 'object' ||
+        b == null || typeof b !== 'object') return false;
+  
+    const keysA = Object.keys(a), keysB = Object.keys(b);
+  
+    if (keysA.length !== keysB.length) return false;
+  
+    for (const key of keysA) {
+      if (!keysB.includes(key) || !deepEqual(a[key], b[key])) return false;
+    }
+  
+    return true;
+  };
+  `,
+  testCases: [
+    {
+      inputs: [{ a: 1, b: { c: 2 } }, { a: 1, b: { c: 2 } }],
+      expectedOutput: true,
+      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+    },
+    {
+      inputs: [{ a: 1, b: { c: 2 } }, { a: 1, b: { c: 3 } }],
+      expectedOutput: false,
+      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+    },
+    {
+      inputs: [{ a: 1, b: [1, 2] }, { a: 1, b: [1, 2] }],
+      expectedOutput: true,
+      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+    },
+    {
+      inputs: [{ a: 1, b: [1, 2] }, { a: 1, b: [1, 3] }],
+     expectedOutput: false,
+      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+    },
+    {
+      inputs: [{ a: 1, b: null }, { a: 1, b: null }],
+      expectedOutput: true,
+      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+    },
+    {
+      inputs: [{ a: 1, b: null }, { a: 1, b: undefined }],
+      expectedOutput: false,
+      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+    }
+  ]
+},
 
   
 ];
 
 export default questions;
+
+
+
+/* 
+
+  {
+    id: ,
+    text: "",
+    solution: `
+     
+    `,
+    testCases: [
+    
+    ],
+  },
+
+*/
