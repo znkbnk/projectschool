@@ -50,8 +50,14 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Welcome />} />
         <Route
-          path='/login'
-          element={isLoggedIn ? <Navigate to='/' /> : <Login />}
+          path="/login"
+          element={
+            isLoggedIn ? (
+              <Navigate to={new URLSearchParams(window.location.search).get("redirect") || "/"} />
+            ) : (
+              <Login />
+            )
+          }
         />
         <Route
           path='/signup'
@@ -161,7 +167,7 @@ const App = () => {
         <Route
           path='/editor/:lessonType/:taskId'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRoute isLoggedIn={isLoggedIn || isAdmin}>
               <LiveEditor />
             </ProtectedRoute>
           }
@@ -169,7 +175,7 @@ const App = () => {
         <Route
           path='/authors'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRoute isLoggedIn={isLoggedIn || isAdmin}>
               <AuthorList />
             </ProtectedRoute>
           }
