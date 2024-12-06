@@ -5,7 +5,6 @@ import InterviewTaskTitle from "./InterviewTaskTitle";
 import questions from "../data/InterviewTasksData";
 import styles from "./InterviewTasks.module.css";
 import ReactDOMServer from "react-dom/server";
-import ReactDOM from "react-dom";
 
 const InterviewTasks = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -40,8 +39,10 @@ const InterviewTasks = () => {
   
     // Inject React and ReactDOM scripts into the iframe
     const reactScript = iframeDocument.createElement("script");
-    reactScript.src = "https://unpkg.com/react@18/umd/react.development.js"; // React
-    iframeDocument.body.appendChild(reactScript);
+reactScript.src = "https://unpkg.com/react@18/umd/react.development.js";
+reactScript.integrity = "sha384-HASHVALUE"; // Add Subresource Integrity
+reactScript.crossOrigin = "anonymous";
+iframeDocument.body.appendChild(reactScript);
   
     const reactDOMScript = iframeDocument.createElement("script");
     reactDOMScript.src = "https://unpkg.com/react-dom@18/umd/react-dom.development.js"; // ReactDOM

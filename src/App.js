@@ -161,7 +161,7 @@ const App = () => {
         <Route
           path='/editor/:lessonType/:taskId'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn || isAdmin}>
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
               <LiveEditor />
             </ProtectedRoute>
           }
@@ -169,7 +169,7 @@ const App = () => {
         <Route
           path='/authors'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn || isAdmin}>
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
               <AuthorList />
             </ProtectedRoute>
           }
