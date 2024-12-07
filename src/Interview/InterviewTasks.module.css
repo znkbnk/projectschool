@@ -115,5 +115,74 @@
 }
 
 
-/* Syntax */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
 
+.questionCard {
+font-size: 1.5rem;
+}
+
+  .questionCard, .codeEditor {
+    width: 80%; /* Make the cards take more width on small screens */
+    margin-bottom: 20px; /* Add some spacing between cards */
+  }
+
+  .navigationButtons {
+    justify-content: center; /* Center navigation buttons */
+  }
+
+  .button {
+    width: 100%; /* Make buttons full width */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .runButton {
+    width: 100%; /* Make the run button full width */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .questionCard, .codeEditor {
+    width: 90%; 
+    font-size: 1rem;/* Further reduce the card width on very small screens */
+  }
+
+  .textArea {
+    min-height: 300px; /* Reduce textarea height on small screens */
+  }
+
+  .button {
+    padding: 8px 16px; /* Adjust button padding for smaller screens */
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    flex-direction: column; /* Ensure items stack vertically */
+    align-items: center; /* Center items */
+    padding: 10px; /* Adjust padding for very small screens */
+  }
+
+  .questionCard, .codeEditor {
+    width: 80%; /* Make the cards take more width on extra small screens */
+    margin-bottom: 15px; /* Adjust spacing between cards */
+  }
+
+  .textArea {
+    min-height: 250px; /* Reduce the height of the textarea */
+    font-size: 14px; /* Make font size smaller for better fit */
+  }
+
+  .runButton, .button {
+    width: 100%; /* Make buttons full width */
+    font-size: 13px; /* Adjust font size for very small screens */
+  }
+
+  .navigationButtons {
+    flex-direction: column; /* Stack navigation buttons vertically */
+    gap: 5px; /* Add a smaller gap between the buttons */
+  }
+}
