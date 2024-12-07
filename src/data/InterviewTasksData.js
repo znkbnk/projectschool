@@ -39,8 +39,14 @@ const questions = [
       const Greeting = (props) => <h1>{props.message}</h1>;
     `,
     testCases: [
-      { inputs: [{ message: "Hello, World!" }], expectedOutput: "<h1>Hello, World!</h1>" },
-      { inputs: [{ message: "Welcome!" }], expectedOutput: "<h1>Welcome!</h1>" },
+      {
+        inputs: [{ message: "Hello, World!" }],
+        expectedOutput: "<h1>Hello, World!</h1>",
+      },
+      {
+        inputs: [{ message: "Welcome!" }],
+        expectedOutput: "<h1>Welcome!</h1>",
+      },
     ],
   },
   {
@@ -93,7 +99,10 @@ const questions = [
       );
     `,
     testCases: [
-      { inputs: [{ items: ["Apple", "Banana"] }], expectedOutput: "<ul><li>Apple</li><li>Banana</li></ul>" },
+      {
+        inputs: [{ items: ["Apple", "Banana"] }],
+        expectedOutput: "<ul><li>Apple</li><li>Banana</li></ul>",
+      },
     ],
   },
   {
@@ -145,13 +154,106 @@ const questions = [
       {
         inputs: [],
         expectedOutput: [
-          "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", 
-          "16", "17", "Fizz", "19", "Buzz", "Fizz", "22", "23", "Fizz", "Buzz", "26", "Fizz", "28", "29", "FizzBuzz", 
-          "31", "32", "Fizz", "34", "Buzz", "Fizz", "37", "38", "Fizz", "Buzz", "41", "Fizz", "43", "44", "FizzBuzz", 
-          "46", "47", "Fizz", "49", "Buzz", "Fizz", "52", "53", "Fizz", "Buzz", "56", "Fizz", "58", "59", "FizzBuzz", 
-          "61", "62", "Fizz", "64", "Buzz", "Fizz", "67", "68", "Fizz", "Buzz", "71", "Fizz", "73", "74", "FizzBuzz", 
-          "76", "77", "Fizz", "79", "Buzz", "Fizz", "82", "83", "Fizz", "Buzz", "86", "Fizz", "88", "89", "FizzBuzz", 
-          "91", "92", "Fizz", "94", "Buzz", "Fizz", "97", "98", "Fizz", "Buzz"
+          "1",
+          "2",
+          "Fizz",
+          "4",
+          "Buzz",
+          "Fizz",
+          "7",
+          "8",
+          "Fizz",
+          "Buzz",
+          "11",
+          "Fizz",
+          "13",
+          "14",
+          "FizzBuzz",
+          "16",
+          "17",
+          "Fizz",
+          "19",
+          "Buzz",
+          "Fizz",
+          "22",
+          "23",
+          "Fizz",
+          "Buzz",
+          "26",
+          "Fizz",
+          "28",
+          "29",
+          "FizzBuzz",
+          "31",
+          "32",
+          "Fizz",
+          "34",
+          "Buzz",
+          "Fizz",
+          "37",
+          "38",
+          "Fizz",
+          "Buzz",
+          "41",
+          "Fizz",
+          "43",
+          "44",
+          "FizzBuzz",
+          "46",
+          "47",
+          "Fizz",
+          "49",
+          "Buzz",
+          "Fizz",
+          "52",
+          "53",
+          "Fizz",
+          "Buzz",
+          "56",
+          "Fizz",
+          "58",
+          "59",
+          "FizzBuzz",
+          "61",
+          "62",
+          "Fizz",
+          "64",
+          "Buzz",
+          "Fizz",
+          "67",
+          "68",
+          "Fizz",
+          "Buzz",
+          "71",
+          "Fizz",
+          "73",
+          "74",
+          "FizzBuzz",
+          "76",
+          "77",
+          "Fizz",
+          "79",
+          "Buzz",
+          "Fizz",
+          "82",
+          "83",
+          "Fizz",
+          "Buzz",
+          "86",
+          "Fizz",
+          "88",
+          "89",
+          "FizzBuzz",
+          "91",
+          "92",
+          "Fizz",
+          "94",
+          "Buzz",
+          "Fizz",
+          "97",
+          "98",
+          "Fizz",
+          "Buzz",
         ],
       },
     ],
@@ -200,11 +302,11 @@ const questions = [
       { inputs: [5, 1, -1], expectedOutput: [5, 4, 3, 2, 1] },
     ],
   },
-{
-  "id": 13,
-  text: "Write a function that compares two objects deeply to check if they are equal. The function should return `true` if the objects are deeply equal, and `false` otherwise. Deep equality means that objects must have the same keys with the same values, including nested objects and arrays.",
-  type: "JavaScript", 
-  solution: `
+  {
+    id: 13,
+    text: "Write a function that compares two objects deeply to check if they are equal. The function should return `true` if the objects are deeply equal, and `false` otherwise. Deep equality means that objects must have the same keys with the same values, including nested objects and arrays.",
+    type: "JavaScript",
+    solution: `
   const deepEqual = (a, b) => {
     if (a === b) return true;
   
@@ -222,46 +324,177 @@ const questions = [
     return true;
   };
   `,
-  testCases: [
-    {
-      inputs: [{ a: 1, b: { c: 2 } }, { a: 1, b: { c: 2 } }],
-      expectedOutput: true,
-      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
-    },
-    {
-      inputs: [{ a: 1, b: { c: 2 } }, { a: 1, b: { c: 3 } }],
-      expectedOutput: false,
-      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
-    },
-    {
-      inputs: [{ a: 1, b: [1, 2] }, { a: 1, b: [1, 2] }],
-      expectedOutput: true,
-      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
-    },
-    {
-      inputs: [{ a: 1, b: [1, 2] }, { a: 1, b: [1, 3] }],
-     expectedOutput: false,
-      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
-    },
-    {
-      inputs: [{ a: 1, b: null }, { a: 1, b: null }],
-      expectedOutput: true,
-      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
-    },
-    {
-      inputs: [{ a: 1, b: null }, { a: 1, b: undefined }],
-      expectedOutput: false,
-      run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
-    }
-  ]
-},
+    testCases: [
+      {
+        inputs: [
+          { a: 1, b: { c: 2 } },
+          { a: 1, b: { c: 2 } },
+        ],
+        expectedOutput: true,
+        run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+      },
+      {
+        inputs: [
+          { a: 1, b: { c: 2 } },
+          { a: 1, b: { c: 3 } },
+        ],
+        expectedOutput: false,
+        run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+      },
+      {
+        inputs: [
+          { a: 1, b: [1, 2] },
+          { a: 1, b: [1, 2] },
+        ],
+        expectedOutput: true,
+        run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+      },
+      {
+        inputs: [
+          { a: 1, b: [1, 2] },
+          { a: 1, b: [1, 3] },
+        ],
+        expectedOutput: false,
+        run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+      },
+      {
+        inputs: [
+          { a: 1, b: null },
+          { a: 1, b: null },
+        ],
+        expectedOutput: true,
+        run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+      },
+      {
+        inputs: [
+          { a: 1, b: null },
+          { a: 1, b: undefined },
+        ],
+        expectedOutput: false,
+        run: (deepEqual, _, __, ___, inputs) => deepEqual(...inputs),
+      },
+    ],
+  },
+  {
+    id: 14,
+    type: "Algorithms",
+    text: "Create a JavaScript function that counts all palindromic substrings in a given string.",
+    solution: `
+    const countPalindromicSubstrings = (s) => {
+      let count = 0;
+      const isPalindrome = (str, start, end) => {
+        while (start >= 0 && end < str.length && str[start] === str[end]) {
+          count++;
+          start--;
+          end++;
+        }
+      };
+      for (let i = 0; i < s.length; i++) {
+        isPalindrome(s, i, i);
+        isPalindrome(s, i, i + 1);
+      }
+      return count;
+    };
+  `,
+    testCases: [
+      { inputs: ["abba"], expectedOutput: 6 }, // Palindromes: 'a', 'b', 'b', 'a', 'bb', 'abba'
+      { inputs: ["racecar"], expectedOutput: 10 }, // Palindromes: 'r', 'a', 'c', 'e', 'c', 'a', 'r', 'cec', 'aceca', 'racecar'
+      { inputs: ["abc"], expectedOutput: 3 }, // Palindromes: 'a', 'b', 'c'
+    ],
+  },
+  {
+    id: 15,
+    type: "Algorithms",
+    text: "Create a JavaScript function that finds all unique pairs in an array that sum up to a given target.",
+    solution: `
+    function findPairSums(arr, target) {
+      const seen = new Set();
+      const pairs = new Set();
 
+      for (let num of arr) {
+        const complement = target - num;
+        if (seen.has(complement)) {
+          const pair = [Math.min(num, complement), Math.max(num, complement)].toString();
+          pairs.add(pair);
+        }
+        seen.add(num);
+      }
+
+      return Array.from(pairs).map(pair => pair.split(',').map(Number));
+    }
+  `,
+    testCases: [
+      {
+        inputs: [[1, 2, 3, 4, 3], 6],
+        expectedOutput: [
+          [2, 4],
+          [3, 3],
+        ],
+      },
+      {
+        inputs: [[0, -1, -2, 2, 1], 0],
+        expectedOutput: [
+          [-2, 2],
+          [-1, 1],
+        ],
+      },
+      { inputs: [[1, 1, 1, 1], 2], expectedOutput: [[1, 1]] },
+    ],
+  },
+  {
+    id: 16,
+    type: "Algorithms",
+    text: "Create a JavaScript function that rotates a square matrix 90 degrees clockwise.",
+    solution: `
+      function rotateMatrix(matrix) {
+        const n = matrix.length;
+  
+        for (let layer = 0; layer < Math.floor(n / 2); layer++) {
+          const start = layer;
+          const end = n - layer - 1;
+  
+          for (let i = start; i < end; i++) {
+            const offset = i - start;
+  
+            // Save top
+            const top = matrix[start][i];
+  
+            // Move left to top
+            matrix[start][i] = matrix[end - offset][start];
+  
+            // Move bottom to left
+            matrix[end - offset][start] = matrix[end][end - offset];
+  
+            // Move right to bottom
+            matrix[end][end - offset] = matrix[i][end];
+  
+            // Move top to right
+            matrix[i][end] = top;
+          }
+        }
+  
+        return matrix;
+      }
+    `,
+    testCases: [
+      { 
+        inputs: [[[1, 2, 3], [4, 5, 6], [7, 8, 9]]], 
+        expectedOutput: [[7, 4, 1], [8, 5, 2], [9, 6, 3]] 
+      },
+      { 
+        inputs: [[[1, 2], [3, 4]]], 
+        expectedOutput: [[3, 1], [4, 2]] 
+      },
+      { 
+        inputs: [[[1]]], 
+        expectedOutput: [[1]] 
+      },
+    ],
+  }
   
 ];
 
 export default questions;
-
-
 
 /* 
 

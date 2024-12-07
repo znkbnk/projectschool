@@ -29,67 +29,62 @@ const InterviewTasks = () => {
 
   const handleRunCode = () => {
     const { testCases } = question;
-  
-    // Define forbidden code detection regex
+
     const forbiddenCodeRegex = new RegExp(
       [
-      /eval/,
-      /setTimeout/,
-      /setInterval/,
-      /window\./,
-      /document\./,  // This covers various DOM manipulations
-      /localStorage/,
-      /sessionStorage/,
-      /navigator\./,
-      /screen\./,
-      /geolocation\./,
-      /console\./,
-      /parent\./,
-      /self\./,
-      /location\./,
-      /document\.body/,
-      /document\.write/,  // Common method for writing directly to the document
-      /Object\./,
-      /Function\./,
-      /constructor/,
-      /XMLHttpRequest/,
-      /fetch/,
-      /dangerouslySetInnerHTML/,
-      /document\.createElement/,
-      /document\.getElementById/,
-      /document\.querySelector/,
-      /document\.createTextNode/,
-      /document\.appendChild/,
-      /alert/,
+        /eval/,
+        /setTimeout/,
+        /setInterval/,
+        /window\./,
+        /document\./,
+        /localStorage/,
+        /sessionStorage/,
+        /navigator\./,
+        /screen\./,
+        /geolocation\./,
+        /console\./,
+        /parent\./,
+        /self\./,
+        /location\./,
+        /document\.body/,
+        /document\.write/,
+        // /Object\./,
+        /Function\./,
+        /constructor/,
+        /XMLHttpRequest/,
+        /fetch/,
+        /dangerouslySetInnerHTML/,
+        /document\.createElement/,
+        /document\.getElementById/,
+        /document\.querySelector/,
+        /document\.createTextNode/,
+        /document\.appendChild/,
+        /alert/,
       ]
         .map((regex) => regex.source)
         .join("|")
     );
-  
-    // Check if the user code matches any forbidden code
+
     if (forbiddenCodeRegex.test(userCode)) {
       setFeedback("❌ Forbidden code detected.");
       return;
     }
-  
-    // Create the iframe with sandboxing
+
     const iframe = document.createElement("iframe");
     iframe.style.display = "none";
-    iframe.sandbox = "allow-scripts allow-same-origin"; // Enable both scripts and same-origin access
+    iframe.sandbox = "allow-scripts allow-same-origin";
     document.body.appendChild(iframe);
-  
+
     const iframeDocument =
       iframe.contentDocument || iframe.contentWindow.document;
-  
-    // Inject React script into the iframe
+
     const reactScript = iframeDocument.createElement("script");
     reactScript.src = "https://unpkg.com/react@18/umd/react.development.js";
     reactScript.integrity =
-      "sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L"; // Add Subresource Integrity
+      "sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L";
     reactScript.crossOrigin = "anonymous";
     iframeDocument.body.appendChild(reactScript);
-  
-    // After React is loaded, inject ReactDOM script
+
     reactScript.onload = () => {
       const reactDOMScript = iframeDocument.createElement("script");
       reactDOMScript.src =
@@ -98,20 +93,17 @@ const InterviewTasks = () => {
         "sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm";
       reactDOMScript.crossOrigin = "anonymous";
       iframeDocument.body.appendChild(reactDOMScript);
-  
-      // Wait for ReactDOM to load
+
       reactDOMScript.onload = () => {
         try {
           const iframeWindow = iframe.contentWindow;
-  
-          // Wait for React and ReactDOM to be fully loaded
+
           if (!iframeWindow.React || !iframeWindow.ReactDOM) {
             throw new Error(
               "❌ Error: React or ReactDOM are not loaded correctly."
             );
           }
-  
-          // Babel transformation to allow JSX in the user's code
+
           const babelScript = iframeDocument.createElement("script");
           babelScript.src =
             "https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.1/babel.min.js";
@@ -119,53 +111,45 @@ const InterviewTasks = () => {
             "sha384-olG3IEhy5pD0eAXSS/PbUdcna473AAbflsc3YXem22afyFBR9nwIzHX05ZxmhzyQ";
           babelScript.crossOrigin = "anonymous";
           iframeDocument.body.appendChild(babelScript);
-  
+
           babelScript.onload = () => {
             try {
-              // Transpile the user code with Babel
               const transpiledCode = iframeWindow.Babel.transform(userCode, {
                 presets: ["react", "env"],
               }).code;
-  
-              // Match the function or component name in the user code
+
               const functionRegex =
                 /(?:const|function|class)\s+([a-zA-Z$_][a-zA-Z0-9$_]*)/;
               const match = userCode.match(functionRegex);
-  
+
               if (!match) {
                 throw new Error(
                   "❌ Error: Could not detect a valid function or component in your code."
                 );
               }
-  
+
               const detectedFunctionName = match[1];
-  
-              // Create the function using the Function constructor
+
               const wrappedCode = `
                 (function() {
                   ${transpiledCode}
                   window.${detectedFunctionName} = ${detectedFunctionName};
                 })();
               `;
-  
-              // Create the function within the iframe context
+
               const func = new iframeWindow.Function(wrappedCode);
-  
-              // Set timeout to prevent infinite loops or resource hogging
-              const timeoutPromise = new Promise(
-                (_, reject) =>
-                  setTimeout(
-                    () => reject(new Error("❌ Code execution timed out.")),
-                    5000
-                  ) // 5 seconds timeout
+
+              const timeoutPromise = new Promise((_, reject) =>
+                setTimeout(
+                  () => reject(new Error("❌ Code execution timed out.")),
+                  5000
+                )
               );
-  
-              // Execute user code with a timeout
+
               Promise.race([func(), timeoutPromise])
                 .then(() => {
-                  // Retrieve the function from the iframe
                   const userFunction = iframeWindow[detectedFunctionName];
-  
+
                   if (
                     typeof userFunction !== "function" &&
                     !React.isValidElement(userFunction)
@@ -174,14 +158,13 @@ const InterviewTasks = () => {
                       `❌ Error: '${detectedFunctionName}' is not a valid function or React component.`
                     );
                   }
-  
-                  // Run the test cases on the user's function
+
                   let allTestsPassed = true;
                   let failedTestDetails = [];
-  
+
                   testCases.forEach(({ inputs, expectedOutput }, index) => {
                     const result = userFunction(...inputs);
-  
+
                     let resultString;
                     if (React.isValidElement(result)) {
                       resultString =
@@ -191,11 +174,11 @@ const InterviewTasks = () => {
                         ? result.join(",")
                         : result;
                     }
-  
+
                     const expectedString = Array.isArray(expectedOutput)
                       ? expectedOutput.join(",")
                       : expectedOutput;
-  
+
                     if (resultString !== expectedString) {
                       allTestsPassed = false;
                       failedTestDetails.push({
@@ -206,7 +189,7 @@ const InterviewTasks = () => {
                       });
                     }
                   });
-  
+
                   if (allTestsPassed) {
                     setFeedback("✅ Correct! All test cases passed.");
                   } else {
@@ -239,7 +222,6 @@ const InterviewTasks = () => {
       };
     };
   };
-  
 
   const handleNextQuestion = () => {
     setCurrentQuestion((prev) => (prev + 1) % questions.length);
@@ -267,7 +249,6 @@ const InterviewTasks = () => {
     <div>
       <Navbar />
       <InterviewTaskTitle />
-
       <div className={styles.container}>
         <div className={styles.questionCard}>
           <h3>React/JavaScript Question: {question.id}</h3>
@@ -309,7 +290,6 @@ const InterviewTasks = () => {
           )}
         </div>
       </div>
-
       <Footer />
     </div>
   );
