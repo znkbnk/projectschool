@@ -3184,8 +3184,8 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "/notavailable",
-      img: require("../images/livelessons10.webp"),
+      codesandboxUrl: "https://codesandbox.io/embed/q4fzz3?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/livelessons11.webp"),
     },
 
     
