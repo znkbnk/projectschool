@@ -13,6 +13,7 @@ function ReactLessons() {
   const [showHard, setShowHard] = useState(false);
   const [showCompleted, setShowCompleted] = useState(false);
   const [showNotCompleted, setShowNotCompleted] = useState(false);
+  // eslint-disable-next-line
   const [filters, setFilters] = useState([
     "All",
     "Easy",
