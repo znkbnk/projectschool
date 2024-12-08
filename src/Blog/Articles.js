@@ -8,7 +8,8 @@ import "../styles/articles.css";
 
 const Articles = () => {
   const { id } = useParams(); 
-  const article = articles.find((article) => article.id === parseInt(id)); 
+  const article = articles.find((article) => article.id === id);
+
 
   function ScrollToTopOnNavigation() {
     window.scrollTo(0, 0);

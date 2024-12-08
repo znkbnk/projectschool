@@ -24,7 +24,7 @@ function DevEssentials() {
         <DevEssentialsTitle />
         <div className="cards-flex"> 
           {blogCards.map((item, index) => (
-            <Link key={index} to={`/articles/${item.id}`}>
+            <Link key={index} to={`/blogs/devessentials/${item.id}`}>
               <div className={`card-container ${item.category}`}>
                 <div className='card-category'>{item.category}</div>
                 <div className='card-body'>

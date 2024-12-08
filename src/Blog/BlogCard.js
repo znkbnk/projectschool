@@ -3,7 +3,7 @@ import styles from "./BlogCard.module.css";
 import { Link } from "react-router-dom";
 
 
-const BlogCard = ({ heading, date, description, src, link }) => {
+const BlogCard = ({ heading, description, link }) => {
   return (
     <li className={styles.cardContainer}>
       <div className={styles.cardContainerContent}>

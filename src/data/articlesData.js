@@ -1,6 +1,6 @@
 const blogCards = [
   {
-    id: 1,
+    id: 'How-to-create-Authentication-Guard-Component',
     category: "React",
     title: "How to create Authentication Guard Component",
     extract:
@@ -10,7 +10,7 @@ const blogCards = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.webp",
   },
   {
-    id: 2,
+    id: "InsightTrack-Empowering-Your-Digital-Presence",
     category: "Info",
     title: "InsightTrack: Empowering Your Digital Presence",
     extract:
@@ -20,38 +20,38 @@ const blogCards = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/GAnalytics.svg/220px-GAnalytics.svg.webp",
   },
   {
-    id: 3,
+    id: "Mastering-JavaScript-Pagination",
     category: "JavaScript",
     title: "Mastering JavaScript Pagination",
     extract:
       "Discover the ins and outs of JavaScript pagination in this comprehensive guide. Learn the theory behind pagination, explore practical code examples, and uncover where and why pagination shines in web development. From enhancing performance to improving user experience, pagination is a powerful technique you don't want to overlook.",
     date: "8 May 2024",
-    image: "./images/articleImg/3/title.webp",
+    image: "/images/articleImg/3/title.webp",
   },
   {
-    id: 4,
+    id: "Going-Live-with-Stripe-in-Your-React-Project",
     category: "Info",
     title: "Going Live with Stripe in Your React Project",
     extract:
       "Transitioning your React project from Stripe's test environment to the live environment is a crucial step to start processing real payments. This process ensures that your application is fully prepared to handle secure transactions in a production setting.",
     date: "23 June 2024",
-    image: "./images/articleImg/4/title.webp",
+    image: "/images/articleImg/4/title.webp",
   },
   {
-    id: 5,
+    id: "Guide-to-Implementing-Git-in-Visual-Studio-Code",
     category: "Info",
     title: "Guide to Implementing Git in Visual Studio Code",
     extract:
       "This step-by-step guide provides detailed instructions on installing Git and Visual Studio Code, configuring Git, managing repositories, and performing common Git operations such as staging, committing, and pushing changes to a remote repository. Ideal for beginners, this guide ensures a smooth start to using Git in your development workflow.",
     date: "13 July 2024",
     image:
-      "./images/articleImg/5/title.webp",
+      "/images/articleImg/5/title.webp",
   },
 ];
 
 const articles = [
   {
-    id: 1,
+    id: 'How-to-create-Authentication-Guard-Component',
     title: "How to create Authentication Guard Component",
     image: "/images/articleImg/AuthGuard1.webp",
     paragraphs: [
@@ -107,7 +107,7 @@ const articles = [
     ],
   },
   {
-    id: 2,
+    id: "InsightTrack-Empowering-Your-Digital-Presence",
     title: "InsightTrack: Empowering Your Digital Presence",
     image:
       "https://www.themexpert.com/images/blog/how_add_google-analytics/image9.png",
@@ -133,9 +133,9 @@ const articles = [
     ],
   },
   {
-    id: 3,
+    id: "Mastering-JavaScript-Pagination",
     title: "Mastering JavaScript Pagination",
-    image: "./images/articleImg/3/logo.webp",
+    image: "/images/articleImg/3/logo.webp",
     paragraphs: [
       {
         type: "text",
@@ -156,24 +156,24 @@ const articles = [
       },
       {
         type: "image",
-        src: "./images/articleImg/3/pic1.webp",
+        src: "/images/articleImg/3/pic1.webp",
         alt: "Pic1",
       },
       {
         type: "image",
-        src: "./images/articleImg/3/pic2.webp",
+        src: "/images/articleImg/3/pic2.webp",
 
         alt: "Pic2",
       },
       {
         type: "image",
-        src: "./images/articleImg/3/pic3.webp",
+        src: "/images/articleImg/3/pic3.webp",
 
         alt: "Pic3",
       },
       {
         type: "image",
-        src: "./images/articleImg/3/pic4.webp",
+        src: "/images/articleImg/3/pic4.webp",
 
         alt: "Pic4",
       },
@@ -202,10 +202,10 @@ const articles = [
     ],
   },
   {
-    id: 4,
+    id: "Going-Live-with-Stripe-in-Your-React-Project",
     title: "Going Live with Stripe in Your React Project",
     image:
-      "./images/articleImg/4/title.webp",
+      "/images/articleImg/4/title.webp",
     paragraphs: [
       {
         type: "text",
@@ -275,7 +275,7 @@ const articles = [
     ],
   },
   {
-    id: 5,
+    id: "Guide-to-Implementing-Git-in-Visual-Studio-Code",
     title: "Git with VSCode",
     image: "/images/articleImg/5/gitLogo.webp",
     paragraphs: [
@@ -416,7 +416,7 @@ const articles = [
       },
       {
         type: "image",
-        src: "./images/articleImg/5/blog1.webp",
+        src: "/images/articleImg/5/blog1.webp",
         alt: "Pic1",
       },
       {
@@ -425,7 +425,7 @@ const articles = [
       },
       {
         type: "image",
-        src: "./images/articleImg/5/blog2.webp",
+        src: "/images/articleImg/5/blog2.webp",
         alt: "Pic2",
       },
       {
@@ -434,7 +434,7 @@ const articles = [
       },
       {
         type: "image",
-        src: "./images/articleImg/5/blog3.webp",
+        src: "/images/articleImg/5/blog3.webp",
         alt: "Pic3",
       },
       {
@@ -446,7 +446,7 @@ const articles = [
       },
       {
         type: "image",
-        src: "./images/articleImg/5/blog4.webp",
+        src: "/images/articleImg/5/blog4.webp",
         alt: "Pic4",
       },
       {
@@ -455,7 +455,7 @@ const articles = [
       },
       {
         type: "image",
-        src: "./images/articleImg/5/blog5.webp",
+        src: "/images/articleImg/5/blog5.webp",
         alt: "Pic5",
       },
       {
@@ -464,7 +464,7 @@ const articles = [
       },
       {
         type: "image",
-        src: "./images/articleImg/5/blog6.webp",
+        src: "/images/articleImg/5/blog6.webp",
         alt: "Pic6",
       },
       {
@@ -476,7 +476,7 @@ const articles = [
       },
       {
         type: "image",
-        src: "./images/articleImg/5/blog7.webp",
+        src: "/images/articleImg/5/blog7.webp",
 
         alt: "Pic7",
       },

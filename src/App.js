@@ -17,7 +17,6 @@ import Faq from "./components/Faq";
 import Pricing from "./components/Pricing";
 import Terms from "./components/Terms";
 import Privacy from "./components/Privacy";
-import Blog from "./Blog/Blog";
 import Success from "./Stripe/Success";
 import Cancel from "./Stripe/Cancel";
 import Articles from "./Blog/Articles";
@@ -97,12 +96,11 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-        <Route path='/blog' element={<Blog />} />
         <Route path='/notavailable' element={<NotFound />} />
-        <Route path='/devessentials' element={<DevEssentials />} />
-        <Route path='/reactexplained' element={<ReactExplained />} />
+        <Route path='/blogs/devessentials' element={<DevEssentials />} />
+        <Route path='/blogs/reactexplained' element={<ReactExplained />} />
         <Route path='/blogs' element={<BlogCardList />} />
-        <Route path='/articles/:id' element={<Articles />} />
+        <Route path='/blogs/devessentials/:id' element={<Articles />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/resetPassword' element={<ResetPassword />} />
