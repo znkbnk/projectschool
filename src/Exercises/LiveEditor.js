@@ -14,15 +14,13 @@ import "react-toastify/dist/ReactToastify.css";
 import CodeBlock from "../Exercises/CodeBlock.js";
 import { auth } from "../components/firebase";
 import axios from "axios";
-import debounce from "lodash/debounce";
-import throttle from "lodash/throttle";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/cheatsheet.css";
 import "../styles/showStyles.css";
 import cheatsheetData from "../data/cheatsheetData.js";
 import stylesData from "../data/stylesData.js";
 
-const LiveEditor = () => {
+const LiveEditor = ({ tasks }) => {
   const { lessonType, taskId } = useParams();
   const [isCompleted, setIsCompleted] = useState(false);
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
@@ -120,22 +118,19 @@ const LiveEditor = () => {
     }
   }, [taskId]);
 
-  const handleNext = useCallback(() => {
-    if (
-      lessonType &&
-      tasksData[lessonType] &&
-      currentTaskIndex < (tasksData[lessonType]?.length || 0) - 1
-    ) {
-      if (!isCompleted) {
-        toast.warn("Please complete the current task first.");
-      } else {
-        const nextTask = tasksData[lessonType][currentTaskIndex + 1];
-        if (nextTask) {
-          navigate(`/editor/${lessonType}/${nextTask.taskId}`);
-        }
-      }
+  const handleNext = () => {
+    // Check if the current task is completed and navigate to the next one
+ 
+  
+    // Navigate to the next task in the list
+    if (currentTaskIndex < tasksData[lessonType]?.length - 1) {
+      const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
+      navigate(`/editor/${lessonType}/${nextTaskId}`);
+    } else {
+      toast.info("You have reached the last task.");
     }
-  }, [lessonType, currentTaskIndex, isCompleted, navigate]);
+  };
+  
 
   const handlePrevious = () => {
     if (currentTaskIndex > 0) {
@@ -146,38 +141,39 @@ const LiveEditor = () => {
     }
   };
 
-  const debouncedToastSuccess = debounce((message) => {
-    toast.success(message);
-  }, 300);
-
-  const throttledComplete = throttle(() => {
+  const handleComplete = useCallback(() => {
     if (isCompleted) {
-      toast.info(`This task is already completed.`);
+      toast.info("This task is already completed.");
       return;
     }
 
-    const taskIndex = tasksData[lessonType]?.findIndex(
-      (task) => task.taskId === taskId
-    );
-    if (taskIndex !== -1) {
+    if (
+      window.confirm("Are you sure you want to mark this task as completed?")
+    ) {
+      const taskIndex = tasksData[lessonType]?.findIndex(
+        (task) => task.taskId === taskId
+      );
+
+      if (taskIndex === -1) {
+        console.error(`Task ${taskId} not found.`);
+        return;
+      }
+
       const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
       const completedTasks =
         JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+
+      // Mark this task as completed
       completedTasks[taskId] = true;
       localStorage.setItem(
         lessonCompletedTasksKey,
         JSON.stringify(completedTasks)
       );
-      debouncedToastSuccess(`Lesson ${lessonType} is completed!`);
-      setIsCompleted(true);
-    } else {
-      console.log(`Task ${taskId} not found.`);
-    }
-  }, 500);
 
-  const handleComplete = useCallback(() => {
-    throttledComplete();
-  }, [throttledComplete]);
+      setIsCompleted(true);
+      toast.success(`Lesson ${lessonType} is completed!`);
+    }
+  }, [isCompleted, lessonType, taskId]);
 
   const handleToggleSolution = () => {
     if (subscriptionStatus === "subscribed") {

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import "../styles/lessons.css";
 import Navbar from "../components/Navbar";
@@ -12,24 +11,43 @@ import ReactTitle from "./ReactTitle";
 function ReactLessons() {
   const [showEasy, setShowEasy] = useState(false);
   const [showHard, setShowHard] = useState(false);
-  const [filters, setFilters] = useState(["All", "Easy", "Hard"]);
-  const numLessons = tasksData.React.length;
+  const [showCompleted, setShowCompleted] = useState(false);
+  const [showNotCompleted, setShowNotCompleted] = useState(false);
+  const [filters, setFilters] = useState([
+    "All",
+    "Easy",
+    "Hard",
+    "Completed",
+    "Not Completed",
+  ]);
 
   const handleFilterClick = (filterType) => {
-    setShowEasy(filterType === "Easy");
-    setShowHard(filterType === "Hard");
+    if (filterType === "Easy") {
+      setShowEasy(true);
+      setShowHard(false);
+    } else if (filterType === "Hard") {
+      setShowHard(true);
+      setShowEasy(false);
+    } else if (filterType === "Completed") {
+      setShowCompleted(true);
+      setShowNotCompleted(false);
+    } else if (filterType === "Not Completed") {
+      setShowNotCompleted(true);
+      setShowCompleted(false);
+    } else {
+      setShowEasy(false);
+      setShowHard(false);
+      setShowCompleted(false);
+      setShowNotCompleted(false);
+    }
   };
 
-  const getCompletedTasksCount = () => {
-    let count = 0;
+  const getCompletedTasks = () => {
     const completedTasks =
       JSON.parse(localStorage.getItem("React_completedTasks")) || {};
-    for (const taskId in completedTasks) {
-      if (completedTasks[taskId]) {
-        count++;
-      }
-    }
-    return count;
+    return Object.keys(completedTasks).filter(
+      (taskId) => completedTasks[taskId]
+    );
   };
 
   const getAuthorInfo = (authorIndex) => {
@@ -43,8 +61,9 @@ function ReactLessons() {
         <ReactTitle />
       </div>
       <ProgressBar
-        numStages={numLessons}
-        completedTasks={getCompletedTasksCount()}
+        numStages={tasksData.React.length}
+        completedTasks={getCompletedTasks()}
+        taskType='React' // Pass "React" as taskType
       />
       <FilterSortButtons
         filters={filters}
@@ -57,6 +76,8 @@ function ReactLessons() {
           completedTasksKey='React_completedTasks'
           showEasy={showEasy}
           showHard={showHard}
+          showCompleted={showCompleted}
+          showNotCompleted={showNotCompleted}
           getAuthorInfo={getAuthorInfo}
           showDifficulty={true} // Show difficulty
         />

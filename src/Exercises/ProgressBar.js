@@ -1,31 +1,27 @@
-// ProgressBar.js
-
-import React, { useRef } from "react";
+import React from "react";
 import "../styles/progressBar.css";
+import { tasksData } from "../data/tasksData";
 
-const ProgressBar = ({ numStages, completedTasks }) => {
-  const stagesRef = useRef(null);
-
+const ProgressBar = ({ numStages, completedTasks, taskType }) => {
   const renderStages = () => {
-    let stageArray = [];
-    for (let i = 0; i < numStages; i++) {
-      stageArray.push(
+    return Array.from({ length: numStages }).map((_, i) => {
+      const task = tasksData[taskType][i]; // Dynamically access the taskType (React or Live)
+      const isCompleted = completedTasks.includes(task.taskId); // Check completion status
+
+      return (
         <div
           key={i}
-          className={`stage ${i < completedTasks ? "completed" : ""}`}
+          className={`stage ${isCompleted ? "completed" : ""}`}
         >
           {i + 1}
         </div>
       );
-    }
-    return stageArray;
+    });
   };
 
   return (
-    <div className='progress-bar'>
-      <div ref={stagesRef} className='stages'>
-        {renderStages()}
-      </div>
+    <div className="progress-bar">
+      <div className="stages">{renderStages()}</div>
     </div>
   );
 };

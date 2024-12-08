@@ -8,19 +8,12 @@ import FilteredTasks from "./FilteredTasks";
 import LiveTitle from "./LiveTitle";
 
 function LiveLessons() {
-  // eslint-disable-next-line no-unused-vars
-  const numLessons = tasksData.Live.length;
-
-  const getCompletedTasksCount = () => {
-    let count = 0;
+  const getCompletedTasks = () => {
     const completedTasks =
       JSON.parse(localStorage.getItem("Live_completedTasks")) || {};
-    for (const taskId in completedTasks) {
-      if (completedTasks[taskId]) {
-        count++;
-      }
-    }
-    return count;
+    return Object.keys(completedTasks).filter(
+      (taskId) => completedTasks[taskId]
+    );
   };
 
   const getAuthorInfo = (authorIndex) => {
@@ -34,8 +27,9 @@ function LiveLessons() {
         <LiveTitle />
       </div>
       <ProgressBar
-        numStages={numLessons}
-        completedTasks={getCompletedTasksCount({ lessonType: "Live" })}
+        numStages={tasksData.Live.length}
+        completedTasks={getCompletedTasks()}
+        taskType='Live' // Pass "Live" as taskType
       />
 
       <div className='lessons-cards'>

@@ -7,97 +7,56 @@ const FilteredTasks = ({
   getAuthorInfo,
   showEasy,
   showHard,
+  showCompleted,
+  showNotCompleted,
   showDifficulty,
 }) => {
-  const isTaskAvailable = (task) => {
-    const completedTasks =
-      JSON.parse(localStorage.getItem(completedTasksKey)) || {};
-    const taskIndex = tasks.findIndex(
-      (originalTask) => originalTask.taskId === task.taskId
-    );
+  // Get the list of completed tasks from local storage
+  const completedTasks =
+    JSON.parse(localStorage.getItem(completedTasksKey)) || {};
 
-    const isPreviousTaskCompleted =
-      taskIndex === 0 || completedTasks[tasks[taskIndex - 1].taskId];
+  // Filter tasks based on difficulty and completion status
+  const filteredTasks = tasks.filter((task) => {
+    const isCompleted = completedTasks[task.taskId]; // Check if the task is completed
 
-    return isPreviousTaskCompleted;
-  };
-
-  const filterTasks = (task) => {
-    const isAvailable = isTaskAvailable(task);
-
-    if (
-      isAvailable &&
-      ((showEasy && task.difficulty === "Easy") ||
-        (showHard && task.difficulty === "Hard"))
-    ) {
-      return true;
-    }
-
-    if (!showEasy && !showHard) {
-      return isAvailable;
-    }
-
+    if (showEasy && task.difficulty === "Easy") return true;
+    if (showHard && task.difficulty === "Hard") return true;
+    if (showCompleted && isCompleted) return true;
+    if (showNotCompleted && !isCompleted) return true;
+    if (!showEasy && !showHard && !showCompleted && !showNotCompleted) return true; // Show all tasks if no filter is selected
     return false;
-  };
+  });
 
   return (
     <>
-      {tasks.map((task, index) => {
-        const isAvailable = isTaskAvailable(task);
+      {filteredTasks.map((task, index) => {
         const originalIndex = tasks.findIndex(
           (originalTask) => originalTask.taskId === task.taskId
         );
         const lessonNumber = originalIndex + 1;
-        const preventEnter = !task.completed && !isAvailable;
 
         return (
-          <div key={index}>
-            {preventEnter ? (
-              <div className='unavailable' style={{ filter: "blur(5px)" }}>
-                <div className='lessons-card'>
-                  <h3>{`Lesson ${lessonNumber}`}</h3>
-                  <img src={task.img} alt={task.taskTitle} />
-                  <div className='lessons-card-body'>
-                    <h3>{task.taskTitle}</h3>
-                    <p>{task.introduction}</p>
-                    <div className='authorDifficulty'>
-                      <h5>
-                        Author: {getAuthorInfo(task.authorIndex).name.first} {getAuthorInfo(task.authorIndex).name.last}
-                      </h5>
-                      {showDifficulty && <h5>Difficulty: {task.difficulty}</h5>}
-                    </div>
-                  </div>
+          <Link
+            key={index}
+            to={`/editor/${task.taskType}/${task.taskId}`}
+            style={{ textDecoration: "none" }}
+          >
+            <div className="lessons-card">
+              <h3>{`Lesson ${lessonNumber}`}</h3>
+              <img src={task.img} alt={task.taskTitle} />
+              <div className="lessons-card-body">
+                <h3>{task.taskTitle}</h3>
+                <p>{task.introduction}</p>
+                <div className="authorDifficulty">
+                  <h5>
+                    Author: {getAuthorInfo(task.authorIndex).name.first}{" "}
+                    {getAuthorInfo(task.authorIndex).name.last}
+                  </h5>
+                  {showDifficulty && <h5>Difficulty: {task.difficulty}</h5>}
                 </div>
               </div>
-            ) : (
-              <Link
-                to={`/editor/${task.taskType}/${task.taskId}`}
-                style={{ textDecoration: "none" }}
-              >
-                <div>
-                  {filterTasks(task) && (
-                    <div
-                      className={`lessons-card ${!isAvailable ? "unavailable" : ""}`}
-                      style={{ filter: !isAvailable ? "blur(5px)" : "none" }}
-                    >
-                      <h3>{`Lesson ${lessonNumber}`}</h3>
-                      <img src={task.img} alt={task.taskTitle} />
-                      <div className='lessons-card-body'>
-                        <h3>{task.taskTitle}</h3>
-                        <p>{task.introduction}</p>
-                        <div className='authorDifficulty'>
-                          <h5>
-                            Author: {getAuthorInfo(task.authorIndex).name.first} {getAuthorInfo(task.authorIndex).name.last}
-                          </h5>
-                          {showDifficulty && <h5>Difficulty: {task.difficulty}</h5>}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </Link>
-            )}
-          </div>
+            </div>
+          </Link>
         );
       })}
     </>
@@ -105,3 +64,4 @@ const FilteredTasks = ({
 };
 
 export default FilteredTasks;
+

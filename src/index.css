@@ -84,7 +84,6 @@ header,
   font-size: clamp(2rem, 4vw + 1rem, 12rem);
 }
 
-
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;700&display=swap");
 
 .main-header {
@@ -93,7 +92,7 @@ header,
   align-items: center;
   height: auto;
   font-family: "Playfair Display", serif;
-  font-size: 4.5rem; 
+  font-size: 4.5rem;
   font-weight: 900;
   text-align: center;
   letter-spacing: -0.02em;
@@ -143,13 +142,11 @@ header,
   white-space: nowrap;
 }
 
-
 @media (max-width: 1024px) {
   .main-header {
     font-size: 3.5rem;
     padding: 1.5rem;
-  margin-top: 3rem;
-
+    margin-top: 3rem;
   }
   .main-header .highlight {
     font-size: 0.5em;
@@ -159,7 +156,7 @@ header,
 
 @media (max-width: 768px) {
   .main-header {
-    font-size: 2.5rem; 
+    font-size: 2.5rem;
     padding: 1rem;
     margin-top: 80px;
   }
@@ -171,7 +168,7 @@ header,
 
 @media (max-width: 480px) {
   .main-header {
-    font-size: 2rem; 
+    font-size: 2rem;
     padding: 1rem;
     margin-top: 80px;
   }
@@ -179,25 +176,19 @@ header,
     font-size: 0.45em;
     padding: 1rem 2rem;
     margin: 0 20px;
-
   }
 }
-
-
-
 
 a {
   text-decoration: none;
 }
 
-h1{
+h1 {
   font-size: 60px;
   font-weight: 600;
   background: linear-gradient(var(--finish-fill), var(--fill));
   background-clip: text;
   color: transparent;
-
-
 }
 h2 {
   font-weight: 600;
@@ -211,15 +202,13 @@ h3 {
   padding-bottom: 20px;
 }
 
-h6{
+h6 {
   font-size: 30px;
   font-weight: 600;
   background: linear-gradient(var(--finish-fill), var(--fill));
   background-clip: text;
   color: transparent;
   margin: 10px;
-
-
 }
 
 p > span {
@@ -373,7 +362,6 @@ section {
   }
 }
 
-
 /* video popup */
 
 .video-popup-window {
@@ -389,7 +377,7 @@ section {
   z-index: 100000;
   display: flex;
   border: #777 solid 0.1px;
-  padding: 20px; 
+  padding: 20px;
   box-shadow: 5px 5px 10px rgba(175, 175, 175, 0.349);
   align-items: center;
   justify-content: center;
@@ -397,20 +385,19 @@ section {
 
 .video-container {
   width: 100%;
-  max-height: 600px; 
-  display: flex; 
+  max-height: 600px;
+  display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .video-container iframe {
   width: 100%;
-  max-height: 500px; 
-  border: none; 
+  max-height: 500px;
+  border: none;
   outline: none;
   border-radius: 10px;
   box-shadow: none;
-
 }
 
 .video-close-button {
@@ -423,12 +410,6 @@ section {
   border: none;
   cursor: pointer;
 }
-
-
-
-
-
-
 
 /* button 84 */
 .button-84 {
@@ -479,38 +460,91 @@ section {
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
 }
 
+.filter-dropdown {
+  background-color: #464d55;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #25292e;
+  padding: 8px 15px;
+  cursor: pointer;
+  width: 100%; /* Use full width of the container */
+  max-width: 300px; /* Maximum width for larger screens */
+  font-family: expo-brand-demi, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  transition: all 150ms;
+  margin-left: 10px; /* Add margin on the left */
+  margin-right: 10px; /* Add margin on the right */
+}
+
+.filter-dropdown:hover {
+  background-color: #25292e;
+}
+
+.filter-dropdown:focus {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 0 3px;
+}
+
 .sort {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* Allow wrapping */
+  margin-top: 20px; /* Add margin at the top */
+  margin-bottom: 20px; /* Add margin at the bottom */
+  margin-left: 10px; /* Add left margin */
+  margin-right: 10px; /* Add right margin */
 }
 
 .sort h4 {
   color: #fff;
+  margin-right: 15px;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .filter-dropdown {
+    width: 100%; /* Make dropdown full width on smaller screens */
+    font-size: 16px; /* Slightly smaller font size */
+    padding: 10px; /* Adjust padding */
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .sort {
+    flex-direction: column; /* Stack the dropdown below the heading */
+    align-items: center; /* Align dropdown to the left */
+    margin-left: 20px; /* Add more space to the left on small screens */
+    margin-right: 20px; /* Add more space to the right on small screens */
+  }
+
+  .sort h4 {
+    margin-bottom: 10px; /* Add space below the heading */
+  }
+}
+
+
 @media only screen and (max-width: 375px) {
   h1.main-header {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
   }
 
   .main-header .content {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
   .main-header .react {
-    font-size: 1.7rem; 
+    font-size: 1.7rem;
   }
 
   .main-header .highlight {
-    font-size: 1rem; 
+    font-size: 1rem;
     margin: 0;
     padding: 5px;
     letter-spacing: 0;
   }
-
- 
 }
-
 
 @media (min-width: 768px) {
   .button-81 {

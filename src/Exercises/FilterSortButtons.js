@@ -1,19 +1,19 @@
-// FilterSortButtons.js
 import React from "react";
 
 function FilterSortButtons({ filters, handleFilterClick }) {
   return (
-    <div className='sort'>
-      <h4>Show:</h4>
-      {filters.map((filter, index) => (
-        <button
-          key={index}
-          className='button-84'
-          onClick={() => handleFilterClick(filter)}
-        >
-          {filter}
-        </button>
-      ))}
+    <div className="sort">
+      <h4>Filter:</h4>
+      <select
+        className="filter-dropdown"
+        onChange={(e) => handleFilterClick(e.target.value)}
+      >
+        {filters.map((filter, index) => (
+          <option key={index} value={filter}>
+            {filter}
+          </option>
+        ))}
+      </select>
     </div>
   );
 }

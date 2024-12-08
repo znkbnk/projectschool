@@ -1754,7 +1754,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["Basic understanding of React and web hosting"],
       completed: false,
-      codesandboxUrl: "#/notavailable",
+      codesandboxUrl: "/notavailable",
       img: require("../images/livelessons7.webp"),
       videoLink: "",
     },
