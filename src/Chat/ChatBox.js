@@ -1,11 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import {
-  query,
-  collection,
-  orderBy,
-  onSnapshot,
-  limit,
-} from "firebase/firestore";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+import { query, collection, orderBy, onSnapshot, limit } from "firebase/firestore";
 import { db } from "../components/firebase";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
@@ -15,9 +9,6 @@ const ChatBox = () => {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
-    // Scroll to the bottom immediately when the chat is opened (no smooth scrolling)
-    scrollToBottom();
-
     const q = query(
       collection(db, "messages"),
       orderBy("createdAt", "asc"),
@@ -35,14 +26,14 @@ const ChatBox = () => {
     return () => unsubscribe();
   }, []); // Empty dependency array ensures this runs once when the component mounts
 
-  useEffect(() => {
-    // Scroll to the bottom whenever messages change, with no smooth scroll
+  useLayoutEffect(() => {
+    // Scroll to the bottom when the messages change
     scrollToBottom();
   }, [messages]);
 
   const scrollToBottom = () => {
     if (messagesEndRef.current) {
-      // Directly scroll to the bottom without smooth scrolling
+      // Scroll to the last message immediately
       messagesEndRef.current.scrollIntoView({ behavior: "auto" });
     }
   };
