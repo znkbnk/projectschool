@@ -15,10 +15,13 @@ const ChatBox = () => {
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
+    // Scroll to the bottom immediately when the chat is opened (no smooth scrolling)
+    scrollToBottom();
+
     const q = query(
       collection(db, "messages"),
       orderBy("createdAt", "asc"),
-      limit(50) 
+      limit(50)
     );
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
@@ -30,19 +33,23 @@ const ChatBox = () => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, []); // Empty dependency array ensures this runs once when the component mounts
 
   useEffect(() => {
+    // Scroll to the bottom whenever messages change, with no smooth scroll
     scrollToBottom();
-  }, [messages]); // Scroll whenever messages change
+  }, [messages]);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messagesEndRef.current) {
+      // Directly scroll to the bottom without smooth scrolling
+      messagesEndRef.current.scrollIntoView({ behavior: "auto" });
+    }
   };
 
   return (
-    <main className='chat-box'>
-      <div className='messages-wrapper'>
+    <main className="chat-box">
+      <div className="messages-wrapper">
         {messages.map((message) => (
           <Message key={message.id} message={message} />
         ))}
