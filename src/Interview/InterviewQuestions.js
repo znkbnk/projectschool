@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './interviewQuestions.module.css';
 import InterviewQuestionsCard from './InterviewQuestionsCard';
-import { TiChevronLeftOutline, TiChevronRightOutline } from 'https://cdn.skypack.dev/react-icons@4.12.0/ti';
+import { TiChevronLeftOutline, TiChevronRightOutline } from 'react-icons/ti';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import InterviewQuestionsCardsData from '../data/InterviewQuestionsCardsData';

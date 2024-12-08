@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './ReactExplained.module.css';
 import ReactExplainedCard from './ReactExplainedCard';
-import { TiChevronLeftOutline, TiChevronRightOutline } from 'https://cdn.skypack.dev/react-icons@4.12.0/ti';
+import { TiChevronLeftOutline, TiChevronRightOutline } from 'react-icons/ti';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ReactExplainedCardsData from '../data/ReactExplainedCardsData';

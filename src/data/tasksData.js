@@ -2855,6 +2855,339 @@ const tasksData = {
       img: require("../images/livelessons10.webp"),
       videoLink: "",
     },
+    {
+      taskId: "Build-a-Portfolio-Website-with-Admin-Panel",
+      taskTitle: "Build a Portfolio Website with Admin Panel",
+      introduction: "In this task, you will build a portfolio website that allows the user to showcase projects and manage content via an admin panel. You'll implement secure authentication using JWT and handle backend logic for managing projects with MongoDB and Express.js. On the frontend, you'll create an intuitive UI with React.",
+  task: {
+       taskDescription: "This task involves building a portfolio website. The frontend will be built using React, while the backend will use Express.js for routing and MongoDB for data storage. You'll implement JWT authentication to secure the admin panel and handle CRUD operations for projects.",
+     platform: 'Freelancer',
+        projectName: "HTML, CSS, Bootstraps, Js, React, PHP , Portfolio website with admin",
+        biddingEnds: 'Friday, December 13, 2024',
+        requirements: [
+            "Frontend: React for the user interface and routing.",
+                "Backend: Express.js for handling API requests and MongoDB for storing portfolio data.",
+                "Authentication: JWT (JSON Web Tokens) for secure authentication between the frontend and backend.",
+                "Database: MongoDB to store data related to projects and admin users.",
+       
+      ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Folder Structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "/backend folder contains",
+              descriptions: [ 
+              "/models: MongoDB schemas (e.g., User, Project).",
+              "/routes: Express routes (e.g., authentication, project management).",
+              "/controllers: Functions that handle the business logic for each route (e.g., login, add/edit project).",
+              "/middleware: Authentication middleware to protect admin routes.",
+              "/config: Configuration for database and environment variables.",
+              "server.js: Main entry point to set up the Express server.",
+              ],
+            },
+            {
+              subtitleDescription: "/frontend folder contains",
+              descriptions: [ 
+              "/components: React components for the user interface (e.g., ProjectCard, AdminDashboard).",
+              "/pages: React components representing different pages (e.g., HomePage, AdminLoginPage, AdminDashboard).",
+              "/hooks: Custom hooks to manage logic like fetching data or managing authentication.",
+              "/services: Axios or Fetch requests for interacting with the backend.",
+              "/assets: Images, icons, and static assets.",
+              ],
+            },
+            
+          ],
+        },
+        {
+          stepTitle: "Step 2: Backend (Express + MongoDB)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Set Up Express Server",
+             descriptions: [ 
+              "Initialize a Node.js project and install Express.",
+              "Set up an Express server to handle HTTP requests.",
+              "Define the port and basic routes for the backend (e.g., /login, /projects).",
+              ],
+            },
+            {
+              subtitleDescription: "Database Setup",
+              descriptions: [ 
+              "Set up MongoDB and connect the Express server to the database using Mongoose (or the native MongoDB driver).",
+              "Define the MongoDB URI in environment variables to keep it secure.",
+              ],
+            },
+            {
+              subtitleDescription: "Models (Database Schemas)",
+            descriptions: [ 
+              "Create a User model that stores the admin's credentials (username and password). Passwords should be hashed using a hashing algorithm like bcrypt before storing.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Project Model: Create a Project model with fields like",
+            descriptions: [ 
+              "title: Name of the project.",
+              "description: A detailed explanation of the project.",
+              "image: A URL for the project image.",
+              "date: Date the project was added/updated.",
+              ],
+            },
+            {
+              subtitleDescription: "Authentication (JWT)",
+            descriptions: [ 
+              "Create a POST route for login (/login)",
+              "Validate the provided username and password against the database.",
+              "If valid, generate a JWT token and send it back to the frontend.",
+              "Set up middleware to protect routes that require authentication (e.g., creating, editing, or deleting projects).",
+              "Ensure that only users with a valid JWT can access admin routes.",
+              "Create a function to verify the JWT token on protected routes and allow access only if the token is valid.",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Project Management Routes",
+            descriptions: [ 
+              "GET /projects: Fetch all projects from the database",
+              "Return the list of projects in the response.",
+              "POST /projects: Create a new project.",
+              "Ensure the user is authenticated before adding a project.",
+              "Receive data (title, description, image) from the frontend and save it in the database.",
+              "PUT /projects/:id: Update an existing project.",
+              "Ensure the user is authenticated before updating a project.",
+              "Find the project by ID and update the necessary fields.",
+              "DELETE /projects/:id: Delete a project.",
+              "Ensure the user is authenticated before allowing project deletion.",
+              "Find the project by ID and remove it from the database.",
+              
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 3: Frontend (React)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Portfolio Pages",
+            descriptions: [ 
+              "Home Page: Fetch the list of projects from the backend and display them in a grid or list.",
+              "Each project should have a Project Card that shows the project title, description, and image.",
+              "Display projects dynamically by mapping over the project data fetched from the backend.",
+              "Project Card Component: A reusable component that accepts title, description, and image as props and renders the details for a project.",
+              "Style the card to make it visually appealing (responsive design for mobile and desktop views).",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Project Card Component",
+             descriptions: [ 
+              "A reusable component that accepts title, description, and image as props and renders the details for a project.",
+              "Style the card to make it visually appealing (responsive design for mobile and desktop views).",
+              ],
+            },
+            {
+              subtitleDescription: "Admin Panel (Protected Route)",
+            descriptions: [ 
+              "Admin Login Page: Create a login form with fields for username and password.",
+              "When the form is submitted, send the credentials to the backend's /login route.",
+              "On success, store the JWT token in localStorage (or sessionStorage).",
+              "If authentication fails, display an error message.",
+              "Admin Dashboard: Create a dashboard where the admin can see all projects.",
+              "Implement buttons to add, edit, or delete projects.",
+              "Use protected routes to ensure only authenticated users can access the admin dashboard.",
+              "Project Management Form: Create a form for adding or editing projects. The form should include fields for project title, description, and image URL.",
+              "Use controlled components to manage form state and validate inputs before submitting.",
+              "On submission, send the data to the appropriate backend route (POST /projects for adding, PUT /projects/:id for editing).",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Protected Routes",
+            descriptions: [ 
+              "Use React Router to set up different routes for the home page, admin login page, and admin dashboard.",
+              "Protected Routes: Ensure the admin dashboard is protected. If the user is not authenticated (no JWT token in localStorage), redirect them to the login page.",
+              "Redirect after Login: After the admin logs in, redirect them to the dashboard or another protected page.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Authentication (JWT)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Backend Authentication",
+            descriptions: [ 
+              "On successful login, generate a JWT token containing the user’s ID and send it to the frontend.",
+              "Set a secret key on the backend that is used to sign the JWT token. Store this secret securely (e.g., in environment variables).",
+              ],
+            },
+            {
+              subtitleDescription: "Frontend JWT Storage",
+             descriptions: [ 
+               "Store the JWT token in localStorage or sessionStorage to persist the user's login state.",
+                "When making requests to the backend (e.g., for fetching projects or adding a project), include the JWT token in the Authorization header (Bearer <token>).",
+              ],
+            },
+            {
+              subtitleDescription: "Verifying JWT Token",
+             descriptions: [ 
+               "Use middleware on the backend to verify the JWT token for protected routes (e.g., creating/editing/deleting projects).",
+                "If the token is invalid or missing, respond with an error message and a 401 Unauthorized status code.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Backend Logic",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Creating and Editing Projects",
+             descriptions: [ 
+               "In the backend, ensure that only authenticated users can create or modify projects. Use the JWT token in the request header to verify the user's identity.",
+                "On receiving the project data, validate it (e.g., check if the title is not empty) and store it in the MongoDB database.",
+                "If updating an existing project, ensure the correct project ID is used and modify the project fields as needed.",
+              ],
+            },
+            {
+              subtitleDescription: "Deleting Projects",
+             descriptions: [ 
+               "Implement the logic to remove a project by its ID from the MongoDB database.",
+                "Confirm that the user is authenticated before allowing this action.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Fetching Projects",
+             descriptions: [ 
+               "Create an endpoint that retrieves all projects stored in the MongoDB database.",
+                "Send the project data to the frontend in a structured format (e.g., an array of project objects).",
+                "",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 6: Frontend Logic",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "React State Management",
+             descriptions: [ 
+               "Use React's useState to manage state for user login and project data.",
+                "Manage the state for form inputs (e.g., project title, description) using controlled components.",
+                "Use useEffect to fetch project data when the component mounts (e.g., fetch projects for the home page or admin dashboard).",
+              ],
+            },
+            {
+              subtitleDescription: "Making API Requests",
+              descriptions: [ 
+               "Use Axios or the Fetch API to send HTTP requests to the backend:",
+                "GET /projects: Fetch project data to display on the homepage.",
+                "POST /projects: Send form data to add a new project.",
+                "PUT /projects/:id: Send form data to update an existing project.",
+                "DELETE /projects/:id: Delete a project from the portfolio.",
+              ],
+            },
+            {
+              subtitleDescription: "JWT Handling",
+             descriptions: [ 
+               "On successful login, store the JWT token in localStorage and use it for authentication in subsequent requests.",
+                "If the JWT token is not found or is invalid, redirect the user to the login page.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 7: Deployment",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Backend Deployment",
+             descriptions: [ 
+               "Deploy the backend API on a cloud platform like Heroku, DigitalOcean, or AWS.",
+                "Ensure the environment variables (like MongoDB URI and JWT secret) are set correctly in the deployment environment.",
+              ],
+            },
+            {
+              subtitleDescription: "Frontend Deployment",
+              descriptions: [ 
+               "Deploy the frontend React app using platforms like Netlify, Vercel, or GitHub Pages.",
+                "Ensure all environment variables are configured correctly for deployment.",
+                "Connect the frontend to the deployed backend API, making sure the frontend is able to make requests to the correct URL.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 8: Admin Panel Features",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Admin Login",
+             descriptions: [ 
+               "Ensure that the login form sends the user's credentials to the backend for authentication.",
+                "Upon successful login, store the JWT token and redirect the user to the admin dashboard.",
+              ],
+            },
+            {
+              subtitleDescription: "Admin Dashboard",
+             descriptions: [ 
+               "Display a list of projects with options to add, edit, or delete.",
+                "Protect the dashboard with authentication to ensure only the admin has access.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 9: Responsive Design",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Use CSS frameworks (e.g., Bootstrap or Tailwind CSS) for a responsive layout.",
+                "Ensure the portfolio is mobile-friendly by using media queries to adjust the layout for small screens.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 10: Future Features",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Contact Form: Add a contact form where users can send messages to the admin.",
+                "Blog Section: Implement a blog feature with CRUD (Create, Read, Update, Delete) functionality in the admin panel.",
+                "File Upload: Implement file upload functionality to upload images for projects. Store images in the server or use a cloud service like AWS S3.",
+              ],
+            },
+          
+          ],
+        },
+       
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "/notavailable",
+      img: require("../images/livelessons10.webp"),
+    },
+
     
   ],
   React: [
