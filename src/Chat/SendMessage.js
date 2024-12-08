@@ -41,7 +41,10 @@ const SendMessage = ({ scroll }) => {
         name='messageInput'
         type='text'
         className='form-input__input'
-        placeholder='Type message...'
+        placeholder='Type a message...'
+        autoComplete='off'
+        autoCorrect='off'
+        spellCheck='false'
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
@@ -51,4 +54,3 @@ const SendMessage = ({ scroll }) => {
 };
 
 export default SendMessage;
-

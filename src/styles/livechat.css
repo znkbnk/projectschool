@@ -15,8 +15,7 @@ body {
   font-style: normal;
 }
 
-button,
-input {
+button {
   cursor: pointer;
 }
 
