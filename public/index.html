@@ -6,13 +6,19 @@
       property="og:title"
       content="React Practical Learning at ProjectSchool"
     />
-    <meta property="og:title" content="Learn React with Hands-on Projects - ProjectSchool" />
+    <meta
+      property="og:title"
+      content="Learn React with Hands-on Projects - ProjectSchool"
+    />
     <meta
       property="og:description"
       content="Boost your React skills with hands-on projects. Join ProjectSchool for 60+ real-world React exercises. Master React, improve your portfolio, and learn through doing."
     />
     <meta property="og:url" content="https://www.projectschool.dev" />
-    <meta property="og:image" content="https://projectschool.dev/images/logowebp.webp">
+    <meta
+      property="og:image"
+      content="https://projectschool.dev/images/logowebp.webp"
+    />
 
     <meta property="og:type" content="website" />
 
@@ -21,7 +27,7 @@
       name="description"
       content="Learn React with 60+ hands-on projects. Our website offers practical tasks and solutions to help you learn React, boost skills, and master React coding."
     />
-    
+
     <link
       rel="preload"
       as="image"
@@ -48,18 +54,13 @@
       />
     </noscript>
     <meta name="theme-color" content="#ffffff" />
-    <title>
-       Learn React with Real Projects & Hands-on Tasks.
-    </title>
+    <title>Learn React with Real Projects & Hands-on Tasks.</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-7L2NMEJKB6"
     ></script>
- 
-
-
 
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -80,28 +81,7 @@
         var script = document.createElement("script");
         script.type = "application/ld+json";
 
-        fetch("./structured-data.json") 
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.json(); 
-          })
-          .then((data) => {
-            script.text = JSON.stringify(data);
-            document.head.appendChild(script); 
-          })
-          .catch((error) => {
-            console.error("Error loading JSON-LD data:", error); 
-          });
-      });
-    </script>
-    <script>
-      window.addEventListener("load", function () {
-        var script = document.createElement("script");
-        script.type = "application/ld+json";
-    
-        fetch("./faq-structured-data.json")
+        fetch("./structured-data.json")
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");
@@ -113,22 +93,22 @@
             document.head.appendChild(script);
           })
           .catch((error) => {
-            console.error("Error loading JSON-LD FAQ data:", error);
+            console.error("Error loading JSON-LD data:", error);
           });
       });
     </script>
-    
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
         "name": "ProjectSchool",
         "url": "https://www.projectschool.dev",
-        "logo": "https://projectschool.dev/#/",
+        "logo": "https://projectschool.dev/images/logowebp.webp",
         "description": "ProjectSchool offers practical React projects to help you learn React with real-world hands-on coding tasks.",
         "sameAs": [
-          "https://twitter.com/projectschool",
-          "https://facebook.com/projectschool"
+          "https://instagram.com/reactlessons",
+          ""
         ]
       }
     </script>
