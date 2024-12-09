@@ -3,6 +3,7 @@ import ReactInterviewQuestionQuiz from "../data/ReactInterviewQuestionQuiz";
 import "./InterviewQuestionQuiz.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import InterviewQuestionQuizTitle from "./InterviewQuestionQuizTitle";
 
 const getRandomQuestions = (questions, count) => {
   // Shuffle the questions array and select the first 'count' questions
@@ -75,6 +76,7 @@ const InterviewQuestionQuiz = () => {
     <div>
       <ScrollToTopOnNavigation />
       <Navbar />
+      <InterviewQuestionQuizTitle />
 
       <div className='quiz-container'>
         <div className='quiz-card'>
