@@ -1,6 +1,6 @@
 // InterviewQuestionsCardsData.js
 
-const InterviewQuestionsCardsData = [
+const ReactInterviewQuestions = [
   {
     question: "What is React?",
     answer:
@@ -879,6 +879,6 @@ const InterviewQuestionsCardsData = [
   },
 ];
 
-export default InterviewQuestionsCardsData;
+export default ReactInterviewQuestions;
 
 // { question: "", answer: "" },

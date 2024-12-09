@@ -4,7 +4,7 @@ import InterviewQuestionsCard from './InterviewQuestionsCard';
 import { TiChevronLeftOutline, TiChevronRightOutline } from 'react-icons/ti';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import InterviewQuestionsCardsData from '../data/InterviewQuestionsCardsData';
+import ReactInterviewQuestions from '../data/ReactInterviewQuestions';
 import InterviewQuestionsTitle from './InterviewQuestionsTitle';
 
 const InterviewQuestions = () => {
@@ -17,7 +17,7 @@ const InterviewQuestions = () => {
 
   // Function to get a random index
   const getRandomIndex = () => {
-    const randomIndex = Math.floor(Math.random() * InterviewQuestionsCardsData.length);
+    const randomIndex = Math.floor(Math.random() * ReactInterviewQuestions.length);
     return randomIndex;
   };
 
@@ -71,14 +71,14 @@ const InterviewQuestions = () => {
 
           <div className={styles.cardContainer}>
             <InterviewQuestionsCard
-              question={InterviewQuestionsCardsData[activeIndex].question}
-              answer={InterviewQuestionsCardsData[activeIndex].answer}
+              question={ReactInterviewQuestions[activeIndex].question}
+              answer={ReactInterviewQuestions[activeIndex].answer}
               showContent={showContentState[activeIndex]} 
               onToggleContent={handleToggleContent} 
             />
           </div>
 
-          {activeIndex < InterviewQuestionsCardsData.length - 1 && (
+          {activeIndex < ReactInterviewQuestions.length - 1 && (
             <button
               className={`${styles.nav} ${styles.right}`}
               onClick={handleNextCard}
