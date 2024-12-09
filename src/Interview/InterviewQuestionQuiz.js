@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import interviewQuestionQuizData from "../data/interviewQuestionQuizData";
+import ReactInterviewQuestionQuiz from "../data/ReactInterviewQuestionQuiz";
 import "./InterviewQuestionQuiz.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -26,7 +26,7 @@ const InterviewQuestionQuiz = () => {
   // Fetch and randomize questions on component mount
   useEffect(() => {
     const randomizedQuestions = getRandomQuestions(
-      interviewQuestionQuizData,
+      ReactInterviewQuestionQuiz,
       20
     );
     setQuizQuestions(randomizedQuestions);
@@ -61,7 +61,7 @@ const InterviewQuestionQuiz = () => {
     setCurrentQuestionIndex(0);
     setSelectedAnswer("");
     setShowResult(false);
-    setQuizQuestions(getRandomQuestions(interviewQuestionQuizData, 20)); // Re-randomize questions
+    setQuizQuestions(getRandomQuestions(ReactInterviewQuestionQuiz, 20)); // Re-randomize questions
   };
 
   const progressPercentage =

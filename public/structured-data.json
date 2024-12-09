@@ -18,35 +18,37 @@
         },
         "difficulty": "Easy",
         "url": "https://projectschool.dev/editor/React/3D-Interactive-Card",
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "Online",
-          "startDate": "2023-01-01",
-          "endDate": "2023-12-31",
-          "instructor": {
-            "@type": "Person",
-            "name": "Jevin",
-            "description": "Instructor for React courses at Project School"
-          },
-          "courseWorkload": "PT5H",
-          "location": {
-            "@type": "Place",
-            "name": "Online"
-          },
-          "provider": {
-            "@type": "Organization",
-            "name": "Project School",
-            "url": "https://www.projectschool.dev/"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "0.00",
-            "priceCurrency": "USD",
-            "itemCondition": "http://schema.org/NewCondition",
-            "availability": "http://schema.org/InStock",
-            "url": "https://projectschool.dev/editor/React/3D-Interactive-Card",
-            "category": "Free"
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "startDate": "2023-01-01",
+            "endDate": "2023-12-31",
+            "instructor": {
+              "@type": "Person",
+              "name": "Jevin",
+              "description": "Instructor for React courses at Project School"
+            },
+            "courseWorkload": "PT5H",
+            "location": {
+              "@type": "Place",
+              "name": "Online"
+            }
           }
+        ],
+        "provider": {
+          "@type": "Organization",
+          "name": "Project School",
+          "url": "https://www.projectschool.dev"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "GBP",
+          "itemCondition": "http://schema.org/NewCondition",
+          "availability": "http://schema.org/InStock",
+          "url": "https://projectschool.dev/editor/React/3D-Interactive-Card",
+          "category": "Free"
         }
       }
     },
@@ -89,7 +91,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/BMI-Tracker",
@@ -137,7 +139,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Dark-Light-Mode-Toggle",
@@ -184,7 +186,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Sortify-Search-by-Name",
@@ -231,7 +233,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Simple-Quiz-App",
@@ -278,7 +280,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/FAQ",
@@ -325,7 +327,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Birthday-Reminder",
@@ -372,7 +374,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Dynamic-Box-Shadow-Generator",
@@ -419,7 +421,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Memory-Game",
@@ -466,7 +468,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Color-Generator",
@@ -513,7 +515,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Range-Slider",
@@ -560,7 +562,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Form-Validation-Component",
@@ -607,7 +609,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Markdown-Preview-App",
@@ -654,7 +656,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Menu-App",
@@ -701,7 +703,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Responsive-Navbar",
@@ -748,7 +750,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Pagination-Page",
@@ -795,7 +797,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Search-Bar",
@@ -842,7 +844,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Dropdown",
@@ -889,7 +891,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Sidebar",
@@ -936,7 +938,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Dynamic-Table-with-Sorting-and-Copy-Functionality",
@@ -983,7 +985,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/To-Do-App",
@@ -1030,7 +1032,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Testimonials",
@@ -1077,7 +1079,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Voice-to-Text",
@@ -1124,7 +1126,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Text-to-Voice",
@@ -1171,7 +1173,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Course-Finder",
@@ -1218,7 +1220,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Course-Shop",
@@ -1265,7 +1267,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/MATERIALIZECSS-Portfolio",
@@ -1312,7 +1314,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/MaterializeCSS-Web-Toolkit",
@@ -1359,7 +1361,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/TradeHub-React-Trading-Dashboard",
@@ -1406,7 +1408,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Cube-Image-Gallery",
@@ -1453,7 +1455,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Analog-Clock",
@@ -1500,7 +1502,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Dynamic-Menu-Highlighter",
@@ -1547,7 +1549,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Order-Tracker-Mobile-App",
@@ -1594,7 +1596,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Timer-App",
@@ -1641,7 +1643,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Portfolio-Website",
@@ -1688,7 +1690,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Celestial-Canvas",
@@ -1735,7 +1737,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Materialize-Portfolio",
@@ -1782,7 +1784,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/File-Uploader",
@@ -1829,7 +1831,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Cake-Website",
@@ -1876,7 +1878,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Interactive-3D-Card-Viewer",
@@ -1923,7 +1925,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Dev-Portfolio",
@@ -1970,7 +1972,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Fruit-Carousel",
@@ -2017,7 +2019,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/FitLife-Website",
@@ -2064,7 +2066,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/FAQ-Toggle",
@@ -2111,7 +2113,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Pomodoro-Focus-Timer",
@@ -2158,7 +2160,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Profolio",
@@ -2205,7 +2207,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Animated-Progress-Loader",
@@ -2252,7 +2254,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Weather-App",
@@ -2299,7 +2301,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Expense-Tracker",
@@ -2346,7 +2348,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Recipe-Finder",
@@ -2393,7 +2395,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Chat-Application",
@@ -2440,7 +2442,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/E-commerce-Store",
@@ -2487,7 +2489,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Blog-Platform",
@@ -2534,7 +2536,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Portfolio-Website",
@@ -2581,7 +2583,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Celestial-Canvas",
@@ -2628,7 +2630,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/Materialize-Portfolio",
@@ -2675,7 +2677,7 @@
         "offers": {
           "@type": "Offer",
           "price": "0.00",
-          "priceCurrency": "USD",
+          "priceCurrency": "GBP",
           "itemCondition": "http://schema.org/NewCondition",
           "availability": "http://schema.org/InStock",
           "url": "https://projectschool.dev/editor/React/File-Uploader",
