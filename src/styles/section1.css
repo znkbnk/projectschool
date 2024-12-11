@@ -139,10 +139,8 @@ h2.heading_large {
 }
 
 .section2-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(10deg);
+
+  transform: rotate(10deg);
   width: 140%;
 }
 
@@ -195,7 +193,6 @@ h2.heading_large {
   align-items: center;
   height: 10vh;
   gap: 30px;
-  background: linear-gradient(135deg, #0a0a0a, #121212);
   padding: 20px;
 }
 
