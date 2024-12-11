@@ -8,6 +8,8 @@
     {
       "@type": "ListItem",
       "position": 1,
+      "url": "https://projectschool.dev/editor/React/3D-Interactive-Card",
+
       "item": {
         "@type": "Course",
         "name": "3D Interactive Card",
@@ -55,6 +57,8 @@
     {
       "@type": "ListItem",
       "position": 2,
+      "url": "https://projectschool.dev/editor/React/BMI-Tracker",
+
       "item": {
         "@type": "Course",
         "name": "BMI Tracker",
@@ -103,6 +107,8 @@
     {
       "@type": "ListItem",
       "position": 3,
+      "url": "https://projectschool.dev/editor/React/Dark-Light-Mode-Toggle",
+
       "item": {
         "@type": "Course",
         "name": "Dark-Light Mode Toggle",
@@ -150,6 +156,8 @@
     {
       "@type": "ListItem",
       "position": 4,
+      "url": "https://projectschool.dev/editor/React/Sortify-Search-by-Name",
+
       "item": {
         "@type": "Course",
         "name": "Sortify: Search by Name",
@@ -197,6 +205,8 @@
     {
       "@type": "ListItem",
       "position": 5,
+      "url": "https://projectschool.dev/editor/React/Simple-Quiz-App",
+
       "item": {
         "@type": "Course",
         "name": "Simple Quiz App",
@@ -244,6 +254,8 @@
     {
       "@type": "ListItem",
       "position": 6,
+      "url": "https://projectschool.dev/editor/React/FAQ",
+
       "item": {
         "@type": "Course",
         "name": "FAQ",
@@ -291,6 +303,8 @@
     {
       "@type": "ListItem",
       "position": 7,
+      "url": "https://projectschool.dev/editor/React/Birthday-Reminder",
+
       "item": {
         "@type": "Course",
         "name": "Birthday Reminder",
@@ -338,6 +352,8 @@
     {
       "@type": "ListItem",
       "position": 8,
+      "url": "https://projectschool.dev/editor/React/Dynamic-Box-Shadow-Generator",
+
       "item": {
         "@type": "Course",
         "name": "Dynamic Box Shadow Generator",
@@ -385,6 +401,8 @@
     {
       "@type": "ListItem",
       "position": 9,
+      "url": "https://projectschool.dev/editor/React/Memory-Game",
+
       "item": {
         "@type": "Course",
         "name": "Memory Game",
@@ -432,6 +450,8 @@
     {
       "@type": "ListItem",
       "position": 10,
+      "url": "https://projectschool.dev/editor/React/Color-Generator",
+
       "item": {
         "@type": "Course",
         "name": "Color Generator",
@@ -479,6 +499,8 @@
     {
       "@type": "ListItem",
       "position": 11,
+      "url": "https://projectschool.dev/editor/React/Range-Slider",
+
       "item": {
         "@type": "Course",
         "name": "Range Slider",
@@ -526,6 +548,8 @@
     {
       "@type": "ListItem",
       "position": 12,
+      "url": "https://projectschool.dev/editor/React/Form-Validation-Component",
+
       "item": {
         "@type": "Course",
         "name": "Form Validation Component",
@@ -573,6 +597,8 @@
     {
       "@type": "ListItem",
       "position": 13,
+      "url": "https://projectschool.dev/editor/React/Markdown-Preview-App",
+
       "item": {
         "@type": "Course",
         "name": "Markdown Preview App",
@@ -620,6 +646,8 @@
     {
       "@type": "ListItem",
       "position": 14,
+      "url": "https://projectschool.dev/editor/React/Menu-App",
+
       "item": {
         "@type": "Course",
         "name": "Menu App",
@@ -667,6 +695,8 @@
     {
       "@type": "ListItem",
       "position": 15,
+      "url": "https://projectschool.dev/editor/React/Responsive-Navbar",
+
       "item": {
         "@type": "Course",
         "name": "Responsive Navbar",
@@ -714,6 +744,8 @@
     {
       "@type": "ListItem",
       "position": 16,
+      "url": "https://projectschool.dev/editor/React/Pagination-Page",
+
       "item": {
         "@type": "Course",
         "name": "Pagination Page",
@@ -761,6 +793,8 @@
     {
       "@type": "ListItem",
       "position": 17,
+      "url": "https://projectschool.dev/editor/React/Search-Bar",
+
       "item": {
         "@type": "Course",
         "name": "Search Bar",
@@ -808,6 +842,8 @@
     {
       "@type": "ListItem",
       "position": 18,
+      "url": "https://projectschool.dev/editor/React/Dropdown",
+
       "item": {
         "@type": "Course",
         "name": "Dropdown",
@@ -855,6 +891,8 @@
     {
       "@type": "ListItem",
       "position": 19,
+      "url": "https://projectschool.dev/editor/React/Sidebar",
+
       "item": {
         "@type": "Course",
         "name": "Sidebar",
@@ -902,6 +940,8 @@
     {
       "@type": "ListItem",
       "position": 20,
+      "url": "https://projectschool.dev/editor/React/Dynamic-Table-with-Sorting-and-Copy-Functionality",
+
       "item": {
         "@type": "Course",
         "name": "Dynamic Table with Sorting and Copy Functionality",
@@ -949,6 +989,8 @@
     {
       "@type": "ListItem",
       "position": 21,
+      "url": "https://projectschool.dev/editor/React/To-Do-App",
+
       "item": {
         "@type": "Course",
         "name": "To-Do App",
@@ -996,6 +1038,8 @@
     {
       "@type": "ListItem",
       "position": 22,
+      "url": "https://projectschool.dev/editor/React/Testimonials",
+
       "item": {
         "@type": "Course",
         "name": "Testimonials",
@@ -1043,6 +1087,8 @@
     {
       "@type": "ListItem",
       "position": 23,
+      "url": "https://projectschool.dev/editor/React/Voice-to-Text",
+
       "item": {
         "@type": "Course",
         "name": "Voice to Text",
@@ -1090,6 +1136,8 @@
     {
       "@type": "ListItem",
       "position": 24,
+      "url": "https://projectschool.dev/editor/React/Text-to-Voice",
+
       "item": {
         "@type": "Course",
         "name": "Text to Voice",
@@ -1137,6 +1185,8 @@
     {
       "@type": "ListItem",
       "position": 25,
+      "url": "https://projectschool.dev/editor/React/Course-Finder",
+
       "item": {
         "@type": "Course",
         "name": "CourseFinder",
@@ -1184,6 +1234,8 @@
     {
       "@type": "ListItem",
       "position": 26,
+      "url": "https://projectschool.dev/editor/React/Course-Shop",
+
       "item": {
         "@type": "Course",
         "name": "Course Shop",
@@ -1231,6 +1283,8 @@
     {
       "@type": "ListItem",
       "position": 27,
+      "url": "https://projectschool.dev/editor/React/MATERIALIZECSS-Portfolio",
+
       "item": {
         "@type": "Course",
         "name": "MATERIALIZECSS Portfolio",
@@ -1278,6 +1332,8 @@
     {
       "@type": "ListItem",
       "position": 28,
+      "url": "https://projectschool.dev/editor/React/MaterializeCSS-Web-Toolkit",
+
       "item": {
         "@type": "Course",
         "name": "MaterializeCSS Web Toolkit",
@@ -1325,6 +1381,8 @@
     {
       "@type": "ListItem",
       "position": 29,
+      "url": "https://projectschool.dev/editor/React/TradeHub-React-Trading-Dashboard",
+
       "item": {
         "@type": "Course",
         "name": "TradeHub: React Trading Dashboard",
@@ -1372,6 +1430,8 @@
     {
       "@type": "ListItem",
       "position": 30,
+      "url": "https://projectschool.dev/editor/React/Cube-Image-Gallery",
+
       "item": {
         "@type": "Course",
         "name": "Cube Image Gallery",
@@ -1419,6 +1479,8 @@
     {
       "@type": "ListItem",
       "position": 31,
+      "url": "https://projectschool.dev/editor/React/Analog-Clock",
+
       "item": {
         "@type": "Course",
         "name": "ReactAnalogClock",
@@ -1466,6 +1528,8 @@
     {
       "@type": "ListItem",
       "position": 32,
+      "url": "https://projectschool.dev/editor/React/Dynamic-Menu-Highlighter",
+
       "item": {
         "@type": "Course",
         "name": "Dynamic Menu Highlighter",
@@ -1513,6 +1577,8 @@
     {
       "@type": "ListItem",
       "position": 33,
+      "url": "https://projectschool.dev/editor/React/Order-Tracker-Mobile-App",
+
       "item": {
         "@type": "Course",
         "name": "Order Tracker Mobile App",
@@ -1560,6 +1626,8 @@
     {
       "@type": "ListItem",
       "position": 34,
+      "url": "https://projectschool.dev/editor/React/Timer-App",
+
       "item": {
         "@type": "Course",
         "name": "Timer App",
@@ -1607,6 +1675,8 @@
     {
       "@type": "ListItem",
       "position": 35,
+      "url": "https://projectschool.dev/editor/React/Portfolio-Website",
+
       "item": {
         "@type": "Course",
         "name": "My Portfolio Website",
@@ -1654,6 +1724,8 @@
     {
       "@type": "ListItem",
       "position": 36,
+      "url": "https://projectschool.dev/editor/React/Celestial-Canvas",
+
       "item": {
         "@type": "Course",
         "name": "Celestial Canvas",
@@ -1701,6 +1773,8 @@
     {
       "@type": "ListItem",
       "position": 37,
+      "url": "https://projectschool.dev/editor/React/Materialize-Portfolio",
+
       "item": {
         "@type": "Course",
         "name": "Materialize Portfolio",
@@ -1748,6 +1822,8 @@
     {
       "@type": "ListItem",
       "position": 38,
+      "url": "https://projectschool.dev/editor/React/File-Uploader",
+
       "item": {
         "@type": "Course",
         "name": "File Uploader",
@@ -1795,6 +1871,8 @@
     {
       "@type": "ListItem",
       "position": 39,
+      "url": "https://projectschool.dev/editor/React/Cake-Website",
+
       "item": {
         "@type": "Course",
         "name": "Cake Website",
@@ -1842,6 +1920,8 @@
     {
       "@type": "ListItem",
       "position": 40,
+      "url": "https://projectschool.dev/editor/React/Interactive-3D-Card-Viewer",
+
       "item": {
         "@type": "Course",
         "name": "Interactive 3D Card Viewer",
@@ -1889,6 +1969,8 @@
     {
       "@type": "ListItem",
       "position": 41,
+      "url": "https://projectschool.dev/editor/React/Dev-Portfolio",
+
       "item": {
         "@type": "Course",
         "name": "DevPortfolio",
@@ -1936,6 +2018,8 @@
     {
       "@type": "ListItem",
       "position": 42,
+      "url": "https://projectschool.dev/editor/React/Fruit-Carousel",
+
       "item": {
         "@type": "Course",
         "name": "Fruit Carousel",
@@ -1983,6 +2067,8 @@
     {
       "@type": "ListItem",
       "position": 43,
+      "url": "https://projectschool.dev/editor/React/FitLife-Website",
+
       "item": {
         "@type": "Course",
         "name": "FitLife Website",
@@ -2030,6 +2116,8 @@
     {
       "@type": "ListItem",
       "position": 44,
+      "url": "https://projectschool.dev/editor/React/FAQ-Toggle",
+
       "item": {
         "@type": "Course",
         "name": "FAQ Toggle",
@@ -2077,6 +2165,8 @@
     {
       "@type": "ListItem",
       "position": 45,
+      "url": "https://projectschool.dev/editor/React/Pomodoro-Focus-Timer",
+
       "item": {
         "@type": "Course",
         "name": "Pomodoro Focus Timer",
@@ -2124,6 +2214,8 @@
     {
       "@type": "ListItem",
       "position": 46,
+      "url": "https://projectschool.dev/editor/React/Profolio",
+
       "item": {
         "@type": "Course",
         "name": "Profolio",
@@ -2171,6 +2263,8 @@
     {
       "@type": "ListItem",
       "position": 47,
+      "url": "https://projectschool.dev/editor/React/Animated-Progress-Loader",
+
       "item": {
         "@type": "Course",
         "name": "Animated Progress Loader",
@@ -2218,6 +2312,8 @@
     {
       "@type": "ListItem",
       "position": 48,
+      "url": "https://projectschool.dev/editor/React/Weather-App",
+
       "item": {
         "@type": "Course",
         "name": "Weather App",
@@ -2265,6 +2361,8 @@
     {
       "@type": "ListItem",
       "position": 49,
+      "url": "https://projectschool.dev/editor/React/Expense-Tracker",
+
       "item": {
         "@type": "Course",
         "name": "Expense Tracker",
@@ -2312,6 +2410,8 @@
     {
       "@type": "ListItem",
       "position": 50,
+      "url": "https://projectschool.dev/editor/React/Recipe-Finder",
+
       "item": {
         "@type": "Course",
         "name": "Recipe Finder",
@@ -2359,6 +2459,8 @@
     {
       "@type": "ListItem",
       "position": 51,
+      "url": "https://projectschool.dev/editor/React/Chat-Application",
+
       "item": {
         "@type": "Course",
         "name": "Chat Application",
@@ -2406,6 +2508,8 @@
     {
       "@type": "ListItem",
       "position": 52,
+      "url": "https://projectschool.dev/editor/React/E-commerce-Store",
+
       "item": {
         "@type": "Course",
         "name": "E-commerce Store",
@@ -2453,6 +2557,8 @@
     {
       "@type": "ListItem",
       "position": 53,
+      "url": "https://projectschool.dev/editor/React/Blog-Platform",
+
       "item": {
         "@type": "Course",
         "name": "Blog Platform",
@@ -2500,6 +2606,8 @@
     {
       "@type": "ListItem",
       "position": 54,
+      "url": "https://projectschool.dev/editor/React/Portfolio-Website",
+
       "item": {
         "@type": "Course",
         "name": "Portfolio Website",
@@ -2547,6 +2655,8 @@
     {
       "@type": "ListItem",
       "position": 55,
+      "url": "https://projectschool.dev/editor/React/Celestial-Canvas",
+
       "item": {
         "@type": "Course",
         "name": "Celestial Canvas",
@@ -2594,6 +2704,8 @@
     {
       "@type": "ListItem",
       "position": 56,
+      "url": "https://projectschool.dev/editor/React/Materialize-Portfolio",
+
       "item": {
         "@type": "Course",
         "name": "Materialize Portfolio",
@@ -2641,6 +2753,8 @@
     {
       "@type": "ListItem",
       "position": 57,
+      "url": "https://projectschool.dev/editor/React/File-Uploader",
+
       "item": {
         "@type": "Course",
         "name": "File Uploader",
