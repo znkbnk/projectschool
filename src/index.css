@@ -365,12 +365,14 @@ section {
 /* video popup */
 
 .video-popup-window {
+  display: flex;
+  justify-content: center;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 900px;
-  height: auto;
+  width: 50%;
+  height: 70%;
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 25px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -384,16 +386,17 @@ section {
 }
 
 .video-container {
+  
   width: 100%;
-  max-height: 600px;
+  height: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .video-container iframe {
-  width: 100%;
-  max-height: 500px;
+  
+  height: 100%;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -415,7 +418,7 @@ section {
 .button-84 {
   align-items: center;
   background-color: initial;
-  background-image: linear-gradient(#464d55, #25292e);
+  background-image: linear-gradient(#111111, #25292e);
   border-radius: 8px;
   border-width: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);

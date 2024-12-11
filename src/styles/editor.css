@@ -44,9 +44,6 @@
 .editor-container iframe {
   margin-top: 60px;
   width: 100%;
-  height: calc(100vh - 60px);
-  border: 1px solid #ccc;
-  flex: 1;
 }
  
 .text-window {
