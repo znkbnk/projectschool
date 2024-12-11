@@ -83,8 +83,8 @@ const WelcomeComponent = () => {
           {
             visibility: "visible",
             opacity: 1,
-            x: screenWidth + 100,
-            y: 260,
+            x: screenWidth,
+            y: 360,
             rotation: 20,
             duration: 1.5,
             ease: "linear",
