@@ -56,6 +56,11 @@ const InterviewCodeQuiz = () => {
 
   const questionsExpirationTime = 1 * 60 * 1000; // Set expiration time to 5 minutes
 
+  function ScrollToTopOnNavigation() {
+    window.scrollTo(0, 0);
+    return null;
+  }
+
   useEffect(() => {
     const storedData = localStorage.getItem("randomQuestions");
     const timestamp = localStorage.getItem("questionsTimestamp");
@@ -120,7 +125,7 @@ const InterviewCodeQuiz = () => {
       <Helmet>
         <title>React Interview Code Quiz</title>
       </Helmet>
-
+      <ScrollToTopOnNavigation />
       <Navbar />
       <InterviewCodeQuizTitle />
 
