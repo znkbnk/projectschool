@@ -38,10 +38,10 @@ const ReactInterviewQuestionQuiz = [
           return <input name="name" value={user.name} onChange={handleChange} />;
         `,
     options: [
-      "Updates the name in the 'user' state object",
-      "Resets the 'user' state object",
-      "Only changes the 'name' field in the state object",
       "None of the above",
+      "Resets the 'user' state object",
+      "Updates the name in the 'user' state object",
+      "Only changes the 'name' field in the state object",
     ],
     correctAnswer: "Updates the name in the 'user' state object",
     explanation:
@@ -66,10 +66,11 @@ const ReactInterviewQuestionQuiz = [
           return <MyComponent>Hello World</MyComponent>;
         `,
     options: [
-      "Renders 'Hello World' inside a div",
       "Displays 'Hello World' as a prop",
-      "Throws an error because children is undefined",
       "None of the above",
+      "Throws an error because children is undefined",
+      "Renders 'Hello World' inside a div",
+
     ],
     correctAnswer: "Renders 'Hello World' inside a div",
     explanation:
@@ -132,10 +133,11 @@ const ReactInterviewQuestionQuiz = [
           };
         `,
     options: [
-      "Creates a controlled input that updates state",
       "Renders an uncontrolled input field",
-      "Automatically resets the text value to empty",
       "None of the above",
+      "Automatically resets the text value to empty",
+      "Creates a controlled input that updates state",
+
     ],
     correctAnswer: "Creates a controlled input that updates state",
     explanation:
@@ -163,8 +165,8 @@ const ReactInterviewQuestionQuiz = [
           }, [counter]);
         `,
     options: [
-      "Updates the document title to display the counter value",
       "Sets the counter to 0 when the component mounts",
+      "Updates the document title to display the counter value",
       "Tracks counter changes but doesn't update the document title",
       "None of the above",
     ],
@@ -200,10 +202,10 @@ const ReactInterviewQuestionQuiz = [
           };
         `,
     options: [
-      "Fetches data from an API and renders the first item's name",
       "Always shows 'Loading...' because the state is never updated",
-      "Fetches and displays the data, but only shows 'Loading...' when there is an error",
       "None of the above",
+      "Fetches data from an API and renders the first item's name",
+      "Fetches and displays the data, but only shows 'Loading...' when there is an error",
     ],
     correctAnswer: "Fetches data from an API and renders the first item's name",
     explanation:
@@ -233,9 +235,9 @@ const ReactInterviewQuestionQuiz = [
         `,
     options: [
       "Toggles the visibility of an element",
+      "None of the above",
       "Sets 'isVisible' to true when clicked",
       "Only toggles the visibility once",
-      "None of the above",
     ],
     correctAnswer: "Toggles the visibility of an element",
     explanation:
@@ -324,8 +326,8 @@ const ReactInterviewQuestionQuiz = [
         MyComponent.defaultProps = { title: 'Default Title' };
       `,
     options: [
-      "Sets the default title if no prop is passed",
       "Overrides the title prop with 'Default Title'",
+      "Sets the default title if no prop is passed",
       "Renders a static title",
       "None of the above",
     ],
@@ -384,9 +386,9 @@ const ReactInterviewQuestionQuiz = [
         };
       `,
     options: [
-      "Memoizes the result of computeExpensiveValue for performance optimization",
       "Updates the component on each render",
       "Caches the value of 'a' and 'b'",
+      "Memoizes the result of computeExpensiveValue for performance optimization",
       "None of the above",
     ],
     correctAnswer:
@@ -417,9 +419,9 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Displays 'Toggled!' when the state is true and 'Not Toggled' when false",
       "Always displays 'Toggled!'",
       "Sets the state to true only once",
+      "Displays 'Toggled!' when the state is true and 'Not Toggled' when false",
       "None of the above",
     ],
     correctAnswer:
@@ -451,8 +453,8 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Logs the counter value only once, when the component mounts",
       "Logs the counter value every time it changes",
+      "Logs the counter value only once, when the component mounts",
       "Logs 'undefined' because the state is never updated",
       "None of the above",
     ],
@@ -485,9 +487,9 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Increments the count value by 1 each time the button is clicked",
       "Sets the count value to 1 on every click",
       "Prevents the button from being clicked",
+      "Increments the count value by 1 each time the button is clicked",
       "None of the above",
     ],
     correctAnswer:
@@ -521,8 +523,8 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Toggles the visibility of the <p> element when the button is clicked",
       "Only shows the <p> element on the initial render",
+      "Toggles the visibility of the <p> element when the button is clicked",
       "Always displays the <p> element",
       "None of the above",
     ],
@@ -555,9 +557,9 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Sets the document title to 'Count: X' on every render",
       "Sets the document title only on the initial render",
       "Updates the document title to 'Count: 0' after each click",
+      "Sets the document title to 'Count: X' on every render",
       "None of the above",
     ],
     correctAnswer: "Sets the document title to 'Count: X' on every render",
@@ -587,8 +589,8 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Updates the input field value with the 'name' state on each change",
       "Sets the input value to an empty string",
+      "Updates the input field value with the 'name' state on each change",
       "Prevents any changes to the input field",
       "None of the above",
     ],
@@ -623,9 +625,9 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Toggles between 'Active' and 'Inactive' when clicked",
       "Always displays 'Inactive' text",
       "Only toggles 'Inactive' on click",
+      "Toggles between 'Active' and 'Inactive' when clicked",
       "None of the above",
     ],
     correctAnswer: "Toggles between 'Active' and 'Inactive' when clicked",
@@ -663,10 +665,11 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Displays an alert with the input value when the form is submitted",
       "Prevents the form submission but doesn't handle the input value",
       "Resets the input value every time it is submitted",
       "None of the above",
+      "Displays an alert with the input value when the form is submitted",
+
     ],
     correctAnswer:
       "Displays an alert with the input value when the form is submitted",
@@ -700,10 +703,10 @@ const ReactInterviewQuestionQuiz = [
       });
     `,
     options: [
-      "The component will only re-render when props 'count' or 'increment' change",
-      "The component will re-render on every state update",
-      "The component never re-renders",
       "None of the above",
+      "The component will re-render on every state update",
+      "The component will only re-render when props 'count' or 'increment' change",
+      "The component never re-renders",
     ],
     correctAnswer:
       "The component will only re-render when props 'count' or 'increment' change",
@@ -731,10 +734,10 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "The increment function is memoized, preventing re-creation on every render",
-      "The increment function is re-created every time the component renders",
-      "The counter doesn't increment due to an error",
       "None of the above",
+      "The increment function is re-created every time the component renders",
+      "The increment function is memoized, preventing re-creation on every render",
+      "The counter doesn't increment due to an error",
     ],
     correctAnswer:
       "The increment function is memoized, preventing re-creation on every render",
@@ -765,10 +768,10 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Logs the count value every time it changes",
       "Logs 'undefined' because count is not set initially",
-      "Logs '0' only once when the component mounts",
+      "Logs the count value every time it changes",
       "None of the above",
+      "Logs '0' only once when the component mounts",
     ],
     correctAnswer: "Logs the count value every time it changes",
     explanation:
@@ -798,10 +801,10 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
+      "None of the above",
       "The button's click handler is memoized, improving performance",
       "The button's click handler is re-created on every render",
       "The counter doesn't increment due to an error in memoization",
-      "None of the above",
     ],
     correctAnswer:
       "The button's click handler is memoized, improving performance",
@@ -833,10 +836,10 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
+      "None of the above",
       "Returns the previous value of the passed state or prop",
       "Stores the current value of the state or prop",
       "Always returns 'undefined'",
-      "None of the above",
     ],
     correctAnswer: "Returns the previous value of the passed state or prop",
     explanation:
@@ -868,10 +871,10 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "The component re-renders every time the button is clicked",
       "The <p> element will be removed from the DOM instead of hidden",
-      "The <p> element will be hidden, but still present in the DOM",
       "None of the above",
+      "The component re-renders every time the button is clicked",
+      "The <p> element will be hidden, but still present in the DOM",
     ],
     correctAnswer: "The component re-renders every time the button is clicked",
     explanation:
@@ -900,10 +903,10 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "The memoized value (count * 2) is recalculated only when 'count' changes",
+      "None of the above",
       "The memoized value is recalculated on every render of the ParentComponent",
       "The memoized value is calculated once and never updated",
-      "None of the above",
+      "The memoized value (count * 2) is recalculated only when 'count' changes",
     ],
     correctAnswer:
       "The memoized value (count * 2) is recalculated only when 'count' changes",
@@ -940,10 +943,10 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Logs the input value to the console when the form is submitted",
       "Resets the input value when the form is submitted",
-      "Prevents the form from submitting and logs 'undefined'",
+      "Logs the input value to the console when the form is submitted",
       "None of the above",
+      "Prevents the form from submitting and logs 'undefined'",
     ],
     correctAnswer:
       "Logs the input value to the console when the form is submitted",
@@ -975,10 +978,10 @@ const ReactInterviewQuestionQuiz = [
       };
     `,
     options: [
-      "Starts an interval to increment the count every second and cleans up on unmount",
-      "Increments the count every second indefinitely",
-      "Logs the count to the console every second",
       "None of the above",
+      "Increments the count every second indefinitely",
+      "Starts an interval to increment the count every second and cleans up on unmount",
+      "Logs the count to the console every second",
     ],
     correctAnswer:
       "Starts an interval to increment the count every second and cleans up on unmount",
