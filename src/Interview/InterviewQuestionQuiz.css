@@ -71,7 +71,9 @@
     background-color: #32cd32; /* Green */
 }
 
-
+.option-btn.incorrect {
+    background-color: #e74c3c; /* Red */
+  }
 
 /* Feedback */
 .feedback {
