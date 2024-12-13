@@ -62,12 +62,7 @@ pre {
 }
 
 
-
 /* Option Buttons */
-.options {
-  margin-top: 15px;
-}
-
 .option-btn {
   width: 100%;
   padding: 16px 30px;
@@ -94,12 +89,16 @@ pre {
   box-shadow: none;
 }
 
+/* Correct and Incorrect Option Styles */
 .option-btn.correct {
   background-color: #32cd32; /* Green */
 }
 
+.option-btn.incorrect {
+  background-color: #e74c3c; /* Red */
+}
 
-/* Feedback */
+/* Feedback for correct/incorrect answers */
 .feedback {
   font-size: 1.4rem;
   font-weight: bold;
@@ -107,6 +106,7 @@ pre {
   color: #fff;
   animation: fadeIn 1s ease-in;
 }
+
 
 /* Quiz Progress Bar Container */
 .quiz-progress-bar {
