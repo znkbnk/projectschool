@@ -19,7 +19,7 @@ const interviewData = [
   },
   {
     img: "./images/interviewCodeQuiz.webp",
-    title: "React Interview Task Quiz",
+    title: "React Interview Code Quiz",
     desc: "Challenge your React expertise with an engaging quiz designed to test your ability to identify correct code implementations. Perfect for sharpening your skills and preparing for interviews.",
     to: "/InterviewCodeQuiz",
   }
