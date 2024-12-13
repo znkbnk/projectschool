@@ -17,12 +17,13 @@ const interviewData = [
     desc: "Challenge yourself with a quiz that tests your React knowledge. Covering a range of topics from basics to advanced concepts, this quiz helps you evaluate and enhance your understanding in a fun and interactive way.",
     to: "/InterviewQuiz",
   },
-  // {
-  //   img: "./images/interviewTaskQuiz.webp",
-  //   title: "React Interview Task Quiz",
-  //   desc: "Put your React knowledge to the test with task-based quizzes. Solve practical challenges to validate your skills and prepare for real-world React scenarios with confidence.",
-  //   to: "/InterviewTaskQuiz",
-  // },
+  {
+    img: "./images/interviewCodeQuiz.webp",
+    title: "React Interview Task Quiz",
+    desc: "Challenge your React expertise with an engaging quiz designed to test your ability to identify correct code implementations. Perfect for sharpening your skills and preparing for interviews.",
+    to: "/InterviewCodeQuiz",
+  }
+  
 ];
 
 export { interviewData };

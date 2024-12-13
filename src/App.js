@@ -33,6 +33,7 @@ import InterviewQuestions from "./Interview/InterviewQuestions";
 import InterviewQuestionQuiz from "./Interview/InterviewQuestionQuiz";
 import InterviewTasks from "./Interview/InterviewTasks";
 import ProtectedRoute from "./ProtectedRoute";
+import InterviewCodeQuiz from "./Interview/InterviewCodeQuiz";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -49,10 +50,15 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Welcome />} />
         <Route
-          path="/login"
+          path='/login'
           element={
             isLoggedIn ? (
-              <Navigate to={new URLSearchParams(window.location.search).get("redirect") || "/"} />
+              <Navigate
+                to={
+                  new URLSearchParams(window.location.search).get("redirect") ||
+                  "/"
+                }
+              />
             ) : (
               <Login />
             )
@@ -96,6 +102,14 @@ const App = () => {
             </ProtectedRoute>
           }
         />
+        <Route
+          path='/interviewCodeQuiz'
+          element={
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <InterviewCodeQuiz />
+            </ProtectedRoute>
+          }
+        />
         <Route path='/notavailable' element={<NotFound />} />
         <Route path='/blogs/devessentials' element={<DevEssentials />} />
         <Route path='/blogs/reactexplained' element={<ReactExplained />} />
@@ -104,7 +118,7 @@ const App = () => {
         <Route path='/terms' element={<Terms />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/resetPassword' element={<ResetPassword />} />
-        
+
         {/* Protecting the routes for authenticated users */}
         <Route
           path='/exercises'

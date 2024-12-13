@@ -1,6 +1,8 @@
 html {
   width: 100%;
   height: 94vh;
+  background: var(--bg);
+
 }
 .Toastify__toast-container {
   position: fixed;
@@ -63,7 +65,7 @@ html {
 }
 
 body {
-  background-color: var(--bg);
+  background-color: #000000 !important;
   color: var(--color);
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -99,7 +101,6 @@ header,
   margin: 2rem 0;
   padding: 2rem;
   color: #ffffff;
-  background: #000000;
   position: relative;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);

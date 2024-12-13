@@ -1,0 +1,271 @@
+/*  interviewCodeQuiz.css  */
+
+/* Overall Layout */
+
+
+/* Container for the Quiz */
+.code-quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Quiz Card for Each Question */
+.code-quiz-card {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 500px;
+  text-align: center;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Question Text */
+.question-text {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Code Snippet */
+
+
+
+
+/* Option Buttons Container */
+.code-options {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px; /* Space between the two columns */
+}
+
+/* Column for options */
+.option-column {
+  display: flex;
+  flex-direction: column;
+  width: 48%; /* Each column takes up half of the container */
+}
+
+/* Option Button Styling */
+.option-btn {
+  width: 100%;
+  padding: 16px 30px;
+  margin: 12px 0;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.option-btn:hover,
+.option-btn:active {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.option-btn:disabled {
+  background: #555;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.option-btn.correct {
+  background-color: #32cd32; /* Green */
+}
+
+
+
+/* Feedback */
+.code-feedback {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 20px;
+  color: #fff;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Quiz Progress Bar Container */
+.code-quiz-progress-bar {
+  margin-top: 20px;
+  height: 10px;
+  width: 100%;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Quiz Progress */
+.code-quiz-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #32cd32, #00ffcc);
+  transition: width 0.5s ease-in-out;
+  animation: progressGlow 1s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes progressGlow {
+  from {
+      box-shadow: 0 0 10px rgba(50, 205, 50, 0.5);
+  }
+  to {
+      box-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+  }
+}
+
+/* Next Button */
+.next-btn {
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.next-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Result Section */
+.code-quiz-result {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  margin-top: 40px;
+}
+
+.code-quiz-result h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #32cd32;
+}
+
+.code-quiz-result p {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes progressAnimation {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .code-quiz-card {
+      padding: 30px 20px; /* Reduce padding on smaller screens */
+      max-width: 90%; /* Allow the card to take up more space */
+  }
+
+  .code-quiz-card h2 {
+      font-size: 1.6rem; /* Smaller font size for questions */
+  }
+
+  .code-option-btn {
+      font-size: 1rem; /* Smaller font size for options */
+      padding: 14px 25px; /* Reduce padding for buttons */
+  }
+
+  .next-btn {
+      font-size: 1rem; /* Smaller font size for buttons */
+      padding: 12px 24px; /* Reduce padding for buttons */
+  }
+
+  .code-quiz-result h2 {
+      font-size: 1.8rem; /* Smaller result heading */
+  }
+
+  .code-quiz-result p {
+      font-size: 1.2rem; /* Smaller result text */
+  }
+
+  .code-quiz-progress-bar {
+      height: 8px; /* Smaller progress bar */
+  }
+
+  .code-quiz-progress {
+      height: 100%;
+      background: linear-gradient(90deg, #32cd32, #00ffcc);
+  }
+}
+
+@media (max-width: 480px) {
+  .code-quiz-card {
+      padding: 20px 15px; /* Further reduce padding */
+      max-width: 90%;
+  }
+
+  .code-quiz-card h2 {
+      font-size: 1.4rem; /* Further reduce font size for questions */
+  }
+
+  .code-option-btn {
+      font-size: 0.9rem; /* Smaller font size for options */
+      padding: 12px 20px; /* Reduce padding for options */
+  }
+
+  .next-btn {
+      font-size: 1rem; /* Adjust button size */
+      padding: 10px 20px;
+  }
+
+  .code-quiz-result h2 {
+      font-size: 1.6rem; /* Adjust result heading size */
+  }
+
+  .code-quiz-result p {
+      font-size: 1rem; /* Adjust result text size */
+  }
+
+  .code-quiz-progress-bar {
+      height: 6px; /* Further reduce progress bar height */
+  }
+
+  .code-quiz-progress {
+      background: linear-gradient(90deg, #32cd32, #00ffcc);
+  }
+}

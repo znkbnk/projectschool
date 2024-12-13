@@ -1,3 +1,4 @@
+/* interviewQuestionQuiz */
 /* Container for the quiz card */
 .quiz-container {
     display: flex;
@@ -13,7 +14,7 @@
 
 /* Quiz card */
 .quiz-card {
-    background-color: #1f1f1f;
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 40px 30px;
     max-width: 450px;
@@ -70,9 +71,7 @@
     background-color: #32cd32; /* Green */
 }
 
-.option-btn.incorrect {
-    background-color: #ff6f61; /* Red */
-}
+
 
 /* Feedback */
 .feedback {
