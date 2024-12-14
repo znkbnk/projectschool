@@ -26,10 +26,36 @@ const InterviewTasks = () => {
     setFeedback("");
   };
 
+    const sanitizeCode = (code) => {
+    // Sanitize user code by removing potentially dangerous content
+    return code.replace(/<script.*?>.*?<\/script>/g, "")
+               .replace(/javascript:/g, "")  // Prevent JavaScript protocols
+               .replace(/on\w+="[^"]*"/g, "") // Remove event handlers like onclick
+               
+  };
+
+  let codeRuns = 0;
+  const maxCodeRuns = 5;
+  const timeLimit = 60000;
+  let lastCodeRun = Date.now();
+
   const handleRunCode = () => {
+    const now = Date.now();
+    if (now - lastCodeRun > timeLimit) {
+      codeRuns = 0;
+    }
+    lastCodeRun = now;
+
+    if (codeRuns >= maxCodeRuns) {
+      setFeedback(
+        "❌ You've reached the maximum number of code runs per minute."
+      );
+      return;
+    }
+
+    codeRuns++;
     const { testCases } = question;
 
-    // Prevent forbidden code patterns
     const forbiddenCodeRegex = new RegExp(
       [
         /eval/,
@@ -59,6 +85,13 @@ const InterviewTasks = () => {
         /document\.createTextNode/,
         /document\.appendChild/,
         /alert/,
+        /WebSocket/,
+        /ServiceWorker/,
+        /navigator\.serviceWorker/,
+        /RTCPeerConnection/,
+        /getUserMedia/,
+        /webkitURL/,
+        /Blob/,
       ]
         .map((regex) => regex.source)
         .join("|")
@@ -71,15 +104,23 @@ const InterviewTasks = () => {
       return;
     }
 
+    const sanitizedCode = sanitizeCode(userCode);
+
     const iframe = document.createElement("iframe");
     iframe.style.display = "none";
     iframe.sandbox = "allow-scripts allow-same-origin";
     document.body.appendChild(iframe);
 
+    const contentSecurityPolicy =
+      "default-src 'self'; script-src 'self' https://unpkg.com https://cdnjs.cloudflare.com 'unsafe-eval'; object-src 'none';";
+    const metaTag = document.createElement("meta");
+    metaTag.httpEquiv = "Content-Security-Policy";
+    metaTag.content = contentSecurityPolicy;
+    iframe.contentDocument.head.appendChild(metaTag);
+
     const iframeDocument =
       iframe.contentDocument || iframe.contentWindow.document;
 
-    // Loading React & ReactDOM
     const reactScript = iframeDocument.createElement("script");
     reactScript.src = "https://unpkg.com/react@18/umd/react.development.js";
     reactScript.integrity =
@@ -116,13 +157,16 @@ const InterviewTasks = () => {
 
           babelScript.onload = () => {
             try {
-              const transpiledCode = iframeWindow.Babel.transform(userCode, {
-                presets: ["react", "env"],
-              }).code;
+              const transpiledCode = iframeWindow.Babel.transform(
+                sanitizedCode,
+                {
+                  presets: ["react", "env"],
+                }
+              ).code;
 
               const functionRegex =
                 /(?:const|function|class)\s+([a-zA-Z$_][a-zA-Z0-9$_]*)/;
-              const match = userCode.match(functionRegex);
+              const match = sanitizedCode.match(functionRegex);
 
               if (!match) {
                 throw new Error(
@@ -132,8 +176,8 @@ const InterviewTasks = () => {
 
               const detectedFunctionName = match[1];
 
-              const wrappedCode = `
-                (function() {
+              const wrappedCode = `(
+                function() {
                   ${transpiledCode}
                   window.${detectedFunctionName} = ${detectedFunctionName};
                 })();
@@ -167,7 +211,6 @@ const InterviewTasks = () => {
                   testCases.forEach(({ inputs, expectedOutput }, index) => {
                     const result = userFunction(...inputs);
 
-                    // If it's a React component, normalize it to static HTML
                     if (
                       typeof result === "object" &&
                       result !== null &&
@@ -187,7 +230,6 @@ const InterviewTasks = () => {
                         });
                       }
                     } else {
-                      // For JavaScript function outputs, compare directly
                       if (
                         JSON.stringify(result) !==
                         JSON.stringify(expectedOutput)
