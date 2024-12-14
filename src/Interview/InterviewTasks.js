@@ -35,12 +35,18 @@ const InterviewTasks = () => {
         body: JSON.stringify({ code: userCode, testCases: question.testCases }),
       });
   
+      // Check if the response is empty or invalid
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+  
       const data = await response.json();
       setFeedback(data.feedback);
     } catch (error) {
       setFeedback(`❌ Error: ${error.message}`);
     }
   };
+  
   
 
   const handleNextQuestion = () => {
