@@ -1,4 +1,4 @@
-const { VM } = require("vm2");
+const vm = require("vm");
 
 exports.handler = async (event) => {
   const { code, testCases } = JSON.parse(event.body);
@@ -14,20 +14,20 @@ exports.handler = async (event) => {
     };
   }
 
-  const vm = new VM({
-    timeout: 5000, // 5-second execution timeout
-    sandbox: {}, // Isolated environment
-  });
-
   try {
-    // Execute code
+    const sandbox = {};
+    const context = vm.createContext(sandbox);
+
+    // Wrap code in a function for testing
+    const func = new vm.Script(`${code}; module.exports = userFunction;`);
+    const result = func.runInContext(context);
+
     const results = testCases.map(({ inputs, expectedOutput }) => {
-      const func = vm.run(`${code}; module.exports = userFunction;`);
-      const result = func(...inputs);
+      const testResult = result(...inputs);
       return {
-        passed: JSON.stringify(result) === JSON.stringify(expectedOutput),
+        passed: JSON.stringify(testResult) === JSON.stringify(expectedOutput),
         inputs,
-        result,
+        result: testResult,
         expectedOutput,
       };
     });
