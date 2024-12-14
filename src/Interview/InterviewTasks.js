@@ -31,7 +31,10 @@ const InterviewTasks = () => {
     try {
       const response = await fetch("https://projectschool.dev/.netlify/functions/executeCode", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json" // Ensure that the response type is accepted as JSON
+        },
         body: JSON.stringify({
           code: userCode,
           testCases: question.testCases,
