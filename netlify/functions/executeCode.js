@@ -1,6 +1,7 @@
 const vm = require("vm");
 const React = require("react");
 const ReactDOMServer = require("react-dom/server");
+const babel = require("@babel/core");
 
 exports.handler = async (event) => {
   const allowedOrigins = ['http://localhost:3000', 'https://projectschool.dev'];
@@ -20,7 +21,7 @@ exports.handler = async (event) => {
     };
   }
 
-  console.log("Event body:", event.body); // Log the incoming body
+  console.log("Event body:", event.body);
 
   if (!event.body) {
     return {
@@ -35,9 +36,9 @@ exports.handler = async (event) => {
   let parsedBody;
   try {
     parsedBody = JSON.parse(event.body);
-    console.log("Parsed Body:", parsedBody); // Log parsed body
+    console.log("Parsed Body:", parsedBody);
   } catch (error) {
-    console.log("Error parsing JSON:", error); // Log any parsing error
+    console.log("Error parsing JSON:", error);
     return {
       statusCode: 400,
       headers,
@@ -60,18 +61,23 @@ exports.handler = async (event) => {
       }),
     };
   }
-  
+
   try {
+    // Transpile JSX to JavaScript using Babel
+    const transpiledCode = babel.transformSync(code, {
+      presets: ["@babel/preset-react"],
+    }).code;
+
     // Create a sandbox environment for executing code
     const sandbox = {
       React,
       ReactDOMServer,
-      List: null, // Placeholder for user's List component
+      List: null, // Placeholder for the user's List component
     };
     const context = vm.createContext(sandbox);
 
     // Wrap code in a function for testing and evaluate the code in the sandbox
-    const func = new vm.Script(`${code}; module.exports = List;`);  // Adjust to export List function
+    const func = new vm.Script(`${transpiledCode}; module.exports = List;`);  // Adjust to export List function
     func.runInContext(context);
 
     // Run test cases
