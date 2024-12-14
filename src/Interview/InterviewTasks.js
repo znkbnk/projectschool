@@ -29,7 +29,7 @@ const InterviewTasks = () => {
     setFeedback("⏳ Running your code...");
   
     try {
-      const response = await fetch("http://localhost:8888/api/executeCode", {
+      const response = await fetch("https://projectschool.dev/.netlify/functions/executeCode", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ code: userCode, testCases: question.testCases }),
