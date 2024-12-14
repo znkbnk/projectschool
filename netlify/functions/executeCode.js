@@ -6,9 +6,9 @@ exports.handler = async (event) => {
   const allowedOrigins = ['http://localhost:3000', 'https://projectschool.dev'];
 
   const headers = {
-    'Access-Control-Allow-Origin': allowedOrigins.join(', '),  // Allow specific origins
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',  // Allow methods
-    'Access-Control-Allow-Headers': 'Content-Type',  // Allow specific headers
+    'Access-Control-Allow-Origin': allowedOrigins.join(', '), 
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS', 
+    'Access-Control-Allow-Headers': 'Content-Type', 
   };
 
   // Handle preflight request (CORS)
@@ -20,7 +20,7 @@ exports.handler = async (event) => {
     };
   }
 
-  console.log("Event body:", event.body);  // Log the event body for debugging
+  console.log("Event body:", event.body); // Log the incoming body
 
   if (!event.body) {
     return {
@@ -35,8 +35,9 @@ exports.handler = async (event) => {
   let parsedBody;
   try {
     parsedBody = JSON.parse(event.body);
+    console.log("Parsed Body:", parsedBody); // Log parsed body
   } catch (error) {
-    console.log("Error parsing JSON:", error);
+    console.log("Error parsing JSON:", error); // Log any parsing error
     return {
       statusCode: 400,
       headers,
@@ -45,7 +46,6 @@ exports.handler = async (event) => {
       }),
     };
   }
-  
 
   const { code, testCases } = parsedBody;
 
@@ -61,8 +61,6 @@ exports.handler = async (event) => {
     };
   }
   
-  
-
   try {
     // Create a sandbox environment for executing code
     const sandbox = {
@@ -103,7 +101,7 @@ exports.handler = async (event) => {
               .filter((test) => !test.passed)
               .map(
                 (test) =>
-                  `Inputs: ${JSON.stringify(test.inputs)}, Expected: ${test.expectedOutput}, Got: ${test.result}`
+                  `Inputs: ${JSON.stringify(test.inputs)}, Expected: ${test.expectedOutput}, Got: ${test.result}` 
               )
               .join("\n")}`,
       }),

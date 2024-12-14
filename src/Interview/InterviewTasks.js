@@ -27,31 +27,39 @@ const InterviewTasks = () => {
 
   const handleRunCode = async () => {
     setFeedback("⏳ Running your code...");
-  
+
+    // Log the data being sent
+    console.log("Sending Code to Server:", userCode);
+    console.log("Test Cases:", question.testCases);
+
     try {
       const response = await fetch("https://projectschool.dev/.netlify/functions/executeCode", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",
-          "Accept": "application/json", // Ensure that the response type is accepted as JSON
+          "Accept": "application/json" 
         },
         body: JSON.stringify({
-          code: userCode, // Code entered by user
-          testCases: question.testCases, // The test cases for validation
+          code: userCode,
+          testCases: question.testCases,
         }),
       });
-  
+
+      // Log the response status and body
+      console.log("Response Status:", response.status);
+      const responseBody = await response.json();
+      console.log("Response Body:", responseBody);
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-  
-      const data = await response.json();
-      setFeedback(data.feedback);
+
+      setFeedback(responseBody.feedback);
     } catch (error) {
+      console.error("Error:", error); // Log the error
       setFeedback(`❌ Error: ${error.message}`);
     }
   };
-  
 
   const handleNextQuestion = () => {
     setCurrentQuestion((prev) => (prev + 1) % questions.length);
