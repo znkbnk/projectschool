@@ -27,7 +27,7 @@ const InterviewTasks = () => {
 
   const handleRunCode = async () => {
     try {
-      const response = await fetch('https://projectschool404-4c33494b2162.herokuapp.com/run', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/run`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,6 +47,8 @@ const InterviewTasks = () => {
       setFeedback(`❌ Error: ${error.message}`);
     }
   };
+  
+  
   
   const handleNextQuestion = () => {
     setCurrentQuestion((prev) => (prev + 1) % questions.length);
