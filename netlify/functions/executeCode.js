@@ -64,16 +64,20 @@ exports.handler = async (event) => {
     const context = vm.createContext(sandbox);
 
     // Wrap code in a function for testing
-    const func = new vm.Script(`${code}; module.exports = userFunction;`);
+    const func = new vm.Script(`${code}; module.exports = List;`);  // Adjust to export List function
     const result = func.runInContext(context);
 
     // Run test cases
     const results = testCases.map(({ inputs, expectedOutput }) => {
-      const testResult = result(...inputs);
+      const testResult = result(...inputs);  // Get the result from the user's function
+
+      // Convert the result to HTML string if necessary
+      const resultString = testResult.outerHTML || testResult;
+
       return {
-        passed: JSON.stringify(testResult) === JSON.stringify(expectedOutput),
+        passed: resultString.trim() === expectedOutput.trim(),
         inputs,
-        result: testResult,
+        result: resultString,
         expectedOutput,
       };
     });
@@ -90,9 +94,7 @@ exports.handler = async (event) => {
               .filter((test) => !test.passed)
               .map(
                 (test) =>
-                  `Inputs: ${JSON.stringify(test.inputs)}, Expected: ${
-                    test.expectedOutput
-                  }, Got: ${test.result}`
+                  `Inputs: ${JSON.stringify(test.inputs)}, Expected: ${test.expectedOutput}, Got: ${test.result}`
               )
               .join("\n")}`,
       }),
