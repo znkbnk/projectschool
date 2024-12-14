@@ -27,27 +27,27 @@ const InterviewTasks = () => {
 
   const handleRunCode = async () => {
     setFeedback("⏳ Running your code...");
-  
+
     try {
       const response = await fetch("https://projectschool.dev/.netlify/functions/executeCode", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code: userCode, testCases: question.testCases }),
+        body: JSON.stringify({
+          code: userCode,
+          testCases: question.testCases,
+        }),
       });
-  
-      // Check if the response is empty or invalid
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-  
+
       const data = await response.json();
       setFeedback(data.feedback);
     } catch (error) {
       setFeedback(`❌ Error: ${error.message}`);
     }
   };
-  
-  
 
   const handleNextQuestion = () => {
     setCurrentQuestion((prev) => (prev + 1) % questions.length);
@@ -90,7 +90,7 @@ const InterviewTasks = () => {
 
         <div className={styles.codeEditor}>
           <textarea
-            placeholder='Type your code here...'
+            placeholder="Type your code here..."
             className={styles.textArea}
             value={userCode}
             onChange={handleTextAreaChange}
