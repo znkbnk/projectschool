@@ -1,4 +1,6 @@
 const vm = require("vm");
+const React = require("react");
+const ReactDOMServer = require("react-dom/server");
 
 exports.handler = async (event) => {
   const allowedOrigins = ['http://localhost:3000', 'https://projectschool.dev'];
@@ -60,24 +62,28 @@ exports.handler = async (event) => {
 
   try {
     // Create a sandbox environment for executing code
-    const sandbox = {};
+    const sandbox = {
+      React,
+      ReactDOMServer,
+      List: null, // Placeholder for user's List component
+    };
     const context = vm.createContext(sandbox);
 
-    // Wrap code in a function for testing
+    // Wrap code in a function for testing and evaluate the code in the sandbox
     const func = new vm.Script(`${code}; module.exports = List;`);  // Adjust to export List function
-    const result = func.runInContext(context);
+    func.runInContext(context);
 
     // Run test cases
     const results = testCases.map(({ inputs, expectedOutput }) => {
-      const testResult = result(...inputs);  // Get the result from the user's function
+      const listComponent = sandbox.List;  // Get the List component from the sandbox
 
-      // Convert the result to HTML string if necessary
-      const resultString = testResult.outerHTML || testResult;
+      // Render the component to static HTML
+      const renderedOutput = ReactDOMServer.renderToStaticMarkup(React.createElement(listComponent, ...inputs));
 
       return {
-        passed: resultString.trim() === expectedOutput.trim(),
+        passed: renderedOutput.trim() === expectedOutput.trim(),
         inputs,
-        result: resultString,
+        result: renderedOutput,
         expectedOutput,
       };
     });
