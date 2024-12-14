@@ -36,7 +36,7 @@ exports.handler = async (event) => {
   try {
     parsedBody = JSON.parse(event.body);
   } catch (error) {
-    console.log("Error parsing JSON:", error); // Log any parsing error
+    console.log("Error parsing JSON:", error);
     return {
       statusCode: 400,
       headers,
@@ -45,6 +45,7 @@ exports.handler = async (event) => {
       }),
     };
   }
+  
 
   const { code, testCases } = parsedBody;
 
@@ -59,6 +60,7 @@ exports.handler = async (event) => {
       }),
     };
   }
+  
   
 
   try {
