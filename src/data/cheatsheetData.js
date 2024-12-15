@@ -14,7 +14,7 @@ const cheatsheetData = [
         title: "",
         subtitle: "useState Hook",
         details: ["Manages the state of the theme."],
-        image: "./cheatsheetImages/task1/1.webp",
+        image: "/images/cheatsheetImages/task1/1.webp",
       },
       {
         title: "",
@@ -22,7 +22,7 @@ const cheatsheetData = [
         details: [
           "Updates the document class and local storage when the theme changes.",
         ],
-        image: "./cheatsheetImages/task1/2.webp",
+        image: "/images/cheatsheetImages/task1/2.webp",
       },
       {
         title: "Functions",
@@ -30,13 +30,13 @@ const cheatsheetData = [
         details: [
           "Retrieves the current theme from local storage or defaults to 'light-theme'.",
         ],
-        image: "./cheatsheetImages/task1/4.webp",
+        image: "/images/cheatsheetImages/task1/4.webp",
       },
       {
         title: "",
         subtitle: "toggleTheme",
         details: ["Toggles between 'light-theme' and 'dark-theme'."],
-        image: "./cheatsheetImages/task1/6.webp",
+        image: "/images/cheatsheetImages/task1/6.webp",
       },
     ],
   },
@@ -49,7 +49,7 @@ const cheatsheetData = [
         details: [
           "The useState hook is used to manage state within functional components. Here, we create state variables for weight, height, BMI, and the message to keep track of user inputs and calculation results.",
         ],
-        image: "./cheatsheetImages/task2/1.webp",
+        image: "/images/cheatsheetImages/task2/1.webp",
       },
       {
         title: "Handle Input Changes",
@@ -57,7 +57,7 @@ const cheatsheetData = [
         details: [
           "Controlled components in React use state to manage form inputs. The onChange event handlers ensure that the state variables weight and height are updated with the current values of the input fields as the user types.",
         ],
-        image: "./cheatsheetImages/task2/2.webp",
+        image: "/images/cheatsheetImages/task2/2.webp",
       },
       {
         title: "Calculate BMI",
@@ -65,7 +65,7 @@ const cheatsheetData = [
         details: [
           "The BMI calculation requires converting height to meters and using the BMI formula. This function handles the computation and ensures that valid inputs are provided before performing the calculation. It also updates the state with the calculated BMI and a message indicating the BMI category.",
         ],
-        image: "./cheatsheetImages/task2/3.webp",
+        image: "/images/cheatsheetImages/task2/3.webp",
       },
       {
         title: "Determine BMI Category",
@@ -73,7 +73,7 @@ const cheatsheetData = [
         details: [
           "This function uses the calculated BMI value to determine the user's BMI category based on predefined ranges. It returns a message that categorizes the BMI as underweight, normal, overweight, or other categories.",
         ],
-        image: "./cheatsheetImages/task2/4.webp",
+        image: "/images/cheatsheetImages/task2/4.webp",
       },
       {
         title: "Reset Form",
@@ -81,7 +81,7 @@ const cheatsheetData = [
         details: [
           "Providing a reset button allows users to clear all the data from the form and reset the component's state. This enhances user experience by allowing users to quickly start over with new inputs.",
         ],
-        image: "./cheatsheetImages/task2/5.webp",
+        image: "/images/cheatsheetImages/task2/5.webp",
       },
     ],
   },
@@ -96,7 +96,7 @@ const cheatsheetData = [
           "'useState' initializes theme with a value from local storage using the 'getStorageTheme' function.",
           "'setTheme' is a function to update the state.",
         ],
-        image: "./cheatsheetImages/task3/1.webp",
+        image: "/images/cheatsheetImages/task3/1.webp",
       },
 
       {
@@ -106,7 +106,7 @@ const cheatsheetData = [
           "'useEffect' is used for side effects, such as changing the document's class or updating local storage when theme changes.",
           "The second argument, [theme], specifies that the effect runs every time theme changes.",
         ],
-        image: "./cheatsheetImages/task3/2.webp",
+        image: "/images/cheatsheetImages/task3/2.webp",
       },
 
       {
@@ -116,7 +116,7 @@ const cheatsheetData = [
           "Functions are reusable blocks of code. 'toggleTheme' switches the current theme based on its value.",
           "This function is called when the button is clicked.",
         ],
-        image: "./cheatsheetImages/task3/3.webp",
+        image: "/images/cheatsheetImages/task3/3.webp",
       },
       {
         title: "Rendering Articles",
@@ -125,7 +125,7 @@ const cheatsheetData = [
           "Mapping over an array to render components is common in React. Here, 'data.map' iterates through data and renders an Article component for each item.",
           "key is a unique identifier for each item in the list, helping React optimize rendering.",
         ],
-        image: "./cheatsheetImages/task3/4.webp",
+        image: "/images/cheatsheetImages/task3/4.webp",
       },
       {
         title: "Moment.js for Date Formatting",
@@ -134,7 +134,7 @@ const cheatsheetData = [
           "Moment.js is a library for date manipulation. It formats the date prop into a human-readable string.",
           "This enhances the user experience by displaying dates in a more accessible way.",
         ],
-        image: "./cheatsheetImages/task3/5.webp",
+        image: "/images/cheatsheetImages/task3/5.webp",
       },
     ],
   },
@@ -148,7 +148,7 @@ const cheatsheetData = [
           "In React, state is used to manage dynamic data in the component. Here, 'search' holds the search query entered by the user, and 'contacts' holds the list of contact data from data.js",
           "A React hook used to initialize state. 'setSearch' and 'setContacts' are functions used to update the 'search' and 'contacts' state, respectively.",
         ],
-        image: "./cheatsheetImages/task4/1.webp",
+        image: "/images/cheatsheetImages/task4/1.webp",
       },
       {
         title: "Handling Input Changes",
@@ -157,7 +157,7 @@ const cheatsheetData = [
           "A function is used to define a specific task. Here, the 'handleSearchChange' function updates the 'search' state when the user types in the input field.",
           "e.target.value: Captures the current value typed by the user.",
         ],
-        image: "./cheatsheetImages/task4/2.webp",
+        image: "/images/cheatsheetImages/task4/2.webp",
       },
       {
         title: "Sorting Contacts by First Name",
@@ -167,7 +167,7 @@ const cheatsheetData = [
           "spread operator (...contacts): It creates a copy of the contacts array before sorting, which avoids mutating the original state.",
           "setContacts: Updates the contacts state with the sorted data.",
         ],
-        image: "./cheatsheetImages/task4/3.webp",
+        image: "/images/cheatsheetImages/task4/3.webp",
       },
       {
         title: "JSX: Rendering the Form Input and Table",
@@ -175,7 +175,7 @@ const cheatsheetData = [
         details: [
           "Form.Control: A Bootstrap input field to enter the search query. The 'onChange' event handler listens for user input and triggers 'handleSearchChange'.",
         ],
-        image: "./cheatsheetImages/task4/4.webp",
+        image: "/images/cheatsheetImages/task4/4.webp",
       },
       {
         title: "",
@@ -183,7 +183,7 @@ const cheatsheetData = [
         details: [
           "Button component: A Bootstrap button that calls the 'sortName' function when clicked, sorting the contacts.",
         ],
-        image: "./cheatsheetImages/task4/5.webp",
+        image: "/images/cheatsheetImages/task4/5.webp",
       },
       {
         title: "",
@@ -192,7 +192,7 @@ const cheatsheetData = [
           "Table component: This uses the Bootstrap 'Table' component to render the list of contacts in a tabular format. The 'filter' method is used to display only contacts that match the search input.",
           "map method: It loops through each contact and displays the relevant information in the table rows.",
         ],
-        image: "./cheatsheetImages/task4/6.webp",
+        image: "/images/cheatsheetImages/task4/6.webp",
       },
       {
         title: "Filtering Contacts",
@@ -200,7 +200,7 @@ const cheatsheetData = [
         details: [
           "filter method: Filters the contacts based on the search input. If the 'search' string is empty, it returns all contacts. Otherwise, it returns only those contacts whose first name includes the search term.",
         ],
-        image: "./cheatsheetImages/task4/7.webp",
+        image: "/images/cheatsheetImages/task4/7.webp",
       },
     ],
   },
@@ -219,7 +219,7 @@ const cheatsheetData = [
           "'correctAnswers': Tracks the number of correct answers.",
           "'incorrectAnswers': Tracks the number of incorrect answers.",
         ],
-        image: "./cheatsheetImages/task5/1.webp",
+        image: "/images/cheatsheetImages/task5/1.webp",
       },
       {
         title: "Array of Questions",
@@ -228,7 +228,7 @@ const cheatsheetData = [
           "Array: Stores a collection of objects, each containing a 'questionText' and an 'answerOptions' array.",
           "'answerOptions': Each object inside 'answerOptions' holds an answerText and a boolean 'isCorrect' to mark if the answer is correct.",
         ],
-        image: "./cheatsheetImages/task5/2.webp",
+        image: "/images/cheatsheetImages/task5/2.webp",
       },
       {
         title: "Rendering Questions and Answers",
@@ -238,7 +238,7 @@ const cheatsheetData = [
           "Mapping over answer options: map() iterates over each answer option and renders a button for each one.",
           "onClick Event: When a button is clicked, it calls 'handleAnswerButtonClick', passing whether the selected answer is correct.",
         ],
-        image: "./cheatsheetImages/task5/3.webp",
+        image: "/images/cheatsheetImages/task5/3.webp",
       },
       {
         title: "Answer Button Handling",
@@ -249,7 +249,7 @@ const cheatsheetData = [
           "State Updates: Increments 'score' and 'correctAnswers' if correct, or 'incorrectAnswers' if incorrect.",
           "Next Question: Moves to the next question or calls 'finishQuiz' if the quiz is over.",
         ],
-        image: "./cheatsheetImages/task5/4.webp",
+        image: "/images/cheatsheetImages/task5/4.webp",
       },
       {
         title: "Finishing the Quiz",
@@ -257,7 +257,7 @@ const cheatsheetData = [
         details: [
           "finishQuiz: Updates 'currentQuestion' to a value beyond the number of questions, which triggers the score section to render.",
         ],
-        image: "./cheatsheetImages/task5/5.webp",
+        image: "/images/cheatsheetImages/task5/5.webp",
       },
       {
         title: "Conditional Rendering",
@@ -265,7 +265,7 @@ const cheatsheetData = [
         details: [
           "Conditional Rendering: Displays either the score section or the question section based on whether the quiz is finished (currentQuestion >= questions.length).",
         ],
-        image: "./cheatsheetImages/task5/6.webp",
+        image: "/images/cheatsheetImages/task5/6.webp",
       },
     ],
   },
@@ -280,7 +280,7 @@ const cheatsheetData = [
           "Here, 'questions' holds the state of the d'ata, and 'setQuestions' is the function used to update that state.",
           "State is used to store information that changes over time, and it re-renders the component when updated.",
         ],
-        image: "./cheatsheetImages/task6/1.webp",
+        image: "/images/cheatsheetImages/task6/1.webp",
       },
       {
         title: "Mapping Over an Array",
@@ -291,7 +291,7 @@ const cheatsheetData = [
           "'key={question.id}' ensures each item has a unique identifier, which is important for React’s reconciliation process to optimize rendering.",
           "'{...question}' passes all properties of the 'question' object (like 'title' and 'info') as props to the 'Question' component.",
         ],
-        image: "./cheatsheetImages/task6/2.webp",
+        image: "/images/cheatsheetImages/task6/2.webp",
       },
       {
         title: "Component Props",
@@ -300,7 +300,7 @@ const cheatsheetData = [
           "Props are arguments passed from parent components to child components. Here, title and info are destructured from the props object.",
           "Props allow data to be passed from the App component to each Question component.",
         ],
-        image: "./cheatsheetImages/task6/3.webp",
+        image: "/images/cheatsheetImages/task6/3.webp",
       },
       {
         title: "Event Handling",
@@ -310,7 +310,7 @@ const cheatsheetData = [
           "Clicking the button switches between showing (true) and hiding (false) the information.",
           "This is a common way to toggle visibility in React using the component’s state.",
         ],
-        image: "./cheatsheetImages/task6/4.webp",
+        image: "/images/cheatsheetImages/task6/4.webp",
       },
       {
         title: "Conditional Rendering",
@@ -319,7 +319,7 @@ const cheatsheetData = [
         details: [
           "This is used to show or hide the question’s details based on the user's interaction.",
         ],
-        image: "./cheatsheetImages/task6/5.webp",
+        image: "/images/cheatsheetImages/task6/5.webp",
       },
       {
         title: "Icons for UI Feedback",
@@ -328,7 +328,7 @@ const cheatsheetData = [
         details: [
           "This provides visual feedback to the user, indicating whether the question’s details are visible or not.",
         ],
-        image: "./cheatsheetImages/task6/6.webp",
+        image: "/images/cheatsheetImages/task6/6.webp",
       },
     ],
   },
@@ -343,7 +343,7 @@ const cheatsheetData = [
           "'useState' is used to manage the state of the people array, which holds the list of individuals. 'data' is initially imported and assigned as the default value.",
           "'setPeople([])' clears the list when the 'clear all' button is clicked.",
         ],
-        image: "./cheatsheetImages/task7/1.webp",
+        image: "/images/cheatsheetImages/task7/1.webp",
       },
       {
         title: "",
@@ -351,7 +351,7 @@ const cheatsheetData = [
         details: [
           "'onClick' is an event handler that listens for button clicks. When clicked, the state of 'people' is updated to an empty array, clearing the list.",
         ],
-        image: "./cheatsheetImages/task7/2.webp",
+        image: "/images/cheatsheetImages/task7/2.webp",
       },
       {
         title: "",
@@ -359,7 +359,7 @@ const cheatsheetData = [
         details: [
           "The List component is responsible for displaying the filtered list of people who have birthdays today, which is calculated using BirthdayLogic.",
         ],
-        image: "./cheatsheetImages/task7/3.webp",
+        image: "/images/cheatsheetImages/task7/3.webp",
       },
       {
         title: "",
@@ -367,7 +367,7 @@ const cheatsheetData = [
         details: [
           "'Date' objects are used to get today's date and format it as MM-DD to compare with each person’s date of birth (DOB).",
         ],
-        image: "./cheatsheetImages/task7/4.webp",
+        image: "/images/cheatsheetImages/task7/4.webp",
       },
       {
         title: "",
@@ -375,7 +375,7 @@ const cheatsheetData = [
         details: [
           "The 'filter()' function is used to create a new array, 'birthdaysToday', by checking whether each person’s birthday matches today’s date.",
         ],
-        image: "./cheatsheetImages/task7/5.webp",
+        image: "/images/cheatsheetImages/task7/5.webp",
       },
       {
         title: "",
@@ -383,7 +383,7 @@ const cheatsheetData = [
         details: [
           "The 'List' component receives 'people' as props, which contains an array of people who have birthdays today. Props allow data to be passed down from parent components (like App) to child components (like List).",
         ],
-        image: "./cheatsheetImages/task7/6.webp",
+        image: "/images/cheatsheetImages/task7/6.webp",
       },
       {
         title: "",
@@ -391,7 +391,7 @@ const cheatsheetData = [
         details: [
           "Conditional rendering is used to display the list only if there are birthdays today (people.length > 0).",
         ],
-        image: "./cheatsheetImages/task7/7.webp",
+        image: "/images/cheatsheetImages/task7/7.webp",
       },
       {
         title: "",
@@ -399,7 +399,7 @@ const cheatsheetData = [
         details: [
           "The 'map()' function iterates over the 'people' array and returns JSX for each person, which includes their 'id', 'name', 'age', and 'image'.",
         ],
-        image: "./cheatsheetImages/task7/8.webp",
+        image: "/images/cheatsheetImages/task7/8.webp",
       },
     ],
   },
@@ -415,7 +415,7 @@ const cheatsheetData = [
           "shadows: Stores an array of shadow styles as strings. Each string represents one layer of a CSS box-shadow.",
           "controls: Manages the number of ControlBox components dynamically rendered on the UI. Each control corresponds to a box shadow layer.",
         ],
-        image: "./cheatsheetImages/task8/1.webp",
+        image: "/images/cheatsheetImages/task8/1.webp",
       },
       {
         title: "",
@@ -426,7 +426,7 @@ const cheatsheetData = [
           "s: Object representing shadow properties (x, y, blur, spread, color, and inset).",
           "id: Index of the shadow layer being updated.",
         ],
-        image: "./cheatsheetImages/task8/2.webp",
+        image: "/images/cheatsheetImages/task8/2.webp",
       },
       {
         title: "",
@@ -435,7 +435,7 @@ const cheatsheetData = [
           "A new control is appended to the controls array, allowing another ControlBox to render.",
           "A blank shadow string is added to the shadows array, ready to be filled in when the user interacts with the new ControlBox.",
         ],
-        image: "./cheatsheetImages/task8/3.webp",
+        image: "/images/cheatsheetImages/task8/3.webp",
       },
       {
         title: "",
@@ -444,7 +444,7 @@ const cheatsheetData = [
           "Checks if there is more than one layer present.",
           "Uses pop() to remove the last control and shadow, updating the state with setControls and setShadows.",
         ],
-        image: "./cheatsheetImages/task8/4.webp",
+        image: "/images/cheatsheetImages/task8/4.webp",
       },
       {
         title: "",
@@ -454,7 +454,7 @@ const cheatsheetData = [
           "id={index}: The id prop is passed to identify which shadow is being updated.",
           "updateShadow={updateShadow}: Passes the updateShadow function as a prop, allowing ControlBox to update the corresponding shadow in the parent component (App).",
         ],
-        image: "./cheatsheetImages/task8/5.webp",
+        image: "/images/cheatsheetImages/task8/5.webp",
       },
       {
         title: "",
@@ -462,7 +462,7 @@ const cheatsheetData = [
         details: [
           "The onClick event handler is used to call the respective function. addShadow adds a new shadow layer, and undoAddLayer removes the last one.",
         ],
-        image: "./cheatsheetImages/task8/6.webp",
+        image: "/images/cheatsheetImages/task8/6.webp",
       },
     ],
   },
@@ -475,7 +475,7 @@ const cheatsheetData = [
         details: [
           "useState(false) creates a 'startAgain' state, which controls when the game should reset.",
         ],
-        image: "./cheatsheetImages/task9/1.webp",
+        image: "/images/cheatsheetImages/task9/1.webp",
       },
       {
         title: "",
@@ -484,7 +484,7 @@ const cheatsheetData = [
           "When the 'Start Again' button is clicked, the 'startAgain' state is set to 'true', which triggers a reset of the game.",
           "After 100 milliseconds, it resets to false, allowing the user to start the game again.",
         ],
-        image: "./cheatsheetImages/task9/2.webp",
+        image: "/images/cheatsheetImages/task9/2.webp",
       },
       {
         title: "",
@@ -492,7 +492,7 @@ const cheatsheetData = [
         details: [
           "The 'Cards' component is passed the 'startAgain' prop, which tells it to shuffle and reset the cards when the game restarts.",
         ],
-        image: "./cheatsheetImages/task9/3.webp",
+        image: "/images/cheatsheetImages/task9/3.webp",
       },
       {
         title: "Card Component",
@@ -500,7 +500,7 @@ const cheatsheetData = [
         details: [
           "The 'Card' component receives 3 props: item, id, and handleClick. Props are used to pass data from the 'Cards' component.",
         ],
-        image: "./cheatsheetImages/task9/4.webp",
+        image: "/images/cheatsheetImages/task9/4.webp",
       },
       {
         title: "",
@@ -508,7 +508,7 @@ const cheatsheetData = [
         details: [
           "The card's class changes based on its status (item.stat). It can be 'correct', 'wrong', or '' (empty).",
         ],
-        image: "./cheatsheetImages/task9/5.webp",
+        image: "/images/cheatsheetImages/task9/5.webp",
       },
       {
         title: "",
@@ -516,7 +516,7 @@ const cheatsheetData = [
         details: [
           "onClick={() => handleClick(id)} is an event handler that calls the 'handleClick' function from 'Cards' when a card is clicked.",
         ],
-        image: "./cheatsheetImages/task9/6.webp",
+        image: "/images/cheatsheetImages/task9/6.webp",
       },
       {
         title: "Cards Component",
@@ -524,7 +524,7 @@ const cheatsheetData = [
         details: [
           "setItems([...items].sort(() => Math.random() - 0.5)) shuffles the card array at the beginning and when the game restarts.",
         ],
-        image: "./cheatsheetImages/task9/7.webp",
+        image: "/images/cheatsheetImages/task9/7.webp",
       },
       {
         title: "",
@@ -532,7 +532,7 @@ const cheatsheetData = [
         details: [
           "useEffect listens for changes in the startAgain prop. When it's true, it resets the items and previous selection.",
         ],
-        image: "./cheatsheetImages/task9/8.webp",
+        image: "/images/cheatsheetImages/task9/8.webp",
       },
       {
         title: "",
@@ -540,7 +540,7 @@ const cheatsheetData = [
         details: [
           "'prev' holds the index of the previously clicked card. If no card has been clicked, 'prev' is -1.",
         ],
-        image: "./cheatsheetImages/task9/9.webp",
+        image: "/images/cheatsheetImages/task9/9.webp",
       },
       {
         title: "",
@@ -548,7 +548,7 @@ const cheatsheetData = [
         details: [
           "The 'check' function compares the 'id' of the current card with the previous card. If they match, both are marked as 'correct', otherwise, they are temporarily marked 'wrong'.",
         ],
-        image: "./cheatsheetImages/task9/10.webp",
+        image: "/images/cheatsheetImages/task9/10.webp",
       },
       {
         title: "",
@@ -556,7 +556,7 @@ const cheatsheetData = [
         details: [
           "The handleClick function controls the logic when a card is clicked. If it's the first card, its stat is set to 'active'. If it's the second card, the check function compares them.",
         ],
-        image: "./cheatsheetImages/task9/11.webp",
+        image: "/images/cheatsheetImages/task9/11.webp",
       },
     ],
   },
@@ -572,7 +572,7 @@ const cheatsheetData = [
           "error: Boolean state for handling invalid input.",
           "list: Stores a list of shades generated from the input color using the 'Values' library.",
         ],
-        image: "./cheatsheetImages/task10/1.webp",
+        image: "/images/cheatsheetImages/task10/1.webp",
       },
       {
         title: "",
@@ -584,7 +584,7 @@ const cheatsheetData = [
           "setError(true): Displays an error when an invalid color is input.",
           "Use 'try...catch' for error handling when working with external libraries or user inputs.",
         ],
-        image: "./cheatsheetImages/task10/2.webp",
+        image: "/images/cheatsheetImages/task10/2.webp",
       },
       {
         title: "",
@@ -594,7 +594,7 @@ const cheatsheetData = [
           "The onSubmit event on the 'form' triggers the 'handleSubmit' function.",
           "{error ? 'error' : null} conditionally adds the error class if the user enters invalid input.",
         ],
-        image: "./cheatsheetImages/task10/3.webp",
+        image: "/images/cheatsheetImages/task10/3.webp",
       },
       {
         title: "",
@@ -605,7 +605,7 @@ const cheatsheetData = [
           "{...color}: Destructures and passes all color properties as props.",
           "hexColor: Specific prop for the color's hex value.",
         ],
-        image: "./cheatsheetImages/task10/4.webp",
+        image: "/images/cheatsheetImages/task10/4.webp",
       },
       {
         title: "SingleColor Component",
@@ -616,7 +616,7 @@ const cheatsheetData = [
           "hexValue: The hex string of the color, prefixed with #.",
           "The 'rgb' and 'hexColor' props are derived from the parent 'App' component and used to display and style the color.",
         ],
-        image: "./cheatsheetImages/task10/5.webp",
+        image: "/images/cheatsheetImages/task10/5.webp",
       },
       {
         title: "",
@@ -625,7 +625,7 @@ const cheatsheetData = [
           "navigator.clipboard.writeText(hexValue): Copies the hex color code to the clipboard.",
           "setAlert(true): Displays an alert message confirming the color has been copied.",
         ],
-        image: "./cheatsheetImages/task10/6.webp",
+        image: "/images/cheatsheetImages/task10/6.webp",
       },
       {
         title: "",
@@ -635,7 +635,7 @@ const cheatsheetData = [
           "The style prop sets the backgroundColor using the RGB values.",
           "onClick={copyToClipboard} triggers the copyToClipboard function when the user clicks the color box.",
         ],
-        image: "./cheatsheetImages/task10/7.webp",
+        image: "/images/cheatsheetImages/task10/7.webp",
       },
     ],
   },
@@ -651,7 +651,7 @@ const cheatsheetData = [
           "Initial state values are set to the 'min' and 'max' props.",
           "'setMinVal' and 'setMaxVal' are used to update the state whenever the slider values change.",
         ],
-        image: "./cheatsheetImages/task11/1.webp",
+        image: "/images/cheatsheetImages/task11/1.webp",
       },
       {
         title: "",
@@ -660,7 +660,7 @@ const cheatsheetData = [
           "'useRef' is used to directly access and manipulate DOM elements ('leftval', 'rightval', and 'range').",
           "This allows us to move the sliders dynamically by changing their position in the DOM without causing a full re-render of the component.",
         ],
-        image: "./cheatsheetImages/task11/2.webp",
+        image: "/images/cheatsheetImages/task11/2.webp",
       },
       {
         title: "",
@@ -670,7 +670,7 @@ const cheatsheetData = [
           "When the slider is moved, the 'onChange' event updates 'minVal' or 'maxVal' using the 'setMinVal' or 'setMaxVal' functions.",
           "The 'Math.min' and 'Math.max' methods ensure that the sliders don't cross over each other by limiting their values.",
         ],
-        image: "./cheatsheetImages/task11/3.webp",
+        image: "/images/cheatsheetImages/task11/3.webp",
       },
       {
         title: "",
@@ -680,7 +680,7 @@ const cheatsheetData = [
           "The position (left) and the transform properties are dynamically set on the sliders (leftval, rightval) based on the current values.",
           "This ensures the sliders visually move as the user interacts with them.",
         ],
-        image: "./cheatsheetImages/task11/4.webp",
+        image: "/images/cheatsheetImages/task11/4.webp",
       },
       {
         title: "",
@@ -689,7 +689,7 @@ const cheatsheetData = [
           "useCallback memoizes the getPercent function to avoid recalculating the percentage every time the component renders.",
           "This is useful for performance optimization when the same function is used multiple times within useEffect.",
         ],
-        image: "./cheatsheetImages/task11/5.webp",
+        image: "/images/cheatsheetImages/task11/5.webp",
       },
       {
         title: "",
@@ -698,7 +698,7 @@ const cheatsheetData = [
           "'PropTypes' is used to ensure the 'min', 'max', and 'onChange' props are passed correctly to the component.",
           "This provides type safety, ensuring that the correct types of data are used.",
         ],
-        image: "./cheatsheetImages/task11/6.webp",
+        image: "/images/cheatsheetImages/task11/6.webp",
       },
     ],
   },
@@ -713,7 +713,7 @@ const cheatsheetData = [
           "Use 'useState' to manage and track form data.",
           "Separate state for error messages and styles helps keep the form dynamic.",
         ],
-        image: "./cheatsheetImages/task12/1.webp",
+        image: "/images/cheatsheetImages/task12/1.webp",
       },
       {
         title: "",
@@ -727,7 +727,7 @@ const cheatsheetData = [
           "Use conditionals to check input validity.",
           "Dynamically update error messages and border colors for a better user experience.",
         ],
-        image: "./cheatsheetImages/task12/2.webp",
+        image: "/images/cheatsheetImages/task12/2.webp",
       },
       {
         title: "",
@@ -746,7 +746,7 @@ const cheatsheetData = [
         details: [
           "Always use e.preventDefault() to stop the default form behavior if you are handling form submission via JavaScript.",
         ],
-        image: "./cheatsheetImages/task12/3.webp",
+        image: "/images/cheatsheetImages/task12/3.webp",
       },
     ],
   },
@@ -762,7 +762,7 @@ const cheatsheetData = [
           "The necessary components from Chart.js are imported and registered to ensure the chart functions correctly.",
           "Always register Chart.js components like 'CategoryScale', 'LinearScale', 'BarElement', 'Tooltip', and 'Legend' before using them in a React component.",
         ],
-        image: "./cheatsheetImages/taskLive2/1.webp",
+        image: "/images/cheatsheetImages/taskLive2/1.webp",
       },
       {
         title: "",
@@ -772,7 +772,7 @@ const cheatsheetData = [
           "'userData': An array representing the number of users for each age group.",
           "'useState(null)': 'filteredData' is used to manage the filtered version of the user data. Initially, it's set to 'null' because no filtering is applied when the page first loads.",
         ],
-        image: "./cheatsheetImages/taskLive2/2.webp",
+        image: "/images/cheatsheetImages/taskLive2/2.webp",
       },
       {
         title: "",
@@ -784,7 +784,7 @@ const cheatsheetData = [
           "'borderWidth': Defines the thickness of the bar borders.",
           "The 'data' object is the main configuration for Chart.js, allowing you to customize labels, datasets, and styles.",
         ],
-        image: "./cheatsheetImages/taskLive2/3.webp",
+        image: "/images/cheatsheetImages/taskLive2/3.webp",
       },
       {
         title: "",
@@ -795,7 +795,7 @@ const cheatsheetData = [
           "'onClick': Event handler that captures clicks on a specific bar. It retrieves the index of the clicked bar and uses that to determine which age group was selected.",
           "'handleBarClick': Called when a bar is clicked to apply filtering.",
         ],
-        image: "./cheatsheetImages/taskLive2/4.webp",
+        image: "/images/cheatsheetImages/taskLive2/4.webp",
       },
       {
         title: "",
@@ -805,7 +805,7 @@ const cheatsheetData = [
           "'setFilteredData': Updates the chart with the filtered data, changing the dataset to show only the selected age group in a different color.",
           "You can use 'map' to transform arrays and conditionally filter data. This is useful when dynamically updating charts or UI elements based on user input.",
         ],
-        image: "./cheatsheetImages/taskLive2/5.webp",
+        image: "/images/cheatsheetImages/taskLive2/5.webp",
       },
       {
         title: "",
@@ -815,7 +815,7 @@ const cheatsheetData = [
           "The chart also uses the 'options' for customization and event handling.",
           "Use conditional rendering (filteredData || data) to ensure your chart displays the correct data, whether it's the original or filtered version.",
         ],
-        image: "./cheatsheetImages/taskLive2/6.webp",
+        image: "/images/cheatsheetImages/taskLive2/6.webp",
       },
     ],
   },
@@ -832,7 +832,7 @@ const cheatsheetData = [
           "'# Markdown Preview:': The initial value for the 'markdown' state.",
           "The state helps React components to keep track of data between renders. When 'setMarkdown' is called, it updates the markd'own value and re-renders the component.",
         ],
-        image: "./cheatsheetImages/task13/1.webp",
+        image: "/images/cheatsheetImages/task13/1.webp",
       },
       {
         title: "",
@@ -843,7 +843,7 @@ const cheatsheetData = [
           "onChange={(e) => setMarkdown(e.target.value)}: This is an event handler that listens for user input. It triggers when the user types, capturing the new value with 'e.target.value' and updating the 'markdown' state.",
           "Event Handling in React involves passing a function to handle the user interaction (e.g., typing, clicking). The 'onChange' event is used to handle form inputs like 'textarea'.",
         ],
-        image: "./cheatsheetImages/task13/2.webp",
+        image: "/images/cheatsheetImages/task13/2.webp",
       },
     ],
   },
@@ -858,7 +858,7 @@ const cheatsheetData = [
           "'categories': Stores all the unique categories from 'items' plus 'all'.",
           "The useState hook is used to manage the state of the menuItems and categories.",
         ],
-        image: "./cheatsheetImages/task14/1.webp",
+        image: "/images/cheatsheetImages/task14/1.webp",
       },
       {
         title: "Event Handling",
@@ -867,7 +867,7 @@ const cheatsheetData = [
           " The filterItems function filters the items based on the selected category.",
           "When the category is 'all', it resets menuItems to the entire items array. Otherwise, it filters items by category.",
         ],
-        image: "./cheatsheetImages/task14/2.webp",
+        image: "/images/cheatsheetImages/task14/2.webp",
       },
       {
         title: "Categories Component",
@@ -875,13 +875,13 @@ const cheatsheetData = [
         details: [
           "The Categories component accepts categories (array of categories) and filterItems (function to filter menu items) as props.",
         ],
-        image: "./cheatsheetImages/task14/5.webp",
+        image: "/images/cheatsheetImages/task14/5.webp",
       },
       {
         title: "",
         subtitle: "State",
         details: ["Manages the currently active category using useState."],
-        image: "./cheatsheetImages/task14/3.webp",
+        image: "/images/cheatsheetImages/task14/3.webp",
       },
       {
         title: "",
@@ -890,7 +890,7 @@ const cheatsheetData = [
           "The handleCategoryClick function is called when a category button is clicked.",
           "This function triggers the 'filterItems' function from 'App' to update the list of menu items and sets the clicked category as the active one.",
         ],
-        image: "./cheatsheetImages/task14/4.webp",
+        image: "/images/cheatsheetImages/task14/4.webp",
       },
 
       {
@@ -899,7 +899,7 @@ const cheatsheetData = [
         details: [
           "Adds the 'active' class to the button of the currently selected category.",
         ],
-        image: "./cheatsheetImages/task14/6.webp",
+        image: "/images/cheatsheetImages/task14/6.webp",
       },
       {
         title: "Menu Component",
@@ -907,7 +907,7 @@ const cheatsheetData = [
         details: [
           "The Menu component receives items as props, which is an array of menu items.",
         ],
-        image: "./cheatsheetImages/task14/7.webp",
+        image: "/images/cheatsheetImages/task14/7.webp",
       },
       {
         title: "",
@@ -916,7 +916,7 @@ const cheatsheetData = [
           " It uses the .map() method to loop through the 'items' array and display each menu item in a structured format.",
           "Menu item properties like 'id', 'title', 'img', 'desc', and 'price' are destructured for easier use within the JSX.",
         ],
-        image: "./cheatsheetImages/task14/8.webp",
+        image: "/images/cheatsheetImages/task14/8.webp",
       },
     ],
   },
@@ -933,7 +933,7 @@ const cheatsheetData = [
           "'setShowLinks' is the function used to update the state.",
           "'useState(false)' means the links will initially be hidden.",
         ],
-        image: "./cheatsheetImages/task15/1.webp",
+        image: "/images/cheatsheetImages/task15/1.webp",
       },
       {
         title: "",
@@ -945,7 +945,7 @@ const cheatsheetData = [
           "It's helpful for manipulating element styles or sizes.",
           "The 'useRef' doesn't cause re-renders when its value is changed.",
         ],
-        image: "./cheatsheetImages/task15/2.webp",
+        image: "/images/cheatsheetImages/task15/2.webp",
       },
       {
         title: "",
@@ -955,7 +955,7 @@ const cheatsheetData = [
           "Event handling in React involves creating functions like 'toggleLinks' and assigning them to event listeners (e.g., 'onClick').",
           "Inverting the state with '!showLinks' ensures that every click changes the visibility of the links.",
         ],
-        image: "./cheatsheetImages/task15/3.webp",
+        image: "/images/cheatsheetImages/task15/3.webp",
       },
       {
         title: "",
@@ -966,7 +966,7 @@ const cheatsheetData = [
           "The 'useEffect' runs every time 'showLinks' changes, adjusting the height of the container.",
           "Without this, the height transition for the links container would be static or fixed.",
         ],
-        image: "./cheatsheetImages/task15/4.webp",
+        image: "/images/cheatsheetImages/task15/4.webp",
       },
       {
         title: "",
@@ -977,7 +977,7 @@ const cheatsheetData = [
           "The 'onClick' event triggers the 'toggleLinks' function to show or hide the navigation links.",
           "Use components from libraries like 'react-icons' for scalable and lightweight icons.",
         ],
-        image: "./cheatsheetImages/task15/5.webp",
+        image: "/images/cheatsheetImages/task15/5.webp",
       },
       {
         title: "",
@@ -988,7 +988,7 @@ const cheatsheetData = [
           "Each child in a list must have a unique 'key' prop ('id' in this case) to help React optimize rendering.",
           "Use the 'map()' function to easily render multiple elements from an array.",
         ],
-        image: "./cheatsheetImages/task15/6.webp",
+        image: "/images/cheatsheetImages/task15/6.webp",
       },
     ],
   },
@@ -1002,7 +1002,7 @@ const cheatsheetData = [
           "Manage the app's current state, including the current page and followers.",
           "'useState': Initializes state variables 'page' (current page number) and 'followers' (list of followers to display on the current page).",
         ],
-        image: "./cheatsheetImages/task16/1.webp",
+        image: "/images/cheatsheetImages/task16/1.webp",
       },
       {
         title: "",
@@ -1012,7 +1012,7 @@ const cheatsheetData = [
           "'useEffect': Runs when 'data', 'loading', or 'page' changes, updating the list of followers for the current page.",
           "",
         ],
-        image: "./cheatsheetImages/task16/2.webp",
+        image: "/images/cheatsheetImages/task16/2.webp",
       },
       {
         title: "",
@@ -1023,7 +1023,7 @@ const cheatsheetData = [
           "'prevPage': Goes to the previous page, looping to the last if at the first.",
           "'handlePage': Jumps to a specific page number.",
         ],
-        image: "./cheatsheetImages/task16/3.webp",
+        image: "/images/cheatsheetImages/task16/3.webp",
       },
       {
         title: "",
@@ -1032,7 +1032,7 @@ const cheatsheetData = [
           "Display followers for the current page.",
           "Renders a list of followers by passing follower data to the Follower component for display.",
         ],
-        image: "./cheatsheetImages/task16/4.webp",
+        image: "/images/cheatsheetImages/task16/4.webp",
       },
       {
         title: "Follower.js",
@@ -1042,7 +1042,7 @@ const cheatsheetData = [
           "Receives props (avatar_url, login, html_url) and displays the follower's avatar, username, and profile link.",
           "",
         ],
-        image: "./cheatsheetImages/task16/5.webp",
+        image: "/images/cheatsheetImages/task16/5.webp",
       },
       {
         title: "useFetch.js",
@@ -1054,7 +1054,7 @@ const cheatsheetData = [
           "'getProducts': Fetches the follower data and applies pagination.",
           "'useEffect': Ensures getProducts runs when the component mounts.",
         ],
-        image: "./cheatsheetImages/task16/6.webp",
+        image: "/images/cheatsheetImages/task16/6.webp",
       },
       {
         title: "utils.js",
@@ -1064,7 +1064,7 @@ const cheatsheetData = [
           "Breaks the follower data into smaller arrays, each representing a page with 10 followers.",
           "",
         ],
-        image: "./cheatsheetImages/task16/7.webp",
+        image: "/images/cheatsheetImages/task16/7.webp",
       },
     ],
   },
@@ -1080,7 +1080,7 @@ const cheatsheetData = [
           "State is used to store and manage dynamic data (the search results in this case).",
           "Think of 'useState' as a way to make the UI react to changes in data. When 'results' change, the UI will update accordingly.",
         ],
-        image: "./cheatsheetImages/task17/1.webp",
+        image: "/images/cheatsheetImages/task17/1.webp",
       },
       {
         title: "",
@@ -1090,7 +1090,7 @@ const cheatsheetData = [
           "Prevents rendering the list if no search results exist.",
           "Conditional rendering is useful when you only want to display certain parts of the UI based on specific conditions (e.g., results existing or not).",
         ],
-        image: "./cheatsheetImages/task17/2.webp",
+        image: "/images/cheatsheetImages/task17/2.webp",
       },
       {
         title: "",
@@ -1100,7 +1100,7 @@ const cheatsheetData = [
           "This allows the SearchBar component to update the search results in the parent component (App).",
           "Props allow parent-child communication in React. You can pass functions or data from a parent to a child to handle logic outside the child component.",
         ],
-        image: "./cheatsheetImages/task17/3.webp",
+        image: "/images/cheatsheetImages/task17/3.webp",
       },
       {
         title: "SearchBar Component",
@@ -1110,7 +1110,7 @@ const cheatsheetData = [
           "setInput updates the input value when the user types.",
           "State management is essential for handling user input dynamically.",
         ],
-        image: "./cheatsheetImages/task17/4.webp",
+        image: "/images/cheatsheetImages/task17/4.webp",
       },
       {
         title: "",
@@ -1120,7 +1120,7 @@ const cheatsheetData = [
           "Retrieves user data that matches the search query.",
           "This is a basic example of fetching data asynchronously and updating the UI based on user input.",
         ],
-        image: "./cheatsheetImages/task17/5.webp",
+        image: "/images/cheatsheetImages/task17/5.webp",
       },
       {
         title: "",
@@ -1130,7 +1130,7 @@ const cheatsheetData = [
           "To fetch data dynamically as the user types.",
           "'handleChange' is an event handler that allows dynamic interaction with the search input.",
         ],
-        image: "./cheatsheetImages/task17/6.webp",
+        image: "/images/cheatsheetImages/task17/6.webp",
       },
       {
         title: "",
@@ -1140,7 +1140,7 @@ const cheatsheetData = [
           "To update the state when a user selects a result and reset the search bar.",
           "This function manages the flow after the user has clicked on a search result, updating the app state and UI accordingly.",
         ],
-        image: "./cheatsheetImages/task17/8.webp",
+        image: "/images/cheatsheetImages/task17/8.webp",
       },
       {
         title: "",
@@ -1150,7 +1150,7 @@ const cheatsheetData = [
           "To display the selected user's information dynamically.",
           "This is another example of conditional rendering, which is essential when handling dynamic data.",
         ],
-        image: "./cheatsheetImages/task17/9.webp",
+        image: "/images/cheatsheetImages/task17/9.webp",
       },
 
       {
@@ -1161,7 +1161,7 @@ const cheatsheetData = [
           "To display a search result and allow the user to select it.",
           "Using the 'onClick' event, we can detect when a user selects a search result and handle the selection.",
         ],
-        image: "./cheatsheetImages/task17/7.webp",
+        image: "/images/cheatsheetImages/task17/7.webp",
       },
       {
         title: "SearchResultsList Component",
@@ -1171,7 +1171,7 @@ const cheatsheetData = [
           "To render each user result as an individual clickable item.",
           "Always use 'key' props when rendering lists in React to ensure each item is uniquely identified by React for performance optimization.",
         ],
-        image: "./cheatsheetImages/task17/10.webp",
+        image: "/images/cheatsheetImages/task17/10.webp",
       },
     ],
   },
@@ -1187,7 +1187,7 @@ const cheatsheetData = [
           "'useState(false)' initializes the dropdown as closed (false).",
           "You can toggle the dropdown's visibility by updating the state ('true' for open, 'false' for closed).",
         ],
-        image: "./cheatsheetImages/task18/1.webp",
+        image: "/images/cheatsheetImages/task18/1.webp",
       },
       {
         title: "",
@@ -1197,7 +1197,7 @@ const cheatsheetData = [
           "Refs are useful when you want to access or manipulate DOM elements without triggering a re-render.",
           "'useRef' is ideal for situations like focusing an input field, or in this case, updating the input value without using state.",
         ],
-        image: "./cheatsheetImages/task18/2.webp",
+        image: "/images/cheatsheetImages/task18/2.webp",
       },
       {
         title: "",
@@ -1210,7 +1210,7 @@ const cheatsheetData = [
           "The 'readOnly' attribute prevents the user from typing directly into the input field.",
           "Use 'onBlur' to close the dropdown when clicking outside of the input field.",
         ],
-        image: "./cheatsheetImages/task18/3.webp",
+        image: "/images/cheatsheetImages/task18/3.webp",
       },
       {
         title: "",
@@ -1219,7 +1219,7 @@ const cheatsheetData = [
           "This function toggles the state between 'true' and 'false', effectively opening or closing the dropdown.",
           "Use '!isOpenSelect' to switch between the current state ('true' or 'false').",
         ],
-        image: "./cheatsheetImages/task18/4.webp",
+        image: "/images/cheatsheetImages/task18/4.webp",
       },
       {
         title: "",
@@ -1230,7 +1230,7 @@ const cheatsheetData = [
           "Each list item triggers the 'selectLanguage' function when clicked, updating the input value.",
           "Use '.map()' to dynamically render a list of items. Attach event listeners (onClick) to handle user interactions.",
         ],
-        image: "./cheatsheetImages/task18/5.webp",
+        image: "/images/cheatsheetImages/task18/5.webp",
       },
       {
         title: "",
@@ -1241,7 +1241,7 @@ const cheatsheetData = [
           "'setIsOpenSelect(false)' closes the dropdown after selection.",
           "Use 'e.target.textContent' to capture the text of the clicked option.",
         ],
-        image: "./cheatsheetImages/task18/6.webp",
+        image: "/images/cheatsheetImages/task18/6.webp",
       },
       {
         title: "",
@@ -1251,7 +1251,7 @@ const cheatsheetData = [
           "The 'className' changes based on the 'isOpenSelect' state. When 'active', the icon rotates or changes styling to indicate the dropdown is open.",
           "Use conditional classes to style elements based on component state (e.g., for rotating the caret icon).",
         ],
-        image: "./cheatsheetImages/task18/7.webp",
+        image: "/images/cheatsheetImages/task18/7.webp",
       },
     ],
   },
@@ -1265,7 +1265,7 @@ const cheatsheetData = [
           "Key Prop: 'key={index}' helps React optimize rendering by uniquely identifying each list item.",
           "Props: 'item' is passed as a prop to 'SidebarItem', allowing the child component to receive and use data from its parent.",
         ],
-        image: "./cheatsheetImages/task19/1.webp",
+        image: "/images/cheatsheetImages/task19/1.webp",
       },
       {
         title: "",
@@ -1274,7 +1274,7 @@ const cheatsheetData = [
           "State Management: 'open' holds the state (whether the sidebar item is expanded). 'setOpen' is used to update the state.",
           "useState Hook: Initializes the state to 'false', meaning the sidebar item is collapsed by default.",
         ],
-        image: "./cheatsheetImages/task19/2.webp",
+        image: "/images/cheatsheetImages/task19/2.webp",
       },
       {
         title: "",
@@ -1283,7 +1283,7 @@ const cheatsheetData = [
           "Conditional Rendering: Uses a ternary operator to apply different classes based on the 'open' state. When 'open' is 'true', the 'open' class is applied.",
           "Dynamic Classes: The class name changes depending on the component state, affecting the UI styling (e.g., expanding or collapsing the sidebar item).",
         ],
-        image: "./cheatsheetImages/task19/3.webp",
+        image: "/images/cheatsheetImages/task19/3.webp",
       },
       {
         title: "",
@@ -1292,7 +1292,7 @@ const cheatsheetData = [
           "Event Handling: The 'onClick' event triggers a function to update the 'open' state. When clicked, 'setOpen' toggles the state between 'true' and 'false'.",
           "State Toggle: '!open' inverts the current state (expands or collapses the menu).",
         ],
-        image: "./cheatsheetImages/task19/4.webp",
+        image: "/images/cheatsheetImages/task19/4.webp",
       },
       {
         title: "",
@@ -1301,7 +1301,7 @@ const cheatsheetData = [
           "Recursive Components: If an item has children (item.childrens), it recursively renders 'SidebarItem' for each child, enabling nested submenus.",
           "Mapping: Loops over the children array and renders each child as a 'SidebarItem'.",
         ],
-        image: "./cheatsheetImages/task19/5.webp",
+        image: "/images/cheatsheetImages/task19/5.webp",
       },
       {
         title: "",
@@ -1310,7 +1310,7 @@ const cheatsheetData = [
           "No Children: If the item does not have children (!item.childrens), it renders as a clickable link (<a>).",
           "Optional Props: 'item.path' defines the link's URL; 'item.icon' displays an icon if provided.",
         ],
-        image: "./cheatsheetImages/task19/6.webp",
+        image: "/images/cheatsheetImages/task19/6.webp",
       },
       {
         title: "",
@@ -1319,7 +1319,7 @@ const cheatsheetData = [
           "Mapping: Iterates over the 'items' array from the 'sidebar.json' file and renders a 'SidebarItem' for each element.",
           "Key Prop: Provides a unique 'key' to help React track each item during re-renders.",
         ],
-        image: "./cheatsheetImages/task19/7.webp",
+        image: "/images/cheatsheetImages/task19/7.webp",
       },
     ],
   },
@@ -1334,7 +1334,7 @@ const cheatsheetData = [
           "Destructuring: Functions like 'getTableProps', 'headerGroups', and 'rows' are extracted to manage table rendering, sorting, and row preparation.",
           "useSortBy: Hook used to add sorting capabilities to the table.",
         ],
-        image: "./cheatsheetImages/task20/1.webp",
+        image: "/images/cheatsheetImages/task20/1.webp",
       },
       {
         title: "",
@@ -1343,7 +1343,7 @@ const cheatsheetData = [
           "Columns Definition: Each object inside the array defines a column, with 'Header' being the column name and 'accessor' being the key from the data used to display the corresponding value.",
           "Memoization: 'React.useMemo' is used to optimize performance by memoizing the column structure.",
         ],
-        image: "./cheatsheetImages/task20/2.webp",
+        image: "/images/cheatsheetImages/task20/2.webp",
       },
       {
         title: "",
@@ -1352,7 +1352,7 @@ const cheatsheetData = [
           "Memoizing Data: The useMemo hook is used to avoid recalculating the data on every render.",
           "fakeData: This variable holds mock data (from MOCK_DATA.json), which is then passed into the table as the data source.",
         ],
-        image: "./cheatsheetImages/task20/3.webp",
+        image: "/images/cheatsheetImages/task20/3.webp",
       },
       {
         title: "",
@@ -1362,7 +1362,7 @@ const cheatsheetData = [
           "Sorting Indicators: Shows sorting indicators (🔽 for descending and 🔼 for ascending) based on the sorting state.",
           "Sorting Props: 'getSortByToggleProps' adds sorting capabilities to the column headers.",
         ],
-        image: "./cheatsheetImages/task20/4.webp",
+        image: "/images/cheatsheetImages/task20/4.webp",
       },
       {
         title: "",
@@ -1371,7 +1371,7 @@ const cheatsheetData = [
           "Row Mapping: Loops through 'rows' and calls 'prepareRow(row)' to prepare each row for rendering.",
           "Cell Rendering: For each row, the cells are rendered dynamically with 'row.cells.map(cell => ... )'.",
         ],
-        image: "./cheatsheetImages/task20/5.webp",
+        image: "/images/cheatsheetImages/task20/5.webp",
       },
       {
         title: "",
@@ -1380,7 +1380,7 @@ const cheatsheetData = [
           "Custom Cell Render: The 'Cell' property allows you to define custom content for a cell. In this case, a 'CopyButton' component is rendered, passing the full name as the text.",
           "Accessing Row Data: 'row.original' gives you access to the row's original data (in this case, first_name and last_name).",
         ],
-        image: "./cheatsheetImages/task20/6.webp",
+        image: "/images/cheatsheetImages/task20/6.webp",
       },
       {
         title: "",
@@ -1389,7 +1389,7 @@ const cheatsheetData = [
           "Clipboard API: 'navigator.clipboard.writeText()' copies the provided text to the user's clipboard.",
           "Button Component: This reusable 'CopyButton' displays a button and triggers the 'copyToClipboard' function on click.",
         ],
-        image: "./cheatsheetImages/task20/7.webp",
+        image: "/images/cheatsheetImages/task20/7.webp",
       },
       {
         title: "",
@@ -1397,7 +1397,7 @@ const cheatsheetData = [
         details: [
           "Sorting Indicator: Shows an arrow indicating whether the column is sorted in ascending or descending order based on the 'isSorted' and 'isSortedDesc' properties.",
         ],
-        image: "./cheatsheetImages/task20/8.webp",
+        image: "/images/cheatsheetImages/task20/8.webp",
       },
     ],
   },
@@ -1410,7 +1410,7 @@ const cheatsheetData = [
         details: [
           "Use Material-UI's Typography component for consistent text styling and sizing throughout the application.",
         ],
-        image: "./cheatsheetImages/taskLive3/1.webp",
+        image: "/images/cheatsheetImages/taskLive3/1.webp",
       },
       {
         title: "",
@@ -1418,7 +1418,7 @@ const cheatsheetData = [
         details: [
           "The 'map()' function is essential for rendering lists in React. It ensures that each record is uniquely identified with a 'key' prop, which helps React optimize rendering performance.",
         ],
-        image: "./cheatsheetImages/taskLive3/2.webp",
+        image: "/images/cheatsheetImages/taskLive3/2.webp",
       },
       {
         title: "",
@@ -1426,7 +1426,7 @@ const cheatsheetData = [
         details: [
           "Combining user names with dates in the displayed text provides a clear context for the claims, improving user understanding.",
         ],
-        image: "./cheatsheetImages/taskLive3/3.webp",
+        image: "/images/cheatsheetImages/taskLive3/3.webp",
       },
       {
         title: "",
@@ -1434,7 +1434,7 @@ const cheatsheetData = [
         details: [
           "Using a simple list format for rules enhances readability and helps participants easily find important information.",
         ],
-        image: "./cheatsheetImages/taskLive3/4.webp",
+        image: "/images/cheatsheetImages/taskLive3/4.webp",
       },
     ],
   },
@@ -1449,7 +1449,7 @@ const cheatsheetData = [
           "Here, 'todos' holds the list of todo items, and 'setTodos' is the function to update this state.",
           "To initialize state, pass the default value as an argument to 'useState'.",
         ],
-        image: "./cheatsheetImages/task21/1.webp",
+        image: "/images/cheatsheetImages/task21/1.webp",
       },
       {
         title: "",
@@ -1459,7 +1459,7 @@ const cheatsheetData = [
           "It creates a new todo object with a unique ID (using uuidv4), a task description, and initial values for 'completed' and 'isEditing'.",
           "Always spread the existing state when updating it to maintain its previous values.",
         ],
-        image: "./cheatsheetImages/task21/2.webp",
+        image: "/images/cheatsheetImages/task21/2.webp",
       },
       {
         title: "",
@@ -1469,7 +1469,7 @@ const cheatsheetData = [
           "'filter' creates a new array excluding the todo that matches the ID.",
           "Use 'filter' for immutability; it returns a new array instead of modifying the existing state.",
         ],
-        image: "./cheatsheetImages/task21/3.webp",
+        image: "/images/cheatsheetImages/task21/3.webp",
       },
       {
         title: "",
@@ -1479,7 +1479,7 @@ const cheatsheetData = [
           "It uses 'map' to create a new array with the updated todo.",
           "Always return a new object when updating state to ensure React can detect changes.",
         ],
-        image: "./cheatsheetImages/task21/4.webp",
+        image: "/images/cheatsheetImages/task21/4.webp",
       },
       {
         title: "",
@@ -1489,7 +1489,7 @@ const cheatsheetData = [
           "Similar to toggling completion, it uses 'map' to create a new array with the updated todo.",
           "When modifying objects in state, always use spread syntax to preserve immutability.",
         ],
-        image: "./cheatsheetImages/task21/5.webp",
+        image: "/images/cheatsheetImages/task21/5.webp",
       },
       {
         title: "",
@@ -1499,7 +1499,7 @@ const cheatsheetData = [
           "'e.preventDefault()' prevents the default form submission behavior, allowing for custom handling.",
           "It checks if the input value is not empty before calling 'addTodo'.",
         ],
-        image: "./cheatsheetImages/task21/6.webp",
+        image: "/images/cheatsheetImages/task21/6.webp",
       },
       {
         title: "",
@@ -1509,7 +1509,7 @@ const cheatsheetData = [
           "Here, 'editTodo' and 'task' are received as props, enabling the 'EditTodoForm' to access the necessary functionality and data.",
           "Use destructuring to easily access props in functional components.",
         ],
-        image: "./cheatsheetImages/task21/7.webp",
+        image: "/images/cheatsheetImages/task21/7.webp",
       },
       {
         title: "",
@@ -1519,7 +1519,7 @@ const cheatsheetData = [
           "'toast.success()' creates a success notification.",
           "Notifications improve user experience by providing feedback on actions taken.",
         ],
-        image: "./cheatsheetImages/task21/8.webp",
+        image: "/images/cheatsheetImages/task21/8.webp",
       },
     ],
   },
@@ -1534,7 +1534,7 @@ const cheatsheetData = [
           "'setCurrentIndex': Updates the value of currentIndex.",
           "'useState(0)': Initializes the state variable 'currentIndex' to 0, meaning the first testimonial will be displayed initially.",
         ],
-        image: "./cheatsheetImages/task22/4.webp",
+        image: "/images/cheatsheetImages/task22/4.webp",
       },
       {
         title: "",
@@ -1544,7 +1544,7 @@ const cheatsheetData = [
           "'gsap.to': Animates the '.testimonials' class by changing the background color over 4 seconds, repeating infinitely (repeat: -1) with a 'yoyo' effect (reverses the animation).",
           "GSAP is highly customizable for adding animations and transitions.",
         ],
-        image: "./cheatsheetImages/task22/1.webp",
+        image: "/images/cheatsheetImages/task22/1.webp",
       },
       {
         title: "",
@@ -1554,7 +1554,7 @@ const cheatsheetData = [
           "'handleNextClick': Increases the current index to show the next testimonial. Loops back to the first item when reaching the end.",
           "Using 'modulus' (%) is a common trick for creating circular navigation.",
         ],
-        image: "./cheatsheetImages/task22/2.webp",
+        image: "/images/cheatsheetImages/task22/2.webp",
       },
       {
         title: "",
@@ -1562,7 +1562,7 @@ const cheatsheetData = [
         details: [
           "'testimonials[currentIndex]': Displays the current testimonial's quote and author based on the 'currentIndex' state.",
         ],
-        image: "./cheatsheetImages/task22/3.webp",
+        image: "/images/cheatsheetImages/task22/3.webp",
       },
     ],
   },
@@ -1577,7 +1577,7 @@ const cheatsheetData = [
           "'useSpeechRecognition': A hook from 'react-speech-recognition' that converts speech to text.",
           "'useClipboard': A hook from 'react-use-clipboard' that handles copying text to the clipboard.",
         ],
-        image: "./cheatsheetImages/task23/1.webp"
+        image: "/images/cheatsheetImages/task23/1.webp"
       },
          {
         title: "",
@@ -1588,7 +1588,7 @@ const cheatsheetData = [
           "'useClipboard': Takes two parameters: the text to copy (textToCopy) and an optional settings object (successDuration: 1000), which defines how long the 'Copied!' message will be displayed.",
           "'isCopied': A boolean value that becomes 'true' when the text is successfully copied.",
         ],
-        image: "./cheatsheetImages/task23/2.webp"
+        image: "/images/cheatsheetImages/task23/2.webp"
       },
          {
         title: "",
@@ -1600,7 +1600,7 @@ const cheatsheetData = [
           "'transcript': Holds the text converted from speech.",
           "'browserSupportsSpeechRecognition': Boolean that indicates if the user's browser supports speech recognition.",
         ],
-        image: "./cheatsheetImages/task23/3.webp"
+        image: "/images/cheatsheetImages/task23/3.webp"
       },
          {
         title: "",
@@ -1609,7 +1609,7 @@ const cheatsheetData = [
           "Start Listening Button: Starts speech recognition using 'startListening()'.",
           "Stop Listening Button: Stops speech recognition with 'SpeechRecognition.stopListening()'.",
         ],
-        image: "./cheatsheetImages/task23/4.webp"
+        image: "/images/cheatsheetImages/task23/4.webp"
       },
        
     ],
@@ -1626,7 +1626,7 @@ const cheatsheetData = [
           "Event Handling allows your application to respond to user interactions.",
           "Always extract necessary data from the event object to update the state accordingly.",
         ],
-        image: "./cheatsheetImages/task24/1.webp"
+        image: "/images/cheatsheetImages/task24/1.webp"
       },
          {
         title: "",
@@ -1638,7 +1638,7 @@ const cheatsheetData = [
           "Conditional Logic ensures that actions are performed only when appropriate.",
           "Always validate user input before performing actions to enhance user experience and prevent errors."
         ],
-        image: "./cheatsheetImages/task24/2.webp"
+        image: "/images/cheatsheetImages/task24/2.webp"
       },
          {
         title: "",
@@ -1649,7 +1649,7 @@ const cheatsheetData = [
           "Web APIs can be integrated with React to add advanced functionalities.",
           "Familiarize yourself with browser APIs to extend the capabilities of your React applications."
         ],
-        image: "./cheatsheetImages/task24/3.webp"
+        image: "/images/cheatsheetImages/task24/3.webp"
       },
         
     ],
@@ -1666,7 +1666,7 @@ const cheatsheetData = [
           "Use meaningful names for state variables to reflect their purpose.",
           "Avoid mutating state directly; always use the setter function provided by 'useState'."
         ],
-        image: "./cheatsheetImages/task25/1.webp"
+        image: "/images/cheatsheetImages/task25/1.webp"
       },
          {
         title: "",
@@ -1677,7 +1677,7 @@ const cheatsheetData = [
           "Keep components small and focused on a single responsibility.",
           "Use props to pass data and functions down to child components."
         ],
-        image: "./cheatsheetImages/task25/2.webp"
+        image: "/images/cheatsheetImages/task25/2.webp"
       },
          {
         title: "",
@@ -1688,7 +1688,7 @@ const cheatsheetData = [
           "Use arrow functions or bind methods to avoid losing context for this.",
           "Consider using useCallback for optimizing performance with event handlers.",
         ],
-        image: "./cheatsheetImages/task25/3.webp"
+        image: "/images/cheatsheetImages/task25/3.webp"
       },
          {
         title: "",
@@ -1699,7 +1699,7 @@ const cheatsheetData = [
           "Keep conditional logic simple; consider creating separate components for complex conditions.",
           "Use short-circuit evaluation for cleaner code.",
         ],
-        image: "./cheatsheetImages/task25/4.webp"
+        image: "/images/cheatsheetImages/task25/4.webp"
       },
          {
         title: "",
@@ -1710,7 +1710,7 @@ const cheatsheetData = [
           "Only lift state up when necessary to avoid prop drilling.",
           "Use context or state management libraries for deep component trees.",
         ],
-        image: "./cheatsheetImages/task25/5.webp"
+        image: "/images/cheatsheetImages/task25/5.webp"
       },
          {
         title: "",
@@ -1721,7 +1721,7 @@ const cheatsheetData = [
           "Always clean up effects that subscribe to external data sources to prevent memory leaks.",
           "Use dependencies in the effect array wisely to control when the effect runs.",
         ],
-        image: "./cheatsheetImages/task25/6.webp"
+        image: "/images/cheatsheetImages/task25/6.webp"
       },
       {
         title: "",
@@ -1732,7 +1732,7 @@ const cheatsheetData = [
           "Use BEM (Block Element Modifier) methodology for class naming to maintain clarity.",
           "Consider using a CSS-in-JS library for dynamic styling based on props."
         ],
-        image: "./cheatsheetImages/task25/7.webp"
+        image: "/images/cheatsheetImages/task25/7.webp"
       },
       {
         title: "",
@@ -1743,7 +1743,7 @@ const cheatsheetData = [
           "Use default props for optional props.",
           "Consider TypeScript for more advanced type checking in larger applications."
         ],
-        image: "./cheatsheetImages/task25/8.webp"
+        image: "/images/cheatsheetImages/task25/8.webp"
       },
     ],
   },
@@ -1768,7 +1768,7 @@ const cheatsheetData = [
           "You import Firebase and specific services (Auth, Firestore, Storage). The firebaseConfig object contains your project-specific configuration values obtained from the Firebase Console. Calling firebase.initializeApp(firebaseConfig) connects your app to Firebase.",
           "Ensure you include all necessary Firebase services according to your application needs.",
         ],
-        image: "./cheatsheetImages/taskLive5/1.webp"
+        image: "/images/cheatsheetImages/taskLive5/1.webp"
       },
          {
         title: "Authentication with Firebase",
@@ -1778,7 +1778,7 @@ const cheatsheetData = [
           "The createUserWithEmailAndPassword method creates a new user account with the provided email and password. If successful, a success message is logged; if an error occurs, it is caught and logged.",
           "Implement input validation for email and password to enhance security and user experience.",
         ],
-        image: "./cheatsheetImages/taskLive5/2.webp"
+        image: "/images/cheatsheetImages/taskLive5/2.webp"
       },
          {
         title: "",
@@ -1788,7 +1788,7 @@ const cheatsheetData = [
           "'e.preventDefault()' prevents the default form submission behavior, allowing you to handle the registration logic programmatically. It calls the registerUser function with the email and password values.",
           "Bind event handlers to component state to dynamically update the UI based on user input.",
         ],
-        image: "./cheatsheetImages/taskLive5/3.webp"
+        image: "/images/cheatsheetImages/taskLive5/3.webp"
       },
          {
         title: "Firestore Database Operations",
@@ -1798,7 +1798,7 @@ const cheatsheetData = [
           "It uses the Firestore instance to access a specified collection and adds a new document with the data passed as an argument. If successful, a success message is logged; otherwise, it catches and logs any errors.",
           "Structure your data logically to optimize query performance and ensure ease of use in the application.",
         ],
-        image: "./cheatsheetImages/taskLive5/4.webp"
+        image: "/images/cheatsheetImages/taskLive5/4.webp"
       },
          {
         title: "",
@@ -1808,7 +1808,7 @@ const cheatsheetData = [
           "The 'get()' method retrieves the documents, and snapshot.docs.map() transforms the documents into a more usable format by extracting the data and adding the document ID. This array is then logged to the console.",
           "Handle loading states to improve user experience while data is being fetched; consider using local state to manage this.",
         ],
-        image: "./cheatsheetImages/taskLive5/5.webp"
+        image: "/images/cheatsheetImages/taskLive5/5.webp"
       },
       {
         title: "Handling File Uploads with Firebase Storage",
@@ -1818,7 +1818,7 @@ const cheatsheetData = [
           "The put() method uploads the specified file to the storage reference created with storageRef.child(file.name). If successful, a success message is logged; if an error occurs, it is caught and logged.",
           "Implement file type and size validation before uploads to ensure compatibility and provide user feedback for better interaction.",
         ],
-        image: "./cheatsheetImages/taskLive5/6.webp"
+        image: "/images/cheatsheetImages/taskLive5/6.webp"
       },
       {
         title: "Using State and Props",
@@ -1828,7 +1828,7 @@ const cheatsheetData = [
           "useState(0) initializes the count state variable to 0. The incrementCount function updates the state when called, triggering a re-render with the new count.",
           "Keep state updates functional to avoid stale state issues, especially in asynchronous operations.",
         ],
-        image: "./cheatsheetImages/taskLive5/7.webp"
+        image: "/images/cheatsheetImages/taskLive5/7.webp"
       },
       {
         title: "",
@@ -1838,7 +1838,7 @@ const cheatsheetData = [
           "The Greeting component receives a name prop and renders a greeting message. This allows for dynamic content based on the passed prop.",
           "Validate props using PropTypes to catch issues early in development and ensure the component receives the expected data type.",
         ],
-        image: "./cheatsheetImages/taskLive5/8.webp"
+        image: "/images/cheatsheetImages/taskLive5/8.webp"
       },
       {
         title: "Event Handling",
@@ -1848,7 +1848,7 @@ const cheatsheetData = [
           "The onChange event handler updates the email state with the current input value, ensuring the input reflects the state.",
           "Consider using useEffect to perform side effects based on state changes, such as validation or API calls.",
         ],
-        image: "./cheatsheetImages/taskLive5/9.webp"
+        image: "/images/cheatsheetImages/taskLive5/9.webp"
       },
       {
         title: "Testing and Deployment",
@@ -1879,7 +1879,7 @@ const cheatsheetData = [
           "Props (short for properties) allow components to receive data from parent components, enabling dynamic and reusable UI elements.",
           "Props are immutable, meaning that a component cannot change its own props. This ensures that data flows in one direction, making the app easier to debug and reason about.",
         ],
-        image: "./cheatsheetImages/task26/1.webp"
+        image: "/images/cheatsheetImages/task26/1.webp"
       },
          {
         title: "",
@@ -1888,7 +1888,7 @@ const cheatsheetData = [
           "State is used to manage dynamic data within a component, allowing components to react and re-render when data changes.",
           "State is mutable and is typically managed using the useState hook in functional components. Changing the state triggers a re-render of the component.",
         ],
-        image: "./cheatsheetImages/task26/2.webp"
+        image: "/images/cheatsheetImages/task26/2.webp"
       },
          {
         title: "",
@@ -1897,7 +1897,7 @@ const cheatsheetData = [
           "The Context API allows sharing state across the component tree without having to pass props down manually at every level (prop drilling).",
           "Using the Context API helps manage global state, such as user authentication or themes, making the code cleaner and easier to maintain.",
         ],
-        image: "./cheatsheetImages/task26/3.webp"
+        image: "/images/cheatsheetImages/task26/3.webp"
       },
          {
         title: "",
@@ -1906,7 +1906,7 @@ const cheatsheetData = [
           "React Router enables navigation between different components based on the URL, allowing for a multi-page experience in single-page applications (SPAs).",
           "By defining routes, you can control what components render based on the browser's address, enhancing user experience through client-side routing.",
         ],
-        image: "./cheatsheetImages/task26/4.webp"
+        image: "/images/cheatsheetImages/task26/4.webp"
       },
          {
         title: "",
@@ -1915,7 +1915,7 @@ const cheatsheetData = [
           "Hooks allow functional components to manage state and side effects, providing the ability to use state and lifecycle features without class components.",
           "The useEffect hook is particularly powerful for handling side effects like data fetching or subscriptions, running the provided effect after the component renders.",
         ],
-        image: "./cheatsheetImages/task26/5.webp"
+        image: "/images/cheatsheetImages/task26/5.webp"
       },
          {
         title: "",
@@ -1924,7 +1924,7 @@ const cheatsheetData = [
           "Managing forms is crucial for handling user inputs, validations, and submitting data to APIs or other services.",
           "React makes it easy to create controlled components where form data is handled by state, ensuring that the displayed data is always in sync with the state.",
         ],
-        image: "./cheatsheetImages/task26/7.webp"
+        image: "/images/cheatsheetImages/task26/7.webp"
       },
       {
         title: "",
@@ -1933,7 +1933,7 @@ const cheatsheetData = [
           "Error boundaries catch JavaScript errors in child components and provide a fallback UI, improving user experience by preventing the entire app from crashing.",
           "Error boundaries are implemented using lifecycle methods in class components. They can handle errors gracefully and log errors for further investigation.",
         ],
-        image: "./cheatsheetImages/task26/8.webp"
+        image: "/images/cheatsheetImages/task26/8.webp"
       },
     ],
   },
@@ -1949,7 +1949,7 @@ const cheatsheetData = [
           "import 'material-icons/iconfont/material-icons.css': This imports Material Icons, which allows you to use a variety of icons in your app.",
           "import M from 'materialize-css': This imports the JavaScript functionalities of Materialize CSS, enabling you to use its JavaScript components, such as parallax and sidenav.",
         ],
-        image: "./cheatsheetImages/task27/0.webp"
+        image: "/images/cheatsheetImages/task27/0.webp"
       },
       {
         title: "",
@@ -1958,7 +1958,7 @@ const cheatsheetData = [
           "'useEffect' is used to initialize Materialize CSS components (Parallax and Sidenav) after the component is rendered. The empty array [] ensures this only happens once, mimicking componentDidMount in class components.",
           "'useEffect' is great for initializing third-party libraries or performing side effects when the component first mounts.",
         ],
-        image: "./cheatsheetImages/task27/1.webp"
+        image: "/images/cheatsheetImages/task27/1.webp"
       },
          {
         title: "",
@@ -1967,7 +1967,7 @@ const cheatsheetData = [
           "This function prevents the default behavior of links and uses 'window.scrollTo' to smoothly scroll to the targeted section of the page. The 'section' parameter determines which part of the page to scroll to.",
           "Use event handling with 'window.scrollTo' for smooth navigation between sections. event.preventDefault() prevents reloading the page when a button is clicked.",
         ],
-        image: "./cheatsheetImages/task27/2.webp"
+        image: "/images/cheatsheetImages/task27/2.webp"
       },
        
     ],
@@ -1983,7 +1983,7 @@ const cheatsheetData = [
           "The CSS file is imported to style the collapsible elements and other Materialize components.",
           "Ensure 'materialize-css' is installed via 'npm' or 'yarn' for the imports to work.",
         ],
-        image: "./cheatsheetImages/task28/1.webp"
+        image: "/images/cheatsheetImages/task28/1.webp"
       },
          {
         title: "",
@@ -1993,7 +1993,7 @@ const cheatsheetData = [
           "document.querySelectorAll(.collapsible): Selects all elements with the class '.collapsible' to apply Materialize's collapsible functionality.",
           "M.Collapsible.init: Initializes the collapsible components, applying the following options: 'accordion: false', 'inDuration', 'outDuration.'",
         ],
-        image: "./cheatsheetImages/task28/2.webp"
+        image: "/images/cheatsheetImages/task28/2.webp"
       },
         
     ],
@@ -2010,7 +2010,7 @@ const cheatsheetData = [
           "This state will control which cube face image is currently visible.",
          
         ],
-        image: "./cheatsheetImages/task30/1.webp"
+        image: "/images/cheatsheetImages/task30/1.webp"
       },
          {
         title: "",
@@ -2020,7 +2020,7 @@ const cheatsheetData = [
           "It checks if the clicked image class (targetClass) is different from the current cubeImageClass.",
           "If they are different, it logs the image number and updates the state to show the selected image.",
         ],
-        image: "./cheatsheetImages/task30/2.webp"
+        image: "/images/cheatsheetImages/task30/2.webp"
       },
          {
         title: "",
@@ -2029,7 +2029,7 @@ const cheatsheetData = [
           "A 'div' with a dynamic class name that includes both a static class (initial-position) and a state-driven class (cubeImageClass).",
           "The 'img' tags represent each face of the cube. The images will rotate based on the current class set in the state.",
         ],
-        image: "./cheatsheetImages/task30/3.webp"
+        image: "/images/cheatsheetImages/task30/3.webp"
       },
          {
         title: "",
@@ -2039,7 +2039,7 @@ const cheatsheetData = [
           "Has an onClick event that triggers the handleImageClick function with the respective class name.",
           "This allows users to click thumbnails to change the visible cube face.",
         ],
-        image: "./cheatsheetImages/task30/4.webp"
+        image: "/images/cheatsheetImages/task30/4.webp"
       },
         
     ],
@@ -2057,7 +2057,7 @@ const cheatsheetData = [
           "(minutes + seconds / 60) * 6: Converts minutes to degrees.",
           "(hours + (minutes + seconds / 60) / 60) * 30: Converts hours to degrees (360 degrees / 12 hours = 30 degrees per hour).",
         ],
-        image: "./cheatsheetImages/task31/1.webp"
+        image: "/images/cheatsheetImages/task31/1.webp"
       },
          {
         title: "",
@@ -2069,7 +2069,7 @@ const cheatsheetData = [
           "prevTime.minutes + 6 / 60: Updates minutes.",
           "prevTime.hours + 30 / 3600: Updates hours.",
         ],
-        image: "./cheatsheetImages/task31/2.webp"
+        image: "/images/cheatsheetImages/task31/2.webp"
       },
          {
         title: "",
@@ -2077,7 +2077,7 @@ const cheatsheetData = [
         details: [
           "Clears the interval when the component unmounts to prevent memory leaks.",
         ],
-        image: "./cheatsheetImages/task31/3.webp"
+        image: "/images/cheatsheetImages/task31/3.webp"
       },
     ],
   },
@@ -2091,7 +2091,7 @@ const cheatsheetData = [
           "'menuRef': A reference to the menu DOM element for direct manipulation.",
           "'borderRef': A reference for the menu border to animate its position.",
         ],
-        image: "./cheatsheetImages/task32/1.webp"
+        image: "/images/cheatsheetImages/task32/1.webp"
       },
          {
         title: "",
@@ -2102,7 +2102,7 @@ const cheatsheetData = [
           "Dynamically changes the body background color based on the selected menu item.",
           "'offsetMenuBorder': Adjusts the position of the menu border according to the active item.",
         ],
-        image: "./cheatsheetImages/task32/2.webp"
+        image: "/images/cheatsheetImages/task32/2.webp"
       },
          {
         title: "",
@@ -2112,7 +2112,7 @@ const cheatsheetData = [
           "Calculating Left Position: Computes the left offset for the menu border so that it is centered under the active menu item.",
           "Uses CSS transform to animate the border position.",
         ],
-        image: "./cheatsheetImages/task32/3.webp"
+        image: "/images/cheatsheetImages/task32/3.webp"
       },
          {
         title: "",
@@ -2122,7 +2122,7 @@ const cheatsheetData = [
           "'handleResize': Updates the border position on window resize events.",
           "Returns a function to remove the event listener when the component unmounts to prevent memory leaks.",
         ],
-        image: "./cheatsheetImages/task32/4.webp"
+        image: "/images/cheatsheetImages/task32/4.webp"
       },
         
     ],
@@ -2137,7 +2137,7 @@ const cheatsheetData = [
           "useRef Hook: This hook creates mutable objects that persist for the full lifetime of the component. 'ctaRef' and 'drawerRef' are references to specific DOM elements.",
           "Useful for directly manipulating DOM elements without causing re-renders.",
         ],
-        image: "./cheatsheetImages/task33/1.webp"
+        image: "/images/cheatsheetImages/task33/1.webp"
       },
          {
         title: "",
@@ -2146,7 +2146,7 @@ const cheatsheetData = [
           "useEffect Hook: Used to perform side effects in function components, such as setting initial styles with GSAP.",
           "The empty array [] ensures this effect runs only once when the component mounts.",
         ],
-        image: "./cheatsheetImages/task33/2.webp"
+        image: "/images/cheatsheetImages/task33/2.webp"
       },
          {
         title: "",
@@ -2161,7 +2161,7 @@ const cheatsheetData = [
           "onComplete: Callback function triggered after the animation completes.",
         
         ],
-        image: "./cheatsheetImages/task33/3.webp"
+        image: "/images/cheatsheetImages/task33/3.webp"
       },
          {
         title: "",
@@ -2170,7 +2170,7 @@ const cheatsheetData = [
           " The 'onClick' prop is used to specify a function (hideCTA) to run when the button is clicked. Event handlers are crucial for user interactions.",
          
         ],
-        image: "./cheatsheetImages/task33/4.webp"
+        image: "/images/cheatsheetImages/task33/4.webp"
       },
          {
         title: "",
@@ -2179,7 +2179,7 @@ const cheatsheetData = [
           "This logic checks if the 'drawerOpen' state is true and executes the 'slideDown' function if so. This pattern can help manage what to render based on component state.",
           
         ],
-        image: "./cheatsheetImages/task33/5.webp"
+        image: "/images/cheatsheetImages/task33/5.webp"
       },
          {
         title: "",
@@ -2188,7 +2188,7 @@ const cheatsheetData = [
           "Using classList.add() to change the classes of a DOM element dynamically based on interactions or state. This allows for more complex styles and behaviors.",
           
         ],
-        image: "./cheatsheetImages/task33/6.webp"
+        image: "/images/cheatsheetImages/task33/6.webp"
       },
     ],
   },
@@ -2203,7 +2203,7 @@ const cheatsheetData = [
           "'setTime' and 'setIsActive' are functions that update the respective state variables.",
           "Adjust the initial value of 'time' as needed for different countdown durations.",
         ],
-        image: "./cheatsheetImages/task34/1.webp"
+        image: "/images/cheatsheetImages/task34/1.webp"
       },
          {
         title: "",
@@ -2213,7 +2213,7 @@ const cheatsheetData = [
           "The dependency array ([isActive, time]) ensures that the effect runs only when these values change.",
           "Be careful to clear the interval to prevent multiple intervals from running simultaneously.",
         ],
-        image: "./cheatsheetImages/task34/2.webp"
+        image: "/images/cheatsheetImages/task34/2.webp"
       },
          {
         title: "Timer Control Functions",
@@ -2222,7 +2222,7 @@ const cheatsheetData = [
           "Activates the timer, allowing it to start counting down.",
           "This function can be linked to a button click to enable user control over the timer.",
         ],
-        image: "./cheatsheetImages/task34/3.webp"
+        image: "/images/cheatsheetImages/task34/3.webp"
       },
          {
         title: "",
@@ -2231,7 +2231,7 @@ const cheatsheetData = [
           "Pauses the timer, stopping the countdown without resetting the time.",
           "This function helps users take breaks without losing their progress.",
         ],
-        image: "./cheatsheetImages/task34/4.webp"
+        image: "/images/cheatsheetImages/task34/4.webp"
       },
          {
         title: "",
@@ -2240,7 +2240,7 @@ const cheatsheetData = [
           "Stops the timer and resets the countdown back to the initial state (10 minutes).",
           "Reset functionality is essential for user experience, allowing users to restart the timer easily",
         ],
-        image: "./cheatsheetImages/task34/5.webp"
+        image: "/images/cheatsheetImages/task34/5.webp"
       },
          {
         title: "",
@@ -2250,7 +2250,7 @@ const cheatsheetData = [
           "'padStart(2, '0')' ensures that single-digit minutes or seconds are displayed with a leading zero.",
           "This formatting enhances user experience by providing a familiar time display.",
         ],
-        image: "./cheatsheetImages/task34/6.webp"
+        image: "/images/cheatsheetImages/task34/6.webp"
       },
     ],
   },
@@ -2265,7 +2265,7 @@ const cheatsheetData = [
           "Use descriptive state names to enhance code readability.",
           "Initialize state with a relevant default value.",
         ],
-        image: "./cheatsheetImages/task35/1.webp"
+        image: "/images/cheatsheetImages/task35/1.webp"
       },
          {
         title: "",
@@ -2275,7 +2275,7 @@ const cheatsheetData = [
           "Keep functions concise to improve maintainability.",
           "Consider using 'useCallback' for optimization in larger components.",
         ],
-        image: "./cheatsheetImages/task35/2.webp"
+        image: "/images/cheatsheetImages/task35/2.webp"
       },
          {
         title: "",
@@ -2285,7 +2285,7 @@ const cheatsheetData = [
           "Use semantic elements like <header> for better accessibility.",
           "Utilize conditional classes to manage styles dynamically.",
         ],
-        image: "./cheatsheetImages/task35/3.webp"
+        image: "/images/cheatsheetImages/task35/3.webp"
       },
          {
         title: "Portfolio.js Component",
@@ -2295,7 +2295,7 @@ const cheatsheetData = [
           "Use descriptive state names to clarify their purpose in the component.",
           "Initialize state with a relevant default value.",
         ],
-        image: "./cheatsheetImages/task35/4.webp"
+        image: "/images/cheatsheetImages/task35/4.webp"
       },
          {
         title: "",
@@ -2305,7 +2305,7 @@ const cheatsheetData = [
           "Keep the handler function concise and focused on a single task.",
           "Use arrow functions for cleaner syntax.",
         ],
-        image: "./cheatsheetImages/task35/5.webp"
+        image: "/images/cheatsheetImages/task35/5.webp"
       },
          {
         title: "",
@@ -2315,7 +2315,7 @@ const cheatsheetData = [
           "Use conditional class names for dynamic styling based on the state.",
           "Ensure button elements are keyboard accessible for improved usability.",
         ],
-        image: "./cheatsheetImages/task35/6.webp"
+        image: "/images/cheatsheetImages/task35/6.webp"
       },
     ],
   },
@@ -2329,7 +2329,7 @@ const cheatsheetData = [
           "The Materialize CSS library is imported for easy access to pre-designed components and JavaScript functionality, helping us style the app without extensive custom CSS.",
          
         ],
-        image: "./cheatsheetImages/task37/1.webp"
+        image: "/images/cheatsheetImages/task37/1.webp"
       },
          {
         title: "",
@@ -2338,7 +2338,7 @@ const cheatsheetData = [
           "'useEffect' is a React hook that runs code after the component renders. Here, it initializes Materialize components when the app loads using 'M.AutoInit()'.",
           "This auto-initializes any Materialize elements used in the app, saving manual initialization of individual components.",
         ],
-        image: "./cheatsheetImages/task37/2.webp"
+        image: "/images/cheatsheetImages/task37/2.webp"
       },
          {
         title: "",
@@ -2347,7 +2347,7 @@ const cheatsheetData = [
           "'handleDirectionsClick' is a function triggered when the button is clicked. It uses 'scrollIntoView' to smoothly scroll to the element with the id='googleMapIframe'.",
           "Use scrollIntoView to focus on specific sections. Great for user experience in single-page apps.",
         ],
-        image: "./cheatsheetImages/task37/3.webp"
+        image: "/images/cheatsheetImages/task37/3.webp"
       },
        
     ],
@@ -2364,7 +2364,7 @@ const cheatsheetData = [
           "Stores metadata for each uploaded file, like its name and URL, which are needed to display the file information and enable download.",
           "You can update this array to add or remove files as they’re selected or deleted.",
         ],
-        image: "./cheatsheetImages/task38/1.webp"
+        image: "/images/cheatsheetImages/task38/1.webp"
       },
          {
         title: "",
@@ -2374,7 +2374,7 @@ const cheatsheetData = [
           "Allows control over the <input> element without using the DOM directly.",
           "Using refs can be helpful when you need direct access to an element (e.g., to trigger a click programmatically).",
         ],
-        image: "./cheatsheetImages/task38/2.webp"
+        image: "/images/cheatsheetImages/task38/2.webp"
       },
          {
         title: "",
@@ -2384,7 +2384,7 @@ const cheatsheetData = [
           "Opens the file dialog without the need for a visible input field.",
           "This approach improves the user interface by using a custom button instead of a standard file input.",
         ],
-        image: "./cheatsheetImages/task38/3.webp"
+        image: "/images/cheatsheetImages/task38/3.webp"
       },
          {
         title: "",
@@ -2398,7 +2398,7 @@ const cheatsheetData = [
           "...prevFilesData: Ensures previous files are not overwritten by new selections.",
           
         ],
-        image: "./cheatsheetImages/task38/4.webp"
+        image: "/images/cheatsheetImages/task38/4.webp"
       },
          {
         title: "",
@@ -2407,7 +2407,7 @@ const cheatsheetData = [
           "Removes a file from 'filesData' by filtering it out based on its index.",
           "Updating the state this way ensures React re-renders the component without the deleted file.",
         ],
-        image: "./cheatsheetImages/task38/5.webp"
+        image: "/images/cheatsheetImages/task38/5.webp"
       },
          {
         title: "",
@@ -2417,7 +2417,7 @@ const cheatsheetData = [
           "'onChange' triggers 'handleFileChange', updating 'filesData' whenever files are selected.",
           "Set multiple to allow multiple file selection at once.",
         ],
-        image: "./cheatsheetImages/task38/6.webp"
+        image: "/images/cheatsheetImages/task38/6.webp"
       },
       {
         title: "",
@@ -2427,7 +2427,7 @@ const cheatsheetData = [
           "Delete Button: Triggers handleFileDelete, removing the file from filesData.",
           "Each file requires a unique key (index is used here) to help React efficiently re-render only the updated items.",
         ],
-        image: "./cheatsheetImages/task38/7.webp"
+        image: "/images/cheatsheetImages/task38/7.webp"
       },
     ],
   },
@@ -2442,7 +2442,7 @@ const cheatsheetData = [
           "The 'increment' function calls 'setCount' to update the 'count' state by 1",
           "State is used to store and manage dynamic data in functional components, which re-renders the component when updated.",
         ],
-        image: "./cheatsheetImages/task39/1.webp"
+        image: "/images/cheatsheetImages/task39/1.webp"
       },
          {
         title: "",
@@ -2451,7 +2451,7 @@ const cheatsheetData = [
           "Props allow you to pass data from one component to another. Here, 'name' is passed as a prop to the Greeting component.",
           "Props are read-only and cannot be modified by the receiving component. They are commonly used to customize components by passing in values from parent components.",
         ],
-        image: "./cheatsheetImages/task39/2.webp"
+        image: "/images/cheatsheetImages/task39/2.webp"
       },
          {
         title: "",
@@ -2460,7 +2460,7 @@ const cheatsheetData = [
           "The onClick attribute is used to handle button clicks. 'handleClick' is the event handler function, which displays an alert when the button is clicked.",
           "React uses camelCase syntax for event handlers (e.g., onClick, onChange). Events in React are wrapped in a synthetic event system to provide consistent behavior across browsers.",
         ],
-        image: "./cheatsheetImages/task39/3.webp"
+        image: "/images/cheatsheetImages/task39/3.webp"
       },
          {
         title: "",
@@ -2469,7 +2469,7 @@ const cheatsheetData = [
           "This example uses the ternary operator to render different messages based on the 'isLoggedIn' prop.",
           "You can conditionally render components or content using JavaScript expressions, like ternary operators or && for short-circuit evaluation.",
         ],
-        image: "./cheatsheetImages/task39/4.webp"
+        image: "/images/cheatsheetImages/task39/4.webp"
       },
          {
         title: "",
@@ -2478,7 +2478,7 @@ const cheatsheetData = [
           "Keys are a special prop required when rendering lists to help React identify each element uniquely. Here, 'item.id' is used as the 'key' prop.",
           "Always provide unique keys for list items to avoid performance issues or unexpected behavior. Keys should be stable and unique across each render.",
         ],
-        image: "./cheatsheetImages/task39/5.webp"
+        image: "/images/cheatsheetImages/task39/5.webp"
       },
          {
         title: "",
@@ -2488,7 +2488,7 @@ const cheatsheetData = [
           "The 'onChange' event updates the input field's state, and the 'onSubmit' event prevents default form submission behavior, triggering an alert instead.",
           "Controlled inputs maintain their state in React, which gives you more control over form behavior and validation.",
         ],
-        image: "./cheatsheetImages/task39/6.webp"
+        image: "/images/cheatsheetImages/task39/6.webp"
       },
       {
         title: "",
@@ -2498,7 +2498,7 @@ const cheatsheetData = [
           "The 'clearInterval' function prevents memory leaks by stopping the interval when the component unmounts.",
           "Use 'useEffect' with an empty dependency array to run the effect once on mount. Add dependencies to re-run the effect when specific values change.",
         ],
-        image: "./cheatsheetImages/task39/7.webp"
+        image: "/images/cheatsheetImages/task39/7.webp"
       },
          {
         title: "",
@@ -2507,7 +2507,7 @@ const cheatsheetData = [
           "Setting default values for props ensures a fallback when no value is passed. Here, 'name' defaults to 'Guest' if not provided.",
           "Use default props to prevent errors or unexpected behavior when props are missing.",
         ],
-        image: "./cheatsheetImages/task39/8.webp"
+        image: "/images/cheatsheetImages/task39/8.webp"
       },
     ],
   },
@@ -2521,7 +2521,7 @@ const cheatsheetData = [
           "Handles both mouse and touch events to apply 3D rotation on the .card element based on user input coordinates. e.pageX, e.pageY, e.touches[0].pageX, and e.touches[0].pageY retrieve cursor/finger positions for dynamic styling. useEffect is helpful here to manage DOM manipulation in functional components.",
           
         ],
-        image: "./cheatsheetImages/task40/1.webp"
+        image: "/images/cheatsheetImages/task40/1.webp"
       },
          {
         title: "",
@@ -2530,7 +2530,7 @@ const cheatsheetData = [
           "Adds mousemove and touchmove listeners on component mount to allow interaction with the card element. The return cleanup function removes these listeners on unmount, preventing potential memory leaks. When working with useEffect, cleanup is essential to avoid side effects when the component lifecycle ends.",
           
         ],
-        image: "./cheatsheetImages/task40/2.webp"
+        image: "/images/cheatsheetImages/task40/2.webp"
       },
          
     ],
@@ -2545,7 +2545,7 @@ const cheatsheetData = [
           "'Router' provides routing capabilities, allowing navigation between pages. 'Route' defines the path and the component to render for each route.",
           "Use 'Routes' to wrap all 'Route' components for React Router v6. Paths like /about, /portfolio, and /contact correspond to the URL paths that render specific components.",
         ],
-        image: "./cheatsheetImages/task41/1.webp"
+        image: "/images/cheatsheetImages/task41/1.webp"
       },
          {
         title: "",
@@ -2554,7 +2554,7 @@ const cheatsheetData = [
           "This structure allows navigation through Navbar and Routes. Components like Home, About, etc., are loaded based on the path.",
           "Placing Navbar and Footer outside Routes keeps them static across all pages, while content changes dynamically within Routes.",
         ],
-        image: "./cheatsheetImages/task41/2.webp"
+        image: "/images/cheatsheetImages/task41/2.webp"
       },
          {
         title: "",
@@ -2563,7 +2563,7 @@ const cheatsheetData = [
           "'useState' initializes 'formData' as an object with fields 'name', 'email', and 'message'. 'setFormData' updates this data.",
           "'useState' to store and manage form data. When the form changes, 'setFormData' is called with the updated field values.",
         ],
-        image: "./cheatsheetImages/task41/3.webp"
+        image: "/images/cheatsheetImages/task41/3.webp"
       },
          {
         title: "",
@@ -2572,7 +2572,7 @@ const cheatsheetData = [
           "'handleSubmit' prevents the page from refreshing and logs the form data when the form is submitted.",
           "'e.preventDefault()' is crucial to avoid page reloads. It keeps the user on the same page and allows data handling within React.",
         ],
-        image: "./cheatsheetImages/task41/4.webp"
+        image: "/images/cheatsheetImages/task41/4.webp"
       },
          {
         title: "",
@@ -2581,7 +2581,7 @@ const cheatsheetData = [
           "If 'filter' is set to 'all', it displays all projects; otherwise, it filters based on category.",
           "Use JavaScript array methods like 'filter' to control which data appears based on user actions.",
         ],
-        image: "./cheatsheetImages/task41/5.webp"
+        image: "/images/cheatsheetImages/task41/5.webp"
       },
          {
         title: "",
@@ -2590,7 +2590,7 @@ const cheatsheetData = [
           "'isScrolled' is updated based on the window's scroll position. If 'scrolled' past 50px, 'isScrolled' becomes 'true', triggering the 'scrolled' CSS class.",
           "Use 'useEffect' with event listeners for dynamic behaviors like updating 'isScrolled' based on scroll.",
         ],
-        image: "./cheatsheetImages/task41/6.webp"
+        image: "/images/cheatsheetImages/task41/6.webp"
       },
       {
         title: "",
@@ -2599,7 +2599,7 @@ const cheatsheetData = [
           "'skills' is an array that holds skill names. Using 'map', each 'skill' is rendered in an <li>.",
           "Use 'key' props for lists to help React track elements. Avoid using array indices as keys for large or dynamic lists.",
         ],
-        image: "./cheatsheetImages/task41/7.webp"
+        image: "/images/cheatsheetImages/task41/7.webp"
       },
          {
         title: "",
@@ -2608,7 +2608,7 @@ const cheatsheetData = [
           "<Link> is used for in-app navigation without reloading the page, unlike <a>, which triggers a full reload.",
           "Use <Link> with 'to' attributes to define the path. It's essential for a smooth single-page app (SPA) experience.",
         ],
-        image: "./cheatsheetImages/task41/8.webp"
+        image: "/images/cheatsheetImages/task41/8.webp"
       },
     ],
   },
@@ -2624,7 +2624,7 @@ const cheatsheetData = [
           "setVisibleItems([...]): Updates the visibleItems state with the three items to display.",
           "'useCallback': Memoizes the 'updateVisibleItems' function, ensuring that it doesn't get recreated on every render, improving performance.",
         ],
-        image: "./cheatsheetImages/task42/1.webp"
+        image: "/images/cheatsheetImages/task42/1.webp"
       },
          {
         title: "",
@@ -2633,7 +2633,7 @@ const cheatsheetData = [
           "'useEffect': Runs the updateVisibleItems function whenever activeIndex changes, ensuring that the visible items are updated.",
           " It depends on activeIndex and updateVisibleItems to avoid unnecessary re-renders.",
         ],
-        image: "./cheatsheetImages/task42/2.webp"
+        image: "/images/cheatsheetImages/task42/2.webp"
       },
          {
         title: "",
@@ -2643,7 +2643,7 @@ const cheatsheetData = [
           "'setActiveIndex': Updates the 'activeIndex' state, cycling through items by using modulo (%).",
           "'useCallback': Ensures the slide functions are not recreated on every render, improving performance.",
         ],
-        image: "./cheatsheetImages/task42/3.webp"
+        image: "/images/cheatsheetImages/task42/3.webp"
       },
          {
         title: "",
@@ -2653,7 +2653,7 @@ const cheatsheetData = [
           "event.deltaY: A positive value indicates scrolling down (next slide), while a negative value indicates scrolling up (previous slide).",
           "nextSlide() & prevSlide(): Calls the corresponding slide functions to update the carousel.",
         ],
-        image: "./cheatsheetImages/task42/4.webp"
+        image: "/images/cheatsheetImages/task42/4.webp"
       },
          {
         title: "",
@@ -2663,7 +2663,7 @@ const cheatsheetData = [
           "addEventListener('wheel', handleScroll): Listens for the mouse wheel event on the carousel container.",
           "'removeEventListener': Ensures the event listener is removed when the component is removed from the DOM.",
         ],
-        image: "./cheatsheetImages/task42/5.webp"
+        image: "/images/cheatsheetImages/task42/5.webp"
       },
          {
         title: "",
@@ -2672,7 +2672,7 @@ const cheatsheetData = [
           "'handleItemClick': A function to update the active slide when a carousel item is clicked.",
           "'setActiveIndex(index)': Sets the clicked item as the active one by updating the 'activeIndex'.",
         ],
-        image: "./cheatsheetImages/task42/6.webp"
+        image: "/images/cheatsheetImages/task42/6.webp"
       },
     ],
   },
@@ -2689,7 +2689,7 @@ const cheatsheetData = [
           "'setFormData' is the function used to update formData.",
           "The 'useState' hook returns an array: the first element is the state value, and the second is the function to update that state.",
         ],
-        image: "./cheatsheetImages/task43/1.webp"
+        image: "/images/cheatsheetImages/task43/1.webp"
       },
          {
         title: "",
@@ -2700,7 +2700,7 @@ const cheatsheetData = [
           "It uses the spread operator (...formData) to retain previous values and updates only the relevant field (name, email, or message) based on e.target.name.",
           "To manage multiple form fields with the same 'onChange' handler, use dynamic keys (e.g., e.target.name).",
         ],
-        image: "./cheatsheetImages/task43/2.webp"
+        image: "/images/cheatsheetImages/task43/2.webp"
       },
          {
         title: "",
@@ -2711,7 +2711,7 @@ const cheatsheetData = [
           "After logging the form data, it triggers 'setIsSubmitted(true)', which could show a success message.",
           "Always prevent the default behavior of forms using 'e.preventDefault()' when handling form submissions in React.",
         ],
-        image: "./cheatsheetImages/task43/3.webp"
+        image: "/images/cheatsheetImages/task43/3.webp"
       },
          {
         title: "",
@@ -2722,7 +2722,7 @@ const cheatsheetData = [
           "If 'isSubmitted' is 'true', a success message is shown. Otherwise, the form is displayed.",
           "Use ternary operators for conditional rendering of components based on state.",
         ],
-        image: "./cheatsheetImages/task43/4.webp"
+        image: "/images/cheatsheetImages/task43/4.webp"
       },
          {
         title: "",
@@ -2733,7 +2733,7 @@ const cheatsheetData = [
           "These props are used to scroll smoothly to a section on the page (e.g., 'contact').",
           "Props are immutable inside the child component. The parent is responsible for passing them down.",
         ],
-        image: "./cheatsheetImages/task43/5.webp"
+        image: "/images/cheatsheetImages/task43/5.webp"
       },
          {
         title: "",
@@ -2744,7 +2744,7 @@ const cheatsheetData = [
           "'isScrolled' is managed by a scroll event handler that updates state when the page is scrolled.",
           "Conditional class names help you apply styles dynamically based on component states or conditions.",
         ],
-        image: "./cheatsheetImages/task43/6.webp"
+        image: "/images/cheatsheetImages/task43/6.webp"
       },
       {
         title: "",
@@ -2755,7 +2755,7 @@ const cheatsheetData = [
           "The return function inside 'useEffect' cleans up the event listener when the component is unmounted.",
           "The second argument ([]) to 'useEffect' ensures the effect only runs once, similar to 'componentDidMount' in class components.",
         ],
-        image: "./cheatsheetImages/task43/7.webp"
+        image: "/images/cheatsheetImages/task43/7.webp"
       },
       
     ],
@@ -2772,7 +2772,7 @@ const cheatsheetData = [
           "'useState(null)' initializes it to 'null' (meaning no item is active initially).",
           "State is used to manage dynamic data within the component. In this case, it controls which FAQ answer is shown.",
         ],
-        image: "./cheatsheetImages/task44/1.webp"
+        image: "/images/cheatsheetImages/task44/1.webp"
       },
          {
         title: "",
@@ -2782,7 +2782,7 @@ const cheatsheetData = [
           "activeIndex === index ? null : index: If the clicked FAQ is already active (i.e., its index is equal to activeIndex), the function will set it to 'null' (closing it). Otherwise, it sets activeIndex to the clicked index (opening it).",
           "Event handlers like 'toggleFAQ' allow interaction with the component. In this case, it controls which FAQ answer is visible based on user clicks.",
         ],
-        image: "./cheatsheetImages/task44/2.webp"
+        image: "/images/cheatsheetImages/task44/2.webp"
       },
          {
         title: "",
@@ -2793,7 +2793,7 @@ const cheatsheetData = [
           "The 'active' class is conditionally applied to the FAQ item if its index matches 'activeIndex'.",
           "Props are used in lists like this to map over data and generate multiple elements. Here, 'faqData' is the list of FAQs being passed into the component.",
         ],
-        image: "./cheatsheetImages/task44/3.webp"
+        image: "/images/cheatsheetImages/task44/3.webp"
       },
          {
         title: "",
@@ -2802,7 +2802,7 @@ const cheatsheetData = [
           "Dynamically adds the active class to the FAQ item when its index matches activeIndex. This allows for conditional styling (e.g., showing or hiding the FAQ answer) when the item is active.",
           "React allows you to dynamically set class names based on state or props. This is useful for applying styles conditionally.",
         ],
-        image: "./cheatsheetImages/task44/4.webp"
+        image: "/images/cheatsheetImages/task44/4.webp"
       },
         
     ],
@@ -2821,7 +2821,7 @@ const cheatsheetData = [
           "'isRotating': A boolean to handle animation state for a rotating clock.",
           "Initializes and updates the state variables. It takes two arguments: the initial state and a function to update that state (setWorkTime, setSeconds, etc.).",
         ],
-        image: "./cheatsheetImages/task45/1.webp"
+        image: "/images/cheatsheetImages/task45/1.webp"
       },
          {
         title: "",
@@ -2830,7 +2830,7 @@ const cheatsheetData = [
           "This effect starts a countdown when the timer is active (isActive is true). The 'setInterval' function updates the 'seconds' state every second. When the timer reaches 0, it stops and resets the state.",
           "The effect runs whenever 'isActive' or 'seconds' change, ensuring the countdown updates correctly.",
         ],
-        image: "./cheatsheetImages/task45/2.webp"
+        image: "/images/cheatsheetImages/task45/2.webp"
       },
          {
         title: "",
@@ -2839,7 +2839,7 @@ const cheatsheetData = [
           "This function starts the countdown by setting the 'seconds' based on the given 'duration' (in minutes).",
           "It resets and triggers the rotation animation (isRotating).",
         ],
-        image: "./cheatsheetImages/task45/3.webp"
+        image: "/images/cheatsheetImages/task45/3.webp"
       },
          {
         title: "",
@@ -2847,7 +2847,7 @@ const cheatsheetData = [
         details: [
           "These functions call 'startCountdown' with the respective time ('workTime' for work sessions and 'breakTime' for breaks).",
         ],
-        image: "./cheatsheetImages/task45/4.webp"
+        image: "/images/cheatsheetImages/task45/4.webp"
       },
          {
         title: "",
@@ -2855,7 +2855,7 @@ const cheatsheetData = [
         details: [
           "The reset function stops the timer and resets the state to the initial values (work session time in seconds).",
         ],
-        image: "./cheatsheetImages/task45/5.webp"
+        image: "/images/cheatsheetImages/task45/5.webp"
       },
          {
         title: "",
@@ -2865,7 +2865,7 @@ const cheatsheetData = [
           "'Math.floor(seconds / 60)' gives the total minutes.",
           "'seconds % 60' gives the remaining seconds.",
         ],
-        image: "./cheatsheetImages/task45/6.webp"
+        image: "/images/cheatsheetImages/task45/6.webp"
       },
     ],
   },
@@ -2879,7 +2879,7 @@ const cheatsheetData = [
           "Adds a fade-in animation to the entire app on load, with opacity transitioning from 0 to 1.",
           "Use Framer Motion's motion.div for easy animations on component load.",
         ],
-        image: "./cheatsheetImages/task46/1.webp"
+        image: "/images/cheatsheetImages/task46/1.webp"
       },
          {
         title: "",
@@ -2888,7 +2888,7 @@ const cheatsheetData = [
           "Renders each section of the webpage by using individual components (Navbar, Header, About, etc.).",
           "Organizing each section as separate components keeps the code modular and easier to maintain.",
         ],
-        image: "./cheatsheetImages/task46/2.webp"
+        image: "/images/cheatsheetImages/task46/2.webp"
       },
          {
         title: "",
@@ -2897,7 +2897,7 @@ const cheatsheetData = [
           "Uses 'useState' to control the visibility of additional text. Clicking the button toggles the 'showMore' state, causing conditional rendering of extra content.",
           "'useState' is useful for handling dynamic UI elements based on user interaction.",
         ],
-        image: "./cheatsheetImages/task46/3.webp"
+        image: "/images/cheatsheetImages/task46/3.webp"
       },
          {
         title: "",
@@ -2906,7 +2906,7 @@ const cheatsheetData = [
           "Conditionally displays the additional text only if showMore is true.",
           "Combine state and conditional rendering to show or hide specific content based on user actions.",
         ],
-        image: "./cheatsheetImages/task46/4.webp"
+        image: "/images/cheatsheetImages/task46/4.webp"
       },
          {
         title: "",
@@ -2915,7 +2915,7 @@ const cheatsheetData = [
           "A button that toggles between “More” and “Less” text based on 'showMore'. Adds hover and tap animations.",
           "Framer Motion provides 'whileHover' and 'whileTap' props for adding subtle animations that enhance the user experience.",
         ],
-        image: "./cheatsheetImages/task46/5.webp"
+        image: "/images/cheatsheetImages/task46/5.webp"
       },
          {
         title: "",
@@ -2924,7 +2924,7 @@ const cheatsheetData = [
           "Handles clicking on a navbar item to set it as active, update the background color, and smoothly scroll to the target section.",
           "Use 'window.scrollTo' with an offset for smooth scrolling; 'getBoundingClientRect()' helps adjust for any fixed headers.",
         ],
-        image: "./cheatsheetImages/task46/6.webp"
+        image: "/images/cheatsheetImages/task46/6.webp"
       },
       {
         title: "",
@@ -2933,7 +2933,7 @@ const cheatsheetData = [
           "Positions the animated border underneath the active menu item.",
           "'transform': 'translate3d' provides smooth, efficient animations.",
         ],
-        image: "./cheatsheetImages/task46/7.webp"
+        image: "/images/cheatsheetImages/task46/7.webp"
       },
          {
         title: "",
@@ -2942,7 +2942,7 @@ const cheatsheetData = [
           "Maps over the 'icons' array to render each icon in the navbar. Each item changes color when active, using dynamic background color and an 'active' class.",
           "Use 'map' for dynamic content rendering based on an array; this pattern keeps code clean and manageable for components with repeated structures.",
         ],
-        image: "./cheatsheetImages/task46/8.webp"
+        image: "/images/cheatsheetImages/task46/8.webp"
       },
     ],
   },
@@ -2956,7 +2956,7 @@ const cheatsheetData = [
           " Sets up core dependencies. 'useState' and 'useEffect' help manage component states and lifecycle events, while 'AnimatePresence' and 'motion' enable smooth animations.",
           
         ],
-        image: "./cheatsheetImages/task47/1.webp"
+        image: "/images/cheatsheetImages/task47/1.webp"
       },
          {
         title: "",
@@ -2966,7 +2966,7 @@ const cheatsheetData = [
           "'progress': Tracks the progress of the loading animation, updating it from 0 to 100.",
           "'useState' allows you to define and update component-specific values (e.g., 'loading' and 'progress') over time.",
         ],
-        image: "./cheatsheetImages/task47/2.webp"
+        image: "/images/cheatsheetImages/task47/2.webp"
       },
          {
         title: "",
@@ -2978,7 +2978,7 @@ const cheatsheetData = [
           "Dependency Array ([]): Ensures 'useEffect' only runs once when the component mounts.",
           "'useEffect' is a powerful hook for running side effects, such as setting intervals or fetching data when the component loads.",
         ],
-        image: "./cheatsheetImages/task47/3.webp"
+        image: "/images/cheatsheetImages/task47/3.webp"
       },
          {
         title: "",
@@ -2988,7 +2988,7 @@ const cheatsheetData = [
           "Handles animations on elements entering and leaving the DOM, adding a smooth transition when switching from the loader to content.",
           "'AnimatePresence' helps manage exit animations for conditional components, improving the visual flow.",
         ],
-        image: "./cheatsheetImages/task47/4.webp"
+        image: "/images/cheatsheetImages/task47/4.webp"
       },
          {
         title: "",
@@ -3000,7 +3000,7 @@ const cheatsheetData = [
           "'transition': Controls animation duration.",
           "'transition' allows for fine-tuning animation speed and timing, creating a smooth experience.",
         ],
-        image: "./cheatsheetImages/task47/5.webp"
+        image: "/images/cheatsheetImages/task47/5.webp"
       },
         
     ],
@@ -3015,7 +3015,7 @@ const cheatsheetData = [
           "'loading': A boolean state that toggles between loading and content display.",
           "'progress': Tracks the loading progress percentage.",
         ],
-        image: "./cheatsheetImages/task48/1.webp"
+        image: "/images/cheatsheetImages/task48/1.webp"
       },
          {
         title: "",
@@ -3025,7 +3025,7 @@ const cheatsheetData = [
           "Once 'progress' reaches 100, the interval stops, and 'loading' is set to fals'e.",
           "The use of 'clearInterval' within the condition prevents memory leaks by stopping the interval when no longer needed.",
         ],
-        image: "./cheatsheetImages/task48/2.webp"
+        image: "/images/cheatsheetImages/task48/2.webp"
       },
         
     ],
@@ -3041,7 +3041,7 @@ const cheatsheetData = [
           "'loading': Controls the button state, showing when speech generation is in progress.",
           "'symbolCount': Tracks the number of characters (symbols) in 'inputText'.",
         ],
-        image: "./cheatsheetImages/task49/1.webp"
+        image: "/images/cheatsheetImages/task49/1.webp"
       },
          {
         title: "",
@@ -3050,7 +3050,7 @@ const cheatsheetData = [
           "'useEffect' listens for changes in 'inputText'. Whenever 'inputText' changes, it updates 'symbolCount' with the length of the text.",
           "This ensures 'symbolCount' always reflects the latest number of characters, providing real-time feedback to the user.",
         ],
-        image: "./cheatsheetImages/task49/2.webp"
+        image: "/images/cheatsheetImages/task49/2.webp"
       },
          {
         title: "",
@@ -3059,7 +3059,7 @@ const cheatsheetData = [
           "'handleInputChange' updates inputText state based on user input.",
           "By passing 'event.target.value', this function ensures 'inputText' reflects the current textarea content.",
         ],
-        image: "./cheatsheetImages/task49/3.webp"
+        image: "/images/cheatsheetImages/task49/3.webp"
       },
          {
         title: "",
@@ -3069,7 +3069,7 @@ const cheatsheetData = [
           "The server response (audio file) is temporarily saved as a URL, allowing the user to download it.",
           "The 'responseType: 'blob'' specifies that we expect binary data (an audio file) in the response, suitable for downloading files.",
         ],
-        image: "./cheatsheetImages/task49/4.webp"
+        image: "/images/cheatsheetImages/task49/4.webp"
       },
          {
         title: "",
@@ -3078,7 +3078,7 @@ const cheatsheetData = [
           "Sets up an Express server to handle requests. cors allows cross-origin requests from the React frontend.",
           "Define the port the server listens on (3001) to avoid conflicts with the frontend.",
         ],
-        image: "./cheatsheetImages/task49/5.webp"
+        image: "/images/cheatsheetImages/task49/5.webp"
       },
          {
         title: "",
@@ -3088,7 +3088,7 @@ const cheatsheetData = [
           "Saves the speech file as 'output.mp3' and sends it back to the frontend for download.",
           "The 'fs.unlink' function deletes the file after it's sent, keeping storage clean.",
         ],
-        image: "./cheatsheetImages/task49/6.webp"
+        image: "/images/cheatsheetImages/task49/6.webp"
       },
     ],
   },
@@ -3103,7 +3103,7 @@ const cheatsheetData = [
           "'scrollY': Stores the current vertical scroll position (window.scrollY).",
           "Use 'useState' for values that dynamically change based on user actions.",
         ],
-        image: "./cheatsheetImages/task50/1.webp"
+        image: "/images/cheatsheetImages/task50/1.webp"
       },
          {
         title: "",
@@ -3115,7 +3115,7 @@ const cheatsheetData = [
           "Always clean up event listeners in 'useEffect' to prevent memory leaks.",
 
         ],
-        image: "./cheatsheetImages/task50/2.webp"
+        image: "/images/cheatsheetImages/task50/2.webp"
       },
          {
         title: "",
@@ -3125,7 +3125,7 @@ const cheatsheetData = [
           "Smoothly scrolls to the target section using the 'react-scroll' library.",
           "The 'offset' adjusts the scroll position to account for a fixed header or margin.",
         ],
-        image: "./cheatsheetImages/task50/3.webp"
+        image: "/images/cheatsheetImages/task50/3.webp"
       },
        
     ],
@@ -3143,7 +3143,7 @@ const cheatsheetData = [
           "models.map: Dynamically generates routes for each model defined in models.js.",
           "Use useParams from react-router-dom to access dynamic route parameters if needed.",
         ],
-        image: "./cheatsheetImages/task51/1.webp"
+        image: "/images/cheatsheetImages/task51/1.webp"
       },
          {
         title: "",
@@ -3153,7 +3153,7 @@ const cheatsheetData = [
           "Passes the properties of each model (e.g., modelName, speed) to the Model component using the spread operator ...model.",
           "To debug, log model to check the properties being passed to Model.",
         ],
-        image: "./cheatsheetImages/task51/2.webp"
+        image: "/images/cheatsheetImages/task51/2.webp"
       },
          {
         title: "",
@@ -3165,7 +3165,7 @@ const cheatsheetData = [
           "Use Framer Motion to enhance the user experience with smooth animations.",
 
         ],
-        image: "./cheatsheetImages/task51/3.webp"
+        image: "/images/cheatsheetImages/task51/3.webp"
       },
          {
         title: "",
@@ -3175,7 +3175,7 @@ const cheatsheetData = [
           "useEffect: Ensures the animation starts when the component mounts.",
           "This setup is ideal for triggering animations based on user interactions or lifecycle events.",
         ],
-        image: "./cheatsheetImages/task51/4.webp"
+        image: "/images/cheatsheetImages/task51/4.webp"
       },
        
     ],
@@ -3190,7 +3190,7 @@ const cheatsheetData = [
           "'useState' manages whether the sidebar menu is open (menuOpen).",
           "'toggleMenu' toggles the menu state, and 'closeMenu' ensures it closes.",
         ],
-        image: "./cheatsheetImages/task52/1.webp"
+        image: "/images/cheatsheetImages/task52/1.webp"
       },
          {
         title: "",
@@ -3199,7 +3199,7 @@ const cheatsheetData = [
           "Receives 'menuOpen' to toggle the sidebar and 'closeMenu' to handle link clicks.",
           "'motion.aside' (from framer-motion) adds smooth sidebar transitions.",
         ],
-        image: "./cheatsheetImages/task52/2.webp"
+        image: "/images/cheatsheetImages/task52/2.webp"
       },
          {
         title: "",
@@ -3209,7 +3209,7 @@ const cheatsheetData = [
           "Adds smooth fade-in effects using 'motion.table'.",
           "Utilizes <thead> for headers and <tbody> for data rows.",
         ],
-        image: "./cheatsheetImages/task52/3.webp"
+        image: "/images/cheatsheetImages/task52/3.webp"
       },
          {
         title: "",
@@ -3219,7 +3219,7 @@ const cheatsheetData = [
           "'useEffect' simulates fetching data with a 'setTimeout'.",
           "Displays a loading spinner while fetching data.",
         ],
-        image: "./cheatsheetImages/task52/4.webp"
+        image: "/images/cheatsheetImages/task52/4.webp"
       },
          {
         title: "",
@@ -3228,7 +3228,7 @@ const cheatsheetData = [
           "Holds a list of users and loading state.",
           "Maps over the users array to display each user.",
         ],
-        image: "./cheatsheetImages/task52/5.webp"
+        image: "/images/cheatsheetImages/task52/5.webp"
       },
         
     ],
@@ -3248,7 +3248,7 @@ const cheatsheetData = [
           "questionTimes: Stores the time taken for each question and whether it was answered correctly",
           "quizFinished: Tracks whether the quiz is finished.",
         ],
-        image: "./cheatsheetImages/task53/1.webp"
+        image: "/images/cheatsheetImages/task53/1.webp"
       },
          {
         title: "",
@@ -3258,7 +3258,7 @@ const cheatsheetData = [
           "This 'useEffect' runs every time 'currentQuestion' changes (i.e., when a user answers a question).",
           "If the quiz is finished ('quizFinished' is 'true'), it stops updating the start time.",
         ],
-        image: "./cheatsheetImages/task53/2.webp"
+        image: "/images/cheatsheetImages/task53/2.webp"
       },
          {
         title: "",
@@ -3269,7 +3269,7 @@ const cheatsheetData = [
           "The answer is marked as correct if the selected option's index matches the correct answer.",
           "'setQuestionTimes': This stores information about the current question, how long it took to answer, and whether the answer was correct, allowing later analysis of the quiz results.",
         ],
-        image: "./cheatsheetImages/task53/3.webp"
+        image: "/images/cheatsheetImages/task53/3.webp"
       },
          {
         title: "",
@@ -3278,7 +3278,7 @@ const cheatsheetData = [
           "'setSelectedOption(index)' highlights the selected option, which helps with UI styling and feedback.",
           "After a brief delay (500ms), the quiz either moves to the next question or ends. If there are more questions, the currentQuestion state is incremented. If all questions have been answered, 'setQuizFinished(true)' ends the quiz and shows the results.",
         ],
-        image: "./cheatsheetImages/task54/4.webp"
+        image: "/images/cheatsheetImages/task54/4.webp"
       },
          {
         title: "",
@@ -3287,7 +3287,7 @@ const cheatsheetData = [
           "The 'restartQuiz' function resets the state to allow the user to play the quiz again.",
           "All relevant states (currentQuestion, score, selectedOption, questionTimes, quizFinished) are reset to their initial values.",
         ],
-        image: "./cheatsheetImages/task54/5.webp"
+        image: "/images/cheatsheetImages/task54/5.webp"
       },
        
     ],
@@ -3312,7 +3312,7 @@ export default cheatsheetData;
             "",
             "",
           ],
-          image: "./cheatsheetImages/task/.webp"
+          image: "/images/cheatsheetImages/task/.webp"
         },
            {
           title: "",
@@ -3322,7 +3322,7 @@ export default cheatsheetData;
             "",
             "",
           ],
-          image: "./cheatsheetImages/task/.webp"
+          image: "/images/cheatsheetImages/task/.webp"
         },
            {
           title: "",
@@ -3332,7 +3332,7 @@ export default cheatsheetData;
             "",
             "",
           ],
-          image: "./cheatsheetImages/task/.webp"
+          image: "/images/cheatsheetImages/task/.webp"
         },
            {
           title: "",
@@ -3342,7 +3342,7 @@ export default cheatsheetData;
             "",
             "",
           ],
-          image: "./cheatsheetImages/task/.webp"
+          image: "/images/cheatsheetImages/task/.webp"
         },
            {
           title: "",
@@ -3352,7 +3352,7 @@ export default cheatsheetData;
             "",
             "",
           ],
-          image: "./cheatsheetImages/task/.webp"
+          image: "/images/cheatsheetImages/task/.webp"
         },
            {
           title: "",
@@ -3362,7 +3362,7 @@ export default cheatsheetData;
             "",
             "",
           ],
-          image: "./cheatsheetImages/task/.webp"
+          image: "/images/cheatsheetImages/task/.webp"
         },
       ],
     },
