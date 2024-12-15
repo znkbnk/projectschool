@@ -1,37 +1,56 @@
 .progress-bar {
-  --btn-margin-x: 0.5rem;
-  --btn-width: 60px;
-  --btn-right-shift: calc(var(--btn-margin-x) + var(--btn-width) / 2);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  background-color: #000; /* Black theme */
+  border-radius: 12px;
 }
 
 .stages {
-  position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
-  width: 600px;
   flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .stage {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: #000000;
-  font-size: 1.4em;
-  padding: 5px;
-  width: 2em; 
-  z-index: 2;
-  background-color: rgb(175, 175, 175);
-  border: 3px solid #e7e7e7;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff; /* White text */
+  background-color: #1c1c1c; /* Dark grey bubble */
+  border: 2px solid #333; /* Subtle border */
+  transition: all 0.3s ease-in-out;
 }
 
 .stage.completed {
-  background-image: linear-gradient(to right, #006648 0%, #00f773 100%);
-  color: #111;
+  background-color: #00c853; /* Vibrant green for completed */
+  border-color: #00e676; /* Subtle glow effect */
+  color: #000; /* Black text for contrast */
+  box-shadow: 0 0 8px rgba(0, 200, 83, 0.8); /* Soft glow */
+}
 
+
+
+
+.stage:hover {
+  transform: translateY(-5px);
+  background-color: #444; /* Slight hover pop */
+  border-color: #555;
+}
+
+
+
+.stage.completed:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(0, 255, 110, 1);
 }

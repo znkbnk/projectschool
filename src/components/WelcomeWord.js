@@ -17,7 +17,7 @@ const WelcomeComponent = () => {
   const sectionImg2Ref = useRef(null);
 
   useEffect(() => {
-    animation(); // Run animation directly after rendering
+    animation();
   }, []);
 
   const animation = () => {
@@ -40,7 +40,6 @@ const WelcomeComponent = () => {
           sectionImg3Element,
           sectionImg2Element,
           sectionImg7Element,
-          picture,
         ],
         {
           opacity: 0,
@@ -93,69 +92,58 @@ const WelcomeComponent = () => {
             },
           },
           "-=1"
-        )
-        .to(
-          picture,
-          {
-            visibility: "visible",
-            opacity: 1,
-            duration: 0.5,
-          },
-          "-=1"
         );
     }
   };
 
   return (
-    <div className='word-container'>
-      {/* Existing images with lazy loading */}
+    <div className="word-container">
       <img
         src={sectionImg4}
-        alt='logo'
-        className='sectionImg4'
+        alt="logo"
+        className="sectionImg4"
         ref={sectionImg4Ref}
         loading="lazy"
-      ></img>
+      />
 
-      <div className='sectionImages-container'>
+      <div className="sectionImages-container">
         <img
           src={sectionImg7}
-          alt='logo'
-          className='sectionImg7'
+          alt="logo"
+          className="sectionImg7"
           ref={sectionImg7Ref}
           loading="lazy"
         />
         <img
           src={sectionImg2}
-          alt='logo'
-          className='sectionImg2'
+          alt="logo"
+          className="sectionImg2"
           ref={sectionImg2Ref}
           loading="lazy"
-        ></img>
+        />
         <img
           src={sectionImg3}
-          alt='logo'
-          className='sectionImg3'
+          alt="logo"
+          className="sectionImg3"
           ref={sectionImg3Ref}
           loading="lazy"
-        ></img>
+        />
         <img
-          className='projectschoolImg'
+          className="projectschoolImg"
           src={image1}
-          alt='logo'
+          alt="logo"
           ref={logo}
           loading="lazy"
-        ></img>
+        />
       </div>
 
-      {/* Mobile logo with lazy loading */}
+      {/* Preloaded and eagerly loaded pslogosmall */}
       <img
         src={pslogosmall}
         alt="pslogo small"
         className="pslogosmall"
         ref={logo}
-        loading="lazy"
-      ></img>
+      />
 
       <CrazyScrollPhrase />
     </div>
