@@ -86,6 +86,26 @@
           });
       });
     </script>
+    <script>
+      window.addEventListener("load", function () {
+        var script = document.createElement("script");
+        script.type = "application/ld+json";
+        fetch("./structured-data-question-quiz.json")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            script.text = JSON.stringify(data);
+            document.head.appendChild(script);
+          })
+          .catch((error) => {
+            console.error("Error loading JSON-LD data:", error);
+          });
+      });
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
