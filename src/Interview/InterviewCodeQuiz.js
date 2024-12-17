@@ -10,8 +10,8 @@ import { Helmet } from "react-helmet";
 
 const customDarkTheme = {
   ...dark,  // Start with the default dark theme
-  'hljs-keyword': { color: '#ff6347', fontWeight: 'bold' },  // Tomato for keywords
-  'hljs-function': { color: '#2ecc71' },  // Green for functions
+  'hljs-keyword': { color: '#3498db', fontWeight: 'bold' },  // Blue for keywords
+  'hljs-function': { color: '#e74c3c' },  // Red for functions
   'hljs-params': { color: '#e74c3c' },  // Red for parameters
   'hljs-string': { color: '#9b59b6' },  // Purple for strings
   'hljs-variable': { color: '#3498db' },  // Blue for variables
@@ -25,12 +25,12 @@ const customDarkTheme = {
   'hljs-symbol': { color: '#d35400' },  // Dark Orange for symbols
   'hljs-link': { color: '#2980b9' },  // Light Blue for links
   'hljs-doctag': { color: '#e67e22' },  // Orange for documentation tags
-  'hljs-title': { color: '#8e44ad' },  // Violet for titles
+  'hljs-title': { color: '#e74c3c' },  // Red for function and variable names like MyComponent
   'hljs-section': { color: '#16a085' },  // Dark Teal for sections
   'hljs-meta': { color: '#f39c12' },  // Yellow for metadata
   'hljs-subst': { color: '#f1c40f' },  // Gold for substitutions
   'hljs-deletion': { color: '#c0392b' },  // Red for deleted lines
-  'hljs-addition': { color: '#27ae60' },  // Green for additions
+  'hljs-addition': { color: '#2ecc71' },  // Green for additions
   'hljs-regexp': { color: '#8e44ad' },  // Violet for regular expressions
   'hljs-selector-id': { color: '#9b59b6' },  // Purple for IDs in selectors
   'hljs-selector-class': { color: '#2980b9' },  // Light Blue for classes in selectors
@@ -44,14 +44,18 @@ const customDarkTheme = {
   'hljs-decorator': { color: '#ff6347' },  // Tomato color for decorators
   'hljs-punctuation': { color: '#7f8c8d' },  // Light gray for punctuation marks
   'hljs-selector-pseudo': { color: '#ff6347' },  // Tomato for pseudo-selectors
-  'hljs-function .hljs-title': { color: '#8e44ad' },  // Violet for function names
+  'hljs-function .hljs-title': { color: '#e74c3c' },  // Red for function names like MyComponent
   'hljs-literal': { color: '#e67e22' },  // Orange for literals
   'hljs-tag .hljs-name': { color: '#f1c40f' },  // Gold for tag names
   'hljs-tag .hljs-value': { color: '#16a085' },  // Teal for tag values
   'hljs-keyword .hljs-title': { color: '#3498db' },  // Blue for keyword titles
   'hljs-link .hljs-url': { color: '#2980b9' },  // Light blue for URL links
   'hljs-function .hljs-params': { color: '#e74c3c' },  // Red for function parameters
+  
 };
+
+
+
 
 
 const getRandomQuestions = (questions, count) => {
