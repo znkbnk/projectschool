@@ -9,6 +9,7 @@ const ReactInterviewQuestionQuiz = [
       "A language used for creating APIs",
     ],
     correctAnswer: "A library for building user interfaces",
+    slug: "what-is-react",
     seoMeta: {
       seoTitle: "What is React.js? - Learn About React",
       seoDescription:
@@ -26,6 +27,8 @@ const ReactInterviewQuestionQuiz = [
       "A debugging tool for React developers",
     ],
     correctAnswer: "A lightweight copy of the real DOM used by React",
+    slug: "what-is-the-virtual-dom",
+
     seoMeta: {
       seoTitle: "What is the Virtual DOM? - React Quiz Question",
       seoDescription:
@@ -43,6 +46,8 @@ const ReactInterviewQuestionQuiz = [
       "A template engine used for server-side rendering",
     ],
     correctAnswer: "A syntax extension that allows writing HTML in React",
+    slug: "what-is-jsx",
+
     seoMeta: {
       seoTitle: "Understanding JSX - React Quiz",
       seoDescription:
@@ -60,6 +65,8 @@ const ReactInterviewQuestionQuiz = [
       "Components that don't use any hooks",
     ],
     correctAnswer: "Functions that take props and return React elements",
+    slug: "what-are-functional-component-in-react",
+
     seoMeta: {
       seoTitle: "What are Functional Components? - React Basics",
       seoDescription:
@@ -77,6 +84,8 @@ const ReactInterviewQuestionQuiz = [
       "To render a list of items in React",
     ],
     correctAnswer: "To manage side effects like fetching data or updating the DOM",
+    slug: "what-is-the-purpose-of-the-useeffect-hook",
+
     seoMeta: {
       seoTitle: "Understanding useEffect Hook - React Quiz",
       seoDescription:
@@ -94,6 +103,8 @@ const ReactInterviewQuestionQuiz = [
       "To create new components",
     ],
     correctAnswer: "To pass data between components",
+    slug: "what-is-the-purpose-of-react-props",
+
     seoMeta: {
       seoTitle: "React Props - Data Sharing in React",
       seoDescription:
@@ -111,6 +122,8 @@ const ReactInterviewQuestionQuiz = [
       "Handles user interactions",
     ],
     correctAnswer: "Declares state in functional components",
+    slug: "what-does-react-use-state-hook-do",
+
     seoMeta: {
       seoTitle: "React useState Hook - Manage Component State",
       seoDescription:
@@ -128,6 +141,8 @@ const ReactInterviewQuestionQuiz = [
       "A method to directly manipulate the DOM",
     ],
     correctAnswer: "A reusable piece of UI",
+    slug: "what-is-a-react-component",
+
     seoMeta: {
       seoTitle: "What is a React Component? - React Quiz",
       seoDescription:
@@ -145,6 +160,8 @@ const ReactInterviewQuestionQuiz = [
       "To optimize performance of React apps",
     ],
     correctAnswer: "To manage navigation and routing in React applications",
+    slug: "what-is-react-router-used-for",
+
     seoMeta: {
       seoTitle: "React Router - Navigation and Routing",
       seoDescription:
@@ -162,6 +179,8 @@ const ReactInterviewQuestionQuiz = [
       "Defines default props for components",
     ],
     correctAnswer: "Accesses or stores a mutable DOM reference",
+    slug: "what-does-the-react-use-ref-hook-do",
+
     seoMeta: {
       seoTitle: "React useRef Hook - Manage DOM References",
       seoDescription:
@@ -179,6 +198,8 @@ const ReactInterviewQuestionQuiz = [
       "To optimize the performance of React apps"
     ],
     "correctAnswer": "To share state or data across components without props drilling",
+    slug: "what-is-the-react-context-api-used-for",
+
     "seoMeta": {
       "seoTitle": "React Context API - Share State Across Components",
       "seoDescription": "Learn how the React Context API allows sharing state or data across components without the need for props drilling.",
@@ -195,6 +216,8 @@ const ReactInterviewQuestionQuiz = [
       "Components that handle user authentication"
     ],
     "correctAnswer": "Lightweight containers for grouping multiple elements",
+    slug: "what-are-react-fragments",
+
     "seoMeta": {
       "seoTitle": "React Fragments - Grouping Elements Without Adding Extra Nodes",
       "seoDescription": "Understand how React fragments allow you to group multiple elements without introducing unnecessary DOM nodes.",
@@ -211,6 +234,8 @@ const ReactInterviewQuestionQuiz = [
       "To pass data between components"
     ],
     "correctAnswer": "To uniquely identify elements in a list",
+    slug: "what-is-the-key-prop-in-react-used-for",
+
     "seoMeta": {
       "seoTitle": "React Key Prop - Identifying List Elements Uniquely",
       "seoDescription": "Learn how the key prop in React helps uniquely identify elements in a list for efficient rendering and updating.",
@@ -227,6 +252,8 @@ const ReactInterviewQuestionQuiz = [
       "Performs API requests"
     ],
     "correctAnswer": "Manages complex state logic in functional components",
+    slug: "what-does-the-use-reducer-hook-do",
+
     "seoMeta": {
       "seoTitle": "React useReducer Hook - Managing Complex State Logic",
       "seoDescription": "Explore how the useReducer hook in React manages complex state logic in functional components.",
@@ -243,6 +270,8 @@ const ReactInterviewQuestionQuiz = [
       "To define default props"
     ],
     "correctAnswer": "To prevent unnecessary re-renders of functional components",
+    slug: "what-is-react-memo-used-for",
+
     "seoMeta": {
       "seoTitle": "React.memo - Prevent Unnecessary Re-renders",
       "seoDescription": "Understand how React.memo optimizes performance by preventing unnecessary re-renders of functional components.",
@@ -259,6 +288,8 @@ const ReactInterviewQuestionQuiz = [
       "A feature for optimizing performance"
     ],
     "correctAnswer": "Passing props down multiple levels of components",
+    slug: "what-is-prop-drilling-in-react",
+
     "seoMeta": {
       "seoTitle": "Prop Drilling in React - Passing Props Through Multiple Components",
       "seoDescription": "Learn about prop drilling in React and how it involves passing props down multiple levels of components.",
@@ -275,6 +306,8 @@ const ReactInterviewQuestionQuiz = [
       "To create new components"
     ],
     "correctAnswer": "To manage dynamic data within a component",
+    slug: "what-is-the-purpose-of-react-state",
+
     "seoMeta": {
       "seoTitle": "React State - Managing Dynamic Data Within Components",
       "seoDescription": "Understand how React state allows you to manage dynamic data within components, enabling interactivity.",
@@ -291,6 +324,8 @@ const ReactInterviewQuestionQuiz = [
       "Styles components globally"
     ],
     "correctAnswer": "Checks for potential problems in React applications",
+    slug: "what-does-react-strict-mode-do",
+
     "seoMeta": {
       "seoTitle": "React.StrictMode - Identifying Potential Issues",
       "seoDescription": "Learn how React.StrictMode helps identify potential issues in your React applications during development.",
@@ -307,6 +342,8 @@ const ReactInterviewQuestionQuiz = [
       "Creating reusable styles"
     ],
     "correctAnswer": "Rendering children outside the DOM hierarchy of their parent",
+    slug: "what-are-react-portals-used-for",
+
     "seoMeta": {
       "seoTitle": "React Portals - Rendering Children Outside Parent DOM",
       "seoDescription": "Discover how React portals allow rendering children outside the DOM hierarchy of their parent component.",
@@ -323,6 +360,8 @@ const ReactInterviewQuestionQuiz = [
       "Handles user events"
     ],
     "correctAnswer": "Fetches global state using Context",
+    slug: "what-does-the-use-context-hook-do",
+
     "seoMeta": {
       "seoTitle": "React useContext Hook - Fetch Global State",
       "seoDescription": "Understand how the useContext hook in React allows you to fetch global state using Context for efficient data sharing.",
@@ -340,6 +379,8 @@ const ReactInterviewQuestionQuiz = [
       "A method for routing in React"
     ],
     correctAnswer: "A way to access and manipulate a DOM element directly",
+    slug: "what-is-react-ref",
+
     seoMeta: {
       seoTitle: "React Refs - Accessing and Manipulating DOM Elements",
       seoDescription:
@@ -357,6 +398,8 @@ const ReactInterviewQuestionQuiz = [
       "To manage API requests"
     ],
     correctAnswer: "To load components lazily for better performance",
+    slug: "what-is-the-purpose-of-react-lazy",
+
     seoMeta: {
       seoTitle: "React.lazy - Lazy Loading Components",
       seoDescription:
@@ -374,6 +417,8 @@ const ReactInterviewQuestionQuiz = [
       "Optimizes component rendering"
     ],
     correctAnswer: "Displays a fallback UI while components are loading",
+    slug: "what-does-the-suspense-component-do-in-react",
+
     seoMeta: {
       seoTitle: "React Suspense - Fallback UI for Lazy Loading",
       seoDescription:
@@ -388,9 +433,11 @@ const ReactInterviewQuestionQuiz = [
       "State is read-only, while props can be modified",
       "State is used to pass data, while props manage local data",
       "State manages local data, while props are passed from parent to child",
-      "State updates the DOM directly, while props don’t"
+      "State updates the DOM directly, while props don't"
     ],
     correctAnswer: "State manages local data, while props are passed from parent to child",
+    slug: "what-is-the-difference-between-state-and-props-in-react",
+
     seoMeta: {
       seoTitle: "React State vs Props - Key Differences",
       seoDescription:
@@ -408,6 +455,8 @@ const ReactInterviewQuestionQuiz = [
       "Rendering large lists efficiently"
     ],
     correctAnswer: "Detecting potential issues in an app",
+    slug: "what-is-react-strict-mode-mainly-used-for",
+
     seoMeta: {
       seoTitle: "React.StrictMode - Detect Potential Issues",
       seoDescription:
@@ -425,6 +474,8 @@ const ReactInterviewQuestionQuiz = [
       "To bind event listeners"
     ],
     correctAnswer: "To enhance performance and track changes in lists",
+    slug: "what-is-the-purpose-of-keys-in-react-lists",
+
     seoMeta: {
       seoTitle: "React Keys - Improve List Performance",
       seoDescription:
@@ -442,6 +493,8 @@ const ReactInterviewQuestionQuiz = [
       "A debugging tool for developers"
     ],
     correctAnswer: "React's reconciliation algorithm",
+    slug: "what-is-react-fiber",
+
     seoMeta: {
       seoTitle: "React Fiber - Reconciliation Algorithm",
       seoDescription:
@@ -459,6 +512,8 @@ const ReactInterviewQuestionQuiz = [
       "Managing side effects with hooks"
     ],
     correctAnswer: "Moving state to a parent component to share with children",
+    slug: "what-does-lifting-state-up-mean-in-react",
+
     seoMeta: {
       seoTitle: "React Lifting State Up - Share Data Effectively",
       seoDescription:
@@ -476,6 +531,8 @@ const ReactInterviewQuestionQuiz = [
       "Handles side effects like fetching data"
     ],
     correctAnswer: "Returns the React elements to display",
+    slug: "what-does-the-render-method-do-in-class-components",
+
     seoMeta: {
       seoTitle: "React Class Components - Render Method",
       seoDescription:
@@ -493,6 +550,8 @@ const ReactInterviewQuestionQuiz = [
       "Automatically updates the component state"
     ],
     correctAnswer: "Triggers a callback function when clicked",
+    slug: "what-is-the-default-behavior-of-the-react-on-click-event",
+
     seoMeta: {
       seoTitle: "React onClick - Handle Click Events",
       seoDescription:
@@ -510,10 +569,12 @@ const ReactInterviewQuestionQuiz = [
       "options": [
         "Components managed entirely by the DOM",
         "Components whose state is controlled by React",
-        "Components that don’t rely on any hooks",
+        "Components that don't rely on any hooks",
         "Components that directly update the DOM"
       ],
       "correctAnswer": "Components whose state is controlled by React",
+    slug: "what-are-controlled-components-in-react",
+
       "seoMeta": {
         "seoTitle": "Controlled Components in React Explained",
         "seoDescription": "Understand controlled components in React, their behavior, and how React manages their state.",
@@ -530,6 +591,8 @@ const ReactInterviewQuestionQuiz = [
         "To optimize performance"
       ],
       "correctAnswer": "To set default values for props",
+    slug: "what-is-the-use-of-the-default-props-property-in-react",
+
       "seoMeta": {
         "seoTitle": "React defaultProps - Setting Default Values for Props",
         "seoDescription": "Learn about the defaultProps property in React and how to set default values for props in your components.",
@@ -546,6 +609,8 @@ const ReactInterviewQuestionQuiz = [
         "A library for managing forms in React"
       ],
       "correctAnswer": "A function that takes a component and returns a new component",
+    slug: "what-is-a-higher-order-component-hoc-in-react",
+
       "seoMeta": {
         "seoTitle": "React Higher-Order Components (HOC)",
         "seoDescription": "Discover what higher-order components (HOCs) are in React and how they work.",
@@ -562,6 +627,8 @@ const ReactInterviewQuestionQuiz = [
         "To update the state of the component"
       ],
       "correctAnswer": "To clean up resources like timers or subscriptions",
+    slug: "what-is-the-purpose-of-the-component-will-unmount-lifecycle-method",
+
       "seoMeta": {
         "seoTitle": "React componentWillUnmount Lifecycle Method",
         "seoDescription": "Learn about the componentWillUnmount lifecycle method in React and how it helps clean up resources.",
@@ -578,6 +645,8 @@ const ReactInterviewQuestionQuiz = [
         "To create reusable styles"
       ],
       "correctAnswer": "To define initial state and bind methods",
+    slug: "what-is-the-purpose-of-the-constructor-in-class-components",
+
       "seoMeta": {
         "seoTitle": "Constructor in React Class Components",
         "seoDescription": "Understand the role of the constructor in React class components, including initializing state and binding methods.",
@@ -594,6 +663,8 @@ const ReactInterviewQuestionQuiz = [
         "Binds methods to the component"
       ],
       "correctAnswer": "Updates state based on changes in props",
+    slug: "what-does-the-getderivedstatefromprops-lifecycle-method-do",
+
       "seoMeta": {
         "seoTitle": "React getDerivedStateFromProps Lifecycle Method",
         "seoDescription": "Learn about the getDerivedStateFromProps lifecycle method in React and how it updates state based on props.",
@@ -610,6 +681,8 @@ const ReactInterviewQuestionQuiz = [
         "Optimizing React app performance"
       ],
       "correctAnswer": "Debugging and inspecting React components",
+    slug: "what-is-the-react-developer-tools-extension-used-for",
+
       "seoMeta": {
         "seoTitle": "React Developer Tools - Debugging React Components",
         "seoDescription": "Explore the features of the React Developer Tools extension, including debugging and inspecting React components.",
@@ -626,6 +699,8 @@ const ReactInterviewQuestionQuiz = [
         "To apply default props to components"
       ],
       "correctAnswer": "To display UI during loading or errors",
+    slug: "what-is-the-purpose-of-a-fallback-ui-in-react",
+
       "seoMeta": {
         "seoTitle": "Fallback UI in React - Handling Loading and Errors",
         "seoDescription": "Learn how to use fallback UI in React to handle loading states and display error messages effectively.",
@@ -642,6 +717,8 @@ const ReactInterviewQuestionQuiz = [
         "Performs server-side rendering"
       ],
       "correctAnswer": "Renders a React element into the DOM",
+    slug: "what-does-reactdom-render-do",
+
       "seoMeta": {
         "seoTitle": "ReactDOM.render - Rendering React Elements",
         "seoDescription": "Understand the purpose of ReactDOM.render and how it renders React elements into the DOM.",
@@ -662,6 +739,8 @@ const ReactInterviewQuestionQuiz = [
         "To manage user inputs in forms"
       ],
       "correctAnswer": "To update and render only the necessary changes to the DOM",
+    slug: "what-is-the-purpose-of-react-s-reconciliation-process",
+
       "seoMeta": {
         "seoTitle": "React Reconciliation - Optimize DOM Updates",
         "seoDescription": "Understand the purpose of React's reconciliation process in optimizing DOM updates for better performance.",
@@ -678,6 +757,8 @@ const ReactInterviewQuestionQuiz = [
         "To trigger re-renders when props change"
       ],
       "correctAnswer": "To memoize functions and avoid unnecessary re-creations",
+    slug: "what-is-the-main-purpose-of-the-usecallback-hook",
+
       "seoMeta": {
         "seoTitle": "React useCallback Hook - Memoize Functions",
         "seoDescription": "Learn how the useCallback hook in React helps memoize functions to improve performance.",
@@ -694,6 +775,8 @@ const ReactInterviewQuestionQuiz = [
         "To handle component lifecycle methods"
       ],
       "correctAnswer": "To allow state sharing between components without passing props",
+    slug: "what-is-the-purpose-of-the-use-context-hook",
+
       "seoMeta": {
         "seoTitle": "React useContext Hook - Share State",
         "seoDescription": "Discover how the useContext hook allows state sharing across components without prop drilling.",
@@ -710,6 +793,8 @@ const ReactInterviewQuestionQuiz = [
         "It is used to store component data persistently"
       ],
       "correctAnswer": "It helps React identify which items have changed, added, or removed",
+    slug: "what-is-the-significance-of-the-key-prop-in-react-lists",
+
       "seoMeta": {
         "seoTitle": "React Key Prop - Identify List Items",
         "seoDescription": "Learn why the key prop in React lists is essential for identifying changed, added, or removed items.",
@@ -726,6 +811,8 @@ const ReactInterviewQuestionQuiz = [
         "To bind event listeners on the client"
       ],
       "correctAnswer": "To perform server-side rendering of React components",
+    slug: "what-is-reactdomserver-used-for",
+
       "seoMeta": {
         "seoTitle": "ReactDOMServer - Server-Side Rendering",
         "seoDescription": "Understand the role of ReactDOMServer in enabling server-side rendering for React components.",
@@ -742,6 +829,8 @@ const ReactInterviewQuestionQuiz = [
         "It helps in component styling and animations"
       ],
       "correctAnswer": "It is used to handle large state updates in a performant way",
+    slug: "what-does-the-use-reducer-hook-do-in-react",
+
       "seoMeta": {
         "seoTitle": "React useReducer Hook - Manage Complex States",
         "seoDescription": "Learn how the useReducer hook in React simplifies managing large and complex state updates.",
@@ -758,6 +847,8 @@ const ReactInterviewQuestionQuiz = [
         "By rendering JSX inside the parent component"
       ],
       "correctAnswer": "By passing a callback function as a prop from parent to child",
+    slug: "how-do-you-pass-data-from-a-child-component-to-a-parent-component-in-react",
+
       "seoMeta": {
         "seoTitle": "React Child to Parent Data Transfer",
         "seoDescription": "Discover how to pass data from a child component to a parent component in React using callback props.",
@@ -766,7 +857,7 @@ const ReactInterviewQuestionQuiz = [
     },
     {
       "id": 47,
-      "question": "What is the difference between React’s useEffect and useLayoutEffect hooks?",
+      "question": "What is the difference between React's useEffect and useLayoutEffect hooks?",
       "options": [
         "useEffect runs synchronously, while useLayoutEffect runs asynchronously",
         "useLayoutEffect runs synchronously after all DOM mutations",
@@ -774,6 +865,8 @@ const ReactInterviewQuestionQuiz = [
         "useLayoutEffect is used only for server-side rendering"
       ],
       "correctAnswer": "useLayoutEffect runs synchronously after all DOM mutations",
+    slug: "what-is-the-difference-between-reacts-useeffect-and-uselayouteffect-hooks",
+
       "seoMeta": {
         "seoTitle": "React useEffect vs. useLayoutEffect",
         "seoDescription": "Understand the differences between useEffect and useLayoutEffect hooks in React and their use cases.",
@@ -790,6 +883,8 @@ const ReactInterviewQuestionQuiz = [
         "To handle event listeners and remove them on unmount"
       ],
       "correctAnswer": "To fetch data or perform operations after the component mounts",
+    slug: "what-is-the-role-of-the-componentdidmount-lifecycle-method-in-react",
+
       "seoMeta": {
         "seoTitle": "React componentDidMount - Lifecycle Method",
         "seoDescription": "Learn the role of the componentDidMount lifecycle method in React for post-mount operations.",
@@ -806,6 +901,8 @@ const ReactInterviewQuestionQuiz = [
         "It enables direct DOM manipulation"
       ],
       "correctAnswer": "It allows you to pass data across the app without using props",
+    slug: "what-does-the-react-context-api-allow-you-to-do",
+
       "seoMeta": {
         "seoTitle": "React Context API - Simplify Data Sharing",
         "seoDescription": "Explore how the React Context API simplifies data sharing across your application.",
@@ -822,6 +919,8 @@ const ReactInterviewQuestionQuiz = [
         "To manage error boundaries in React components"
       ],
       "correctAnswer": "To read layout and paint information from the DOM",
+    slug: "what-is-the-purpose-of-the-uselayouteffect-hook",
+
       "seoMeta": {
         "seoTitle": "Understanding the useLayoutEffect Hook in React",
         "seoDescription": "Learn about the useLayoutEffect hook in React, its purpose, and how it is used to read layout and paint information from the DOM.",
@@ -838,6 +937,8 @@ const ReactInterviewQuestionQuiz = [
         "State and props are interchangeable"
       ],
       "correctAnswer": "State is internal to a component, while props are passed from a parent",
+    slug: "what-is-the-difference-between-state-and-props-in-react",
+
       "seoMeta": {
         "seoTitle": "React State vs Props: Key Differences Explained",
         "seoDescription": "Learn the fundamental differences between state and props in React, including their purposes and how they are used in components.",
@@ -854,6 +955,8 @@ const ReactInterviewQuestionQuiz = [
         "A component that directly modifies the DOM"
       ],
       "correctAnswer": "A component whose form elements are controlled by React state",
+    slug: "what-are-controlled-components-in-react",
+
       "seoMeta": {
         "seoTitle": "What Are Controlled Components in React?",
         "seoDescription": "Understand controlled components in React and how they allow form elements to be controlled by state.",
@@ -870,6 +973,8 @@ const ReactInterviewQuestionQuiz = [
         "It binds lifecycle methods to functional components"
       ],
       "correctAnswer": "It memoizes a component to prevent unnecessary re-renders",
+    slug: "what-is-the-significance-of-the-react-memo-function",
+
       "seoMeta": {
         "seoTitle": "Understanding React.memo for Optimized Rendering",
         "seoDescription": "Learn how React.memo helps optimize rendering performance by memoizing functional components.",
@@ -886,6 +991,8 @@ const ReactInterviewQuestionQuiz = [
         "It provides additional performance optimizations"
       ],
       "correctAnswer": "It highlights potential issues in an application during development",
+    slug: "what-does-the-strictmode-component-do-in-react",
+
       "seoMeta": {
         "seoTitle": "React StrictMode: Debugging and Best Practices",
         "seoDescription": "Discover how React's StrictMode helps developers identify potential issues during development.",
@@ -902,6 +1009,8 @@ const ReactInterviewQuestionQuiz = [
         "By using the Context API"
       ],
       "correctAnswer": "By using React.memo or shouldComponentUpdate",
+    slug: "how-can-you-prevent-a-component-from-re-rendering-unnecessarily",
+
       "seoMeta": {
         "seoTitle": "Prevent Unnecessary Re-Renders in React",
         "seoDescription": "Learn how to use React.memo and shouldComponentUpdate to optimize React app performance.",
@@ -918,6 +1027,8 @@ const ReactInterviewQuestionQuiz = [
         "To manage component states and props"
       ],
       "correctAnswer": "To group multiple elements without adding extra nodes to the DOM",
+    slug: "what-is-the-purpose-of-the-fragment-component-in-react",
+
       "seoMeta": {
         "seoTitle": "React Fragment: Grouping Without Extra DOM Nodes",
         "seoDescription": "Understand how React Fragments help group multiple elements without cluttering the DOM.",
@@ -934,6 +1045,8 @@ const ReactInterviewQuestionQuiz = [
         "To replace the need for PropTypes"
       ],
       "correctAnswer": "To provide default values for props if no value is passed",
+    slug: "what-is-the-role-of-reacts-default-props",
+
       "seoMeta": {
         "seoTitle": "React Default Props: Ensuring Fallback Values",
         "seoDescription": "Learn how default props in React provide fallback values for components when no props are passed.",
@@ -950,6 +1063,8 @@ const ReactInterviewQuestionQuiz = [
         "To fetch and display fallback data"
       ],
       "correctAnswer": "To catch and handle errors during rendering or in lifecycle methods",
+    slug: "what-is-the-purpose-of-the-error-boundary-in-react",
+
       "seoMeta": {
         "seoTitle": "React Error Boundaries: Handling UI Failures",
         "seoDescription": "Understand how Error Boundaries in React catch rendering errors and provide fallback UI.",
@@ -966,6 +1081,8 @@ const ReactInterviewQuestionQuiz = [
         "To validate props passed to child components"
       ],
       "correctAnswer": "To create a reference to a DOM element or persist a mutable value",
+    slug: "what-is-the-purpose-of-reacts-use-ref-hook",
+
       "seoMeta": {
         "seoTitle": "React useRef Hook: Managing DOM and Mutable Values",
         "seoDescription": "Learn how the useRef hook in React is used to reference DOM elements and persist mutable values.",
@@ -982,6 +1099,8 @@ const ReactInterviewQuestionQuiz = [
         "A separate DOM that is stored in memory for performance"
       ],
       "correctAnswer": "A copy of the browser DOM that React uses to track changes",
+    slug: "what-is-the-virtual-dom-in-react",
+
       "seoMeta": {
         "seoTitle": "React Virtual DOM: Enhancing App Performance",
         "seoDescription": "Learn how the virtual DOM in React helps improve performance by efficiently tracking and applying changes.",

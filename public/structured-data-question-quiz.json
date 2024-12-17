@@ -9,7 +9,7 @@
       "@type": "Question",
       "name": "What is React.js?",
       "text": "What is React.js?",
-      "url": "https://projectschool.dev/quiz/what-is-react",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-virtual-dom",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A library for building user interfaces"
@@ -50,7 +50,7 @@
       "@type": "Question",
       "name": "What is the Virtual DOM?",
       "text": "What is the Virtual DOM?",
-      "url": "https://projectschool.dev/quiz/what-is-the-virtual-dom",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-virtual-dom",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A lightweight copy of the real DOM used by React"
@@ -91,7 +91,7 @@
       "@type": "Question",
       "name": "What is JSX?",
       "text": "What is JSX?",
-      "url": "https://projectschool.dev/quiz/what-is-jsx",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-jsx",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A syntax extension that allows writing HTML in React"
@@ -122,7 +122,7 @@
       "@type": "Question",
       "name": "What are functional components in React?",
       "text": "What are functional components in React?",
-      "url": "https://projectschool.dev/quiz/functional-components-in-react",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-functional-component-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Functions that take props and return React elements"
@@ -163,7 +163,7 @@
       "@type": "Question",
       "name": "What is the purpose of the useEffect hook?",
       "text": "What is the purpose of the useEffect hook?",
-      "url": "https://projectschool.dev/quiz/useeffect-hook",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-useeffect-hook",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To manage side effects like fetching data or updating the DOM"
@@ -204,7 +204,7 @@
       "@type": "Question",
       "name": "What is the purpose of React props?",
       "text": "What is the purpose of React props?",
-      "url": "https://projectschool.dev/quiz/react-props",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-props",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To pass data between components"
@@ -245,7 +245,7 @@
       "@type": "Question",
       "name": "What does React useState hook do?",
       "text": "What does React useState hook do?",
-      "url": "https://projectschool.dev/quiz/usestate-hook",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-react-use-state-hook-do",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Declares state in functional components"
@@ -286,7 +286,7 @@
       "@type": "Question",
       "name": "What is a React component?",
       "text": "What is a React component?",
-      "url": "https://projectschool.dev/quiz/what-is-a-react-component",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-a-react-component",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A reusable piece of UI"
@@ -327,7 +327,7 @@
       "@type": "Question",
       "name": "What is React Router used for?",
       "text": "What is React Router used for?",
-      "url": "https://projectschool.dev/quiz/what-is-react-router-used-for",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-router-used-for",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To manage navigation and routing in React applications"
@@ -368,7 +368,7 @@
       "@type": "Question",
       "name": "What does the React useRef hook do?",
       "text": "What does the React useRef hook do?",
-      "url": "https://projectschool.dev/quiz/what-does-react-useref-hook-do",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-react-use-ref-hook-do",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Accesses or stores a mutable DOM reference"
@@ -399,7 +399,7 @@
       "@type": "Question",
       "name": "What is the React Context API used for?",
       "text": "What is the React Context API used for?",
-      "url": "https://projectschool.dev/quiz/what-is-react-context-api-used-for",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-react-context-api-used-for",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To share state or data across components without props drilling"
@@ -435,7 +435,7 @@
       "@type": "Question",
       "name": "What are React fragments?",
       "text": "What are React fragments?",
-      "url": "https://projectschool.dev/quiz/what-are-react-fragments",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-react-fragments",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Lightweight containers for grouping multiple elements"
@@ -476,7 +476,7 @@
       "@type": "Question",
       "name": "What is the key prop in React used for?",
       "text": "What is the key prop in React used for?",
-      "url": "https://projectschool.dev/quiz/what-is-the-key-prop-in-react-used-for",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-key-prop-in-react-used-for",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To uniquely identify elements in a list"
@@ -517,7 +517,7 @@
       "@type": "Question",
       "name": "What does the useReducer hook do?",
       "text": "What does the useReducer hook do?",
-      "url": "https://projectschool.dev/quiz/what-does-the-usereducer-hook-do",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-use-reducer-hook-do",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Manages complex state logic in functional components"
@@ -558,7 +558,7 @@
       "@type": "Question",
       "name": "What is React.memo used for?",
       "text": "What is React.memo used for?",
-      "url": "https://projectschool.dev/quiz/what-is-react-memo-used-for",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-memo-used-for",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To prevent unnecessary re-renders of functional components"
@@ -599,7 +599,7 @@
       "@type": "Question",
       "name": "What is prop drilling in React?",
       "text": "What is prop drilling in React?",
-      "url": "https://projectschool.dev/quiz/what-is-prop-drilling",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-prop-drilling-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Passing props down multiple levels of components"
@@ -640,7 +640,7 @@
       "@type": "Question",
       "name": "What is the purpose of React state?",
       "text": "What is the purpose of React state?",
-      "url": "https://projectschool.dev/quiz/what-is-react-state",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-state",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To manage dynamic data within a component"
@@ -681,7 +681,7 @@
       "@type": "Question",
       "name": "What does React.StrictMode do?",
       "text": "What does React.StrictMode do?",
-      "url": "https://projectschool.dev/quiz/what-does-react-strictmode-do",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-react-strict-mode-do",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Checks for potential problems in React applications"
@@ -722,7 +722,7 @@
       "@type": "Question",
       "name": "What are React portals used for?",
       "text": "What are React portals used for?",
-      "url": "https://projectschool.dev/quiz/what-are-react-portals-used-for",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-react-portals-used-for",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Rendering children outside the DOM hierarchy of their parent"
@@ -763,7 +763,7 @@
       "@type": "Question",
       "name": "What does the useContext hook do?",
       "text": "What does the useContext hook do?",
-      "url": "https://projectschool.dev/quiz/what-does-usecontext-hook-do",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-use-context-hook-do",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Fetches global state using Context"
@@ -799,7 +799,7 @@
       "@type": "Question",
       "name": "What is a React ref?",
       "text": "What is a React ref?",
-      "url": "https://projectschool.dev/quiz/what-is-react-ref",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-ref",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A way to access and manipulate a DOM element directly"
@@ -835,7 +835,7 @@
       "@type": "Question",
       "name": "What is the purpose of React.lazy?",
       "text": "What is the purpose of React.lazy?",
-      "url": "https://projectschool.dev/quiz/what-is-react-lazy",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-lazy",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To load components lazily for better performance"
@@ -871,7 +871,7 @@
       "@type": "Question",
       "name": "What does the Suspense component do in React?",
       "text": "What does the Suspense component do in React?",
-      "url": "https://projectschool.dev/quiz/what-does-suspense-component-do",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-suspense-component-do-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Displays a fallback UI while components are loading"
@@ -907,7 +907,7 @@
       "@type": "Question",
       "name": "What is the difference between state and props?",
       "text": "What is the difference between state and props?",
-      "url": "https://projectschool.dev/quiz/difference-between-state-and-props",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-difference-between-state-and-props-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "State manages local data, while props are passed from parent to child"
@@ -948,7 +948,7 @@
       "@type": "Question",
       "name": "What is React.StrictMode mainly used for?",
       "text": "What is React.StrictMode mainly used for?",
-      "url": "https://projectschool.dev/quiz/what-is-react-strictmode-used-for",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-strict-mode-mainly-used-for",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Detecting potential issues in an app"
@@ -989,7 +989,7 @@
       "@type": "Question",
       "name": "What is the purpose of keys in React lists?",
       "text": "What is the purpose of keys in React lists?",
-      "url": "https://projectschool.dev/quiz/purpose-of-keys-in-react-lists",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-keys-in-react-lists",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To enhance performance and track changes in lists"
@@ -1025,7 +1025,7 @@
       "@type": "Question",
       "name": "What is React Fiber?",
       "text": "What is React Fiber?",
-      "url": "https://projectschool.dev/quiz/what-is-react-fiber",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-fiber",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "React's reconciliation algorithm"
@@ -1066,7 +1066,7 @@
       "@type": "Question",
       "name": "What does lifting state up mean in React?",
       "text": "What does lifting state up mean in React?",
-      "url": "https://projectschool.dev/quiz/what-does-lifting-state-up-mean",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-lifting-state-up-mean-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Moving state to a parent component to share with children"
@@ -1107,7 +1107,7 @@
       "@type": "Question",
       "name": "What does the render method do in class components?",
       "text": "What does the render method do in class components?",
-      "url": "https://projectschool.dev/quiz/render-method-in-class-components",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-render-method-do-in-class-components",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Returns the React elements to display"
@@ -1148,7 +1148,7 @@
       "@type": "Question",
       "name": "What is the default behavior of the React onClick event?",
       "text": "What is the default behavior of the React onClick event?",
-      "url": "https://projectschool.dev/quiz/default-behavior-react-onclick",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-default-behavior-of-the-react-on-click-event",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Triggers a callback function when clicked"
@@ -1184,7 +1184,7 @@
       "@type": "Question",
       "name": "What are controlled components in React?",
       "text": "What are controlled components in React?",
-      "url": "https://projectschool.dev/quiz/what-are-controlled-components-in-react",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-controlled-components-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Components whose state is controlled by React"
@@ -1223,7 +1223,7 @@
       "@type": "Question",
       "name": "What is the use of the defaultProps property in React?",
       "text": "What is the use of the defaultProps property in React?",
-      "url": "https://projectschool.dev/quiz/what-is-the-use-of-defaultprops-in-react",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-use-of-the-default-props-property-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To set default values for props"
@@ -1262,7 +1262,7 @@
       "@type": "Question",
       "name": "What is a higher-order component (HOC) in React?",
       "text": "What is a higher-order component (HOC) in React?",
-      "url": "https://projectschool.dev/quiz/what-is-a-higher-order-component-hoc-in-react",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-a-higher-order-component-hoc-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A function that takes a component and returns a new component"
@@ -1301,7 +1301,7 @@
       "@type": "Question",
       "name": "What is the purpose of the componentWillUnmount lifecycle method?",
       "text": "What is the purpose of the componentWillUnmount lifecycle method?",
-      "url": "https://projectschool.dev/quiz/what-is-the-purpose-of-componentwillunmount",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-component-will-unmount-lifecycle-method",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To clean up resources like timers or subscriptions"
@@ -1340,7 +1340,7 @@
       "@type": "Question",
       "name": "What is the purpose of the constructor in class components?",
       "text": "What is the purpose of the constructor in class components?",
-      "url": "https://projectschool.dev/quiz/what-is-the-purpose-of-the-constructor-in-class-components",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-constructor-in-class-components",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To define initial state and bind methods"
@@ -1379,7 +1379,7 @@
       "@type": "Question",
       "name": "What does the getDerivedStateFromProps lifecycle method do?",
       "text": "What does the getDerivedStateFromProps lifecycle method do?",
-      "url": "https://projectschool.dev/quiz/what-does-the-getderivedstatefromprops-lifecycle-method-do",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-getderivedstatefromprops-lifecycle-method-do",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Updates state based on changes in props"
@@ -1418,7 +1418,7 @@
       "@type": "Question",
       "name": "What is the React Developer Tools extension used for?",
       "text": "What is the React Developer Tools extension used for?",
-      "url": "https://projectschool.dev/quiz/what-is-the-react-developer-tools-extension-used-for",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-react-developer-tools-extension-used-for",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Debugging and inspecting React components"
@@ -1457,7 +1457,7 @@
       "@type": "Question",
       "name": "What is the purpose of a fallback UI in React?",
       "text": "What is the purpose of a fallback UI in React?",
-      "url": "https://projectschool.dev/quiz/what-is-the-purpose-of-a-fallback-ui-in-react",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-a-fallback-ui-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To display UI during loading or errors"
@@ -1496,7 +1496,7 @@
       "@type": "Question",
       "name": "What does ReactDOM.render do?",
       "text": "What does ReactDOM.render do?",
-      "url": "https://projectschool.dev/quiz/what-does-reactdom-render-do",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-reactdom-render-do",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Renders a React element into the DOM"
@@ -1535,7 +1535,7 @@
       "@type": "Question",
       "name": "What is the purpose of React's reconciliation process?",
       "text": "What is the purpose of React's reconciliation process?",
-      "url": "https://projectschool.dev/quiz/what-is-the-purpose-of-reacts-reconciliation-process",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-s-reconciliation-process",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To update and render only the necessary changes to the DOM"
@@ -1574,7 +1574,7 @@
       "@type": "Question",
       "name": "What is the main purpose of the useCallback hook?",
       "text": "What is the main purpose of the useCallback hook?",
-      "url": "https://projectschool.dev/quiz/what-is-the-main-purpose-of-the-usecallback-hook",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-main-purpose-of-the-usecallback-hook",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To memoize functions and avoid unnecessary re-creations"
@@ -1613,7 +1613,7 @@
       "@type": "Question",
       "name": "What is the purpose of the useContext hook?",
       "text": "What is the purpose of the useContext hook?",
-      "url": "https://projectschool.dev/quiz/what-is-the-purpose-of-the-usecontext-hook",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-use-context-hook",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To allow state sharing between components without passing props"
@@ -1648,7 +1648,7 @@
       "@type": "Question",
       "name": "What is the significance of the key prop in React lists?",
       "text": "What is the significance of the key prop in React lists?",
-      "url": "https://projectschool.dev/quiz/what-is-the-significance-of-the-key-prop-in-react-lists",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-significance-of-the-key-prop-in-react-lists",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "It helps React identify which items have changed, added, or removed"
@@ -1679,7 +1679,7 @@
       "@type": "Question",
       "name": "What is ReactDOMServer used for?",
       "text": "What is ReactDOMServer used for?",
-      "url": "https://projectschool.dev/quiz/what-is-reactdomserver-used-for",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-reactdomserver-used-for",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "To perform server-side rendering of React components"
@@ -1710,7 +1710,7 @@
       "@type": "Question",
       "name": "What does the useReducer hook do in React?",
       "text": "What does the useReducer hook do in React?",
-      "url": "https://projectschool.dev/quiz/what-does-the-usereducer-hook-do-in-react",
+      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-use-reducer-hook-do-in-react",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "It is used to handle large state updates in a performant way"
@@ -1745,7 +1745,7 @@
         "@type": "Question",
         "name": "How do you pass data from a child component to a parent component in React?",
         "text": "How do you pass data from a child component to a parent component in React?",
-        "url": "https://projectschool.dev/quiz/how-do-you-pass-data-from-a-child-component-to-a-parent-component-in-react",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/how-do-you-pass-data-from-a-child-component-to-a-parent-component-in-react",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "By passing a callback function as a prop from parent to child"
@@ -1776,7 +1776,7 @@
         "@type": "Question",
         "name": "What is the difference between React’s useEffect and useLayoutEffect hooks?",
         "text": "What is the difference between React’s useEffect and useLayoutEffect hooks?",
-        "url": "https://projectschool.dev/quiz/what-is-the-difference-between-reacts-useeffect-and-uselayouteffect-hooks",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-difference-between-reacts-useeffect-and-uselayouteffect-hooks",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "useLayoutEffect runs synchronously after all DOM mutations"
@@ -1807,7 +1807,7 @@
         "@type": "Question",
         "name": "What is the role of the componentDidMount lifecycle method in React?",
         "text": "What is the role of the componentDidMount lifecycle method in React?",
-        "url": "https://projectschool.dev/quiz/what-is-the-role-of-the-componentdidmount-lifecycle-method-in-react",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-role-of-the-componentdidmount-lifecycle-method-in-react",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "To fetch data or perform operations after the component mounts"
@@ -1838,7 +1838,7 @@
         "@type": "Question",
         "name": "What does the React context API allow you to do?",
         "text": "What does the React context API allow you to do?",
-        "url": "https://projectschool.dev/quiz/what-does-the-react-context-api-allow-you-to-do",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-react-context-api-allow-you-to-do",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "It allows you to pass data across the app without using props"
@@ -1869,7 +1869,7 @@
         "@type": "Question",
         "name": "What is the purpose of the useLayoutEffect hook?",
         "text": "What is the purpose of the useLayoutEffect hook?",
-        "url": "https://projectschool.dev/quiz/what-is-the-purpose-of-the-uselayouteffect-hook",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-uselayouteffect-hook",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "To read layout and paint information from the DOM"
@@ -1900,7 +1900,7 @@
         "@type": "Question",
         "name": "What is the difference between state and props in React?",
         "text": "What is the difference between state and props in React?",
-        "url": "https://projectschool.dev/quiz/state-vs-props",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-difference-between-state-and-props-in-react",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "State is internal to a component, while props are passed from a parent"
@@ -1931,7 +1931,7 @@
         "@type": "Question",
         "name": "What is a controlled component in React?",
         "text": "What is a controlled component in React?",
-        "url": "https://projectschool.dev/quiz/controlled-component",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-controlled-components-in-react",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "A component whose form elements are controlled by React state"
@@ -1962,7 +1962,7 @@
         "@type": "Question",
         "name": "What is the significance of the React.memo function?",
         "text": "What is the significance of the React.memo function?",
-        "url": "https://projectschool.dev/quiz/react-memo",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-significance-of-the-react-memo-function",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "It memoizes a component to prevent unnecessary re-renders"
@@ -1993,7 +1993,7 @@
         "@type": "Question",
         "name": "What does the StrictMode component do in React?",
         "text": "What does the StrictMode component do in React?",
-        "url": "https://projectschool.dev/quiz/react-strictmode",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-strictmode-component-do-in-react",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "It highlights potential issues in an application during development"
@@ -2024,7 +2024,7 @@
         "@type": "Question",
         "name": "How can you prevent a component from re-rendering unnecessarily?",
         "text": "How can you prevent a component from re-rendering unnecessarily?",
-        "url": "https://projectschool.dev/quiz/prevent-re-render",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/how-can-you-prevent-a-component-from-re-rendering-unnecessarily",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "By using React.memo or shouldComponentUpdate"
@@ -2055,7 +2055,7 @@
         "@type": "Question",
         "name": "What is the purpose of the Fragment component in React?",
         "text": "What is the purpose of the Fragment component in React?",
-        "url": "https://projectschool.dev/quiz/what-is-the-purpose-of-the-fragment-component-in-react",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-fragment-component-in-react",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "To group multiple elements without adding extra nodes to the DOM"
@@ -2086,7 +2086,7 @@
         "@type": "Question",
         "name": "What is the role of React's default props?",
         "text": "What is the role of React's default props?",
-        "url": "https://projectschool.dev/quiz/what-is-the-role-of-reacts-default-props",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-role-of-reacts-default-props",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "To provide default values for props if no value is passed"
@@ -2117,7 +2117,7 @@
         "@type": "Question",
         "name": "What is the purpose of the Error Boundary in React?",
         "text": "What is the purpose of the Error Boundary in React?",
-        "url": "https://projectschool.dev/quiz/what-is-the-purpose-of-the-error-boundary-in-react",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-error-boundary-in-react",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "To catch and handle errors during rendering or in lifecycle methods"
@@ -2148,7 +2148,7 @@
         "@type": "Question",
         "name": "What is the purpose of React's useRef hook?",
         "text": "What is the purpose of React's useRef hook?",
-        "url": "https://projectschool.dev/quiz/what-is-the-purpose-of-reacts-useref-hook",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-reacts-use-ref-hook",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "To create a reference to a DOM element or persist a mutable value"
@@ -2179,7 +2179,7 @@
         "@type": "Question",
         "name": "What is the virtual DOM in React?",
         "text": "What is the virtual DOM in React?",
-        "url": "https://projectschool.dev/quiz/what-is-the-virtual-dom-in-react",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-virtual-dom-in-react",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "A copy of the browser DOM that React uses to track changes"

@@ -79,7 +79,7 @@ const App = () => {
           }
         />
         <Route
-          path='/interviewQuestions'
+          path='/interview/interviewQuestions'
           element={
             <ProtectedRoute isLoggedIn={isLoggedIn}>
               <InterviewQuestions />
@@ -87,7 +87,7 @@ const App = () => {
           }
         />
         <Route
-          path='/interviewQuiz'
+          path="/interview/interviewQuiz/:slug"
           element={
             <ProtectedRoute isLoggedIn={isLoggedIn}>
               <InterviewQuestionQuiz />
@@ -95,7 +95,7 @@ const App = () => {
           }
         />
         <Route
-          path='/interviewTasks'
+          path='/interview/interviewTasks'
           element={
             <ProtectedRoute isLoggedIn={isLoggedIn}>
               <InterviewTasks />
@@ -103,7 +103,7 @@ const App = () => {
           }
         />
         <Route
-          path='/interviewCodeQuiz'
+          path='/interview/InterviewCodeQuiz'
           element={
             <ProtectedRoute isLoggedIn={isLoggedIn}>
               <InterviewCodeQuiz />

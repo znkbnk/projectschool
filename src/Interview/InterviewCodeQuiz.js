@@ -10,35 +10,49 @@ import { Helmet } from "react-helmet";
 
 const customDarkTheme = {
   ...dark,  // Start with the default dark theme
-  'hljs-keyword': { color: '#f39c12', fontWeight: 'bold' },  // Yellow
-  'hljs-function': { color: '#2ecc71' },  // Green
-  'hljs-params': { color: '#e74c3c' },  // Red
-  'hljs-string': { color: '#9b59b6' },  // Purple
-  'hljs-variable': { color: '#3498db' },  // Blue
-  'hljs-comment': { color: '#95a5a6' },  // Gray (for comments)
-  'hljs-number': { color: '#f1c40f' },  // Gold (for numbers)
-  'hljs-class .hljs-title': { color: '#1abc9c' },  // Teal (for class names)
-  'hljs-attr': { color: '#e67e22' },  // Orange (for attributes)
-  'hljs-tag': { color: '#9b59b6' },  // Purple (for tags)
-  'hljs-type': { color: '#e74c3c' },  // Red (for types)
-  'hljs-built_in': { color: '#8e44ad' },  // Violet (for built-in functions)
-  'hljs-symbol': { color: '#d35400' },  // Dark Orange (for symbols)
-  'hljs-link': { color: '#2980b9' },  // Light Blue (for links)
-  'hljs-doctag': { color: '#e67e22' },  // Orange (for documentation tags)
-  'hljs-title': { color: '#8e44ad' },  // Violet (for titles)
-  'hljs-section': { color: '#16a085' },  // Dark Teal (for sections)
-  'hljs-meta': { color: '#f39c12' },  // Yellow (for metadata)
-  'hljs-subst': { color: '#f1c40f' },  // Gold (for substitution)
-  'hljs-deletion': { color: '#c0392b' },  // Red (for deleted lines)
-  'hljs-addition': { color: '#27ae60' },  // Green (for additions)
-  'hljs-regexp': { color: '#8e44ad' },  // Violet (for regular expressions)
-  'hljs-selector-id': { color: '#9b59b6' },  // Purple (for IDs in selectors)
-  'hljs-selector-class': { color: '#2980b9' },  // Light Blue (for classes in selectors)
-  'hljs-selector-attr': { color: '#e67e22' },  // Orange (for attributes in selectors)
-  'hljs-attribute': { color: '#16a085' },  // Dark Teal (for attributes)
-  'hljs-meta-keyword': { color: '#3498db' },  // Blue (for meta keywords)
-  'hljs-meta-string': { color: '#2ecc71' },  // Green (for meta strings)
+  'hljs-keyword': { color: '#ff6347', fontWeight: 'bold' },  // Tomato for keywords
+  'hljs-function': { color: '#2ecc71' },  // Green for functions
+  'hljs-params': { color: '#e74c3c' },  // Red for parameters
+  'hljs-string': { color: '#9b59b6' },  // Purple for strings
+  'hljs-variable': { color: '#3498db' },  // Blue for variables
+  'hljs-comment': { color: '#7f8c8d' },  // Light gray for comments
+  'hljs-number': { color: '#f39c12' },  // Yellow for numbers
+  'hljs-class .hljs-title': { color: '#1abc9c' },  // Teal for class names
+  'hljs-attr': { color: '#f39c12' },  // Yellow for attributes
+  'hljs-tag': { color: '#e67e22' },  // Orange for tags
+  'hljs-type': { color: '#e74c3c' },  // Red for types
+  'hljs-built_in': { color: '#8e44ad' },  // Violet for built-in functions
+  'hljs-symbol': { color: '#d35400' },  // Dark Orange for symbols
+  'hljs-link': { color: '#2980b9' },  // Light Blue for links
+  'hljs-doctag': { color: '#e67e22' },  // Orange for documentation tags
+  'hljs-title': { color: '#8e44ad' },  // Violet for titles
+  'hljs-section': { color: '#16a085' },  // Dark Teal for sections
+  'hljs-meta': { color: '#f39c12' },  // Yellow for metadata
+  'hljs-subst': { color: '#f1c40f' },  // Gold for substitutions
+  'hljs-deletion': { color: '#c0392b' },  // Red for deleted lines
+  'hljs-addition': { color: '#27ae60' },  // Green for additions
+  'hljs-regexp': { color: '#8e44ad' },  // Violet for regular expressions
+  'hljs-selector-id': { color: '#9b59b6' },  // Purple for IDs in selectors
+  'hljs-selector-class': { color: '#2980b9' },  // Light Blue for classes in selectors
+  'hljs-selector-attr': { color: '#e67e22' },  // Orange for attributes in selectors
+  'hljs-attribute': { color: '#16a085' },  // Dark Teal for attributes
+  'hljs-meta-keyword': { color: '#3498db' },  // Blue for meta keywords
+  'hljs-meta-string': { color: '#2ecc71' },  // Green for meta strings
+  'hljs-emphasis': { fontStyle: 'italic', color: '#f39c12' },  // Yellow for emphasized text
+  'hljs-strong': { fontWeight: 'bold', color: '#e74c3c' },  // Red for strong emphasis
+  'hljs-code': { fontFamily: 'monospace', backgroundColor: '#2c3e50', padding: '2px 4px', borderRadius: '4px' },  // Style for inline code
+  'hljs-decorator': { color: '#ff6347' },  // Tomato color for decorators
+  'hljs-punctuation': { color: '#7f8c8d' },  // Light gray for punctuation marks
+  'hljs-selector-pseudo': { color: '#ff6347' },  // Tomato for pseudo-selectors
+  'hljs-function .hljs-title': { color: '#8e44ad' },  // Violet for function names
+  'hljs-literal': { color: '#e67e22' },  // Orange for literals
+  'hljs-tag .hljs-name': { color: '#f1c40f' },  // Gold for tag names
+  'hljs-tag .hljs-value': { color: '#16a085' },  // Teal for tag values
+  'hljs-keyword .hljs-title': { color: '#3498db' },  // Blue for keyword titles
+  'hljs-link .hljs-url': { color: '#2980b9' },  // Light blue for URL links
+  'hljs-function .hljs-params': { color: '#e74c3c' },  // Red for function parameters
 };
+
 
 const getRandomQuestions = (questions, count) => {
   const shuffled = [...questions].sort(() => Math.random() - 0.5);
