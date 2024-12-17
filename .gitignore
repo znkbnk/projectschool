@@ -53,3 +53,5 @@ babel.config.json
 babel.config.js
 .dockerignore
 Dockerfile
+src/test.js
+.gitignore

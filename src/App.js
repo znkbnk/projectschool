@@ -87,13 +87,14 @@ const App = () => {
           }
         />
         <Route
-          path='/interview/InterviewQuiz'
-          element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
-              <InterviewQuestionQuiz />
-            </ProtectedRoute>
-          }
-        />
+  path='/interview/InterviewQuiz/:slug'
+  element={
+    <ProtectedRoute isLoggedIn={isLoggedIn}>
+      <InterviewQuestionQuiz />
+    </ProtectedRoute>
+  }
+/>
+
         <Route
           path='/interview/InterviewTasks'
           element={

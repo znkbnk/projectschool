@@ -15,7 +15,7 @@ const interviewData = [
     img: "./images/interviewQuiz.webp",
     title: "React Interview Quiz",
     desc: "Challenge yourself with a quiz that tests your React knowledge. Covering a range of topics from basics to advanced concepts, this quiz helps you evaluate and enhance your understanding in a fun and interactive way.",
-    to: "/interview/InterviewQuiz",
+    to: "/interview/InterviewQuiz/slug",
   },
   {
     img: "./images/interviewCodeQuiz.webp",
