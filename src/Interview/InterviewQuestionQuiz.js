@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import ReactInterviewQuestionQuiz from "../data/ReactInterviewQuestionQuiz";
 import "./InterviewQuestionQuiz.css";
 import Footer from "../components/Footer";
@@ -7,12 +6,12 @@ import Navbar from "../components/Navbar";
 import InterviewQuestionQuizTitle from "./InterviewQuestionQuizTitle";
 
 const getRandomQuestions = (questions, count) => {
+  // Shuffle the questions array and select the first 'count' questions
   const shuffled = [...questions].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count);
 };
 
 const InterviewQuestionQuiz = () => {
-  const navigate = useNavigate(); // Initialize navigate hook
   const [quizQuestions, setQuizQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
@@ -25,8 +24,12 @@ const InterviewQuestionQuiz = () => {
     return null;
   }
 
+  // Fetch and randomize questions on component mount
   useEffect(() => {
-    const randomizedQuestions = getRandomQuestions(ReactInterviewQuestionQuiz, 20);
+    const randomizedQuestions = getRandomQuestions(
+      ReactInterviewQuestionQuiz,
+      20
+    );
     setQuizQuestions(randomizedQuestions);
   }, []);
 
@@ -34,13 +37,12 @@ const InterviewQuestionQuiz = () => {
 
   const handleAnswerClick = (option) => {
     setSelectedAnswer(option);
+
     if (option === currentQuestion.correctAnswer) {
       setScore(score + 1);
     }
-    setShowResult(true);
 
-    // Navigate to the slug after answering
-    navigate(`/interview/interviewQuiz/${currentQuestion.slug}`);
+    setShowResult(true);
   };
 
   const handleNextQuestion = () => {
@@ -49,8 +51,6 @@ const InterviewQuestionQuiz = () => {
 
     if (currentQuestionIndex < quizQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      // Navigate to the next question's slug
-      navigate(`/interview/interviewQuiz/${quizQuestions[currentQuestionIndex + 1].slug}`);
     } else {
       setQuizCompleted(true);
     }
@@ -62,10 +62,11 @@ const InterviewQuestionQuiz = () => {
     setCurrentQuestionIndex(0);
     setSelectedAnswer("");
     setShowResult(false);
-    setQuizQuestions(getRandomQuestions(ReactInterviewQuestionQuiz, 20));
+    setQuizQuestions(getRandomQuestions(ReactInterviewQuestionQuiz, 20)); // Re-randomize questions
   };
 
-  const progressPercentage = ((currentQuestionIndex + 1) / quizQuestions.length) * 100;
+  const progressPercentage =
+    ((currentQuestionIndex + 1) / quizQuestions.length) * 100;
 
   if (quizQuestions.length === 0) {
     return <div>Loading questions...</div>;
@@ -76,12 +77,13 @@ const InterviewQuestionQuiz = () => {
       <ScrollToTopOnNavigation />
       <Navbar />
       <InterviewQuestionQuizTitle />
-      <div className="quiz-container">
-        <div className="quiz-card">
+
+      <div className='quiz-container'>
+        <div className='quiz-card'>
           {!quizCompleted ? (
             <>
               <h2>{currentQuestion.question}</h2>
-              <div className="options">
+              <div className='options'>
                 {currentQuestion.options.map((option, index) => (
                   <button
                     key={index}
@@ -100,37 +102,40 @@ const InterviewQuestionQuiz = () => {
                 ))}
               </div>
               {showResult && (
-                <div className="feedback">
+                <div className='feedback'>
                   {selectedAnswer === currentQuestion.correctAnswer
                     ? "Correct! 🎉"
                     : "Incorrect 😞"}
                 </div>
               )}
               {showResult && (
-                <button className="next-btn" onClick={handleNextQuestion}>
+                <button className='next-btn' onClick={handleNextQuestion}>
                   {currentQuestionIndex < quizQuestions.length - 1
                     ? "Next Question"
                     : "Finish Quiz"}
                 </button>
               )}
-              <div className="quiz-progress-bar">
+              <div className='quiz-progress-bar'>
                 <div
-                  className="quiz-progress"
+                  className='quiz-progress'
                   style={{ width: `${progressPercentage}%` }}
                 ></div>
               </div>
             </>
           ) : (
-            <div className="quiz-result">
+            <div className='quiz-result'>
               <h2>Quiz Completed!</h2>
-              <p>Your score: {score}/{quizQuestions.length}</p>
-              <button className="retry-btn" onClick={resetQuiz}>
+              <p>
+                Your score: {score}/{quizQuestions.length}
+              </p>
+              <button className='retry-btn' onClick={resetQuiz}>
                 Retry Quiz
               </button>
             </div>
           )}
         </div>
       </div>
+
       <Footer />
     </div>
   );

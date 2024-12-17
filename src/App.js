@@ -87,7 +87,7 @@ const App = () => {
           }
         />
         <Route
-          path="/interview/interviewQuiz/:slug"
+          path='/interview/interviewQuiz'
           element={
             <ProtectedRoute isLoggedIn={isLoggedIn}>
               <InterviewQuestionQuiz />
