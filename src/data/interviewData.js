@@ -3,7 +3,7 @@ const interviewData = [
     img: "./images/interviewQuestions.webp",
     title: "React Interview Questions",
     desc: "Prepare for your next React interview with curated questions covering essential concepts, best practices, and advanced topics. Gain the confidence to ace your interview!",
-    to: "/interview/interviewQuestions",
+    to: "/interview/InterviewQuestions",
   },
   {
     img: "./images/interviewTasks.webp",
