@@ -199,7 +199,8 @@ h2.heading_large {
 .btn-16 {
   position: relative;
   display: inline-block;
-  width: 250px;
+  min-width: 150px; /* Adjusted for minimum size */
+  padding: 0 20px; /* Flexible padding for dynamic width */
   height: 60px;
   line-height: 60px;
   color: #ffffff;
@@ -219,6 +220,7 @@ h2.heading_large {
   box-shadow: 
     0 4px 6px rgba(0,0,0,0.1),
     0 1px 3px rgba(0,0,0,0.08);
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .btn-16::before {
@@ -297,45 +299,29 @@ h2.heading_large {
     0 0 10px rgba(33,150,243,0.3);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+  .button-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 20px; /* Space between buttons */
+    align-items: center; /* Center buttons horizontally */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
   .btn-16 {
-    width: 170px;
-    height: 55px;
-    line-height: 55px;
-    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%; /* Make buttons responsive and adapt to screen width */
+    max-width: 300px; /* Limit the maximum width */
+    line-height: normal; /* Remove fixed line height */
+    padding: 20px; /* Ensure enough space inside the button */
+    font-size: 16px; /* Adjust text size */
+    white-space: normal; /* Allow text wrapping */
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .btn-16 {
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 14px;
-  }
-}
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .btn-16 {
-    width: 150px;
-    height: 50px;
-    line-height: 50px;
-    font-size: 14px;
-  }
-}
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .btn-16 {
-    width: 140px;
-    height: 45px;
-    line-height: 45px;
-    font-size: 14px;
-  }
-}
 
 
 /* Links */
