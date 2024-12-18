@@ -34,11 +34,20 @@ import InterviewQuestionQuiz from "./Interview/InterviewQuestionQuiz";
 import InterviewTasks from "./Interview/InterviewTasks";
 import ProtectedRoute from "./ProtectedRoute";
 import InterviewCodeQuiz from "./Interview/InterviewCodeQuiz";
+import { Helmet } from "react-helmet";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
   return null;
 }
+
+const ProtectedRouteWrapper = ({ children, isLoggedIn, isAdmin }) => {
+  return (
+    <ProtectedRoute isLoggedIn={isLoggedIn || isAdmin}>
+      {children}
+    </ProtectedRoute>
+  );
+};
 
 const App = () => {
   const { isLoggedIn, isAdmin } = useAuth();
@@ -47,6 +56,42 @@ const App = () => {
     <div>
       <ToastContainer />
       <ScrollToTopOnNavigation />
+      <Helmet>
+        {/* Title Tag */}
+        <title>Master React: 60+ Projects & Quizzes - ProjectSchool</title>
+
+        {/* Meta Description */}
+        <meta
+          name="description"
+          content="Exclusive React projects, quizzes, and live challenges to master UI development. Comprehensive step-by-step guides for learners."
+        />
+
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="Master React: 60+ Projects & Quizzes - ProjectSchool" />
+        <meta
+          property="og:description"
+          content="Exclusive React projects, quizzes, and live challenges to master UI development."
+        />
+        <meta
+          property="og:image"
+          content="https://projectschool.dev/static/media/navbarlogo.a5e20d48192811086a79.webp"
+        />
+        <meta property="og:url" content="https://www.projectschool.dev" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card Metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Master React: 60+ Projects & Quizzes - ProjectSchool" />
+        <meta
+          name="twitter:description"
+          content="Exclusive React projects, quizzes, and live challenges to master UI development."
+        />
+        <meta
+          name="twitter:image"
+          content="https://projectschool.dev/static/media/navbarlogo.a5e20d48192811086a79.webp"
+        />
+      </Helmet>
+
       <Routes>
         <Route path='/' element={<Welcome />} />
         <Route
@@ -54,10 +99,7 @@ const App = () => {
           element={
             isLoggedIn ? (
               <Navigate
-                to={
-                  new URLSearchParams(window.location.search).get("redirect") ||
-                  "/"
-                }
+                to={new URLSearchParams(window.location.search).get("redirect") || "/"}
               />
             ) : (
               <Login />
@@ -73,42 +115,41 @@ const App = () => {
         <Route
           path='/interview'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <Interview />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/interview/InterviewQuestions'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <InterviewQuestions />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
-  path='/interview/InterviewQuiz/:slug'
-  element={
-    <ProtectedRoute isLoggedIn={isLoggedIn}>
-      <InterviewQuestionQuiz />
-    </ProtectedRoute>
-  }
-/>
-
+          path='/interview/InterviewQuiz/:slug'
+          element={
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
+              <InterviewQuestionQuiz />
+            </ProtectedRouteWrapper>
+          }
+        />
         <Route
           path='/interview/InterviewTasks'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <InterviewTasks />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/interview/InterviewCodeQuiz'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <InterviewCodeQuiz />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route path='/notavailable' element={<NotFound />} />
@@ -119,102 +160,100 @@ const App = () => {
         <Route path='/terms' element={<Terms />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/resetPassword' element={<ResetPassword />} />
-
-        {/* Protecting the routes for authenticated users */}
         <Route
           path='/exercises'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <Exercises />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/jslessons'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <JsLessons />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/csslessons'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <CssLessons />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/reactlessons'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <ReactLessons />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/livelessons'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <LiveLessons />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/laravellessons'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <LaravelLessons />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/livechat'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <LiveChat />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/editor/:lessonType/:taskId'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn || isAdmin}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn || isAdmin} isAdmin={isAdmin}>
               <LiveEditor />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/authors'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn || isAdmin}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn || isAdmin} isAdmin={isAdmin}>
               <AuthorList />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/success'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <Success />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/cancel'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <Cancel />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
         <Route
           path='/mobile-message'
           element={
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
               <MobileMessage />
-            </ProtectedRoute>
+            </ProtectedRouteWrapper>
           }
         />
       </Routes>

@@ -1,26 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      property="og:title"
-      content="Master React with 60+ Projects, Live Challenges & Interactive Quizzes - ProjectSchool"
-    />
-    <meta
-      property="og:description"
-      content="Learn React with 60+ hands-on projects and live challenges sourced from platforms like Freelancer. Boost your interview readiness with interactive Q&A carousels, coding tasks, and engaging quizzes. Join ProjectSchool for the ultimate React learning experience."
-    />
-    <meta property="og:url" content="https://www.projectschool.dev" />
-    <meta
-      property="og:image"
-      content="https://projectschool.dev/images/logowebp.webp"
-    />
-    <meta property="og:type" content="website" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Enhance your React skills with 60+ projects and live challenges inspired by real-world scenarios. Prepare for interviews with Q&A carousels, coding tasks with built-in editors, and interactive quizzes. Learn React effectively at ProjectSchool."
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    
     <link
       rel="preload"
       href="/static/media/pslogosmall.fce9914b8e6c359c4f7c.webp"
@@ -48,9 +32,7 @@
       />
     </noscript>
     <meta name="theme-color" content="#ffffff" />
-    <title>
-      Master React with 60+ Projects, Challenges & Quizzes - ProjectSchool
-    </title>
+    
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-7L2NMEJKB6"
@@ -68,44 +50,32 @@
     <div id="root"></div>
     <script>
       window.addEventListener("load", function () {
-        var script = document.createElement("script");
-        script.type = "application/ld+json";
-        fetch("./structured-data.json")
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.json();
-          })
-          .then((data) => {
-            script.text = JSON.stringify(data);
-            document.head.appendChild(script);
-          })
-          .catch((error) => {
-            console.error("Error loading JSON-LD data:", error);
-          });
+        const structuredDataFiles = [
+          "./structured-data.json",
+          "./structured-data-question-quiz.json",
+        ];
+    
+        structuredDataFiles.forEach((file) => {
+          fetch(file)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
+              }
+              return response.json();
+            })
+            .then((data) => {
+              const script = document.createElement("script");
+              script.type = "application/ld+json";
+              script.textContent = JSON.stringify(data);
+              document.head.appendChild(script);
+            })
+            .catch((error) => {
+              console.error("Error loading JSON-LD data:", error);
+            });
+        });
       });
     </script>
-    <script>
-      window.addEventListener("load", function () {
-        var script = document.createElement("script");
-        script.type = "application/ld+json";
-        fetch("./structured-data-question-quiz.json")
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Network response was not ok");
-            }
-            return response.json();
-          })
-          .then((data) => {
-            script.text = JSON.stringify(data);
-            document.head.appendChild(script);
-          })
-          .catch((error) => {
-            console.error("Error loading JSON-LD data:", error);
-          });
-      });
-    </script>
+    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
