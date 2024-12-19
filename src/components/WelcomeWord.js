@@ -143,6 +143,7 @@ const WelcomeComponent = () => {
         alt="pslogo small"
         className="pslogosmall"
         ref={logo}
+        loading="lazy"
       />
 
       <CrazyScrollPhrase />

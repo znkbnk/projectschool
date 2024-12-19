@@ -34,7 +34,7 @@ import InterviewQuestionQuiz from "./Interview/InterviewQuestionQuiz";
 import InterviewTasks from "./Interview/InterviewTasks";
 import ProtectedRoute from "./ProtectedRoute";
 import InterviewCodeQuiz from "./Interview/InterviewCodeQuiz";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -53,6 +53,7 @@ const App = () => {
   const { isLoggedIn, isAdmin } = useAuth();
 
   return (
+    <HelmetProvider>
     <div>
       <ToastContainer />
       <ScrollToTopOnNavigation />
@@ -258,6 +259,7 @@ const App = () => {
         />
       </Routes>
     </div>
+    </HelmetProvider>
   );
 };
 

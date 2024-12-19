@@ -13,6 +13,11 @@ const InterviewTasks = () => {
 
   const textareaRef = useRef(null);
 
+  function ScrollToTopOnNavigation() {
+    window.scrollTo(0, 0);
+    return null;
+  }
+
   if (!Array.isArray(questions) || questions.length === 0) {
     return <div>No questions available</div>;
   }
@@ -300,6 +305,7 @@ const InterviewTasks = () => {
 
   return (
     <div>
+      <ScrollToTopOnNavigation />
       <Navbar />
       <InterviewTaskTitle />
       <div className={styles.container}>
