@@ -24,11 +24,12 @@ const interviewData = [
     to: "/interview/InterviewCodeQuiz",
   },
   {
-    img: "./images/interviewCodeQuiz.webp",
+    img: "./images/interviewCorrectCode.webp",
     title: "React Interview Correct Code",
-    desc: "",
-    to: "/interview/InterviewCorrectCode/slug",
+    desc: "Test your ability to identify the correct React code snippets. This section presents multiple code examples, with one correct solution and others to challenge your understanding of React concepts and best practices.",
+    to: "/interview/InterviewCorrectCode/slug"
   }
+  
   
 ];
 
