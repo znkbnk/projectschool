@@ -16,10 +16,37 @@
       "description": "Test your understanding of React components with this interactive quiz.",
       "educationalLevel": "Intermediate",
       "educationalUse": "Practice",
+      "provider": {
+        "@type": "Organization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
+      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.5",
         "reviewCount": "200"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.projectschool.dev/quiz/react-components",
+        "category": "Learning Resource"
+      }
+    }
+  ],
+  "hasCourseInstance": [
+    {
+      "@type": "CourseInstance",
+      "name": "React Development Basics",
+      "url": "https://www.projectschool.dev/courses/react-basics",
+      "courseMode": "online",
+      "startDate": "2024-01-01",
+      "endDate": "2024-03-01",
+      "instructor": {
+        "@type": "Person",
+        "name": "John Doe"
       }
     }
   ],
