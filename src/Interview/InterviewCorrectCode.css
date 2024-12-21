@@ -163,10 +163,14 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    pre {
-        margin: 0;
-        font-size: 1rem;
-    }
+    .correctCode {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 30px);
+
+     }
     .correctCode-card {
         padding: 30px 20px;
         max-width: 90%;
