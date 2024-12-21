@@ -20,15 +20,17 @@
 }
 
 .correctCode-card h2 {
-width: 500px;
+    width: 500px;
+    font-size: 1.6rem;
+    word-wrap: break-word;
 }
 
 
 /* correctCode Buttons */
 .correctCode-btn {
     width: 100%;
-    padding: 16px 30px;
-    margin: 12px 0;
+    padding: 10px 15px;
+    margin: 10px 0;
     background-color: #333;
     color: #fff;
     font-size: 1.2rem;
@@ -68,7 +70,6 @@ width: 500px;
     width: 100%;
     max-width: 100%;  /* Ensure it takes full width of the button */
     overflow-x: auto; /* Allow horizontal scroll */
-    padding: 8px 0;
     white-space: nowrap; /* Prevent wrapping of the code */
 }
 
@@ -100,9 +101,20 @@ width: 500px;
     animation: progressGlow 1s infinite alternate;
 }
 
+/* correctCode Result */
+
+.correctCode-result, .correctCode-result h2  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px; 
+}
+
 /* Next Button */
 .next-btn,
 .retry-btn {
+   
     padding: 14px 28px;
     font-size: 1.2rem;
     border-radius: 10px;
@@ -151,13 +163,19 @@ width: 500px;
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    pre {
+        margin: 0;
+        font-size: 1rem;
+    }
     .correctCode-card {
         padding: 30px 20px;
         max-width: 90%;
     }
 
     .correctCode-card h2 {
-        font-size: 1.6rem;
+        width: 100%;  
+        font-size: 1rem;
+        word-wrap: break-word; /* Prevent overflow */
     }
 
     .correctCode-btn {
@@ -177,17 +195,37 @@ width: 500px;
 }
 
 @media (max-width: 480px) {
+     .correctCode {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% - 30px);
+
+     }
+   
+    pre {
+        margin: 0;
+        font-size: 0.7rem;
+        
+    }
     .correctCode-card {
         padding: 20px 15px;
+        
     }
 
     .correctCode-card h2 {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .correctCode-btn {
+       
         font-size: 0.9rem;
-        padding: 12px 16px;
+        padding: 10px;
+    }
+
+    .correctCode-result, .correctCode-result h2  {
+        padding: 10px;
     }
 
     .next-btn,
@@ -201,12 +239,12 @@ width: 500px;
     }
 
     .correctCode-progress {
-        animation: none; /* Reduce effects on smaller screens */
+        animation: none; 
     }
 
     .feedback {
         font-size: 1.2rem;
-        text-align: center; /* Align feedback for small screens */
+        text-align: center; 
     }
 }
 
