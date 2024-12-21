@@ -29,9 +29,9 @@
       "offers": {
         "@type": "Offer",
         "price": "0.00",
-        "priceCurrency": "USD",
+        "priceCurrency": "GB",
         "availability": "https://schema.org/InStock",
-        "url": "https://www.projectschool.dev/quiz/react-components",
+        "url": "https://projectschool.dev/interview",
         "category": "Learning Resource"
       }
     }
