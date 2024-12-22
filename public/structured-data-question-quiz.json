@@ -19,6 +19,11 @@
         "@type": "AggregateRating",
         "ratingValue": "4.5",
         "reviewCount": "200"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Project School",
+        "url": "https://www.projectschool.dev"
       }
     }
   ],
