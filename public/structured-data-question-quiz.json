@@ -10,7 +10,7 @@
   },
   "hasCourse": [
     {
-      "@type": "Course",
+      "@type": "CreativeWork",
       "name": "React Quiz on Components",
       "description": "Test your understanding of React components with this interactive quiz.",
       "educationalLevel": "Intermediate",
