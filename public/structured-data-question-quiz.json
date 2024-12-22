@@ -24,6 +24,14 @@
         "@type": "Organization",
         "name": "Project School",
         "url": "https://www.projectschool.dev"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "GB",
+        "availability": "https://schema.org/InStock",
+        "url": "https://projectschool.dev/pricing",
+        "validFrom": "2024-01-01"
       }
     }
   ],
