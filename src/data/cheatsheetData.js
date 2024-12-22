@@ -3278,7 +3278,7 @@ const cheatsheetData = [
           "'setSelectedOption(index)' highlights the selected option, which helps with UI styling and feedback.",
           "After a brief delay (500ms), the quiz either moves to the next question or ends. If there are more questions, the currentQuestion state is incremented. If all questions have been answered, 'setQuizFinished(true)' ends the quiz and shows the results.",
         ],
-        image: "/images/cheatsheetImages/task54/4.webp"
+        image: "/images/cheatsheetImages/task53/4.webp"
       },
          {
         title: "",
@@ -3287,7 +3287,7 @@ const cheatsheetData = [
           "The 'restartQuiz' function resets the state to allow the user to play the quiz again.",
           "All relevant states (currentQuestion, score, selectedOption, questionTimes, quizFinished) are reset to their initial values.",
         ],
-        image: "/images/cheatsheetImages/task54/5.webp"
+        image: "/images/cheatsheetImages/task53/5.webp"
       },
        
     ],
