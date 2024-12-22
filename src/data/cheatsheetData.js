@@ -3292,6 +3292,391 @@ const cheatsheetData = [
        
     ],
   },
+  {
+    taskId: "Profile-Popup-Animation",
+    content: [
+      {
+        title: "",
+        subtitle: "Using State with useState",
+        details: [
+          "The 'useState' hook is used to manage the state of the popup.",
+          "'showPopup' holds the current state (true/false) of the popup.",
+          "'setShowPopup' is a function to update the state.",
+          "Use 'useState' whenever you need to toggle or store a value that changes dynamically.",
+        ],
+        image: "/images/cheatsheetImages/task54/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Handling in React",
+        details: [
+          "This function toggles the 'showPopup' state between true and false.",
+          "Used as the 'onClick' handler for buttons.",
+          "Define event handler functions for better reusability and clarity.",
+        ],
+        image: "/images/cheatsheetImages/task54/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Motion Components from Framer Motion",
+        details: [
+          "'motion.button' is a Framer Motion component that adds animations.",
+          "'whileHover' and 'whileTap' define animations for hover and click states.",
+          "Use Framer Motion to add smooth animations easily.",
+        ],
+        image: "/images/cheatsheetImages/task54/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Conditional Rendering with AnimatePresence",
+        details: [
+          "'AnimatePresence' ensures animations play when elements are added or removed.",
+          "The 'showPopup' condition controls the visibility of the popup.",
+          "Wrap components that enter/exit with animations inside 'AnimatePresence'.",
+        ],
+        image: "/images/cheatsheetImages/task54/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Animating Components",
+        details: [
+          "'initial', 'animate', and 'exit' define animation states for entry and exit.",
+          "'transition' specifies animation timing and behavior.",
+          "Use 'spring' transitions for bouncy effects.",
+        ],
+        image: "/images/cheatsheetImages/task54/5.webp"
+      },
+      {
+        title: "",
+        subtitle: "Close Button with FontAwesome Icon",
+        details: [
+          "The close button uses FontAwesome for the 'X' icon.",
+          "Animations make the close interaction more engaging.",
+          "Use consistent styles and animations for better UX.",
+        ],
+        image: "/images/cheatsheetImages/task54/6.webp"
+      },  {
+        title: "",
+        subtitle: "Styling with External CSS",
+        details: [
+          "Styles are defined in the styles.css file.",
+          "Organized CSS ensures a clean layout and appearance.",
+          "Use classes to keep styles modular and reusable.",
+        ],
+        image: "/images/cheatsheetImages/task54/7.webp"
+      },  {
+        title: "",
+        subtitle: "Component Structure and Return Statement",
+        details: [
+          "The return statement defines the structure of the UI.",
+          "Components like 'table', 'motion.button', and 'motion.div' are composed hierarchically.",
+          "Keep the structure simple and readable for easy maintenance.",
+        ],
+        image: "/images/cheatsheetImages/task54/8.webp"
+      },
+    ],
+  },
+  {
+    taskId: "Movies4u",
+    content: [
+      {
+        title: "Header Component",
+        subtitle: "State Management",
+        details: [
+          "'mobileMenuOpen': Tracks if the mobile menu is open.",
+          "'searchQuery': Stores the user's input for the search bar.",
+        ],
+        image: "/images/cheatsheetImages/task55/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Props and Event Handling",
+        details: [
+          "'onSearch': A function passed as a prop to handle the search query.",
+          "React event 'onChange' is used to detect changes in the search input.",
+        ],
+        image: "/images/cheatsheetImages/task55/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Rendering Dynamic Content",
+        details: [
+          "Maps through menuItems array to create navigation links.",
+        ],
+        image: "/images/cheatsheetImages/task55/3.webp"
+      },
+         {
+        title: "Modal Component",
+        subtitle: "Conditional Rendering",
+        details: [
+          "Prevents rendering the modal if it's not open.",
+        ],
+        image: "/images/cheatsheetImages/task55/5.webp"
+      },
+         {
+        title: "",
+        subtitle: "Event Propagation",
+        details: [
+          "Prevents click events on the modal content from propagating to the overlay.",
+        ],
+        image: "/images/cheatsheetImages/task55/6.webp"
+      },
+         {
+        title: "Slider Component",
+        subtitle: "State Management",
+        details: [
+          "'activeIndex': Tracks the currently active slide.",
+          "'filteredImages': Stores the filtered images based on the search query.",
+        ],
+        image: "/images/cheatsheetImages/task55/7.webp"
+      },
+      {
+        title: "",
+        subtitle: "Lifecycle Methods with useEffect",
+        details: [
+          "Automatically transitions slides every 5 seconds.",
+        ],
+        image: "/images/cheatsheetImages/task55/8.webp"
+      },  {
+        title: "",
+        subtitle: "Search Filtering",
+        details: [
+          "Filters images based on searchQuery and resets the active slide.",
+        ],
+        image: "/images/cheatsheetImages/task55/9.webp"
+      },  {
+        title: "",
+        subtitle: "Dynamic Content",
+        details: [
+          "Maps through filteredImages to create slides.",
+        ],
+        image: "/images/cheatsheetImages/task55/10.webp"
+      },  {
+        title: "",
+        subtitle: "Modal Integration",
+        details: [
+          "Opens a modal with detailed information about the currently active slide.",
+        ],
+        image: "/images/cheatsheetImages/task55/11.webp"
+      }, 
+    ],
+  },
+  {
+    taskId: "Natures-Beauty",
+    content: [
+      {
+        title: "Navbar Component",
+        subtitle: "toggleMenu function",
+        details: [
+          "Handles the menu toggle event. It uses document.querySelector to find the .container element and toggles the active class.",
+        ],
+        image: "/images/cheatsheetImages/task56/1.webp"
+      },
+         {
+        title: "Links Component",
+        subtitle: "CSS Variables",
+        details: [
+          "The style prop defines a custom CSS variable --i for each link, which can be used to create delay effects in animations.",
+        ],
+        image: "/images/cheatsheetImages/task56/2.webp"
+      },
+        
+    ],
+  },
+  {
+    taskId: "Captcha-Guard",
+    content: [
+      {
+        title: "",
+        subtitle: "State Variables",
+        details: [
+          "'captcha': Stores the randomly generated captcha string.",
+          "'userInput': Holds the user-entered captcha.",
+          "'message': Provides feedback to the user (e.g., success or error messages).",
+          "'isSuccess': Boolean indicating whether the captcha matched.",
+          "Use 'useState' for reactive state management in functional components.",
+
+        ],
+        image: "/images/cheatsheetImages/task57/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Generating a Captcha",
+        details: [
+          "Creates a 6-character random captcha using letters and numbers.",
+          "Resets feedback and input fields when a new captcha is generated.",
+          "Use 'Math.random' and 'Math.floor' to randomly pick characters from an array.",
+        ],
+        image: "/images/cheatsheetImages/task57/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Checking Captcha",
+        details: [
+          "Compares user input with the generated captcha (ignoring spaces).",
+          "Sets appropriate feedback messages and triggers a new captcha on success.",
+          "Use 'setTimeout' for delayed actions like refreshing the captcha.",
+        ],
+        image: "/images/cheatsheetImages/task57/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Lifecycle Hook: useEffect",
+        details: [
+          "Runs 'generateCaptcha' when the component mounts (empty dependency array).",
+          "Use 'useEffect' for initialization logic in functional components.",
+        ],
+        image: "/images/cheatsheetImages/task57/4.webp"
+      },
+        
+    ],
+  },
+  {
+    taskId: "Calculator",
+    content: [
+      {
+        title: "",
+        subtitle: "Managing State with useState",
+        details: [
+          "State Variable (display): Holds the current value displayed on the calculator.",
+          "State Setter Function (setDisplay): Updates the 'display' value.",
+          "Initial State: The display starts with an empty string.",
+          "Use 'useState' to create reactive data that updates the UI automatically when changed.",
+        ],
+        image: "/images/cheatsheetImages/task58/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Showing Button Values",
+        details: [
+          "Concatenates the value of the pressed button to the current 'display' value.",
+          "Event Handling: Triggered when a button is clicked.",
+          "Event handlers like 'onClick' can call custom functions to update the state.",
+        ],
+        image: "/images/cheatsheetImages/task58/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Calculating the Result",
+        details: [
+          "Uses the 'evaluate' function to compute the mathematical expression in the 'display'.",
+          "Error Handling: If the calculation fails, it displays 'Error'.",
+          "Wrap calculations in a 'try-catch' block to gracefully handle invalid inputs.",
+        ],
+        image: "/images/cheatsheetImages/task58/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Resetting the Display",
+        details: [
+          "Resets the calculator by clearing the 'display'.",
+          "Use this function to return the calculator to its initial state.",
+        ],
+        image: "/images/cheatsheetImages/task58/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Deleting the Last Character",
+        details: [
+          "Removes the last character from the 'display' using 'slice'.",
+          "Useful for correcting input errors without clearing everything.",
+        ],
+        image: "/images/cheatsheetImages/task58/5.webp"
+      },
+        
+    ],
+  },
+  {
+    taskId: "Copy-To-Clipboard",
+    content: [
+      {
+        title: "",
+        subtitle: "Setting Up State",
+        details: [
+          "'copied' tracks whether the text was successfully copied to the clipboard.",
+          "'setCopied' is the function to update the 'copied' state.",
+          "Use 'copied' to dynamically update the button label.",
+        ],
+        image: "/images/cheatsheetImages/task59/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Referencing the TextArea",
+        details: [
+          "'useRef' creates a mutable reference to the <textarea> DOM element.",
+          "This reference is used to fetch the value of the text to copy.",
+          "Use 'textAreaRef.current.value' to access the text inside the textarea.",
+        ],
+        image: "/images/cheatsheetImages/task59/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Initializing Clipboard.js",
+        details: [
+          "Clipboard listens for a button click and copies the referenced text.",
+          "clipboard.on('success'): Sets 'copied' to 'true' when the text is successfully copied, with a 2-second delay to reset.",
+          "clipboard.on('error'): Logs an error if the copy action fails.",
+          "clipboard.destroy(): Cleans up the Clipboard instance on component unmount.",
+          "Always clean up side effects in 'useEffect' to prevent memory leaks.",
+        ],
+        image: "/images/cheatsheetImages/task59/3.webp"
+      },
+        
+    ],
+  },
+  {
+    taskId: "English-Dictionary",
+    content: [
+      {
+        title: "",
+        subtitle: "Setting Up State with useState",
+        details: [
+          "word: Stores the word entered by the user.",
+          "result: Holds the data returned from the API (e.g., word meaning, example, etc.).",
+          "infoText: Displays information or status messages to the user.",
+          "Use useState to manage dynamic data that changes with user interaction.",
+
+        ],
+        image: "/images/cheatsheetImages/task60/1.webp"
+      },
+         {
+        title: "",
+        subtitle: "Searching for a Word",
+        details: [
+          "Validates the input and initiates the API call if valid.",
+        ],
+        image: "/images/cheatsheetImages/task60/2.webp"
+      },
+         {
+        title: "",
+        subtitle: "Clearing Input and Results",
+        details: [
+          "Resets the search bar, result data, and informational text.",
+          "Use event handlers to respond to user actions like clicks or input changes.",
+        ],
+        image: "/images/cheatsheetImages/task60/3.webp"
+      },
+         {
+        title: "",
+        subtitle: "Rendering Conditional Content",
+        details: [
+          "Conditionally renders the result only if data is available.",
+          "Use conditional rendering to show or hide UI elements based on state.",
+        ],
+        image: "/images/cheatsheetImages/task60/4.webp"
+      },
+         {
+        title: "",
+        subtitle: "Input Handling",
+        details: [
+          "Captures user input and updates the 'word' state dynamically.",
+          "Use 'onChange' to track changes in form fields.",
+        ],
+        image: "/images/cheatsheetImages/task60/5.webp"
+      },
+        
+    ],
+  },
 
 
 ];
