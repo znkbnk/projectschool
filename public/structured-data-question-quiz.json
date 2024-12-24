@@ -10,7 +10,7 @@
   },
   "hasCourse": [
     {
-      "@type": "CreativeWork",
+      "@type": "Course",
       "name": "React Quiz on Components",
       "description": "Test your understanding of React components with this interactive quiz.",
       "educationalLevel": "Intermediate",
@@ -27,11 +27,22 @@
       },
       "offers": {
         "@type": "Offer",
-        "price": "14.99",
+        "price": "0",
         "priceCurrency": "GB",
         "availability": "https://schema.org/InStock",
         "url": "https://projectschool.dev/pricing",
         "validFrom": "2024-01-01"
+      },
+      "hasCourseInstance": {
+        "@type": "CourseInstance",
+        "name": "React Quiz on Components - January 2024",
+        "courseMode": "Online",
+        "startDate": "2024-01-01",
+        "endDate": "2026-12-31",
+        "instructor": {
+          "@type": "Person",
+          "name": "Jevin"
+        }
       }
     }
   ],
@@ -65,11 +76,19 @@
       "answerCount": 4,
       "suggestedAnswer": [
         { "@type": "Answer", "text": "A backend framework for databases" },
-        { "@type": "Answer", "text": "A library for performing server-side operations" },
+        {
+          "@type": "Answer",
+          "text": "A library for performing server-side operations"
+        },
         { "@type": "Answer", "text": "A language used for creating APIs" }
       ],
       "description": "Discover what React.js is and how it helps developers build dynamic and efficient user interfaces.",
-      "keywords": ["React.js", "React introduction", "React library", "UI development"]
+      "keywords": [
+        "React.js",
+        "React introduction",
+        "React library",
+        "UI development"
+      ]
     },
     {
       "@type": "Question",
@@ -82,9 +101,18 @@
       },
       "answerCount": 4,
       "suggestedAnswer": [
-        { "@type": "Answer", "text": "A special syntax to describe CSS styles" },
-        { "@type": "Answer", "text": "A library used to optimize JavaScript code" },
-        { "@type": "Answer", "text": "A template engine used for server-side rendering" }
+        {
+          "@type": "Answer",
+          "text": "A special syntax to describe CSS styles"
+        },
+        {
+          "@type": "Answer",
+          "text": "A library used to optimize JavaScript code"
+        },
+        {
+          "@type": "Answer",
+          "text": "A template engine used for server-side rendering"
+        }
       ],
       "description": "Explore JSX, a syntax extension in React that combines HTML and JavaScript seamlessly.",
       "keywords": ["JSX", "React JSX", "React syntax", "HTML in React"]
@@ -101,11 +129,19 @@
       "answerCount": 4,
       "suggestedAnswer": [
         { "@type": "Answer", "text": "Components defined using ES6 classes" },
-        { "@type": "Answer", "text": "Functions that directly manipulate the DOM" },
+        {
+          "@type": "Answer",
+          "text": "Functions that directly manipulate the DOM"
+        },
         { "@type": "Answer", "text": "Components that don't use any hooks" }
       ],
       "description": "Understand functional components in React and how they simplify building reusable UI elements.",
-      "keywords": ["functional components", "React basics", "props in React", "React UI"]
+      "keywords": [
+        "functional components",
+        "React basics",
+        "props in React",
+        "React UI"
+      ]
     },
     {
       "@type": "Question",
@@ -123,7 +159,12 @@
         { "@type": "Answer", "text": "To render a list of items in React" }
       ],
       "description": "Learn about the useEffect hook in React and how it manages side effects such as API calls and DOM updates.",
-      "keywords": ["useEffect", "React hooks", "side effects", "API calls in React"]
+      "keywords": [
+        "useEffect",
+        "React hooks",
+        "side effects",
+        "API calls in React"
+      ]
     },
     {
       "@type": "Question",
@@ -141,7 +182,12 @@
         { "@type": "Answer", "text": "To create new components" }
       ],
       "description": "Discover how React props allow data sharing between components and enable dynamic UI updates.",
-      "keywords": ["React props", "data sharing", "props in React", "React components"]
+      "keywords": [
+        "React props",
+        "data sharing",
+        "props in React",
+        "React components"
+      ]
     },
     {
       "@type": "Question",
@@ -159,7 +205,12 @@
         { "@type": "Answer", "text": "Handles user interactions" }
       ],
       "description": "Learn about the useState hook in React, which allows you to declare and manage state in functional components.",
-      "keywords": ["useState", "React state", "functional components", "React hooks"]
+      "keywords": [
+        "useState",
+        "React state",
+        "functional components",
+        "React hooks"
+      ]
     },
     {
       "@type": "Question",
@@ -250,12 +301,7 @@
         }
       ],
       "description": "The `useRef` hook is used to persist values across renders without causing re-renders. It is commonly used to directly access a DOM element or keep a mutable value.",
-      "keywords": [
-        "useRef",
-        "DOM references",
-        "React hooks",
-        "React DOM"
-      ]
+      "keywords": ["useRef", "DOM references", "React hooks", "React DOM"]
     },
     {
       "@type": "Question",
@@ -282,12 +328,7 @@
         }
       ],
       "description": "The React Context API allows you to share state across different components without having to pass props down manually through each level of the component tree.",
-      "keywords": [
-        "Context API",
-        "React state",
-        "global state",
-        "React hooks"
-      ]
+      "keywords": ["Context API", "React state", "global state", "React hooks"]
     },
     {
       "@type": "Question",
@@ -602,12 +643,7 @@
         }
       ],
       "description": "The useContext hook is used to access the value of a Context directly in functional components, providing a way to share global state without prop drilling.",
-      "keywords": [
-        "useContext",
-        "React state",
-        "global state",
-        "React hooks"
-      ]
+      "keywords": ["useContext", "React state", "global state", "React hooks"]
     },
     {
       "@type": "Question",
@@ -634,12 +670,7 @@
         }
       ],
       "description": "React refs provide a way to access and interact with DOM elements or class components directly, bypassing React’s state and rendering process.",
-      "keywords": [
-        "React refs",
-        "DOM manipulation",
-        "React hooks",
-        "React"
-      ]
+      "keywords": ["React refs", "DOM manipulation", "React hooks", "React"]
     },
     {
       "@type": "Question",
@@ -666,12 +697,7 @@
         }
       ],
       "description": "React.lazy is used to dynamically import components and render them only when needed, helping to reduce the initial load time and improve performance.",
-      "keywords": [
-        "React.lazy",
-        "lazy loading",
-        "React performance",
-        "React"
-      ]
+      "keywords": ["React.lazy", "lazy loading", "React performance", "React"]
     },
     {
       "@type": "Question",
@@ -725,7 +751,12 @@
         }
       ],
       "description": "State and props are both used to manage data in React, but state is used for managing local data within a component, whereas props are used for passing data from parent to child components.",
-      "keywords": ["React state", "React props", "React data management", "React"]
+      "keywords": [
+        "React state",
+        "React props",
+        "React data management",
+        "React"
+      ]
     },
     {
       "@type": "Question",
@@ -752,7 +783,12 @@
         }
       ],
       "description": "React.StrictMode is used to detect potential issues in an app by providing additional checks during development, ensuring best practices and identifying unsafe lifecycles.",
-      "keywords": ["React.StrictMode", "React debugging", "React issues", "React"]
+      "keywords": [
+        "React.StrictMode",
+        "React debugging",
+        "React issues",
+        "React"
+      ]
     },
     {
       "@type": "Question",
@@ -806,7 +842,12 @@
         }
       ],
       "description": "React Fiber is a complete rewrite of React's core algorithm for rendering and reconciliation, improving performance, and enabling features like time-slicing.",
-      "keywords": ["React Fiber", "React reconciliation", "React performance", "React"]
+      "keywords": [
+        "React Fiber",
+        "React reconciliation",
+        "React performance",
+        "React"
+      ]
     },
     {
       "@type": "Question",
@@ -833,7 +874,12 @@
         }
       ],
       "description": "Lifting state up in React means moving the state from child components to their parent component, enabling shared state management and communication between siblings.",
-      "keywords": ["React lifting state", "React state sharing", "React", "React components"]
+      "keywords": [
+        "React lifting state",
+        "React state sharing",
+        "React",
+        "React components"
+      ]
     },
     {
       "@type": "Question",
@@ -860,7 +906,12 @@
         }
       ],
       "description": "In React class components, the render method is responsible for returning the React elements that will be displayed on the screen.",
-      "keywords": ["React class components", "React render", "React elements", "React"]
+      "keywords": [
+        "React class components",
+        "React render",
+        "React elements",
+        "React"
+      ]
     },
     {
       "@type": "Question",
@@ -1255,11 +1306,7 @@
         }
       ],
       "description": "The useContext hook in React allows components to share state without the need for passing props down through multiple levels of the component tree.",
-      "keywords": [
-        "React useContext",
-        "React state sharing",
-        "React hooks"
-      ]
+      "keywords": ["React useContext", "React state sharing", "React hooks"]
     },
     {
       "@type": "Question",
@@ -1286,11 +1333,7 @@
         }
       ],
       "description": "The key prop in React is essential for optimizing the rendering of lists by helping React identify which items have changed, been added, or removed during the re-rendering process.",
-      "keywords": [
-        "React key prop",
-        "React lists",
-        "React performance"
-      ]
+      "keywords": ["React key prop", "React lists", "React performance"]
     },
     {
       "@type": "Question",
@@ -1317,11 +1360,7 @@
         }
       ],
       "description": "ReactDOMServer is used for server-side rendering (SSR) in React, enabling the rendering of React components on the server side before sending them to the client.",
-      "keywords": [
-        "ReactDOMServer",
-        "server-side rendering",
-        "React SSR"
-      ]
+      "keywords": ["ReactDOMServer", "server-side rendering", "React SSR"]
     },
     {
       "@type": "Question",
@@ -1348,11 +1387,7 @@
         }
       ],
       "description": "The useReducer hook is used in React for handling large or complex state updates, offering an alternative to useState for state management.",
-      "keywords": [
-        "React useReducer",
-        "React hooks",
-        "React state management"
-      ]
+      "keywords": ["React useReducer", "React hooks", "React state management"]
     },
     {
       "@type": "Question",
@@ -1379,11 +1414,7 @@
         }
       ],
       "description": "In React, data is passed from a child component to a parent component using a callback function passed down as a prop from the parent.",
-      "keywords": [
-        "React child to parent",
-        "React props",
-        "React data flow"
-      ]
+      "keywords": ["React child to parent", "React props", "React data flow"]
     },
     {
       "@type": "Question",
@@ -1436,7 +1467,11 @@
           "text": "To handle event listeners and remove them on unmount"
         }
       ],
-      "keywords": ["React componentDidMount", "React lifecycle methods", "React components"],
+      "keywords": [
+        "React componentDidMount",
+        "React lifecycle methods",
+        "React components"
+      ],
       "description": "Understand the purpose of the componentDidMount lifecycle method in React, which is used for operations after a component mounts."
     },
     {
@@ -1490,7 +1525,12 @@
           "text": "To manage error boundaries in React components"
         }
       ],
-      "keywords": ["useLayoutEffect hook", "React hooks", "DOM layout", "React performance"],
+      "keywords": [
+        "useLayoutEffect hook",
+        "React hooks",
+        "DOM layout",
+        "React performance"
+      ],
       "description": "Learn about the useLayoutEffect hook, used for reading layout and paint information from the DOM before rendering."
     },
     {
@@ -1517,7 +1557,12 @@
           "text": "State and props are interchangeable"
         }
       ],
-      "keywords": ["React state", "React props", "state vs props", "React concepts"],
+      "keywords": [
+        "React state",
+        "React props",
+        "state vs props",
+        "React concepts"
+      ],
       "description": "Understand the key differences between state and props in React, including their roles and how they are used in components."
     },
     {
@@ -1544,7 +1589,11 @@
           "text": "A component that directly modifies the DOM"
         }
       ],
-      "keywords": ["React controlled components", "form handling in React", "React forms"],
+      "keywords": [
+        "React controlled components",
+        "form handling in React",
+        "React forms"
+      ],
       "description": "Learn about controlled components in React, where form elements are bound to the component's state."
     },
     {
@@ -1571,7 +1620,11 @@
           "text": "It binds lifecycle methods to functional components"
         }
       ],
-      "keywords": ["React.memo", "optimize rendering", "React performance tips"],
+      "keywords": [
+        "React.memo",
+        "optimize rendering",
+        "React performance tips"
+      ],
       "description": "Understand the importance of React.memo, which optimizes component rendering by memoizing functional components."
     },
     {
@@ -1598,7 +1651,11 @@
           "text": "It provides additional performance optimizations"
         }
       ],
-      "keywords": ["React StrictMode", "React debugging tools", "React development"],
+      "keywords": [
+        "React StrictMode",
+        "React debugging tools",
+        "React development"
+      ],
       "description": "Learn about React's StrictMode, a tool for identifying potential issues and enforcing best practices during development."
     },
     {
@@ -1750,11 +1807,7 @@
           "text": "To validate props passed to child components"
         }
       ],
-      "keywords": [
-        "React useRef",
-        "DOM references",
-        "React mutable values"
-      ],
+      "keywords": ["React useRef", "DOM references", "React mutable values"],
       "description": "The useRef hook in React allows you to persist mutable values and create references to DOM elements, useful for accessing and manipulating elements directly."
     },
     {
@@ -1788,10 +1841,5 @@
       ],
       "description": "The virtual DOM in React is a lightweight copy of the actual DOM used to track changes and update only the necessary parts of the UI, improving performance."
     }
-    
-    
-    
-    
-    
   ]
 }
