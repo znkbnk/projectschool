@@ -31,9 +31,10 @@
         "priceCurrency": "GB",
         "availability": "https://schema.org/InStock",
         "url": "https://projectschool.dev/pricing",
-        "validFrom": "2024-01-01"
+        "validFrom": "2024-01-01",
+        "category": "Education"
       },
-      "hasCourseInstance": {
+   "hasCourseInstance": {
         "@type": "CourseInstance",
         "name": "React Quiz on Components - January 2024",
         "courseMode": "Online",
@@ -42,7 +43,8 @@
         "instructor": {
           "@type": "Person",
           "name": "Jevin"
-        }
+        },
+        "courseWorkload": "Approximately 2-3 hours per week"
       }
     }
   ],
