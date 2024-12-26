@@ -220,17 +220,20 @@ function Section1({ isLoggedIn }) {
         </motion.div>
 
         <div className='button-container'>
+        {isLoggedIn ? (
+        <>
           <Link to='/exercises' className='btn-16'>
             Go to Exercises
           </Link>
           <Link to='/interview' className='btn-16'>
             Go to Interview
           </Link>
-          {!isLoggedIn && (
-            <Link to='/signup' className='btn-16'>
-              Get Started
-            </Link>
-          )}
+        </>
+      ) : (
+        <Link to='/signup' className='getStartedButton'>
+          Get Started
+        </Link>
+      )}
         </div>
 
         <motion.div
