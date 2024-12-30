@@ -1,59 +1,1881 @@
 {
   "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Project School",
-  "url": "https://www.projectschool.dev",
-  "description": "An online platform focusing on React development and hands-on coding projects.",
+  "@type": "Quiz",
+  "name": "React Quiz on Components",
+  "description": "Test your understanding of React components with this interactive quiz.",
+  "educationalLevel": "Intermediate",
+  "educationalUse": "Practice",
+  "provider": {
+    "@type": "EducationalOrganization",
+    "name": "Project School",
+    "url": "https://www.projectschool.dev"
+  },
   "audience": {
     "@type": "Audience",
     "audienceType": "Beginner, Intermediate, Advanced"
   },
-  "hasCourse": [
-    {
-      "@type": "Course",
-      "name": "React Quiz on Components",
-      "description": "Test your understanding of React components with this interactive quiz.",
-      "educationalLevel": "Intermediate",
-      "educationalUse": "Practice",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "reviewCount": "200"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "Project School",
-        "url": "https://www.projectschool.dev"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "GB",
-        "availability": "https://schema.org/InStock",
-        "url": "https://projectschool.dev/pricing",
-        "validFrom": "2024-01-01",
-        "category": "Education"
-      },
-   "hasCourseInstance": {
-        "@type": "CourseInstance",
-        "name": "React Quiz on Components - January 2024",
-        "courseMode": "Online",
-        "startDate": "2024-01-01",
-        "endDate": "2026-12-31",
-        "instructor": {
-          "@type": "Person",
-          "name": "Jevin"
+  "url": "https://projectschool.dev/interview/InterviewQuiz/",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "Question",
+        "position": 1,
+        "name": "What is React.js?",
+        "text": "What is React.js?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-virtual-dom",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A library for building user interfaces"
         },
-        "courseWorkload": "Approximately 2-3 hours per week"
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "A backend framework for databases" },
+          {
+            "@type": "Answer",
+            "text": "A library for performing server-side operations"
+          },
+          { "@type": "Answer", "text": "A language used for creating APIs" }
+        ],
+        "description": "Discover what React.js is and how it helps developers build dynamic and efficient user interfaces.",
+        "keywords": [
+          "React.js",
+          "React introduction",
+          "React library",
+          "UI development"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 1,
+        "name": "What is JSX?",
+        "text": "What is JSX?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-jsx",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A syntax extension that allows writing HTML in React"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "A special syntax to describe CSS styles"
+          },
+          {
+            "@type": "Answer",
+            "text": "A library used to optimize JavaScript code"
+          },
+          {
+            "@type": "Answer",
+            "text": "A template engine used for server-side rendering"
+          }
+        ],
+        "description": "Explore JSX, a syntax extension in React that combines HTML and JavaScript seamlessly.",
+        "keywords": ["JSX", "React JSX", "React syntax", "HTML in React"]
+      },
+      {
+        "@type": "Question",
+        "position": 2,
+        "name": "What are functional components in React?",
+        "text": "What are functional components in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-functional-component-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Functions that take props and return React elements"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "Components defined using ES6 classes" },
+          {
+            "@type": "Answer",
+            "text": "Functions that directly manipulate the DOM"
+          },
+          { "@type": "Answer", "text": "Components that don't use any hooks" }
+        ],
+        "description": "Understand functional components in React and how they simplify building reusable UI elements.",
+        "keywords": [
+          "functional components",
+          "React basics",
+          "props in React",
+          "React UI"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 3,
+        "name": "What is the purpose of the useEffect hook?",
+        "text": "What is the purpose of the useEffect hook?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-useeffect-hook",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To manage side effects like fetching data or updating the DOM"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "To handle user input in forms" },
+          { "@type": "Answer", "text": "To update the component state" },
+          { "@type": "Answer", "text": "To render a list of items in React" }
+        ],
+        "description": "Learn about the useEffect hook in React and how it manages side effects such as API calls and DOM updates.",
+        "keywords": [
+          "useEffect",
+          "React hooks",
+          "side effects",
+          "API calls in React"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 4,
+        "name": "What is the purpose of React props?",
+        "text": "What is the purpose of React props?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-props",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To pass data between components"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "To manage component state" },
+          { "@type": "Answer", "text": "To define styles for components" },
+          { "@type": "Answer", "text": "To create new components" }
+        ],
+        "description": "Discover how React props allow data sharing between components and enable dynamic UI updates.",
+        "keywords": [
+          "React props",
+          "data sharing",
+          "props in React",
+          "React components"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 5,
+        "name": "What does React useState hook do?",
+        "text": "What does React useState hook do?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-react-use-state-hook-do",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Declares state in functional components"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          { "@type": "Answer", "text": "Manages the lifecycle of a component" },
+          { "@type": "Answer", "text": "Fetches data from an API" },
+          { "@type": "Answer", "text": "Handles user interactions" }
+        ],
+        "description": "Learn about the useState hook in React, which allows you to declare and manage state in functional components.",
+        "keywords": [
+          "useState",
+          "React state",
+          "functional components",
+          "React hooks"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 6,
+        "name": "What is a React component?",
+        "text": "What is a React component?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-a-react-component",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A reusable piece of UI"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "A function to fetch data"
+          },
+          {
+            "@type": "Answer",
+            "text": "A tool for debugging"
+          },
+          {
+            "@type": "Answer",
+            "text": "A method to directly manipulate the DOM"
+          }
+        ],
+        "description": "A React component is a reusable and self-contained unit of a UI, designed to be managed and rendered by React. It helps to build complex UIs from simple, reusable building blocks.",
+        "keywords": [
+          "React components",
+          "UI components",
+          "React basics",
+          "Reusable UI"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 7,
+        "name": "What is React Router used for?",
+        "text": "What is React Router used for?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-router-used-for",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To manage navigation and routing in React applications"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To style React components"
+          },
+          {
+            "@type": "Answer",
+            "text": "To handle user input in forms"
+          },
+          {
+            "@type": "Answer",
+            "text": "To optimize performance of React apps"
+          }
+        ],
+        "description": "React Router is a standard library for routing in React applications. It allows navigation between different views or pages, providing a seamless user experience.",
+        "keywords": [
+          "React Router",
+          "navigation in React",
+          "routing in React",
+          "React quiz"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 8,
+        "name": "What does the React useRef hook do?",
+        "text": "What does the React useRef hook do?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-react-use-ref-hook-do",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Accesses or stores a mutable DOM reference"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Updates the component state"
+          },
+          {
+            "@type": "Answer",
+            "text": "Manages side effects"
+          },
+          {
+            "@type": "Answer",
+            "text": "Defines default props for components"
+          }
+        ],
+        "description": "The `useRef` hook is used to persist values across renders without causing re-renders. It is commonly used to directly access a DOM element or keep a mutable value.",
+        "keywords": ["useRef", "DOM references", "React hooks", "React DOM"]
+      },
+      {
+        "@type": "Question",
+        "position": 9,
+        "name": "What is the React Context API used for?",
+        "text": "What is the React Context API used for?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-react-context-api-used-for",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To share state or data across components without props drilling"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To manage complex animations"
+          },
+          {
+            "@type": "Answer",
+            "text": "To perform API calls"
+          },
+          {
+            "@type": "Answer",
+            "text": "To optimize the performance of React apps"
+          }
+        ],
+        "description": "The React Context API allows you to share state across different components without having to pass props down manually through each level of the component tree.",
+        "keywords": [
+          "Context API",
+          "React state",
+          "global state",
+          "React hooks"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 10,
+        "name": "What are React fragments?",
+        "text": "What are React fragments?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-react-fragments",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lightweight containers for grouping multiple elements"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Tools for debugging React code"
+          },
+          {
+            "@type": "Answer",
+            "text": "Built-in hooks for managing state"
+          },
+          {
+            "@type": "Answer",
+            "text": "Components that handle user authentication"
+          }
+        ],
+        "description": "React Fragments let you group multiple elements without adding extra nodes to the DOM. It is used when you want to return multiple elements from a component without wrapping them in an unnecessary parent element.",
+        "keywords": [
+          "React fragments",
+          "grouping elements",
+          "React components",
+          "JSX"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 11,
+        "name": "What is the key prop in React used for?",
+        "text": "What is the key prop in React used for?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-key-prop-in-react-used-for",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To uniquely identify elements in a list"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To style components"
+          },
+          {
+            "@type": "Answer",
+            "text": "To bind event listeners"
+          },
+          {
+            "@type": "Answer",
+            "text": "To pass data between components"
+          }
+        ],
+        "description": "The `key` prop helps React identify which items have changed, been added, or removed. This allows React to optimize rendering lists of elements.",
+        "keywords": [
+          "React key",
+          "list rendering",
+          "React components",
+          "React performance"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 12,
+        "name": "What does the useReducer hook do?",
+        "text": "What does the useReducer hook do?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-use-reducer-hook-do",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Manages complex state logic in functional components"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Updates the DOM directly"
+          },
+          {
+            "@type": "Answer",
+            "text": "Handles form submissions"
+          },
+          {
+            "@type": "Answer",
+            "text": "Performs API requests"
+          }
+        ],
+        "description": "The `useReducer` hook is used to manage state in more complex scenarios, providing a more structured way to handle state logic compared to `useState`.",
+        "keywords": [
+          "useReducer",
+          "state management",
+          "React hooks",
+          "functional components"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 13,
+        "name": "What is React.memo used for?",
+        "text": "What is React.memo used for?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-memo-used-for",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To prevent unnecessary re-renders of functional components"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To fetch data from an API"
+          },
+          {
+            "@type": "Answer",
+            "text": "To memoize values returned by hooks"
+          },
+          {
+            "@type": "Answer",
+            "text": "To define default props"
+          }
+        ],
+        "description": "React.memo is a higher-order component that wraps a functional component to optimize its performance by memoizing its result and avoiding unnecessary re-renders when props haven't changed.",
+        "keywords": [
+          "React.memo",
+          "performance optimization",
+          "React re-renders",
+          "React hooks"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 14,
+        "name": "What is React.memo used for?",
+        "text": "What is React.memo used for?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-memo-used-for",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To prevent unnecessary re-renders of functional components"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To fetch data from an API"
+          },
+          {
+            "@type": "Answer",
+            "text": "To memoize values returned by hooks"
+          },
+          {
+            "@type": "Answer",
+            "text": "To define default props"
+          }
+        ],
+        "description": "React.memo is a higher-order component used to optimize performance by preventing unnecessary re-renders of functional components.",
+        "keywords": [
+          "React.memo",
+          "performance optimization",
+          "React re-renders",
+          "React hooks"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 15,
+        "name": "What is prop drilling in React?",
+        "text": "What is prop drilling in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-prop-drilling-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Passing props down multiple levels of components"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "A debugging technique"
+          },
+          {
+            "@type": "Answer",
+            "text": "A method to fetch data from an API"
+          },
+          {
+            "@type": "Answer",
+            "text": "A feature for optimizing performance"
+          }
+        ],
+        "description": "Prop drilling refers to the process of passing props from a parent component to child components across multiple levels of the component tree.",
+        "keywords": [
+          "prop drilling",
+          "React components",
+          "state management",
+          "React props"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 16,
+        "name": "What is the purpose of React state?",
+        "text": "What is the purpose of React state?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-state",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To manage dynamic data within a component"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To define reusable styles"
+          },
+          {
+            "@type": "Answer",
+            "text": "To access DOM elements"
+          },
+          {
+            "@type": "Answer",
+            "text": "To create new components"
+          }
+        ],
+        "description": "React state is used to manage dynamic data that changes over time within a component, allowing components to react to user input or other changes.",
+        "keywords": [
+          "React state",
+          "state management",
+          "dynamic data",
+          "React components"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 17,
+        "name": "What does React.StrictMode do?",
+        "text": "What does React.StrictMode do?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-react-strict-mode-do",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Checks for potential problems in React applications"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Fetches data from APIs"
+          },
+          {
+            "@type": "Answer",
+            "text": "Optimizes performance of React apps"
+          },
+          {
+            "@type": "Answer",
+            "text": "Styles components globally"
+          }
+        ],
+        "description": "React.StrictMode is a development tool used to identify potential problems in an application by intentionally running additional checks in development mode.",
+        "keywords": [
+          "React.StrictMode",
+          "React debugging",
+          "React issues",
+          "development tools"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 18,
+        "name": "What are React portals used for?",
+        "text": "What are React portals used for?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-react-portals-used-for",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Rendering children outside the DOM hierarchy of their parent"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Managing API calls"
+          },
+          {
+            "@type": "Answer",
+            "text": "Optimizing state updates"
+          },
+          {
+            "@type": "Answer",
+            "text": "Creating reusable styles"
+          }
+        ],
+        "description": "React portals are used to render child components outside their parent component's DOM hierarchy, useful for scenarios like modals or tooltips.",
+        "keywords": [
+          "React portals",
+          "React DOM",
+          "rendering children",
+          "React components"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 19,
+        "name": "What does the useContext hook do?",
+        "text": "What does the useContext hook do?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-use-context-hook-do",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fetches global state using Context"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Handles API requests"
+          },
+          {
+            "@type": "Answer",
+            "text": "Optimizes performance of React apps"
+          },
+          {
+            "@type": "Answer",
+            "text": "Handles user events"
+          }
+        ],
+        "description": "The useContext hook is used to access the value of a Context directly in functional components, providing a way to share global state without prop drilling.",
+        "keywords": ["useContext", "React state", "global state", "React hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 20,
+        "name": "What is a React ref?",
+        "text": "What is a React ref?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-ref",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A way to access and manipulate a DOM element directly"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "A built-in method to create new components"
+          },
+          {
+            "@type": "Answer",
+            "text": "A hook to manage state"
+          },
+          {
+            "@type": "Answer",
+            "text": "A method for routing in React"
+          }
+        ],
+        "description": "React refs provide a way to access and interact with DOM elements or class components directly, bypassing React's state and rendering process.",
+        "keywords": ["React refs", "DOM manipulation", "React hooks", "React"]
+      },
+      {
+        "@type": "Question",
+        "position": 21,
+        "name": "What is the purpose of React.lazy?",
+        "text": "What is the purpose of React.lazy?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-lazy",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To load components lazily for better performance"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To improve app styling"
+          },
+          {
+            "@type": "Answer",
+            "text": "To declare asynchronous functions"
+          },
+          {
+            "@type": "Answer",
+            "text": "To manage API requests"
+          }
+        ],
+        "description": "React.lazy is used to dynamically import components and render them only when needed, helping to reduce the initial load time and improve performance.",
+        "keywords": ["React.lazy", "lazy loading", "React performance", "React"]
+      },
+      {
+        "@type": "Question",
+        "position": 22,
+        "name": "What does the Suspense component do in React?",
+        "text": "What does the Suspense component do in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-suspense-component-do-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Displays a fallback UI while components are loading"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Handles event listeners"
+          },
+          {
+            "@type": "Answer",
+            "text": "Manages component state"
+          },
+          {
+            "@type": "Answer",
+            "text": "Optimizes component rendering"
+          }
+        ],
+        "description": "The Suspense component in React is used for handling lazy loading and displaying a fallback UI while waiting for a component to load.",
+        "keywords": ["React Suspense", "fallback UI", "lazy loading", "React"]
+      },
+      {
+        "@type": "Question",
+        "position": 23,
+        "name": "What is the difference between state and props?",
+        "text": "What is the difference between state and props?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-difference-between-state-and-props-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "State manages local data, while props are passed from parent to child"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "State is read-only, while props can be modified"
+          },
+          {
+            "@type": "Answer",
+            "text": "State is used to pass data, while props manage local data"
+          },
+          {
+            "@type": "Answer",
+            "text": "State updates the DOM directly, while props don't"
+          }
+        ],
+        "description": "State and props are both used to manage data in React, but state is used for managing local data within a component, whereas props are used for passing data from parent to child components.",
+        "keywords": [
+          "React state",
+          "React props",
+          "React data management",
+          "React"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 24,
+        "name": "What is React.StrictMode mainly used for?",
+        "text": "What is React.StrictMode mainly used for?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-strict-mode-mainly-used-for",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Detecting potential issues in an app"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Styling components"
+          },
+          {
+            "@type": "Answer",
+            "text": "Handling forms"
+          },
+          {
+            "@type": "Answer",
+            "text": "Rendering large lists efficiently"
+          }
+        ],
+        "description": "React.StrictMode is used to detect potential issues in an app by providing additional checks during development, ensuring best practices and identifying unsafe lifecycles.",
+        "keywords": [
+          "React.StrictMode",
+          "React debugging",
+          "React issues",
+          "React"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 25,
+        "name": "What is the purpose of keys in React lists?",
+        "text": "What is the purpose of keys in React lists?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-keys-in-react-lists",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To enhance performance and track changes in lists"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To style individual items"
+          },
+          {
+            "@type": "Answer",
+            "text": "To trigger re-renders"
+          },
+          {
+            "@type": "Answer",
+            "text": "To bind event listeners"
+          }
+        ],
+        "description": "In React, keys are used in lists to help the virtual DOM identify which items have changed, improving performance and enabling efficient re-rendering.",
+        "keywords": ["React keys", "React lists", "React performance", "React"]
+      },
+      {
+        "@type": "Question",
+        "position": 26,
+        "name": "What is React Fiber?",
+        "text": "What is React Fiber?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-fiber",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "React's reconciliation algorithm"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "A new browser API"
+          },
+          {
+            "@type": "Answer",
+            "text": "A tool for managing state"
+          },
+          {
+            "@type": "Answer",
+            "text": "A debugging tool for developers"
+          }
+        ],
+        "description": "React Fiber is a complete rewrite of React's core algorithm for rendering and reconciliation, improving performance, and enabling features like time-slicing.",
+        "keywords": [
+          "React Fiber",
+          "React reconciliation",
+          "React performance",
+          "React"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 27,
+        "name": "What does lifting state up mean in React?",
+        "text": "What does lifting state up mean in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-lifting-state-up-mean-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Moving state to a parent component to share with children"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Storing state in the global context"
+          },
+          {
+            "@type": "Answer",
+            "text": "Using useState for local state management"
+          },
+          {
+            "@type": "Answer",
+            "text": "Managing side effects with hooks"
+          }
+        ],
+        "description": "Lifting state up in React means moving the state from child components to their parent component, enabling shared state management and communication between siblings.",
+        "keywords": [
+          "React lifting state",
+          "React state sharing",
+          "React",
+          "React components"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 28,
+        "name": "What does the render method do in class components?",
+        "text": "What does the render method do in class components?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-render-method-do-in-class-components",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Returns the React elements to display"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Defines the initial state of the component"
+          },
+          {
+            "@type": "Answer",
+            "text": "Fetches data from APIs"
+          },
+          {
+            "@type": "Answer",
+            "text": "Handles side effects like fetching data"
+          }
+        ],
+        "description": "In React class components, the render method is responsible for returning the React elements that will be displayed on the screen.",
+        "keywords": [
+          "React class components",
+          "React render",
+          "React elements",
+          "React"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 29,
+        "name": "What is the default behavior of the React onClick event?",
+        "text": "What is the default behavior of the React onClick event?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-default-behavior-of-the-react-on-click-event",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Triggers a callback function when clicked"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Executes asynchronously"
+          },
+          {
+            "@type": "Answer",
+            "text": "Handles user inputs in forms"
+          },
+          {
+            "@type": "Answer",
+            "text": "Automatically updates the component state"
+          }
+        ],
+        "description": "The default behavior of the React onClick event is to trigger a callback function when the element is clicked, which can be used for handling user interactions.",
+        "keywords": [
+          "React onClick",
+          "React events",
+          "React callbacks",
+          "React"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 30,
+        "name": "What are controlled components in React?",
+        "text": "What are controlled components in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-controlled-components-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Components whose state is controlled by React"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Components managed entirely by the DOM"
+          },
+          {
+            "@type": "Answer",
+            "text": "Components that don't rely on any hooks"
+          },
+          {
+            "@type": "Answer",
+            "text": "Components that directly update the DOM"
+          }
+        ],
+        "keywords": [
+          "React controlled components",
+          "React forms",
+          "React state management"
+        ],
+        "description": "In React, controlled components are those whose state is managed by React, usually through props. This is the opposite of uncontrolled components, where the DOM manages the state. Controlled components make it easier to handle and validate user inputs in forms and other UI elements."
+      },
+      {
+        "@type": "Question",
+        "position": 31,
+        "name": "What is the use of the defaultProps property in React?",
+        "text": "What is the use of the defaultProps property in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-use-of-the-default-props-property-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To set default values for props"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To manage local state in a component"
+          },
+          {
+            "@type": "Answer",
+            "text": "To handle errors during rendering"
+          },
+          {
+            "@type": "Answer",
+            "text": "To optimize performance"
+          }
+        ],
+        "keywords": [
+          "React defaultProps",
+          "React props",
+          "Default props in React"
+        ],
+        "description": "In React, defaultProps is used to assign default values to props when no value is provided by the parent component. This helps avoid potential errors and ensures the component has fallback values when certain props are missing."
+      },
+      {
+        "@type": "Question",
+        "position": 32,
+        "name": "What is a higher-order component (HOC) in React?",
+        "text": "What is a higher-order component (HOC) in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-a-higher-order-component-hoc-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A function that takes a component and returns a new component"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "A component used for animations"
+          },
+          {
+            "@type": "Answer",
+            "text": "A component that renders directly to the DOM"
+          },
+          {
+            "@type": "Answer",
+            "text": "A library for managing forms in React"
+          }
+        ],
+        "keywords": [
+          "React higher-order components",
+          "React HOC",
+          "Reusable components in React"
+        ],
+        "description": "A higher-order component (HOC) is a function in React that takes a component and returns a new component with additional functionality. This is useful for code reuse, as it allows you to add features like authentication, theming, or data fetching to existing components."
+      },
+      {
+        "@type": "Question",
+        "position": 33,
+        "name": "What is the purpose of the componentWillUnmount lifecycle method?",
+        "text": "What is the purpose of the componentWillUnmount lifecycle method?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-component-will-unmount-lifecycle-method",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To clean up resources like timers or subscriptions"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To handle user input in forms"
+          },
+          {
+            "@type": "Answer",
+            "text": "To fetch data when the component is about to unmount"
+          },
+          {
+            "@type": "Answer",
+            "text": "To update the state of the component"
+          }
+        ],
+        "keywords": [
+          "React lifecycle methods",
+          "React componentWillUnmount",
+          "Clean up in React"
+        ],
+        "description": "The componentWillUnmount lifecycle method is called just before a component is removed from the DOM. It is typically used to clean up resources like clearing timers, canceling network requests, or unsubscribing from events to prevent memory leaks."
+      },
+      {
+        "@type": "Question",
+        "position": 34,
+        "name": "What is the purpose of the constructor in class components?",
+        "text": "What is the purpose of the constructor in class components?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-constructor-in-class-components",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To define initial state and bind methods"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To handle component side effects"
+          },
+          {
+            "@type": "Answer",
+            "text": "To fetch data from APIs"
+          },
+          {
+            "@type": "Answer",
+            "text": "To create reusable styles"
+          }
+        ],
+        "keywords": [
+          "React constructor",
+          "Class components in React",
+          "State initialization"
+        ],
+        "description": "In class components, the constructor method is used to initialize state and bind methods to the component. This ensures that the component has the correct state when it is first created and that methods have the correct context when called."
+      },
+      {
+        "@type": "Question",
+        "position": 35,
+        "name": "What does the getDerivedStateFromProps lifecycle method do?",
+        "text": "What does the getDerivedStateFromProps lifecycle method do?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-getderivedstatefromprops-lifecycle-method-do",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Updates state based on changes in props"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Handles state transitions asynchronously"
+          },
+          {
+            "@type": "Answer",
+            "text": "Fetches data from APIs"
+          },
+          {
+            "@type": "Answer",
+            "text": "Binds methods to the component"
+          }
+        ],
+        "keywords": [
+          "React getDerivedStateFromProps",
+          "React props and state",
+          "React lifecycle methods"
+        ],
+        "description": "The getDerivedStateFromProps lifecycle method is called when a component's props change. It allows you to update the state based on new props, making it useful for syncing state with props in specific scenarios."
+      },
+      {
+        "@type": "Question",
+        "position": 36,
+        "name": "What is the React Developer Tools extension used for?",
+        "text": "What is the React Developer Tools extension used for?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-react-developer-tools-extension-used-for",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Debugging and inspecting React components"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Testing React apps"
+          },
+          {
+            "@type": "Answer",
+            "text": "Styling components in real-time"
+          },
+          {
+            "@type": "Answer",
+            "text": "Optimizing React app performance"
+          }
+        ],
+        "keywords": [
+          "React Developer Tools",
+          "Debugging React",
+          "Inspecting React components"
+        ],
+        "description": "The React Developer Tools extension is a browser tool used to inspect and debug React applications. It provides a visual interface for viewing the component tree, monitoring state and props, and analyzing performance."
+      },
+      {
+        "@type": "Question",
+        "position": 37,
+        "name": "What is the purpose of a fallback UI in React?",
+        "text": "What is the purpose of a fallback UI in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-a-fallback-ui-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To display UI during loading or errors"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To handle user input errors"
+          },
+          {
+            "@type": "Answer",
+            "text": "To render a default page when APIs fail"
+          },
+          {
+            "@type": "Answer",
+            "text": "To apply default props to components"
+          }
+        ],
+        "keywords": [
+          "React fallback UI",
+          "Error boundaries in React",
+          "React error handling"
+        ],
+        "description": "A fallback UI in React is a temporary UI that is shown while the app is loading or when an error occurs. It helps improve user experience by ensuring that users are not left with a blank screen or a broken interface."
+      },
+      {
+        "@type": "Question",
+        "position": 38,
+        "name": "What does ReactDOM.render do?",
+        "text": "What does ReactDOM.render do?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-reactdom-render-do",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Renders a React element into the DOM"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Manages local state for a component"
+          },
+          {
+            "@type": "Answer",
+            "text": "Handles lifecycle methods"
+          },
+          {
+            "@type": "Answer",
+            "text": "Performs server-side rendering"
+          }
+        ],
+        "description": "ReactDOM.render is a method in React that is responsible for rendering a React element into the DOM.",
+        "keywords": [
+          "ReactDOM.render",
+          "Rendering React elements",
+          "React DOM manipulation"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 39,
+        "name": "What is the purpose of React's reconciliation process?",
+        "text": "What is the purpose of React's reconciliation process?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-s-reconciliation-process",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To update and render only the necessary changes to the DOM"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To compare versions of React apps"
+          },
+          {
+            "@type": "Answer",
+            "text": "To fetch data more efficiently"
+          },
+          {
+            "@type": "Answer",
+            "text": "To manage user inputs in forms"
+          }
+        ],
+        "description": "The reconciliation process in React helps ensure that the DOM is efficiently updated by comparing the current and previous virtual DOM to apply only the necessary changes.",
+        "keywords": [
+          "React reconciliation",
+          "React DOM updates",
+          "React performance"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 40,
+        "name": "What is the main purpose of the useCallback hook?",
+        "text": "What is the main purpose of the useCallback hook?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-main-purpose-of-the-usecallback-hook",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To memoize functions and avoid unnecessary re-creations"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To manage state across different components"
+          },
+          {
+            "@type": "Answer",
+            "text": "To handle side effects in functional components"
+          },
+          {
+            "@type": "Answer",
+            "text": "To trigger re-renders when props change"
+          }
+        ],
+        "description": "The useCallback hook in React is used to memoize functions, ensuring that they are not recreated on every render, thus improving performance in certain scenarios.",
+        "keywords": [
+          "React useCallback",
+          "React hooks",
+          "React performance optimization"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 41,
+        "name": "What is the purpose of the useContext hook?",
+        "text": "What is the purpose of the useContext hook?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-use-context-hook",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To allow state sharing between components without passing props"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To fetch data from an API"
+          },
+          {
+            "@type": "Answer",
+            "text": "To optimize performance by caching values"
+          },
+          {
+            "@type": "Answer",
+            "text": "To handle component lifecycle methods"
+          }
+        ],
+        "description": "The useContext hook in React allows components to share state without the need for passing props down through multiple levels of the component tree.",
+        "keywords": ["React useContext", "React state sharing", "React hooks"]
+      },
+      {
+        "@type": "Question",
+        "position": 42,
+        "name": "What is the significance of the key prop in React lists?",
+        "text": "What is the significance of the key prop in React lists?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-significance-of-the-key-prop-in-react-lists",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It helps React identify which items have changed, added, or removed"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "It determines the component's styling"
+          },
+          {
+            "@type": "Answer",
+            "text": "It defines the component's default props"
+          },
+          {
+            "@type": "Answer",
+            "text": "It is used to store component data persistently"
+          }
+        ],
+        "description": "The key prop in React is essential for optimizing the rendering of lists by helping React identify which items have changed, been added, or removed during the re-rendering process.",
+        "keywords": ["React key prop", "React lists", "React performance"]
+      },
+      {
+        "@type": "Question",
+        "position": 43,
+        "name": "What is ReactDOMServer used for?",
+        "text": "What is ReactDOMServer used for?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-reactdomserver-used-for",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To perform server-side rendering of React components"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To interact with the DOM"
+          },
+          {
+            "@type": "Answer",
+            "text": "To handle React state on the server"
+          },
+          {
+            "@type": "Answer",
+            "text": "To bind event listeners on the client"
+          }
+        ],
+        "description": "ReactDOMServer is used for server-side rendering (SSR) in React, enabling the rendering of React components on the server side before sending them to the client.",
+        "keywords": ["ReactDOMServer", "server-side rendering", "React SSR"]
+      },
+      {
+        "@type": "Question",
+        "position": 44,
+        "name": "What does the useReducer hook do in React?",
+        "text": "What does the useReducer hook do in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-use-reducer-hook-do-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It is used to handle large state updates in a performant way"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "It is used to fetch data from APIs"
+          },
+          {
+            "@type": "Answer",
+            "text": "It is used to store immutable data"
+          },
+          {
+            "@type": "Answer",
+            "text": "It helps in component styling and animations"
+          }
+        ],
+        "description": "The useReducer hook is used in React for handling large or complex state updates, offering an alternative to useState for state management.",
+        "keywords": [
+          "React useReducer",
+          "React hooks",
+          "React state management"
+        ]
+      },
+      {
+        "@type": "Question",
+        "position": 45,
+        "name": "How do you pass data from a child component to a parent component in React?",
+        "text": "How do you pass data from a child component to a parent component in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/how-do-you-pass-data-from-a-child-component-to-a-parent-component-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "By passing a callback function as a prop from parent to child"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "Using the `useState` hook"
+          },
+          {
+            "@type": "Answer",
+            "text": "By using React Context"
+          },
+          {
+            "@type": "Answer",
+            "text": "By rendering JSX inside the parent component"
+          }
+        ],
+        "description": "In React, data is passed from a child component to a parent component using a callback function passed down as a prop from the parent.",
+        "keywords": ["React child to parent", "React props", "React data flow"]
+      },
+      {
+        "@type": "Question",
+        "position": 46,
+        "name": "What is the difference between React's useEffect and useLayoutEffect hooks?",
+        "text": "What is the difference between React's useEffect and useLayoutEffect hooks?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-difference-between-reacts-useeffect-and-uselayouteffect-hooks",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "useLayoutEffect runs synchronously after all DOM mutations"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "useEffect runs synchronously, while useLayoutEffect runs asynchronously"
+          },
+          {
+            "@type": "Answer",
+            "text": "useEffect handles form inputs, while useLayoutEffect handles rendering"
+          },
+          {
+            "@type": "Answer",
+            "text": "useLayoutEffect is used only for server-side rendering"
+          }
+        ],
+        "keywords": ["React useEffect", "React useLayoutEffect", "React hooks"],
+        "description": "Learn about the difference between React's useEffect and useLayoutEffect hooks, their usage and effects on DOM rendering."
+      },
+      {
+        "@type": "Question",
+        "position": 47,
+        "name": "What is the role of the componentDidMount lifecycle method in React?",
+        "text": "What is the role of the componentDidMount lifecycle method in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-role-of-the-componentdidmount-lifecycle-method-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To fetch data or perform operations after the component mounts"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To update the component state"
+          },
+          {
+            "@type": "Answer",
+            "text": "To manage side effects when props change"
+          },
+          {
+            "@type": "Answer",
+            "text": "To handle event listeners and remove them on unmount"
+          }
+        ],
+        "keywords": [
+          "React componentDidMount",
+          "React lifecycle methods",
+          "React components"
+        ],
+        "description": "Understand the purpose of the componentDidMount lifecycle method in React, which is used for operations after a component mounts."
+      },
+      {
+        "@type": "Question",
+        "position": 48,
+        "name": "What does the React context API allow you to do?",
+        "text": "What does the React context API allow you to do?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-react-context-api-allow-you-to-do",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It allows you to pass data across the app without using props"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "It allows you to store state in a global store"
+          },
+          {
+            "@type": "Answer",
+            "text": "It provides a built-in state management system"
+          },
+          {
+            "@type": "Answer",
+            "text": "It enables direct DOM manipulation"
+          }
+        ],
+        "keywords": ["React Context API", "React state sharing", "React props"],
+        "description": "Explore how the React Context API simplifies passing data across components, avoiding the need for prop drilling."
+      },
+      {
+        "@type": "Question",
+        "position": 49,
+        "name": "What is the purpose of the useLayoutEffect hook?",
+        "text": "What is the purpose of the useLayoutEffect hook?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-uselayouteffect-hook",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To read layout and paint information from the DOM"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To handle asynchronous side effects in functional components"
+          },
+          {
+            "@type": "Answer",
+            "text": "To perform DOM mutations and update the UI immediately"
+          },
+          {
+            "@type": "Answer",
+            "text": "To manage error boundaries in React components"
+          }
+        ],
+        "keywords": [
+          "useLayoutEffect hook",
+          "React hooks",
+          "DOM layout",
+          "React performance"
+        ],
+        "description": "Learn about the useLayoutEffect hook, used for reading layout and paint information from the DOM before rendering."
+      },
+      {
+        "@type": "Question",
+        "position": 50,
+        "name": "What is the difference between state and props in React?",
+        "text": "What is the difference between state and props in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-difference-between-state-and-props-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "State is internal to a component, while props are passed from a parent"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "State is read-only, while props can be modified"
+          },
+          {
+            "@type": "Answer",
+            "text": "State is used to fetch data, while props are used to manage events"
+          },
+          {
+            "@type": "Answer",
+            "text": "State and props are interchangeable"
+          }
+        ],
+        "keywords": [
+          "React state",
+          "React props",
+          "state vs props",
+          "React concepts"
+        ],
+        "description": "Understand the key differences between state and props in React, including their roles and how they are used in components."
+      },
+      {
+        "@type": "Question",
+        "position": 51,
+        "name": "What is a controlled component in React?",
+        "text": "What is a controlled component in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-controlled-components-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A component whose form elements are controlled by React state"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "A component that controls the state of other components"
+          },
+          {
+            "@type": "Answer",
+            "text": "A component that manages its own state"
+          },
+          {
+            "@type": "Answer",
+            "text": "A component that directly modifies the DOM"
+          }
+        ],
+        "keywords": [
+          "React controlled components",
+          "form handling in React",
+          "React forms"
+        ],
+        "description": "Learn about controlled components in React, where form elements are bound to the component's state."
+      },
+      {
+        "@type": "Question",
+        "position": 52,
+        "name": "What is the significance of the React.memo function?",
+        "text": "What is the significance of the React.memo function?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-significance-of-the-react-memo-function",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It memoizes a component to prevent unnecessary re-renders"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "It allows components to fetch data efficiently"
+          },
+          {
+            "@type": "Answer",
+            "text": "It is used to manage state globally"
+          },
+          {
+            "@type": "Answer",
+            "text": "It binds lifecycle methods to functional components"
+          }
+        ],
+        "keywords": [
+          "React.memo",
+          "optimize rendering",
+          "React performance tips"
+        ],
+        "description": "Understand the importance of React.memo, which optimizes component rendering by memoizing functional components."
+      },
+      {
+        "@type": "Question",
+        "position": 53,
+        "name": "What does the StrictMode component do in React?",
+        "text": "What does the StrictMode component do in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-strictmode-component-do-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It highlights potential issues in an application during development"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "It disables deprecated lifecycle methods"
+          },
+          {
+            "@type": "Answer",
+            "text": "It ensures the app works in strict type-checking mode"
+          },
+          {
+            "@type": "Answer",
+            "text": "It provides additional performance optimizations"
+          }
+        ],
+        "keywords": [
+          "React StrictMode",
+          "React debugging tools",
+          "React development"
+        ],
+        "description": "Learn about React's StrictMode, a tool for identifying potential issues and enforcing best practices during development."
+      },
+      {
+        "@type": "Question",
+        "position": 54,
+        "name": "How can you prevent a component from re-rendering unnecessarily?",
+        "text": "How can you prevent a component from re-rendering unnecessarily?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/how-can-you-prevent-a-component-from-re-rendering-unnecessarily",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "By using React.memo or shouldComponentUpdate"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "By using the useEffect hook"
+          },
+          {
+            "@type": "Answer",
+            "text": "By wrapping it with a Fragment"
+          },
+          {
+            "@type": "Answer",
+            "text": "By using the Context API"
+          }
+        ],
+        "keywords": [
+          "prevent re-rendering",
+          "React.memo",
+          "shouldComponentUpdate",
+          "React optimization"
+        ],
+        "description": "To optimize performance in React, you can prevent unnecessary re-renders using techniques like React.memo or shouldComponentUpdate."
+      },
+      {
+        "@type": "Question",
+        "position": 55,
+        "name": "What is the purpose of the Fragment component in React?",
+        "text": "What is the purpose of the Fragment component in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-fragment-component-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To group multiple elements without adding extra nodes to the DOM"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To apply styling to multiple components"
+          },
+          {
+            "@type": "Answer",
+            "text": "To handle asynchronous rendering"
+          },
+          {
+            "@type": "Answer",
+            "text": "To manage component states and props"
+          }
+        ],
+        "keywords": [
+          "React Fragment",
+          "grouping elements",
+          "React DOM optimization"
+        ],
+        "description": "The Fragment component in React allows you to group multiple elements together without adding extra nodes to the DOM, improving performance and keeping the markup clean."
+      },
+      {
+        "@type": "Question",
+        "position": 56,
+        "name": "What is the role of React's default props?",
+        "text": "What is the role of React's default props?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-role-of-reacts-default-props",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To provide default values for props if no value is passed"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To validate the props passed to a component"
+          },
+          {
+            "@type": "Answer",
+            "text": "To optimize performance during rendering"
+          },
+          {
+            "@type": "Answer",
+            "text": "To replace the need for PropTypes"
+          }
+        ],
+        "keywords": [
+          "React default props",
+          "fallback props in React",
+          "React component defaults"
+        ],
+        "description": "React's default props provide fallback values for a component's props when no value is passed, ensuring the component works even when props are missing."
+      },
+      {
+        "@type": "Question",
+        "position": 57,
+        "name": "What is the purpose of the Error Boundary in React?",
+        "text": "What is the purpose of the Error Boundary in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-error-boundary-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To catch and handle errors during rendering or in lifecycle methods"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To manage state and props across components"
+          },
+          {
+            "@type": "Answer",
+            "text": "To optimize rendering performance"
+          },
+          {
+            "@type": "Answer",
+            "text": "To fetch and display fallback data"
+          }
+        ],
+        "keywords": [
+          "React Error Boundaries",
+          "error handling",
+          "React fallback UI"
+        ],
+        "description": "Error Boundaries in React catch errors during rendering or in lifecycle methods, allowing you to display fallback UI and keep your app running smoothly."
+      },
+      {
+        "@type": "Question",
+        "position": 58,
+        "name": "What is the purpose of React's useRef hook?",
+        "text": "What is the purpose of React's useRef hook?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-reacts-use-ref-hook",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To create a reference to a DOM element or persist a mutable value"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "To manage local state within a component"
+          },
+          {
+            "@type": "Answer",
+            "text": "To trigger re-renders when the value changes"
+          },
+          {
+            "@type": "Answer",
+            "text": "To validate props passed to child components"
+          }
+        ],
+        "keywords": ["React useRef", "DOM references", "React mutable values"],
+        "description": "The useRef hook in React allows you to persist mutable values and create references to DOM elements, useful for accessing and manipulating elements directly."
+      },
+      {
+        "@type": "Question",
+        "position": 59,
+        "name": "What is the virtual DOM in React?",
+        "text": "What is the virtual DOM in React?",
+        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-virtual-dom-in-react",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A copy of the browser DOM that React uses to track changes"
+        },
+        "answerCount": 4,
+        "suggestedAnswer": [
+          {
+            "@type": "Answer",
+            "text": "An abstraction layer for managing animations"
+          },
+          {
+            "@type": "Answer",
+            "text": "A way to manage global state in React"
+          },
+          {
+            "@type": "Answer",
+            "text": "A separate DOM that is stored in memory for performance"
+          }
+        ],
+        "keywords": [
+          "React virtual DOM",
+          "DOM optimization",
+          "React performance"
+        ],
+        "description": "The virtual DOM in React is a lightweight copy of the actual DOM used to track changes and update only the necessary parts of the UI, improving performance."
       }
-    }
-  ],
+    ]
+  },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
         "@type": "ListItem",
-        "position": 1,
+        "position": 60,
         "name": "Home",
         "item": "https://www.projectschool.dev"
       },
@@ -65,1783 +1887,17 @@
       }
     ]
   },
-  "questions": [
-    {
-      "@type": "Question",
-      "name": "What is React.js?",
-      "text": "What is React.js?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-virtual-dom",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A library for building user interfaces"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        { "@type": "Answer", "text": "A backend framework for databases" },
-        {
-          "@type": "Answer",
-          "text": "A library for performing server-side operations"
-        },
-        { "@type": "Answer", "text": "A language used for creating APIs" }
-      ],
-      "description": "Discover what React.js is and how it helps developers build dynamic and efficient user interfaces.",
-      "keywords": [
-        "React.js",
-        "React introduction",
-        "React library",
-        "UI development"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is JSX?",
-      "text": "What is JSX?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-jsx",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A syntax extension that allows writing HTML in React"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "A special syntax to describe CSS styles"
-        },
-        {
-          "@type": "Answer",
-          "text": "A library used to optimize JavaScript code"
-        },
-        {
-          "@type": "Answer",
-          "text": "A template engine used for server-side rendering"
-        }
-      ],
-      "description": "Explore JSX, a syntax extension in React that combines HTML and JavaScript seamlessly.",
-      "keywords": ["JSX", "React JSX", "React syntax", "HTML in React"]
-    },
-    {
-      "@type": "Question",
-      "name": "What are functional components in React?",
-      "text": "What are functional components in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-functional-component-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Functions that take props and return React elements"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        { "@type": "Answer", "text": "Components defined using ES6 classes" },
-        {
-          "@type": "Answer",
-          "text": "Functions that directly manipulate the DOM"
-        },
-        { "@type": "Answer", "text": "Components that don't use any hooks" }
-      ],
-      "description": "Understand functional components in React and how they simplify building reusable UI elements.",
-      "keywords": [
-        "functional components",
-        "React basics",
-        "props in React",
-        "React UI"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of the useEffect hook?",
-      "text": "What is the purpose of the useEffect hook?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-useeffect-hook",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To manage side effects like fetching data or updating the DOM"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        { "@type": "Answer", "text": "To handle user input in forms" },
-        { "@type": "Answer", "text": "To update the component state" },
-        { "@type": "Answer", "text": "To render a list of items in React" }
-      ],
-      "description": "Learn about the useEffect hook in React and how it manages side effects such as API calls and DOM updates.",
-      "keywords": [
-        "useEffect",
-        "React hooks",
-        "side effects",
-        "API calls in React"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of React props?",
-      "text": "What is the purpose of React props?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-props",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To pass data between components"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        { "@type": "Answer", "text": "To manage component state" },
-        { "@type": "Answer", "text": "To define styles for components" },
-        { "@type": "Answer", "text": "To create new components" }
-      ],
-      "description": "Discover how React props allow data sharing between components and enable dynamic UI updates.",
-      "keywords": [
-        "React props",
-        "data sharing",
-        "props in React",
-        "React components"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What does React useState hook do?",
-      "text": "What does React useState hook do?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-react-use-state-hook-do",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Declares state in functional components"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        { "@type": "Answer", "text": "Manages the lifecycle of a component" },
-        { "@type": "Answer", "text": "Fetches data from an API" },
-        { "@type": "Answer", "text": "Handles user interactions" }
-      ],
-      "description": "Learn about the useState hook in React, which allows you to declare and manage state in functional components.",
-      "keywords": [
-        "useState",
-        "React state",
-        "functional components",
-        "React hooks"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is a React component?",
-      "text": "What is a React component?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-a-react-component",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A reusable piece of UI"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "A function to fetch data"
-        },
-        {
-          "@type": "Answer",
-          "text": "A tool for debugging"
-        },
-        {
-          "@type": "Answer",
-          "text": "A method to directly manipulate the DOM"
-        }
-      ],
-      "description": "A React component is a reusable and self-contained unit of a UI, designed to be managed and rendered by React. It helps to build complex UIs from simple, reusable building blocks.",
-      "keywords": [
-        "React components",
-        "UI components",
-        "React basics",
-        "Reusable UI"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is React Router used for?",
-      "text": "What is React Router used for?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-router-used-for",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To manage navigation and routing in React applications"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To style React components"
-        },
-        {
-          "@type": "Answer",
-          "text": "To handle user input in forms"
-        },
-        {
-          "@type": "Answer",
-          "text": "To optimize performance of React apps"
-        }
-      ],
-      "description": "React Router is a standard library for routing in React applications. It allows navigation between different views or pages, providing a seamless user experience.",
-      "keywords": [
-        "React Router",
-        "navigation in React",
-        "routing in React",
-        "React quiz"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What does the React useRef hook do?",
-      "text": "What does the React useRef hook do?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-react-use-ref-hook-do",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Accesses or stores a mutable DOM reference"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Updates the component state"
-        },
-        {
-          "@type": "Answer",
-          "text": "Manages side effects"
-        },
-        {
-          "@type": "Answer",
-          "text": "Defines default props for components"
-        }
-      ],
-      "description": "The `useRef` hook is used to persist values across renders without causing re-renders. It is commonly used to directly access a DOM element or keep a mutable value.",
-      "keywords": ["useRef", "DOM references", "React hooks", "React DOM"]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the React Context API used for?",
-      "text": "What is the React Context API used for?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-react-context-api-used-for",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To share state or data across components without props drilling"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To manage complex animations"
-        },
-        {
-          "@type": "Answer",
-          "text": "To perform API calls"
-        },
-        {
-          "@type": "Answer",
-          "text": "To optimize the performance of React apps"
-        }
-      ],
-      "description": "The React Context API allows you to share state across different components without having to pass props down manually through each level of the component tree.",
-      "keywords": ["Context API", "React state", "global state", "React hooks"]
-    },
-    {
-      "@type": "Question",
-      "name": "What are React fragments?",
-      "text": "What are React fragments?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-react-fragments",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lightweight containers for grouping multiple elements"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Tools for debugging React code"
-        },
-        {
-          "@type": "Answer",
-          "text": "Built-in hooks for managing state"
-        },
-        {
-          "@type": "Answer",
-          "text": "Components that handle user authentication"
-        }
-      ],
-      "description": "React Fragments let you group multiple elements without adding extra nodes to the DOM. It is used when you want to return multiple elements from a component without wrapping them in an unnecessary parent element.",
-      "keywords": [
-        "React fragments",
-        "grouping elements",
-        "React components",
-        "JSX"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the key prop in React used for?",
-      "text": "What is the key prop in React used for?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-key-prop-in-react-used-for",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To uniquely identify elements in a list"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To style components"
-        },
-        {
-          "@type": "Answer",
-          "text": "To bind event listeners"
-        },
-        {
-          "@type": "Answer",
-          "text": "To pass data between components"
-        }
-      ],
-      "description": "The `key` prop helps React identify which items have changed, been added, or removed. This allows React to optimize rendering lists of elements.",
-      "keywords": [
-        "React key",
-        "list rendering",
-        "React components",
-        "React performance"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What does the useReducer hook do?",
-      "text": "What does the useReducer hook do?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-use-reducer-hook-do",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Manages complex state logic in functional components"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Updates the DOM directly"
-        },
-        {
-          "@type": "Answer",
-          "text": "Handles form submissions"
-        },
-        {
-          "@type": "Answer",
-          "text": "Performs API requests"
-        }
-      ],
-      "description": "The `useReducer` hook is used to manage state in more complex scenarios, providing a more structured way to handle state logic compared to `useState`.",
-      "keywords": [
-        "useReducer",
-        "state management",
-        "React hooks",
-        "functional components"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is React.memo used for?",
-      "text": "What is React.memo used for?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-memo-used-for",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To prevent unnecessary re-renders of functional components"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To fetch data from an API"
-        },
-        {
-          "@type": "Answer",
-          "text": "To memoize values returned by hooks"
-        },
-        {
-          "@type": "Answer",
-          "text": "To define default props"
-        }
-      ],
-      "description": "React.memo is a higher-order component that wraps a functional component to optimize its performance by memoizing its result and avoiding unnecessary re-renders when props haven't changed.",
-      "keywords": [
-        "React.memo",
-        "performance optimization",
-        "React re-renders",
-        "React hooks"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is React.memo used for?",
-      "text": "What is React.memo used for?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-memo-used-for",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To prevent unnecessary re-renders of functional components"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To fetch data from an API"
-        },
-        {
-          "@type": "Answer",
-          "text": "To memoize values returned by hooks"
-        },
-        {
-          "@type": "Answer",
-          "text": "To define default props"
-        }
-      ],
-      "description": "React.memo is a higher-order component used to optimize performance by preventing unnecessary re-renders of functional components.",
-      "keywords": [
-        "React.memo",
-        "performance optimization",
-        "React re-renders",
-        "React hooks"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is prop drilling in React?",
-      "text": "What is prop drilling in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-prop-drilling-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Passing props down multiple levels of components"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "A debugging technique"
-        },
-        {
-          "@type": "Answer",
-          "text": "A method to fetch data from an API"
-        },
-        {
-          "@type": "Answer",
-          "text": "A feature for optimizing performance"
-        }
-      ],
-      "description": "Prop drilling refers to the process of passing props from a parent component to child components across multiple levels of the component tree.",
-      "keywords": [
-        "prop drilling",
-        "React components",
-        "state management",
-        "React props"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of React state?",
-      "text": "What is the purpose of React state?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-state",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To manage dynamic data within a component"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To define reusable styles"
-        },
-        {
-          "@type": "Answer",
-          "text": "To access DOM elements"
-        },
-        {
-          "@type": "Answer",
-          "text": "To create new components"
-        }
-      ],
-      "description": "React state is used to manage dynamic data that changes over time within a component, allowing components to react to user input or other changes.",
-      "keywords": [
-        "React state",
-        "state management",
-        "dynamic data",
-        "React components"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What does React.StrictMode do?",
-      "text": "What does React.StrictMode do?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-react-strict-mode-do",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Checks for potential problems in React applications"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Fetches data from APIs"
-        },
-        {
-          "@type": "Answer",
-          "text": "Optimizes performance of React apps"
-        },
-        {
-          "@type": "Answer",
-          "text": "Styles components globally"
-        }
-      ],
-      "description": "React.StrictMode is a development tool used to identify potential problems in an application by intentionally running additional checks in development mode.",
-      "keywords": [
-        "React.StrictMode",
-        "React debugging",
-        "React issues",
-        "development tools"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What are React portals used for?",
-      "text": "What are React portals used for?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-react-portals-used-for",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Rendering children outside the DOM hierarchy of their parent"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Managing API calls"
-        },
-        {
-          "@type": "Answer",
-          "text": "Optimizing state updates"
-        },
-        {
-          "@type": "Answer",
-          "text": "Creating reusable styles"
-        }
-      ],
-      "description": "React portals are used to render child components outside their parent component’s DOM hierarchy, useful for scenarios like modals or tooltips.",
-      "keywords": [
-        "React portals",
-        "React DOM",
-        "rendering children",
-        "React components"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What does the useContext hook do?",
-      "text": "What does the useContext hook do?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-use-context-hook-do",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Fetches global state using Context"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Handles API requests"
-        },
-        {
-          "@type": "Answer",
-          "text": "Optimizes performance of React apps"
-        },
-        {
-          "@type": "Answer",
-          "text": "Handles user events"
-        }
-      ],
-      "description": "The useContext hook is used to access the value of a Context directly in functional components, providing a way to share global state without prop drilling.",
-      "keywords": ["useContext", "React state", "global state", "React hooks"]
-    },
-    {
-      "@type": "Question",
-      "name": "What is a React ref?",
-      "text": "What is a React ref?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-ref",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A way to access and manipulate a DOM element directly"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "A built-in method to create new components"
-        },
-        {
-          "@type": "Answer",
-          "text": "A hook to manage state"
-        },
-        {
-          "@type": "Answer",
-          "text": "A method for routing in React"
-        }
-      ],
-      "description": "React refs provide a way to access and interact with DOM elements or class components directly, bypassing React’s state and rendering process.",
-      "keywords": ["React refs", "DOM manipulation", "React hooks", "React"]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of React.lazy?",
-      "text": "What is the purpose of React.lazy?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-lazy",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To load components lazily for better performance"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To improve app styling"
-        },
-        {
-          "@type": "Answer",
-          "text": "To declare asynchronous functions"
-        },
-        {
-          "@type": "Answer",
-          "text": "To manage API requests"
-        }
-      ],
-      "description": "React.lazy is used to dynamically import components and render them only when needed, helping to reduce the initial load time and improve performance.",
-      "keywords": ["React.lazy", "lazy loading", "React performance", "React"]
-    },
-    {
-      "@type": "Question",
-      "name": "What does the Suspense component do in React?",
-      "text": "What does the Suspense component do in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-suspense-component-do-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Displays a fallback UI while components are loading"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Handles event listeners"
-        },
-        {
-          "@type": "Answer",
-          "text": "Manages component state"
-        },
-        {
-          "@type": "Answer",
-          "text": "Optimizes component rendering"
-        }
-      ],
-      "description": "The Suspense component in React is used for handling lazy loading and displaying a fallback UI while waiting for a component to load.",
-      "keywords": ["React Suspense", "fallback UI", "lazy loading", "React"]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between state and props?",
-      "text": "What is the difference between state and props?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-difference-between-state-and-props-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "State manages local data, while props are passed from parent to child"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "State is read-only, while props can be modified"
-        },
-        {
-          "@type": "Answer",
-          "text": "State is used to pass data, while props manage local data"
-        },
-        {
-          "@type": "Answer",
-          "text": "State updates the DOM directly, while props don’t"
-        }
-      ],
-      "description": "State and props are both used to manage data in React, but state is used for managing local data within a component, whereas props are used for passing data from parent to child components.",
-      "keywords": [
-        "React state",
-        "React props",
-        "React data management",
-        "React"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is React.StrictMode mainly used for?",
-      "text": "What is React.StrictMode mainly used for?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-strict-mode-mainly-used-for",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Detecting potential issues in an app"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Styling components"
-        },
-        {
-          "@type": "Answer",
-          "text": "Handling forms"
-        },
-        {
-          "@type": "Answer",
-          "text": "Rendering large lists efficiently"
-        }
-      ],
-      "description": "React.StrictMode is used to detect potential issues in an app by providing additional checks during development, ensuring best practices and identifying unsafe lifecycles.",
-      "keywords": [
-        "React.StrictMode",
-        "React debugging",
-        "React issues",
-        "React"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of keys in React lists?",
-      "text": "What is the purpose of keys in React lists?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-keys-in-react-lists",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To enhance performance and track changes in lists"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To style individual items"
-        },
-        {
-          "@type": "Answer",
-          "text": "To trigger re-renders"
-        },
-        {
-          "@type": "Answer",
-          "text": "To bind event listeners"
-        }
-      ],
-      "description": "In React, keys are used in lists to help the virtual DOM identify which items have changed, improving performance and enabling efficient re-rendering.",
-      "keywords": ["React keys", "React lists", "React performance", "React"]
-    },
-    {
-      "@type": "Question",
-      "name": "What is React Fiber?",
-      "text": "What is React Fiber?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-react-fiber",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "React's reconciliation algorithm"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "A new browser API"
-        },
-        {
-          "@type": "Answer",
-          "text": "A tool for managing state"
-        },
-        {
-          "@type": "Answer",
-          "text": "A debugging tool for developers"
-        }
-      ],
-      "description": "React Fiber is a complete rewrite of React's core algorithm for rendering and reconciliation, improving performance, and enabling features like time-slicing.",
-      "keywords": [
-        "React Fiber",
-        "React reconciliation",
-        "React performance",
-        "React"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What does lifting state up mean in React?",
-      "text": "What does lifting state up mean in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-lifting-state-up-mean-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Moving state to a parent component to share with children"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Storing state in the global context"
-        },
-        {
-          "@type": "Answer",
-          "text": "Using useState for local state management"
-        },
-        {
-          "@type": "Answer",
-          "text": "Managing side effects with hooks"
-        }
-      ],
-      "description": "Lifting state up in React means moving the state from child components to their parent component, enabling shared state management and communication between siblings.",
-      "keywords": [
-        "React lifting state",
-        "React state sharing",
-        "React",
-        "React components"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What does the render method do in class components?",
-      "text": "What does the render method do in class components?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-render-method-do-in-class-components",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Returns the React elements to display"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Defines the initial state of the component"
-        },
-        {
-          "@type": "Answer",
-          "text": "Fetches data from APIs"
-        },
-        {
-          "@type": "Answer",
-          "text": "Handles side effects like fetching data"
-        }
-      ],
-      "description": "In React class components, the render method is responsible for returning the React elements that will be displayed on the screen.",
-      "keywords": [
-        "React class components",
-        "React render",
-        "React elements",
-        "React"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the default behavior of the React onClick event?",
-      "text": "What is the default behavior of the React onClick event?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-default-behavior-of-the-react-on-click-event",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Triggers a callback function when clicked"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Executes asynchronously"
-        },
-        {
-          "@type": "Answer",
-          "text": "Handles user inputs in forms"
-        },
-        {
-          "@type": "Answer",
-          "text": "Automatically updates the component state"
-        }
-      ],
-      "description": "The default behavior of the React onClick event is to trigger a callback function when the element is clicked, which can be used for handling user interactions.",
-      "keywords": ["React onClick", "React events", "React callbacks", "React"]
-    },
-    {
-      "@type": "Question",
-      "name": "What are controlled components in React?",
-      "text": "What are controlled components in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-controlled-components-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Components whose state is controlled by React"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Components managed entirely by the DOM"
-        },
-        {
-          "@type": "Answer",
-          "text": "Components that don’t rely on any hooks"
-        },
-        {
-          "@type": "Answer",
-          "text": "Components that directly update the DOM"
-        }
-      ],
-      "keywords": [
-        "React controlled components",
-        "React forms",
-        "React state management"
-      ],
-      "description": "In React, controlled components are those whose state is managed by React, usually through props. This is the opposite of uncontrolled components, where the DOM manages the state. Controlled components make it easier to handle and validate user inputs in forms and other UI elements."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the use of the defaultProps property in React?",
-      "text": "What is the use of the defaultProps property in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-use-of-the-default-props-property-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To set default values for props"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To manage local state in a component"
-        },
-        {
-          "@type": "Answer",
-          "text": "To handle errors during rendering"
-        },
-        {
-          "@type": "Answer",
-          "text": "To optimize performance"
-        }
-      ],
-      "keywords": [
-        "React defaultProps",
-        "React props",
-        "Default props in React"
-      ],
-      "description": "In React, defaultProps is used to assign default values to props when no value is provided by the parent component. This helps avoid potential errors and ensures the component has fallback values when certain props are missing."
-    },
-    {
-      "@type": "Question",
-      "name": "What is a higher-order component (HOC) in React?",
-      "text": "What is a higher-order component (HOC) in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-a-higher-order-component-hoc-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A function that takes a component and returns a new component"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "A component used for animations"
-        },
-        {
-          "@type": "Answer",
-          "text": "A component that renders directly to the DOM"
-        },
-        {
-          "@type": "Answer",
-          "text": "A library for managing forms in React"
-        }
-      ],
-      "keywords": [
-        "React higher-order components",
-        "React HOC",
-        "Reusable components in React"
-      ],
-      "description": "A higher-order component (HOC) is a function in React that takes a component and returns a new component with additional functionality. This is useful for code reuse, as it allows you to add features like authentication, theming, or data fetching to existing components."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of the componentWillUnmount lifecycle method?",
-      "text": "What is the purpose of the componentWillUnmount lifecycle method?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-component-will-unmount-lifecycle-method",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To clean up resources like timers or subscriptions"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To handle user input in forms"
-        },
-        {
-          "@type": "Answer",
-          "text": "To fetch data when the component is about to unmount"
-        },
-        {
-          "@type": "Answer",
-          "text": "To update the state of the component"
-        }
-      ],
-      "keywords": [
-        "React lifecycle methods",
-        "React componentWillUnmount",
-        "Clean up in React"
-      ],
-      "description": "The componentWillUnmount lifecycle method is called just before a component is removed from the DOM. It is typically used to clean up resources like clearing timers, canceling network requests, or unsubscribing from events to prevent memory leaks."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of the constructor in class components?",
-      "text": "What is the purpose of the constructor in class components?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-constructor-in-class-components",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To define initial state and bind methods"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To handle component side effects"
-        },
-        {
-          "@type": "Answer",
-          "text": "To fetch data from APIs"
-        },
-        {
-          "@type": "Answer",
-          "text": "To create reusable styles"
-        }
-      ],
-      "keywords": [
-        "React constructor",
-        "Class components in React",
-        "State initialization"
-      ],
-      "description": "In class components, the constructor method is used to initialize state and bind methods to the component. This ensures that the component has the correct state when it is first created and that methods have the correct context when called."
-    },
-    {
-      "@type": "Question",
-      "name": "What does the getDerivedStateFromProps lifecycle method do?",
-      "text": "What does the getDerivedStateFromProps lifecycle method do?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-getderivedstatefromprops-lifecycle-method-do",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Updates state based on changes in props"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Handles state transitions asynchronously"
-        },
-        {
-          "@type": "Answer",
-          "text": "Fetches data from APIs"
-        },
-        {
-          "@type": "Answer",
-          "text": "Binds methods to the component"
-        }
-      ],
-      "keywords": [
-        "React getDerivedStateFromProps",
-        "React props and state",
-        "React lifecycle methods"
-      ],
-      "description": "The getDerivedStateFromProps lifecycle method is called when a component’s props change. It allows you to update the state based on new props, making it useful for syncing state with props in specific scenarios."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the React Developer Tools extension used for?",
-      "text": "What is the React Developer Tools extension used for?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-react-developer-tools-extension-used-for",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Debugging and inspecting React components"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Testing React apps"
-        },
-        {
-          "@type": "Answer",
-          "text": "Styling components in real-time"
-        },
-        {
-          "@type": "Answer",
-          "text": "Optimizing React app performance"
-        }
-      ],
-      "keywords": [
-        "React Developer Tools",
-        "Debugging React",
-        "Inspecting React components"
-      ],
-      "description": "The React Developer Tools extension is a browser tool used to inspect and debug React applications. It provides a visual interface for viewing the component tree, monitoring state and props, and analyzing performance."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of a fallback UI in React?",
-      "text": "What is the purpose of a fallback UI in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-a-fallback-ui-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To display UI during loading or errors"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To handle user input errors"
-        },
-        {
-          "@type": "Answer",
-          "text": "To render a default page when APIs fail"
-        },
-        {
-          "@type": "Answer",
-          "text": "To apply default props to components"
-        }
-      ],
-      "keywords": [
-        "React fallback UI",
-        "Error boundaries in React",
-        "React error handling"
-      ],
-      "description": "A fallback UI in React is a temporary UI that is shown while the app is loading or when an error occurs. It helps improve user experience by ensuring that users are not left with a blank screen or a broken interface."
-    },
-    {
-      "@type": "Question",
-      "name": "What does ReactDOM.render do?",
-      "text": "What does ReactDOM.render do?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-reactdom-render-do",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Renders a React element into the DOM"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Manages local state for a component"
-        },
-        {
-          "@type": "Answer",
-          "text": "Handles lifecycle methods"
-        },
-        {
-          "@type": "Answer",
-          "text": "Performs server-side rendering"
-        }
-      ],
-      "description": "ReactDOM.render is a method in React that is responsible for rendering a React element into the DOM.",
-      "keywords": [
-        "ReactDOM.render",
-        "Rendering React elements",
-        "React DOM manipulation"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of React's reconciliation process?",
-      "text": "What is the purpose of React's reconciliation process?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-react-s-reconciliation-process",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To update and render only the necessary changes to the DOM"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To compare versions of React apps"
-        },
-        {
-          "@type": "Answer",
-          "text": "To fetch data more efficiently"
-        },
-        {
-          "@type": "Answer",
-          "text": "To manage user inputs in forms"
-        }
-      ],
-      "description": "The reconciliation process in React helps ensure that the DOM is efficiently updated by comparing the current and previous virtual DOM to apply only the necessary changes.",
-      "keywords": [
-        "React reconciliation",
-        "React DOM updates",
-        "React performance"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the main purpose of the useCallback hook?",
-      "text": "What is the main purpose of the useCallback hook?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-main-purpose-of-the-usecallback-hook",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To memoize functions and avoid unnecessary re-creations"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To manage state across different components"
-        },
-        {
-          "@type": "Answer",
-          "text": "To handle side effects in functional components"
-        },
-        {
-          "@type": "Answer",
-          "text": "To trigger re-renders when props change"
-        }
-      ],
-      "description": "The useCallback hook in React is used to memoize functions, ensuring that they are not recreated on every render, thus improving performance in certain scenarios.",
-      "keywords": [
-        "React useCallback",
-        "React hooks",
-        "React performance optimization"
-      ]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of the useContext hook?",
-      "text": "What is the purpose of the useContext hook?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-use-context-hook",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To allow state sharing between components without passing props"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To fetch data from an API"
-        },
-        {
-          "@type": "Answer",
-          "text": "To optimize performance by caching values"
-        },
-        {
-          "@type": "Answer",
-          "text": "To handle component lifecycle methods"
-        }
-      ],
-      "description": "The useContext hook in React allows components to share state without the need for passing props down through multiple levels of the component tree.",
-      "keywords": ["React useContext", "React state sharing", "React hooks"]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the significance of the key prop in React lists?",
-      "text": "What is the significance of the key prop in React lists?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-significance-of-the-key-prop-in-react-lists",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It helps React identify which items have changed, added, or removed"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "It determines the component's styling"
-        },
-        {
-          "@type": "Answer",
-          "text": "It defines the component's default props"
-        },
-        {
-          "@type": "Answer",
-          "text": "It is used to store component data persistently"
-        }
-      ],
-      "description": "The key prop in React is essential for optimizing the rendering of lists by helping React identify which items have changed, been added, or removed during the re-rendering process.",
-      "keywords": ["React key prop", "React lists", "React performance"]
-    },
-    {
-      "@type": "Question",
-      "name": "What is ReactDOMServer used for?",
-      "text": "What is ReactDOMServer used for?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-reactdomserver-used-for",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To perform server-side rendering of React components"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To interact with the DOM"
-        },
-        {
-          "@type": "Answer",
-          "text": "To handle React state on the server"
-        },
-        {
-          "@type": "Answer",
-          "text": "To bind event listeners on the client"
-        }
-      ],
-      "description": "ReactDOMServer is used for server-side rendering (SSR) in React, enabling the rendering of React components on the server side before sending them to the client.",
-      "keywords": ["ReactDOMServer", "server-side rendering", "React SSR"]
-    },
-    {
-      "@type": "Question",
-      "name": "What does the useReducer hook do in React?",
-      "text": "What does the useReducer hook do in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-use-reducer-hook-do-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It is used to handle large state updates in a performant way"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "It is used to fetch data from APIs"
-        },
-        {
-          "@type": "Answer",
-          "text": "It is used to store immutable data"
-        },
-        {
-          "@type": "Answer",
-          "text": "It helps in component styling and animations"
-        }
-      ],
-      "description": "The useReducer hook is used in React for handling large or complex state updates, offering an alternative to useState for state management.",
-      "keywords": ["React useReducer", "React hooks", "React state management"]
-    },
-    {
-      "@type": "Question",
-      "name": "How do you pass data from a child component to a parent component in React?",
-      "text": "How do you pass data from a child component to a parent component in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/how-do-you-pass-data-from-a-child-component-to-a-parent-component-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "By passing a callback function as a prop from parent to child"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "Using the `useState` hook"
-        },
-        {
-          "@type": "Answer",
-          "text": "By using React Context"
-        },
-        {
-          "@type": "Answer",
-          "text": "By rendering JSX inside the parent component"
-        }
-      ],
-      "description": "In React, data is passed from a child component to a parent component using a callback function passed down as a prop from the parent.",
-      "keywords": ["React child to parent", "React props", "React data flow"]
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between React’s useEffect and useLayoutEffect hooks?",
-      "text": "What is the difference between React’s useEffect and useLayoutEffect hooks?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-difference-between-reacts-useeffect-and-uselayouteffect-hooks",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "useLayoutEffect runs synchronously after all DOM mutations"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "useEffect runs synchronously, while useLayoutEffect runs asynchronously"
-        },
-        {
-          "@type": "Answer",
-          "text": "useEffect handles form inputs, while useLayoutEffect handles rendering"
-        },
-        {
-          "@type": "Answer",
-          "text": "useLayoutEffect is used only for server-side rendering"
-        }
-      ],
-      "keywords": ["React useEffect", "React useLayoutEffect", "React hooks"],
-      "description": "Learn about the difference between React's useEffect and useLayoutEffect hooks, their usage and effects on DOM rendering."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the role of the componentDidMount lifecycle method in React?",
-      "text": "What is the role of the componentDidMount lifecycle method in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-role-of-the-componentdidmount-lifecycle-method-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To fetch data or perform operations after the component mounts"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To update the component state"
-        },
-        {
-          "@type": "Answer",
-          "text": "To manage side effects when props change"
-        },
-        {
-          "@type": "Answer",
-          "text": "To handle event listeners and remove them on unmount"
-        }
-      ],
-      "keywords": [
-        "React componentDidMount",
-        "React lifecycle methods",
-        "React components"
-      ],
-      "description": "Understand the purpose of the componentDidMount lifecycle method in React, which is used for operations after a component mounts."
-    },
-    {
-      "@type": "Question",
-      "name": "What does the React context API allow you to do?",
-      "text": "What does the React context API allow you to do?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-react-context-api-allow-you-to-do",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It allows you to pass data across the app without using props"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "It allows you to store state in a global store"
-        },
-        {
-          "@type": "Answer",
-          "text": "It provides a built-in state management system"
-        },
-        {
-          "@type": "Answer",
-          "text": "It enables direct DOM manipulation"
-        }
-      ],
-      "keywords": ["React Context API", "React state sharing", "React props"],
-      "description": "Explore how the React Context API simplifies passing data across components, avoiding the need for prop drilling."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of the useLayoutEffect hook?",
-      "text": "What is the purpose of the useLayoutEffect hook?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-uselayouteffect-hook",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To read layout and paint information from the DOM"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To handle asynchronous side effects in functional components"
-        },
-        {
-          "@type": "Answer",
-          "text": "To perform DOM mutations and update the UI immediately"
-        },
-        {
-          "@type": "Answer",
-          "text": "To manage error boundaries in React components"
-        }
-      ],
-      "keywords": [
-        "useLayoutEffect hook",
-        "React hooks",
-        "DOM layout",
-        "React performance"
-      ],
-      "description": "Learn about the useLayoutEffect hook, used for reading layout and paint information from the DOM before rendering."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between state and props in React?",
-      "text": "What is the difference between state and props in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-difference-between-state-and-props-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "State is internal to a component, while props are passed from a parent"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "State is read-only, while props can be modified"
-        },
-        {
-          "@type": "Answer",
-          "text": "State is used to fetch data, while props are used to manage events"
-        },
-        {
-          "@type": "Answer",
-          "text": "State and props are interchangeable"
-        }
-      ],
-      "keywords": [
-        "React state",
-        "React props",
-        "state vs props",
-        "React concepts"
-      ],
-      "description": "Understand the key differences between state and props in React, including their roles and how they are used in components."
-    },
-    {
-      "@type": "Question",
-      "name": "What is a controlled component in React?",
-      "text": "What is a controlled component in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-are-controlled-components-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A component whose form elements are controlled by React state"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "A component that controls the state of other components"
-        },
-        {
-          "@type": "Answer",
-          "text": "A component that manages its own state"
-        },
-        {
-          "@type": "Answer",
-          "text": "A component that directly modifies the DOM"
-        }
-      ],
-      "keywords": [
-        "React controlled components",
-        "form handling in React",
-        "React forms"
-      ],
-      "description": "Learn about controlled components in React, where form elements are bound to the component's state."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the significance of the React.memo function?",
-      "text": "What is the significance of the React.memo function?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-significance-of-the-react-memo-function",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It memoizes a component to prevent unnecessary re-renders"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "It allows components to fetch data efficiently"
-        },
-        {
-          "@type": "Answer",
-          "text": "It is used to manage state globally"
-        },
-        {
-          "@type": "Answer",
-          "text": "It binds lifecycle methods to functional components"
-        }
-      ],
-      "keywords": [
-        "React.memo",
-        "optimize rendering",
-        "React performance tips"
-      ],
-      "description": "Understand the importance of React.memo, which optimizes component rendering by memoizing functional components."
-    },
-    {
-      "@type": "Question",
-      "name": "What does the StrictMode component do in React?",
-      "text": "What does the StrictMode component do in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-does-the-strictmode-component-do-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "It highlights potential issues in an application during development"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "It disables deprecated lifecycle methods"
-        },
-        {
-          "@type": "Answer",
-          "text": "It ensures the app works in strict type-checking mode"
-        },
-        {
-          "@type": "Answer",
-          "text": "It provides additional performance optimizations"
-        }
-      ],
-      "keywords": [
-        "React StrictMode",
-        "React debugging tools",
-        "React development"
-      ],
-      "description": "Learn about React's StrictMode, a tool for identifying potential issues and enforcing best practices during development."
-    },
-    {
-      "@type": "Question",
-      "name": "How can you prevent a component from re-rendering unnecessarily?",
-      "text": "How can you prevent a component from re-rendering unnecessarily?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/how-can-you-prevent-a-component-from-re-rendering-unnecessarily",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "By using React.memo or shouldComponentUpdate"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "By using the useEffect hook"
-        },
-        {
-          "@type": "Answer",
-          "text": "By wrapping it with a Fragment"
-        },
-        {
-          "@type": "Answer",
-          "text": "By using the Context API"
-        }
-      ],
-      "keywords": [
-        "prevent re-rendering",
-        "React.memo",
-        "shouldComponentUpdate",
-        "React optimization"
-      ],
-      "description": "To optimize performance in React, you can prevent unnecessary re-renders using techniques like React.memo or shouldComponentUpdate."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of the Fragment component in React?",
-      "text": "What is the purpose of the Fragment component in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-fragment-component-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To group multiple elements without adding extra nodes to the DOM"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To apply styling to multiple components"
-        },
-        {
-          "@type": "Answer",
-          "text": "To handle asynchronous rendering"
-        },
-        {
-          "@type": "Answer",
-          "text": "To manage component states and props"
-        }
-      ],
-      "keywords": [
-        "React Fragment",
-        "grouping elements",
-        "React DOM optimization"
-      ],
-      "description": "The Fragment component in React allows you to group multiple elements together without adding extra nodes to the DOM, improving performance and keeping the markup clean."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the role of React's default props?",
-      "text": "What is the role of React's default props?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-role-of-reacts-default-props",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To provide default values for props if no value is passed"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To validate the props passed to a component"
-        },
-        {
-          "@type": "Answer",
-          "text": "To optimize performance during rendering"
-        },
-        {
-          "@type": "Answer",
-          "text": "To replace the need for PropTypes"
-        }
-      ],
-      "keywords": [
-        "React default props",
-        "fallback props in React",
-        "React component defaults"
-      ],
-      "description": "React's default props provide fallback values for a component's props when no value is passed, ensuring the component works even when props are missing."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of the Error Boundary in React?",
-      "text": "What is the purpose of the Error Boundary in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-the-error-boundary-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To catch and handle errors during rendering or in lifecycle methods"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To manage state and props across components"
-        },
-        {
-          "@type": "Answer",
-          "text": "To optimize rendering performance"
-        },
-        {
-          "@type": "Answer",
-          "text": "To fetch and display fallback data"
-        }
-      ],
-      "keywords": [
-        "React Error Boundaries",
-        "error handling",
-        "React fallback UI"
-      ],
-      "description": "Error Boundaries in React catch errors during rendering or in lifecycle methods, allowing you to display fallback UI and keep your app running smoothly."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the purpose of React's useRef hook?",
-      "text": "What is the purpose of React's useRef hook?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-purpose-of-reacts-use-ref-hook",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "To create a reference to a DOM element or persist a mutable value"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "To manage local state within a component"
-        },
-        {
-          "@type": "Answer",
-          "text": "To trigger re-renders when the value changes"
-        },
-        {
-          "@type": "Answer",
-          "text": "To validate props passed to child components"
-        }
-      ],
-      "keywords": ["React useRef", "DOM references", "React mutable values"],
-      "description": "The useRef hook in React allows you to persist mutable values and create references to DOM elements, useful for accessing and manipulating elements directly."
-    },
-    {
-      "@type": "Question",
-      "name": "What is the virtual DOM in React?",
-      "text": "What is the virtual DOM in React?",
-      "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-virtual-dom-in-react",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A copy of the browser DOM that React uses to track changes"
-      },
-      "answerCount": 4,
-      "suggestedAnswer": [
-        {
-          "@type": "Answer",
-          "text": "An abstraction layer for managing animations"
-        },
-        {
-          "@type": "Answer",
-          "text": "A way to manage global state in React"
-        },
-        {
-          "@type": "Answer",
-          "text": "A separate DOM that is stored in memory for performance"
-        }
-      ],
-      "keywords": [
-        "React virtual DOM",
-        "DOM optimization",
-        "React performance"
-      ],
-      "description": "The virtual DOM in React is a lightweight copy of the actual DOM used to track changes and update only the necessary parts of the UI, improving performance."
-    }
-  ]
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "200"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock",
+    "url": "https://projectschool.dev/pricing",
+    "validFrom": "2024-01-01"
+  }
 }
