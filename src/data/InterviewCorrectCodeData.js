@@ -1,9 +1,9 @@
 // ReactInterviewCorrectCodeData.js
 const ReactInterviewCorrectCodeData = [
   {
-    slug: "question-1",
-    question:
-      "Which code snippet correctly defines a React functional component?",
+    slug: "which-code-snippet-correctly-defines-a-react-functional-component",
+question: "Which code snippet correctly defines a React functional component?",
+
     options: [
       {
         code: `
@@ -36,9 +36,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-2",
-    question:
-      "Which code snippet correctly uses `useState` to define a state variable in a functional component?",
+    slug: "which-code-snippet-correctly-uses-usestate-to-define-a-state-variable-in-a-functional-component",
+question: "Which code snippet correctly uses `useState` to define a state variable in a functional component?",
+
     options: [
       {
         code: `
@@ -66,9 +66,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-3",
-    question:
-      "Which code snippet correctly passes a prop from a parent to a child component in React?",
+    slug: "which-code-snippet-correctly-passes-a-prop-from-a-parent-to-a-child-component-in-react",
+question: "Which code snippet correctly passes a prop from a parent to a child component in React?",
+
     options: [
       {
         code: `
@@ -96,9 +96,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-4",
-    question:
-      "Which code snippet correctly uses the `useEffect` hook in a functional component?",
+    slug: "which-code-snippet-correctly-uses-the-useeffect-hook-in-a-functional-component",
+question: "Which code snippet correctly uses the `useEffect` hook in a functional component?",
+
     options: [
       {
         code: `
@@ -131,8 +131,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-5",
-    question: "Which code snippet correctly handles an event in React?",
+    slug: "which-code-snippet-correctly-handles-an-event-in-react",
+question: "Which code snippet correctly handles an event in React?",
+
     options: [
       {
         code: `
@@ -157,9 +158,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-6",
-    question:
-      "Which code snippet correctly updates the state of a React functional component based on the previous state?",
+    slug: "which-code-snippet-correctly-updates-the-state-of-a-react-functional-component-based-on-the-previous-state",
+question: "Which code snippet correctly updates the state of a React functional component based on the previous state?",
+
     options: [
       {
         code: `
@@ -184,9 +185,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-7",
-    question:
-      "Which code snippet correctly defines a memoized component using `React.memo`?",
+    slug: "which-code-snippet-correctly-defines-a-memoized-component-using-react-memo",
+question: "Which code snippet correctly defines a memoized component using `React.memo`?",
+
     options: [
       {
         code: `
@@ -211,9 +212,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-8",
-    question:
-      "Which code snippet correctly handles a form submission in React?",
+    slug: "which-code-snippet-correctly-handles-a-form-submission-in-react",
+question: "Which code snippet correctly handles a form submission in React?",
+
     options: [
       {
         code: `
@@ -249,9 +250,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-9",
-    question:
-      "Which code snippet correctly uses `useReducer` to manage state in React?",
+    slug: "which-code-snippet-correctly-uses-usereducer-to-manage-state-in-react",
+question: "Which code snippet correctly uses `useReducer` to manage state in React?",
+
     options: [
       {
         code: `
@@ -276,8 +277,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-10",
-    question: "Which code snippet correctly implements a custom hook in React?",
+    slug: "which-code-snippet-correctly-implements-a-custom-hook-in-react",
+question: "Which code snippet correctly implements a custom hook in React?",
+
     options: [
       {
         code: `
@@ -312,9 +314,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-11",
-    question:
-      "Which code snippet correctly implements a context provider in React?",
+    slug: "which-code-snippet-correctly-implements-a-context-provider-in-react",
+    question: "Which code snippet correctly implements a context provider in React?",
+    
     options: [
       {
         code: `
@@ -357,9 +359,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-12",
-    question:
-      "Which code snippet correctly implements React Router to navigate between two routes?",
+    slug: "which-code-snippet-correctly-implements-react-router-to-navigate-between-two-routes",
+question: "Which code snippet correctly implements React Router to navigate between two routes?",
+
     options: [
       {
         code: `
@@ -396,9 +398,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-13",
-    question:
-      "Which code snippet correctly uses `React.lazy` to dynamically import a component?",
+    slug: "which-code-snippet-correctly-uses-react-lazy-to-dynamically-import-a-component",
+question: "Which code snippet correctly uses `React.lazy` to dynamically import a component?",
+
     options: [
       {
         code: `
@@ -425,9 +427,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-14",
-    question:
-      "Which code snippet correctly prevents a component from re-rendering when the props don't change?",
+    slug: "which-code-snippet-correctly-prevents-a-component-from-re-rendering-when-the-props-dont-change",
+question: "Which code snippet correctly prevents a component from re-rendering when the props don't change?",
+
     options: [
       {
         code: `
@@ -460,9 +462,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-15",
-    question:
-      "Which code snippet correctly uses `useLayoutEffect` to update the DOM after rendering?",
+    slug: "which-code-snippet-correctly-uses-uselayouteffect-to-update-the-dom-after-rendering",
+question: "Which code snippet correctly uses `useLayoutEffect` to update the DOM after rendering?",
+
     options: [
       {
         code: `
@@ -495,9 +497,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-16",
-    question:
-      "Which code snippet correctly implements a custom hook to fetch data from an API?",
+    slug: "which-code-snippet-correctly-implements-a-custom-hook-to-fetch-data-from-an-api",
+question: "Which code snippet correctly implements a custom hook to fetch data from an API?",
+
     options: [
       {
         code: `
@@ -548,9 +550,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-17",
-    question:
-      "Which code snippet correctly implements error boundaries in React?",
+    slug: "which-code-snippet-correctly-implements-error-boundaries-in-react",
+question: "Which code snippet correctly implements error boundaries in React?",
+
     options: [
       {
         code: `
@@ -625,9 +627,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-18",
-    question:
-      "Which code snippet correctly defines a higher-order component (HOC) that adds a 'loading' prop to the wrapped component?",
+    slug: "which-code-snippet-correctly-defines-a-higher-order-component-hoc-that-adds-a-loading-prop-to-the-wrapped-component",
+question: "Which code snippet correctly defines a higher-order component (HOC) that adds a 'loading' prop to the wrapped component?",
+
     options: [
       {
         code: `
@@ -668,9 +670,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-19",
-    question:
-      "Which code snippet correctly implements the `useReducer` hook to manage state in a React component?",
+    slug: "which-code-snippet-correctly-implements-the-usereducer-hook-to-manage-state-in-a-react-component",
+question: "Which code snippet correctly implements the `useReducer` hook to manage state in a React component?",
+
     options: [
       {
         code: `
@@ -725,9 +727,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-20",
-    question:
-      "Which code snippet correctly implements the `useEffect` hook to run an effect when a component mounts and unmounts?",
+    slug: "which-code-snippet-correctly-implements-the-useeffect-hook-to-run-an-effect-when-a-component-mounts-and-unmounts",
+question: "Which code snippet correctly implements the `useEffect` hook to run an effect when a component mounts and unmounts?",
+
     options: [
       {
         code: `
@@ -772,9 +774,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-21",
-    question:
-      "Which code snippet correctly uses React's `forwardRef` to pass a ref to a child component?",
+    slug: "which-code-snippet-correctly-uses-reacts-forwardref-to-pass-a-ref-to-a-child-component",
+    question: "Which code snippet correctly uses React's `forwardRef` to pass a ref to a child component?",
+    
     options: [
       {
         code: `
@@ -813,9 +815,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-22",
-    question:
-      "Which code snippet correctly implements code splitting using React's `React.lazy` and `Suspense`?",
+    slug: "which-code-snippet-correctly-implements-code-splitting-using-reacts-react-lazy-and-suspense",
+question: "Which code snippet correctly implements code splitting using React's `React.lazy` and `Suspense`?",
+
     options: [
       {
         code: `
@@ -854,9 +856,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-23",
-    question:
-      "Which code snippet correctly uses React's `useContext` hook to access a context value?",
+    slug: "which-code-snippet-correctly-uses-reacts-usecontext-hook-to-access-a-context-value",
+question: "Which code snippet correctly uses React's `useContext` hook to access a context value?",
+
     options: [
       {
         code: `
@@ -881,9 +883,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-24",
-    question:
-      "Which code snippet correctly optimizes a functional component to prevent unnecessary re-renders using `React.memo`?",
+    slug: "which-code-snippet-correctly-optimizes-a-functional-component-to-prevent-unnecessary-re-renders-using-react-memo",
+question: "Which code snippet correctly optimizes a functional component to prevent unnecessary re-renders using `React.memo`?",
+
     options: [
       {
         code: `
@@ -917,9 +919,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-25",
-    question:
-      "Which code snippet correctly implements a context provider in React?",
+    slug: "which-code-snippet-correctly-implements-a-context-provider-in-react",
+question: "Which code snippet correctly implements a context provider in React?",
+
     options: [
       {
         code: `
@@ -966,9 +968,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-26",
-    question:
-      "Which code snippet correctly uses the `useEffect` hook to run a side effect only on component mount?",
+    slug: "which-code-snippet-correctly-uses-the-useeffect-hook-to-run-a-side-effect-only-on-component-mount",
+question: "Which code snippet correctly uses the `useEffect` hook to run a side effect only on component mount?",
+
     options: [
       {
         code: `
@@ -997,9 +999,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-27",
-    question:
-      "Which code snippet correctly creates a custom hook to track the window size?",
+    slug: "which-code-snippet-correctly-creates-a-custom-hook-to-track-the-window-size",
+question: "Which code snippet correctly creates a custom hook to track the window size?",
+
     options: [
       {
         code: `
@@ -1062,9 +1064,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-28",
-    question:
-      "Which code snippet correctly uses the `useReducer` hook to manage state in a component?",
+    slug: "which-code-snippet-correctly-uses-the-usereducer-hook-to-manage-state-in-a-component",
+    question: "Which code snippet correctly uses the `useReducer` hook to manage state in a component?",
+    
     options: [
       {
         code: `
@@ -1093,9 +1095,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-29",
-    question:
-      "Which code snippet correctly implements a higher-order component (HOC) to wrap a given component and add a loading state?",
+    slug: "which-code-snippet-correctly-implements-a-higher-order-component-hoc-to-wrap-a-given-component-and-add-a-loading-state",
+question: "Which code snippet correctly implements a higher-order component (HOC) to wrap a given component and add a loading state?",
+
     options: [
       {
         code: `
@@ -1150,9 +1152,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-30",
-    question:
-      "Which code snippet correctly uses the `useLayoutEffect` hook to perform a DOM operation after the component has rendered?",
+    slug: "which-code-snippet-correctly-uses-the-uselayouteffect-hook-to-perform-a-dom-operation-after-the-component-has-rendered",
+question: "Which code snippet correctly uses the `useLayoutEffect` hook to perform a DOM operation after the component has rendered?",
+
     options: [
       {
         code: `
@@ -1189,9 +1191,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-31",
-    question:
-      "Which code snippet correctly implements `React.PureComponent` to optimize rendering in a class component?",
+    slug: "which-code-snippet-correctly-implements-reactpurecomponent-to-optimize-rendering-in-a-class-component",
+question: "Which code snippet correctly implements `React.PureComponent` to optimize rendering in a class component?",
+
     options: [
       {
         code: `
@@ -1242,9 +1244,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-32",
-    question:
-      "Which code snippet correctly implements server-side rendering (SSR) with React and ReactDOM?",
+    slug: "which-code-snippet-correctly-implements-server-side-rendering-ssr-with-react-and-reactdom",
+question: "Which code snippet correctly implements server-side rendering (SSR) with React and ReactDOM?",
+
     options: [
       {
         code: `
@@ -1277,9 +1279,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-33",
-    question:
-      "Which code snippet correctly uses the `React.Suspense` for error boundary handling in React?",
+    slug: "which-code-snippet-correctly-uses-the-reactsuspense-for-error-boundary-handling-in-react",
+question: "Which code snippet correctly uses the `React.Suspense` for error boundary handling in React?",
+
     options: [
       {
         code: `
@@ -1322,9 +1324,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-34",
-    question:
-      "Which code snippet correctly uses the `useCallback` hook to prevent unnecessary re-renders when passing a function as a prop?",
+    slug: "which-code-snippet-correctly-uses-the-usecallback-hook-to-prevent-unnecessary-re-renders-when-passing-a-function-as-a-prop",
+    question: "Which code snippet correctly uses the `useCallback` hook to prevent unnecessary re-renders when passing a function as a prop?",
+    
     options: [
       {
         code: `
@@ -1359,9 +1361,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-35",
-    question:
-      "Which code snippet correctly handles the rendering of lists with keys in React?",
+    slug: "which-code-snippet-correctly-handles-the-rendering-of-lists-with-keys-in-react",
+    question: "Which code snippet correctly handles the rendering of lists with keys in React?",
+    
     options: [
       {
         code: `
@@ -1398,9 +1400,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-36",
-    question:
-      "Which code snippet correctly implements React Context to share a theme value across components?",
+    slug: "which-code-snippet-correctly-implements-react-context-to-share-a-theme-value-across-components",
+question: "Which code snippet correctly implements React Context to share a theme value across components?",
+
     options: [
       {
         code: `
@@ -1452,9 +1454,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-37",
-    question:
-      "Which code snippet correctly implements code-splitting with `React.lazy` and `Suspense`?",
+    slug: "which-code-snippet-correctly-implements-code-splitting-with-react-lazy-and-suspense",
+    question: "Which code snippet correctly implements code-splitting with `React.lazy` and `Suspense`?",
+    
     options: [
       {
         code: `
@@ -1496,9 +1498,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-38",
-    question:
-      "Which code snippet correctly uses `useEffect` to run a side effect after every render?",
+    slug: "which-code-snippet-correctly-uses-useeffect-to-run-a-side-effect-after-every-render",
+question: "Which code snippet correctly uses `useEffect` to run a side effect after every render?",
+
     options: [
       {
         code: `
@@ -1535,9 +1537,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-39",
-    question:
-      "Which code snippet correctly implements an uncontrolled component in React?",
+    slug: "which-code-snippet-correctly-implements-an-uncontrolled-component-in-react",
+question: "Which code snippet correctly implements an uncontrolled component in React?",
+
     options: [
       {
         code: `
@@ -1570,9 +1572,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-40",
-    question:
-      "Which code snippet correctly uses `React.memo` to prevent unnecessary re-renders in a functional component?",
+    slug: "which-code-snippet-correctly-uses-reactmemo-to-prevent-unnecessary-re-renders-in-a-functional-component",
+question: "Which code snippet correctly uses `React.memo` to prevent unnecessary re-renders in a functional component?",
+
     options: [
       {
         code: `
@@ -1608,8 +1610,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-41",
-    question: "Which code snippet correctly handles context with `useReducer`?",
+    slug: "which-code-snippet-correctly-handles-context-with-usereducer",
+question: "Which code snippet correctly handles context with `useReducer`?",
+
     options: [
       {
         code: `
@@ -1661,9 +1664,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-42",
-    question:
-      "Which code snippet correctly uses `React.forwardRef` to pass refs to a child component?",
+    slug: "which-code-snippet-correctly-uses-reactforwardref-to-pass-refs-to-a-child-component",
+question: "Which code snippet correctly uses `React.forwardRef` to pass refs to a child component?",
+
     options: [
       {
         code: `
@@ -1696,9 +1699,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-43",
-    question:
-      "Which code snippet correctly handles state initialization with `useReducer` and actions?",
+    slug: "which-code-snippet-correctly-handles-state-initialization-with-usereducer-and-actions",
+question: "Which code snippet correctly handles state initialization with `useReducer` and actions?",
+
     options: [
       {
         code: `
@@ -1746,9 +1749,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-44",
-    question:
-      "Which code snippet correctly uses `React.lazy` to load a component dynamically and handle errors?",
+    slug: "which-code-snippet-correctly-uses-reactlazy-to-load-a-component-dynamically-and-handle-errors",
+question: "Which code snippet correctly uses `React.lazy` to load a component dynamically and handle errors?",
+
     options: [
       {
         code: `
@@ -1792,9 +1795,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-45",
-    question:
-      "Which code snippet correctly updates state asynchronously with `setState` in a React class component?",
+    slug: "which-code-snippet-correctly-updates-state-asynchronously-with-setstate-in-a-react-class-component",
+question: "Which code snippet correctly updates state asynchronously with `setState` in a React class component?",
+
     options: [
       {
         code: `this.setState({ count: this.state.count + 1 });`,
@@ -1815,9 +1818,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-46",
-    question:
-      "Which code snippet correctly handles context with `useContext` and a custom hook?",
+    slug: "which-code-snippet-correctly-handles-context-with-usecontext-and-a-custom-hook",
+question: "Which code snippet correctly handles context with `useContext` and a custom hook?",
+
     options: [
       {
         code: `
@@ -1863,9 +1866,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-47",
-    question:
-      "Which code snippet correctly uses `useRef` to store a previous value of a prop?",
+    slug: "which-code-snippet-correctly-uses-useref-to-store-a-previous-value-of-a-prop",
+question: "Which code snippet correctly uses `useRef` to store a previous value of a prop?",
+
     options: [
       {
         code: `
@@ -1906,8 +1909,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-48",
+    slug: "which-code-snippet-correctly-handles-event-delegation-in-react",
     question: "Which code snippet correctly handles event delegation in React?",
+    
     options: [
       {
         code: `
@@ -1954,9 +1958,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-49",
-    question:
-      "Which code snippet correctly uses `useImperativeHandle` to expose a custom function to a parent component?",
+    slug: "which-code-snippet-correctly-uses-useimperativehandle-to-expose-a-custom-function-to-a-parent-component",
+question: "Which code snippet correctly uses `useImperativeHandle` to expose a custom function to a parent component?",
+
     options: [
       {
         code: `
@@ -2009,9 +2013,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-50",
-    question:
-      "Which code snippet correctly implements React Router's `useNavigate` hook to redirect after a form submission?",
+    slug: "which-code-snippet-correctly-implements-react-routers-usenavigate-hook-to-redirect-after-a-form-submission",
+question: "Which code snippet correctly implements React Router's `useNavigate` hook to redirect after a form submission?",
+
     options: [
       {
         code: `
@@ -2058,9 +2062,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-51",
-    question:
-      "Which code snippet correctly implements a `useEffect` hook to handle dynamic cleanup when a component is unmounted, and optimizes rendering performance using `useMemo`?",
+    slug: "which-code-snippet-correctly-implements-a-useeffect-hook-to-handle-dynamic-cleanup-when-a-component-is-unmounted-and-optimizes-rendering-performance-using-usememo",
+question: "Which code snippet correctly implements a `useEffect` hook to handle dynamic cleanup when a component is unmounted, and optimizes rendering performance using `useMemo`?",
+
     options: [
       {
         code: `
@@ -2121,9 +2125,9 @@ const ReactInterviewCorrectCodeData = [
   },
 
   {
-    slug: "question-52",
-    question:
-      "Which code snippet correctly implements React's `useImperativeHandle` hook to expose a custom method to a parent component?",
+    slug: "which-code-snippet-correctly-implements-reacts-useimperativehandle-hook-to-expose-a-custom-method-to-a-parent-component",
+question: "Which code snippet correctly implements React's `useImperativeHandle` hook to expose a custom method to a parent component?",
+
     options: [
       {
         code: `
@@ -2174,9 +2178,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-53",
-    question:
-      "Which code snippet correctly optimizes re-renders in a component using `React.memo` with a custom comparison function?",
+    slug: "which-code-snippet-correctly-optimizes-re-renders-in-a-component-using-reactmemo-with-a-custom-comparison-function",
+question: "Which code snippet correctly optimizes re-renders in a component using `React.memo` with a custom comparison function?",
+
     options: [
       {
         code: `
@@ -2219,9 +2223,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-54",
-    question:
-      "Which code snippet correctly implements an advanced custom hook for handling a form with validation in React?",
+    slug: "which-code-snippet-correctly-implements-an-advanced-custom-hook-for-handling-a-form-with-validation-in-react",
+    question: "Which code snippet correctly implements an advanced custom hook for handling a form with validation in React?",
+    
     options: [
       {
         code: `
@@ -2315,9 +2319,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-55",
-    question:
-      "Which code snippet correctly handles performance optimization using `React.lazy` with `Suspense` for large components?",
+    slug: "which-code-snippet-correctly-handles-performance-optimization-using-reactlazy-with-suspense-for-large-components",
+question: "Which code snippet correctly handles performance optimization using `React.lazy` with `Suspense` for large components?",
+
     options: [
       {
         code: `
@@ -2373,9 +2377,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-56",
-    question:
-      "Which code snippet correctly uses `React.forwardRef` to pass a ref to a child component?",
+    slug: "which-code-snippet-correctly-uses-reactforwardref-to-pass-a-ref-to-a-child-component",
+question: "Which code snippet correctly uses `React.forwardRef` to pass a ref to a child component?",
+
     options: [
       {
         code: `
@@ -2412,9 +2416,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-57",
-    question:
-      "Which code snippet correctly implements `useReducer` with an action object to manage state in a React function component?",
+    slug: "which-code-snippet-correctly-implements-usereducer-with-an-action-object-to-manage-state-in-a-react-function-component",
+question: "Which code snippet correctly implements `useReducer` with an action object to manage state in a React function component?",
+
     options: [
       {
         code: `
@@ -2457,9 +2461,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-58",
-    question:
-      "Which code snippet correctly uses `useLayoutEffect` instead of `useEffect` to ensure layout changes are applied before the DOM is painted?",
+    slug: "which-code-snippet-correctly-uses-uselayouteffect-instead-of-useeffect-to-ensure-layout-changes-are-applied-before-the-dom-is-painted",
+question: "Which code snippet correctly uses `useLayoutEffect` instead of `useEffect` to ensure layout changes are applied before the DOM is painted?",
+
     options: [
       {
         code: `
@@ -2496,9 +2500,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-59",
-    question:
-      "Which code snippet correctly handles async data fetching in React with proper error handling using `useEffect`?",
+    slug: "which-code-snippet-correctly-handles-async-data-fetching-in-react-with-proper-error-handling-using-useeffect",
+question: "Which code snippet correctly handles async data fetching in React with proper error handling using `useEffect`?",
+
     options: [
       {
         code: `
@@ -2556,9 +2560,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-60",
-    question:
-      "Which code snippet correctly implements context in React to manage a global state with a provider and consumer?",
+    slug: "which-code-snippet-correctly-implements-context-in-react-to-manage-a-global-state-with-a-provider-and-consumer",
+question: "Which code snippet correctly implements context in React to manage a global state with a provider and consumer?",
+
     options: [
       {
         code: `
@@ -2626,9 +2630,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-61",
-    question:
-      "Which code snippet correctly uses the `React.PureComponent` to optimize performance by preventing unnecessary re-renders?",
+    slug: "which-code-snippet-correctly-uses-the-reactpurecomponent-to-optimize-performance-by-preventing-unnecessary-re-renders",
+question: "Which code snippet correctly uses the `React.PureComponent` to optimize performance by preventing unnecessary re-renders?",
+
     options: [
       {
         code: `
@@ -2677,9 +2681,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-62",
-    question:
-      "Which code snippet demonstrates correct usage of `useReducer` to manage complex state logic within a functional component?",
+    slug: "which-code-snippet-demonstrates-correct-usage-of-usereducer-to-manage-complex-state-logic-within-a-functional-component",
+question: "Which code snippet demonstrates correct usage of `useReducer` to manage complex state logic within a functional component?",
+
     options: [
       {
         code: `
@@ -2735,9 +2739,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-63",
-    question:
-      "Which code snippet correctly demonstrates how to implement `getDerivedStateFromProps` to update state based on prop changes?",
+    slug: "which-code-snippet-correctly-demonstrates-how-to-implement-getderivedstatefromprops-to-update-state-based-on-prop-changes",
+question: "Which code snippet correctly demonstrates how to implement `getDerivedStateFromProps` to update state based on prop changes?",
+
     options: [
       {
         code: `
@@ -2800,9 +2804,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-64",
-    question:
-      "Which code snippet demonstrates how to use `useLayoutEffect` to synchronously update the DOM after all DOM mutations?",
+    slug: "which-code-snippet-demonstrates-how-to-use-uselayouteffect-to-synchronously-update-the-dom-after-all-dom-mutations",
+question: "Which code snippet demonstrates how to use `useLayoutEffect` to synchronously update the DOM after all DOM mutations?",
+
     options: [
       {
         code: `
@@ -2839,9 +2843,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-65",
-    question:
-      "Which code snippet demonstrates the correct usage of `forwardRef` to forward a ref to a child component?",
+    slug: "which-code-snippet-demonstrates-the-correct-usage-of-forwardref-to-forward-a-ref-to-a-child-component",
+question: "Which code snippet demonstrates the correct usage of `forwardRef` to forward a ref to a child component?",
+
     options: [
       {
         code: `
@@ -2879,9 +2883,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-66",
-    question:
-      "Which code snippet demonstrates the correct usage of `useEffect` with an empty dependency array to simulate `componentDidMount`?",
+    slug: "which-code-snippet-demonstrates-the-correct-usage-of-useeffect-with-an-empty-dependency-array-to-simulate-componentdidmount",
+question: "Which code snippet demonstrates the correct usage of `useEffect` with an empty dependency array to simulate `componentDidMount`?",
+
     options: [
       {
         code: `
@@ -2919,9 +2923,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-67",
-    question:
-      "Which code snippet demonstrates the correct way to handle an error boundary in React?",
+    slug: "which-code-snippet-demonstrates-the-correct-way-to-handle-an-error-boundary-in-react",
+question: "Which code snippet demonstrates the correct way to handle an error boundary in React?",
+
     options: [
       {
         code: `
@@ -3006,9 +3010,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-68",
-    question:
-      "Which code snippet demonstrates correct usage of `useContext` with dynamic context values that change across the app?",
+    slug: "which-code-snippet-demonstrates-correct-usage-of-usecontext-with-dynamic-context-values-that-change-across-the-app",
+question: "Which code snippet demonstrates correct usage of `useContext` with dynamic context values that change across the app?",
+
     options: [
       {
         code: `
@@ -3075,9 +3079,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-69",
-    question:
-      "Which code snippet demonstrates correct usage of `React.createContext` and `useContext` to handle theming across an app?",
+    slug: "which-code-snippet-demonstrates-correct-usage-of-react-createcontext-and-usecontext-to-handle-theming-across-an-app",
+question: "Which code snippet demonstrates correct usage of `React.createContext` and `useContext` to handle theming across an app?",
+
     options: [
       {
         code: `
@@ -3146,8 +3150,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-70",
-    question: "How would you update a nested state object in React?",
+    slug: "how-would-you-update-a-nested-state-object-in-react",
+question: "How would you update a nested state object in React?",
+
     options: [
       {
         code: `
@@ -3170,9 +3175,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-71",
-    question:
-      "What is the correct way to bind an event handler in a class component?",
+    slug: "what-is-the-correct-way-to-bind-an-event-handler-in-a-class-component",
+question: "What is the correct way to bind an event handler in a class component?",
+
     options: [
       {
         code: `
@@ -3207,8 +3212,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-72",
-    question: "How do you pass a dynamic key to an object in React?",
+    slug: "how-do-you-pass-a-dynamic-key-to-an-object-in-react",
+question: "How do you pass a dynamic key to an object in React?",
+
     options: [
       {
         code: `
@@ -3227,9 +3233,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-4",
-    question:
-      "How do you handle multiple form inputs in React using one state?",
+    slug: "how-do-you-handle-multiple-form-inputs-in-react-using-one-state",
+    question: "How do you handle multiple form inputs in React using one state?",
+    
     options: [
       {
         code: `
@@ -3255,8 +3261,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-73",
-    question: "How do you conditionally render a component based on state?",
+    slug: "how-do-you-conditionally-render-a-component-based-on-state",
+question: "How do you conditionally render a component based on state?",
+
     options: [
       {
         code: `
@@ -3275,8 +3282,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-74",
-    question: "How do you update state based on previous state in React?",
+    slug: "how-do-you-update-state-based-on-previous-state-in-react",
+question: "How do you update state based on previous state in React?",
+
     options: [
       {
         code: `
@@ -3295,8 +3303,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-75",
-    question: "How do you fetch data on component mount using React's hooks?",
+    slug: "how-do-you-fetch-data-on-component-mount-using-reacts-hooks",
+question: "How do you fetch data on component mount using React's hooks?",
+
     options: [
       {
         code: `
@@ -3330,8 +3339,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-76",
-    question: "How would you create a controlled input field in React?",
+    slug: "how-would-you-create-a-controlled-input-field-in-react",
+question: "How would you create a controlled input field in React?",
+
     options: [
       {
         code: `
@@ -3351,8 +3361,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-77",
-    question: "How do you dynamically set an object's key in React?",
+    slug: "how-do-you-dynamically-set-an-objects-key-in-react",
+question: "How do you dynamically set an object's key in React?",
+
     options: [
       { code: `const obj = { key: 'value' };`, isCorrect: false },
       { code: `const obj = { key: value };`, isCorrect: false },
@@ -3385,9 +3396,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-79",
-    question:
-      "How do you conditionally render components in React based on state?",
+    slug: "how-do-you-conditionally-render-components-in-react-based-on-state",
+question: "How do you conditionally render components in React based on state?",
+
     options: [
       {
         code: `
@@ -3406,8 +3417,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-80",
-    question: "How would you safely update a nested object in state in React?",
+    slug: "how-would-you-safely-update-a-nested-object-in-state-in-react",
+question: "How would you safely update a nested object in state in React?",
+
     options: [
       {
         code: `
@@ -3433,9 +3445,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-81",
-    question:
-      "How do you create a new object by copying properties from multiple objects in React?",
+    slug: "how-do-you-create-a-new-object-by-copying-properties-from-multiple-objects-in-react",
+question: "How do you create a new object by copying properties from multiple objects in React?",
+
     options: [
       {
         code: `
@@ -3456,9 +3468,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-82",
-    question:
-      "How would you handle a dynamic key in an object for state updates in React?",
+    slug: "how-would-you-handle-a-dynamic-key-in-an-object-for-state-updates-in-react",
+question: "How would you handle a dynamic key in an object for state updates in React?",
+
     options: [
       {
         code: `
@@ -3481,9 +3493,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-83",
-    question:
-      "How would you delete a key from an object in React state without mutating it?",
+    slug: "how-would-you-delete-a-key-from-an-object-in-react-state-without-muting-it",
+question: "How would you delete a key from an object in React state without mutating it?",
+
     options: [
       {
         code: `
@@ -3508,9 +3520,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-84",
-    question:
-      "How would you merge two objects, but ensure that a property from the second object overrides the first object in React?",
+    slug: "how-would-you-merge-two-objects-but-ensure-that-a-property-from-the-second-object-overrides-the-first-object-in-react",
+question: "How would you merge two objects, but ensure that a property from the second object overrides the first object in React?",
+
     options: [
       {
         code: `
@@ -3531,9 +3543,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-85",
-    question:
-      "How do you access a deeply nested property in an object array in React, ensuring it’s safe and doesn’t throw errors if any level is undefined?",
+    slug: "how-do-you-access-a-deeply-nested-property-in-an-object-array-in-react-ensuring-it-s-safe-and-doesn-t-throw-errors-if-any-level-is-undefined",
+question: "How do you access a deeply nested property in an object array in React, ensuring it’s safe and doesn’t throw errors if any level is undefined?",
+
     options: [
       {
         code: `
@@ -3552,9 +3564,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-86",
-    question:
-      "How would you iterate over an array of objects and update a specific property in each object using React?",
+    slug: "how-would-you-iterate-over-an-array-of-objects-and-update-a-specific-property-in-each-object-using-react",
+question: "How would you iterate over an array of objects and update a specific property in each object using React?",
+
     options: [
       {
         code: `
@@ -3585,9 +3597,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-87",
-    question:
-      "How would you access the last item in a nested array of objects in React?",
+    slug: "how-would-you-access-the-last-item-in-a-nested-array-of-objects-in-react",
+question: "How would you access the last item in a nested array of objects in React?",
+
     options: [
       {
         code: `
@@ -3614,9 +3626,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-88",
-    question:
-      "How would you handle concurrent fetch requests to multiple APIs in React and display the results once all requests are completed?",
+    slug: "how-would-you-handle-concurrent-fetch-requests-to-multiple-apis-in-react-and-display-the-results-once-all-requests-are-completed",
+question: "How would you handle concurrent fetch requests to multiple APIs in React and display the results once all requests are completed?",
+
     options: [
       {
         code: `
@@ -3644,9 +3656,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-89",
-    question:
-      "How do you make a fetch request inside a React functional component that gets triggered only once, avoiding infinite re-renders?",
+    slug: "how-do-you-make-a-fetch-request-inside-a-react-functional-component-that-gets-triggered-only-once-avoiding-infinite-re-renders",
+question: "How do you make a fetch request inside a React functional component that gets triggered only once, avoiding infinite re-renders?",
+
     options: [
       {
         code: `
@@ -3674,9 +3686,9 @@ const ReactInterviewCorrectCodeData = [
     ],
   },
   {
-    slug: "question-90",
-    question:
-      "How would you handle errors when fetching data from an API in React, and display an error message if the request fails?",
+    slug: "how-would-you-handle-errors-when-fetching-data-from-an-api-in-react-and-display-an-error-message-if-the-request-fails",
+    question: "How would you handle errors when fetching data from an API in React, and display an error message if the request fails?",
+    
     options: [
       {
         code: `

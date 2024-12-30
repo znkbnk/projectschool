@@ -66,7 +66,7 @@ const InterviewQuestionQuiz = () => {
       setScore(score + 1);
     }
     setShowResult(true);
-    setAnsweredQuestions(prev => prev + 1);  // Increment answered questions count
+    setAnsweredQuestions(prev => prev + 1); 
   };
 
   const handleNextQuestion = () => {
@@ -89,16 +89,15 @@ const InterviewQuestionQuiz = () => {
     setQuizCompleted(false);
     setSelectedAnswer("");
     setShowResult(false);
-    setAnsweredQuestions(0);  // Reset answered questions
-    setCurrentQuestion(quizQuestions[0]); // Reset to the first question
-    navigate(`/interview/InterviewQuiz/${quizQuestions[0].slug}`); // Reset the URL with first question's slug
+    setAnsweredQuestions(0); 
+    setCurrentQuestion(quizQuestions[0]); 
+    navigate(`/interview/InterviewQuiz/${quizQuestions[0].slug}`); 
   };
 
   if (!currentQuestion) {
     return <div>Loading...</div>;
   }
 
-  // Calculate progress based on the number of answered questions
   const progressPercentage = (answeredQuestions / quizQuestions.length) * 100;
 
   return (
