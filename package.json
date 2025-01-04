@@ -37,6 +37,7 @@
     "firebase-admin": "^12.1.1",
     "framer-motion": "^11.9.0",
     "gsap": "^3.12.5",
+    "helmet": "^8.0.0",
     "lodash": "^4.17.21",
     "lucide-react": "^0.446.0",
     "material-icons": "^1.13.12",
