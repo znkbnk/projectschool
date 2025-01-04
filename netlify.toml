@@ -4,7 +4,7 @@
     Content-Security-Policy = """
       default-src 'self';
       script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://js.stripe.com https://cdn.buymeacoffee.com https://codesandbox.io https://unpkg.com https://cdnjs.cloudflare.com https://apis.google.com https://www.gstatic.com https://firebase.googleapis.com https://*.google-analytics.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
+      style-src 'self' 'nonce-<random-value>' https://fonts.googleapis.com https://fonts.gstatic.com;
       font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com;
       img-src 'self' data: https://upload.wikimedia.org https://images.pexels.com https://images.unsplash.com https://cdn.buymeacoffee.com https://www.google.com/images/;
       frame-src 'self' https://www.youtube.com https://*.codesandbox.io https://codesandbox.io https://js.stripe.com https://projectschool-48842.firebaseapp.com;
