@@ -7,8 +7,8 @@
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com;
       font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com;
       img-src 'self' data: https://upload.wikimedia.org https://images.pexels.com https://images.unsplash.com https://cdn.buymeacoffee.com https://www.google.com/images/;
-      frame-src 'self' https://www.youtube.com https://*.codesandbox.io https://js.stripe.com https://projectschool-48842.firebaseapp.com;
-      connect-src 'self' https://*.codesandbox.io https://projectschool404-4c33494b2162.herokuapp.com https://api.github.com https://www.googleapis.com https://firebase.googleapis.com https://*.firebaseio.com https://securetoken.googleapis.com https://identitytoolkit.googleapis.com https://firestore.googleapis.com https://region1.google-analytics.com;
+      frame-src 'self' https://www.youtube.com https://*.codesandbox.io https://codesandbox.io https://js.stripe.com https://projectschool-48842.firebaseapp.com;
+      connect-src 'self' https://*.codesandbox.io https://codesandbox.io https://projectschool404-4c33494b2162.herokuapp.com https://api.github.com https://www.googleapis.com https://firebase.googleapis.com https://*.firebaseio.com https://securetoken.googleapis.com https://identitytoolkit.googleapis.com https://firestore.googleapis.com https://region1.google-analytics.com;
       base-uri 'self';
       form-action 'self';
       object-src 'none';
