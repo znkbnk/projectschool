@@ -15,20 +15,21 @@ const useAuth = () => {
         if (!response.ok) {
           if (response.status === 404 && retries > 0) {
             console.warn("User not found, retrying...");
-            setTimeout(
-              () => fetchUserData(user, retries - 1, delay * 2),
-              delay
-            ); 
+            setTimeout(() => fetchUserData(user, retries - 1, delay * 2), delay);
             return;
+          }
+          if (response.status >= 500) {
+            console.error(`Server error: ${response.status} ${response.statusText}`);
           }
           throw new Error(`Error: ${response.statusText}`);
         }
         const userData = await response.json();
         setIsAdmin(userData.isAdmin);
       } catch (error) {
-        console.error("Error fetching user data:", error);
+        console.error("Error fetching user data:", error.message);
       }
     };
+    
 
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
