@@ -69,17 +69,15 @@
     "web-vitals": "^2.1.4",
     "xss": "^1.0.15"
   },
- "scripts": {
-  "start": "concurrently \"npm run server\" \"npm run client\"",
-  "server": "cd backend && nodemon server.js",
-  "client": "react-scripts start",
-  "build": "react-scripts build && npm run build:functions && npm run copy-headers",
-  "build:functions": "esbuild netlify/functions/create-user.js --bundle --outdir=build/functions",
-  "copy-headers": "cp public/_headers build/_headers",
-  "test": "jest",
-  "eject": "react-scripts eject"
-},
-
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && nodemon server.js",
+    "client": "react-scripts start",
+    "build": "react-scripts build && npm run build:functions",
+    "build:functions": "esbuild netlify/functions/create-user.js --bundle --outdir=build/functions",
+    "test": "jest",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
