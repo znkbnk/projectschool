@@ -8,6 +8,13 @@
   to = "https://www.projectschool.dev/:splat"
   status = 200
 
+  [[redirects]]
+  from = "/api/*"
+  to = "https://projectschool404-4c33494b2162.herokuapp.com/api/:splat"
+  status = 200
+  force = true
+
+
 [functions]
   node_bundler = "esbuild"
   external_node_modules = ["mongoose"]
