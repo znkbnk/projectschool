@@ -3,10 +3,7 @@
 const mongoose = require('mongoose');
 const User = require('../../backend/models/userModel');
 
-mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(process.env.MONGODB_URI);
 
 const handleCreateUser = async (event) => {
   if (event.httpMethod === 'OPTIONS') {
