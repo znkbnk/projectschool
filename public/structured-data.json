@@ -24,14 +24,13 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -73,14 +72,13 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -123,14 +121,13 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -172,14 +169,13 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -221,14 +217,13 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -270,14 +265,13 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -319,14 +313,13 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -368,14 +361,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -417,14 +410,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -466,14 +459,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -515,14 +508,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -564,14 +557,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -613,14 +606,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -662,14 +655,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -711,14 +704,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -760,14 +753,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -809,14 +802,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -858,14 +851,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -907,14 +900,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -956,14 +949,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1005,14 +998,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1054,14 +1047,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1103,14 +1096,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1152,14 +1145,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1201,14 +1194,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1250,14 +1243,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1299,14 +1292,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1348,14 +1341,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1397,14 +1390,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1446,14 +1439,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1495,14 +1488,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1544,14 +1537,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1593,14 +1586,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1642,14 +1635,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1691,14 +1684,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1740,14 +1733,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1789,14 +1782,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1838,14 +1831,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1887,14 +1880,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1936,14 +1929,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1985,14 +1978,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2034,14 +2027,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2083,14 +2076,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2132,14 +2125,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2181,14 +2174,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2230,14 +2223,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2279,14 +2272,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2328,14 +2321,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2377,14 +2370,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2426,14 +2419,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2475,14 +2468,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2524,14 +2517,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2573,14 +2566,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2622,14 +2615,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2671,14 +2664,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2720,14 +2713,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2769,14 +2762,14 @@
           {
             "@type": "CourseInstance",
             "courseMode": "Online",
-            "startDate": "2023-01-01",
-            "endDate": "2023-12-31",
+            "startDate": "2025-01-01",
+            "endDate": "2026-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "PT5H",
+            
             "location": {
               "@type": "Place",
               "name": "Online"
