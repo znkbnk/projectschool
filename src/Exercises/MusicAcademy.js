@@ -29,7 +29,7 @@ function MusicAcademy() {
       <ProgressBar
         numStages={tasksData.Workshop.length}
         completedTasks={getCompletedTasks()}
-        taskType='Workshop' // Pass "Live" as taskType
+        taskType='Workshop' 
       />
 
       <div className='lessons-cards'>

@@ -203,8 +203,9 @@ const stylesData = [
       margin: 10px 0;
     }  
       `,
-  },  {
-    taskId: "Dark-Light-Mode-Toggle",  
+  },
+  {
+    taskId: "Dark-Light-Mode-Toggle",
     title: "Dark Light Mode Toggle",
     css: `:root {
       --clr-bcg: #fff;
@@ -296,7 +297,7 @@ const stylesData = [
     }`,
   },
   {
-    taskId: "Sortify-Search-by-Name",  
+    taskId: "Sortify-Search-by-Name",
     title: "Sortify Search by Name",
     css: `
     body {
@@ -315,7 +316,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Simple-Quiz-App",  
+    taskId: "Simple-Quiz-App",
     title: "Simple Quiz App",
     css: `
     body {
@@ -402,8 +403,9 @@ const stylesData = [
     }
     
     `,
-  }, {
-    taskId: "FAQ",  
+  },
+  {
+    taskId: "FAQ",
     title: "FAQ",
     css: `
     :root {
@@ -584,7 +586,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Birthday-Reminder",  
+    taskId: "Birthday-Reminder",
     title: "Birthday Reminder",
     css: `
     :root {
@@ -680,7 +682,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Dynamic-Box-Shadow-Generator",  
+    taskId: "Dynamic-Box-Shadow-Generator",
     title: "Dynamic Box Shadow Generator",
     css: `
     * {
@@ -787,7 +789,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Memory-Game",  
+    taskId: "Memory-Game",
     title: "Memory Game",
     css: `
     * {
@@ -908,7 +910,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Color-Generator",  
+    taskId: "Color-Generator",
     title: "Color Generator",
     css: `
     :root {
@@ -1112,7 +1114,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Range-Slider",  
+    taskId: "Range-Slider",
     title: "Range Slider",
     css: `
     body {
@@ -1247,7 +1249,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Form-Validation-Component",  
+    taskId: "Form-Validation-Component",
     title: "Form Validation Component",
     css: `
     * {
@@ -1332,7 +1334,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Markdown-Preview-App",  
+    taskId: "Markdown-Preview-App",
     title: "Markdown Preview App",
     css: `
     :root {
@@ -1450,7 +1452,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Menu-App",  
+    taskId: "Menu-App",
     title: "Menu App",
     css: `
     :root {
@@ -1639,7 +1641,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Responsive-Navbar",  
+    taskId: "Responsive-Navbar",
     title: "Responsive Navbar",
     css: `
     :root {
@@ -1875,7 +1877,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Pagination-Page",  
+    taskId: "Pagination-Page",
     title: "Pagination Page",
     css: `
     :root {
@@ -2098,7 +2100,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Search-Bar",  
+    taskId: "Search-Bar",
     title: "Search Bar",
     css: `
     .App {
@@ -2215,7 +2217,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Dropdown",  
+    taskId: "Dropdown",
     title: "Dropdown",
     css: `
     .App {
@@ -2299,7 +2301,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Sidebar",  
+    taskId: "Sidebar",
     title: "Sidebar",
     css: `
     * {
@@ -2418,7 +2420,7 @@ const stylesData = [
     `,
   },
   {
-    taskId: "Dynamic-Table-with-Sorting-and-Copy-Functionality",  
+    taskId: "Dynamic-Table-with-Sorting-and-Copy-Functionality",
     title: "Dynamic Table with Sorting and Copy Functionality",
     css: `
     html,
@@ -2502,7 +2504,7 @@ button:hover {
     `,
   },
   {
-    taskId: "To-Do-App",  
+    taskId: "To-Do-App",
     title: "ToDo App",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -2610,7 +2612,7 @@ h1 {
     `,
   },
   {
-    taskId: "Testimonials",  
+    taskId: "Testimonials",
     title: "Testimonials",
     css: `
     * {
@@ -2681,7 +2683,7 @@ h1 {
     `,
   },
   {
-    taskId: "Voice-to-Text",  
+    taskId: "Voice-to-Text",
     title: "Voice to Text",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
@@ -2791,7 +2793,7 @@ button:hover {
     `,
   },
   {
-    taskId: "Text-to-Voice",  
+    taskId: "Text-to-Voice",
     title: "Text to Voice",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
@@ -2895,7 +2897,7 @@ button:hover {
     `,
   },
   {
-    taskId: "Course-Finder",  
+    taskId: "Course-Finder",
     title: "Course Finder",
     css: `
     * {
@@ -3202,7 +3204,7 @@ button:hover {
     `,
   },
   {
-    taskId: "Course-Shop",  
+    taskId: "Course-Shop",
     title: "Course Shop",
     css: `
     .App {
@@ -3431,7 +3433,7 @@ button:hover {
     `,
   },
   {
-    taskId: "MATERIALIZECSS-Portfolio",  
+    taskId: "MATERIALIZECSS-Portfolio",
     title: "MATERIALIZECSS Portfolio",
     css: `
     .main-container {
@@ -3521,7 +3523,7 @@ button:hover {
     `,
   },
   {
-    taskId: "TradeHub-React-Trading-Dashboard",  
+    taskId: "TradeHub-React-Trading-Dashboard",
     title: "TradeHub React Trading Dashboard",
     css: `
     import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
@@ -3668,7 +3670,7 @@ button:hover {
     `,
   },
   {
-    taskId: "Cube-Image-Gallery",  
+    taskId: "Cube-Image-Gallery",
     title: "Cube Image Gallery",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
@@ -3808,7 +3810,7 @@ h2 {
     `,
   },
   {
-    taskId: "Analog-Clock",  
+    taskId: "Analog-Clock",
     title: "Analog Clock",
     css: `
     body {
@@ -3925,7 +3927,7 @@ h2 {
     `,
   },
   {
-    taskId: "Dynamic-Menu-Highlighter",  
+    taskId: "Dynamic-Menu-Highlighter",
     title: "Dynamic Menu Highlighter",
     css: `
     html {
@@ -4043,7 +4045,7 @@ h2 {
     `,
   },
   {
-    taskId: "Order-Tracker-Mobile-App",  
+    taskId: "Order-Tracker-Mobile-App",
     title: "Order Tracker Mobile App",
     css: `
     @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
@@ -4589,7 +4591,7 @@ a {
     `,
   },
   {
-    taskId: "Timer-App",  
+    taskId: "Timer-App",
     title: "Timer App",
     css: `
     @keyframes subtlePulse {
@@ -4784,7 +4786,7 @@ a {
     `,
   },
   {
-    taskId: "Portfolio-Website",  
+    taskId: "Portfolio-Website",
     title: "Portfolio Website",
     css: `
     * {
@@ -5444,7 +5446,7 @@ a {
     `,
   },
   {
-    taskId: "Materialize-Portfolio",  
+    taskId: "Materialize-Portfolio",
     title: "Materialize Portfolio",
     css: `
     .header {
@@ -5555,7 +5557,7 @@ a {
     `,
   },
   {
-    taskId: "File-Uploader",  
+    taskId: "File-Uploader",
     title: "File Uploader",
     css: `
     body {
@@ -5695,7 +5697,7 @@ a {
     `,
   },
   {
-    taskId: "Cake-Website",  
+    taskId: "Cake-Website",
     title: "Cake Website",
     css: `
     @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
@@ -6168,7 +6170,7 @@ h3 {
     `,
   },
   {
-    taskId: "Interactive-3D-Card-Viewer",  
+    taskId: "Interactive-3D-Card-Viewer",
     title: "Interactive 3D Card Viewer",
     css: `
     * {
@@ -6242,7 +6244,7 @@ h3 {
     `,
   },
   {
-    taskId: "Dev-Portfolio",  
+    taskId: "Dev-Portfolio",
     title: "Dev Portfolio",
     css: `
     /* General Styles */
@@ -6553,7 +6555,7 @@ footer {
     `,
   },
   {
-    taskId: "Fruit-Carousel",  
+    taskId: "Fruit-Carousel",
     title: "Fruit Carousel",
     css: `
     body {
@@ -6715,7 +6717,7 @@ footer {
     `,
   },
   {
-    taskId: "FitLife-Website",  
+    taskId: "FitLife-Website",
     title: "FitLife Website",
     css: `
     :root {
@@ -7200,7 +7202,7 @@ footer {
     `,
   },
   {
-    taskId: "FAQ-Toggle",  
+    taskId: "FAQ-Toggle",
     title: "FAQ Toggle",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
@@ -7379,7 +7381,7 @@ body {
     `,
   },
   {
-    taskId: "Pomodoro-Focus-Timer",  
+    taskId: "Pomodoro-Focus-Timer",
     title: "Pomodoro Focus Timer",
     css: `
     :root {
@@ -7591,7 +7593,7 @@ body {
     `,
   },
   {
-    taskId: "Profolio",  
+    taskId: "Profolio",
     title: "Profolio",
     css: `
     * {
@@ -8266,7 +8268,7 @@ body {
     `,
   },
   {
-    taskId: "Animated-Progress-Loader",  
+    taskId: "Animated-Progress-Loader",
     title: "Animated Progress Loader",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
@@ -8364,7 +8366,7 @@ p {
     `,
   },
   {
-    taskId: "Dynamic-Loader",  
+    taskId: "Dynamic-Loader",
     title: "Dynamic Loader",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
@@ -8444,7 +8446,7 @@ p {
     `,
   },
   {
-    taskId: "Speech-Synth",  
+    taskId: "Speech-Synth",
     title: "Speech Synth",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
@@ -8548,7 +8550,7 @@ button:hover {
     `,
   },
   {
-    taskId: "Smooth-Scroll-Navigator",  
+    taskId: "Smooth-Scroll-Navigator",
     title: "Smooth Scroll Navigator",
     css: `
     body,
@@ -8654,7 +8656,7 @@ h2 {
     `,
   },
   {
-    taskId: "Tesla-Experience",  
+    taskId: "Tesla-Experience",
     title: "Tesla Experience",
     css: `
     body {
@@ -8918,7 +8920,7 @@ h2 {
     `,
   },
   {
-    taskId: "Dynamic-Dashboard",  
+    taskId: "Dynamic-Dashboard",
     title: "Dynamic Dashboard",
     css: `
     :root {
@@ -9153,7 +9155,7 @@ h2 {
     `,
   },
   {
-    taskId: "Quiz-Master",  
+    taskId: "Quiz-Master",
     title: "Quiz Master",
     css: `
     @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
@@ -9407,7 +9409,7 @@ button:hover {
     `,
   },
   {
-    taskId: "Profile-Popup-Animation",  
+    taskId: "Profile-Popup-Animation",
     title: "Profile Popup Animation",
     css: `
     .app-container {
@@ -9565,7 +9567,7 @@ button:hover {
     `,
   },
   {
-    taskId: "Movies4u",  
+    taskId: "Movies4u",
     title: "Movies 4 You",
     css: `
     /* General styles */
@@ -9824,7 +9826,7 @@ body {
     `,
   },
   {
-    taskId: "Natures-Beauty",  
+    taskId: "Natures-Beauty",
     title: "Natures Beauty",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap");
@@ -10108,7 +10110,7 @@ ul {
     `,
   },
   {
-    taskId: "Captcha-Guard",  
+    taskId: "Captcha-Guard",
     title: "Captcha Guard",
     css: `
     :root {
@@ -10331,7 +10333,7 @@ ul {
     `,
   },
   {
-    taskId: "Calculator",  
+    taskId: "Calculator",
     title: "Calculator",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&family=Spartan:wght@700&display=swap");
@@ -10502,7 +10504,7 @@ button:hover {
     `,
   },
   {
-    taskId: "Copy-To-Clipboard",  
+    taskId: "Copy-To-Clipboard",
     title: "Copy To Clipboard",
     css: `
     @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
@@ -10627,7 +10629,7 @@ body {
     `,
   },
   {
-    taskId: "English-Dictionary",  
+    taskId: "English-Dictionary",
     title: "English Dictionary",
     css: `
     * {
@@ -10827,7 +10829,203 @@ body {
   
     `,
   },
- 
+  {
+    taskId: "day1",
+    title: "Day 1",
+    css: `
+    /* Main Navbar Styling */
+    body {
+      margin: 0;
+    }
+.navbar {
+  background: linear-gradient(to right, #6a0dad, #1e3a8a);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  padding-left: 0;
+}
+.navbar-list ul{
+  list-style: none;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-item a {
+  text-decoration: none;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  font-size: 16px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s;
+}
+
+/* Hover effect for showing dropdown */
+.navbar-item:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 200px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  margin-top: 0;
+  border: 1px solid #f3f4f6;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+  
+}
+
+.dropdown-item {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #374151;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* Sub Dropdown */
+.sub-dropdown-menu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 180px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  margin-top: 0;
+  border: 1px solid #f3f4f6;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+}
+
+/* Show sub-dropdown when parent item is hovered */
+.dropdown-item:hover .sub-dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.sub-dropdown-item {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #374151;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.sub-dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* Burger Menu */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    background: linear-gradient(to right, #6a0dad, #1e3a8a);
+    position: absolute;
+    top: 64px;
+    left: 0;
+    padding: 16px 0;
+  }
+
+  .navbar-list.open {
+    display: flex;
+  }
+
+  .navbar-item {
+    text-align: center;
+  }
+
+  .navbar-toggle {
+    display: flex;
+
+  }
+}
+
+    `,
+  },
 ];
 
 export default stylesData;

@@ -117,6 +117,11 @@ nav {
   z-index: 1000;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
  .dropdown-menu,
 .dropdown-menu.show {
   opacity: 1;
@@ -132,9 +137,49 @@ nav {
   border-radius: 4px;
   transition: all 0.2s ease;
   white-space: nowrap;
+  position: relative; 
 }
 
 .dropdown-item:hover {
+  background: var(--fill3);
+  transform: translateX(5px);
+  color: var(--bg);
+}
+
+/* Sub-dropdown menu */
+.sub-dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  color: var(--accent);
+  top: 0;
+  background: var(--bg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  min-width: 200px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.dropdown-item a:visited {
+  color: var(--accent); /* Maintain the initial color */
+}
+
+/* Show sub-dropdown on hover */
+.dropdown-item:hover .sub-dropdown-menu {
+  display: block;
+}
+
+/* Styling for sub-dropdown items */
+.sub-dropdown-item {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.sub-dropdown-item:hover {
   background: var(--fill3);
   transform: translateX(5px);
   color: var(--bg);

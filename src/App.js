@@ -208,7 +208,7 @@ const App = () => {
             }
           />
           <Route
-            path='/reactlessons'
+            path='/exercises/reactlessons'
             element={
               <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
                 <ReactLessons />
@@ -216,7 +216,7 @@ const App = () => {
             }
           />
           <Route
-            path='/livelessons'
+            path='/exercises/livelessons'
             element={
               <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
                 <LiveLessons />
@@ -232,7 +232,7 @@ const App = () => {
             }
           />
            <Route
-            path='/workshoplist'
+            path='/exercises/workshoplist'
             element={
               <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
                 <WorkshopList />

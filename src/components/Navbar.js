@@ -75,12 +75,66 @@ const Navbar = () => {
                 </Link>
                 {showExercisesDropdown && (
                   <div className='dropdown-menu'>
-                    <Link to='/exercises' className='dropdown-item'>
-                      React Exercises
-                    </Link>
-                    <Link to='/interview' className='dropdown-item'>
-                      React Interview
-                    </Link>
+                    <div className='dropdown-item'>
+                      <Link to='/exercises' >React Exercises</Link>
+                      <div className='sub-dropdown-menu'>
+                        <Link
+                          to='/exercises/reactlessons'
+                          className='sub-dropdown-item'
+                        >
+                          Dynamic Interfaces
+                        </Link>
+                        <Link
+                          to='/exercises/livelessons'
+                          className='sub-dropdown-item'
+                        >
+                          Live Projects
+                        </Link>
+                        <Link
+                          to='/exercises/workshoplist'
+                          className='sub-dropdown-item'
+                        >
+                          Build with Me
+                        </Link>
+                      </div>
+                    </div>
+
+                    <div className='dropdown-item'>
+                      <Link to='/interview'>React Interview</Link>
+                      <span></span>
+                      <div className='sub-dropdown-menu'>
+                        <Link
+                          to='/interview/questions'
+                          className='sub-dropdown-item'
+                        >
+                          Interview Questions
+                        </Link>
+                        <Link
+                          to='/interview/tasks'
+                          className='sub-dropdown-item'
+                        >
+                          Interview Tasks
+                        </Link>
+                        <Link
+                          to='/interview/quiz'
+                          className='sub-dropdown-item'
+                        >
+                          Interview Quiz
+                        </Link>
+                        <Link
+                          to='/interview/code-quiz'
+                          className='sub-dropdown-item'
+                        >
+                          Code Quiz
+                        </Link>
+                        <Link
+                          to='/interview/correct-code'
+                          className='sub-dropdown-item'
+                        >
+                          Correct Code
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
@@ -118,14 +172,14 @@ const Navbar = () => {
         <div className='right'>
           {isLoggedIn ? (
             <>
-        <Coffee />
+              <Coffee />
               <button onClick={handleLogout} className='button-35'>
                 Sign Out
               </button>
             </>
           ) : (
             <>
-            <Coffee />
+              <Coffee />
               <Link to='/login' className='button-35'>
                 Login
               </Link>
@@ -165,6 +219,12 @@ const Navbar = () => {
                         className='responsive-dropdown-item'
                       >
                         React Interview
+                      </Link>
+                      <Link
+                        to='/exercises/workshoplist'
+                        className='responsive-dropdown-item'
+                      >
+                        Workshop
                       </Link>
                     </div>
                   )}

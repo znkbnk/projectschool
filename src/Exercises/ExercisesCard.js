@@ -6,7 +6,7 @@ const Card = ({ img, title, desc, to }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 769);
 
   // Paths that should always redirect to "/mobile-message" on mobile screens
-  const mobileRedirectPaths = ["/reactlessons", "/livelessons"];
+  const mobileRedirectPaths = ["/reactlessons", "/livelessons", "/musicacademy"];
 
   // Update mobile flag on window resize
   useEffect(() => {

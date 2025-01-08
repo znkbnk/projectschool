@@ -29,306 +29,204 @@ export default authorsData;
 const tasksData = {
    Workshop: [
     {
-      taskId: "Workshop1",
-      taskTitle: "",
-      introduction: "",
-      task: {
-        taskDescription: "",
-        platform: 'Freelancer',
-        projectName: "",
-        biddingEnds: '',
-        requirements: [
-            "",
-                "",
-                "",
-       
-      ],
-      },
+      taskId: "day1",
+      taskTitle: "Building a Navbar and Deploying to Netlify",
+      introduction: "In this lesson, we're building a dynamic React navbar with dropdown menus and routing, then deploying the project live on Netlify.",      
       steps: [
         {
-          stepTitle: "Step 1: ",
+          stepTitle: "Step 1: Setup Project Environment",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
               descriptions: [ 
-              "",
-              "",
-              "",
+              "Initialize a React project using create-react-app or a similar setup.",
+              "Install necessary dependencies, including react-router-dom and react-feather.",
               ],
             },
-            {
-              subtitleDescription: "",
-              descriptions: [ 
-              "",
-              "",
-              "",
-              ],
-            },
-            {
-              subtitleDescription: "",
-            descriptions: [ 
-              "",
-              "",
-              "",
-              ],
-            },
-            {
-              subtitleDescription: "",
-             descriptions: [ 
-              "",
-              "",
-              "",
-              ],
-            },
+           
           ],
         },
         {
-          stepTitle: "Step 2: ",
+          stepTitle: "Step 2: Create a Navbar Component",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
              descriptions: [ 
-              "",
-              "",
-              "",
+              "Create a Navbar component file for implementing the navigation bar.",
+              
               ],
             },
-            {
-              subtitleDescription: "",
-              descriptions: [ 
-              "",
-              "",
-              "",
-              ],
-            },
-            {
-              subtitleDescription: "",
-            descriptions: [ 
-              "",
-              "",
-              "",
-              ],
-            },
+          
           ],
         },
          {
-          stepTitle: "Step 3: ",
+          stepTitle: "Step 3: Design the HTML Structure",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
             descriptions: [ 
-              "",
-              "",
-              "",
+              "Plan a flexible structure for the navbar, including sections for the brand name, menu items, and dropdowns.",
+              "Include toggleable submenus for nested dropdown functionality.",
+           
               ],
             },
-            {
-              subtitleDescription: "",
-             descriptions: [ 
-              "",
-              "",
-              "",
-              ],
-            },
+         
           ],
         },
          {
-          stepTitle: "Step 4: ",
+          stepTitle: "Step 4: Add State Management",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
             descriptions: [ 
-              "",
-              "",
-              "",
+              "Use React's useState to manage the state for opening and closing the menu.",
+             
               ],
             },
-            {
-              subtitleDescription: "",
-             descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
+           
           ],
         },
          {
-          stepTitle: "Step 5: ",
+          stepTitle: "Step 5: Implement Toggle Logic",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
              descriptions: [ 
-               "",
-                "",
-                "",
+               "Create a function to handle the opening and closing of the menu when the toggle button is clicked.",
               ],
             },
-            {
-              subtitleDescription: "",
-             descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
+          
           ],
         },
          {
-          stepTitle: "Step 6: ",
+          stepTitle: "Step 6: Set Up Routing",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
              descriptions: [ 
-               "",
-                "",
-                "",
+               "Use react-router-dom to define routes and enable navigation between pages.",
+           
               ],
             },
-            {
-              subtitleDescription: "",
-              descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
-            {
-              subtitleDescription: "",
-             descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
-            {
-              subtitleDescription: "",
-             descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
-            {
-              subtitleDescription: "",
-              descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
+           
           ],
         },
          {
-          stepTitle: "Step 7: ",
+          stepTitle: "Step 7: Style the Navbar",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
              descriptions: [ 
-               "",
-                "",
-                "",
+               "Use a CSS file to style the navbar, dropdown menus, and responsive toggle button.",
+                "Ensure the styles adapt to different screen sizes and support both open/closed menu states.",
               ],
             },
-            {
-              subtitleDescription: "",
-              descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
-            {
-              subtitleDescription: "",
-            descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
+           
           ],
         },
          {
-          stepTitle: "Step 8: ",
+          stepTitle: "Step 8: Include Dropdown Menus",
            titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
              descriptions: [ 
-               "",
-                "",
-                "",
+               "Add dropdown menus to specific navbar items.",
+                "Add nested dropdowns for multi-level navigation.",
               ],
             },
-            {
-              subtitleDescription: "",
-             descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
-            {
-              subtitleDescription: "",
-             descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
+          
           ],
         },
          {
-          stepTitle: "Step 9: ",
+          stepTitle: "Step 9: Add Icons",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
              descriptions: [ 
-               "",
-                "",
-                "",
+               "Import and integrate icons from react-feather for visual cues, like dropdown chevrons.",
               ],
             },
-            {
-              subtitleDescription: "",
-             descriptions: [ 
-               "",
-                "",
-                "",
-              ],
-            },
+           
           ],
         },
-         {
-          stepTitle: "Step 10: ",
+        {
+          stepTitle: "Step 10: Test Responsiveness",
            titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
              descriptions: [ 
-               "",
-                "",
-                "",
+               "Test the navbar on various devices to ensure it is responsive and functions as expected.",
               ],
             },
+          
+          ],
+        }, {
+          stepTitle: "Step 11: Optimize for Accessibility",
+           titleDescription: "",
+          sections: [
             {
               subtitleDescription: "",
              descriptions: [ 
-               "",
-                "",
-                "",
+               "Add accessible attributes (e.g., aria-label, aria-expanded) to improve usability for all users.",
               ],
             },
+           
           ],
-        },
+        }, {
+          stepTitle: "Step 12: Integrate with Pages",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Link each menu item to the appropriate page or section using Link from react-router-dom.",
+              ],
+            },
+          
+          ],
+        }, {
+          stepTitle: "Step 13: Steps to Deploy a React Project to Netlify",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Go to Netlify and create an account.",
+                "Link your newly created account with your GitHub.",
+                "Click Add New Site and in the dropdown, choose Import existing project.",
+                "Select GitHub (first option).",
+                "In the search bar, type the name of your repository where your project is uploaded.",
+                "Add a Site Name for your project.",
+                "Lastly, click Deploy Your-name-project.",
+                
+              ],
+            },
+           
+          ],
+        }, {
+          stepTitle: "Important! ",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "For React projects using react-router-dom, ensure a _redirects file is in your public folder to handle SPA routing. Add the following to the _redirects file: /*    /index.html   200",
+               
+              ],
+            },
+          
+          ],
+        }, 
        
       ],
       taskType: "Workshop",
@@ -336,7 +234,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "/notavailable",
+      codesandboxUrl: "https://codesandbox.io/embed/dqlfvq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons1.webp"),
       videoLink: "",
     },
@@ -13857,6 +13755,312 @@ Live lessons
       completed: false,
       codesandboxUrl: "codesandbox",
       img: require("../images/livelessons.webp"),
+      videoLink: "",
+    },
+
+
+
+    Workshop/MusicAcademy
+
+
+    {
+      taskId: "day",
+      taskTitle: "",
+      introduction: "",      
+      steps: [
+        {
+          stepTitle: "Step 1: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 2: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 3: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 8: ",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 9: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 10: ",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "/notavailable",
+      img: require("../images/livelessons1.webp"),
       videoLink: "",
     },
 
