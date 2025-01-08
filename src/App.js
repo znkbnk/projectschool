@@ -36,6 +36,8 @@ import ProtectedRoute from "./ProtectedRoute";
 import InterviewCodeQuiz from "./Interview/InterviewCodeQuiz";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import InterviewCorrectCode from "./Interview/InterviewCorrectCode";
+import WorkshopList from "./Exercises/WorkshopList";
+import MusicAcademy from "./Exercises/MusicAcademy";
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -218,6 +220,22 @@ const App = () => {
             element={
               <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
                 <LiveLessons />
+              </ProtectedRouteWrapper>
+            }
+          />
+           <Route
+            path='/musicacademy'
+            element={
+              <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
+                <MusicAcademy />
+              </ProtectedRouteWrapper>
+            }
+          />
+           <Route
+            path='/workshoplist'
+            element={
+              <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
+                <WorkshopList />
               </ProtectedRouteWrapper>
             }
           />

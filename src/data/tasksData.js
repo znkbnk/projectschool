@@ -27,6 +27,322 @@ const authorsData = [
 export default authorsData;
 
 const tasksData = {
+   Workshop: [
+    {
+      taskId: "Workshop1",
+      taskTitle: "",
+      introduction: "",
+      task: {
+        taskDescription: "",
+        platform: 'Freelancer',
+        projectName: "",
+        biddingEnds: '',
+        requirements: [
+            "",
+                "",
+                "",
+       
+      ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 2: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 3: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "",
+              "",
+              "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 8: ",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 9: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 10: ",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "",
+                "",
+                "",
+              ],
+            },
+          ],
+        },
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "/notavailable",
+      img: require("../images/livelessons1.webp"),
+      videoLink: "",
+    },
+
+
+  ],
   Live: [
     {
       taskId: "Basic-Android-React-Native-App-with-Google-Login",

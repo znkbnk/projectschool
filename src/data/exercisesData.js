@@ -28,6 +28,12 @@ const exercisesData = [
       title: "Live React Projects",
       desc: "Join live sessions where real-world React projects come to life. Watch as we explore websites like Freelancer and Fiverr to find exciting projects, and then build them step-by-step in real-time. Perfect for learning React in a hands-on, practical way.",
       to: "/livelessons",
+    },
+    {
+      img: "./images/live-trans.webp",
+      title: "Build with Me",
+      desc: "Dive deep into the development process with me! In this section, I'll be building a new project live, sharing my thought process, troubleshooting challenges, and demonstrating best practices. It's the perfect opportunity to learn by observing and gain valuable insights into real-world development.",
+      to: "/workshoplist",
     }
   ];
 
