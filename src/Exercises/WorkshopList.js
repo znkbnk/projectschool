@@ -4,7 +4,7 @@ import { workshopListData } from "../data/workshopListData";
 import "../styles/exercises.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import LiveTitle from "./LiveTitle";
+import WorkshopListTitle from "./WorkshopListTitle";
 
 const WorkshopList = () => {
   function ScrollToTopOnNavigation() {
@@ -16,7 +16,7 @@ const WorkshopList = () => {
       <ScrollToTopOnNavigation />
 
       <Navbar />
-      <LiveTitle />
+      <WorkshopListTitle />
 
       <div className='wrapper'>
         {workshopListData.map((exercise, index) => (

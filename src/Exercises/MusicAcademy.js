@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import ProgressBar from "./ProgressBar";
 import { tasksData, authorsData } from "../data/tasksData";
 import FilteredTasks from "./FilteredTasks";
-import LiveTitle from "./LiveTitle";
+import MusicAcademyTitle from "./MusicAcademyTitle";
 
 function MusicAcademy() {
   const getCompletedTasks = () => {
@@ -24,7 +24,7 @@ function MusicAcademy() {
     <>
       <Navbar />
       <div className='header'>
-        <LiveTitle />
+        <MusicAcademyTitle />
       </div>
       <ProgressBar
         numStages={tasksData.Workshop.length}

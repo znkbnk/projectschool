@@ -224,7 +224,7 @@ const App = () => {
             }
           />
            <Route
-            path='/musicacademy'
+            path='/exercises/musicacademy'
             element={
               <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
                 <MusicAcademy />
