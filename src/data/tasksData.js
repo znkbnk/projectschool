@@ -235,7 +235,7 @@ const tasksData = {
       prerequisites: ["Workshop Projects"],
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/dqlfvq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
-      img: require("../images/livelessons1.webp"),
+      img: require("../images/musicacademy/day1.webp"),
       videoLink: "",
     },
 
