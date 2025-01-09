@@ -1,4 +1,27 @@
 const solutionCode1 = `
+// App.js
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Components/Home";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path='/' element={<Home />} />          
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+`;
+
+const solutionCode2 = `
+// Components/Home.js
+
 import  { useState } from 'react';
 import '../styles/home.css'
 
@@ -137,4 +160,5 @@ export default Home;
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   solutionCode1,
+  solutionCode2,
 ]

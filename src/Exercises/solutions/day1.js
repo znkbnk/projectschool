@@ -1,4 +1,23 @@
 const solutionCode1 = `
+// App.js
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div>
+       <Navbar />
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+`;
+
+const solutionCode2 = `
 //Components/Navbar.js
 
 import { Link } from "react-router-dom";
@@ -143,5 +162,6 @@ export default Navbar;
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   solutionCode1,
+  solutionCode2,
   
 ];
