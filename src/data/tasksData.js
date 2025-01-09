@@ -27,11 +27,12 @@ const authorsData = [
 export default authorsData;
 
 const tasksData = {
-   Workshop: [
+  Workshop: [
     {
       taskId: "day1",
       taskTitle: "Building a Navbar and Deploying to Netlify",
-      introduction: "In this lesson, we're building a dynamic React navbar with dropdown menus and routing, then deploying the project live on Netlify.",      
+      introduction:
+        "In this lesson, we're building a dynamic React navbar with dropdown menus and routing, then deploying the project live on Netlify.",
       steps: [
         {
           stepTitle: "Step 1: Setup Project Environment",
@@ -39,12 +40,11 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-              "Initialize a React project using create-react-app or a similar setup.",
-              "Install necessary dependencies, including react-router-dom and react-feather.",
+              descriptions: [
+                "Initialize a React project using create-react-app or a similar setup.",
+                "Install necessary dependencies, including react-router-dom and react-feather.",
               ],
             },
-           
           ],
         },
         {
@@ -53,193 +53,336 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Create a Navbar component file for implementing the navigation bar.",
-              
+              descriptions: [
+                "Create a Navbar component file for implementing the navigation bar.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Design the HTML Structure",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "Plan a flexible structure for the navbar, including sections for the brand name, menu items, and dropdowns.",
-              "Include toggleable submenus for nested dropdown functionality.",
-           
+              descriptions: [
+                "Plan a flexible structure for the navbar, including sections for the brand name, menu items, and dropdowns.",
+                "Include toggleable submenus for nested dropdown functionality.",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Add State Management",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "Use React's useState to manage the state for opening and closing the menu.",
-             
+              descriptions: [
+                "Use React's useState to manage the state for opening and closing the menu.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Implement Toggle Logic",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Create a function to handle the opening and closing of the menu when the toggle button is clicked.",
+              descriptions: [
+                "Create a function to handle the opening and closing of the menu when the toggle button is clicked.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Set Up Routing",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Use react-router-dom to define routes and enable navigation between pages.",
-           
+              descriptions: [
+                "Use react-router-dom to define routes and enable navigation between pages.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Style the Navbar",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Use a CSS file to style the navbar, dropdown menus, and responsive toggle button.",
+              descriptions: [
+                "Use a CSS file to style the navbar, dropdown menus, and responsive toggle button.",
                 "Ensure the styles adapt to different screen sizes and support both open/closed menu states.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Include Dropdown Menus",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Add dropdown menus to specific navbar items.",
+              descriptions: [
+                "Add dropdown menus to specific navbar items.",
                 "Add nested dropdowns for multi-level navigation.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Add Icons",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Import and integrate icons from react-feather for visual cues, like dropdown chevrons.",
+              descriptions: [
+                "Import and integrate icons from react-feather for visual cues, like dropdown chevrons.",
               ],
             },
-           
           ],
         },
         {
           stepTitle: "Step 10: Test Responsiveness",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Test the navbar on various devices to ensure it is responsive and functions as expected.",
+              descriptions: [
+                "Test the navbar on various devices to ensure it is responsive and functions as expected.",
               ],
             },
-          
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 11: Optimize for Accessibility",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Add accessible attributes (e.g., aria-label, aria-expanded) to improve usability for all users.",
+              descriptions: [
+                "Add accessible attributes (e.g., aria-label, aria-expanded) to improve usability for all users.",
               ],
             },
-           
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 12: Integrate with Pages",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Link each menu item to the appropriate page or section using Link from react-router-dom.",
+              descriptions: [
+                "Link each menu item to the appropriate page or section using Link from react-router-dom.",
               ],
             },
-          
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 13: Steps to Deploy a React Project to Netlify",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Go to Netlify and create an account.",
+              descriptions: [
+                "Go to Netlify and create an account.",
                 "Link your newly created account with your GitHub.",
                 "Click Add New Site and in the dropdown, choose Import existing project.",
                 "Select GitHub (first option).",
                 "In the search bar, type the name of your repository where your project is uploaded.",
                 "Add a Site Name for your project.",
                 "Lastly, click Deploy Your-name-project.",
-                
               ],
             },
-           
           ],
-        }, {
+        },
+        {
           stepTitle: "Important! ",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "For React projects using react-router-dom, ensure a _redirects file is in your public folder to handle SPA routing. Add the following to the _redirects file: /*    /index.html   200",
-               
+              descriptions: [
+                "For React projects using react-router-dom, ensure a _redirects file is in your public folder to handle SPA routing. Add the following to the _redirects file: /*    /index.html   200",
               ],
             },
-          
           ],
-        }, 
-       
+        },
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/dqlfvq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/dqlfvq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day1.webp"),
       videoLink: "",
     },
-
-
+    {
+      taskId: "day2",
+      taskTitle: "Harmony Music Academy Home Page",
+      introduction:
+        "Harmony Music Academy's homepage offers a captivating experience with a hero section showcasing the academy's mission, dynamic testimonials, engaging program highlights, and impressive stats, all beautifully styled for an immersive user journey.",
+      steps: [
+        {
+          stepTitle: "Step 1: Create the Home Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Define a functional component named Home in Components folder using React.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 2: Set Up State Management",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Use the useState hook to manage the states.",
+                "A boolean state (isPlaying) to toggle the play button's functionality.",
+                "An integer state (activeTestimonial) to track the currently displayed testimonial.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 3: Prepare Static Data",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Create array for: Testimonials, including details such as name, role, and text.",
+                "Create array for: Stats, including value and label.",
+                "Create array for: Program details, including title, description, and features.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 4: Structure the Hero Section",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Add a background image and overlay for styling.",
+                "Include a title, description, and buttons for primary action (start journey) and secondary action (toggle demo video state).",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 5: Design the Stats Section",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Display stats in a grid layout with cards showing the value and label for each statistic.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 6: Build the Programs Section",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Use a grid layout to present each program with: a title and description, also a list of features displayed as bullet points.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 7: Implement the Testimonials Section",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Display the active testimonial dynamically based on the activeTestimonial state.",
+                "Create navigation dots to switch between testimonials.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 8: Apply Styling",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Write custom CSS in home.css for each section",
+                "Ensure responsive design for different screen sizes.",
+                "Add hover effects for buttons and cards.",
+                "Style text, grids, and layouts as per the design.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 9: Test and Debug",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Verify the functionality of the play button for the demo.",
+                "Ensure navigation dots update the testimonial dynamically.",
+                "Check for responsiveness across devices.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 10: Optimize for Performance",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Lazy-load images or optimize their sizes.",
+                "Minimize CSS and JavaScript for production.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 11: Deploy",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Push your updates to the project's repository, and Netlify will automatically detect the changes and update the deployment seamlessly.",
+              ],
+            },
+          ],
+        },
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/y9k8p2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/musicacademy/day2.webp"),
+      videoLink: "",
+    },
   ],
   Live: [
     {
@@ -1974,7 +2117,8 @@ const tasksData = {
     },
     {
       taskId: "App-with-Contentful-Integration",
-      taskTitle: "Building a React App with Contentful Integration for Content Sharing",
+      taskTitle:
+        "Building a React App with Contentful Integration for Content Sharing",
       introduction:
         "This project is a content-sharing app built with React and Contentful, allowing users to share various types of content. It utilizes Contentful for dynamic content management, providing real-time updates and seamless interactions with different media types. The app's responsive and user-friendly interface is powered by modern web technologies like React, ensuring a smooth experience for users to explore and engage with content.",
       task: {
@@ -2030,23 +2174,24 @@ const tasksData = {
 
         {
           stepTitle: "Step 2: Create Components",
-          titleDescription: "Create the necessary components for your React app, each with specific functionality.",
+          titleDescription:
+            "Create the necessary components for your React app, each with specific functionality.",
           sections: [
             {
               subtitleDescription: "Header Component",
-              descriptions: [ 
+              descriptions: [
                 "Purpose: This component will be used across all pages and will display the site's navigation links, logo, and theme toggle button.",
                 "Tasks:",
                 "Create a functional component Header inside src/components.",
                 "Include the app's logo or title (e.g., 'React Blog App').",
                 "Add navigation links to Home, Login, and other pages.",
                 "Add a theme toggle button to switch between light and dark themes.",
-                "Implement a useContext hook to handle theme switching with context."
+                "Implement a useContext hook to handle theme switching with context.",
               ],
             },
             {
               subtitleDescription: "PostList Component",
-              descriptions: [ 
+              descriptions: [
                 "Purpose: This component will fetch and display a list of blog posts from the Contentful API.",
                 "Tasks:",
                 "Create a functional component PostList inside src/components.",
@@ -2063,12 +2208,12 @@ const tasksData = {
                 "  - Implement a simple search bar to filter posts by title or tags.",
                 "Pagination:",
                 "  - Limit the number of posts per page (e.g., 5 or 10).",
-                "  - Add pagination controls to navigate through pages."
+                "  - Add pagination controls to navigate through pages.",
               ],
             },
             {
               subtitleDescription: "PostDetail Component",
-              descriptions: [ 
+              descriptions: [
                 "Purpose: This component displays the detailed content of a single post, including the post's title, content, and comments.",
                 "Tasks:",
                 "Create a PostDetail component inside src/pages.",
@@ -2080,12 +2225,12 @@ const tasksData = {
                 "Add Comments Section:",
                 "  - Display comments related to the post.",
                 "  - Allow users to add comments.",
-                "  - (Optional) Store comments locally or send them to a backend API."
+                "  - (Optional) Store comments locally or send them to a backend API.",
               ],
             },
             {
               subtitleDescription: "CommentSection Component",
-              descriptions: [ 
+              descriptions: [
                 "Purpose: This component will handle the display of comments for each post and allow users to submit new comments.",
                 "Tasks:",
                 "Create a functional component CommentSection.",
@@ -2094,307 +2239,308 @@ const tasksData = {
                 "  - A submit button to add the comment.",
                 "  - A list of existing comments, either fetched from Contentful or stored locally.",
                 "  - (Optional) Implement validation to ensure the comment is not empty.",
-                "  - Add animations or transitions when a new comment is added using Framer Motion."
+                "  - Add animations or transitions when a new comment is added using Framer Motion.",
               ],
             },
             {
               subtitleDescription: "Login Component",
-              descriptions: [ 
+              descriptions: [
                 "Purpose: This component will handle user authentication, allowing users to log in.",
                 "Tasks:",
                 "Create a Login component inside src/pages.",
                 "Include fields for username and password.",
                 "On form submission, validate the credentials (mock the backend if needed).",
                 "If login is successful, store the user's authentication status in localStorage or a state management solution like Redux.",
-                "Redirect the user to the homepage or post page upon successful login."
+                "Redirect the user to the homepage or post page upon successful login.",
               ],
             },
           ],
-        }
-        ,
+        },
         {
           stepTitle: "Step 3: Set Up Routing",
-          titleDescription: "Set up React Router for navigation between pages in your app.",
+          titleDescription:
+            "Set up React Router for navigation between pages in your app.",
           sections: [
             {
               subtitleDescription: "Configure Routes",
-              descriptions: [ 
+              descriptions: [
                 "Set up React Router to handle navigation between pages.",
                 "Tasks:",
                 "  - Install React Router: `npm install react-router-dom`.",
                 "  - In your App.js, import the necessary components from react-router-dom.",
-                "  - Create routes for the following pages:"
+                "  - Create routes for the following pages:",
               ],
             },
             {
               subtitleDescription: "Home Page Route",
-              descriptions: [ 
+              descriptions: [
                 "A route for the home page (/):",
                 "  - Displays the PostList component.",
-                "  - Use <Route path='/' component={PostList} /> for the home route."
+                "  - Use <Route path='/' component={PostList} /> for the home route.",
               ],
             },
             {
               subtitleDescription: "Post Detail Page Route",
-              descriptions: [ 
+              descriptions: [
                 "A route for the post detail page (/post/:id):",
                 "  - Displays the PostDetail component.",
-                "  - Use <Route path='/post/:id' component={PostDetail} /> to show individual post details."
+                "  - Use <Route path='/post/:id' component={PostDetail} /> to show individual post details.",
               ],
             },
             {
               subtitleDescription: "Login Page Route",
-              descriptions: [ 
+              descriptions: [
                 "A route for the login page (/login):",
                 "  - Displays the Login component.",
-                "  - Use <Route path='/login' component={Login} /> for the login route."
+                "  - Use <Route path='/login' component={Login} /> for the login route.",
               ],
             },
           ],
-        }
-        ,
+        },
         {
           stepTitle: "Step 4: Authentication",
-          titleDescription: "Set up a login mechanism to manage user authentication.",
+          titleDescription:
+            "Set up a login mechanism to manage user authentication.",
           sections: [
             {
               subtitleDescription: "Create Login Form",
-              descriptions: [ 
+              descriptions: [
                 "Create a login form where users can enter their credentials.",
-                "Include fields for username and password."
+                "Include fields for username and password.",
               ],
             },
             {
               subtitleDescription: "Authenticate User",
-              descriptions: [ 
+              descriptions: [
                 "Authenticate the user using mock data or real authentication methods.",
                 "If using mock data, compare entered credentials to predefined values.",
-                "For real authentication, connect to a backend API to verify the user's credentials."
+                "For real authentication, connect to a backend API to verify the user's credentials.",
               ],
             },
             {
               subtitleDescription: "Update Login Status",
-              descriptions: [ 
+              descriptions: [
                 "On successful login, update the `isLoggedIn` state.",
-                "Persist the login status in localStorage to keep the user logged in even after page reload."
+                "Persist the login status in localStorage to keep the user logged in even after page reload.",
               ],
             },
             {
               subtitleDescription: "Conditionally Render Components",
-              descriptions: [ 
+              descriptions: [
                 "Conditionally render the Home and PostDetail components based on the login status.",
                 "  - If the user is logged in, render the Home page and PostDetail page.",
-                "  - If the user is not logged in, redirect to the Login page."
+                "  - If the user is not logged in, redirect to the Login page.",
               ],
             },
             {
               subtitleDescription: "Implement Logout Feature",
-              descriptions: [ 
+              descriptions: [
                 "Implement a logout feature to clear the login status.",
                 "  - On logout, remove the login status from localStorage.",
-                "  - Redirect the user to the Login page."
+                "  - Redirect the user to the Login page.",
               ],
             },
           ],
-        }
-        ,
+        },
         {
           stepTitle: "Step 5: Theme Management",
           titleDescription: "Set up a light/dark theme toggle for the app.",
           sections: [
             {
               subtitleDescription: "Create ThemeProvider Component",
-              descriptions: [ 
+              descriptions: [
                 "Create a ThemeProvider component with context to manage the theme state.",
-                "This component will handle the logic for toggling between light and dark themes."
+                "This component will handle the logic for toggling between light and dark themes.",
               ],
             },
             {
               subtitleDescription: "Pass Theme to the App",
-              descriptions: [ 
+              descriptions: [
                 "Pass the theme to the app through the context provider.",
-                "Update the styles dynamically based on the selected theme, e.g., using styled-components or CSS variables."
+                "Update the styles dynamically based on the selected theme, e.g., using styled-components or CSS variables.",
               ],
             },
           ],
-        }
-        ,
+        },
         {
           stepTitle: "Step 6: Data Storage (Optional)",
-          titleDescription: "Set up data storage to manage posts and comments, either using a CMS like Contentful or local storage.",
+          titleDescription:
+            "Set up data storage to manage posts and comments, either using a CMS like Contentful or local storage.",
           sections: [
             {
               subtitleDescription: "Using a CMS (e.g., Contentful)",
-              descriptions: [ 
+              descriptions: [
                 "Set up an API client to fetch posts and comments.",
-                "Add necessary fields in Contentful such as post title, content, tags, and comments."
+                "Add necessary fields in Contentful such as post title, content, tags, and comments.",
               ],
             },
             {
               subtitleDescription: "Using Local Storage",
-              descriptions: [ 
-                "Store the posts, tags, and comments in local storage or simulate a mock API for development purposes."
+              descriptions: [
+                "Store the posts, tags, and comments in local storage or simulate a mock API for development purposes.",
               ],
             },
           ],
-        }
-        
-        ,
+        },
+
         {
           stepTitle: "Step 7: Styling and Layout",
-          titleDescription: "Style the app and create a responsive layout for both mobile and desktop views.",
+          titleDescription:
+            "Style the app and create a responsive layout for both mobile and desktop views.",
           sections: [
             {
               subtitleDescription: "Style the App",
-              descriptions: [ 
+              descriptions: [
                 "Style the header, post list, and individual posts using CSS or CSS-in-JS.",
-                "Apply consistent and modern design elements across the app."
+                "Apply consistent and modern design elements across the app.",
               ],
             },
             {
               subtitleDescription: "Add Animations",
-              descriptions: [ 
+              descriptions: [
                 "Use Framer Motion or other animation libraries to add transitions and animations to components.",
-                "Consider animations for interactions such as button clicks or post transitions."
+                "Consider animations for interactions such as button clicks or post transitions.",
               ],
             },
             {
               subtitleDescription: "Create a Responsive Layout",
-              descriptions: [ 
+              descriptions: [
                 "Create a responsive layout that adjusts for both mobile and desktop views.",
-                "Ensure that key components, such as the header and post list, are mobile-friendly."
+                "Ensure that key components, such as the header and post list, are mobile-friendly.",
               ],
             },
             {
               subtitleDescription: "Style the Login Page",
-              descriptions: [ 
+              descriptions: [
                 "Style the login page to make it look polished and user-friendly.",
-                "Ensure that the form is easy to use and looks consistent with the rest of the app."
+                "Ensure that the form is easy to use and looks consistent with the rest of the app.",
               ],
             },
           ],
-        }
-        ,
+        },
         {
           stepTitle: "Step 8: Testing and Debugging",
-          titleDescription: "Test the app functionality to ensure everything is working as expected.",
+          titleDescription:
+            "Test the app functionality to ensure everything is working as expected.",
           sections: [
             {
               subtitleDescription: "Test Routing",
-              descriptions: [ 
-                "Ensure that routing works correctly between pages, including the home page, post details, and login page."
+              descriptions: [
+                "Ensure that routing works correctly between pages, including the home page, post details, and login page.",
               ],
             },
             {
               subtitleDescription: "Test Login Functionality",
-              descriptions: [ 
+              descriptions: [
                 "Check that the login functionality and authentication flow are working as expected.",
-                "Ensure users can log in, maintain their session, and access protected pages."
+                "Ensure users can log in, maintain their session, and access protected pages.",
               ],
             },
             {
               subtitleDescription: "Test Comment Section",
-              descriptions: [ 
+              descriptions: [
                 "Verify that the comment section is working and comments persist as expected.",
-                "Ensure comments are being displayed and added correctly, and handle edge cases like empty comments."
+                "Ensure comments are being displayed and added correctly, and handle edge cases like empty comments.",
               ],
             },
             {
               subtitleDescription: "Test Theme Switching",
-              descriptions: [ 
+              descriptions: [
                 "Test theme switching functionality and ensure it applies correctly across all components.",
-                "Check that both light and dark themes are applied consistently throughout the app."
+                "Check that both light and dark themes are applied consistently throughout the app.",
               ],
             },
           ],
-        }
-        ,
+        },
         {
           stepTitle: "Steps for Integrating Contentful into a React Project",
-          titleDescription: "Integrate Contentful as a headless CMS into your React app to manage and display dynamic content.",
+          titleDescription:
+            "Integrate Contentful as a headless CMS into your React app to manage and display dynamic content.",
           sections: [
             {
               subtitleDescription: "Set Up a Contentful Account",
               descriptions: [
                 "Sign up for a free Contentful account at Contentful.",
-                "Create a new space (project) where you will store your content."
+                "Create a new space (project) where you will store your content.",
               ],
             },
             {
               subtitleDescription: "Create a Content Model",
               descriptions: [
                 "In the Contentful dashboard, go to the 'Content Model' section.",
-                "Define the structure for the content you want to manage, like a blog model with fields for title, body, images, etc."
+                "Define the structure for the content you want to manage, like a blog model with fields for title, body, images, etc.",
               ],
             },
             {
               subtitleDescription: "Add Content to Your Space",
               descriptions: [
                 "Go to the 'Content' section in Contentful and start adding entries based on the models you created.",
-                "For example, add blog posts with title, content, images, and other relevant fields."
+                "For example, add blog posts with title, content, images, and other relevant fields.",
               ],
             },
             {
               subtitleDescription: "Set Up Contentful in Your React Project",
               descriptions: [
                 "Install the Contentful SDK in your React project to fetch content from Contentful.",
-                "Set up a service file to manage API calls to Contentful using your Space ID and Access Token."
+                "Set up a service file to manage API calls to Contentful using your Space ID and Access Token.",
               ],
             },
             {
               subtitleDescription: "Fetch Content in React",
               descriptions: [
-                "Use the Contentful API to request content, specifying which content type (e.g., blog posts) you want to retrieve."
+                "Use the Contentful API to request content, specifying which content type (e.g., blog posts) you want to retrieve.",
               ],
             },
             {
               subtitleDescription: "Display the Content",
               descriptions: [
-                "Map through the fetched content and dynamically render information such as blog post titles, body content, and images."
+                "Map through the fetched content and dynamically render information such as blog post titles, body content, and images.",
               ],
             },
             {
               subtitleDescription: "Handle Dynamic Updates",
               descriptions: [
-                "Contentful allows dynamic content updates. When content is updated in Contentful, your React app will display the latest content on refresh or via a pull request."
+                "Contentful allows dynamic content updates. When content is updated in Contentful, your React app will display the latest content on refresh or via a pull request.",
               ],
             },
             {
               subtitleDescription: "Manage and Update Content",
               descriptions: [
-                "Return to the Contentful dashboard to update existing content or add new entries like blog posts, changing text, or images."
+                "Return to the Contentful dashboard to update existing content or add new entries like blog posts, changing text, or images.",
               ],
             },
             {
               subtitleDescription: "Optimize Performance",
               descriptions: [
                 "Use caching and pagination to optimize content fetching, especially with large amounts of content.",
-                "Consider lazy-loading images or using CDNs to speed up content delivery."
+                "Consider lazy-loading images or using CDNs to speed up content delivery.",
               ],
             },
           ],
-        }
-        ,
-       
+        },
       ],
       taskType: "Live",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/n6ysqk?view=editor&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/n6ysqk?view=editor&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons8.webp"),
       videoLink: "",
     },
-    
+
     {
       taskId: "Google-Calendar-API-Integration",
       taskTitle: "Integrate Google Calendar API into a React Website",
-      introduction: "This task will guide you step-by-step through integrating the Google Calendar API into a React application. By the end, your app will display and manage calendar events effectively.",
+      introduction:
+        "This task will guide you step-by-step through integrating the Google Calendar API into a React application. By the end, your app will display and manage calendar events effectively.",
       task: {
-        taskDescription: "We are seeking an experienced developer to integrate Google Calendar API into our existing multi-tenant web application. Our application is built using React.js, Node.js, and we have already implemented Google Single Sign-On (SSO). The goal of this project is to enable seamless calendar functionalities directly within our application to enhance user experience and improve scheduling capabilities.",
+        taskDescription:
+          "We are seeking an experienced developer to integrate Google Calendar API into our existing multi-tenant web application. Our application is built using React.js, Node.js, and we have already implemented Google Single Sign-On (SSO). The goal of this project is to enable seamless calendar functionalities directly within our application to enhance user experience and improve scheduling capabilities.",
         platform: "Upwork.com",
-        projectName: "Google Calendar API Integration in Multi-Tenant Web Application",
+        projectName:
+          "Google Calendar API Integration in Multi-Tenant Web Application",
         biddingEnds: "N/A",
         requirements: [
           "Basic React knowledge",
@@ -2405,7 +2551,8 @@ const tasksData = {
       steps: [
         {
           stepTitle: "Step 1: Set Up Google Cloud Project",
-          titleDescription: "Configure your Google Cloud project and enable the Calendar API.",
+          titleDescription:
+            "Configure your Google Cloud project and enable the Calendar API.",
           sections: [
             {
               subtitleDescription: "Create a new Google Cloud project.",
@@ -2435,7 +2582,8 @@ const tasksData = {
         },
         {
           stepTitle: "Step 2: Create API Credentials",
-          titleDescription: "Generate OAuth credentials to authenticate and access Google Calendar API.",
+          titleDescription:
+            "Generate OAuth credentials to authenticate and access Google Calendar API.",
           sections: [
             {
               subtitleDescription: "Create OAuth 2.0 credentials.",
@@ -2446,7 +2594,8 @@ const tasksData = {
               ],
             },
             {
-              subtitleDescription: "Set up authorized origins and redirect URIs.",
+              subtitleDescription:
+                "Set up authorized origins and redirect URIs.",
               descriptions: [
                 "Add 'http://localhost:3000' for development in 'Authorized JavaScript origins'.",
                 "Specify a redirect URI to handle OAuth responses.",
@@ -2457,7 +2606,8 @@ const tasksData = {
         },
         {
           stepTitle: "Step 3: Install Required Libraries",
-          titleDescription: "Set up dependencies for the Google Calendar API in your React project.",
+          titleDescription:
+            "Set up dependencies for the Google Calendar API in your React project.",
           sections: [
             {
               subtitleDescription: "Install required libraries.",
@@ -2471,10 +2621,12 @@ const tasksData = {
         },
         {
           stepTitle: "Step 4: Initialize Google API Client",
-          titleDescription: "Initialize the Google API client to handle user authentication.",
+          titleDescription:
+            "Initialize the Google API client to handle user authentication.",
           sections: [
             {
-              subtitleDescription: "Configure the API client in your React app.",
+              subtitleDescription:
+                "Configure the API client in your React app.",
               descriptions: [
                 "Import the required modules from installed libraries.",
                 "Initialize the API client with the Client ID and required scopes.",
@@ -2507,7 +2659,8 @@ const tasksData = {
         },
         {
           stepTitle: "Step 6: Enable Event Management",
-          titleDescription: "Add, edit, and delete calendar events through the API.",
+          titleDescription:
+            "Add, edit, and delete calendar events through the API.",
           sections: [
             {
               subtitleDescription: "Implement event addition.",
@@ -2532,7 +2685,8 @@ const tasksData = {
           titleDescription: "Ensure the calendar syncs changes in real-time.",
           sections: [
             {
-              subtitleDescription: "Use webhooks or polling for real-time updates.",
+              subtitleDescription:
+                "Use webhooks or polling for real-time updates.",
               descriptions: [
                 "Implement the `watch` method from the API to detect changes.",
                 "Set up a server to receive webhook notifications.",
@@ -2543,7 +2697,8 @@ const tasksData = {
         },
         {
           stepTitle: "Step 8: Style the Calendar UI",
-          titleDescription: "Design a user-friendly interface for displaying calendar events.",
+          titleDescription:
+            "Design a user-friendly interface for displaying calendar events.",
           sections: [
             {
               subtitleDescription: "Customize the calendar UI.",
@@ -2571,7 +2726,8 @@ const tasksData = {
         },
         {
           stepTitle: "Step 10: Deploy the App",
-          titleDescription: "Deploy the app to a live environment and monitor performance.",
+          titleDescription:
+            "Deploy the app to a live environment and monitor performance.",
           sections: [
             {
               subtitleDescription: "Prepare the app for deployment.",
@@ -2589,25 +2745,27 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/7f5vdp?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/7f5vdp?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons9.webp"),
       videoLink: "",
     },
     {
       taskId: "Simple-Business-Website",
       taskTitle: "Simple Business Website",
-      introduction: "This React web application showcases a product catalog, a contact form for customer inquiries, and a customer reviews section, offering a seamless and professional user experience. It is built with reusable components, modern practices, and thoroughly tested for reliability.",
+      introduction:
+        "This React web application showcases a product catalog, a contact form for customer inquiries, and a customer reviews section, offering a seamless and professional user experience. It is built with reusable components, modern practices, and thoroughly tested for reliability.",
       task: {
-        taskDescription: "I'm looking for a skilled web developer to create a simple yet effective business website.",
-        platform: 'Freelancer.com',
+        taskDescription:
+          "I'm looking for a skilled web developer to create a simple yet effective business website.",
+        platform: "Freelancer.com",
         projectName: "Simple Business Website Development",
-        biddingEnds: 'Friday, November 29, 2024',
+        biddingEnds: "Friday, November 29, 2024",
         requirements: [
-            "Contact Form: A simple form for customers to reach us.",
-                "Product Catalog: An organized display of our products.",
-                "Customer Reviews: A section dedicated to showcasing customer feedback and testimonials.",
-       
-      ],
+          "Contact Form: A simple form for customers to reach us.",
+          "Product Catalog: An organized display of our products.",
+          "Customer Reviews: A section dedicated to showcasing customer feedback and testimonials.",
+        ],
       },
       steps: [
         {
@@ -2616,31 +2774,28 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Define the Purpose",
-              descriptions: [ 
-              "The website will display product information, customer reviews, and a contact form.",
-             
+              descriptions: [
+                "The website will display product information, customer reviews, and a contact form.",
               ],
             },
             {
               subtitleDescription: "Features Breakdown",
-              descriptions: [ 
-              "Product catalog: Showcase products with images, descriptions, and prices.",
-              "Customer reviews: Display user feedback with ratings.",
-              "Contact form: Allow users to send inquiries.",
+              descriptions: [
+                "Product catalog: Showcase products with images, descriptions, and prices.",
+                "Customer reviews: Display user feedback with ratings.",
+                "Contact form: Allow users to send inquiries.",
               ],
             },
             {
               subtitleDescription: "Wireframe the Layout",
-            descriptions: [ 
-              "Sketch a simple design or use tools like Figma to decide the placement of each component.",
-              
+              descriptions: [
+                "Sketch a simple design or use tools like Figma to decide the placement of each component.",
               ],
             },
             {
               subtitleDescription: "Decide the Tech Stack",
-             descriptions: [ 
-              "Use React for the frontend, React Router for navigation, styled-components for styling, and mock data for products and reviews.",
-              
+              descriptions: [
+                "Use React for the frontend, React Router for navigation, styled-components for styling, and mock data for products and reviews.",
               ],
             },
           ],
@@ -2651,77 +2806,71 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Initialize React App",
-             descriptions: [ 
-              "Create the project folder using create-react-app or vite.",
-              
+              descriptions: [
+                "Create the project folder using create-react-app or vite.",
               ],
             },
             {
               subtitleDescription: "Install Required Dependencies",
-              descriptions: [ 
-              "React Router: For managing routing between different pages (e.g., catalog, reviews, contact form). 'npm install react-router-dom'",
-              "Axios: For handling HTTP requests, such as submitting the contact form data or fetching product and review data. 'npm install axios'",
-              "React Bootstrap (Optional): If you want to use pre-built UI components for styling. 'npm install react-bootstrap bootstrap'",
-              "React Testing Library: For writing unit and integration tests. 'npm install --save-dev @testing-library/react @testing-library/jest-dom @testing-library/user-event'",
-              "'styled-components' for styling.",
-              "'react-toastify' for notifications.",
-             
+              descriptions: [
+                "React Router: For managing routing between different pages (e.g., catalog, reviews, contact form). 'npm install react-router-dom'",
+                "Axios: For handling HTTP requests, such as submitting the contact form data or fetching product and review data. 'npm install axios'",
+                "React Bootstrap (Optional): If you want to use pre-built UI components for styling. 'npm install react-bootstrap bootstrap'",
+                "React Testing Library: For writing unit and integration tests. 'npm install --save-dev @testing-library/react @testing-library/jest-dom @testing-library/user-event'",
+                "'styled-components' for styling.",
+                "'react-toastify' for notifications.",
               ],
             },
             {
               subtitleDescription: "Set Up File Structure",
-            descriptions: [ 
-              "Create folders for 'components', 'pages', 'data', 'utils', and 'assets'.",
-              "Add subfolders inside components for 'ContactForm', 'ProductCatalog', and 'CustomerReviews'.",
+              descriptions: [
+                "Create folders for 'components', 'pages', 'data', 'utils', and 'assets'.",
+                "Add subfolders inside components for 'ContactForm', 'ProductCatalog', and 'CustomerReviews'.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Configure Routing",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Use react-router-dom to define routes.",
-            descriptions: [ 
-              "Home page (/)",
-              "Product catalog (/products)",
-              "Customer reviews (/reviews)",
-              "Contact form (/contact)",
+              descriptions: [
+                "Home page (/)",
+                "Product catalog (/products)",
+                "Customer reviews (/reviews)",
+                "Contact form (/contact)",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Build Contact Form Component",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Create the Component File",
-            descriptions: [ 
-              "ContactForm.js",
-              
-              ],
+              descriptions: ["ContactForm.js"],
             },
             {
               subtitleDescription: "Plan the Form Structure",
-             descriptions: [ 
-               "Fields: Name, Email, Message.",
+              descriptions: [
+                "Fields: Name, Email, Message.",
                 "Buttons: Submit.",
               ],
             },
             {
               subtitleDescription: "Use State for Form Values",
-             descriptions: [ 
-               "Create 'name', 'email', and 'message' state variables using 'useState'.",
+              descriptions: [
+                "Create 'name', 'email', and 'message' state variables using 'useState'.",
                 "Bind 'value' and 'onChange' to inputs.",
               ],
             },
             {
               subtitleDescription: "Add Form Validation",
-             descriptions: [ 
-               "Write a 'validateForm' function (imported from src/utils/validateForm.js) to check",
+              descriptions: [
+                "Write a 'validateForm' function (imported from src/utils/validateForm.js) to check",
                 "Name is not empty.",
                 "Email is valid.",
                 "Message is not empty.",
@@ -2730,8 +2879,8 @@ const tasksData = {
             },
             {
               subtitleDescription: "Handle Form Submission",
-             descriptions: [ 
-               "Add a 'handleSubmit' function.",
+              descriptions: [
+                "Add a 'handleSubmit' function.",
                 "Prevent default form submission behavior.",
                 "Validate form data.",
                 "Show a success message using 'react-toastify' if valid.",
@@ -2739,155 +2888,127 @@ const tasksData = {
             },
             {
               subtitleDescription: "Manage Success/Error Messages",
-             descriptions: [ 
-               "Use 'react-toastify' to show success or error messages.",
-                
+              descriptions: [
+                "Use 'react-toastify' to show success or error messages.",
               ],
             },
             {
               subtitleDescription: "Add Accessibility Features",
-             descriptions: [ 
-               "Use 'aria-label' attributes for input fields.",
+              descriptions: [
+                "Use 'aria-label' attributes for input fields.",
                 "Add 'aria-live' for success/error messages.",
                 "",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Define Product Catalog Component",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Create the Component File",
-             descriptions: [ 
-               "ProductCatalog.js",
-                
-              ],
+              descriptions: ["ProductCatalog.js"],
             },
             {
               subtitleDescription: "Plan the Catalog Structure",
-             descriptions: [ 
-               "Display products in a grid.",
+              descriptions: [
+                "Display products in a grid.",
                 "Show: Image, Name, Description, Price.",
               ],
             },
             {
               subtitleDescription: "Import Product Data",
-             descriptions: [ 
-               "Use mock data from src/data/products.js.",
-                
-              ],
+              descriptions: ["Use mock data from src/data/products.js."],
             },
             {
               subtitleDescription: "Use State for Product Data",
-             descriptions: [ 
-               "Load 'products' into state using 'useState'",
-                
-              ],
+              descriptions: ["Load 'products' into state using 'useState'"],
             },
             {
               subtitleDescription: "Map Through Products",
-             descriptions: [ 
-               "Use 'products.map()' to create a card for each product.",
-               
+              descriptions: [
+                "Use 'products.map()' to create a card for each product.",
               ],
             },
             {
               subtitleDescription: "Handle Conditional Rendering",
-             descriptions: [ 
-               "If no products exist, display a 'No Products Available' message.",
-              
+              descriptions: [
+                "If no products exist, display a 'No Products Available' message.",
               ],
             },
             {
               subtitleDescription: "Add Filter/Sorting Logic (Optional)",
-             descriptions: [ 
-               "Create a dropdown for sorting (e.g., by price or name).",
+              descriptions: [
+                "Create a dropdown for sorting (e.g., by price or name).",
                 "Use a 'useState' variable for the selected filter.",
                 "Apply sorting logic to the products array before rendering.",
               ],
             },
             {
               subtitleDescription: "Make It Responsive",
-             descriptions: [ 
-               "Use 'styled-components' or CSS grid for a flexible layout.",
-               
+              descriptions: [
+                "Use 'styled-components' or CSS grid for a flexible layout.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Create Customer Reviews Component",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Create the Component File",
-             descriptions: [ 
-               "CustomerReviews.js",
-               
-              ],
+              descriptions: ["CustomerReviews.js"],
             },
             {
               subtitleDescription: "Plan the Reviews Structure",
-              descriptions: [ 
-               "Display reviews in a card layout.",
+              descriptions: [
+                "Display reviews in a card layout.",
                 "Show: Customer Name, Message, Rating.",
               ],
             },
             {
               subtitleDescription: "Import Review Data",
-             descriptions: [ 
-               "Use mock data from src/data/reviews.js.",
-               
-              ],
+              descriptions: ["Use mock data from src/data/reviews.js."],
             },
             {
               subtitleDescription: "Map Through Reviews",
-             descriptions: [ 
-               "Use 'reviews.map()' to render each review.",
-                
-              ],
+              descriptions: ["Use 'reviews.map()' to render each review."],
             },
             {
               subtitleDescription: "Add State for Reviews",
-              descriptions: [ 
-               "Use 'useState' to manage the reviews.",
-                
-              ],
+              descriptions: ["Use 'useState' to manage the reviews."],
             },
             {
               subtitleDescription: "Add Pagination (Optional)",
-             descriptions: [ 
-               "Display a limited number of reviews (e.g., 5 per page).",
+              descriptions: [
+                "Display a limited number of reviews (e.g., 5 per page).",
                 "Use 'useState' for the current page.",
                 "Add Next/Previous buttons to navigate pages.",
               ],
             },
             {
               subtitleDescription: "Add Accessibility Features",
-             descriptions: [ 
-               "Use semantic elements like <blockquote> for reviews.",
+              descriptions: [
+                "Use semantic elements like <blockquote> for reviews.",
                 "Add 'aria-label' to rating stars.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Build Home Page Component",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Create the Component File",
-             descriptions: [ 
-               "src/pages/Home.js",
-                
-              ],
+              descriptions: ["src/pages/Home.js"],
             },
             {
               subtitleDescription: "Plan the Layout",
-              descriptions: [ 
-               "Add a banner or welcome message.",
+              descriptions: [
+                "Add a banner or welcome message.",
                 "Include links or buttons to navigate to:",
                 "Product Catalog",
                 "Customer Reviews",
@@ -2896,53 +3017,50 @@ const tasksData = {
             },
             {
               subtitleDescription: "Use React Router for Navigation",
-            descriptions: [ 
-               "Import 'Link' from 'react-router-dom'",
+              descriptions: [
+                "Import 'Link' from 'react-router-dom'",
                 "Add 'Link' components to navigate between pages.",
               ],
             },
             {
               subtitleDescription: "Style the Page",
-             descriptions: [ 
-               "Add a hero section with a call-to-action.",
+              descriptions: [
+                "Add a hero section with a call-to-action.",
                 "Use styled-components for spacing and layout.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Create Utilities and Hooks",
-           titleDescription: "Define 'validateForm' Utility",
+          titleDescription: "Define 'validateForm' Utility",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Create a file: src/utils/validateForm.js.",
+              descriptions: [
+                "Create a file: src/utils/validateForm.js.",
                 "Write a function to validate:",
                 "Name: Check for non-empty value.",
                 "Email: Use regex for valid email format.",
                 "Message: Check for non-empty value.",
-                
               ],
             },
-        
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Define App Component",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Set Up Routing",
-             descriptions: [ 
-               "Import 'BrowserRouter', 'Routes', and 'Route' from 'react-router-dom'.",
-                
+              descriptions: [
+                "Import 'BrowserRouter', 'Routes', and 'Route' from 'react-router-dom'.",
               ],
             },
             {
               subtitleDescription: "Define routes for",
-             descriptions: [ 
-               "Home (/)",
+              descriptions: [
+                "Home (/)",
                 "Products (/products)",
                 "Reviews (/reviews)",
                 "Contact (/contact)",
@@ -2950,141 +3068,133 @@ const tasksData = {
             },
             {
               subtitleDescription: "Add Navigation",
-             descriptions: [ 
-               "Create a navigation bar using <Link> for each route.",
-               
+              descriptions: [
+                "Create a navigation bar using <Link> for each route.",
               ],
             },
             {
               subtitleDescription: "Add Toast Notifications",
-             descriptions: [ 
-               "Import ToastContainer from react-toastify.",
+              descriptions: [
+                "Import ToastContainer from react-toastify.",
                 "Place <ToastContainer /> inside App.js.",
               ],
             },
             {
               subtitleDescription: "Global Styling",
-             descriptions: [ 
-               "Import a CSS reset file or normalize.css.",
+              descriptions: [
+                "Import a CSS reset file or normalize.css.",
                 "Use global styles for consistent fonts, colors, and spacing.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 10: Style the Components",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Use styled-components to style",
-             descriptions: [ 
-               "Layouts (grid for the catalog, cards for reviews).",
+              descriptions: [
+                "Layouts (grid for the catalog, cards for reviews).",
                 "Form elements (input fields, buttons).",
               ],
             },
             {
               subtitleDescription: "Ensure styles are responsive",
-             descriptions: [ 
-               "Add media queries to adjust layouts for mobile and tablet screens.",
-                "Add hover effects to buttons and product cards for better user interaction."
+              descriptions: [
+                "Add media queries to adjust layouts for mobile and tablet screens.",
+                "Add hover effects to buttons and product cards for better user interaction.",
               ],
             },
-            
           ],
         },
         {
           stepTitle: "Step 11: Test Each Component",
-           titleDescription: "Test code included in solution.",
+          titleDescription: "Test code included in solution.",
           sections: [
             {
               subtitleDescription: "Install Required Dependencies",
-             descriptions: [ 
-               "@testing-library/react: For rendering and interacting with React components.",
+              descriptions: [
+                "@testing-library/react: For rendering and interacting with React components.",
                 "@testing-library/jest-dom: For additional matchers like .toBeInTheDocument().",
                 "@testing-library/user-event: For simulating user interactions.",
               ],
             },
             {
               subtitleDescription: "Verify Jest Configuration",
-             descriptions: [ 
-               "React apps created with create-react-app come pre-configured with Jest. If using a different setup, ensure Jest is configured in package.json or a jest.config.js file.",
-                
+              descriptions: [
+                "React apps created with create-react-app come pre-configured with Jest. If using a different setup, ensure Jest is configured in package.json or a jest.config.js file.",
               ],
             },
             {
               subtitleDescription: "Run Tests Locally",
-             descriptions: [ 
-               "'npm test'",
-              
-              ],
+              descriptions: ["'npm test'"],
             },
             {
               subtitleDescription: "Check Code Coverage",
-             descriptions: [ 
-               "'npm test -- --coverage'",
-               "Check the generated coverage report in the coverage/ folder."
+              descriptions: [
+                "'npm test -- --coverage'",
+                "Check the generated coverage report in the coverage/ folder.",
               ],
             },
             {
               subtitleDescription: "Debug Failing Tests",
-             descriptions: [ 
-               "Use console.log or the debug() method from React Testing Library to inspect the DOM.",
-               
+              descriptions: [
+                "Use console.log or the debug() method from React Testing Library to inspect the DOM.",
               ],
             },
             {
               subtitleDescription: "Automate Tests",
-             descriptions: [ 
-               "Integrate tests into your CI/CD pipeline (e.g., GitHub Actions, CircleCI).",
-              
+              descriptions: [
+                "Integrate tests into your CI/CD pipeline (e.g., GitHub Actions, CircleCI).",
               ],
             },
-         
           ],
         },
         {
           stepTitle: "Step 12: Optimize for SEO",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Use react-helmet to add meta tags for:",
-             descriptions: [ 
-               "Title",
+              descriptions: [
+                "Title",
                 "Description",
                 "Open Graph tags for better sharing on social media.",
-                "Set unique titles for each page."
+                "Set unique titles for each page.",
               ],
             },
-         
           ],
         },
-       
       ],
       taskType: "Live",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/7dykyd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/7dykyd?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons10.webp"),
       videoLink: "",
     },
     {
       taskId: "Build-a-Portfolio-Website-with-Admin-Panel",
       taskTitle: "Build a Portfolio Website with Admin Panel",
-      introduction: "In this task, you will build a portfolio website that allows the user to showcase projects and manage content via an admin panel. You'll implement secure authentication using JWT and handle backend logic for managing projects with MongoDB and Express.js. On the frontend, you'll create an intuitive UI with React.",
-  task: {
-       taskDescription: "This task involves building a portfolio website. The frontend will be built using React, while the backend will use Express.js for routing and MongoDB for data storage. You'll implement JWT authentication to secure the admin panel and handle CRUD operations for projects.",
-     platform: 'Freelancer',
-        projectName: "HTML, CSS, Bootstraps, Js, React, PHP , Portfolio website with admin",
-        biddingEnds: 'Friday, December 13, 2024',
+      introduction:
+        "In this task, you will build a portfolio website that allows the user to showcase projects and manage content via an admin panel. You'll implement secure authentication using JWT and handle backend logic for managing projects with MongoDB and Express.js. On the frontend, you'll create an intuitive UI with React.",
+      task: {
+        taskDescription:
+          "This task involves building a portfolio website. The frontend will be built using React, while the backend will use Express.js for routing and MongoDB for data storage. You'll implement JWT authentication to secure the admin panel and handle CRUD operations for projects.",
+        platform: "Freelancer",
+        projectName:
+          "HTML, CSS, Bootstraps, Js, React, PHP , Portfolio website with admin",
+        biddingEnds: "Friday, December 13, 2024",
         requirements: [
-            "Frontend: React for the user interface and routing.",
-                "Backend: Express.js for handling API requests and MongoDB for storing portfolio data.",
-                "Authentication: JWT (JSON Web Tokens) for secure authentication between the frontend and backend.",
-                "Database: MongoDB to store data related to projects and admin users.",
-       
-      ],
+          "Frontend: React for the user interface and routing.",
+          "Backend: Express.js for handling API requests and MongoDB for storing portfolio data.",
+          "Authentication: JWT (JSON Web Tokens) for secure authentication between the frontend and backend.",
+          "Database: MongoDB to store data related to projects and admin users.",
+        ],
       },
       steps: [
         {
@@ -3093,26 +3203,25 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "/backend folder contains",
-              descriptions: [ 
-              "/models: MongoDB schemas (e.g., User, Project).",
-              "/routes: Express routes (e.g., authentication, project management).",
-              "/controllers: Functions that handle the business logic for each route (e.g., login, add/edit project).",
-              "/middleware: Authentication middleware to protect admin routes.",
-              "/config: Configuration for database and environment variables.",
-              "server.js: Main entry point to set up the Express server.",
+              descriptions: [
+                "/models: MongoDB schemas (e.g., User, Project).",
+                "/routes: Express routes (e.g., authentication, project management).",
+                "/controllers: Functions that handle the business logic for each route (e.g., login, add/edit project).",
+                "/middleware: Authentication middleware to protect admin routes.",
+                "/config: Configuration for database and environment variables.",
+                "server.js: Main entry point to set up the Express server.",
               ],
             },
             {
               subtitleDescription: "/frontend folder contains",
-              descriptions: [ 
-              "/components: React components for the user interface (e.g., ProjectCard, AdminDashboard).",
-              "/pages: React components representing different pages (e.g., HomePage, AdminLoginPage, AdminDashboard).",
-              "/hooks: Custom hooks to manage logic like fetching data or managing authentication.",
-              "/services: Axios or Fetch requests for interacting with the backend.",
-              "/assets: Images, icons, and static assets.",
+              descriptions: [
+                "/components: React components for the user interface (e.g., ProjectCard, AdminDashboard).",
+                "/pages: React components representing different pages (e.g., HomePage, AdminLoginPage, AdminDashboard).",
+                "/hooks: Custom hooks to manage logic like fetching data or managing authentication.",
+                "/services: Axios or Fetch requests for interacting with the backend.",
+                "/assets: Images, icons, and static assets.",
               ],
             },
-            
           ],
         },
         {
@@ -3121,188 +3230,182 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Set Up Express Server",
-             descriptions: [ 
-              "Initialize a Node.js project and install Express.",
-              "Set up an Express server to handle HTTP requests.",
-              "Define the port and basic routes for the backend (e.g., /login, /projects).",
+              descriptions: [
+                "Initialize a Node.js project and install Express.",
+                "Set up an Express server to handle HTTP requests.",
+                "Define the port and basic routes for the backend (e.g., /login, /projects).",
               ],
             },
             {
               subtitleDescription: "Database Setup",
-              descriptions: [ 
-              "Set up MongoDB and connect the Express server to the database using Mongoose (or the native MongoDB driver).",
-              "Define the MongoDB URI in environment variables to keep it secure.",
+              descriptions: [
+                "Set up MongoDB and connect the Express server to the database using Mongoose (or the native MongoDB driver).",
+                "Define the MongoDB URI in environment variables to keep it secure.",
               ],
             },
             {
               subtitleDescription: "Models (Database Schemas)",
-            descriptions: [ 
-              "Create a User model that stores the admin's credentials (username and password). Passwords should be hashed using a hashing algorithm like bcrypt before storing.",
-              
+              descriptions: [
+                "Create a User model that stores the admin's credentials (username and password). Passwords should be hashed using a hashing algorithm like bcrypt before storing.",
               ],
             },
             {
-              subtitleDescription: "Project Model: Create a Project model with fields like",
-            descriptions: [ 
-              "title: Name of the project.",
-              "description: A detailed explanation of the project.",
-              "image: A URL for the project image.",
-              "date: Date the project was added/updated.",
+              subtitleDescription:
+                "Project Model: Create a Project model with fields like",
+              descriptions: [
+                "title: Name of the project.",
+                "description: A detailed explanation of the project.",
+                "image: A URL for the project image.",
+                "date: Date the project was added/updated.",
               ],
             },
             {
               subtitleDescription: "Authentication (JWT)",
-            descriptions: [ 
-              "Create a POST route for login (/login)",
-              "Validate the provided username and password against the database.",
-              "If valid, generate a JWT token and send it back to the frontend.",
-              "Set up middleware to protect routes that require authentication (e.g., creating, editing, or deleting projects).",
-              "Ensure that only users with a valid JWT can access admin routes.",
-              "Create a function to verify the JWT token on protected routes and allow access only if the token is valid.",
-             
+              descriptions: [
+                "Create a POST route for login (/login)",
+                "Validate the provided username and password against the database.",
+                "If valid, generate a JWT token and send it back to the frontend.",
+                "Set up middleware to protect routes that require authentication (e.g., creating, editing, or deleting projects).",
+                "Ensure that only users with a valid JWT can access admin routes.",
+                "Create a function to verify the JWT token on protected routes and allow access only if the token is valid.",
               ],
             },
             {
               subtitleDescription: "Project Management Routes",
-            descriptions: [ 
-              "GET /projects: Fetch all projects from the database",
-              "Return the list of projects in the response.",
-              "POST /projects: Create a new project.",
-              "Ensure the user is authenticated before adding a project.",
-              "Receive data (title, description, image) from the frontend and save it in the database.",
-              "PUT /projects/:id: Update an existing project.",
-              "Ensure the user is authenticated before updating a project.",
-              "Find the project by ID and update the necessary fields.",
-              "DELETE /projects/:id: Delete a project.",
-              "Ensure the user is authenticated before allowing project deletion.",
-              "Find the project by ID and remove it from the database.",
-              
+              descriptions: [
+                "GET /projects: Fetch all projects from the database",
+                "Return the list of projects in the response.",
+                "POST /projects: Create a new project.",
+                "Ensure the user is authenticated before adding a project.",
+                "Receive data (title, description, image) from the frontend and save it in the database.",
+                "PUT /projects/:id: Update an existing project.",
+                "Ensure the user is authenticated before updating a project.",
+                "Find the project by ID and update the necessary fields.",
+                "DELETE /projects/:id: Delete a project.",
+                "Ensure the user is authenticated before allowing project deletion.",
+                "Find the project by ID and remove it from the database.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Frontend (React)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Portfolio Pages",
-            descriptions: [ 
-              "Home Page: Fetch the list of projects from the backend and display them in a grid or list.",
-              "Each project should have a Project Card that shows the project title, description, and image.",
-              "Display projects dynamically by mapping over the project data fetched from the backend.",
-              "Project Card Component: A reusable component that accepts title, description, and image as props and renders the details for a project.",
-              "Style the card to make it visually appealing (responsive design for mobile and desktop views).",
-             
+              descriptions: [
+                "Home Page: Fetch the list of projects from the backend and display them in a grid or list.",
+                "Each project should have a Project Card that shows the project title, description, and image.",
+                "Display projects dynamically by mapping over the project data fetched from the backend.",
+                "Project Card Component: A reusable component that accepts title, description, and image as props and renders the details for a project.",
+                "Style the card to make it visually appealing (responsive design for mobile and desktop views).",
               ],
             },
             {
               subtitleDescription: "Project Card Component",
-             descriptions: [ 
-              "A reusable component that accepts title, description, and image as props and renders the details for a project.",
-              "Style the card to make it visually appealing (responsive design for mobile and desktop views).",
+              descriptions: [
+                "A reusable component that accepts title, description, and image as props and renders the details for a project.",
+                "Style the card to make it visually appealing (responsive design for mobile and desktop views).",
               ],
             },
             {
               subtitleDescription: "Admin Panel (Protected Route)",
-            descriptions: [ 
-              "Admin Login Page: Create a login form with fields for username and password.",
-              "When the form is submitted, send the credentials to the backend's /login route.",
-              "On success, store the JWT token in localStorage (or sessionStorage).",
-              "If authentication fails, display an error message.",
-              "Admin Dashboard: Create a dashboard where the admin can see all projects.",
-              "Implement buttons to add, edit, or delete projects.",
-              "Use protected routes to ensure only authenticated users can access the admin dashboard.",
-              "Project Management Form: Create a form for adding or editing projects. The form should include fields for project title, description, and image URL.",
-              "Use controlled components to manage form state and validate inputs before submitting.",
-              "On submission, send the data to the appropriate backend route (POST /projects for adding, PUT /projects/:id for editing).",
-              
+              descriptions: [
+                "Admin Login Page: Create a login form with fields for username and password.",
+                "When the form is submitted, send the credentials to the backend's /login route.",
+                "On success, store the JWT token in localStorage (or sessionStorage).",
+                "If authentication fails, display an error message.",
+                "Admin Dashboard: Create a dashboard where the admin can see all projects.",
+                "Implement buttons to add, edit, or delete projects.",
+                "Use protected routes to ensure only authenticated users can access the admin dashboard.",
+                "Project Management Form: Create a form for adding or editing projects. The form should include fields for project title, description, and image URL.",
+                "Use controlled components to manage form state and validate inputs before submitting.",
+                "On submission, send the data to the appropriate backend route (POST /projects for adding, PUT /projects/:id for editing).",
               ],
             },
             {
               subtitleDescription: "Protected Routes",
-            descriptions: [ 
-              "Use React Router to set up different routes for the home page, admin login page, and admin dashboard.",
-              "Protected Routes: Ensure the admin dashboard is protected. If the user is not authenticated (no JWT token in localStorage), redirect them to the login page.",
-              "Redirect after Login: After the admin logs in, redirect them to the dashboard or another protected page.",
+              descriptions: [
+                "Use React Router to set up different routes for the home page, admin login page, and admin dashboard.",
+                "Protected Routes: Ensure the admin dashboard is protected. If the user is not authenticated (no JWT token in localStorage), redirect them to the login page.",
+                "Redirect after Login: After the admin logs in, redirect them to the dashboard or another protected page.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Authentication (JWT)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Backend Authentication",
-            descriptions: [ 
-              "On successful login, generate a JWT token containing the user’s ID and send it to the frontend.",
-              "Set a secret key on the backend that is used to sign the JWT token. Store this secret securely (e.g., in environment variables).",
+              descriptions: [
+                "On successful login, generate a JWT token containing the user’s ID and send it to the frontend.",
+                "Set a secret key on the backend that is used to sign the JWT token. Store this secret securely (e.g., in environment variables).",
               ],
             },
             {
               subtitleDescription: "Frontend JWT Storage",
-             descriptions: [ 
-               "Store the JWT token in localStorage or sessionStorage to persist the user's login state.",
+              descriptions: [
+                "Store the JWT token in localStorage or sessionStorage to persist the user's login state.",
                 "When making requests to the backend (e.g., for fetching projects or adding a project), include the JWT token in the Authorization header (Bearer <token>).",
               ],
             },
             {
               subtitleDescription: "Verifying JWT Token",
-             descriptions: [ 
-               "Use middleware on the backend to verify the JWT token for protected routes (e.g., creating/editing/deleting projects).",
+              descriptions: [
+                "Use middleware on the backend to verify the JWT token for protected routes (e.g., creating/editing/deleting projects).",
                 "If the token is invalid or missing, respond with an error message and a 401 Unauthorized status code.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Backend Logic",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Creating and Editing Projects",
-             descriptions: [ 
-               "In the backend, ensure that only authenticated users can create or modify projects. Use the JWT token in the request header to verify the user's identity.",
+              descriptions: [
+                "In the backend, ensure that only authenticated users can create or modify projects. Use the JWT token in the request header to verify the user's identity.",
                 "On receiving the project data, validate it (e.g., check if the title is not empty) and store it in the MongoDB database.",
                 "If updating an existing project, ensure the correct project ID is used and modify the project fields as needed.",
               ],
             },
             {
               subtitleDescription: "Deleting Projects",
-             descriptions: [ 
-               "Implement the logic to remove a project by its ID from the MongoDB database.",
+              descriptions: [
+                "Implement the logic to remove a project by its ID from the MongoDB database.",
                 "Confirm that the user is authenticated before allowing this action.",
-                
               ],
             },
             {
               subtitleDescription: "Fetching Projects",
-             descriptions: [ 
-               "Create an endpoint that retrieves all projects stored in the MongoDB database.",
+              descriptions: [
+                "Create an endpoint that retrieves all projects stored in the MongoDB database.",
                 "Send the project data to the frontend in a structured format (e.g., an array of project objects).",
                 "",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Frontend Logic",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "React State Management",
-             descriptions: [ 
-               "Use React's useState to manage state for user login and project data.",
+              descriptions: [
+                "Use React's useState to manage state for user login and project data.",
                 "Manage the state for form inputs (e.g., project title, description) using controlled components.",
                 "Use useEffect to fetch project data when the component mounts (e.g., fetch projects for the home page or admin dashboard).",
               ],
             },
             {
               subtitleDescription: "Making API Requests",
-              descriptions: [ 
-               "Use Axios or the Fetch API to send HTTP requests to the backend:",
+              descriptions: [
+                "Use Axios or the Fetch API to send HTTP requests to the backend:",
                 "GET /projects: Fetch project data to display on the homepage.",
                 "POST /projects: Send form data to add a new project.",
                 "PUT /projects/:id: Send form data to update an existing project.",
@@ -3311,98 +3414,91 @@ const tasksData = {
             },
             {
               subtitleDescription: "JWT Handling",
-             descriptions: [ 
-               "On successful login, store the JWT token in localStorage and use it for authentication in subsequent requests.",
+              descriptions: [
+                "On successful login, store the JWT token in localStorage and use it for authentication in subsequent requests.",
                 "If the JWT token is not found or is invalid, redirect the user to the login page.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Deployment",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Backend Deployment",
-             descriptions: [ 
-               "Deploy the backend API on a cloud platform like Heroku, DigitalOcean, or AWS.",
+              descriptions: [
+                "Deploy the backend API on a cloud platform like Heroku, DigitalOcean, or AWS.",
                 "Ensure the environment variables (like MongoDB URI and JWT secret) are set correctly in the deployment environment.",
               ],
             },
             {
               subtitleDescription: "Frontend Deployment",
-              descriptions: [ 
-               "Deploy the frontend React app using platforms like Netlify, Vercel, or GitHub Pages.",
+              descriptions: [
+                "Deploy the frontend React app using platforms like Netlify, Vercel, or GitHub Pages.",
                 "Ensure all environment variables are configured correctly for deployment.",
                 "Connect the frontend to the deployed backend API, making sure the frontend is able to make requests to the correct URL.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Admin Panel Features",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Admin Login",
-             descriptions: [ 
-               "Ensure that the login form sends the user's credentials to the backend for authentication.",
+              descriptions: [
+                "Ensure that the login form sends the user's credentials to the backend for authentication.",
                 "Upon successful login, store the JWT token and redirect the user to the admin dashboard.",
               ],
             },
             {
               subtitleDescription: "Admin Dashboard",
-             descriptions: [ 
-               "Display a list of projects with options to add, edit, or delete.",
+              descriptions: [
+                "Display a list of projects with options to add, edit, or delete.",
                 "Protect the dashboard with authentication to ensure only the admin has access.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Responsive Design",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Use CSS frameworks (e.g., Bootstrap or Tailwind CSS) for a responsive layout.",
+              descriptions: [
+                "Use CSS frameworks (e.g., Bootstrap or Tailwind CSS) for a responsive layout.",
                 "Ensure the portfolio is mobile-friendly by using media queries to adjust the layout for small screens.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 10: Future Features",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Contact Form: Add a contact form where users can send messages to the admin.",
+              descriptions: [
+                "Contact Form: Add a contact form where users can send messages to the admin.",
                 "Blog Section: Implement a blog feature with CRUD (Create, Read, Update, Delete) functionality in the admin panel.",
                 "File Upload: Implement file upload functionality to upload images for projects. Store images in the server or use a cloud service like AWS S3.",
               ],
             },
-          
           ],
         },
-       
       ],
       taskType: "Live",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/q4fzz3?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/q4fzz3?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons11.webp"),
     },
-
-    
   ],
   React: [
     {
@@ -14060,7 +14156,7 @@ Live lessons
       prerequisites: ["Workshop Projects"],
       completed: false,
       codesandboxUrl: "/notavailable",
-      img: require("../images/livelessons1.webp"),
+      img: require("../images/musicacademy/day1.webp"),
       videoLink: "",
     },
 
