@@ -101,6 +101,8 @@ nav {
 
 .dropdown-link {
   display: block; /* Ensures the whole area is clickable */
+  padding: 0.75rem 1rem;
+
   color: var(--accent);
   text-decoration: none;
   font-size: 1rem;
@@ -140,7 +142,6 @@ nav {
 
 .dropdown-item {
   display: block;
-  padding: 0.75rem 1rem;
   color: var(--accent);
   text-decoration: none;
   font-size: 1rem;
