@@ -23,7 +23,7 @@ const solutionCode2 = `
 // Components/Home.js
 
 import  { useState } from 'react';
-import '../styles/home.css'
+import '../styles.css'
 
 const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false);
