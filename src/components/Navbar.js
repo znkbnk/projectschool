@@ -104,31 +104,31 @@ const Navbar = () => {
                       <span></span>
                       <div className='sub-dropdown-menu'>
                         <Link
-                          to='/interview/questions'
+                          to='/interview/InterviewQuestions'
                           className='sub-dropdown-item'
                         >
                           Interview Questions
                         </Link>
                         <Link
-                          to='/interview/tasks'
+                          to='interview/InterviewTasks'
                           className='sub-dropdown-item'
                         >
                           Interview Tasks
                         </Link>
                         <Link
-                          to='/interview/quiz'
+                          to='/interview/InterviewQuiz/:slug'
                           className='sub-dropdown-item'
                         >
                           Interview Quiz
                         </Link>
                         <Link
-                          to='/interview/code-quiz'
+                          to='/interview/InterviewCodeQuiz'
                           className='sub-dropdown-item'
                         >
                           Code Quiz
                         </Link>
                         <Link
-                          to='/interview/correct-code'
+                          to='/interview/InterviewCorrectCode/:slug'
                           className='sub-dropdown-item'
                         >
                           Correct Code
