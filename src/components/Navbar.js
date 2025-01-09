@@ -76,7 +76,7 @@ const Navbar = () => {
                 {showExercisesDropdown && (
                   <div className='dropdown-menu'>
                     <div className='dropdown-item'>
-                      <Link to='/exercises' >React Exercises</Link>
+                      <Link to='/exercises' className='dropdown-link'>React Exercises</Link>
                       <div className='sub-dropdown-menu'>
                         <Link
                           to='/exercises/reactlessons'
@@ -100,7 +100,7 @@ const Navbar = () => {
                     </div>
 
                     <div className='dropdown-item'>
-                      <Link to='/interview'>React Interview</Link>
+                      <Link to='/interview' className='dropdown-link'>React Interview</Link>
                       <span></span>
                       <div className='sub-dropdown-menu'>
                         <Link

@@ -99,6 +99,16 @@ nav {
   position: static;
 }
 
+.dropdown-link {
+  display: block; /* Ensures the whole area is clickable */
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 4px; /* Optional: Rounded corners */
+}
+
+
 
 
 .dropdown-menu {
