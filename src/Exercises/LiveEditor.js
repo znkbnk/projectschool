@@ -120,8 +120,7 @@ const LiveEditor = ({ tasks }) => {
 
   const handleNext = () => {
     // Check if the current task is completed and navigate to the next one
- 
-  
+
     // Navigate to the next task in the list
     if (currentTaskIndex < tasksData[lessonType]?.length - 1) {
       const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
@@ -130,7 +129,6 @@ const LiveEditor = ({ tasks }) => {
       toast.info("You have reached the last task.");
     }
   };
-  
 
   const handlePrevious = () => {
     if (currentTaskIndex > 0) {
@@ -417,7 +415,7 @@ const LiveEditor = ({ tasks }) => {
                       <div className='styles-text'>
                         {selectedStyle.map((style, index) => (
                           <div key={index} className='style-item'>
-                            <div className='style-header'>
+                            <div >
                               <h3>{style.title}</h3>
                               <button
                                 className={`styles-copy-button ${
@@ -437,12 +435,31 @@ const LiveEditor = ({ tasks }) => {
                             <pre>
                               <code>{style.css}</code>
                             </pre>
-                            <button
-                              className='styles-close-button'
-                              onClick={handleCloseStyles}
-                            >
-                              Close
-                            </button>
+
+                            {style.css2 && (
+                              <div >
+                                {style.title2 && <h3>{style.title2}</h3>}{" "}
+                                <button
+                                  className={`styles-copy-button ${
+                                    copied ? "copied" : ""
+                                  }`}
+                                  onClick={() =>
+                                    handleCopyToClipboard(style.css2)
+                                  }
+                                >
+                                  {copied ? "Copied!" : "Copy Code"}
+                                </button>
+                                <button
+                                  className='styles-close-button'
+                                  onClick={handleCloseStyles}
+                                >
+                                  Close
+                                </button>
+                                <pre>
+                                  <code>{style.css2}</code>
+                                </pre>
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>

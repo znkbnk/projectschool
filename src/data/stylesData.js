@@ -11351,6 +11351,171 @@ body {
   }
     `,
   },
+  {
+    taskId: "day3",
+    title: "Day3: about.css",
+    css: `
+    /* About Page Styles */
+    .about {
+        padding: 2rem;
+        color: var(--color-text);
+      }
+      
+      .about-intro {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+      
+      .about-content {
+        flex: 1;
+      }
+      
+      .about-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        background: var(--gradient-text);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .about-description {
+        font-size: 1.2rem;
+        color: var(--color-text-muted);
+        line-height: 1.8;
+      }
+      
+      .about-image img {
+        max-width: 100%;
+        border-radius: 1rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      
+      .mission {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+      
+      .mission-description {
+        font-size: 1.5rem;
+        color: var(--color-text-muted);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      .team {
+        margin-bottom: 4rem;
+      }
+      
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+      }
+      
+      .team-card {
+        text-align: center;
+      }
+      
+      .team-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+        object-fit: cover;
+      }
+      
+      .team-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      
+      .team-role {
+        color: var(--color-text-muted);
+      }
+      
+      .achievements {
+        text-align: center;
+      }
+      
+      .achievement-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 600px;
+        color: var(--color-text-muted);
+        font-size: 1.2rem;
+        line-height: 1.8;
+      }
+      
+    `,
+    title2: "Day3: footer.css", 
+    css2: `
+    /* Footer Styles */
+    .footer {
+        background: linear-gradient(to right, #1e3a8a,#6a0dad);
+        color: var(--color-light);
+        padding: 2rem 1rem;
+        margin-top: 4rem;
+      }
+      
+      .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      
+      .footer-section {
+        flex: 1;
+        min-width: 200px;
+      }
+      
+      .footer-section h3,
+      .footer-section h4 {
+        margin-bottom: 1rem;
+        color: var(--color-light);
+      }
+      
+      .footer-section p,
+      .footer-section ul {
+        color: var(--color-light-muted);
+        line-height: 1.8;
+      }
+      
+      .footer-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .footer-section ul li {
+        margin-bottom: 0.5rem;
+      }
+      
+      .footer-section ul li a {
+        text-decoration: none;
+        color: var(--color-light-muted);
+        transition: color 0.3s;
+      }
+      
+      .footer-section ul li a:hover {
+        color: var(--color-accent);
+      }
+      
+      .footer-bottom {
+        text-align: center;
+        margin-top: 2rem;
+        border-top: 1px solid var(--color-light-muted);
+        padding-top: 1rem;
+        font-size: 0.9rem;
+        color: var(--color-light-muted);
+      }
+      
+    `
+  }
 ];
 
 export default stylesData;
@@ -11359,14 +11524,16 @@ export default stylesData;
 
 
   {
-    taskId: "task",  
-    title: "title",
+    taskId: "taskId",
+    title: "Title 1",
     css: `
-    
-    
-
+     
     `,
-  },
+    title2: "title2",
+    css2: `
+    
+    `
+  }
   
 
   */

@@ -383,6 +383,332 @@ const tasksData = {
       img: require("../images/musicacademy/day2.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day3",
+      taskTitle: "Building an About Page and Footer with Integration in React",
+      introduction: "This lesson covers creating an About page with sections for the mission, team, and achievements, designing a responsive Footer for navigation and contact details, and seamlessly integrating these components into your app using React Router for routing and consistent layout design.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Create the File Structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+              descriptions: [ 
+              "Inside the src directory, create a pages folder for organizing page components.",
+              "Create a about.css file in styles folder.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create the About.js Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+             descriptions: [ 
+              "Add a new file named About.js inside the pages folder.",
+              "Define a functional component named About.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 3: Design the About Page Layout",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+            descriptions: [ 
+              "Plan the structure of the About page, dividing it into logical sections: About Section, Mission Section, Team Section, and Achievements Section",
+             
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 4: Implement the About Section",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+            descriptions: [ 
+              "Add a parent <div> with a class name to wrap the entire page.",
+              "Add a <section> for the 'About Section' with a title, description, and an image.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 5: Implement the Mission Section",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+             descriptions: [ 
+               "Add a <section> for the mission statement with a title and a paragraph describing the mission.",
+               
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 6: Design the Team Section",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+             descriptions: [ 
+               "Add a <section> for the 'Meet Our Team' section.",
+                "Create a grid layout to display team member cards.",
+                "Each card should include: An image for the team member, name of the team member, role of the team member.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 7: Add the Achievements Section",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+             descriptions: [ 
+               "Add a <section> for achievements.",
+                "Use a <ul> element to list accomplishments.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 8: Apply CSS Styles",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "about.css file",
+             descriptions: [ 
+               "Define styles for the following: General layout and spacing for the page, section-specific styles (e.g., background, padding), responsive design for various screen sizes, typography for headings and paragraphs, image styling for team photos and the About section.",
+               
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 9: Import the CSS File",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+             descriptions: [ 
+               "Import the about.css file into the About.js component.",
+                
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 10: Add Placeholder or Real Content",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+             descriptions: [ 
+               "Use placeholder images for team members and About section images if real images are not available.",
+                "Add realistic and engaging content for descriptions, mission statements, and achievements.",
+              ],
+            },
+           
+          ],
+        }, {
+          stepTitle: "Step 11: Test the Page",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+             descriptions: [ 
+               "Run the React application to preview the About page.",
+                "Verify that all sections render correctly, including text, images, and styles.",
+              ],
+            },
+           
+          ],
+        }, {
+          stepTitle: "Step 12: Enhance Responsiveness",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "about.css file",
+             descriptions: [ 
+               "Use CSS media queries to adjust the layout for mobile, tablet, and desktop devices.",
+              ],
+            },
+          
+          ],
+        }, {
+          stepTitle: "Step 13: Optimize for Performance",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "About.js file",
+             descriptions: [ 
+               "Ensure images are optimized for the web (e.g., using compressed formats).",
+                "Minimize unnecessary CSS or JavaScript to improve load time.",
+              ],
+            },
+          
+          ],
+        }, {
+          stepTitle: "Step 14: Create the File Structure",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Footer.js file",
+             descriptions: [ 
+               "Inside the src directory, in the Components folder create a file named Footer.js",
+                "Create a footer.css file in styles folder.",
+              ],
+            },
+           
+          ],
+        }, {
+          stepTitle: "Step 15: Design the Footer Layout",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Footer.js file",
+             descriptions: [ 
+               "Plan the footer to include: A section for the academy's description, a section for quick links (e.g., navigation links), a section for contact information, a bottom section for copyright information.",
+               
+              ],
+            },
+          
+          ],
+        }, {
+          stepTitle: "Step 16: Add the HTML Structure",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Footer.js file",
+             descriptions: [ 
+               "Structure the footer using semantic HTML elements like <footer>, <div>, <h3>, <h4>, <p>, <ul>, <li>, and <a> for proper accessibility and SEO.",
+               
+              ],
+            },
+           
+          ],
+        }, {
+          stepTitle: "Step 17: Style the Footer",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Footer.js file",
+             descriptions: [ 
+               "Define styles for the footer container (.footer), its inner content sections (.footer-content, .footer-section), and the bottom area (.footer-bottom).",
+                
+              ],
+            },
+          
+          ],
+        }, {
+          stepTitle: "Step 18: Implement a Responsive Layout",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "footer.css file",
+             descriptions: [ 
+               "Use CSS techniques like Flexbox or Grid to ensure the footer content is neatly arranged and responsive on different screen sizes.",
+               
+              ],
+            },
+            
+          ],
+        }, {
+          stepTitle: "Step 19: Add Styling for Links",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "footer.css file",
+             descriptions: [ 
+               "Style the navigation links (<a> tags) with hover effects to improve usability and aesthetics.",
+               
+              ],
+            },
+          
+          ],
+        }, {
+          stepTitle: "Step 20: Test Accessibility",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Footer.js file",
+             descriptions: [ 
+               "Verify that the footer complies with accessibility standards, such as ensuring proper contrast and readable fonts.",
+                
+              ],
+            },
+          
+          ],
+        }, {
+          stepTitle: "Step 21: Import the Components",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "App.js file",
+             descriptions: [ 
+               "Import the Footer component from the components folder.",
+                "Import the About component from the pages folder.",
+              ],
+            },
+          
+          ],
+        }, {
+          stepTitle: "Step 22: Set Up the Routes",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "App.js file",
+             descriptions: [ 
+               "Use the Routes and Route components from react-router-dom to define the route for the About page.",
+                "Add a Route for the /about path with the About component as its element.",
+              ],
+            },
+         
+          ],
+        }, {
+          stepTitle: "Step 23: Add the Footer Component",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "App.js file",
+             descriptions: [ 
+               "Place the Footer component at the bottom of the page, outside of the Routes block but inside the BrowserRouter.",
+                
+              ],
+            },
+          
+          ],
+        },
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/36r9m6?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/musicacademy/day3.webp"),
+      videoLink: "",
+    },
+
   ],
   Live: [
     {

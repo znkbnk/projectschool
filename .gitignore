@@ -55,3 +55,5 @@ babel.config.js
 Dockerfile
 src/test.js
 .gitignore
+src/testing/data.js
+src/testing/Navbar.js
