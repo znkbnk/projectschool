@@ -3825,6 +3825,201 @@ const tasksData = {
         "https://codesandbox.io/embed/q4fzz3?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons11.webp"),
     },
+    {
+      taskId: "VideoSense-Live-Monitoring",
+      taskTitle: "VideoSense Live Monitoring",
+      introduction: "VideoSense Live Monitoring is a React-based web application designed for real-time monitoring of CCTV video feeds. It allows users to stream live video from multiple sources, providing seamless and efficient monitoring with an easy-to-use interface.",
+      task: {
+        taskDescription: "I need a skilled developer to create a mobile app for our CCTV video playback and configuration platform, Video Sense. The app will primarily enable real-time monitoring of live video feeds and associated functionalities. Only the web app dashboard frontend development is required as per the final UX design shared, with the backend APIs provided by us.",
+        platform: 'Freelancer',
+        projectName: "Mobile App Development for Video Sense",
+        biddingEnds: 'Saturday, 18 of January, 2025',
+        requirements: [
+            "React.js: To build the user interface and manage state.",
+                "Video.js: To handle video playback and support streaming formats like HLS.",
+                "Axios: To fetch video stream data from the backend API.",
+                "API Endpoints: Provide an API that returns the list of available video streams, including URLs in a compatible format (e.g., HLS .m3u8 links).",
+                "CORS Configuration: Ensure the server allows cross-origin requests from the frontend for video streaming.",
+       
+      ],
+      },
+      steps: [
+        {
+          stepTitle: "Important Notes: ",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "API Setup: Make sure you already have your backend API that provides a list of stream URLs. The backend API should be set up to return data in a JSON format like { 'streams': ['stream1_url', 'stream2_url', ...] }.",
+              "CORS Issues: Ensure that CORS headers are correctly configured on your API server to allow requests from your React app's domain, especially if the video streams are hosted on external servers.",
+              "Video Format: Confirm that the video streams are in a supported format (e.g., .m3u8 for HLS) and are accessible by your app. If you're using a different format (e.g., .mp4), make sure it's compatible with video.js.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Set Up Your React Project",
+          titleDescription: "Create a New React Application",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Open your terminal and run the following command to create a new React app: 'npx create-react-app video-monitoring'",
+              "Navigate into the newly created project folder: 'cd video-monitoring'",
+              ],
+            },
+       
+          ],
+        },
+         {
+          stepTitle: "Step 3: Install Dependencies",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Install video.js for handling video playback",
+            descriptions: [ 
+              "Run the following command to install video.js: 'npm install video.js'",
+              
+              ],
+            },
+            {
+              subtitleDescription: " Install axios for making HTTP requests to the API",
+             descriptions: [ 
+              "Run this command to install axios: 'npm install axios'",
+            
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Set Up API Integration",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create the API logic to fetch the stream URLs.",
+            descriptions: [ 
+              "You need to create an API helper file (e.g., api.js) where you will use axios to fetch stream URLs from your server.",
+              "Make sure your backend API is already set up to serve the stream URLs at the endpoint (/api/streams) and is functioning correctly.",
+              "Ensure the backend API is properly configured to return an array of stream URLs. These URLs could be links to .m3u8 files or other video streaming formats.",
+              ],
+            },
+        
+          ],
+        },
+         {
+          stepTitle: "Step 5: Create the VideoPlayer Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Create a new folder named components in the src folder of your React project.",
+                "Inside the components folder, create a new file for the video player component (e.g., VideoPlayer.js).",
+                "This component will be responsible for rendering the video player using video.js and handling the provided video stream URL.",
+              ],
+            },
+            {
+              subtitleDescription: "Inside the VideoPlayer component:",
+             descriptions: [ 
+               "Initialize a video.js player on the video element.",
+                "Use the passed stream URL (url) as the source for the video player.",
+                "Make sure to handle the cleanup when the component unmounts to dispose of the video player and prevent memory leaks.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: Set Up the LiveMonitoringPage Component",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Create a page (e.g., LiveMonitoringPage.js) inside the pages folder.",
+             descriptions: [ 
+               "This page will be responsible for fetching the stream URLs from your backend API and rendering the VideoPlayer components with those URLs.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "In the LiveMonitoringPage:",
+              descriptions: [ 
+               "Use the useState and useEffect hooks to manage and fetch the list of stream URLs from your backend.",
+                "Pass each stream URL to the VideoPlayer component to render the live video feed.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 7: Connect the Components in the Main Application",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "In the App.js file, import the LiveMonitoringPage component.",
+                "Render the LiveMonitoringPage inside your App component to display the live video monitoring interface.",
+              ],
+            },
+            
+          ],
+        },
+         {
+          stepTitle: "Ensure Correct API and Video Format",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Make sure that the backend API /api/streams is correctly implemented and accessible. This API should return a list of valid video stream URLs (such as .m3u8 links).",
+                "Verify that the video stream URLs are in a format supported by video.js (e.g., .m3u8 for HLS streams).",
+                "Ensure that the video stream sources are correctly set up in the backend and are publicly accessible or configured for your application to access.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 9: Test and Debug",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Run the application locally using: 'npm start'",
+                "Make sure the application can fetch the stream URLs from the API and render the video player with the corresponding video feed.",
+                "Debug any issues related to fetching the stream URLs or displaying the video player (e.g., CORS issues, invalid video formats, etc.).",
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 10: Deployment",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "When the development is complete, deploy your application to a web server or a hosting platform (e.g., Vercel, Netlify, AWS, etc.).",
+                "Ensure that the API is accessible in the production environment, and your video streams are available for users to view.",
+              ],
+            },
+          
+          ],
+        },
+       
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/ymkqpv?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/livelessons12.webp"),
+    },
+
   ],
   React: [
     {
