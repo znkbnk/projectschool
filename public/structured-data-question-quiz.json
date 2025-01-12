@@ -14,34 +14,10 @@
     "@type": "Audience",
     "audienceType": "Beginner, Intermediate, Advanced"
   },
-  "url": "https://projectschool.dev/interview/InterviewQuiz/",
-  "duration": "PT30M", 
+  "duration": "PT30M",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
-      {
-        "@type": "Question",
-        "position": 1,
-        "name": "What is React.js?",
-        "text": "What is React.js?",
-        "url": "https://projectschool.dev/interview/InterviewQuiz/what-is-the-virtual-dom",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A library for building user interfaces"
-        },
-        "suggestedAnswer": [
-          { "@type": "Answer", "text": "A backend framework for databases" },
-          { "@type": "Answer", "text": "A library for performing server-side operations" },
-          { "@type": "Answer", "text": "A language used for creating APIs" }
-        ],
-        "description": "Discover what React.js is and how it helps developers build dynamic and efficient user interfaces.",
-        "keywords": [
-          "React.js",
-          "React introduction",
-          "React library",
-          "UI development"
-        ]
-      },
       {
         "@type": "Question",
         "position": 1,
@@ -1873,16 +1849,10 @@
     "itemListElement": [
       {
         "@type": "ListItem",
-        "position": 60,
         "name": "Home",
         "item": "https://www.projectschool.dev"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Interview Quiz",
-        "item": "https://projectschool.dev/interview/InterviewQuiz/"
-      }
+   
     ]
   },
  
