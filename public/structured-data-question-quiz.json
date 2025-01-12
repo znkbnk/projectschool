@@ -15,6 +15,7 @@
     "audienceType": "Beginner, Intermediate, Advanced"
   },
   "url": "https://projectschool.dev/interview/InterviewQuiz/",
+  "duration": "PT30M", 
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [
@@ -30,10 +31,7 @@
         },
         "suggestedAnswer": [
           { "@type": "Answer", "text": "A backend framework for databases" },
-          {
-            "@type": "Answer",
-            "text": "A library for performing server-side operations"
-          },
+          { "@type": "Answer", "text": "A library for performing server-side operations" },
           { "@type": "Answer", "text": "A language used for creating APIs" }
         ],
         "description": "Discover what React.js is and how it helps developers build dynamic and efficient user interfaces.",
