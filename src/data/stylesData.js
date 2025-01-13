@@ -11515,6 +11515,185 @@ body {
       }
       
     `
+  },
+  {
+    taskId: "day4",
+    title: "services.css",
+    css: `
+    .services-page {
+      padding: 2rem;
+      color: var(--color-text);
+    }
+    
+    .services-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .services-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .services-header p {
+      font-size: 1.2rem;
+      color: var(--color-text-muted);
+    }
+    
+    .lessons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    
+    .lesson-card {
+      background-color: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 1rem;
+      text-align: center;
+      padding: 1.5rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .lesson-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+    
+    .lesson-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+    }
+    
+    .lesson-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+    
+    .lesson-card p {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+    }
+    
+    .lesson-card .price {
+      font-weight: bold;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+    }
+    
+    .learn-more-btn {
+      display: inline-block;
+      background: var(--gradient-button);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .learn-more-btn:hover {
+      background: var(--gradient-button-hover);
+    }
+    
+    `,
+    title2: "blog.css",
+    css2: `
+    .blog-page {
+      padding: 2rem;
+      color: var(--color-text);
+    }
+    
+    .blog-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .blog-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .blog-header p {
+      font-size: 1.2rem;
+      color: var(--color-text-muted);
+    }
+    
+    .blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .blog-card {
+      display: flex;
+      gap: 1.5rem;
+      background-color: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+    
+    .blog-thumbnail {
+      width: 150px;
+      height: 150px;
+      border-radius: 1rem;
+      object-fit: cover;
+    }
+    
+    .blog-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .blog-content .date {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.5rem;
+    }
+    
+    .blog-content p {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+    }
+    
+    .read-more-btn {
+      display: inline-block;
+      background: var(--gradient-button);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    .read-more-btn:hover {
+      background: var(--gradient-button-hover);
+    }
+    
+    `
   }
 ];
 
@@ -11533,7 +11712,7 @@ export default stylesData;
     css2: `
     
     `
-  }
+  },
   
 
   */

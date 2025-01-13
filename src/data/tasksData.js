@@ -708,6 +708,178 @@ const tasksData = {
       img: require("../images/musicacademy/day3.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day4",
+      taskTitle: "Implementing Services and Blog Pages",
+      introduction: "Create a responsive Services Page showcasing lessons with engaging descriptions, prices, and call-to-action buttons, and a visually appealing Blog Page featuring posts with thumbnails, dates, and 'Read More' options to enhance user interaction.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Create the Component",
+          titleDescription: "Services.js",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "Create a new file named Services.js in the components folder.",
+             
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Design the Data Structure",
+          titleDescription: "Services.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Define an array of objects representing the lessons (name, description, and price).",
+             
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 3: Design the Layout",
+          titleDescription: "Services.js",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "Add a main container to hold the content.",
+              "Include a header section with a title and introductory paragraph.",
+              "Create a grid or list to display the lessons.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 4: Create Individual Lesson Cards",
+          titleDescription: "Services.js",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "For each lesson, include a visual icon, name, description, price, and a call-to-action button.",
+             
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 5: Style the Page",
+          titleDescription: "Services.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Add a CSS file (e.g., services.css) and define styles for the page, header, grid, lesson cards, and buttons.",
+             
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 6: Create the Component",
+          titleDescription: "Blog.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Create a new file named BlogPage.js in the components folder.",
+             
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 7: Design the Data Structure",
+          titleDescription: "Blog.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Define an array of objects representing the blog posts (title, date, description, and thumbnail URL).",
+               
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 8: Design the Layout",
+           titleDescription: "Blog.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Add a main container to hold the content.",
+                "Include a header section with a title and introductory paragraph.",
+                "Create a grid or list to display the blog posts.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 9: Create Individual Blog Cards",
+          titleDescription: "Blog.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "For each blog, include an image thumbnail, title, publication date, description, and a call-to-action button.",
+              
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 10: Style the Page",
+           titleDescription: "Blog.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Add a CSS file (e.g., blog.css) and define styles for the page, header, grid, blog cards, images, and buttons.",
+                "Ensure the layout is responsive.",
+              ],
+            },
+        
+          ],
+        },   {
+          stepTitle: "Step 11: Update Routes in App.js",
+           titleDescription: "App.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Open the App.jsx file where existing routes are already set up.",
+                "Import the ServicesPage and BlogPage components at the top",
+                "Add extra routes for the new pages under the <Routes> block without disturbing the existing structure.",
+              ],
+            },
+         
+          ],
+        },
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/fq29cs?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/musicacademy/day4.webp"),
+      videoLink: "",
+    },
 
   ],
   Live: [
