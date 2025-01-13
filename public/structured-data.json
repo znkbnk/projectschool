@@ -34,7 +34,10 @@
             "location": {
               "@type": "Place",
               "name": "Online"
-            }
+            },
+            "courseSchedule": "Available as a self-paced course starting January 2025.",
+            "timeRequired": "PT2H", 
+            "learningResourceType": "Hands-on project with guided steps and video tutorials."
           }
         ],
         "provider": {
