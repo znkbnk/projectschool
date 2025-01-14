@@ -11033,7 +11033,7 @@ body {
     `,
   },
   {
-    taskId: "day2",  
+    taskId: "day2",
     title: "Day2: Home Page",
     css: `
     /* Global Styles */
@@ -11452,7 +11452,7 @@ body {
       }
       
     `,
-    title2: "Day3: footer.css", 
+    title2: "Day3: footer.css",
     css2: `
     /* Footer Styles */
     .footer {
@@ -11514,7 +11514,7 @@ body {
         color: var(--color-light-muted);
       }
       
-    `
+    `,
   },
   {
     taskId: "day4",
@@ -11693,8 +11693,171 @@ body {
       background: var(--gradient-button-hover);
     }
     
-    `
+    `,
+  },
+  {
+    taskId: "day5",
+    title: "contactus.css",
+    css: `
+    /* Contact Us Page */
+    .contact-us-page {
+        text-align: center;
+        padding: 5rem 2rem;
+      }
+      
+      .contact-info {
+        margin-bottom: 2rem;
+        color: var(--color-text-muted);
+        font-size: 1.25rem;
+        text-align: center;
+      }
+      
+      .google-maps iframe {
+        width: 50%;
+        height: 450px;
+        border-radius: 1rem;
+        max-width: 100%;
+        margin-top: 2rem;
+      }
+      
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+      }
+      
+      .contact-form label {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        display: block;
+        color: var(--color-text);
+      }
+      
+      .contact-form input,
+      .contact-form textarea {
+        width: 80%;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 1rem;
+        color: var(--color-text);
+        font-size: 1rem;
+      }
+      
+      .contact-form textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+      
+      .contact-form button {
+        width: 80%;
+        padding: 1rem;
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+        border-radius: 9999px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      
+      .contact-form button:hover {
+        transform: scale(1.05);
+      }
+      
+      .contact-form input:focus,
+      .contact-form textarea:focus,
+      .contact-form button:focus {
+        outline: none;
+        border-color: var(--gradient-primary);
+      }
+      
+    `,
+    title2: "testimonials.css",
+    css2: `
+    /* Testimonials Section */
+.testimonials {
+    padding: 5rem 2rem;
+    backdrop-filter: blur(10px);
   }
+  
+  .testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .testimonial-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .testimonial-text {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin: 1.5rem 0;
+    color: var(--color-text-muted);
+  }
+  
+  .testimonial-author {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--color-text);
+  }
+  
+  .testimonial-role {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+  }
+  
+  .testimonial-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  
+  .nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-dot.active {
+    background-color: #8b5cf6;
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .testimonial-card {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+    `
+  },
 ];
 
 export default stylesData;

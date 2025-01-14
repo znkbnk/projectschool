@@ -880,6 +880,189 @@ const tasksData = {
       img: require("../images/musicacademy/day4.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day5",
+      taskTitle: "Adding Contact Us and Testimonials Pages",
+      introduction: "This project includes a Contact Us Page with a form for inquiries and a Testimonials Page showcasing user feedback, both seamlessly integrated into a React app for enhanced communication and credibility.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Create State Management",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+              descriptions: [ 
+              "Use the useState hook to manage form data (name, email, subject, message).",
+              
+              ],
+            },
+         
+          ],
+        },
+        {
+          stepTitle: "Step 2: Build the Contact Form",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+             descriptions: [ 
+              "Create a form with input fields for name, email, subject, and a textarea for the message.",
+              "Add onChange handlers to update the state with user inputs.",
+              "Include a onSubmit handler to process the form data.",
+              ],
+            },
+       
+          ],
+        },
+         {
+          stepTitle: "Step 3: Add Contact Information",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+            descriptions: [ 
+              "Display basic contact information like phone and email.",
+             
+              ],
+            },
+        
+          ],
+        },
+         {
+          stepTitle: "Step 4: Embed Google Maps",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+            descriptions: [ 
+              "Use an <iframe> to embed Google Maps with the desired location.",
+            
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 5: Style the Page",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "contactus.css",
+             descriptions: [ 
+               "Use the contactus.css file to style the page for a professional look.",
+              
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 6: Prepare Testimonials Data",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Testimonials.js",
+             descriptions: [ 
+               "Create an array of objects containing the testimonial text, author's name, and image path.",
+                
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 7: Create State Management",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Testimonials.js",
+             descriptions: [ 
+               "Use the useState hook to manage the active testimonial index.",
+               
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 8: Display Testimonial Content",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Testimonials.js",
+             descriptions: [ 
+               "Dynamically display the active testimonial's text, name, and image based on the current index.",
+             
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 9: Add Navigation Dots",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Testimonials.js",
+             descriptions: [ 
+               "Render navigation dots for each testimonial.",
+                "Implement a click handler to update the active testimonial index.",
+              ],
+            },
+          
+          ],
+        },
+        {
+          stepTitle: "Step 10: Style the Testimonials Section",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "testimonials.css",
+             descriptions: [ 
+               "Use the testimonials.css file to design the layout and navigation dots.",
+              
+              ],
+            },
+       
+          ],
+        },      {
+          stepTitle: "Step 11: Update the Routes",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "App.js",
+             descriptions: [ 
+               "Open your App.js file and update the existing routes to include paths for the new components (e.g., /contact-us for the contact page and /testimonials for the testimonials page).",
+               
+              ],
+            },
+        
+          ],
+        },      {
+          stepTitle: "Step 12: Test New Routes",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "App.js",
+             descriptions: [ 
+               "Run the project and navigate to /contact-us and /testimonials in the browser to ensure the components render correctly.",
+                
+              ],
+            },
+           
+          ],
+        },    
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/nr926f?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/musicacademy/day5.webp"),
+      videoLink: "",
+    },
 
   ],
   Live: [
