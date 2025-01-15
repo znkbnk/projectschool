@@ -1063,6 +1063,213 @@ const tasksData = {
       img: require("../images/musicacademy/day5.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day6",
+      taskTitle: "Contact Form with Email Integration",
+      introduction: "This guide walks you through integrating EmailJS into your React project to send form data via email. It covers setting up an EmailJS account, creating an email service and template, and implementing a form submission process with success and error feedback.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Install EmailJS Library",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+              descriptions: [ 
+              "Ensure the emailjs-com package is installed in your project using npm or yarn.",
+              
+              ],
+            },
+            
+          ],
+        },
+        {
+          stepTitle: "Step 2: Import EmailJS",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+             descriptions: [ 
+              "Import the emailjs-com library in your Contact component file.",
+              
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Add State Management",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+            descriptions: [ 
+              "Create a state to track the form submission status (isSubmitting) and set it to false.",
+              "Create a state to store user feedback messages (feedback) and set it to null.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 4: Add functionality to handleSubmit",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+            descriptions: [ 
+              "Remove the exsisting line of code: console.log(form);",
+              "Prevent the default form submission behavior using e.preventDefault().",
+              "Set isSubmitting to true to indicate the submission is in progress.",
+              "Call the emailjs.sendForm method, passing the necessary parameters: SERVICE_ID, TEMPLATE_ID, the form event (e.target), and your Public_Key.",
+                "Use .then to handle the successful response.",
+                "Log the result to the console (console.log(result.text)).",
+                "Update the feedback message with a success message (setFeedback('Message sent successfully!')).",
+                "Reset the form fields using setForm() to clear the form.",
+                "Use .catch to handle any errors.",
+                "Log the error to the console (console.log(error.text)).",
+                "Update the feedback message with an error message (setFeedback('There was an error sending the message. Please try again.')).",
+                "Use .finally() to ensure that, regardless of success or failure, setIsSubmitting(false) is called to reset the submitting state.",
+               
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 5: Update the Submit Button",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+             descriptions: [ 
+               "Disable the button when isSubmitting is true.",
+                "Display a loading message (e.g., 'Sending...') when the form is being submitted.",
+                
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 6: Display Feedback to the User",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+             descriptions: [ 
+               "Use a conditional to display the feedback message (feedback) to the user after the form is submitted.",
+               
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 7: Create an EmailJS Account",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "EmailJs.com",
+             descriptions: [ 
+               "Go to emailjs.com.",
+                "Click Sign Up in the top right corner and fill in the required details to create an account. If you already have an account, click Login and sign in.",
+              ],
+            },
+            
+          ],
+        },
+         {
+          stepTitle: "Step 8: Create an Email Service",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "EmailJs.com",
+             descriptions: [ 
+               "After logging in, go to the Dashboard.",
+                "In the Dashboard, click Add New Service/Create New Service.",
+                "Choose a service provider for sending emails. EmailJS supports several services, such as Gmail, Outlook, etc. Choose the one that suits your needs and follow the steps to authenticate your account.",
+               "Once the service is created, you'll be able to see the Service ID on your EmailJS dashboard. (Service ID:service_xxxxxx).",
+
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 9: Create an Email Template",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "EmailJs.com",
+             descriptions: [ 
+               "After creating the service, go to the Email Templates section (on the left sidebar).",
+                "Click Create New Template.",
+                "You'll be prompted to configure your email template. This is where you define the structure of the email that will be sent when the form is submitted.",
+                "You can include placeholders like {{name}}, {{email}}, {{subject}}, and {{message}} that correspond to the form fields.",
+                "Once done, click Save. The template will now be listed in the templates section, and you can click on it to see its Template ID.",
+              ],
+            },
+            
+          ],
+        },
+         {
+          stepTitle: "Step 10: Get Your Public Key",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "EmailJs.com",
+             descriptions: [ 
+               "In the Dashboard or Account Settings (accessible by clicking on your profile picture in the top right), look for your Public Key.",
+                "Your Public Key is required when calling the emailjs.sendForm() method.",
+              ],
+            },
+          
+          ],
+        },
+        {
+          stepTitle: "Step 11: Get and add Your IDs",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+             descriptions: [ 
+               "Service ID: The ID of the email service you created (e.g., Gmail, Outlook, etc.).",
+                "Template ID: The ID of the email template you created.",
+                "Public Key: Your unique EmailJS User ID (found in your account settings).",
+                "With all the IDs ready, use them in your React app. Replace the placeholders in your code with these IDs",
+                "For example, if your Service ID is 'gmail', Template ID is 'contact_form', and Public Key is 'user_ABC123XYZ', your code should look like this: 'emailjs.sendForm('gmail', 'contact_form', e.target, 'user_ABC123XYZ')'",
+              ],
+            },
+        
+          ],
+        },
+        {
+          stepTitle: "Step 12: Test the Form",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Contact.js",
+             descriptions: [ 
+               "Once everything is set up and the code is updated, test the form by filling it out and submitting it. You should receive an email at the configured recipient address as specified in the email template.",
+                "Ensure that your email template correctly maps the fields from the form (like name, email, subject, message) with placeholders like {{name}}.",
+                "If you run into any issues with the service or template setup, refer to EmailJS's documentation or text me for more detailed guidance.",
+              ],
+            },
+          
+          ],
+        },
+      
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/8ydgts?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/musicacademy/day6.webp"),
+      videoLink: "",
+    },
 
   ],
   Live: [
