@@ -1453,7 +1453,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "/notavailable",
+      codesandboxUrl: "https://codesandbox.io/embed/8yfkv6?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day7.webp"),
       videoLink: "",
     },
