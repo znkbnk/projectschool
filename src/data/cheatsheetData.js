@@ -3677,6 +3677,75 @@ const cheatsheetData = [
         
     ],
   },
+  {
+    taskId: "day7",
+    content: [
+      {
+        title: "Setting Up the Environment",
+        subtitle: "Environment Variables",
+        details: [
+          "'dotenv.config()' loads environment variables from a .env file into process.env. This is used to securely store sensitive information, such as database connection strings or API keys, which you don't want to hard-code into your application.",
+         
+        ],
+      },
+         {
+        title: "Initializing the Express App",
+        subtitle: "",
+        details: [
+          "A minimal web framework for building RESTful APIs and web applications.",
+          "'express()' initializes the server instance.",
+          "cors(): Enables Cross-Origin Resource Sharing, which is necessary for APIs to handle requests from different domains.",
+          "express.json(): Parses incoming JSON requests and makes the data accessible in req.body.",
+        ],
+      },
+         {
+        title: "Database Connection",
+        subtitle: "",
+        details: [
+          "A NoSQL database that stores data in JSON-like format. It's highly scalable and flexible for modern applications.",
+          "mongoose.connect() establishes a connection to MongoDB using the URI provided in the .env file.",
+          "If the connection fails, the catch block captures the error and logs it to the console.",
+          "process.exit(1) ensures the application exits gracefully with a failure code.",
+        ],
+      },
+         {
+        title: "Creating a Test API Endpoint",
+        subtitle: "GET / Route",
+        details: [
+          "Responds with a simple message ('API is running...') to verify that the server is working.",
+        ],
+      },
+         {
+        title: " Starting the Server",
+        subtitle: "",
+        details: [
+          "The PORT is taken from the .env file or defaults to 5000 if not specified.",
+          "app.listen(PORT, callback) starts the server and listens for incoming requests on the specified port.",
+        ],
+      },
+         {
+        title: "Code Execution Flow",
+        subtitle: "",
+        details: [
+          "dotenv reads the .env file and populates process.env.",
+          "The Express app is created, and middleware is applied.",
+          "The connectDB function attempts to establish a MongoDB connection.",
+          "A test route (GET /) is set up to ensure the API is functional.",
+          "The app begins listening for requests on the specified port.",
+        ],
+      },
+      {
+        title: "Best Practices",
+        subtitle: "",
+        details: [
+          "Keep your database connection logic (connectDB) in a separate file for modularity and reusability.",
+          "Use try-catch blocks to handle runtime errors gracefully.",
+          "Never hard-code sensitive credentials into your codebase. Use .env files and ensure they're excluded from version control using .gitignore.",
+        ],
+      },
+    ],
+  },
+
 
 
 ];
