@@ -1270,6 +1270,194 @@ const tasksData = {
       img: require("../images/musicacademy/day6.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day7",
+      taskTitle: "Setting Up a Node.js Backend with MongoDB",
+      introduction: "In this lesson, you'll learn how to set up a backend server using Express and MongoDB, including creating the server.js and db.js files for routing and establishing a MongoDB connection. You'll also configure a MongoDB Atlas project, set up database access, and create a .env file to securely store your connection credentials.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Setting Up server.js File",
+          titleDescription: "Create a backend folder next to your public, src, and node_modules folders. ( in the root directory of your project).",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "In your backend folder, open the terminal and run: 'npm init -y' then 'npm install express mongoose dotenv cors'.",
+              "Create the server.js file in your backend folder.",
+              ],
+            },
+         
+          ],
+        },
+        {
+          stepTitle: "Step 2: Set up the necessary dependencies",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "server.js",
+             descriptions: [ 
+              "Import 'express' for routing.",
+              "Import 'dotenv' to manage environment variables.",
+              "Import 'cors' to handle cross-origin requests.",
+              "Import 'connectDB' from db.js to establish the MongoDB connection.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Setting up the Express app and starting the server",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "server.js",
+            descriptions: [ 
+              "Load environment variables with dotenv.config().",
+              "Initialize the Express app with express().",
+              "Use middleware: 'cors()' for handling cross-origin resource sharing. Then 'express.json()' to parse incoming JSON requests.",
+              "Call the connectDB() function to connect to MongoDB.",
+              "Create a test route (GET /) to check if the server is running.",
+              "Set up the port (e.g., 5000 or use an environment variable).",
+              "Start the server with app.listen().",
+            ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 4: Setting Up db.js File",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "db.js",
+            descriptions: [ 
+              "Create the config/db.js file inside the backend folder.",
+              "Import mongoose for MongoDB connection.",
+              "",
+              ],
+            },
+        
+          ],
+        },
+         {
+          stepTitle: "Step 5: Create the connectDB functions",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "db.js",
+             descriptions: [ 
+               "Use mongoose.connect() to connect to MongoDB.",
+                "Use process.env.MONGO_URI to retrieve the connection string from the .env file.",
+                "Log the successful connection message (console.log).",
+                "In case of an error, log the error message and terminate the process using process.exit(1).",
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 6: Creating a MongoDB Atlas Project and Cluster",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "mongodb.com",
+             descriptions: [ 
+               "Sign up or log in to MongoDB Atlas.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Create a new project",
+              descriptions: [ 
+               "Click Create a new Project in the Atlas dashboard.",
+                "Give it a name and click Next.",
+              ],
+            },
+            {
+              subtitleDescription: "Create a cluster",
+             descriptions: [ 
+               "Choose Shared Clusters (the free option).",
+                "Select your Cloud Provider (AWS, GCP, or Azure) and Region.",
+                "Click Create Cluster and wait for it to be set up (it may take a few minutes).",
+              ],
+            },
+            {
+              subtitleDescription: "Set up database access",
+             descriptions: [ 
+               "Go to the Database Access tab and create a new database user.",
+                "Choose a username and password for the user.",
+                "Set the database user role (e.g., Atlas Admin for full access).",
+              ],
+            },
+            {
+              subtitleDescription: "Set up network access",
+              descriptions: [ 
+               "Go to Network Access and click Add IP Address.",
+                "Choose Allow access from anywhere (or add specific IP addresses).",
+                "Click Confirm.",
+              ],
+            }, {
+              subtitleDescription: "Get the MongoDB connection string",
+              descriptions: [ 
+                "Go to your cluster in the Clusters tab.",
+                "Click Connect.",
+                "Select Connect your application.",
+                 "Choose Node.js as the driver and version 4.1 or later.",
+                "Copy the connection string provided and replace <username> and <password> with your credentials.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: Creating the .env File",
+          titleDescription: "Create the .env file inside the backend folder.",
+          sections: [
+            {
+              subtitleDescription: ".env",
+             descriptions: [ 
+               "Add your MongoDB URI to the .env file in this format: 'MONGO_URI=mongodb+srv://<your_connection_string>', this you can get from step 6.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "IMPORTANT",
+              descriptions: [ 
+               "Add .env to .gitignore.",
+                "Create a .gitignore file in the root of your project (if not already present).",
+                "Add .env to the file so that it's not pushed to GitHub.",
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 8: Testing the Server",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Terminal",
+             descriptions: [ 
+               "Start the server by running: node server.js",
+                "Check if the server is running by opening a browser and navigating to: http://localhost:5000/",
+                "You should see: API is running... ( or anything you set in the server.js file ).",
+              ],
+            },
+          
+          ],
+        },
+        
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "/notavailable",
+      img: require("../images/musicacademy/day7.webp"),
+      videoLink: "",
+    },
+
 
   ],
   Live: [
