@@ -1457,6 +1457,182 @@ const tasksData = {
       img: require("../images/musicacademy/day7.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day8",
+      taskTitle: "Mongoose Schemas",
+      introduction: "This guide walks you through setting up a structured folder for schemas in a Node.js project, defining Mongoose schemas for entities like users, blog posts, schedules, and payments with fields, relationships, and validations, ensuring scalability and maintainability.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Plan the Schema Design",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "Identify the key entities (e.g., User, BlogPost, LessonSchedule, Message, Payment, Testimonial).",
+              "Think of the structure and relationships for each entity.",
+              "What fields each schema will have.",
+              "Relationships (e.g., author in BlogPost references a User).",
+
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create a Folder for Schemas",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Inside your backend folder, create a models directory.",
+              "Within the models folder, create a file for each schema. ",
+              "User.js for the User schema.",
+              "BlogPost.js for the BlogPost schema.",
+              "LessonSchedule.js for the LessonSchedule schema.",
+              "Message.js for the Message schema.",
+              "Payment.js for the Payment schema.",
+              "Testimonial.js for the Testimonial schema.",
+              "Ensure each file is focused on defining a single schema. Avoid combining multiple schemas in one file for maintainability.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 3: Create the User.js Schema",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "Open User.js in the models folder.",
+              "Define the User schema.",
+              "Add fields: 'name', 'email', 'password', 'role', etc.",
+              "Add relationships: 'teacherDetails' includes fields like bio, expertise, and availability and 'studentDetails' includes a reference to lessons using mongoose.Schema.Types.ObjectId.",
+              "Add validation, such as required: true, 'enum' for roles, and unique: true for email.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 4: Create the BlogPost.js Schema",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "Open BlogPost.js.",
+              "Define field: 'title' and 'content' as strings with required: true.",
+              "Then add another one: 'author' as a reference to the 'User' schema using mongoose.Schema.Types.ObjectId and 'ref': 'User'.",
+              "An array of strings for 'tags'.",
+              "Add defaults for 'published' and 'timestamps'.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 5: Create the LessonSchedule.js Schema",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Open LessonSchedule.js.",
+              "Define field: References to 'teacher' and 'student' (both referencing the 'User' schema).",
+              "After make a: Strings for 'lessonType', 'date', and 'time'.",
+              "Optional 'location' field for online links or physical locations.",
+              "And a 'status' with enumerated values: Scheduled, Completed, Cancelled.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 6: Create the Message.js Schema",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Open Message.js.",
+              "You will need filds like 'sender' and 'receiver' as references to the 'User' schema.",
+              "Then add 'content' as a required string.",
+              "After add 'isRead' as a boolean with a default of false.",
+              "And 'sentAt' with a default value of Date.now.",
+              ],
+            },
+            
+          ],
+        },
+         {
+          stepTitle: "Step 7: Create the Payment.js Schema",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Open Payment.js.",
+              "Define fields like 'user' as a reference to the 'User' schema.",
+              "Next 'amount' as a required number.",
+              "Then 'status' as an enumerated value: Pending, Paid, Failed.",
+              "Also 'method' with enumerated values (e.g., Credit Card, PayPal).",
+              "Optional 'transactionId' as a unique identifier.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 8: Create the Testimonial.js Schema",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Open Testimonial.js.",
+              "You will need filed like 'user' as a reference to the 'User' schema.",
+              "You will also need 'content' as a required string.",
+              "Optional rating as a number between 1 and 5.",
+              "And approved as a boolean with a default of false.",
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 9: Add Common Options and Export the Models",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "For each schema, enable automatic timestamps by passing { timestamps: true } as the second argument to mongoose.Schema.",
+              "Add default values where appropriate, such as Date.now for timestamps.",
+              "At the end of each file, compile the schema into a model using mongoose.model: Example: module.exports = mongoose.model('User', userSchema);",
+              "Confirm that each file exports the corresponding model correctly.",
+              ],
+            },
+          
+          ],
+        },
+        
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "/notavailable",
+      img: require("../images/musicacademy/day1.webp"),
+      videoLink: "",
+    },
+
+    
 
 
   ],
@@ -6534,6 +6710,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
+      videoLink: "https://youtu.be/yz2RPgTLYeY",
       codesandboxUrl:
         "https://codesandbox.io/embed/kcsm88?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson16.webp"),
