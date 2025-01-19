@@ -3745,6 +3745,84 @@ const cheatsheetData = [
       },
     ],
   },
+  {
+    taskId: "day8",
+    content: [
+      {
+        title: "What is a Schema?",
+        subtitle: "",
+        details: [
+          "A schema in Mongoose is a structure that defines the shape of the documents within a MongoDB collection. It acts as a blueprint for your data, ensuring consistency and applying validations.",
+          "A User schema might define fields like name, email, and password.",
+          "You can specify data types, required fields, default values, and more.",
+        ],
+      },
+         {
+        title: "What is a Model?",
+        subtitle: "",
+        details: [
+          "A model is a compiled version of a schema. It provides an interface to interact with the database, allowing you to perform operations like creating, reading, updating, and deleting documents.",
+         
+        ],
+      },
+         {
+        title: "Data Types",
+        subtitle: "Mongoose provides various data types for schema fields:",
+        details: [
+          "String: For text values (e.g., name, email).",
+          "Number: For numeric values (e.g., price, rating).",
+          "Boolean: For true/false values (e.g., isActive, approved).", 
+          "Date: For timestamps (e.g., createdAt, birthDate).",
+          "Array: For lists of values (e.g., tags, skills).",
+          "ObjectId: For references to other documents.",
+        ],
+      },
+         {
+        title: "Validations",
+        subtitle: "Validations ensure data integrity by applying rules:",
+        details: [
+          "required: true: Ensures the field must have a value.",
+          "unique: true: Prevents duplicate values (e.g., for email).",
+          "min and max: Define numeric or string length constraints.",
+        ],
+      },
+         {
+        title: "Default Values",
+        subtitle: "Fields can have default values if none are provided:",
+        details: [
+          "createdAt: { type: Date, default: Date.now }.",
+         
+        ],
+      },
+         {
+        title: "Relationships with ref",
+        subtitle: "Schemas can reference documents from other collections using 'ObjectId' and 'ref':",
+        details: [          
+          "A BlogPost schema's author field references the User schema.",
+        ],
+      },
+      {
+        title: "Enumerations (enum)",
+        subtitle: "Restrict a field to specific values:",
+        details: [
+          "role: { type: String, enum: ['Student', 'Teacher', 'Admin'] }.",
+       
+        ],
+      },
+         {
+        title: "Tips for Schema Design",
+        subtitle: "",
+        details: [
+          "Normalize Relationships: Use references (ref) to connect related documents, ensuring scalability. For example: A LessonSchedule references User for both teacher and student.",
+          "Embed Data When Needed: For small, unchanging data, you can embed it directly instead of using references. For example, tags in a BlogPost.",
+          "Use Timestamps: Add { timestamps: true } to schemas to automatically manage createdAt and updatedAt fields.",
+          "Optimize Queries with Indexes: For frequently queried fields (e.g., email), add an index to improve query performance: Example: email: { type: String, unique: true, index: true }.",
+
+        ],
+      },
+     
+    ],
+  },
 
 
 
