@@ -111,10 +111,7 @@
 
 .pslogosmall {
   display: none;
-  position: absolute;
-  width: 80%;
-  
-  z-index: 5;
+ 
 }
 
 
@@ -173,6 +170,10 @@
   .pslogosmall {
     display: block;
     top: 30%;
+    position: absolute;
+    width: 80%;
+    
+    z-index: 5;
 
   }
 }

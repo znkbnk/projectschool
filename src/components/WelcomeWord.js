@@ -103,7 +103,6 @@ const WelcomeComponent = () => {
         alt="logo"
         className="sectionImg4"
         ref={sectionImg4Ref}
-        loading="lazy"
       />
 
       <div className="sectionImages-container">
@@ -112,28 +111,24 @@ const WelcomeComponent = () => {
           alt="logo"
           className="sectionImg7"
           ref={sectionImg7Ref}
-          loading="lazy"
         />
         <img
           src={sectionImg2}
           alt="logo"
           className="sectionImg2"
           ref={sectionImg2Ref}
-          loading="lazy"
         />
         <img
           src={sectionImg3}
           alt="logo"
           className="sectionImg3"
           ref={sectionImg3Ref}
-          loading="lazy"
         />
         <img
           className="projectschoolImg"
           src={image1}
           alt="logo"
           ref={logo}
-          loading="lazy"
         />
       </div>
 
@@ -143,7 +138,6 @@ const WelcomeComponent = () => {
         alt="pslogo small"
         className="pslogosmall"
         ref={logo}
-        loading="eager"
       />
 
       <CrazyScrollPhrase />
