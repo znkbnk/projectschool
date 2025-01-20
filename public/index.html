@@ -7,6 +7,7 @@
     <link rel="icon" href="/pslogosmallico.ico" />
 
     <!-- Preload Images -->
+   
     <link
       rel="preload"
       href="/static/media/pslogosmall.fce9914b8e6c359c4f7c.webp"
@@ -58,6 +59,9 @@
       />
     </noscript>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+
     <!-- Google Analytics -->
     <script
       async
@@ -99,7 +103,7 @@
               document.head.appendChild(script);
             })
             .catch((error) => {
-              console.error("Error loading JSON-LD data:", error);
+              console.error("Error loading JSON-LD data:", error.message);
             });
         });
       });
@@ -117,5 +121,6 @@
         "sameAs": ["https://www.instagram.com/reactlessons"]
       }
     </script>
+    
   </body>
 </html>
