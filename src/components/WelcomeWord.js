@@ -34,18 +34,7 @@ const WelcomeComponent = () => {
       sectionImg2Element &&
       sectionImg7Element
     ) {
-      gsap.set(
-        [
-          sectionImg4Element,
-          sectionImg3Element,
-          sectionImg2Element,
-          sectionImg7Element,
-        ],
-        {
-          opacity: 0,
-          visibility: "hidden",
-        }
-      );
+      
 
       gsap.set(sectionImg2Element, {
         opacity: 0.7,
