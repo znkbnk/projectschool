@@ -25,17 +25,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -78,17 +74,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -132,17 +124,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -185,17 +173,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -238,17 +222,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -291,17 +271,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -344,17 +320,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -397,18 +369,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -451,18 +418,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -505,18 +467,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -559,18 +516,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -613,18 +565,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -667,18 +614,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -721,18 +663,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -775,18 +712,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -829,18 +761,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -883,18 +810,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -937,18 +859,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -991,18 +908,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1045,18 +957,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1099,18 +1006,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1153,18 +1055,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1207,18 +1104,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1261,18 +1153,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1315,18 +1202,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1369,18 +1251,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1423,18 +1300,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1477,18 +1349,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1531,18 +1398,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1585,18 +1447,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1639,18 +1496,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1693,18 +1545,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1747,18 +1594,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1801,18 +1643,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1855,18 +1692,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1909,18 +1741,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -1963,18 +1790,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2017,18 +1839,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2071,18 +1888,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2125,18 +1937,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2179,18 +1986,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2233,18 +2035,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2287,18 +2084,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2341,18 +2133,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2395,18 +2182,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2449,18 +2231,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2503,18 +2280,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2557,18 +2329,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2611,18 +2378,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2665,18 +2427,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2719,18 +2476,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2773,18 +2525,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2827,18 +2574,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2881,18 +2623,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2935,18 +2672,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
-            },    "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
             },
-            
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -2989,18 +2721,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
@@ -3043,18 +2770,13 @@
             "@type": "CourseInstance",
             "courseMode": "Online",
             "startDate": "2025-01-01",
-            "endDate": "2026-12-31",
+            "endDate": "2025-12-31",
             "instructor": {
               "@type": "Person",
               "name": "Jevin",
               "description": "Instructor for React courses at Project School"
             },
-            "courseWorkload": "12 hours per week",
-            "courseSchedule": {
-              "@type": "Schedule",
-              "repeatFrequency": "P1W",
-              "repeatCount": 52
-            },
+            "courseWorkload": "PT5H",
             "location": {
               "@type": "Place",
               "name": "Online"
