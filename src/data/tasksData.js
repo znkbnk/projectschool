@@ -1631,6 +1631,250 @@ const tasksData = {
       img: require("../images/musicacademy/day8.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day9",
+      taskTitle: "Creating a Test User: Hardcoded Script and Postman Method",
+      introduction: "In this lesson, we're going to learn two ways to create a test user for our application. First, we'll use a hardcoded script to define and save a test user directly in the database. Then, we'll explore how to create a user using Postman by setting up a POST request with user details in JSON format, allowing us to confirm the user is successfully stored.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Start Your Server",
+          titleDescription: "Create a User Using Postman",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "Run the server using: 'node server.js'. Ensure you in the backend folder.",
+              "This will make your API accessible at http://localhost:5000.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Open Postman",
+          titleDescription: "Create a User Using Postman",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Launch Postman on your computer.",
+              "Create a new request by clicking on New and selecting Request.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 3: Set Up the POST Request",
+          titleDescription: "Create a User Using Postman",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "In Postman, set the request type to POST by selecting it from the dropdown next to the URL bar.",
+              "Enter the API endpoint URL in the address bar: http://localhost:5000/api/users",
+              ],
+            },
+        
+          ],
+        },
+         {
+          stepTitle: "Step 4: Add Request Body (User Data)",
+          titleDescription: "Create a User Using Postman",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "In the Postman interface, go to the Body tab.",
+              "Select raw and choose JSON from the dropdown on the right.",
+              "Enter the sample user data. For example: { 'name': 'Jevin', 'email': 'testuser@example.com', 'password': 'password123', and etc. }",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 5: Send the Request",
+          titleDescription: "Create a User Using Postman",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "After entering the data in the Body section, click the Send button in Postman.",
+                "Postman will send the request to http://localhost:5000/api/users with the provided user data.",
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 6: Check the Response",
+          titleDescription: "Create a User Using Postman",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "In the Response section of Postman, you should see a response with the newly created user's data.",
+                "If there's an error (e.g., missing fields, validation issues), you will see an error message in the response with the appropriate status code (e.g., 400 Bad Request).",
+              ],
+            },
+         
+         
+          ],
+        },
+         {
+          stepTitle: "Step 7: Verify the User in the Database",
+          titleDescription: "Create a User Using Postman",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Open MongoDB Compass (or use the MongoDB shell) to check the users collection.",
+                "Look for the newly created user by matching the email or name you used.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 8: Setup Environment Variables",
+           titleDescription: "Create and Save a User Using JavaScript",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Create a .env file in the project directory. (next to yours public folder, src folder, etc.)",
+                "Define the MONGO_URI variable with the MongoDB connection string.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 9: Install Dependencies",
+          titleDescription: "Create and Save a User Using JavaScript",
+
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Install  mongoose for interacting with MongoDB. ( if you haven't already installed it )",
+                "Install dotenv to load environment variables from the .env file.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 10: Initialize the Project",
+          titleDescription: "Create and Save a User Using JavaScript",
+
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Import necessary modules like mongoose, dotenv, and the User model (userSchema). ",
+                "Configure dotenv to load the .env file.",
+              ],
+            },
+            
+          ],
+        },  {
+          stepTitle: "Step 11: Handle Missing Environment Variables",
+          titleDescription: "Create and Save a User Using JavaScript",
+
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Add a check to ensure the MONGO_URI variable is defined. ",
+                "Exit the process with an error message if the variable is missing.",
+              ],
+            },
+        
+          ],
+        },  {
+          stepTitle: "Step 12: Connect to MongoDB",
+          titleDescription: "Create and Save a User Using JavaScript",
+
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Use mongoose.connect() to establish a connection to the MongoDB database. ",
+              
+              ],
+            },
+           
+          ],
+        },  {
+          stepTitle: "Step 13: Create a New User",
+          titleDescription: "Create and Save a User Using JavaScript",
+
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Instantiate a new user object with sample data for fields like name, email, password, etc.",
+               
+              ],
+            },
+           
+          ],
+        },  {
+          stepTitle: "Step 14: Save the User to the Database",
+          titleDescription: "Create and Save a User Using JavaScript",
+
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Use the .save() method on the user object to store it in the MongoDB database. ",
+                "Handle the promise returned by .save() to log the success or error message.",
+            
+              ],
+            },
+         
+          ],
+        },  {
+          stepTitle: "Step 15: Optional Cleanup and Dissconnect",
+          titleDescription: "Create and Save a User Using JavaScript",
+
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Optionally delete the test user from the database after saving to keep the database clean.",
+                "Use mongoose.disconnect() to close the connection to the database.",
+            
+              ],
+            },
+         
+          ],
+        },  {
+          stepTitle: "Step 16: Handle Errors",
+           titleDescription: " Create and Save a User Using JavaScript",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Wrap the logic in a try-catch block to catch and log any errors that may occur during the process. ",
+                "Handle errors gracefully by logging them and providing feedback to the user.",
+              ],
+            },
+         
+          ],
+        },        
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/qg85g4?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/musicacademy/day9.webp"),
+      videoLink: "",
+    },
 
     
 
