@@ -1,34 +1,46 @@
-import React, { useState } from "react";
-import { loadStripe } from "@stripe/stripe-js";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import PriceCard from "./PriceCard";
 import "../styles/checkout.css";
-import { useNavigate } from "react-router-dom";
 import { auth } from "../components/firebase";
-import { toast } from "react-toastify";
 
-// Initialize Stripe with your API key
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
-
+// Lazy load Stripe only when needed
 const PriceCardsList = () => {
   const [isTermsAccepted, setIsTermsAccepted] = useState(false);
+  const [stripe, setStripe] = useState(null);
   const navigate = useNavigate();
+
+  // Dynamically import Stripe only when the component is loaded
+  useEffect(() => {
+    const loadStripe = async () => {
+      const { loadStripe } = await import("@stripe/stripe-js");
+      const stripeInstance = await loadStripe(process.env.REACT_APP_STRIPE_KEY);
+      setStripe(stripeInstance);
+    };
+
+    loadStripe();
+  }, []);
 
   const handleCheckout = async (priceId) => {
     if (!isTermsAccepted) {
       toast.error("Please accept the terms and conditions to proceed.");
       return;
     }
-  
+
     try {
-      const stripe = await stripePromise;
+      if (!stripe) {
+        toast.error("Stripe is not yet loaded. Please try again.");
+        return;
+      }
+
       const user = auth.currentUser;
-  
       if (!user) {
         toast.error("Please log in to proceed with checkout.");
         navigate("/login"); // Redirect to login page if user isn't authenticated
         return;
       }
-  
+
       const { error } = await stripe.redirectToCheckout({
         lineItems: [{ price: priceId, quantity: 1 }],
         mode: "subscription",
@@ -36,7 +48,7 @@ const PriceCardsList = () => {
         successUrl: `${window.location.origin}/#success`,
         cancelUrl: `${window.location.origin}/#cancel`,
       });
-  
+
       if (error) {
         toast.error("There was an error with the checkout. Please try again.");
         console.error("Error Message:", error.message);
@@ -52,7 +64,7 @@ const PriceCardsList = () => {
   const handleFreeButtonClick = () => {
     const user = auth.currentUser;
     if (user) {
-      navigate("/exercises"); 
+      navigate("/exercises");
     } else {
       navigate("/signup");
     }
@@ -107,17 +119,16 @@ const PriceCardsList = () => {
         />
       </div>
       <div className='terms-links'>
-        
         <label>
           <input
-          className="terms-input"
+            className="terms-input"
             type='checkbox'
             checked={isTermsAccepted}
             onChange={() => setIsTermsAccepted(!isTermsAccepted)}
           />
           I have read and agree to the{" "}
           <a
-          className="touch-target"
+            className="touch-target"
             href='https://projectschool.dev/#/terms'
             target='_blank'
             rel='noopener noreferrer'
@@ -126,7 +137,7 @@ const PriceCardsList = () => {
           </a>{" "}
           and{" "}
           <a
-          className="touch-target"
+            className="touch-target"
             href='https://projectschool.dev/#/privacy'
             target='_blank'
             rel='noopener noreferrer'
