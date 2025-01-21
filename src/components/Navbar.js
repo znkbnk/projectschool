@@ -61,10 +61,15 @@ const Navbar = () => {
     <nav id='nav'>
       <div className='navbar-container flex'>
         <Link to='/'>
-          <img
-            src={window.innerWidth > 460 ? imageLarge : imageSmall}
-            alt='logo'
-          />
+        <img
+  srcSet={`
+    ${imageLarge} 1024w,
+    ${imageSmall} 460w
+  `}
+  sizes="(max-width: 460px) 460px, 1024px"
+  alt="logo"
+  rel="preload"
+/>
         </Link>
         <div className='middle'>
           {isLoggedIn && (
