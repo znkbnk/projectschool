@@ -1875,6 +1875,188 @@ const tasksData = {
       img: require("../images/musicacademy/day9.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day10",
+      taskTitle: "UserRouter API",
+      introduction: "In this lesson, you'll build a user management API using Express and Mongoose. The API provides full CRUD functionality—create, read, update, and delete user data—handling essential fields like name, email, password, and role. It also includes robust error handling and schema validation to ensure data integrity and smooth operation.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the folder structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+             "Inside your backend folder, create a routes directory.",
+              "Within the routes folder, create a userRoutes.js file.",
+              "On top of the userRoutes.js file, import express and userSchema.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create a Router",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Use express.Router() to define a modular router for handling user-related routes.",
+              
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Define a User Schema",
+          titleDescription: "For more detailed steps check the task 'Mongoose Schemas' from day 8.",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "Create a User model using Mongoose.",
+              "Define fields such as name, email, password, role, and any additional details (e.g., profilePicture, contactNumber).",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 4: Define Routes for POST / (Create a New User)",
+          titleDescription: "Allow clients to create a new user in the database.",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "Extract the user data (e.g., name, email, password, role, etc.) from the request body.",
+              "Create a new instance of the User model with the extracted data.",
+              "Use await to save the user to the database.",
+              "Return a success response (201 Created) with the newly created user in JSON format.",
+              "Handle errors, such as validation errors or database issues, by returning an error message (400 Bad Request).",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 5: Create Routes for GET / (Fetch All Users)",
+          titleDescription: "Retrieve all users stored in the database.",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Use Mongoose's find() method to fetch all users from the database.",
+                "Return the retrieved list of users as a JSON response.",
+                "Handle potential errors by returning a 500 Internal Server Error with an error message.",
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 6: Make Route for GET /:id (Fetch a User by ID)",
+          titleDescription: "Retrieve a specific user based on their unique ID.",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Extract the user ID from the URL parameter (e.g., req.params.id).",
+                "Use Mongoose's findById() method to query the database for the user with the specified ID.",
+                "If the user exists: return the user's data in JSON format.",
+                "If the user does not exist: return a 404 Not Found response with an appropriate error message.",
+                "Handle potential database errors by returning a 500 Internal Server Error.",
+              ],
+            },
+         
+          ],
+        },
+         {
+          stepTitle: "Step 7: Define Routes for PUT /:id (Update a User by ID)",
+          titleDescription: "Update a specific user's details based on their unique ID.",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Extract the user ID from the URL parameter (e.g., req.params.id).",
+                "Extract the updated data from the request body.",
+              ],
+            },
+            {
+              subtitleDescription: "Use Mongoose's findByIdAndUpdate() method to locate and update the user in the database:",
+              descriptions: [ 
+               "Pass { new: true } to return the updated user.",
+                "Pass { runValidators: true } to ensure updated data meets schema validation.",
+              ],
+            },
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+               "If the user exists: return the updated user's data in JSON format.",
+                "If the user does not exist: return a 404 Not Found response with an appropriate error message.",
+                "Handle validation or database errors by returning a 400 Bad Request.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 8: Create Routes for DELETE /:id (Delete a User by ID)",
+           titleDescription: "Remove a specific user from the database based on their unique ID.",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Extract the user ID from the URL parameter (e.g., req.params.id).",
+                "Use Mongoose's findByIdAndDelete() method to remove the user.",
+                "If the user exists: return a success message (e.g., 'User deleted successfully').",
+                "If the user does not exist: return a 404 Not Found response with an appropriate error message.",
+                "Handle potential database errors by returning a 500 Internal Server Error.",
+              ],
+            },
+         
+         
+          ],
+        },
+         {
+          stepTitle: "Step 9: Implement Error Handling",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Add try-catch blocks to handle potential errors.",
+                "Return appropriate HTTP status codes and error messages.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 10: Integrate the Router into the Application",
+           titleDescription: "In server.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "In your server.js file, import the user routes from the file where you've defined them.",
+                "Add the necessary middleware in server.js to tell Express that requests to a specific path (e.g., /api/users) should be handled by the user routes. This essentially 'mounts' the user routes at that path.",
+              ],
+            },
+          
+          ],
+        },
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "/notavailable",
+      img: require("../images/musicacademy/day10.webp"),
+      videoLink: "",
+    },
 
     
 
