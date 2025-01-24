@@ -2057,6 +2057,348 @@ const tasksData = {
       img: require("../images/musicacademy/day10.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day11",
+      taskTitle: "blogRouter API",
+      introduction: "In this lesson, we will build a blog post management system using Express and MongoDB, where we will create API routes to handle creating, reading, updating, and deleting blog posts. We will structure the data with Mongoose schemas, set up error handling, and organize the routes using Express routers for a clean and maintainable project.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the folder structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+             "Inside your backend folder, within the routes folder, create a blogRoutes.js file. ",
+              "On top of the blogRoutes.js file, import express and blogPostSchema.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Define the Router",
+          titleDescription: "blogRoutes.js",
+          
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Use express.Router() to initialize the router for handling blog routes.",
+             
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Handle Create Blog Post (POST Request)",
+          titleDescription: "blogRoutes.js",
+
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+            descriptions: [ 
+              "Use router.post() to create a route for handling POST requests.",
+              "Specify the endpoint (e.g., /api/blogs) and an asynchronous callback function.",
+              ],
+            },
+            {
+              subtitleDescription: "Extract Data from the Request",
+             descriptions: [ 
+              "In the callback, use req.body to extract the fields needed to create a blog post (e.g., title, content, author, tags).",
+              
+              ],
+            }, {
+              subtitleDescription: "Wrap Logic in a try...catch Block",
+            descriptions: [ 
+              "Use a try block to handle the main logic and a catch block to handle errors.",
+              
+              ],
+            }, {
+              subtitleDescription: "Define a Constant for the New Blog Post",
+            descriptions: [ 
+              "Inside the try block, define a constant using const to hold the new blog post object.",
+              
+              ],
+            }, {
+              subtitleDescription: "Create a New Blog Post",
+            descriptions: [ 
+              "Use new BlogPost() to create a new instance of the blog post model, passing the extracted data as an argument.",
+             
+              ],
+            }, {
+              subtitleDescription: "Save the Blog Post to the Database",
+            descriptions: [ 
+              "Use await with the .save() method to store the blog post in MongoDB.",
+              
+              ],
+            }, {
+              subtitleDescription: "Send a Success Response",
+            descriptions: [ 
+              "After saving, send a response with the created blog post and a 201 Created status code.",
+              
+              ],
+            }, {
+              subtitleDescription: "Handle Errors",
+            descriptions: [ 
+              "In the catch block, return a 400 Bad Request status code and send the error message.",
+             
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Handle Fetch All Blog Posts (GET Request)",
+          titleDescription: "blogRoutes.js",
+
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+            descriptions: [ 
+              "Use router.get() to create a route for handling GET requests.",
+              "Specify the endpoint (e.g., /api/blogs) and an asynchronous callback function.",
+              ],
+            },
+            {
+              subtitleDescription: "Use a try...catch Block",
+             descriptions: [ 
+               "Use a try block to fetch all blog posts from the database and a catch block to handle errors.",
+                
+              ],
+            },  {
+              subtitleDescription: "Fetch Data from the Database",
+             descriptions: [ 
+               "Inside the try block, use the BlogPost.find() method to retrieve all blog posts.",
+                
+              ],
+            },  {
+              subtitleDescription: "Populate Author Details (Optional)",
+             descriptions: [ 
+               "Chain the .populate() method to include details of the author (e.g., name) in the response.",
+                
+              ],
+            },  {
+              subtitleDescription: "Send a Success Response",
+             descriptions: [ 
+               "Return the list of blog posts with a 200 OK status code.",
+                
+              ],
+            },  {
+              subtitleDescription: "Handle Errors",
+             descriptions: [ 
+               "In the catch block, return a 500 Internal Server Error status code and send the error message.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Handle Fetch Single Blog Post (GET Request by ID)",
+          titleDescription: "blogRoutes.js",
+
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+             descriptions: [ 
+               "Use router.get() to create a route for handling GET requests by ID (e.g., /api/blogs/:id).",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Extract the Blog Post ID",
+             descriptions: [ 
+               "Use req.params to extract the id from the request URL.",
+               
+              ],
+            },  
+            {
+              subtitleDescription: "Use a try...catch Block",
+             descriptions: [ 
+               "Use a try block to find the blog post by ID and a catch block to handle errors.",
+                
+              ],
+            }, {
+              subtitleDescription: "Fetch the Blog Post",
+             descriptions: [ 
+               "Use BlogPost.findById() to find the blog post with the specified ID.",
+                "Use .populate() to include author details if needed.",
+              ],
+            },
+            {
+              subtitleDescription: "Handle Not Found Cases",
+              descriptions: [ 
+               "If the blog post is not found, return a 404 Not Found status code with an error message.",
+               
+              ],
+            },   {
+              subtitleDescription: "Send a Success Response",
+             descriptions: [ 
+               "Return the blog post details with a 200 OK status code.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Handle Errors",
+              descriptions: [ 
+               "In the catch block, return a 500 Internal Server Error status code and send the error message.",
+                
+              ],
+            },  
+         
+          ],
+        },
+         {
+          stepTitle: "Step 6: Handle Update Blog Post (PUT Request by ID)",
+          titleDescription: "blogRoutes.js",
+
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+             descriptions: [ 
+               "Use router.put() to create a route for handling PUT requests by ID (e.g., /api/blogs/:id).",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Extract the Blog Post ID",
+              descriptions: [ 
+               "Use req.params to extract the id from the request URL.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Extract Updated Data",
+             descriptions: [ 
+               "Use req.body to get the data for updating the blog post.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Use a try...catch Block",
+             descriptions: [ 
+               "Use a try block to update the blog post and a catch block to handle errors.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Update the Blog Post",
+              descriptions: [ 
+               "Use BlogPost.findByIdAndUpdate() to find and update the blog post with the new data.",
+                "Pass options like { new: true } to return the updated document and runValidators: true to ensure data validity.",
+              ],
+            },  {
+              subtitleDescription: "Handle Not Found Cases",
+              descriptions: [ 
+               "If the blog post is not found, return a 404 Not Found status code with an error message.",
+                
+              ],
+            },  {
+              subtitleDescription: "Send a Success Response",
+              descriptions: [ 
+               "Return the updated blog post with a 200 OK status code.",
+                
+              ],
+            },  {
+              subtitleDescription: "Handle Errors",
+              descriptions: [ 
+               "In the catch block, return a 400 Bad Request or 500 Internal Server Error status code with an error message.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: Handle Delete Blog Post (DELETE Request by ID)",
+          titleDescription: "blogRoutes.js",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+             descriptions: [ 
+               "Use router.delete() to create a route for handling DELETE requests by ID (e.g., /api/blogs/:id).",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Extract the Blog Post ID",
+              descriptions: [ 
+               "Use req.params to extract the id from the request URL.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Use a try...catch Block",
+            descriptions: [ 
+               "Use a try block to delete the blog post and a catch block to handle errors.",
+                
+              ],
+            },   {
+              subtitleDescription: "Delete the Blog Post",
+            descriptions: [ 
+               "Use BlogPost.findByIdAndDelete() to find and remove the blog post.",
+               
+              ],
+            },   {
+              subtitleDescription: "Handle Not Found Cases",
+            descriptions: [ 
+               "If the blog post is not found, return a 404 Not Found status code with an error message.",
+                
+              ],
+            },   {
+              subtitleDescription: "Send a Success Response",
+            descriptions: [ 
+               "Return a message indicating successful deletion with a 200 OK status code.",
+               
+              ],
+            },   {
+              subtitleDescription: "Handle Errors",
+            descriptions: [ 
+               "In the catch block, return a 500 Internal Server Error status code with an error message.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 8: Integrate Routes into the Server",
+           titleDescription: "server.js",
+          sections: [
+            {
+              subtitleDescription: "Import the Blog Router",
+             descriptions: [ 
+               "In the server.js file, import the blog router module.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Mount the Router",
+             descriptions: [ 
+               "Use app.use() to attach the router to a specific path (e.g., /api/blogs).",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Test the Integration",
+             descriptions: [ 
+               "Ensure the server is running and routes are accessible at their respective endpoints.",
+               "Use Postman or a similar tool to test the API endpoints for creating, reading, updating, and deleting blog posts.",               
+               
+              ],
+            },
+          ],
+        },
+        
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/q3qjmz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/musicacademy/day11.webp"),
+      videoLink: "",
+    },
 
     
 
