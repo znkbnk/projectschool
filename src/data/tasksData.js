@@ -2399,6 +2399,336 @@ const tasksData = {
       img: require("../images/musicacademy/day11.webp"),
       videoLink: "",
     },
+    // {
+    //   taskId: "day12",
+    //   taskTitle: "lessonRouter API",
+    //   introduction: "In this lesson, we’ll guide you through creating RESTful API routes for managing lesson schedules using Express and Mongoose. Since we've already set up the lesson schema, we’ll focus on implementing CRUD operations and integrating these routes into the server. This comprehensive guide ensures a well-structured approach to building a robust backend.",      
+    //   steps: [
+    //     {
+    //       stepTitle: "Step 1: Set Up the folder structure",
+    //       titleDescription: "",
+    //       sections: [
+    //         {
+    //           subtitleDescription: "",
+    //           descriptions: [ 
+    //          "Inside your backend folder, within the routes folder, create a lessonRoutes.js file. ",
+    //           "On top of the lessonRoutes.js file, import express and lessonScheduleSchema.",
+    //           ],
+    //         },
+           
+    //       ],
+    //     },
+    //     {
+    //       stepTitle: "Step 2: Define the Router",
+    //       titleDescription: "",
+    //       sections: [
+    //         {
+    //           subtitleDescription: "",
+    //          descriptions: [ 
+    //           "Import express to create a new router.",
+    //           "Use express.Router() to initialize the router for handling lesson routes.",
+    //           ],
+    //         },
+           
+    //       ],
+    //     },
+    //      {
+    //       stepTitle: "Step 3: Handle Create Lesson (POST Request)",
+    //       titleDescription: "",
+    //       sections: [
+    //         {
+    //           subtitleDescription: "Define the Route",
+    //         descriptions: [ 
+    //           "Use router.post() to create a route for handling POST requests.",
+    //           "Specify the endpoint (e.g., /api/lessons) and a callback function.",
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Extract Data from the Request",
+    //          descriptions: [ 
+    //           "Use req.body to extract fields needed to create a lesson (e.g., teacher, student, lessonType, date, time, location).",
+              
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Wrap Logic in a try...catch Block",
+    //         descriptions: [ 
+    //           "Use a try block for the main logic and a catch block for errors.",
+              
+    //           ],
+    //         }, {
+    //           subtitleDescription: "Create and Save the Lesson",
+    //         descriptions: [ 
+    //           "Use new LessonSchedule() to create a new instance of the lesson schedule model and save it to the database.",
+              
+    //           ],
+    //         }, {
+    //           subtitleDescription: "Send a Success Response",
+    //         descriptions: [ 
+    //           "Return the created lesson and a 201 Created status code.",
+    //           ],
+    //         }, {
+    //           subtitleDescription: "Handle Errors",
+    //         descriptions: [ 
+    //           "Return a 400 Bad Request status code and send the error message in the catch block.",
+    //           ],
+    //         },
+    //       ],
+    //     },
+    //      {
+    //       stepTitle: "Step 4: Handle Fetch All Lessons (GET Request)",
+    //       titleDescription: "",
+    //       sections: [
+    //         {
+    //           subtitleDescription: "Define the Route",
+    //         descriptions: [ 
+    //           "Use router.get() to create a route for handling GET requests.",
+    //           "Specify the endpoint (e.g., /api/lessons) and a callback function.",
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Use a try...catch Block",
+    //          descriptions: [ 
+    //            "Fetch all lessons from the database in the try block and handle errors in the catch block.",
+                
+    //           ],
+    //         },    {
+    //           subtitleDescription: "Fetch Data",
+    //         descriptions: [ 
+    //           "Use LessonSchedule.find() to retrieve all lessons.",
+              
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Populate References (Optional)",
+    //          descriptions: [ 
+    //            "Use .populate() to include teacher and student details in the response.",
+               
+    //           ],
+    //         },    {
+    //           subtitleDescription: "Send a Success Response",
+    //         descriptions: [ 
+    //           "Return the list of lessons with a 200 OK status code.",
+              
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Handle Errors",
+    //          descriptions: [ 
+    //            "Return a 500 Internal Server Error status code and send the error message.",
+                
+    //           ],
+    //         },
+    //       ],
+    //     },
+    //      {
+    //       stepTitle: "Step 5: Handle Fetch Single Lesson (GET Request by ID)",
+    //       titleDescription: "",
+    //       sections: [
+    //         {
+    //           subtitleDescription: "Define the Route",
+    //          descriptions: [ 
+    //            "Use router.get() to create a route for handling GET requests by ID (e.g., /api/lessons/:id).",
+                
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Extract the Lesson ID",
+    //          descriptions: [ 
+    //            "Use req.params to extract the id from the request URL.",
+             
+    //           ],
+    //         },   {
+    //           subtitleDescription: "Use a try...catch Block",
+    //          descriptions: [ 
+    //            "Find the lesson by ID in the try block and handle errors in the catch block.",
+               
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Fetch the Lesson",
+    //          descriptions: [ 
+    //            "Use LessonSchedule.findById() to find the lesson by its ID.",
+    //             "Use .populate() to include teacher and student details.",
+    //           ],
+    //         },   {
+    //           subtitleDescription: "Handle Not Found Cases",
+    //          descriptions: [ 
+    //            "If the lesson is not found, return a 404 Not Found status code with an error message.",
+               
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Send a Success Response",
+    //          descriptions: [ 
+    //            "Return the lesson details with a 200 OK status code.",
+                
+    //           ],
+    //         },   {
+    //           subtitleDescription: "Handle Errors",
+    //          descriptions: [ 
+    //            "Return a 500 Internal Server Error status code and send the error message.",
+                
+    //           ],
+    //         },
+          
+    //       ],
+    //     },
+    //      {
+    //       stepTitle: "Step 6: Handle Update Lesson (PUT Request by ID)",
+    //       titleDescription: "",
+    //       sections: [
+    //         {
+    //           subtitleDescription: "Define the Route",
+    //          descriptions: [ 
+    //            "Use router.put() to create a route for handling PUT requests by ID (e.g., /api/lessons/:id).",
+                
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Extract the Lesson ID",
+    //           descriptions: [ 
+    //            "Use req.params to extract the id from the request URL.",
+               
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Extract Updated Data",
+    //          descriptions: [ 
+    //            "Use req.body to get the data for updating the lesson.",
+                
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Use a try...catch Block",
+    //          descriptions: [ 
+    //            "Update the lesson in the try block and handle errors in the catch block.",
+                
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Update the Lesson",
+    //           descriptions: [ 
+    //            "Use LessonSchedule.findByIdAndUpdate() to update the lesson with the new data.",
+    //             "Use options like { new: true } to return the updated document and runValidators: true to ensure data validity.",
+    //           ],
+    //         }, {
+    //           subtitleDescription: "Handle Not Found Cases",
+    //           descriptions: [ 
+    //            " If the lesson is not found, return a 404 Not Found status code with an error message.",
+                
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Send a Success Response",
+    //          descriptions: [ 
+    //            "Return the updated lesson with a 200 OK status code.",
+                
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Handle Errors",
+    //          descriptions: [ 
+    //            "Return a 400 Bad Request or 500 Internal Server Error status code with an error message.",
+                
+    //           ],
+    //         },
+           
+    //       ],
+    //     },
+    //      {
+    //       stepTitle: "Step 7: Handle Delete Lesson (DELETE Request by ID)",
+    //       titleDescription: "",
+    //       sections: [
+    //         {
+    //           subtitleDescription: "Define the Route",
+    //          descriptions: [ 
+    //            "Use router.delete() to create a route for handling DELETE requests by ID (e.g., /api/lessons/:id).",
+               
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Extract the Lesson ID",
+    //           descriptions: [ 
+    //            "Use req.params to extract the id from the request URL.",
+              
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Use a try...catch Block",
+    //         descriptions: [ 
+    //            "Delete the lesson in the try block and handle errors in the catch block.",
+                
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Delete the Lesson",
+    //          descriptions: [ 
+    //            "Use LessonSchedule.findByIdAndDelete() to find and remove the lesson by its ID.",
+               
+    //           ],
+    //         },   {
+    //           subtitleDescription: "Handle Not Found Cases",
+    //          descriptions: [ 
+    //            " If the lesson is not found, return a 404 Not Found status code with an error message.",
+              
+    //           ],
+    //         },   {
+    //           subtitleDescription: "Send a Success Response",
+    //          descriptions: [ 
+    //            "Return a success message with a 200 OK status code.",
+                
+    //           ],
+    //         },   {
+    //           subtitleDescription: "Handle Errors",
+    //          descriptions: [ 
+    //            "Return a 500 Internal Server Error status code with an error message.",
+               
+    //           ],
+    //         },
+    //       ],
+    //     },
+    //      {
+    //       stepTitle: "Step 8: Integrate Routes into the Server",
+    //        titleDescription: "server.js",
+    //       sections: [
+    //         {
+    //           subtitleDescription: "Import the Lesson Router",
+    //          descriptions: [ 
+    //            "In the server.js file, import the lesson router module.",
+                
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Mount the Router",
+    //          descriptions: [ 
+    //            "Use app.use() to attach the router to a specific path (e.g., /api/lessons).",
+               
+    //           ],
+    //         },
+    //         {
+    //           subtitleDescription: "Test the Integration",
+    //          descriptions: [ 
+    //            "Ensure the server is running and routes are accessible at their respective endpoints.",
+    //             "Use Postman or a similar tool to test the API endpoints for creating, reading, updating, and deleting lessons.",
+                
+    //           ],
+    //         },
+    //       ],
+    //     },
+        
+       
+    //   ],
+    //   taskType: "Workshop",
+    //   difficulty: "Easy",
+    //   authorIndex: 0,
+    //   prerequisites: ["Workshop Projects"],
+    //   completed: false,
+    //   codesandboxUrl: "/notavailable",
+    //   img: require("../images/musicacademy/day1.webp"),
+    //   videoLink: "",
+    // },
+
 
     
 
@@ -5817,7 +6147,7 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["React Basics"],
       completed: false,
-      videoLink: "https://youtu.be/NeOENY_qvvg?si=5GT9uGF5Exyr7Ukk",
+      videoLink: "https://youtu.be/19pyC_OEwRA",
       codesandboxUrl:
         "https://codesandbox.io/embed/vywdxt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/ReactLesson1.webp"),
