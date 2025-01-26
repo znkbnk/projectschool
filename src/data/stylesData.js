@@ -11858,6 +11858,147 @@ body {
   
     `
   },
+  {
+    taskId: "Total-Compensation-Calculator",
+    title: "styles.css",
+    css: `
+     
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #555;
+    }
+    
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      transition: border-color 0.3s ease;
+    }
+    
+    input:focus {
+      outline: none;
+      border-color: #007BFF;
+    }
+    
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:disabled {
+      background-color: #ccc;
+    }
+    
+    button:hover {
+      background-color: #0056b3;
+    }
+    
+    .error {
+      color: red;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    /* Tooltip styles */
+    .info-tooltip {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 10px;
+      position: relative;
+      color: #007BFF;
+    }
+    
+    .info-tooltip svg {
+      cursor: pointer;
+    }
+    
+    .tooltip-text {
+      visibility: hidden;
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity 0.3s, visibility 0.3s;
+      font-size: 0.9em;
+    }
+    
+    .info-tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    /* Table styles */
+    table {
+      width: 80%;
+      max-width: 1000px;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #f4f4f4;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    `
+  },
+
+
+
+
+
 ];
 
 export default stylesData;

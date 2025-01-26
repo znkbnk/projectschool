@@ -6043,6 +6043,328 @@ const tasksData = {
       codesandboxUrl: "https://codesandbox.io/embed/ymkqpv?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons12.webp"),
     },
+    {
+      taskId: "Total-Compensation-Calculator",
+      taskTitle: "Total Compensation Calculator",
+      introduction: "This project is a Total Compensation Calculator built with React, allowing users to input their salary, bonuses, benefits, RSUs, and ESPP contributions. It calculates the total compensation, displays a breakdown with a pie chart, and provides a detailed monthly compensation table with pagination and salary raise projections over a given date range.",
+      task: {
+        taskDescription: "We are seeking a skilled frontend developer to create a clone of this compensation calculator: mytc.is using React and TypeScript (all client side). The project will involve building a user-friendly interface and ensuring code logic matches exactly mytc.is using tests! ",
+        platform: 'https://www.upwork.com/',
+        projectName: "Frontend Developer Needed for Compensation Calculator Clone",
+        requirements: [
+            "React",
+                "Chart.js",
+                "Accounting",
+       
+      ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Set up the React Project",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+              "Initialize a new React project using create-react-app.",
+              "Install necessary dependencies, such as 'react-chartjs-2' and 'chart.js' for the pie chart, and 'react-icons' for the info tooltips.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Create CompensationForm Component",
+          titleDescription: "CompensationForm .js",
+          sections: [
+            {
+              subtitleDescription: "Set up state variables for the form fields",
+             descriptions: [ 
+              "Use 'useState' hooks for each field (e.g., baseSalary, bonusRate, foodAllowance, etc.).",
+              "Create a 'setError' state variable for displaying error messages if the user provides invalid input.",
+              ],
+            },
+            {
+              subtitleDescription: "Build the form structure",
+              descriptions: [ 
+              "For each compensation field (base salary, bonus rate, etc.), create an HTML <label> and corresponding <input> for data entry.",
+              "Use type='number' for numeric inputs like salary, bonus rate, and allowances to ensure users input numbers.",
+              "Use type='month' for start and end date fields so that the user can select a month and year.",
+              ],
+            },
+            {
+              subtitleDescription: "Create a validation function",
+            descriptions: [ 
+              "Check if all fields have been filled in. If any are missing, set an error message.",
+              "Ensure that the values are positive numbers (e.g., check for baseSalary > 0, bonusRate >= 0).",
+              "If validation fails, prevent form submission and display the error message.",
+              ],
+            }, {
+              subtitleDescription: "Handle form submission",
+            descriptions: [ 
+              "When the user clicks the submit button, run the 'handleSubmit' function.",
+              "Inside 'handleSubmit', validate the form data. If valid, create an object (compensationData) that holds all the form values.",
+              "Call the 'onSubmit' function (passed as a prop from the parent component), passing 'compensationData' to it.",
+              ],
+            }, {
+              subtitleDescription: "Info tooltip (optional)",
+            descriptions: [ 
+              "Create a small information tooltip next to each input field. When the user hovers over the icon (e.g., using react-icons), show a brief description of the field (e.g., 'Enter your basic monthly salary before bonuses').",
+              
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 3: Create TotalCompensationResult Component",
+          titleDescription: "TotalCompensationResult.js",
+          sections: [
+            {
+              subtitleDescription: "Props and state setup",
+            descriptions: [ 
+              "Accept 'totalCompensation', 'breakdown', and 'compensationData' as props from the parent component (App).",
+              "Destructure these props to extract data such as base salary, bonus rate, and RSUs, which will be displayed in the breakdown and chart.",
+              ],
+            },
+            {
+              subtitleDescription: "Generate pie chart data",
+             descriptions: [ 
+              "Use Chart.js (through react-chartjs-2) to display a pie chart. Prepare the 'chartData' object, which contains labels (e.g., 'Salary', 'Bonus', 'RSUs', 'ESPP') and 'datasets' containing the 'breakdown' array.",
+              "Set the background colors and hover effects for each pie slice.",
+              ],
+            },
+            {
+              subtitleDescription: "Configure chart options",
+            descriptions: [ 
+              "Customize the chart to display the total breakdown with tooltips showing the breakdown values.",
+              "Use a callback function in the tooltip configuration to display the label and value in a readable format (e.g., 'Salary: 12,000').",
+              ],
+            }, {
+              subtitleDescription: "Generate the date range",
+            descriptions: [ 
+              "Use the start and end dates from 'compensationData' to create an array of months between the two dates.",
+              "Create a function (generateDateRange) that loops through the start and end dates, adding each month to an array.",
+              ],
+            }, {
+              subtitleDescription: "Calculate monthly data",
+            descriptions: [ 
+              "For each month, calculate the salary and benefits based on the form values. Ensure the base salary increases according to the expected salary raise.",
+              "Create an object for each month that includes: Base salary, Salary after raises, Bonus, Benefits, RSU Grants, SPP, Total compensation for that month.",
+              ],
+            }, {
+              subtitleDescription: "Render a table",
+            descriptions: [ 
+              "Map over the generated data and render a row for each month in the table.",
+              "Display all the compensation details (e.g., salary, bonus, RSUs, ESPP) in the respective columns.",
+              ],
+            }, {
+              subtitleDescription: "Pagination setup",
+            descriptions: [ 
+              "Create state variables to manage the current page (currentPage).",
+              "Calculate the total number of pages based on the number of rows in the data (totalPages).",
+              "Display 5 items per page (itemsPerPage), and create pagination controls (Previous, Next) to navigate between pages.",
+              ],
+            }, {
+              subtitleDescription: "Pagination logic",
+            descriptions: [ 
+              "When the user clicks the 'Previous' or 'Next' button, update the 'currentPage' state.",
+              "Slice the data to display only the items corresponding to the current page, using the 'currentPage' and 'itemsPerPage'.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Create the App.js Component",
+          titleDescription: "App.js",
+          sections: [
+            {
+              subtitleDescription: "Set up the App.js file",
+            descriptions: [ 
+              "This is the parent component that will manage state and handle data flow.",
+              "Create the initial App.js file, where you will define state for the total compensation, breakdown, and the compensation data.",
+              ],
+            },
+            {
+              subtitleDescription: "Use useState to create variables for:",
+             descriptions: [ 
+               "'totalCompensation': To store the calculated total compensation.",
+                "'breakdown': To store the compensation breakdown for the pie chart.",
+                "'compensationData': To store all the form data for potential updates.",
+              ],
+            }, {
+              subtitleDescription: "Render child components",
+             descriptions: [ 
+               "Render the CompensationForm component to collect user input.",
+                "Pass the handleFormSubmit function to CompensationForm to handle form submissions.",
+                "Conditionally render the TotalCompensationResult component to display the calculated results once the form is submitted.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Add the calculateTotalCompensation Functionality",
+          titleDescription: "App.js",
+          sections: [
+            {
+              subtitleDescription: "Extract form data",
+             descriptions: [ 
+               "Inside App.js, create the calculateTotalCompensation function after App.js is set up.",
+                "This function will accept the data from CompensationForm (passed as an object with values like baseSalary, bonusRate, etc.).",
+              ],
+            },
+            {
+              subtitleDescription: "Convert data to numbers",
+             descriptions: [ 
+               "Use Number() to convert all form inputs to numbers to avoid errors in calculations.",
+                "Example: const baseSalaryNumber = Number(baseSalary);",
+              ],
+            },  {
+              subtitleDescription: "Perform the calculations",
+             descriptions: [ 
+               "Annual Base Salary: Multiply baseSalary by 12 to calculate the yearly base salary.",
+                "Annual Bonus: Calculate the bonus as a percentage of the annual base salary.",
+                "Total Salary: Add the annual base salary, bonus, food allowance, and benefits to calculate the total salary.",
+                "Annual ESPP: Multiply espp by 12 to get the total ESPP contribution for the year.",
+                "RSU Grants: Add rsuGrants to the total compensation.",
+              ],
+            },  {
+              subtitleDescription: "Create a breakdown for the pie chart",
+             descriptions: [ 
+               "Create an array with the values to display in the pie chart (e.g., total salary, bonus amount, RSU grants, ESPP contribution).",
+              ],
+            },  {
+              subtitleDescription: "Return an object containing:",
+             descriptions: [ 
+               "'totalCompensation': The sum of all calculated values.",
+                "'breakdown': The array to be used for the pie chart.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: Integrate the Components",
+          titleDescription: "App.js",
+          sections: [
+            {
+              subtitleDescription: "Define 'handleFormSubmit' function",
+             descriptions: [ 
+               "This function will call 'calculateTotalCompensation' with the form data when the user submits the form.",
+                "The results (total compensation and breakdown) will be set in the state using 'setTotalCompensation' and 'setBreakdown'.",
+              ],
+            },
+            {
+              subtitleDescription: "Pass data between components",
+              descriptions: [ 
+               "Pass the 'handleFormSubmit' function as a prop to the CompensationForm component.",
+                "After the form is submitted, pass the 'totalCompensation', 'breakdown', and 'compensationData' to 'TotalCompensationResult' for displaying the results.",
+              ],
+            },
+            {
+              subtitleDescription: "Test the integration",
+             descriptions: [ 
+               "After submission, check that the data flows correctly from CompensationForm to App.js and then to TotalCompensationResult.",
+                "Ensure the total compensation and pie chart update accordingly.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 7: Style the Components",
+          titleDescription: "index.css",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Add CSS styles for the form and result display, ensuring a clean and professional layout.",
+                "Style the pie chart, tables, and pagination controls to make the user interface user-friendly.",
+                "Include responsive design to ensure the calculator works well on both desktop and mobile devices.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 8: Test the Application",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Test the form validation to ensure that invalid or incomplete data is not submitted.",
+                "Test the total compensation calculation and ensure the results are accurate.",
+                "Verify that the pie chart is correctly rendered with the breakdown data.",
+                "Test pagination to ensure that the compensation details table can be navigated correctly.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 9: Steps to Improve the Total Compensation Calculator",
+          titleDescription: "Leve Up",
+          sections: [
+            {
+              subtitleDescription: "Implement Multi-Currency Support",
+             descriptions: [ 
+               "Add a dropdown to select the desired currency (e.g., USD, EUR, GBP).",
+                "Integrate a currency conversion API (e.g., Open Exchange Rates or XE) to fetch real-time exchange rates.",
+                "Modify the calculation logic to factor in currency conversion based on the selected currency.",
+                "Update the UI to display the selected currency symbol alongside the values.",
+              ],
+            },
+            {
+              subtitleDescription: "Add Date Range for RSU Vesting",
+             descriptions: [ 
+               "Add start and end date fields for RSU grants in the form.",
+                "Enable users to specify the percentage or number of shares vested per year/month.",
+                "Update the calculation logic to distribute RSU values across the vesting period.",
+                "Display a breakdown of RSU contributions over the date range in the results table.",
+              ],
+            },
+            {
+              subtitleDescription: "Enhance ESPP Calculations",
+             descriptions: [ 
+               "Add input fields to capture the ESPP discount rate and market price.",
+                "Implement options to calculate ESPP based on: Minimum price during the purchase period; Market price at purchase time minus the discount. ",
+              ],
+            },  {
+              subtitleDescription: "Add Date Range for Salary Rises",
+             descriptions: [ 
+               "Add start and end date fields for expected salary raises in the form.",
+                "Allow users to input different raise percentages for multiple date ranges.",
+                "Update the calculation logic to apply raises incrementally across the specified periods.",
+                "Display the salary progression over time in the results table.",
+              ],
+            }, 
+          ],
+        },
+         {
+          stepTitle: "Step 10: Deploy the Application",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Once the application is fully functional and tested, deploy it to a hosting platform like Netlify or Vercel.",
+                "Ensure that the app is accessible and works seamlessly in a production environment.",
+                "Contact the client to review the final product and make any necessary adjustments.",
+              ],
+            },
+           
+          ],
+        },
+       
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/rhqqk8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/livelessons13.webp"),
+      videoLink: "",
+    },
 
   ],
   React: [
