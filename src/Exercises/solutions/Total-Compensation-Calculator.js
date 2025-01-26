@@ -4,6 +4,7 @@ const solutionCode1 = `
 import React, { useState } from 'react';
 import CompensationForm from './CompensationForm';
 import TotalCompensationResult from './TotalCompensationResult';
+import './styles.css'
 
 const calculateTotalCompensation = (data) => {
   const {
