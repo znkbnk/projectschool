@@ -88,6 +88,7 @@ const ReactExplained = () => {
       <ReactExplainedTitle />
       <SearchReactFAQ searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
+     
       <div className={styles.container}>
         <div className={styles.carousel}>
           {isListMode ? (

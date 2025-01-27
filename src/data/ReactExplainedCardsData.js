@@ -35,10 +35,10 @@ const ReactExplainedCardsData = [
    
    
   ];
-  
-  export default ReactExplainedCardsData;
 
 
-  // { title: "", content: "" },
+export default ReactExplainedCardsData;
 
-  
+
+// { title: "", content: "" },
+
