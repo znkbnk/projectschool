@@ -2728,6 +2728,272 @@ const tasksData = {
       img: require("../images/musicacademy/day12.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day13",
+      taskTitle: "messageRouter API",
+      introduction: "In this lesson, we explore how to create a robust messaging system in a web application using Node.js, Express, and Mongoose. You'll learn to define a message schema, implement CRUD operations, and integrate secure routes for creating, reading, updating, and deleting messages efficiently.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the folder structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+             "Inside your backend folder, within the routes folder, create a messageRoutes.js file. ",
+              "On top of the messageRoutes.js file, import express and messageSchema.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Define the Router",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Import 'express' to create a new router.",
+              "Use express.Router() to initialize the router for handling message-related routes.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 3: Handle Create Message (POST Request)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+            descriptions: [ 
+              "Use router.post() to handle message creation at an endpoint like /api/messages.",
+              ],
+            },
+            {
+              subtitleDescription: "Extract Data from the Request",
+             descriptions: [ 
+              "Use req.body to extract sender, receiver, and content.",
+              
+              ],
+            },{
+              subtitleDescription: "Wrap Logic in a try...catch Block",
+             descriptions: [ 
+              "Use a try block to create and save the message, and a catch block to handle errors.",
+             
+              ],
+            },{
+              subtitleDescription: "Save the Message to the Database",
+             descriptions: [ 
+              "Use Mongoose to save the message in the database.",
+              
+              ],
+            },{
+              subtitleDescription: "Send a Success Response",
+             descriptions: [ 
+              "Return the created message with a 201 Created status code.",
+             
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Handle Fetch Messages (GET Request by User ID)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+            descriptions: [ 
+              "Use router.get() to retrieve all messages for a specific user at /api/messages/:userId.",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Extract User ID",
+             descriptions: [ 
+               "Use req.params to get the user ID from the URL.",
+            
+              ],
+            },
+            {
+              subtitleDescription: "Fetch Messages",
+             descriptions: [ 
+               "Use Mongoose to query messages where the user is either the sender or receiver.",
+                "Sort messages by the sentAt timestamp in descending order.",
+              ],
+            }, {
+              subtitleDescription: "Populate User Details",
+             descriptions: [ 
+               "Use .populate() to include name and email of both sender and receiver.",
+               
+              ],
+            }, {
+              subtitleDescription: "Send a Success Response",
+             descriptions: [ 
+               "Return the list of messages with a 200 OK status code.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Handle Mark Message as Read (PATCH Request by Message ID)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+             descriptions: [ 
+               "Use router.patch() to mark a message as read at /api/messages/:id/read.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Extract Message ID",
+             descriptions: [ 
+               "Use req.params to get the message ID from the URL.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Update the Message",
+             descriptions: [ 
+               "Use Mongoose to find the message by ID and update the isRead field to true.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Handle Not Found Cases",
+             descriptions: [ 
+               "Return a 404 Not Found status code if the message is not found.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Send a Success Response",
+             descriptions: [ 
+               "Return the updated message with a 200 OK status code.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: Handle Delete Message (DELETE Request by Message ID)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+             descriptions: [ 
+               "Use router.delete() to delete a message at /api/messages/:id.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Extract Message ID",
+              descriptions: [ 
+               "Use req.params to get the message ID from the URL.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Delete the Message",
+             descriptions: [ 
+               "Use Mongoose to find and delete the message by ID.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Handle Not Found Cases",
+             descriptions: [ 
+               "Return a 404 Not Found status code if the message is not found.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Send a Success Response",
+              descriptions: [ 
+               "Return a success message with a 200 OK status code.",
+              
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: Integrate the Routes into the Server",
+          titleDescription: "server.js",
+          sections: [
+            {
+              subtitleDescription: "Import the Router",
+             descriptions: [ 
+               "Import the message router into server.js.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Mount the Router",
+              descriptions: [ 
+               "Use app.use('/api/messages', messageRoutes) to attach the router to the Express app.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Test the Integration",
+            descriptions: [ 
+               "Verify the endpoints are accessible and functional using tools like Postman or cURL.",
+
+              
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 8: Error Handling",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Add error handling for scenarios like missing fields, invalid IDs, or database errors.",
+                "Return appropriate status codes (400, 404, or 500) with error messages.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 9: Secure the Routes",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Use authentication middleware to ensure only authorized users can access or modify messages.",
+                "Validate request data using a library like Joi or Express Validator to prevent malicious input.",
+                "Implement rate limiting to prevent abuse or DoS attacks on the messaging system.",
+                "Consider encryption for sensitive message content to protect user privacy.",
+                "Test the security measures thoroughly to identify and address vulnerabilities.",
+                "Monitor and log access to the messaging routes for auditing and security analysis.",
+                "Stay informed about security best practices and updates to keep the messaging system secure.",
+                
+          
+              ],
+            },
+           
+          ],
+        },
+       
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "/notavailable",
+      img: require("../images/musicacademy/day13.webp"),
+      videoLink: "",
+    },
 
 
     
