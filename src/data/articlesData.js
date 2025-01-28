@@ -46,6 +46,15 @@ const blogCards = [
     date: "13 July 2024",
     image:
       "/images/articleImg/5/title.webp",
+  }, {
+    id: "Localhost-Port-Fixer",
+    category: "Tools",
+    title: "Localhost Port Fixer",
+    extract:
+      "This guide provides detailed steps to resolve the EADDRINUSE error on Windows, which occurs when the port you're trying to use is already occupied by another process. You'll learn how to identify and kill the process using the port, or change the port to get your application running again.",
+    date: "28 January 2025",
+    image:
+      "/images/articleImg/6/title.webp",
   },
 ];
 
@@ -482,6 +491,197 @@ const articles = [
       },
     ],
   },
+  {
+    id: "Localhost-Port-Fixer",
+    title: "Localhost Port Fixer",
+    image: "/images/articleImg/6/blog1.webp",
+    paragraphs: [
+      {
+        type: "text",
+        content: "Port Freezer is a simple yet powerful utility tool designed to help developers resolve the common EADDRINUSE error on Windows. When working with Node.js applications, you may encounter this error when the port you're trying to use is already occupied by another process. This tool walks you through easy-to-follow steps to identify and free up the port, or alternatively, change to a new port—ensuring that your application runs smoothly without interruption."
+      }, 
+       {
+        "type": "title",
+        content: "Step 1: Identify the Port in Use"
+      },
+      {
+        type: "list",
+        items: [
+          "Open Command Prompt (CMD): Press Win + R, type cmd, and hit Enter. Run as Administrator: Right-click on Command Prompt and select 'Run as administrator'.",
+          "Check for the port in use (e.g., 5000) using the netstat command:",
+         
+        ],
+       },
+       {
+        type: "code",
+        content: `netstat -ano | findstr :5000`
+      },
+       {
+        type: "text",
+        content: "Look for output like:"
+      },
+     
+      {
+        type: "image",
+        src: "/images/articleImg/6/blog2.webp",
+        alt: "Command promt",
+      },
+      {
+        type: "text",
+        content: "Note the PID (Process ID) from the last column (e.g., 14500)."
+      },
+      {
+        "type": "title",
+        content: "Step 2: Kill the Process Using the Port"
+      },
+      {
+        type: "list",
+        items: [
+          "Terminate the process with the noted PID:",  
+        ],
+       },
+       {
+        type: "code",
+        content: `taskkill /PID 14500 /F`
+      },
+      {
+        type: "list",
+        items: [
+          "Replace 14500 with the actual PID from Step 1.",  
+        ],
+       },
+       {
+        type: "text",
+        content: "You should see:"
+      },
+      {
+        type: "image",
+        src: "/images/articleImg/6/blog3.webp",
+        alt: "Command promt",
+      },
+      {
+        type: "list",
+        items: [
+          "Verify that the port is now free by running the netstat command:",  
+        ],
+       },
+       {
+        type: "code",
+        content: `netstat -ano | findstr :5000`
+      },
+      {
+        type: "list",
+        items: [
+          "If no output is returned, the port is free.",  
+        ],
+       },
+       {
+        type: "title",
+        content: "Step 3: Change the Port (Optional)"
+      },
+      {
+        type: "text",
+        content: "If you cannot free the port or prefer to use a different one."
+      },
+      {
+        type: "list",
+        items: [
+          "Open your project directory in a text editor (e.g., VSCode).",  
+          "Modify the port settings ( if using React, it's usually in package.json or .env file).",
+          "Add a .env file in the project root (if it doesn't exist).",
+          "Inside .env, add: PORT=3001 (or any available port number).",
+          "Replace 5001 with the new port you want."
+          
+        ],
+       },
+       {
+        type: "list",
+        items: [
+          "Modify the port settings ( If using Express or another backend framework ).",
+        "Change the port variable in your code:",
+
+          
+        ],
+       },
+       {
+        type: "code",
+        content: `const PORT = process.env.PORT || 5001;\napp.listen(PORT, () => console.log(\`Server running on port \${PORT}\`));
+        `
+      }, {
+        type: "list",
+        items: [
+          "Save the changes and restart the application.",
+
+          
+        ],
+       },
+       {
+        type: "title",
+        content: "Step 4: Optional: Automate the Process (PowerShell Script)"
+      },
+      {
+        type: "text",
+        content: "If this happens frequently, create a script to automate the process"
+      },
+      {
+        type: "list",
+        items: [
+          "Open a text editor and paste this:",          
+        ],
+       },
+       {
+        type: "code",
+        content: `$port = 5000
+      $pid = (Get-NetTCPConnection -LocalPort $port).OwningProcess
+      if ($pid) {
+          Stop-Process -Id $pid -Force
+          Write-Host "Port $port is now free."
+      } else {
+          Write-Host "Port $port is already free."
+      }`
+      },
+      {
+        type: "list",
+        items: [
+          "Save it as free-port.ps1.",
+          "Run the script by right-clicking and selecting 'Run with PowerShell'.",
+        ],
+       },
+       {
+        type: "title",
+        content: "Step 4: Final Notes"
+      },
+      {
+        type: "list",
+        items: [
+          "Always stop the server manually before closing VSCode using Ctrl + C.",
+          "If the port is still in use, restart your computer to free it.",
+          "Use the Port Freezer tool whenever you encounter the EADDRINUSE error.",
+          "Remember to update the port number in your project configuration files.",
+         
+        ],
+       },
+       {
+        type: "title",
+        content: "Conclusion"
+      },
+      {
+        type: "text",
+        content: "With Port Freezer, you can easily resolve the EADDRINUSE error and free up ports that are blocking your application. Whether you're debugging or simply managing your development environment, this tool ensures your Node.js projects run seamlessly. By following the simple steps provided, you can avoid common port-related issues and focus more on building your app. Keep this tool handy for a smoother, more efficient development process!"
+      },
+
+
+
+
+
+     
+    
+     
+     
+      
+    ]
+  }
+  
 ];
 
 export { articles, blogCards };
@@ -492,6 +692,10 @@ export { articles, blogCards };
     title: "",
     image: "/images/articleImg/AuthGuard1.webp",
     paragraphs: [
+     {
+        "type": "title", 
+        "content": "Step 1: "
+      },
       {
         type: "text",
         content: `text`,
@@ -512,6 +716,11 @@ export { articles, blogCards };
          "",
        ],
       },
+      {
+        type: "code",
+        content: ``
+      },
+
     ]
   },
 
