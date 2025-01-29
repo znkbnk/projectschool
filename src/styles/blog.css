@@ -168,13 +168,7 @@ body {
 /* Add these styles to your articles.css file */
 
 /* Style for unordered lists */
-.article-title {
-  font-size: 1.75rem;
-  font-weight: 800;
-  text-decoration: underline;
-  text-decoration-color: white; /* Change underline color to white */
-  margin: 20px 0 10px 0;
-}
+
 
 
 

@@ -1,4 +1,4 @@
-
+/* articles.css */
 
 
 #articles-main {
@@ -63,12 +63,30 @@ blockquote {
   font-size: 25px;
 }
 
+.article-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-color: white; 
+  margin: 20px 0 10px 0;
+}
+
+.code-container-article {
+  border-radius: 5px;
+}
+
+
+
+
 
 @media screen and (max-width: 768px) {
   .articles-section {
     width: 100%;
-    padding: 2rem;
   }
 
+  article {
+    width: 100%;
+    padding: 0 10px;
+  }
  
 }

@@ -16,6 +16,17 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showExercisesDropdown, setShowExercisesDropdown] = useState(false);
   const [showResponsiveDropdown, setShowResponsiveDropdown] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 460); // State to track mobile view
+
+  // Handle window resize to update isMobile state
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 460);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleLogout = () => {
     auth
@@ -61,16 +72,14 @@ const Navbar = () => {
     <nav id='nav'>
       <div className='navbar-container flex'>
         <Link to='/'>
-        <img
-  srcSet={`
-    ${imageLarge} 1024w,
-    ${imageSmall} 460w
-  `}
-  sizes="(max-width: 460px) 460px, 1024px"
-  alt="logo"
-  rel="preload"
-/>
+          {/* Conditionally render the image based on screen size */}
+          <img
+            src={isMobile ? imageSmall : imageLarge}
+            alt="logo"
+            rel="preload"
+          />
         </Link>
+        {/* Rest of the code remains the same */}
         <div className='middle'>
           {isLoggedIn && (
             <div className='middle'>
