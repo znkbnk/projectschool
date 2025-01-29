@@ -2994,6 +2994,347 @@ const tasksData = {
       img: require("../images/musicacademy/day13.webp"),
       videoLink: "",
     },
+    {
+      taskId: "day14",
+      taskTitle: "paymentRouter API",
+      introduction: "These steps outline how to create a set of API routes for handling payments in a Node.js application using Express and Mongoose, including functionality for creating, retrieving, updating, and deleting payment records. The routes also support error handling and integration into the main server.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the folder structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+             "Inside your backend folder, within the routes folder, create a paymentRoutes.js file. ",
+              "On top of the paymentRoutes.js file, import express and messageSchema.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Define the Router",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Import express to create a new router.",
+              "Use express.Router() to initialize the router for handling payment routes.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Handle Create Payment (POST Request)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+            descriptions: [ 
+              "Use router.post() to create a route for handling POST requests (e.g., /api/payments).",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Extract Data from the Request",
+             descriptions: [ 
+              "In the callback, extract fields like user, amount, method, and transactionId from req.body.",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Wrap Logic in a try...catch Block",
+            descriptions: [ 
+              "Use a try block for creating a payment and a catch block for error handling.",
+              
+              ],
+            }, {
+              subtitleDescription: "Define a Constant for the New Payment",
+            descriptions: [ 
+              "Inside the try block, define a constant to hold the new payment object.",
+              
+              ],
+            }, {
+              subtitleDescription: "Create a New Payment",
+            descriptions: [ 
+              "Use new Payment() to create a new instance of the payment model, passing the extracted data.",
+              
+              ],
+            }, {
+              subtitleDescription: "Save the Payment to the Database",
+            descriptions: [ 
+              "Use await payment.save() to store the payment in MongoDB.",
+             
+              ],
+            }, {
+              subtitleDescription: "Send a Success Response",
+            descriptions: [ 
+              "After saving, send the created payment with a 201 Created status code.",
+            
+              ],
+            },{
+              subtitleDescription: "Handle Errors",
+            descriptions: [ 
+              "In the catch block, return a 400 Bad Request status with the error message.",
+             
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Handle Fetch All Payments (GET Request)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+            descriptions: [ 
+              "Use router.get() to create a route for handling GET requests (e.g., /api/payments).",
+            
+              ],
+            },
+            {
+              subtitleDescription: "Use a try...catch Block",
+             descriptions: [ 
+               "Use a try block to fetch all payments and a catch block for error handling.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Fetch Data from the Database",
+             descriptions: [ 
+               "Use Payment.find() to retrieve all payments.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Populate User Details (Optional)",
+             descriptions: [ 
+               "Chain .populate('user', 'name email') to include user details in the response.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Send a Success Response",
+             descriptions: [ 
+               "Return the list of payments with a 200 OK status code.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Handle Errors",
+             descriptions: [ 
+               "In the catch block, return a 500 Internal Server Error status with the error message.",
+              
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Handle Fetch Single Payment (GET Request by ID)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+             descriptions: [ 
+               "Use router.get() to create a route for handling GET requests by ID (e.g., /api/payments/:id).",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Extract the Payment ID",
+             descriptions: [ 
+               "Use req.params.id to extract the ID from the request URL.",
+               
+              ],
+            },  {
+              subtitleDescription: "Use a try...catch Block",
+             descriptions: [ 
+               "Use a try block to find the payment by ID and a catch block for error handling.",
+                
+              ],
+            },  {
+              subtitleDescription: "Fetch the Payment",
+             descriptions: [ 
+               "Use Payment.findById() to find the payment with the specified ID.",
+                
+              ],
+            },  {
+              subtitleDescription: "Handle Not Found Cases",
+             descriptions: [ 
+               "If the payment is not found, return a 404 Not Found status with an error message.",
+               
+              ],
+            },  {
+              subtitleDescription: "Send a Success Response",
+             descriptions: [ 
+               "Return the payment details with a 200 OK status code.",
+                
+              ],
+            },  {
+              subtitleDescription: "Handle Errors",
+             descriptions: [ 
+               "In the catch block, return a 500 Internal Server Error status with the error message.",
+              
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 6: Handle Update Payment (PUT Request by ID)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+             descriptions: [ 
+               "Use router.put() to create a route for handling PUT requests by ID (e.g., /api/payments/:id).",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Extract the Payment ID",
+              descriptions: [ 
+               "Use req.params.id to extract the ID from the request URL.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Extract Updated Data",
+             descriptions: [ 
+               "Use req.body to get the data for updating the payment (e.g., status).",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Use a try...catch Block",
+             descriptions: [ 
+               "Use a try block to update the payment and a catch block for error handling.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Update the Payment",
+              descriptions: [ 
+               "Use Payment.findByIdAndUpdate() to find and update the payment.",
+                
+              ],
+            },   {
+              subtitleDescription: "Handle Not Found Cases",
+              descriptions: [ 
+               "If the payment is not found, return a 404 Not Found status with an error message.",
+                
+              ],
+            },   {
+              subtitleDescription: "Send a Success Response",
+              descriptions: [ 
+               "Return the updated payment with a 200 OK status code.",
+                
+              ],
+            },   {
+              subtitleDescription: "Handle Errors",
+              descriptions: [ 
+               "In the catch block, return a 400 Bad Request or 500 Internal Server Error status with the error message.",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 7: Handle Delete Payment (DELETE Request by ID)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the Route",
+             descriptions: [ 
+               "Use router.delete() to create a route for handling DELETE requests by ID (e.g., /api/payments/:id).",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Extract the Payment ID",
+              descriptions: [ 
+               "Use req.params.id to extract the ID from the request URL.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Use a try...catch Block",
+            descriptions: [ 
+               "Use a try block to delete the payment and a catch block for error handling.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Delete the Payment",
+             descriptions: [ 
+               "Use Payment.findByIdAndDelete() to find and remove the payment.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Handle Not Found Cases",
+             descriptions: [ 
+               "If the payment is not found, return a 404 Not Found status with an error message.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Send a Success Response",
+             descriptions: [ 
+               "Return a message indicating successful deletion with a 200 OK status code.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Handle Errors",
+             descriptions: [ 
+               "In the catch block, return a 500 Internal Server Error status with the error message.",
+               
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 8: Integrate Routes into the Server",
+           titleDescription: "server.js",
+          sections: [
+            {
+              subtitleDescription: "Import the Payment Router",
+             descriptions: [ 
+               "In the server.js file, import the payment router module.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Mount the Router",
+             descriptions: [ 
+               "Use app.use('/api/payments', paymentRouter) to attach the router to a specific path.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Test the Integration",
+             descriptions: [ 
+               "Ensure the server is running and routes are accessible at their respective endpoints.",
+               
+              ],
+            },
+          ],
+        },
+        
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/3r2zv9?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/musicacademy/day14.webp"),
+      videoLink: "",
+    },
 
 
     
