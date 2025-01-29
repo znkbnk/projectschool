@@ -48,7 +48,7 @@ const blogCards = [
       "/images/articleImg/5/title.webp",
   }, {
     id: "Localhost-Port-Fixer",
-    category: "Tools",
+    category: "Info",
     title: "Localhost Port Fixer",
     extract:
       "This guide provides detailed steps to resolve the EADDRINUSE error on Windows, which occurs when the port you're trying to use is already occupied by another process. You'll learn how to identify and kill the process using the port, or change the port to get your application running again.",

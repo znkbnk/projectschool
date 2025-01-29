@@ -129,8 +129,12 @@ body {
   border-left: 8px solid #4ec9d4;
 }
 
+.card-container.React .card-title {
+  color: #4ec9d4; /* React category title color */
+}
+
 .card-container.React .card-category,
-.card-container.React:hover .card-title {
+ .card-title {
   color: #4ec9d4;
 }
 
@@ -141,9 +145,12 @@ body {
 .card-container.JavaScript {
   border-left: 8px solid #fdcc0d;
 }
+.card-container.JavaScript .card-title {
+  color: #fdcc0d; /* JavaScript category title color */
+}
 
 .card-container.JavaScript .card-category,
-.card-container.JavaScript:hover .card-title {
+ .card-title {
   color: #fdcc0d;
 }
 
@@ -156,8 +163,11 @@ body {
 }
 
 .card-container.Info .card-category,
-.card-container.Info:hover .card-title {
+ .card-title {
   color: #727272;
+}
+.card-container:not(.React):not(.JavaScript) .card-title {
+  color: #727272; /* Default title color for other categories */
 }
 
 .card-container.Info .card-category::after {
