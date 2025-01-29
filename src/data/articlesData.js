@@ -498,6 +498,15 @@ const articles = [
     paragraphs: [
       {
         type: "text",
+        content: "Did you experience the dreaded EADDRINUSE error when running your Node.js app? This happens when the port you're trying to use is already occupied by another process, preventing your application from starting. Instead of restarting your computer or guessing which process is causing the issue, this guide will show you exactly how to identify and free up the port, allowing you to get back to coding without frustration."
+      }, 
+      {
+        type: "image",
+        src: "/images/articleImg/6/blog4.webp",
+        alt: "EADDRINUSE error",
+      },
+      {
+        type: "text",
         content: "Port Freezer is a simple yet powerful utility tool designed to help developers resolve the common EADDRINUSE error on Windows. When working with Node.js applications, you may encounter this error when the port you're trying to use is already occupied by another process. This tool walks you through easy-to-follow steps to identify and free up the port, or alternatively, change to a new port—ensuring that your application runs smoothly without interruption."
       }, 
        {
