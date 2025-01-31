@@ -1877,7 +1877,7 @@ const tasksData = {
     },
     {
       taskId: "day10",
-      taskTitle: "UserRouter API",
+      taskTitle: "User API",
       introduction: "In this lesson, you'll build a user management API using Express and Mongoose. The API provides full CRUD functionality—create, read, update, and delete user data—handling essential fields like name, email, password, and role. It also includes robust error handling and schema validation to ensure data integrity and smooth operation.",      
       steps: [
         {
@@ -2059,7 +2059,7 @@ const tasksData = {
     },
     {
       taskId: "day11",
-      taskTitle: "blogRouter API",
+      taskTitle: "Blog API",
       introduction: "In this lesson, we will build a blog post management system using Express and MongoDB, where we will create API routes to handle creating, reading, updating, and deleting blog posts. We will structure the data with Mongoose schemas, set up error handling, and organize the routes using Express routers for a clean and maintainable project.",      
       steps: [
         {
@@ -2401,7 +2401,7 @@ const tasksData = {
     },
     {
       taskId: "day12",
-      taskTitle: "lessonRouter API",
+      taskTitle: "Lesson API",
       introduction: "In this lesson, we'll guide you through creating RESTful API routes for managing lesson schedules using Express and Mongoose. Since we've already set up the lesson schema, we’ll focus on implementing CRUD operations and integrating these routes into the server. This comprehensive guide ensures a well-structured approach to building a robust backend.",      
       steps: [
         {
@@ -2730,7 +2730,7 @@ const tasksData = {
     },
     {
       taskId: "day13",
-      taskTitle: "messageRouter API",
+      taskTitle: "Message API",
       introduction: "In this lesson, we explore how to create a robust messaging system in a web application using Node.js, Express, and Mongoose. You'll learn to define a message schema, implement CRUD operations, and integrate secure routes for creating, reading, updating, and deleting messages efficiently.",      
       steps: [
         {
@@ -2996,7 +2996,7 @@ const tasksData = {
     },
     {
       taskId: "day14",
-      taskTitle: "paymentRouter API",
+      taskTitle: "Payment API",
       introduction: "These steps outline how to create a set of API routes for handling payments in a Node.js application using Express and Mongoose, including functionality for creating, retrieving, updating, and deleting payment records. The routes also support error handling and integration into the main server.",      
       steps: [
         {
@@ -3333,6 +3333,162 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/3r2zv9?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day14.webp"),
+      videoLink: "",
+    },
+    {
+      taskId: "day15",
+      taskTitle: "Testimonial API",
+      introduction: "In this lesson, we will walk through the process of creating a testimonial system with Express and Mongoose, set up routes for creating, fetching, approving, and deleting testimonials, and implement authentication and admin middleware for secure access.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the folder structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [ 
+             "Inside your backend folder, within the routes folder, create a paymentRoutes.js file.",
+             "Also in your backend folder, create a midddlware folder and inside it, create an authMiddleware.js file.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Define the Router",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "Import Express to create a new router.",
+              "Initialize the router using express.Router() for handling routes related to testimonials.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Handle Create Testimonial",
+          titleDescription: "POST Request",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "Define the route using router.post() to create a new testimonial.",
+              "Specify the endpoint (e.g., /api/testimonials).",
+              "Extract the testimonial data from the request body (e.g., user, content, rating).",
+              "Wrap the logic inside a try...catch block to handle errors.",
+              "Create a new Testimonial instance using the data from the request.",
+              "Save the testimonial to the database using .save().",
+              "Send a success response with the created testimonial and a 201 Created status code.",
+              "Handle any errors and send a 400 Bad Request response if necessary.",
+            
+              ],
+            },
+       
+          ],
+        },
+         {
+          stepTitle: "Step 4: Handle Fetch All Testimonials",
+          titleDescription: "GET Request",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "Define the route using router.get() to handle GET requests for all testimonials.",
+              "Specify the endpoint (e.g., /api/testimonials).",
+              "Wrap the logic inside a try...catch block to handle errors.",
+              "Fetch all testimonials from the database using Testimonial.find().",
+              "Optionally, use .populate() to include user details in the response (e.g., name, email).",
+              "Send a success response with the list of testimonials and a 200 OK status code.",
+              "Handle any errors and send a 500 Internal Server Error response if necessary.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 5: Handle Fetch Testimonials by User",
+          titleDescription: "GET Request by User ID",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Define the route using router.get() to handle GET requests by user ID (e.g., /api/testimonials/user/:userId).",
+                "Extract the userId from the request parameters.",
+                "Use Testimonial.find({ user: userId }) to find testimonials by user.",
+              "Optionally, use .populate() to include user details in the response.",
+              "Send a success response with the testimonials for that user and a 200 OK status code.",
+              "Handle any errors and send a 500 Internal Server Error response if necessary.",
+
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 6: Handle Update Testimonial",
+          titleDescription: "PUT Request by ID",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Define the route using router.put() to handle PUT requests by testimonial ID (e.g., /api/testimonials/:id).",
+                "Extract the testimonial ID from the request parameters.",
+                "Extract the data to update (e.g., content, rating, approved) from the request body.",
+                "Use Testimonial.findByIdAndUpdate() to update the testimonial.",
+                "Pass options like { new: true } to return the updated document and runValidators: true to ensure data validity.",
+                "Send a success response with the updated testimonial and a 200 OK status code.",
+               "Handle any errors and return a 400 Bad Request or 500 Internal Server Error status code if necessary.",
+
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 7: Handle Delete Testimonial",
+          titleDescription: "DELETE Request by ID",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Define the route using router.delete() to handle DELETE requests by testimonial ID (e.g., /api/testimonials/:id).",
+                "Extract the testimonial ID from the request parameters.",
+                "Use Testimonial.findByIdAndDelete() to delete the testimonial.",
+                "Send a success response with a message indicating successful deletion and a 200 OK status code.",
+                "Handle any errors and return a 500 Internal Server Error status code if necessary.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 8:  Integrate Routes into the Server",
+           titleDescription: "server.js",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Import the testimonial router module in server.js.",
+                "Use app.use('/api/testimonials', testimonialRoutes) to attach the testimonial router to the /api/testimonials path.",
+                "Test the routes to ensure the server is running and the routes are accessible at their respective endpoints.",
+              ],
+            },
+           
+          ],
+        },
+       
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/wfq7kh?view=editor+%2B+preview&module=%2Fbackend%2FApp.js",
+      img: require("../images/musicacademy/day15.webp"),
       videoLink: "",
     },
 

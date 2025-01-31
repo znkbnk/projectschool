@@ -5551,6 +5551,326 @@ const cheatsheetData = [
       },
     ],
    },
+   {
+    taskId: "day15",
+    content: [
+      {
+        title: "Backend Development Basics",
+        subtitle: "Node.js",
+        details: [
+          "Node.js is a JavaScript runtime that executes code outside of the browser, typically used for building server-side applications.",
+          "Non-blocking I/O: Handles multiple requests simultaneously without waiting for one to complete.",
+          "Event-driven: Executes operations asynchronously using event loops.",
+        ],
+      },
+         {
+        title: "",
+        subtitle: "Express.js",
+        details: [
+          "A minimal and flexible framework for Node.js, used to build web applications and APIs.",
+          "Middleware: Functions that run during the request/response cycle.",
+          "Routing: Maps URLs to functions (e.g., /users to a function that fetches user data).",
+          "Error handling: Built-in support for managing errors.",
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/1.webp"
+
+      },
+         {
+        title: "RESTful API Design",
+        subtitle: "What is REST?",
+        details: [
+          "REST (Representational State Transfer) is an architectural style for designing web services.",
+          "RESTful APIs allow interaction with resources (like users, posts) using standard HTTP methods.",
+          "Resources are identified by URIs (e.g., /users for a collection of users, /users/:id for a single user).",
+        ],
+      },
+         {
+        title: "",
+        subtitle: "Key Principles of REST",
+        details: [
+          "Statelessness: Each request from the client contains all the information needed to process the request (no reliance on stored session data on the server).",
+          "Resource-Based: Everything is a resource, and each resource is identified by a unique URI.",
+          "HTTP Methods: Specific operations (CRUD) are mapped to HTTP methods: GET: Retrieve data, POST: Create data, PUT: Update data, DELETE: Remove data.",
+          "Uniform Interface: Consistent and predictable structure (e.g., /users always refers to the users resource).",
+       
+        ],
+      },
+         {
+        title: "",
+        subtitle: "RESTful API Example",
+        details: [
+          "Scenario: You have a users resource, and you need to perform CRUD operations.",
+          
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/2.webp",
+      },
+         {
+        title: "",
+        subtitle: "Example with Express.js",
+        details: [
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/3.webp",
+
+      },
+      {
+        title: "Database Integration",
+        subtitle: "MongoDB",
+        details: [
+          "A NoSQL database that stores data in collections of documents (similar to JSON objects).",
+          "Schema-less: Flexible structure, no predefined schema needed.",
+          "Scalable: Ideal for applications with large data volumes.",
+        ],
+      },
+         {
+        title: "",
+        subtitle: "Mongoose",
+        details: [
+          "An ODM (Object Data Modeling) library for MongoDB.",
+          "Defines schemas and provides a way to interact with MongoDB using JavaScript objects.",
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/4.webp",
+
+      },
+         {
+        title: "Data Validation and Modeling",
+        subtitle: "Why Validation Matters",
+        details: [
+          "Ensures data integrity.",
+          "Prevents invalid data from being stored in the database.",
+          "Improves application security.",
+        
+        ],
+
+      },
+         {
+        title: "",
+        subtitle: "Mongoose Validation Example",
+        details: [
+        
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/5.webp",
+
+      },
+         {
+        title: "Asynchronous Programming",
+        subtitle: "What is Asynchronous Programming?",
+        details: [
+          "A programming paradigm where tasks run independently of the main application flow.",
+          "Helps handle time-consuming operations (e.g., database queries) without blocking the application.",
+          "A Promise represents the eventual result of an asynchronous operation.",
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/6.webp",
+
+      },
+         {
+        title: "",
+        subtitle: "Async/Await Example:",
+        details: [
+        
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/7.webp",
+
+      },
+      {
+        title: "Error Handling",
+        subtitle: "Why It's Important",
+        details: [
+          "Improves user experience by providing meaningful error messages.",
+          "Prevents crashes from unhandled errors.",
+        ],
+      },
+         {
+        title: "",
+        subtitle: "Using Try-Catch:",
+        details: [
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/8.webp",
+
+      },
+         {
+        title: "Middleware in Express",
+        subtitle: "What is Middleware?",
+        details: [
+          "Middleware is a function in Express.js that has access to the request (req), response (res), and the next middleware in the stack.",
+          "It can modify the request and response objects, end the request-response cycle, call the next middleware, or trigger an error.",
+
+          
+        ],
+      },
+         {
+        title: "",
+        subtitle: "Types of Middleware",
+        details: [
+          "express.json(): Parses incoming JSON payloads.",
+          "express.static(): Serves static files like images or CSS.",
+          "'cors' for handling cross-origin requests, helmet for securing HTTP headers.",
+          "Your own functions for logging, validation, or authentication.",
+        ],
+        image: "/images/cheatsheetImages/task/.webp"
+      },
+         {
+        title: "",
+        subtitle: "Middleware Flow Example:",
+        details: [
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/9.webp",
+
+      },
+      {
+        title: "",
+        subtitle: "Practical Middleware Use Cases:",
+        details: [
+          "Log every request to the console.",
+          
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/10.webp",
+
+      }, {
+        title: "",
+        subtitle: "",
+        details: [
+          "Catch errors and send a generic error message.",
+          
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/11.webp",
+
+      }, {
+        title: "",
+        subtitle: "",
+        details: [
+          "Verify if the user is logged in.",
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/12.webp",
+
+      }, {
+        title: "HTTP Routing",
+        subtitle: "What is Routing?",
+        details: [
+          "Routing in Express defines how the server responds to specific client requests.",
+          "Routes are matched based on the request method and URL path.",
+          "Each route can have multiple handlers (middleware functions).",
+
+          
+        ],
+        
+      }, {
+        title: "",
+        subtitle: "Each route is associated with:",
+        details: [
+          "HTTP Method: Defines the operation (GET, POST, etc.).",
+          "Path/Endpoint: The URL or part of it (e.g., /users).",
+          "Handler Function: The logic to execute when the route is matched.",
+        ],
+      }, {
+        title: "",
+        subtitle: "Basic Route:",
+        details: [
+        
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/13.webp",
+
+      }, {
+        title: "",
+        subtitle: "Dynamic Route:",
+        details: [
+          "Capture parameters from the URL using :parameterName.",
+          
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/14.webp",
+
+      }, {
+        title: "",
+        subtitle: "Chaining Routes",
+        details: [
+          "Use the same route path with different HTTP methods.",
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/15.webp",
+
+      }, {
+        title: "",
+        subtitle: "Router Example (Organizing Routes)",
+        details: [
+          "Use express.Router to modularize routes for better maintainability.",
+        
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/16.webp",
+
+      }, {
+        title: "",
+        subtitle: "Query Parameters",
+        details: [
+          "Use req.query to handle optional query strings like /search?name=John.",
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/17.webp",
+
+      }, {
+        title: "",
+        subtitle: "Middleware in Routes",
+        details: [
+          "Apply middleware to specific routes.",
+          
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/18.webp",
+
+      }, {
+        title: "",
+        subtitle: "404 Handling",
+        details: [
+          "Catch-all route for undefined endpoints.",
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/19.webp",
+
+      }, {
+        title: "Environment Variables",
+        subtitle: "",
+        details: [
+          "Keep sensitive data (e.g., database URIs, API keys) out of your codebase.",
+          "Use environment variables to store configuration values.",
+
+        
+        ],
+        image: "/images/musicAcademyCheatsheet/day10/20.webp",
+
+      }, {
+        title: "",
+        subtitle: "",
+        details: [
+          "Load .env variables using dotenv",
+
+         
+        ],
+                image: "/images/musicAcademyCheatsheet/day10/20.webp",
+
+      }, {
+        title: "Authentication and Authorization",
+        subtitle: "Authentication",
+        details: [
+          "Verifies the identity of a user (e.g., logging in with a username and password).",
+          "Creates a session or token to maintain the user's authenticated state.",
+          "Common methods include JWT (JSON Web Tokens) or sessions with cookies.",
+
+         
+        ],
+      }, {
+        title: "",
+        subtitle: "Authorization",
+        details: [
+          "Ensures a user has the necessary permissions to access a resource.",
+          "Roles and permissions are used to control access to specific routes or actions.",
+          "Middleware functions can check the user's role before allowing access.",
+
+          
+        ],
+      },
+    ],
+   },
 
 
 
