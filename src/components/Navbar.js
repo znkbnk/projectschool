@@ -149,6 +149,25 @@ const Navbar = () => {
                         </Link>
                       </div>
                     </div>
+                    <div className='dropdown-item'>
+                      <Link to='/reference' className='dropdown-link'>Reference</Link>
+                      <span></span>
+                      <div className='sub-dropdown-menu'>
+                        <Link
+                          to='/reference/reactreference'
+                          className='sub-dropdown-item'
+                        >
+                          React
+                        </Link>
+                        <Link
+                          to='interview/InterviewTasks'
+                          className='sub-dropdown-item'
+                        >
+                          Express.js
+                        </Link>
+                        
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>
