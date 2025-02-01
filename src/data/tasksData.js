@@ -379,14 +379,16 @@ const tasksData = {
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/y9k8p2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/y9k8p2?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day2.webp"),
       videoLink: "",
     },
     {
       taskId: "day3",
       taskTitle: "Building an About Page and Footer with Integration in React",
-      introduction: "This lesson covers creating an About page with sections for the mission, team, and achievements, designing a responsive Footer for navigation and contact details, and seamlessly integrating these components into your app using React Router for routing and consistent layout design.",      
+      introduction:
+        "This lesson covers creating an About page with sections for the mission, team, and achievements, designing a responsive Footer for navigation and contact details, and seamlessly integrating these components into your app using React Router for routing and consistent layout design.",
       steps: [
         {
           stepTitle: "Step 1: Create the File Structure",
@@ -394,12 +396,11 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "About.js file",
-              descriptions: [ 
-              "Inside the src directory, create a pages folder for organizing page components.",
-              "Create a about.css file in styles folder.",
+              descriptions: [
+                "Inside the src directory, create a pages folder for organizing page components.",
+                "Create a about.css file in styles folder.",
               ],
             },
-           
           ],
         },
         {
@@ -408,310 +409,291 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "About.js file",
-             descriptions: [ 
-              "Add a new file named About.js inside the pages folder.",
-              "Define a functional component named About.",
+              descriptions: [
+                "Add a new file named About.js inside the pages folder.",
+                "Define a functional component named About.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Design the About Page Layout",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "About.js file",
-            descriptions: [ 
-              "Plan the structure of the About page, dividing it into logical sections: About Section, Mission Section, Team Section, and Achievements Section",
-             
+              descriptions: [
+                "Plan the structure of the About page, dividing it into logical sections: About Section, Mission Section, Team Section, and Achievements Section",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Implement the About Section",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "About.js file",
-            descriptions: [ 
-              "Add a parent <div> with a class name to wrap the entire page.",
-              "Add a <section> for the 'About Section' with a title, description, and an image.",
+              descriptions: [
+                "Add a parent <div> with a class name to wrap the entire page.",
+                "Add a <section> for the 'About Section' with a title, description, and an image.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Implement the Mission Section",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "About.js file",
-             descriptions: [ 
-               "Add a <section> for the mission statement with a title and a paragraph describing the mission.",
-               
+              descriptions: [
+                "Add a <section> for the mission statement with a title and a paragraph describing the mission.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Design the Team Section",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "About.js file",
-             descriptions: [ 
-               "Add a <section> for the 'Meet Our Team' section.",
+              descriptions: [
+                "Add a <section> for the 'Meet Our Team' section.",
                 "Create a grid layout to display team member cards.",
                 "Each card should include: An image for the team member, name of the team member, role of the team member.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Add the Achievements Section",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "About.js file",
-             descriptions: [ 
-               "Add a <section> for achievements.",
+              descriptions: [
+                "Add a <section> for achievements.",
                 "Use a <ul> element to list accomplishments.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Apply CSS Styles",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "about.css file",
-             descriptions: [ 
-               "Define styles for the following: General layout and spacing for the page, section-specific styles (e.g., background, padding), responsive design for various screen sizes, typography for headings and paragraphs, image styling for team photos and the About section.",
-               
+              descriptions: [
+                "Define styles for the following: General layout and spacing for the page, section-specific styles (e.g., background, padding), responsive design for various screen sizes, typography for headings and paragraphs, image styling for team photos and the About section.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Import the CSS File",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "About.js file",
-             descriptions: [ 
-               "Import the about.css file into the About.js component.",
-                
+              descriptions: [
+                "Import the about.css file into the About.js component.",
               ],
             },
-           
           ],
         },
         {
           stepTitle: "Step 10: Add Placeholder or Real Content",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "About.js file",
-             descriptions: [ 
-               "Use placeholder images for team members and About section images if real images are not available.",
+              descriptions: [
+                "Use placeholder images for team members and About section images if real images are not available.",
                 "Add realistic and engaging content for descriptions, mission statements, and achievements.",
               ],
             },
-           
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 11: Test the Page",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "About.js file",
-             descriptions: [ 
-               "Run the React application to preview the About page.",
+              descriptions: [
+                "Run the React application to preview the About page.",
                 "Verify that all sections render correctly, including text, images, and styles.",
               ],
             },
-           
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 12: Enhance Responsiveness",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "about.css file",
-             descriptions: [ 
-               "Use CSS media queries to adjust the layout for mobile, tablet, and desktop devices.",
+              descriptions: [
+                "Use CSS media queries to adjust the layout for mobile, tablet, and desktop devices.",
               ],
             },
-          
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 13: Optimize for Performance",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "About.js file",
-             descriptions: [ 
-               "Ensure images are optimized for the web (e.g., using compressed formats).",
+              descriptions: [
+                "Ensure images are optimized for the web (e.g., using compressed formats).",
                 "Minimize unnecessary CSS or JavaScript to improve load time.",
               ],
             },
-          
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 14: Create the File Structure",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Footer.js file",
-             descriptions: [ 
-               "Inside the src directory, in the Components folder create a file named Footer.js",
+              descriptions: [
+                "Inside the src directory, in the Components folder create a file named Footer.js",
                 "Create a footer.css file in styles folder.",
               ],
             },
-           
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 15: Design the Footer Layout",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Footer.js file",
-             descriptions: [ 
-               "Plan the footer to include: A section for the academy's description, a section for quick links (e.g., navigation links), a section for contact information, a bottom section for copyright information.",
-               
+              descriptions: [
+                "Plan the footer to include: A section for the academy's description, a section for quick links (e.g., navigation links), a section for contact information, a bottom section for copyright information.",
               ],
             },
-          
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 16: Add the HTML Structure",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Footer.js file",
-             descriptions: [ 
-               "Structure the footer using semantic HTML elements like <footer>, <div>, <h3>, <h4>, <p>, <ul>, <li>, and <a> for proper accessibility and SEO.",
-               
+              descriptions: [
+                "Structure the footer using semantic HTML elements like <footer>, <div>, <h3>, <h4>, <p>, <ul>, <li>, and <a> for proper accessibility and SEO.",
               ],
             },
-           
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 17: Style the Footer",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Footer.js file",
-             descriptions: [ 
-               "Define styles for the footer container (.footer), its inner content sections (.footer-content, .footer-section), and the bottom area (.footer-bottom).",
-                
+              descriptions: [
+                "Define styles for the footer container (.footer), its inner content sections (.footer-content, .footer-section), and the bottom area (.footer-bottom).",
               ],
             },
-          
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 18: Implement a Responsive Layout",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "footer.css file",
-             descriptions: [ 
-               "Use CSS techniques like Flexbox or Grid to ensure the footer content is neatly arranged and responsive on different screen sizes.",
-               
+              descriptions: [
+                "Use CSS techniques like Flexbox or Grid to ensure the footer content is neatly arranged and responsive on different screen sizes.",
               ],
             },
-            
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 19: Add Styling for Links",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "footer.css file",
-             descriptions: [ 
-               "Style the navigation links (<a> tags) with hover effects to improve usability and aesthetics.",
-               
+              descriptions: [
+                "Style the navigation links (<a> tags) with hover effects to improve usability and aesthetics.",
               ],
             },
-          
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 20: Test Accessibility",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Footer.js file",
-             descriptions: [ 
-               "Verify that the footer complies with accessibility standards, such as ensuring proper contrast and readable fonts.",
-                
+              descriptions: [
+                "Verify that the footer complies with accessibility standards, such as ensuring proper contrast and readable fonts.",
               ],
             },
-          
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 21: Import the Components",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "App.js file",
-             descriptions: [ 
-               "Import the Footer component from the components folder.",
+              descriptions: [
+                "Import the Footer component from the components folder.",
                 "Import the About component from the pages folder.",
               ],
             },
-          
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 22: Set Up the Routes",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "App.js file",
-             descriptions: [ 
-               "Use the Routes and Route components from react-router-dom to define the route for the About page.",
+              descriptions: [
+                "Use the Routes and Route components from react-router-dom to define the route for the About page.",
                 "Add a Route for the /about path with the About component as its element.",
               ],
             },
-         
           ],
-        }, {
+        },
+        {
           stepTitle: "Step 23: Add the Footer Component",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "App.js file",
-             descriptions: [ 
-               "Place the Footer component at the bottom of the page, outside of the Routes block but inside the BrowserRouter.",
-                
+              descriptions: [
+                "Place the Footer component at the bottom of the page, outside of the Routes block but inside the BrowserRouter.",
               ],
             },
-          
           ],
         },
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/36r9m6?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/36r9m6?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day3.webp"),
       videoLink: "",
     },
     {
       taskId: "day4",
       taskTitle: "Implementing Services and Blog Pages",
-      introduction: "Create a responsive Services Page showcasing lessons with engaging descriptions, prices, and call-to-action buttons, and a visually appealing Blog Page featuring posts with thumbnails, dates, and 'Read More' options to enhance user interaction.",      
+      introduction:
+        "Create a responsive Services Page showcasing lessons with engaging descriptions, prices, and call-to-action buttons, and a visually appealing Blog Page featuring posts with thumbnails, dates, and 'Read More' options to enhance user interaction.",
       steps: [
         {
           stepTitle: "Step 1: Create the Component",
@@ -719,12 +701,10 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-              "Create a new file named Services.js in the components folder.",
-             
+              descriptions: [
+                "Create a new file named Services.js in the components folder.",
               ],
             },
-           
           ],
         },
         {
@@ -733,157 +713,143 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Define an array of objects representing the lessons (name, description, and price).",
-             
+              descriptions: [
+                "Define an array of objects representing the lessons (name, description, and price).",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Design the Layout",
           titleDescription: "Services.js",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "Add a main container to hold the content.",
-              "Include a header section with a title and introductory paragraph.",
-              "Create a grid or list to display the lessons.",
+              descriptions: [
+                "Add a main container to hold the content.",
+                "Include a header section with a title and introductory paragraph.",
+                "Create a grid or list to display the lessons.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Create Individual Lesson Cards",
           titleDescription: "Services.js",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "For each lesson, include a visual icon, name, description, price, and a call-to-action button.",
-             
+              descriptions: [
+                "For each lesson, include a visual icon, name, description, price, and a call-to-action button.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Style the Page",
           titleDescription: "Services.js",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Add a CSS file (e.g., services.css) and define styles for the page, header, grid, lesson cards, and buttons.",
-             
+              descriptions: [
+                "Add a CSS file (e.g., services.css) and define styles for the page, header, grid, lesson cards, and buttons.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Create the Component",
           titleDescription: "Blog.js",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Create a new file named BlogPage.js in the components folder.",
-             
+              descriptions: [
+                "Create a new file named BlogPage.js in the components folder.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Design the Data Structure",
           titleDescription: "Blog.js",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Define an array of objects representing the blog posts (title, date, description, and thumbnail URL).",
-               
+              descriptions: [
+                "Define an array of objects representing the blog posts (title, date, description, and thumbnail URL).",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Design the Layout",
-           titleDescription: "Blog.js",
+          titleDescription: "Blog.js",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Add a main container to hold the content.",
+              descriptions: [
+                "Add a main container to hold the content.",
                 "Include a header section with a title and introductory paragraph.",
                 "Create a grid or list to display the blog posts.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Create Individual Blog Cards",
           titleDescription: "Blog.js",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "For each blog, include an image thumbnail, title, publication date, description, and a call-to-action button.",
-              
+              descriptions: [
+                "For each blog, include an image thumbnail, title, publication date, description, and a call-to-action button.",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 10: Style the Page",
-           titleDescription: "Blog.js",
+          titleDescription: "Blog.js",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Add a CSS file (e.g., blog.css) and define styles for the page, header, grid, blog cards, images, and buttons.",
+              descriptions: [
+                "Add a CSS file (e.g., blog.css) and define styles for the page, header, grid, blog cards, images, and buttons.",
                 "Ensure the layout is responsive.",
               ],
             },
-        
           ],
-        },   {
+        },
+        {
           stepTitle: "Step 11: Update Routes in App.js",
-           titleDescription: "App.js",
+          titleDescription: "App.js",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Open the App.jsx file where existing routes are already set up.",
+              descriptions: [
+                "Open the App.jsx file where existing routes are already set up.",
                 "Import the ServicesPage and BlogPage components at the top",
                 "Add extra routes for the new pages under the <Routes> block without disturbing the existing structure.",
               ],
             },
-         
           ],
         },
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/fq29cs?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/fq29cs?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day4.webp"),
       videoLink: "",
     },
     {
       taskId: "day5",
       taskTitle: "Adding Contact Us and Testimonials Pages",
-      introduction: "This project includes a Contact Us Page with a form for inquiries and a Testimonials Page showcasing user feedback, both seamlessly integrated into a React app for enhanced communication and credibility.",      
+      introduction:
+        "This project includes a Contact Us Page with a form for inquiries and a Testimonials Page showcasing user feedback, both seamlessly integrated into a React app for enhanced communication and credibility.",
       steps: [
         {
           stepTitle: "Step 1: Create State Management",
@@ -891,12 +857,10 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Contact.js",
-              descriptions: [ 
-              "Use the useState hook to manage form data (name, email, subject, message).",
-              
+              descriptions: [
+                "Use the useState hook to manage form data (name, email, subject, message).",
               ],
             },
-         
           ],
         },
         {
@@ -905,168 +869,151 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Contact.js",
-             descriptions: [ 
-              "Create a form with input fields for name, email, subject, and a textarea for the message.",
-              "Add onChange handlers to update the state with user inputs.",
-              "Include a onSubmit handler to process the form data.",
+              descriptions: [
+                "Create a form with input fields for name, email, subject, and a textarea for the message.",
+                "Add onChange handlers to update the state with user inputs.",
+                "Include a onSubmit handler to process the form data.",
               ],
             },
-       
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Add Contact Information",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Contact.js",
-            descriptions: [ 
-              "Display basic contact information like phone and email.",
-             
+              descriptions: [
+                "Display basic contact information like phone and email.",
               ],
             },
-        
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Embed Google Maps",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Contact.js",
-            descriptions: [ 
-              "Use an <iframe> to embed Google Maps with the desired location.",
-            
+              descriptions: [
+                "Use an <iframe> to embed Google Maps with the desired location.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Style the Page",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "contactus.css",
-             descriptions: [ 
-               "Use the contactus.css file to style the page for a professional look.",
-              
+              descriptions: [
+                "Use the contactus.css file to style the page for a professional look.",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Prepare Testimonials Data",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Testimonials.js",
-             descriptions: [ 
-               "Create an array of objects containing the testimonial text, author's name, and image path.",
-                
+              descriptions: [
+                "Create an array of objects containing the testimonial text, author's name, and image path.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Create State Management",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Testimonials.js",
-             descriptions: [ 
-               "Use the useState hook to manage the active testimonial index.",
-               
+              descriptions: [
+                "Use the useState hook to manage the active testimonial index.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Display Testimonial Content",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Testimonials.js",
-             descriptions: [ 
-               "Dynamically display the active testimonial's text, name, and image based on the current index.",
-             
+              descriptions: [
+                "Dynamically display the active testimonial's text, name, and image based on the current index.",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Add Navigation Dots",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Testimonials.js",
-             descriptions: [ 
-               "Render navigation dots for each testimonial.",
+              descriptions: [
+                "Render navigation dots for each testimonial.",
                 "Implement a click handler to update the active testimonial index.",
               ],
             },
-          
           ],
         },
         {
           stepTitle: "Step 10: Style the Testimonials Section",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "testimonials.css",
-             descriptions: [ 
-               "Use the testimonials.css file to design the layout and navigation dots.",
-              
+              descriptions: [
+                "Use the testimonials.css file to design the layout and navigation dots.",
               ],
             },
-       
           ],
-        },      {
+        },
+        {
           stepTitle: "Step 11: Update the Routes",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "App.js",
-             descriptions: [ 
-               "Open your App.js file and update the existing routes to include paths for the new components (e.g., /contact-us for the contact page and /testimonials for the testimonials page).",
-               
+              descriptions: [
+                "Open your App.js file and update the existing routes to include paths for the new components (e.g., /contact-us for the contact page and /testimonials for the testimonials page).",
               ],
             },
-        
           ],
-        },      {
+        },
+        {
           stepTitle: "Step 12: Test New Routes",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "App.js",
-             descriptions: [ 
-               "Run the project and navigate to /contact-us and /testimonials in the browser to ensure the components render correctly.",
-                
+              descriptions: [
+                "Run the project and navigate to /contact-us and /testimonials in the browser to ensure the components render correctly.",
               ],
             },
-           
           ],
-        },    
-       
+        },
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/nr926f?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/nr926f?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day5.webp"),
       videoLink: "",
     },
     {
       taskId: "day6",
       taskTitle: "Contact Form with Email Integration",
-      introduction: "This guide walks you through integrating EmailJS into your React project to send form data via email. It covers setting up an EmailJS account, creating an email service and template, and implementing a form submission process with success and error feedback.",      
+      introduction:
+        "This guide walks you through integrating EmailJS into your React project to send form data via email. It covers setting up an EmailJS account, creating an email service and template, and implementing a form submission process with success and error feedback.",
       steps: [
         {
           stepTitle: "Step 1: Install EmailJS Library",
@@ -1074,12 +1021,10 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Contact.js",
-              descriptions: [ 
-              "Ensure the emailjs-com package is installed in your project using npm or yarn.",
-              
+              descriptions: [
+                "Ensure the emailjs-com package is installed in your project using npm or yarn.",
               ],
             },
-            
           ],
         },
         {
@@ -1088,39 +1033,36 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Contact.js",
-             descriptions: [ 
-              "Import the emailjs-com library in your Contact component file.",
-              
+              descriptions: [
+                "Import the emailjs-com library in your Contact component file.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Add State Management",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Contact.js",
-            descriptions: [ 
-              "Create a state to track the form submission status (isSubmitting) and set it to false.",
-              "Create a state to store user feedback messages (feedback) and set it to null.",
+              descriptions: [
+                "Create a state to track the form submission status (isSubmitting) and set it to false.",
+                "Create a state to store user feedback messages (feedback) and set it to null.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Add functionality to handleSubmit",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Contact.js",
-            descriptions: [ 
-              "Remove the exsisting line of code: console.log(form);",
-              "Prevent the default form submission behavior using e.preventDefault().",
-              "Set isSubmitting to true to indicate the submission is in progress.",
-              "Call the emailjs.sendForm method, passing the necessary parameters: SERVICE_ID, TEMPLATE_ID, the form event (e.target), and your Public_Key.",
+              descriptions: [
+                "Remove the exsisting line of code: console.log(form);",
+                "Prevent the default form submission behavior using e.preventDefault().",
+                "Set isSubmitting to true to indicate the submission is in progress.",
+                "Call the emailjs.sendForm method, passing the necessary parameters: SERVICE_ID, TEMPLATE_ID, the form event (e.target), and your Public_Key.",
                 "Use .then to handle the successful response.",
                 "Log the result to the console (console.log(result.text)).",
                 "Update the feedback message with a success message (setFeedback('Message sent successfully!')).",
@@ -1129,164 +1071,151 @@ const tasksData = {
                 "Log the error to the console (console.log(error.text)).",
                 "Update the feedback message with an error message (setFeedback('There was an error sending the message. Please try again.')).",
                 "Use .finally() to ensure that, regardless of success or failure, setIsSubmitting(false) is called to reset the submitting state.",
-               
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Update the Submit Button",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Contact.js",
-             descriptions: [ 
-               "Disable the button when isSubmitting is true.",
+              descriptions: [
+                "Disable the button when isSubmitting is true.",
                 "Display a loading message (e.g., 'Sending...') when the form is being submitted.",
-                
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Display Feedback to the User",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Contact.js",
-             descriptions: [ 
-               "Use a conditional to display the feedback message (feedback) to the user after the form is submitted.",
-               
+              descriptions: [
+                "Use a conditional to display the feedback message (feedback) to the user after the form is submitted.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Create an EmailJS Account",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "EmailJs.com",
-             descriptions: [ 
-               "Go to emailjs.com.",
+              descriptions: [
+                "Go to emailjs.com.",
                 "Click Sign Up in the top right corner and fill in the required details to create an account. If you already have an account, click Login and sign in.",
               ],
             },
-            
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Create an Email Service",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "EmailJs.com",
-             descriptions: [ 
-               "After logging in, go to the Dashboard.",
+              descriptions: [
+                "After logging in, go to the Dashboard.",
                 "In the Dashboard, click Add New Service/Create New Service.",
                 "Choose a service provider for sending emails. EmailJS supports several services, such as Gmail, Outlook, etc. Choose the one that suits your needs and follow the steps to authenticate your account.",
-               "Once the service is created, you'll be able to see the Service ID on your EmailJS dashboard. (Service ID:service_xxxxxx).",
-
+                "Once the service is created, you'll be able to see the Service ID on your EmailJS dashboard. (Service ID:service_xxxxxx).",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Create an Email Template",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "EmailJs.com",
-             descriptions: [ 
-               "After creating the service, go to the Email Templates section (on the left sidebar).",
+              descriptions: [
+                "After creating the service, go to the Email Templates section (on the left sidebar).",
                 "Click Create New Template.",
                 "You'll be prompted to configure your email template. This is where you define the structure of the email that will be sent when the form is submitted.",
                 "You can include placeholders like {{name}}, {{email}}, {{subject}}, and {{message}} that correspond to the form fields.",
                 "Once done, click Save. The template will now be listed in the templates section, and you can click on it to see its Template ID.",
               ],
             },
-            
           ],
         },
-         {
+        {
           stepTitle: "Step 10: Get Your Public Key",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "EmailJs.com",
-             descriptions: [ 
-               "In the Dashboard or Account Settings (accessible by clicking on your profile picture in the top right), look for your Public Key.",
+              descriptions: [
+                "In the Dashboard or Account Settings (accessible by clicking on your profile picture in the top right), look for your Public Key.",
                 "Your Public Key is required when calling the emailjs.sendForm() method.",
               ],
             },
-          
           ],
         },
         {
           stepTitle: "Step 11: Get and add Your IDs",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Contact.js",
-             descriptions: [ 
-               "Service ID: The ID of the email service you created (e.g., Gmail, Outlook, etc.).",
+              descriptions: [
+                "Service ID: The ID of the email service you created (e.g., Gmail, Outlook, etc.).",
                 "Template ID: The ID of the email template you created.",
                 "Public Key: Your unique EmailJS User ID (found in your account settings).",
                 "With all the IDs ready, use them in your React app. Replace the placeholders in your code with these IDs",
                 "For example, if your Service ID is 'gmail', Template ID is 'contact_form', and Public Key is 'user_ABC123XYZ', your code should look like this: 'emailjs.sendForm('gmail', 'contact_form', e.target, 'user_ABC123XYZ')'",
               ],
             },
-        
           ],
         },
         {
           stepTitle: "Step 12: Test the Form",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Contact.js",
-             descriptions: [ 
-               "Once everything is set up and the code is updated, test the form by filling it out and submitting it. You should receive an email at the configured recipient address as specified in the email template.",
+              descriptions: [
+                "Once everything is set up and the code is updated, test the form by filling it out and submitting it. You should receive an email at the configured recipient address as specified in the email template.",
                 "Ensure that your email template correctly maps the fields from the form (like name, email, subject, message) with placeholders like {{name}}.",
                 "If you run into any issues with the service or template setup, refer to EmailJS's documentation or text me for more detailed guidance.",
               ],
             },
-          
           ],
         },
-      
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/8ydgts?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/8ydgts?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day6.webp"),
       videoLink: "",
     },
     {
       taskId: "day7",
       taskTitle: "Setting Up a Node.js Backend with MongoDB",
-      introduction: "In this lesson, you'll learn how to set up a backend server using Express and MongoDB, including creating the server.js and db.js files for routing and establishing a MongoDB connection. You'll also configure a MongoDB Atlas project, set up database access, and create a .env file to securely store your connection credentials.",      
+      introduction:
+        "In this lesson, you'll learn how to set up a backend server using Express and MongoDB, including creating the server.js and db.js files for routing and establishing a MongoDB connection. You'll also configure a MongoDB Atlas project, set up database access, and create a .env file to securely store your connection credentials.",
       steps: [
         {
           stepTitle: "Step 1: Setting Up server.js File",
-          titleDescription: "Create a backend folder next to your public, src, and node_modules folders. ( in the root directory of your project).",
+          titleDescription:
+            "Create a backend folder next to your public, src, and node_modules folders. ( in the root directory of your project).",
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-              "In your backend folder, open the terminal and run: 'npm init -y' then 'npm install express mongoose dotenv cors'.",
-              "Create the server.js file in your backend folder.",
+              descriptions: [
+                "In your backend folder, open the terminal and run: 'npm init -y' then 'npm install express mongoose dotenv cors'.",
+                "Create the server.js file in your backend folder.",
               ],
             },
-         
           ],
         },
         {
@@ -1295,172 +1224,164 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "server.js",
-             descriptions: [ 
-              "Import 'express' for routing.",
-              "Import 'dotenv' to manage environment variables.",
-              "Import 'cors' to handle cross-origin requests.",
-              "Import 'connectDB' from db.js to establish the MongoDB connection.",
+              descriptions: [
+                "Import 'express' for routing.",
+                "Import 'dotenv' to manage environment variables.",
+                "Import 'cors' to handle cross-origin requests.",
+                "Import 'connectDB' from db.js to establish the MongoDB connection.",
               ],
             },
-           
           ],
         },
-         {
-          stepTitle: "Step 3: Setting up the Express app and starting the server",
+        {
+          stepTitle:
+            "Step 3: Setting up the Express app and starting the server",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "server.js",
-            descriptions: [ 
-              "Load environment variables with dotenv.config().",
-              "Initialize the Express app with express().",
-              "Use middleware: 'cors()' for handling cross-origin resource sharing. Then 'express.json()' to parse incoming JSON requests.",
-              "Call the connectDB() function to connect to MongoDB.",
-              "Create a test route (GET /) to check if the server is running.",
-              "Set up the port (e.g., 5000 or use an environment variable).",
-              "Start the server with app.listen().",
-            ],
+              descriptions: [
+                "Load environment variables with dotenv.config().",
+                "Initialize the Express app with express().",
+                "Use middleware: 'cors()' for handling cross-origin resource sharing. Then 'express.json()' to parse incoming JSON requests.",
+                "Call the connectDB() function to connect to MongoDB.",
+                "Create a test route (GET /) to check if the server is running.",
+                "Set up the port (e.g., 5000 or use an environment variable).",
+                "Start the server with app.listen().",
+              ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Setting Up db.js File",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "db.js",
-            descriptions: [ 
-              "Create the config/db.js file inside the backend folder.",
-              "Import mongoose for MongoDB connection.",
-              "",
+              descriptions: [
+                "Create the config/db.js file inside the backend folder.",
+                "Import mongoose for MongoDB connection.",
+                "",
               ],
             },
-        
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Create the connectDB functions",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "db.js",
-             descriptions: [ 
-               "Use mongoose.connect() to connect to MongoDB.",
+              descriptions: [
+                "Use mongoose.connect() to connect to MongoDB.",
                 "Use process.env.MONGO_URI to retrieve the connection string from the .env file.",
                 "Log the successful connection message (console.log).",
                 "In case of an error, log the error message and terminate the process using process.exit(1).",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Creating a MongoDB Atlas Project and Cluster",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "mongodb.com",
-             descriptions: [ 
-               "Sign up or log in to MongoDB Atlas.",
-              
-              ],
+              descriptions: ["Sign up or log in to MongoDB Atlas."],
             },
             {
               subtitleDescription: "Create a new project",
-              descriptions: [ 
-               "Click Create a new Project in the Atlas dashboard.",
+              descriptions: [
+                "Click Create a new Project in the Atlas dashboard.",
                 "Give it a name and click Next.",
               ],
             },
             {
               subtitleDescription: "Create a cluster",
-             descriptions: [ 
-               "Choose Shared Clusters (the free option).",
+              descriptions: [
+                "Choose Shared Clusters (the free option).",
                 "Select your Cloud Provider (AWS, GCP, or Azure) and Region.",
                 "Click Create Cluster and wait for it to be set up (it may take a few minutes).",
               ],
             },
             {
               subtitleDescription: "Set up database access",
-             descriptions: [ 
-               "Go to the Database Access tab and create a new database user.",
+              descriptions: [
+                "Go to the Database Access tab and create a new database user.",
                 "Choose a username and password for the user.",
                 "Set the database user role (e.g., Atlas Admin for full access).",
               ],
             },
             {
               subtitleDescription: "Set up network access",
-              descriptions: [ 
-               "Go to Network Access and click Add IP Address.",
+              descriptions: [
+                "Go to Network Access and click Add IP Address.",
                 "Choose Allow access from anywhere (or add specific IP addresses).",
                 "Click Confirm.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Get the MongoDB connection string",
-              descriptions: [ 
+              descriptions: [
                 "Go to your cluster in the Clusters tab.",
                 "Click Connect.",
                 "Select Connect your application.",
-                 "Choose Node.js as the driver and version 4.1 or later.",
+                "Choose Node.js as the driver and version 4.1 or later.",
                 "Copy the connection string provided and replace <username> and <password> with your credentials.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Creating the .env File",
           titleDescription: "Create the .env file inside the backend folder.",
           sections: [
             {
               subtitleDescription: ".env",
-             descriptions: [ 
-               "Add your MongoDB URI to the .env file in this format: 'MONGO_URI=mongodb+srv://<your_connection_string>', this you can get from step 6.",
-               
+              descriptions: [
+                "Add your MongoDB URI to the .env file in this format: 'MONGO_URI=mongodb+srv://<your_connection_string>', this you can get from step 6.",
               ],
             },
             {
               subtitleDescription: "IMPORTANT",
-              descriptions: [ 
-               "Add .env to .gitignore.",
+              descriptions: [
+                "Add .env to .gitignore.",
                 "Create a .gitignore file in the root of your project (if not already present).",
                 "Add .env to the file so that it's not pushed to GitHub.",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Testing the Server",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "Terminal",
-             descriptions: [ 
-               "Start the server by running: node server.js",
+              descriptions: [
+                "Start the server by running: node server.js",
                 "Check if the server is running by opening a browser and navigating to: http://localhost:5000/",
                 "You should see: API is running... ( or anything you set in the server.js file ).",
               ],
             },
-          
           ],
         },
-        
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/8yfkv6?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/8yfkv6?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day7.webp"),
       videoLink: "",
     },
     {
       taskId: "day8",
       taskTitle: "Mongoose Schemas",
-      introduction: "This guide walks you through setting up a structured folder for schemas in a Node.js project, defining Mongoose schemas for entities like users, blog posts, schedules, and payments with fields, relationships, and validations, ensuring scalability and maintainability.",      
+      introduction:
+        "This guide walks you through setting up a structured folder for schemas in a Node.js project, defining Mongoose schemas for entities like users, blog posts, schedules, and payments with fields, relationships, and validations, ensuring scalability and maintainability.",
       steps: [
         {
           stepTitle: "Step 1: Plan the Schema Design",
@@ -1468,15 +1389,13 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-              "Identify the key entities (e.g., User, BlogPost, LessonSchedule, Message, Payment, Testimonial).",
-              "Think of the structure and relationships for each entity.",
-              "What fields each schema will have.",
-              "Relationships (e.g., author in BlogPost references a User).",
-
+              descriptions: [
+                "Identify the key entities (e.g., User, BlogPost, LessonSchedule, Message, Payment, Testimonial).",
+                "Think of the structure and relationships for each entity.",
+                "What fields each schema will have.",
+                "Relationships (e.g., author in BlogPost references a User).",
               ],
             },
-           
           ],
         },
         {
@@ -1485,156 +1404,148 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Inside your backend folder, create a models directory.",
-              "Within the models folder, create a file for each schema. ",
-              "User.js for the User schema.",
-              "BlogPost.js for the BlogPost schema.",
-              "LessonSchedule.js for the LessonSchedule schema.",
-              "Message.js for the Message schema.",
-              "Payment.js for the Payment schema.",
-              "Testimonial.js for the Testimonial schema.",
-              "Ensure each file is focused on defining a single schema. Avoid combining multiple schemas in one file for maintainability.",
+              descriptions: [
+                "Inside your backend folder, create a models directory.",
+                "Within the models folder, create a file for each schema. ",
+                "User.js for the User schema.",
+                "BlogPost.js for the BlogPost schema.",
+                "LessonSchedule.js for the LessonSchedule schema.",
+                "Message.js for the Message schema.",
+                "Payment.js for the Payment schema.",
+                "Testimonial.js for the Testimonial schema.",
+                "Ensure each file is focused on defining a single schema. Avoid combining multiple schemas in one file for maintainability.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Create the User.js Schema",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "Open User.js in the models folder.",
-              "Define the User schema.",
-              "Add fields: 'name', 'email', 'password', 'role', etc.",
-              "Add relationships: 'teacherDetails' includes fields like bio, expertise, and availability and 'studentDetails' includes a reference to lessons using mongoose.Schema.Types.ObjectId.",
-              "Add validation, such as required: true, 'enum' for roles, and unique: true for email.",
+              descriptions: [
+                "Open User.js in the models folder.",
+                "Define the User schema.",
+                "Add fields: 'name', 'email', 'password', 'role', etc.",
+                "Add relationships: 'teacherDetails' includes fields like bio, expertise, and availability and 'studentDetails' includes a reference to lessons using mongoose.Schema.Types.ObjectId.",
+                "Add validation, such as required: true, 'enum' for roles, and unique: true for email.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Create the BlogPost.js Schema",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "Open BlogPost.js.",
-              "Define field: 'title' and 'content' as strings with required: true.",
-              "Then add another one: 'author' as a reference to the 'User' schema using mongoose.Schema.Types.ObjectId and 'ref': 'User'.",
-              "An array of strings for 'tags'.",
-              "Add defaults for 'published' and 'timestamps'.",
+              descriptions: [
+                "Open BlogPost.js.",
+                "Define field: 'title' and 'content' as strings with required: true.",
+                "Then add another one: 'author' as a reference to the 'User' schema using mongoose.Schema.Types.ObjectId and 'ref': 'User'.",
+                "An array of strings for 'tags'.",
+                "Add defaults for 'published' and 'timestamps'.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Create the LessonSchedule.js Schema",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Open LessonSchedule.js.",
-              "Define field: References to 'teacher' and 'student' (both referencing the 'User' schema).",
-              "After make a: Strings for 'lessonType', 'date', and 'time'.",
-              "Optional 'location' field for online links or physical locations.",
-              "And a 'status' with enumerated values: Scheduled, Completed, Cancelled.",
+              descriptions: [
+                "Open LessonSchedule.js.",
+                "Define field: References to 'teacher' and 'student' (both referencing the 'User' schema).",
+                "After make a: Strings for 'lessonType', 'date', and 'time'.",
+                "Optional 'location' field for online links or physical locations.",
+                "And a 'status' with enumerated values: Scheduled, Completed, Cancelled.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Create the Message.js Schema",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Open Message.js.",
-              "You will need filds like 'sender' and 'receiver' as references to the 'User' schema.",
-              "Then add 'content' as a required string.",
-              "After add 'isRead' as a boolean with a default of false.",
-              "And 'sentAt' with a default value of Date.now.",
+              descriptions: [
+                "Open Message.js.",
+                "You will need filds like 'sender' and 'receiver' as references to the 'User' schema.",
+                "Then add 'content' as a required string.",
+                "After add 'isRead' as a boolean with a default of false.",
+                "And 'sentAt' with a default value of Date.now.",
               ],
             },
-            
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Create the Payment.js Schema",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Open Payment.js.",
-              "Define fields like 'user' as a reference to the 'User' schema.",
-              "Next 'amount' as a required number.",
-              "Then 'status' as an enumerated value: Pending, Paid, Failed.",
-              "Also 'method' with enumerated values (e.g., Credit Card, PayPal).",
-              "Optional 'transactionId' as a unique identifier.",
+              descriptions: [
+                "Open Payment.js.",
+                "Define fields like 'user' as a reference to the 'User' schema.",
+                "Next 'amount' as a required number.",
+                "Then 'status' as an enumerated value: Pending, Paid, Failed.",
+                "Also 'method' with enumerated values (e.g., Credit Card, PayPal).",
+                "Optional 'transactionId' as a unique identifier.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Create the Testimonial.js Schema",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Open Testimonial.js.",
-              "You will need filed like 'user' as a reference to the 'User' schema.",
-              "You will also need 'content' as a required string.",
-              "Optional rating as a number between 1 and 5.",
-              "And approved as a boolean with a default of false.",
+              descriptions: [
+                "Open Testimonial.js.",
+                "You will need filed like 'user' as a reference to the 'User' schema.",
+                "You will also need 'content' as a required string.",
+                "Optional rating as a number between 1 and 5.",
+                "And approved as a boolean with a default of false.",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Add Common Options and Export the Models",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "For each schema, enable automatic timestamps by passing { timestamps: true } as the second argument to mongoose.Schema.",
-              "Add default values where appropriate, such as Date.now for timestamps.",
-              "At the end of each file, compile the schema into a model using mongoose.model: Example: module.exports = mongoose.model('User', userSchema);",
-              "Confirm that each file exports the corresponding model correctly.",
+              descriptions: [
+                "For each schema, enable automatic timestamps by passing { timestamps: true } as the second argument to mongoose.Schema.",
+                "Add default values where appropriate, such as Date.now for timestamps.",
+                "At the end of each file, compile the schema into a model using mongoose.model: Example: module.exports = mongoose.model('User', userSchema);",
+                "Confirm that each file exports the corresponding model correctly.",
               ],
             },
-          
           ],
         },
-        
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/5pkdjq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/5pkdjq?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day8.webp"),
       videoLink: "",
     },
     {
       taskId: "day9",
       taskTitle: "Creating a Test User: Hardcoded Script and Postman Method",
-      introduction: "In this lesson, we're going to learn two ways to create a test user for our application. First, we'll use a hardcoded script to define and save a test user directly in the database. Then, we'll explore how to create a user using Postman by setting up a POST request with user details in JSON format, allowing us to confirm the user is successfully stored.",      
+      introduction:
+        "In this lesson, we're going to learn two ways to create a test user for our application. First, we'll use a hardcoded script to define and save a test user directly in the database. Then, we'll explore how to create a user using Postman by setting up a POST request with user details in JSON format, allowing us to confirm the user is successfully stored.",
       steps: [
         {
           stepTitle: "Step 1: Start Your Server",
@@ -1642,12 +1553,11 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-              "Run the server using: 'node server.js'. Ensure you in the backend folder.",
-              "This will make your API accessible at http://localhost:5000.",
+              descriptions: [
+                "Run the server using: 'node server.js'. Ensure you in the backend folder.",
+                "This will make your API accessible at http://localhost:5000.",
               ],
             },
-           
           ],
         },
         {
@@ -1656,113 +1566,104 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Launch Postman on your computer.",
-              "Create a new request by clicking on New and selecting Request.",
+              descriptions: [
+                "Launch Postman on your computer.",
+                "Create a new request by clicking on New and selecting Request.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Set Up the POST Request",
           titleDescription: "Create a User Using Postman",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "In Postman, set the request type to POST by selecting it from the dropdown next to the URL bar.",
-              "Enter the API endpoint URL in the address bar: http://localhost:5000/api/users",
+              descriptions: [
+                "In Postman, set the request type to POST by selecting it from the dropdown next to the URL bar.",
+                "Enter the API endpoint URL in the address bar: http://localhost:5000/api/users",
               ],
             },
-        
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Add Request Body (User Data)",
           titleDescription: "Create a User Using Postman",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "In the Postman interface, go to the Body tab.",
-              "Select raw and choose JSON from the dropdown on the right.",
-              "Enter the sample user data. For example: { 'name': 'Jevin', 'email': 'testuser@example.com', 'password': 'password123', and etc. }",
+              descriptions: [
+                "In the Postman interface, go to the Body tab.",
+                "Select raw and choose JSON from the dropdown on the right.",
+                "Enter the sample user data. For example: { 'name': 'Jevin', 'email': 'testuser@example.com', 'password': 'password123', and etc. }",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Send the Request",
           titleDescription: "Create a User Using Postman",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "After entering the data in the Body section, click the Send button in Postman.",
+              descriptions: [
+                "After entering the data in the Body section, click the Send button in Postman.",
                 "Postman will send the request to http://localhost:5000/api/users with the provided user data.",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Check the Response",
           titleDescription: "Create a User Using Postman",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "In the Response section of Postman, you should see a response with the newly created user's data.",
+              descriptions: [
+                "In the Response section of Postman, you should see a response with the newly created user's data.",
                 "If there's an error (e.g., missing fields, validation issues), you will see an error message in the response with the appropriate status code (e.g., 400 Bad Request).",
               ],
             },
-         
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Verify the User in the Database",
           titleDescription: "Create a User Using Postman",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Open MongoDB Compass (or use the MongoDB shell) to check the users collection.",
+              descriptions: [
+                "Open MongoDB Compass (or use the MongoDB shell) to check the users collection.",
                 "Look for the newly created user by matching the email or name you used.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Setup Environment Variables",
-           titleDescription: "Create and Save a User Using JavaScript",
+          titleDescription: "Create and Save a User Using JavaScript",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Create a .env file in the project directory. (next to yours public folder, src folder, etc.)",
+              descriptions: [
+                "Create a .env file in the project directory. (next to yours public folder, src folder, etc.)",
                 "Define the MONGO_URI variable with the MongoDB connection string.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Install Dependencies",
           titleDescription: "Create and Save a User Using JavaScript",
 
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Install  mongoose for interacting with MongoDB. ( if you haven't already installed it )",
+              descriptions: [
+                "Install  mongoose for interacting with MongoDB. ( if you haven't already installed it )",
                 "Install dotenv to load environment variables from the .env file.",
               ],
             },
-           
           ],
         },
         {
@@ -1772,113 +1673,110 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Import necessary modules like mongoose, dotenv, and the User model (userSchema). ",
+              descriptions: [
+                "Import necessary modules like mongoose, dotenv, and the User model (userSchema). ",
                 "Configure dotenv to load the .env file.",
               ],
             },
-            
           ],
-        },  {
+        },
+        {
           stepTitle: "Step 11: Handle Missing Environment Variables",
           titleDescription: "Create and Save a User Using JavaScript",
 
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Add a check to ensure the MONGO_URI variable is defined. ",
+              descriptions: [
+                "Add a check to ensure the MONGO_URI variable is defined. ",
                 "Exit the process with an error message if the variable is missing.",
               ],
             },
-        
           ],
-        },  {
+        },
+        {
           stepTitle: "Step 12: Connect to MongoDB",
           titleDescription: "Create and Save a User Using JavaScript",
 
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Use mongoose.connect() to establish a connection to the MongoDB database. ",
-              
+              descriptions: [
+                "Use mongoose.connect() to establish a connection to the MongoDB database. ",
               ],
             },
-           
           ],
-        },  {
+        },
+        {
           stepTitle: "Step 13: Create a New User",
           titleDescription: "Create and Save a User Using JavaScript",
 
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Instantiate a new user object with sample data for fields like name, email, password, etc.",
-               
+              descriptions: [
+                "Instantiate a new user object with sample data for fields like name, email, password, etc.",
               ],
             },
-           
           ],
-        },  {
+        },
+        {
           stepTitle: "Step 14: Save the User to the Database",
           titleDescription: "Create and Save a User Using JavaScript",
 
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Use the .save() method on the user object to store it in the MongoDB database. ",
+              descriptions: [
+                "Use the .save() method on the user object to store it in the MongoDB database. ",
                 "Handle the promise returned by .save() to log the success or error message.",
-            
               ],
             },
-         
           ],
-        },  {
+        },
+        {
           stepTitle: "Step 15: Optional Cleanup and Dissconnect",
           titleDescription: "Create and Save a User Using JavaScript",
 
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Optionally delete the test user from the database after saving to keep the database clean.",
+              descriptions: [
+                "Optionally delete the test user from the database after saving to keep the database clean.",
                 "Use mongoose.disconnect() to close the connection to the database.",
-            
               ],
             },
-         
           ],
-        },  {
+        },
+        {
           stepTitle: "Step 16: Handle Errors",
-           titleDescription: " Create and Save a User Using JavaScript",
+          titleDescription: " Create and Save a User Using JavaScript",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Wrap the logic in a try-catch block to catch and log any errors that may occur during the process. ",
+              descriptions: [
+                "Wrap the logic in a try-catch block to catch and log any errors that may occur during the process. ",
                 "Handle errors gracefully by logging them and providing feedback to the user.",
               ],
             },
-         
           ],
-        },        
+        },
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/qg85g4?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/qg85g4?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day9.webp"),
       videoLink: "",
     },
     {
       taskId: "day10",
       taskTitle: "User API",
-      introduction: "In this lesson, you'll build a user management API using Express and Mongoose. The API provides full CRUD functionality—create, read, update, and delete user data—handling essential fields like name, email, password, and role. It also includes robust error handling and schema validation to ensure data integrity and smooth operation.",      
+      introduction:
+        "In this lesson, you'll build a user management API using Express and Mongoose. The API provides full CRUD functionality—create, read, update, and delete user data—handling essential fields like name, email, password, and role. It also includes robust error handling and schema validation to ensure data integrity and smooth operation.",
       steps: [
         {
           stepTitle: "Step 1: Set Up the folder structure",
@@ -1886,13 +1784,12 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-             "Inside your backend folder, create a routes directory.",
-              "Within the routes folder, create a userRoutes.js file.",
-              "On top of the userRoutes.js file, import express and userSchema.",
+              descriptions: [
+                "Inside your backend folder, create a routes directory.",
+                "Within the routes folder, create a userRoutes.js file.",
+                "On top of the userRoutes.js file, import express and userSchema.",
               ],
             },
-           
           ],
         },
         {
@@ -1901,166 +1798,164 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Use express.Router() to define a modular router for handling user-related routes.",
-              
+              descriptions: [
+                "Use express.Router() to define a modular router for handling user-related routes.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Define a User Schema",
-          titleDescription: "For more detailed steps check the task 'Mongoose Schemas' from day 8.",
+          titleDescription:
+            "For more detailed steps check the task 'Mongoose Schemas' from day 8.",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "Create a User model using Mongoose.",
-              "Define fields such as name, email, password, role, and any additional details (e.g., profilePicture, contactNumber).",
+              descriptions: [
+                "Create a User model using Mongoose.",
+                "Define fields such as name, email, password, role, and any additional details (e.g., profilePicture, contactNumber).",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Define Routes for POST / (Create a New User)",
-          titleDescription: "Allow clients to create a new user in the database.",
+          titleDescription:
+            "Allow clients to create a new user in the database.",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "Extract the user data (e.g., name, email, password, role, etc.) from the request body.",
-              "Create a new instance of the User model with the extracted data.",
-              "Use await to save the user to the database.",
-              "Return a success response (201 Created) with the newly created user in JSON format.",
-              "Handle errors, such as validation errors or database issues, by returning an error message (400 Bad Request).",
+              descriptions: [
+                "Extract the user data (e.g., name, email, password, role, etc.) from the request body.",
+                "Create a new instance of the User model with the extracted data.",
+                "Use await to save the user to the database.",
+                "Return a success response (201 Created) with the newly created user in JSON format.",
+                "Handle errors, such as validation errors or database issues, by returning an error message (400 Bad Request).",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Create Routes for GET / (Fetch All Users)",
           titleDescription: "Retrieve all users stored in the database.",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Use Mongoose's find() method to fetch all users from the database.",
+              descriptions: [
+                "Use Mongoose's find() method to fetch all users from the database.",
                 "Return the retrieved list of users as a JSON response.",
                 "Handle potential errors by returning a 500 Internal Server Error with an error message.",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Make Route for GET /:id (Fetch a User by ID)",
-          titleDescription: "Retrieve a specific user based on their unique ID.",
+          titleDescription:
+            "Retrieve a specific user based on their unique ID.",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Extract the user ID from the URL parameter (e.g., req.params.id).",
+              descriptions: [
+                "Extract the user ID from the URL parameter (e.g., req.params.id).",
                 "Use Mongoose's findById() method to query the database for the user with the specified ID.",
                 "If the user exists: return the user's data in JSON format.",
                 "If the user does not exist: return a 404 Not Found response with an appropriate error message.",
                 "Handle potential database errors by returning a 500 Internal Server Error.",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Define Routes for PUT /:id (Update a User by ID)",
-          titleDescription: "Update a specific user's details based on their unique ID.",
+          titleDescription:
+            "Update a specific user's details based on their unique ID.",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Extract the user ID from the URL parameter (e.g., req.params.id).",
+              descriptions: [
+                "Extract the user ID from the URL parameter (e.g., req.params.id).",
                 "Extract the updated data from the request body.",
               ],
             },
             {
-              subtitleDescription: "Use Mongoose's findByIdAndUpdate() method to locate and update the user in the database:",
-              descriptions: [ 
-               "Pass { new: true } to return the updated user.",
+              subtitleDescription:
+                "Use Mongoose's findByIdAndUpdate() method to locate and update the user in the database:",
+              descriptions: [
+                "Pass { new: true } to return the updated user.",
                 "Pass { runValidators: true } to ensure updated data meets schema validation.",
               ],
             },
             {
               subtitleDescription: "",
-            descriptions: [ 
-               "If the user exists: return the updated user's data in JSON format.",
+              descriptions: [
+                "If the user exists: return the updated user's data in JSON format.",
                 "If the user does not exist: return a 404 Not Found response with an appropriate error message.",
                 "Handle validation or database errors by returning a 400 Bad Request.",
               ],
             },
           ],
         },
-         {
-          stepTitle: "Step 8: Create Routes for DELETE /:id (Delete a User by ID)",
-           titleDescription: "Remove a specific user from the database based on their unique ID.",
+        {
+          stepTitle:
+            "Step 8: Create Routes for DELETE /:id (Delete a User by ID)",
+          titleDescription:
+            "Remove a specific user from the database based on their unique ID.",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Extract the user ID from the URL parameter (e.g., req.params.id).",
+              descriptions: [
+                "Extract the user ID from the URL parameter (e.g., req.params.id).",
                 "Use Mongoose's findByIdAndDelete() method to remove the user.",
                 "If the user exists: return a success message (e.g., 'User deleted successfully').",
                 "If the user does not exist: return a 404 Not Found response with an appropriate error message.",
                 "Handle potential database errors by returning a 500 Internal Server Error.",
               ],
             },
-         
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Implement Error Handling",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Add try-catch blocks to handle potential errors.",
+              descriptions: [
+                "Add try-catch blocks to handle potential errors.",
                 "Return appropriate HTTP status codes and error messages.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 10: Integrate the Router into the Application",
-           titleDescription: "In server.js",
+          titleDescription: "In server.js",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "In your server.js file, import the user routes from the file where you've defined them.",
+              descriptions: [
+                "In your server.js file, import the user routes from the file where you've defined them.",
                 "Add the necessary middleware in server.js to tell Express that requests to a specific path (e.g., /api/users) should be handled by the user routes. This essentially 'mounts' the user routes at that path.",
               ],
             },
-          
           ],
         },
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/p6nf9v?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/p6nf9v?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day10.webp"),
       videoLink: "",
     },
     {
       taskId: "day11",
       taskTitle: "Blog API",
-      introduction: "In this lesson, we will build a blog post management system using Express and MongoDB, where we will create API routes to handle creating, reading, updating, and deleting blog posts. We will structure the data with Mongoose schemas, set up error handling, and organize the routes using Express routers for a clean and maintainable project.",      
+      introduction:
+        "In this lesson, we will build a blog post management system using Express and MongoDB, where we will create API routes to handle creating, reading, updating, and deleting blog posts. We will structure the data with Mongoose schemas, set up error handling, and organize the routes using Express routers for a clean and maintainable project.",
       steps: [
         {
           stepTitle: "Step 1: Set Up the folder structure",
@@ -2068,341 +1963,322 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-             "Inside your backend folder, within the routes folder, create a blogRoutes.js file. ",
-              "On top of the blogRoutes.js file, import express and blogPostSchema.",
+              descriptions: [
+                "Inside your backend folder, within the routes folder, create a blogRoutes.js file. ",
+                "On top of the blogRoutes.js file, import express and blogPostSchema.",
               ],
             },
-           
           ],
         },
         {
           stepTitle: "Step 2: Define the Router",
           titleDescription: "blogRoutes.js",
-          
+
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Use express.Router() to initialize the router for handling blog routes.",
-             
+              descriptions: [
+                "Use express.Router() to initialize the router for handling blog routes.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Handle Create Blog Post (POST Request)",
           titleDescription: "blogRoutes.js",
 
           sections: [
             {
               subtitleDescription: "Define the Route",
-            descriptions: [ 
-              "Use router.post() to create a route for handling POST requests.",
-              "Specify the endpoint (e.g., /api/blogs) and an asynchronous callback function.",
+              descriptions: [
+                "Use router.post() to create a route for handling POST requests.",
+                "Specify the endpoint (e.g., /api/blogs) and an asynchronous callback function.",
               ],
             },
             {
               subtitleDescription: "Extract Data from the Request",
-             descriptions: [ 
-              "In the callback, use req.body to extract the fields needed to create a blog post (e.g., title, content, author, tags).",
-              
+              descriptions: [
+                "In the callback, use req.body to extract the fields needed to create a blog post (e.g., title, content, author, tags).",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Wrap Logic in a try...catch Block",
-            descriptions: [ 
-              "Use a try block to handle the main logic and a catch block to handle errors.",
-              
+              descriptions: [
+                "Use a try block to handle the main logic and a catch block to handle errors.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Define a Constant for the New Blog Post",
-            descriptions: [ 
-              "Inside the try block, define a constant using const to hold the new blog post object.",
-              
+              descriptions: [
+                "Inside the try block, define a constant using const to hold the new blog post object.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Create a New Blog Post",
-            descriptions: [ 
-              "Use new BlogPost() to create a new instance of the blog post model, passing the extracted data as an argument.",
-             
+              descriptions: [
+                "Use new BlogPost() to create a new instance of the blog post model, passing the extracted data as an argument.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Save the Blog Post to the Database",
-            descriptions: [ 
-              "Use await with the .save() method to store the blog post in MongoDB.",
-              
+              descriptions: [
+                "Use await with the .save() method to store the blog post in MongoDB.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-            descriptions: [ 
-              "After saving, send a response with the created blog post and a 201 Created status code.",
-              
+              descriptions: [
+                "After saving, send a response with the created blog post and a 201 Created status code.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Handle Errors",
-            descriptions: [ 
-              "In the catch block, return a 400 Bad Request status code and send the error message.",
-             
+              descriptions: [
+                "In the catch block, return a 400 Bad Request status code and send the error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Handle Fetch All Blog Posts (GET Request)",
           titleDescription: "blogRoutes.js",
 
           sections: [
             {
               subtitleDescription: "Define the Route",
-            descriptions: [ 
-              "Use router.get() to create a route for handling GET requests.",
-              "Specify the endpoint (e.g., /api/blogs) and an asynchronous callback function.",
+              descriptions: [
+                "Use router.get() to create a route for handling GET requests.",
+                "Specify the endpoint (e.g., /api/blogs) and an asynchronous callback function.",
               ],
             },
             {
               subtitleDescription: "Use a try...catch Block",
-             descriptions: [ 
-               "Use a try block to fetch all blog posts from the database and a catch block to handle errors.",
-                
+              descriptions: [
+                "Use a try block to fetch all blog posts from the database and a catch block to handle errors.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Fetch Data from the Database",
-             descriptions: [ 
-               "Inside the try block, use the BlogPost.find() method to retrieve all blog posts.",
-                
+              descriptions: [
+                "Inside the try block, use the BlogPost.find() method to retrieve all blog posts.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Populate Author Details (Optional)",
-             descriptions: [ 
-               "Chain the .populate() method to include details of the author (e.g., name) in the response.",
-                
+              descriptions: [
+                "Chain the .populate() method to include details of the author (e.g., name) in the response.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return the list of blog posts with a 200 OK status code.",
-                
+              descriptions: [
+                "Return the list of blog posts with a 200 OK status code.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Handle Errors",
-             descriptions: [ 
-               "In the catch block, return a 500 Internal Server Error status code and send the error message.",
-                
+              descriptions: [
+                "In the catch block, return a 500 Internal Server Error status code and send the error message.",
               ],
             },
           ],
         },
-         {
-          stepTitle: "Step 5: Handle Fetch Single Blog Post (GET Request by ID)",
+        {
+          stepTitle:
+            "Step 5: Handle Fetch Single Blog Post (GET Request by ID)",
           titleDescription: "blogRoutes.js",
 
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.get() to create a route for handling GET requests by ID (e.g., /api/blogs/:id).",
-                
+              descriptions: [
+                "Use router.get() to create a route for handling GET requests by ID (e.g., /api/blogs/:id).",
               ],
             },
             {
               subtitleDescription: "Extract the Blog Post ID",
-             descriptions: [ 
-               "Use req.params to extract the id from the request URL.",
-               
+              descriptions: [
+                "Use req.params to extract the id from the request URL.",
               ],
-            },  
+            },
             {
               subtitleDescription: "Use a try...catch Block",
-             descriptions: [ 
-               "Use a try block to find the blog post by ID and a catch block to handle errors.",
-                
+              descriptions: [
+                "Use a try block to find the blog post by ID and a catch block to handle errors.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Fetch the Blog Post",
-             descriptions: [ 
-               "Use BlogPost.findById() to find the blog post with the specified ID.",
+              descriptions: [
+                "Use BlogPost.findById() to find the blog post with the specified ID.",
                 "Use .populate() to include author details if needed.",
               ],
             },
             {
               subtitleDescription: "Handle Not Found Cases",
-              descriptions: [ 
-               "If the blog post is not found, return a 404 Not Found status code with an error message.",
-               
+              descriptions: [
+                "If the blog post is not found, return a 404 Not Found status code with an error message.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return the blog post details with a 200 OK status code.",
-                
+              descriptions: [
+                "Return the blog post details with a 200 OK status code.",
               ],
             },
             {
               subtitleDescription: "Handle Errors",
-              descriptions: [ 
-               "In the catch block, return a 500 Internal Server Error status code and send the error message.",
-                
+              descriptions: [
+                "In the catch block, return a 500 Internal Server Error status code and send the error message.",
               ],
-            },  
-         
+            },
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Handle Update Blog Post (PUT Request by ID)",
           titleDescription: "blogRoutes.js",
 
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.put() to create a route for handling PUT requests by ID (e.g., /api/blogs/:id).",
-                
+              descriptions: [
+                "Use router.put() to create a route for handling PUT requests by ID (e.g., /api/blogs/:id).",
               ],
             },
             {
               subtitleDescription: "Extract the Blog Post ID",
-              descriptions: [ 
-               "Use req.params to extract the id from the request URL.",
-                
+              descriptions: [
+                "Use req.params to extract the id from the request URL.",
               ],
             },
             {
               subtitleDescription: "Extract Updated Data",
-             descriptions: [ 
-               "Use req.body to get the data for updating the blog post.",
-                
+              descriptions: [
+                "Use req.body to get the data for updating the blog post.",
               ],
             },
             {
               subtitleDescription: "Use a try...catch Block",
-             descriptions: [ 
-               "Use a try block to update the blog post and a catch block to handle errors.",
-               
+              descriptions: [
+                "Use a try block to update the blog post and a catch block to handle errors.",
               ],
             },
             {
               subtitleDescription: "Update the Blog Post",
-              descriptions: [ 
-               "Use BlogPost.findByIdAndUpdate() to find and update the blog post with the new data.",
+              descriptions: [
+                "Use BlogPost.findByIdAndUpdate() to find and update the blog post with the new data.",
                 "Pass options like { new: true } to return the updated document and runValidators: true to ensure data validity.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Handle Not Found Cases",
-              descriptions: [ 
-               "If the blog post is not found, return a 404 Not Found status code with an error message.",
-                
+              descriptions: [
+                "If the blog post is not found, return a 404 Not Found status code with an error message.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-              descriptions: [ 
-               "Return the updated blog post with a 200 OK status code.",
-                
+              descriptions: [
+                "Return the updated blog post with a 200 OK status code.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Handle Errors",
-              descriptions: [ 
-               "In the catch block, return a 400 Bad Request or 500 Internal Server Error status code with an error message.",
-                
+              descriptions: [
+                "In the catch block, return a 400 Bad Request or 500 Internal Server Error status code with an error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Handle Delete Blog Post (DELETE Request by ID)",
           titleDescription: "blogRoutes.js",
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.delete() to create a route for handling DELETE requests by ID (e.g., /api/blogs/:id).",
-                
+              descriptions: [
+                "Use router.delete() to create a route for handling DELETE requests by ID (e.g., /api/blogs/:id).",
               ],
             },
             {
               subtitleDescription: "Extract the Blog Post ID",
-              descriptions: [ 
-               "Use req.params to extract the id from the request URL.",
-                
+              descriptions: [
+                "Use req.params to extract the id from the request URL.",
               ],
             },
             {
               subtitleDescription: "Use a try...catch Block",
-            descriptions: [ 
-               "Use a try block to delete the blog post and a catch block to handle errors.",
-                
+              descriptions: [
+                "Use a try block to delete the blog post and a catch block to handle errors.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Delete the Blog Post",
-            descriptions: [ 
-               "Use BlogPost.findByIdAndDelete() to find and remove the blog post.",
-               
+              descriptions: [
+                "Use BlogPost.findByIdAndDelete() to find and remove the blog post.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Handle Not Found Cases",
-            descriptions: [ 
-               "If the blog post is not found, return a 404 Not Found status code with an error message.",
-                
+              descriptions: [
+                "If the blog post is not found, return a 404 Not Found status code with an error message.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-            descriptions: [ 
-               "Return a message indicating successful deletion with a 200 OK status code.",
-               
+              descriptions: [
+                "Return a message indicating successful deletion with a 200 OK status code.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Handle Errors",
-            descriptions: [ 
-               "In the catch block, return a 500 Internal Server Error status code with an error message.",
-                
+              descriptions: [
+                "In the catch block, return a 500 Internal Server Error status code with an error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Integrate Routes into the Server",
-           titleDescription: "server.js",
+          titleDescription: "server.js",
           sections: [
             {
               subtitleDescription: "Import the Blog Router",
-             descriptions: [ 
-               "In the server.js file, import the blog router module.",
-               
+              descriptions: [
+                "In the server.js file, import the blog router module.",
               ],
             },
             {
               subtitleDescription: "Mount the Router",
-             descriptions: [ 
-               "Use app.use() to attach the router to a specific path (e.g., /api/blogs).",
-                
+              descriptions: [
+                "Use app.use() to attach the router to a specific path (e.g., /api/blogs).",
               ],
             },
             {
               subtitleDescription: "Test the Integration",
-             descriptions: [ 
-               "Ensure the server is running and routes are accessible at their respective endpoints.",
-               "Use Postman or a similar tool to test the API endpoints for creating, reading, updating, and deleting blog posts.",               
-               
+              descriptions: [
+                "Ensure the server is running and routes are accessible at their respective endpoints.",
+                "Use Postman or a similar tool to test the API endpoints for creating, reading, updating, and deleting blog posts.",
               ],
             },
           ],
         },
-        
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/q3qjmz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/q3qjmz?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day11.webp"),
       videoLink: "",
     },
     {
       taskId: "day12",
       taskTitle: "Lesson API",
-      introduction: "In this lesson, we'll guide you through creating RESTful API routes for managing lesson schedules using Express and Mongoose. Since we've already set up the lesson schema, we’ll focus on implementing CRUD operations and integrating these routes into the server. This comprehensive guide ensures a well-structured approach to building a robust backend.",      
+      introduction:
+        "In this lesson, we'll guide you through creating RESTful API routes for managing lesson schedules using Express and Mongoose. Since we've already set up the lesson schema, we’ll focus on implementing CRUD operations and integrating these routes into the server. This comprehensive guide ensures a well-structured approach to building a robust backend.",
       steps: [
         {
           stepTitle: "Step 1: Set Up the folder structure",
@@ -2410,12 +2286,11 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-             "Inside your backend folder, within the routes folder, create a lessonRoutes.js file. ",
-              "On top of the lessonRoutes.js file, import express and lessonScheduleSchema.",
+              descriptions: [
+                "Inside your backend folder, within the routes folder, create a lessonRoutes.js file. ",
+                "On top of the lessonRoutes.js file, import express and lessonScheduleSchema.",
               ],
             },
-           
           ],
         },
         {
@@ -2424,314 +2299,292 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Import express to create a new router.",
-              "Use express.Router() to initialize the router for handling lesson routes.",
+              descriptions: [
+                "Import express to create a new router.",
+                "Use express.Router() to initialize the router for handling lesson routes.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Handle Create Lesson (POST Request)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-            descriptions: [ 
-              "Use router.post() to create a route for handling POST requests.",
-              "Specify the endpoint (e.g., /api/lessons) and a callback function.",
+              descriptions: [
+                "Use router.post() to create a route for handling POST requests.",
+                "Specify the endpoint (e.g., /api/lessons) and a callback function.",
               ],
             },
             {
               subtitleDescription: "Extract Data from the Request",
-             descriptions: [ 
-              "Use req.body to extract fields needed to create a lesson (e.g., teacher, student, lessonType, date, time, location).",
-              
+              descriptions: [
+                "Use req.body to extract fields needed to create a lesson (e.g., teacher, student, lessonType, date, time, location).",
               ],
             },
             {
               subtitleDescription: "Wrap Logic in a try...catch Block",
-            descriptions: [ 
-              "Use a try block for the main logic and a catch block for errors.",
-              
+              descriptions: [
+                "Use a try block for the main logic and a catch block for errors.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Create and Save the Lesson",
-            descriptions: [ 
-              "Use new LessonSchedule() to create a new instance of the lesson schedule model and save it to the database.",
-              
+              descriptions: [
+                "Use new LessonSchedule() to create a new instance of the lesson schedule model and save it to the database.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-            descriptions: [ 
-              "Return the created lesson and a 201 Created status code.",
+              descriptions: [
+                "Return the created lesson and a 201 Created status code.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Handle Errors",
-            descriptions: [ 
-              "Return a 400 Bad Request status code and send the error message in the catch block.",
+              descriptions: [
+                "Return a 400 Bad Request status code and send the error message in the catch block.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Handle Fetch All Lessons (GET Request)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-            descriptions: [ 
-              "Use router.get() to create a route for handling GET requests.",
-              "Specify the endpoint (e.g., /api/lessons) and a callback function.",
+              descriptions: [
+                "Use router.get() to create a route for handling GET requests.",
+                "Specify the endpoint (e.g., /api/lessons) and a callback function.",
               ],
             },
             {
               subtitleDescription: "Use a try...catch Block",
-             descriptions: [ 
-               "Fetch all lessons from the database in the try block and handle errors in the catch block.",
-                
+              descriptions: [
+                "Fetch all lessons from the database in the try block and handle errors in the catch block.",
               ],
-            },    {
+            },
+            {
               subtitleDescription: "Fetch Data",
-            descriptions: [ 
-              "Use LessonSchedule.find() to retrieve all lessons.",
-              
+              descriptions: [
+                "Use LessonSchedule.find() to retrieve all lessons.",
               ],
             },
             {
               subtitleDescription: "Populate References (Optional)",
-             descriptions: [ 
-               "Use .populate() to include teacher and student details in the response.",
-               
+              descriptions: [
+                "Use .populate() to include teacher and student details in the response.",
               ],
-            },    {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-            descriptions: [ 
-              "Return the list of lessons with a 200 OK status code.",
-              
+              descriptions: [
+                "Return the list of lessons with a 200 OK status code.",
               ],
             },
             {
               subtitleDescription: "Handle Errors",
-             descriptions: [ 
-               "Return a 500 Internal Server Error status code and send the error message.",
-                
+              descriptions: [
+                "Return a 500 Internal Server Error status code and send the error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Handle Fetch Single Lesson (GET Request by ID)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.get() to create a route for handling GET requests by ID (e.g., /api/lessons/:id).",
-                
+              descriptions: [
+                "Use router.get() to create a route for handling GET requests by ID (e.g., /api/lessons/:id).",
               ],
             },
             {
               subtitleDescription: "Extract the Lesson ID",
-             descriptions: [ 
-               "Use req.params to extract the id from the request URL.",
-             
+              descriptions: [
+                "Use req.params to extract the id from the request URL.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Use a try...catch Block",
-             descriptions: [ 
-               "Find the lesson by ID in the try block and handle errors in the catch block.",
-               
+              descriptions: [
+                "Find the lesson by ID in the try block and handle errors in the catch block.",
               ],
             },
             {
               subtitleDescription: "Fetch the Lesson",
-             descriptions: [ 
-               "Use LessonSchedule.findById() to find the lesson by its ID.",
+              descriptions: [
+                "Use LessonSchedule.findById() to find the lesson by its ID.",
                 "Use .populate() to include teacher and student details.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Handle Not Found Cases",
-             descriptions: [ 
-               "If the lesson is not found, return a 404 Not Found status code with an error message.",
-               
+              descriptions: [
+                "If the lesson is not found, return a 404 Not Found status code with an error message.",
               ],
             },
             {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return the lesson details with a 200 OK status code.",
-                
-              ],
-            },   {
-              subtitleDescription: "Handle Errors",
-             descriptions: [ 
-               "Return a 500 Internal Server Error status code and send the error message.",
-                
+              descriptions: [
+                "Return the lesson details with a 200 OK status code.",
               ],
             },
-          
+            {
+              subtitleDescription: "Handle Errors",
+              descriptions: [
+                "Return a 500 Internal Server Error status code and send the error message.",
+              ],
+            },
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Handle Update Lesson (PUT Request by ID)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.put() to create a route for handling PUT requests by ID (e.g., /api/lessons/:id).",
-                
+              descriptions: [
+                "Use router.put() to create a route for handling PUT requests by ID (e.g., /api/lessons/:id).",
               ],
             },
             {
               subtitleDescription: "Extract the Lesson ID",
-              descriptions: [ 
-               "Use req.params to extract the id from the request URL.",
-               
+              descriptions: [
+                "Use req.params to extract the id from the request URL.",
               ],
             },
             {
               subtitleDescription: "Extract Updated Data",
-             descriptions: [ 
-               "Use req.body to get the data for updating the lesson.",
-                
+              descriptions: [
+                "Use req.body to get the data for updating the lesson.",
               ],
             },
             {
               subtitleDescription: "Use a try...catch Block",
-             descriptions: [ 
-               "Update the lesson in the try block and handle errors in the catch block.",
-                
+              descriptions: [
+                "Update the lesson in the try block and handle errors in the catch block.",
               ],
             },
             {
               subtitleDescription: "Update the Lesson",
-              descriptions: [ 
-               "Use LessonSchedule.findByIdAndUpdate() to update the lesson with the new data.",
+              descriptions: [
+                "Use LessonSchedule.findByIdAndUpdate() to update the lesson with the new data.",
                 "Use options like { new: true } to return the updated document and runValidators: true to ensure data validity.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Handle Not Found Cases",
-              descriptions: [ 
-               " If the lesson is not found, return a 404 Not Found status code with an error message.",
-                
+              descriptions: [
+                " If the lesson is not found, return a 404 Not Found status code with an error message.",
               ],
             },
             {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return the updated lesson with a 200 OK status code.",
-                
+              descriptions: [
+                "Return the updated lesson with a 200 OK status code.",
               ],
             },
             {
               subtitleDescription: "Handle Errors",
-             descriptions: [ 
-               "Return a 400 Bad Request or 500 Internal Server Error status code with an error message.",
-                
+              descriptions: [
+                "Return a 400 Bad Request or 500 Internal Server Error status code with an error message.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Handle Delete Lesson (DELETE Request by ID)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.delete() to create a route for handling DELETE requests by ID (e.g., /api/lessons/:id).",
-               
+              descriptions: [
+                "Use router.delete() to create a route for handling DELETE requests by ID (e.g., /api/lessons/:id).",
               ],
             },
             {
               subtitleDescription: "Extract the Lesson ID",
-              descriptions: [ 
-               "Use req.params to extract the id from the request URL.",
-              
+              descriptions: [
+                "Use req.params to extract the id from the request URL.",
               ],
             },
             {
               subtitleDescription: "Use a try...catch Block",
-            descriptions: [ 
-               "Delete the lesson in the try block and handle errors in the catch block.",
-                
+              descriptions: [
+                "Delete the lesson in the try block and handle errors in the catch block.",
               ],
             },
             {
               subtitleDescription: "Delete the Lesson",
-             descriptions: [ 
-               "Use LessonSchedule.findByIdAndDelete() to find and remove the lesson by its ID.",
-               
+              descriptions: [
+                "Use LessonSchedule.findByIdAndDelete() to find and remove the lesson by its ID.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Handle Not Found Cases",
-             descriptions: [ 
-               " If the lesson is not found, return a 404 Not Found status code with an error message.",
-              
+              descriptions: [
+                " If the lesson is not found, return a 404 Not Found status code with an error message.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return a success message with a 200 OK status code.",
-                
+              descriptions: [
+                "Return a success message with a 200 OK status code.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Handle Errors",
-             descriptions: [ 
-               "Return a 500 Internal Server Error status code with an error message.",
-               
+              descriptions: [
+                "Return a 500 Internal Server Error status code with an error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Integrate Routes into the Server",
-           titleDescription: "server.js",
+          titleDescription: "server.js",
           sections: [
             {
               subtitleDescription: "Import the Lesson Router",
-             descriptions: [ 
-               "In the server.js file, import the lesson router module.",
-                
+              descriptions: [
+                "In the server.js file, import the lesson router module.",
               ],
             },
             {
               subtitleDescription: "Mount the Router",
-             descriptions: [ 
-               "Use app.use() to attach the router to a specific path (e.g., /api/lessons).",
-               
+              descriptions: [
+                "Use app.use() to attach the router to a specific path (e.g., /api/lessons).",
               ],
             },
             {
               subtitleDescription: "Test the Integration",
-             descriptions: [ 
-               "Ensure the server is running and routes are accessible at their respective endpoints.",
+              descriptions: [
+                "Ensure the server is running and routes are accessible at their respective endpoints.",
                 "Use Postman or a similar tool to test the API endpoints for creating, reading, updating, and deleting lessons.",
-                
               ],
             },
           ],
         },
-        
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/s3mqy5?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/s3mqy5?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day12.webp"),
       videoLink: "",
     },
     {
       taskId: "day13",
       taskTitle: "Message API",
-      introduction: "In this lesson, we explore how to create a robust messaging system in a web application using Node.js, Express, and Mongoose. You'll learn to define a message schema, implement CRUD operations, and integrate secure routes for creating, reading, updating, and deleting messages efficiently.",      
+      introduction:
+        "In this lesson, we explore how to create a robust messaging system in a web application using Node.js, Express, and Mongoose. You'll learn to define a message schema, implement CRUD operations, and integrate secure routes for creating, reading, updating, and deleting messages efficiently.",
       steps: [
         {
           stepTitle: "Step 1: Set Up the folder structure",
@@ -2739,12 +2592,11 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-             "Inside your backend folder, within the routes folder, create a messageRoutes.js file. ",
-              "On top of the messageRoutes.js file, import express and messageSchema.",
+              descriptions: [
+                "Inside your backend folder, within the routes folder, create a messageRoutes.js file. ",
+                "On top of the messageRoutes.js file, import express and messageSchema.",
               ],
             },
-           
           ],
         },
         {
@@ -2753,251 +2605,227 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Import 'express' to create a new router.",
-              "Use express.Router() to initialize the router for handling message-related routes.",
+              descriptions: [
+                "Import 'express' to create a new router.",
+                "Use express.Router() to initialize the router for handling message-related routes.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Handle Create Message (POST Request)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-            descriptions: [ 
-              "Use router.post() to handle message creation at an endpoint like /api/messages.",
+              descriptions: [
+                "Use router.post() to handle message creation at an endpoint like /api/messages.",
               ],
             },
             {
               subtitleDescription: "Extract Data from the Request",
-             descriptions: [ 
-              "Use req.body to extract sender, receiver, and content.",
-              
+              descriptions: [
+                "Use req.body to extract sender, receiver, and content.",
               ],
-            },{
+            },
+            {
               subtitleDescription: "Wrap Logic in a try...catch Block",
-             descriptions: [ 
-              "Use a try block to create and save the message, and a catch block to handle errors.",
-             
+              descriptions: [
+                "Use a try block to create and save the message, and a catch block to handle errors.",
               ],
-            },{
+            },
+            {
               subtitleDescription: "Save the Message to the Database",
-             descriptions: [ 
-              "Use Mongoose to save the message in the database.",
-              
+              descriptions: [
+                "Use Mongoose to save the message in the database.",
               ],
-            },{
+            },
+            {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-              "Return the created message with a 201 Created status code.",
-             
+              descriptions: [
+                "Return the created message with a 201 Created status code.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Handle Fetch Messages (GET Request by User ID)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-            descriptions: [ 
-              "Use router.get() to retrieve all messages for a specific user at /api/messages/:userId.",
-             
+              descriptions: [
+                "Use router.get() to retrieve all messages for a specific user at /api/messages/:userId.",
               ],
             },
             {
               subtitleDescription: "Extract User ID",
-             descriptions: [ 
-               "Use req.params to get the user ID from the URL.",
-            
-              ],
+              descriptions: ["Use req.params to get the user ID from the URL."],
             },
             {
               subtitleDescription: "Fetch Messages",
-             descriptions: [ 
-               "Use Mongoose to query messages where the user is either the sender or receiver.",
+              descriptions: [
+                "Use Mongoose to query messages where the user is either the sender or receiver.",
                 "Sort messages by the sentAt timestamp in descending order.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Populate User Details",
-             descriptions: [ 
-               "Use .populate() to include name and email of both sender and receiver.",
-               
+              descriptions: [
+                "Use .populate() to include name and email of both sender and receiver.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return the list of messages with a 200 OK status code.",
-                
+              descriptions: [
+                "Return the list of messages with a 200 OK status code.",
               ],
             },
           ],
         },
-         {
-          stepTitle: "Step 5: Handle Mark Message as Read (PATCH Request by Message ID)",
+        {
+          stepTitle:
+            "Step 5: Handle Mark Message as Read (PATCH Request by Message ID)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.patch() to mark a message as read at /api/messages/:id/read.",
-                
+              descriptions: [
+                "Use router.patch() to mark a message as read at /api/messages/:id/read.",
               ],
             },
             {
               subtitleDescription: "Extract Message ID",
-             descriptions: [ 
-               "Use req.params to get the message ID from the URL.",
-               
+              descriptions: [
+                "Use req.params to get the message ID from the URL.",
               ],
             },
             {
               subtitleDescription: "Update the Message",
-             descriptions: [ 
-               "Use Mongoose to find the message by ID and update the isRead field to true.",
-                
+              descriptions: [
+                "Use Mongoose to find the message by ID and update the isRead field to true.",
               ],
             },
             {
               subtitleDescription: "Handle Not Found Cases",
-             descriptions: [ 
-               "Return a 404 Not Found status code if the message is not found.",
-                
+              descriptions: [
+                "Return a 404 Not Found status code if the message is not found.",
               ],
             },
             {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return the updated message with a 200 OK status code.",
-                
+              descriptions: [
+                "Return the updated message with a 200 OK status code.",
               ],
             },
           ],
         },
-         {
-          stepTitle: "Step 6: Handle Delete Message (DELETE Request by Message ID)",
+        {
+          stepTitle:
+            "Step 6: Handle Delete Message (DELETE Request by Message ID)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.delete() to delete a message at /api/messages/:id.",
-               
+              descriptions: [
+                "Use router.delete() to delete a message at /api/messages/:id.",
               ],
             },
             {
               subtitleDescription: "Extract Message ID",
-              descriptions: [ 
-               "Use req.params to get the message ID from the URL.",
-               
+              descriptions: [
+                "Use req.params to get the message ID from the URL.",
               ],
             },
             {
               subtitleDescription: "Delete the Message",
-             descriptions: [ 
-               "Use Mongoose to find and delete the message by ID.",
-              
+              descriptions: [
+                "Use Mongoose to find and delete the message by ID.",
               ],
             },
             {
               subtitleDescription: "Handle Not Found Cases",
-             descriptions: [ 
-               "Return a 404 Not Found status code if the message is not found.",
-                
+              descriptions: [
+                "Return a 404 Not Found status code if the message is not found.",
               ],
             },
             {
               subtitleDescription: "Send a Success Response",
-              descriptions: [ 
-               "Return a success message with a 200 OK status code.",
-              
+              descriptions: [
+                "Return a success message with a 200 OK status code.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Integrate the Routes into the Server",
           titleDescription: "server.js",
           sections: [
             {
               subtitleDescription: "Import the Router",
-             descriptions: [ 
-               "Import the message router into server.js.",
-                
-              ],
+              descriptions: ["Import the message router into server.js."],
             },
             {
               subtitleDescription: "Mount the Router",
-              descriptions: [ 
-               "Use app.use('/api/messages', messageRoutes) to attach the router to the Express app.",
-                
+              descriptions: [
+                "Use app.use('/api/messages', messageRoutes) to attach the router to the Express app.",
               ],
             },
             {
               subtitleDescription: "Test the Integration",
-            descriptions: [ 
-               "Verify the endpoints are accessible and functional using tools like Postman or cURL.",
-
-              
+              descriptions: [
+                "Verify the endpoints are accessible and functional using tools like Postman or cURL.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Error Handling",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Add error handling for scenarios like missing fields, invalid IDs, or database errors.",
+              descriptions: [
+                "Add error handling for scenarios like missing fields, invalid IDs, or database errors.",
                 "Return appropriate status codes (400, 404, or 500) with error messages.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Secure the Routes",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Use authentication middleware to ensure only authorized users can access or modify messages.",
+              descriptions: [
+                "Use authentication middleware to ensure only authorized users can access or modify messages.",
                 "Validate request data using a library like Joi or Express Validator to prevent malicious input.",
                 "Implement rate limiting to prevent abuse or DoS attacks on the messaging system.",
                 "Consider encryption for sensitive message content to protect user privacy.",
                 "Test the security measures thoroughly to identify and address vulnerabilities.",
                 "Monitor and log access to the messaging routes for auditing and security analysis.",
                 "Stay informed about security best practices and updates to keep the messaging system secure.",
-                
-          
               ],
             },
-           
           ],
         },
-       
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/xyy6jf?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/xyy6jf?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day13.webp"),
       videoLink: "",
     },
     {
       taskId: "day14",
       taskTitle: "Payment API",
-      introduction: "These steps outline how to create a set of API routes for handling payments in a Node.js application using Express and Mongoose, including functionality for creating, retrieving, updating, and deleting payment records. The routes also support error handling and integration into the main server.",      
+      introduction:
+        "These steps outline how to create a set of API routes for handling payments in a Node.js application using Express and Mongoose, including functionality for creating, retrieving, updating, and deleting payment records. The routes also support error handling and integration into the main server.",
       steps: [
         {
           stepTitle: "Step 1: Set Up the folder structure",
@@ -3005,12 +2833,11 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-             "Inside your backend folder, within the routes folder, create a paymentRoutes.js file. ",
-              "On top of the paymentRoutes.js file, import express and messageSchema.",
+              descriptions: [
+                "Inside your backend folder, within the routes folder, create a paymentRoutes.js file. ",
+                "On top of the paymentRoutes.js file, import express and messageSchema.",
               ],
             },
-           
           ],
         },
         {
@@ -3019,326 +2846,297 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Import express to create a new router.",
-              "Use express.Router() to initialize the router for handling payment routes.",
+              descriptions: [
+                "Import express to create a new router.",
+                "Use express.Router() to initialize the router for handling payment routes.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Handle Create Payment (POST Request)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-            descriptions: [ 
-              "Use router.post() to create a route for handling POST requests (e.g., /api/payments).",
-             
+              descriptions: [
+                "Use router.post() to create a route for handling POST requests (e.g., /api/payments).",
               ],
             },
             {
               subtitleDescription: "Extract Data from the Request",
-             descriptions: [ 
-              "In the callback, extract fields like user, amount, method, and transactionId from req.body.",
-             
+              descriptions: [
+                "In the callback, extract fields like user, amount, method, and transactionId from req.body.",
               ],
             },
             {
               subtitleDescription: "Wrap Logic in a try...catch Block",
-            descriptions: [ 
-              "Use a try block for creating a payment and a catch block for error handling.",
-              
+              descriptions: [
+                "Use a try block for creating a payment and a catch block for error handling.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Define a Constant for the New Payment",
-            descriptions: [ 
-              "Inside the try block, define a constant to hold the new payment object.",
-              
+              descriptions: [
+                "Inside the try block, define a constant to hold the new payment object.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Create a New Payment",
-            descriptions: [ 
-              "Use new Payment() to create a new instance of the payment model, passing the extracted data.",
-              
+              descriptions: [
+                "Use new Payment() to create a new instance of the payment model, passing the extracted data.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Save the Payment to the Database",
-            descriptions: [ 
-              "Use await payment.save() to store the payment in MongoDB.",
-             
+              descriptions: [
+                "Use await payment.save() to store the payment in MongoDB.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-            descriptions: [ 
-              "After saving, send the created payment with a 201 Created status code.",
-            
+              descriptions: [
+                "After saving, send the created payment with a 201 Created status code.",
               ],
-            },{
+            },
+            {
               subtitleDescription: "Handle Errors",
-            descriptions: [ 
-              "In the catch block, return a 400 Bad Request status with the error message.",
-             
+              descriptions: [
+                "In the catch block, return a 400 Bad Request status with the error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Handle Fetch All Payments (GET Request)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-            descriptions: [ 
-              "Use router.get() to create a route for handling GET requests (e.g., /api/payments).",
-            
+              descriptions: [
+                "Use router.get() to create a route for handling GET requests (e.g., /api/payments).",
               ],
             },
             {
               subtitleDescription: "Use a try...catch Block",
-             descriptions: [ 
-               "Use a try block to fetch all payments and a catch block for error handling.",
-              
+              descriptions: [
+                "Use a try block to fetch all payments and a catch block for error handling.",
               ],
             },
             {
               subtitleDescription: "Fetch Data from the Database",
-             descriptions: [ 
-               "Use Payment.find() to retrieve all payments.",
-              
-              ],
+              descriptions: ["Use Payment.find() to retrieve all payments."],
             },
             {
               subtitleDescription: "Populate User Details (Optional)",
-             descriptions: [ 
-               "Chain .populate('user', 'name email') to include user details in the response.",
-                
+              descriptions: [
+                "Chain .populate('user', 'name email') to include user details in the response.",
               ],
             },
             {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return the list of payments with a 200 OK status code.",
-               
+              descriptions: [
+                "Return the list of payments with a 200 OK status code.",
               ],
             },
             {
               subtitleDescription: "Handle Errors",
-             descriptions: [ 
-               "In the catch block, return a 500 Internal Server Error status with the error message.",
-              
+              descriptions: [
+                "In the catch block, return a 500 Internal Server Error status with the error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Handle Fetch Single Payment (GET Request by ID)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.get() to create a route for handling GET requests by ID (e.g., /api/payments/:id).",
-              
+              descriptions: [
+                "Use router.get() to create a route for handling GET requests by ID (e.g., /api/payments/:id).",
               ],
             },
             {
               subtitleDescription: "Extract the Payment ID",
-             descriptions: [ 
-               "Use req.params.id to extract the ID from the request URL.",
-               
+              descriptions: [
+                "Use req.params.id to extract the ID from the request URL.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Use a try...catch Block",
-             descriptions: [ 
-               "Use a try block to find the payment by ID and a catch block for error handling.",
-                
+              descriptions: [
+                "Use a try block to find the payment by ID and a catch block for error handling.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Fetch the Payment",
-             descriptions: [ 
-               "Use Payment.findById() to find the payment with the specified ID.",
-                
+              descriptions: [
+                "Use Payment.findById() to find the payment with the specified ID.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Handle Not Found Cases",
-             descriptions: [ 
-               "If the payment is not found, return a 404 Not Found status with an error message.",
-               
+              descriptions: [
+                "If the payment is not found, return a 404 Not Found status with an error message.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return the payment details with a 200 OK status code.",
-                
+              descriptions: [
+                "Return the payment details with a 200 OK status code.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Handle Errors",
-             descriptions: [ 
-               "In the catch block, return a 500 Internal Server Error status with the error message.",
-              
+              descriptions: [
+                "In the catch block, return a 500 Internal Server Error status with the error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Handle Update Payment (PUT Request by ID)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.put() to create a route for handling PUT requests by ID (e.g., /api/payments/:id).",
-             
+              descriptions: [
+                "Use router.put() to create a route for handling PUT requests by ID (e.g., /api/payments/:id).",
               ],
             },
             {
               subtitleDescription: "Extract the Payment ID",
-              descriptions: [ 
-               "Use req.params.id to extract the ID from the request URL.",
-               
+              descriptions: [
+                "Use req.params.id to extract the ID from the request URL.",
               ],
             },
             {
               subtitleDescription: "Extract Updated Data",
-             descriptions: [ 
-               "Use req.body to get the data for updating the payment (e.g., status).",
-              
+              descriptions: [
+                "Use req.body to get the data for updating the payment (e.g., status).",
               ],
             },
             {
               subtitleDescription: "Use a try...catch Block",
-             descriptions: [ 
-               "Use a try block to update the payment and a catch block for error handling.",
-               
+              descriptions: [
+                "Use a try block to update the payment and a catch block for error handling.",
               ],
             },
             {
               subtitleDescription: "Update the Payment",
-              descriptions: [ 
-               "Use Payment.findByIdAndUpdate() to find and update the payment.",
-                
+              descriptions: [
+                "Use Payment.findByIdAndUpdate() to find and update the payment.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Handle Not Found Cases",
-              descriptions: [ 
-               "If the payment is not found, return a 404 Not Found status with an error message.",
-                
+              descriptions: [
+                "If the payment is not found, return a 404 Not Found status with an error message.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Send a Success Response",
-              descriptions: [ 
-               "Return the updated payment with a 200 OK status code.",
-                
+              descriptions: [
+                "Return the updated payment with a 200 OK status code.",
               ],
-            },   {
+            },
+            {
               subtitleDescription: "Handle Errors",
-              descriptions: [ 
-               "In the catch block, return a 400 Bad Request or 500 Internal Server Error status with the error message.",
-                
+              descriptions: [
+                "In the catch block, return a 400 Bad Request or 500 Internal Server Error status with the error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Handle Delete Payment (DELETE Request by ID)",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "Define the Route",
-             descriptions: [ 
-               "Use router.delete() to create a route for handling DELETE requests by ID (e.g., /api/payments/:id).",
-                
+              descriptions: [
+                "Use router.delete() to create a route for handling DELETE requests by ID (e.g., /api/payments/:id).",
               ],
             },
             {
               subtitleDescription: "Extract the Payment ID",
-              descriptions: [ 
-               "Use req.params.id to extract the ID from the request URL.",
-                
+              descriptions: [
+                "Use req.params.id to extract the ID from the request URL.",
               ],
             },
             {
               subtitleDescription: "Use a try...catch Block",
-            descriptions: [ 
-               "Use a try block to delete the payment and a catch block for error handling.",
-              
+              descriptions: [
+                "Use a try block to delete the payment and a catch block for error handling.",
               ],
             },
             {
               subtitleDescription: "Delete the Payment",
-             descriptions: [ 
-               "Use Payment.findByIdAndDelete() to find and remove the payment.",
-                
+              descriptions: [
+                "Use Payment.findByIdAndDelete() to find and remove the payment.",
               ],
             },
             {
               subtitleDescription: "Handle Not Found Cases",
-             descriptions: [ 
-               "If the payment is not found, return a 404 Not Found status with an error message.",
-               
+              descriptions: [
+                "If the payment is not found, return a 404 Not Found status with an error message.",
               ],
             },
             {
               subtitleDescription: "Send a Success Response",
-             descriptions: [ 
-               "Return a message indicating successful deletion with a 200 OK status code.",
-                
+              descriptions: [
+                "Return a message indicating successful deletion with a 200 OK status code.",
               ],
             },
             {
               subtitleDescription: "Handle Errors",
-             descriptions: [ 
-               "In the catch block, return a 500 Internal Server Error status with the error message.",
-               
+              descriptions: [
+                "In the catch block, return a 500 Internal Server Error status with the error message.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Integrate Routes into the Server",
-           titleDescription: "server.js",
+          titleDescription: "server.js",
           sections: [
             {
               subtitleDescription: "Import the Payment Router",
-             descriptions: [ 
-               "In the server.js file, import the payment router module.",
-               
+              descriptions: [
+                "In the server.js file, import the payment router module.",
               ],
             },
             {
               subtitleDescription: "Mount the Router",
-             descriptions: [ 
-               "Use app.use('/api/payments', paymentRouter) to attach the router to a specific path.",
-                
+              descriptions: [
+                "Use app.use('/api/payments', paymentRouter) to attach the router to a specific path.",
               ],
             },
             {
               subtitleDescription: "Test the Integration",
-             descriptions: [ 
-               "Ensure the server is running and routes are accessible at their respective endpoints.",
-               
+              descriptions: [
+                "Ensure the server is running and routes are accessible at their respective endpoints.",
               ],
             },
           ],
         },
-        
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/3r2zv9?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/3r2zv9?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/musicacademy/day14.webp"),
       videoLink: "",
     },
     {
       taskId: "day15",
       taskTitle: "Testimonial API",
-      introduction: "In this lesson, we will walk through the process of creating a testimonial system with Express and Mongoose, set up routes for creating, fetching, approving, and deleting testimonials, and implement authentication and admin middleware for secure access.",      
+      introduction:
+        "In this lesson, we will walk through the process of creating a testimonial system with Express and Mongoose, set up routes for creating, fetching, approving, and deleting testimonials, and implement authentication and admin middleware for secure access.",
       steps: [
         {
           stepTitle: "Step 1: Set Up the folder structure",
@@ -3346,12 +3144,11 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-             "Inside your backend folder, within the routes folder, create a paymentRoutes.js file.",
-             "Also in your backend folder, create a midddlware folder and inside it, create an authMiddleware.js file.",
+              descriptions: [
+                "Inside your backend folder, within the routes folder, create a paymentRoutes.js file.",
+                "Also in your backend folder, create a midddlware folder and inside it, create an authMiddleware.js file.",
               ],
             },
-           
           ],
         },
         {
@@ -3360,142 +3157,126 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Import Express to create a new router.",
-              "Initialize the router using express.Router() for handling routes related to testimonials.",
+              descriptions: [
+                "Import Express to create a new router.",
+                "Initialize the router using express.Router() for handling routes related to testimonials.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Handle Create Testimonial",
           titleDescription: "POST Request",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "Define the route using router.post() to create a new testimonial.",
-              "Specify the endpoint (e.g., /api/testimonials).",
-              "Extract the testimonial data from the request body (e.g., user, content, rating).",
-              "Wrap the logic inside a try...catch block to handle errors.",
-              "Create a new Testimonial instance using the data from the request.",
-              "Save the testimonial to the database using .save().",
-              "Send a success response with the created testimonial and a 201 Created status code.",
-              "Handle any errors and send a 400 Bad Request response if necessary.",
-            
+              descriptions: [
+                "Define the route using router.post() to create a new testimonial.",
+                "Specify the endpoint (e.g., /api/testimonials).",
+                "Extract the testimonial data from the request body (e.g., user, content, rating).",
+                "Wrap the logic inside a try...catch block to handle errors.",
+                "Create a new Testimonial instance using the data from the request.",
+                "Save the testimonial to the database using .save().",
+                "Send a success response with the created testimonial and a 201 Created status code.",
+                "Handle any errors and send a 400 Bad Request response if necessary.",
               ],
             },
-       
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Handle Fetch All Testimonials",
           titleDescription: "GET Request",
           sections: [
             {
               subtitleDescription: "",
-            descriptions: [ 
-              "Define the route using router.get() to handle GET requests for all testimonials.",
-              "Specify the endpoint (e.g., /api/testimonials).",
-              "Wrap the logic inside a try...catch block to handle errors.",
-              "Fetch all testimonials from the database using Testimonial.find().",
-              "Optionally, use .populate() to include user details in the response (e.g., name, email).",
-              "Send a success response with the list of testimonials and a 200 OK status code.",
-              "Handle any errors and send a 500 Internal Server Error response if necessary.",
+              descriptions: [
+                "Define the route using router.get() to handle GET requests for all testimonials.",
+                "Specify the endpoint (e.g., /api/testimonials).",
+                "Wrap the logic inside a try...catch block to handle errors.",
+                "Fetch all testimonials from the database using Testimonial.find().",
+                "Optionally, use .populate() to include user details in the response (e.g., name, email).",
+                "Send a success response with the list of testimonials and a 200 OK status code.",
+                "Handle any errors and send a 500 Internal Server Error response if necessary.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Handle Fetch Testimonials by User",
           titleDescription: "GET Request by User ID",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Define the route using router.get() to handle GET requests by user ID (e.g., /api/testimonials/user/:userId).",
+              descriptions: [
+                "Define the route using router.get() to handle GET requests by user ID (e.g., /api/testimonials/user/:userId).",
                 "Extract the userId from the request parameters.",
                 "Use Testimonial.find({ user: userId }) to find testimonials by user.",
-              "Optionally, use .populate() to include user details in the response.",
-              "Send a success response with the testimonials for that user and a 200 OK status code.",
-              "Handle any errors and send a 500 Internal Server Error response if necessary.",
-
+                "Optionally, use .populate() to include user details in the response.",
+                "Send a success response with the testimonials for that user and a 200 OK status code.",
+                "Handle any errors and send a 500 Internal Server Error response if necessary.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Handle Update Testimonial",
           titleDescription: "PUT Request by ID",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Define the route using router.put() to handle PUT requests by testimonial ID (e.g., /api/testimonials/:id).",
+              descriptions: [
+                "Define the route using router.put() to handle PUT requests by testimonial ID (e.g., /api/testimonials/:id).",
                 "Extract the testimonial ID from the request parameters.",
                 "Extract the data to update (e.g., content, rating, approved) from the request body.",
                 "Use Testimonial.findByIdAndUpdate() to update the testimonial.",
                 "Pass options like { new: true } to return the updated document and runValidators: true to ensure data validity.",
                 "Send a success response with the updated testimonial and a 200 OK status code.",
-               "Handle any errors and return a 400 Bad Request or 500 Internal Server Error status code if necessary.",
-
+                "Handle any errors and return a 400 Bad Request or 500 Internal Server Error status code if necessary.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Handle Delete Testimonial",
           titleDescription: "DELETE Request by ID",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Define the route using router.delete() to handle DELETE requests by testimonial ID (e.g., /api/testimonials/:id).",
+              descriptions: [
+                "Define the route using router.delete() to handle DELETE requests by testimonial ID (e.g., /api/testimonials/:id).",
                 "Extract the testimonial ID from the request parameters.",
                 "Use Testimonial.findByIdAndDelete() to delete the testimonial.",
                 "Send a success response with a message indicating successful deletion and a 200 OK status code.",
                 "Handle any errors and return a 500 Internal Server Error status code if necessary.",
               ],
             },
-          
           ],
         },
-         {
+        {
           stepTitle: "Step 8:  Integrate Routes into the Server",
-           titleDescription: "server.js",
+          titleDescription: "server.js",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Import the testimonial router module in server.js.",
+              descriptions: [
+                "Import the testimonial router module in server.js.",
                 "Use app.use('/api/testimonials', testimonialRoutes) to attach the testimonial router to the /api/testimonials path.",
                 "Test the routes to ensure the server is running and the routes are accessible at their respective endpoints.",
               ],
             },
-           
           ],
         },
-       
-       
       ],
       taskType: "Workshop",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Workshop Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/wfq7kh?view=editor+%2B+preview&module=%2Fbackend%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/wfq7kh?view=editor+%2B+preview&module=%2Fbackend%2FApp.js",
       img: require("../images/musicacademy/day15.webp"),
       videoLink: "",
     },
-
-
-    
-
-
   ],
   Live: [
     {
@@ -6615,20 +6396,21 @@ const tasksData = {
     {
       taskId: "VideoSense-Live-Monitoring",
       taskTitle: "VideoSense Live Monitoring",
-      introduction: "VideoSense Live Monitoring is a React-based web application designed for real-time monitoring of CCTV video feeds. It allows users to stream live video from multiple sources, providing seamless and efficient monitoring with an easy-to-use interface.",
+      introduction:
+        "VideoSense Live Monitoring is a React-based web application designed for real-time monitoring of CCTV video feeds. It allows users to stream live video from multiple sources, providing seamless and efficient monitoring with an easy-to-use interface.",
       task: {
-        taskDescription: "I need a skilled developer to create a mobile app for our CCTV video playback and configuration platform, Video Sense. The app will primarily enable real-time monitoring of live video feeds and associated functionalities. Only the web app dashboard frontend development is required as per the final UX design shared, with the backend APIs provided by us.",
-        platform: 'Freelancer',
+        taskDescription:
+          "I need a skilled developer to create a mobile app for our CCTV video playback and configuration platform, Video Sense. The app will primarily enable real-time monitoring of live video feeds and associated functionalities. Only the web app dashboard frontend development is required as per the final UX design shared, with the backend APIs provided by us.",
+        platform: "Freelancer",
         projectName: "Mobile App Development for Video Sense",
-        biddingEnds: 'Saturday, 18 of January, 2025',
+        biddingEnds: "Saturday, 18 of January, 2025",
         requirements: [
-            "React.js: To build the user interface and manage state.",
-                "Video.js: To handle video playback and support streaming formats like HLS.",
-                "Axios: To fetch video stream data from the backend API.",
-                "API Endpoints: Provide an API that returns the list of available video streams, including URLs in a compatible format (e.g., HLS .m3u8 links).",
-                "CORS Configuration: Ensure the server allows cross-origin requests from the frontend for video streaming.",
-       
-      ],
+          "React.js: To build the user interface and manage state.",
+          "Video.js: To handle video playback and support streaming formats like HLS.",
+          "Axios: To fetch video stream data from the backend API.",
+          "API Endpoints: Provide an API that returns the list of available video streams, including URLs in a compatible format (e.g., HLS .m3u8 links).",
+          "CORS Configuration: Ensure the server allows cross-origin requests from the frontend for video streaming.",
+        ],
       },
       steps: [
         {
@@ -6637,13 +6419,12 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-              "API Setup: Make sure you already have your backend API that provides a list of stream URLs. The backend API should be set up to return data in a JSON format like { 'streams': ['stream1_url', 'stream2_url', ...] }.",
-              "CORS Issues: Ensure that CORS headers are correctly configured on your API server to allow requests from your React app's domain, especially if the video streams are hosted on external servers.",
-              "Video Format: Confirm that the video streams are in a supported format (e.g., .m3u8 for HLS) and are accessible by your app. If you're using a different format (e.g., .mp4), make sure it's compatible with video.js.",
+              descriptions: [
+                "API Setup: Make sure you already have your backend API that provides a list of stream URLs. The backend API should be set up to return data in a JSON format like { 'streams': ['stream1_url', 'stream2_url', ...] }.",
+                "CORS Issues: Ensure that CORS headers are correctly configured on your API server to allow requests from your React app's domain, especially if the video streams are hosted on external servers.",
+                "Video Format: Confirm that the video streams are in a supported format (e.g., .m3u8 for HLS) and are accessible by your app. If you're using a different format (e.g., .mp4), make sure it's compatible with video.js.",
               ],
             },
-           
           ],
         },
         {
@@ -6652,174 +6433,166 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-              "Open your terminal and run the following command to create a new React app: 'npx create-react-app video-monitoring'",
-              "Navigate into the newly created project folder: 'cd video-monitoring'",
+              descriptions: [
+                "Open your terminal and run the following command to create a new React app: 'npx create-react-app video-monitoring'",
+                "Navigate into the newly created project folder: 'cd video-monitoring'",
               ],
             },
-       
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Install Dependencies",
           titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Install video.js for handling video playback",
-            descriptions: [ 
-              "Run the following command to install video.js: 'npm install video.js'",
-              
+              subtitleDescription:
+                "Install video.js for handling video playback",
+              descriptions: [
+                "Run the following command to install video.js: 'npm install video.js'",
               ],
             },
             {
-              subtitleDescription: " Install axios for making HTTP requests to the API",
-             descriptions: [ 
-              "Run this command to install axios: 'npm install axios'",
-            
+              subtitleDescription:
+                " Install axios for making HTTP requests to the API",
+              descriptions: [
+                "Run this command to install axios: 'npm install axios'",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Set Up API Integration",
           titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Create the API logic to fetch the stream URLs.",
-            descriptions: [ 
-              "You need to create an API helper file (e.g., api.js) where you will use axios to fetch stream URLs from your server.",
-              "Make sure your backend API is already set up to serve the stream URLs at the endpoint (/api/streams) and is functioning correctly.",
-              "Ensure the backend API is properly configured to return an array of stream URLs. These URLs could be links to .m3u8 files or other video streaming formats.",
+              subtitleDescription:
+                "Create the API logic to fetch the stream URLs.",
+              descriptions: [
+                "You need to create an API helper file (e.g., api.js) where you will use axios to fetch stream URLs from your server.",
+                "Make sure your backend API is already set up to serve the stream URLs at the endpoint (/api/streams) and is functioning correctly.",
+                "Ensure the backend API is properly configured to return an array of stream URLs. These URLs could be links to .m3u8 files or other video streaming formats.",
               ],
             },
-        
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Create the VideoPlayer Component",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Create a new folder named components in the src folder of your React project.",
+              descriptions: [
+                "Create a new folder named components in the src folder of your React project.",
                 "Inside the components folder, create a new file for the video player component (e.g., VideoPlayer.js).",
                 "This component will be responsible for rendering the video player using video.js and handling the provided video stream URL.",
               ],
             },
             {
               subtitleDescription: "Inside the VideoPlayer component:",
-             descriptions: [ 
-               "Initialize a video.js player on the video element.",
+              descriptions: [
+                "Initialize a video.js player on the video element.",
                 "Use the passed stream URL (url) as the source for the video player.",
                 "Make sure to handle the cleanup when the component unmounts to dispose of the video player and prevent memory leaks.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Set Up the LiveMonitoringPage Component",
           titleDescription: "",
           sections: [
             {
-              subtitleDescription: "Create a page (e.g., LiveMonitoringPage.js) inside the pages folder.",
-             descriptions: [ 
-               "This page will be responsible for fetching the stream URLs from your backend API and rendering the VideoPlayer components with those URLs.",
-               
+              subtitleDescription:
+                "Create a page (e.g., LiveMonitoringPage.js) inside the pages folder.",
+              descriptions: [
+                "This page will be responsible for fetching the stream URLs from your backend API and rendering the VideoPlayer components with those URLs.",
               ],
             },
             {
               subtitleDescription: "In the LiveMonitoringPage:",
-              descriptions: [ 
-               "Use the useState and useEffect hooks to manage and fetch the list of stream URLs from your backend.",
+              descriptions: [
+                "Use the useState and useEffect hooks to manage and fetch the list of stream URLs from your backend.",
                 "Pass each stream URL to the VideoPlayer component to render the live video feed.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Connect the Components in the Main Application",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "In the App.js file, import the LiveMonitoringPage component.",
+              descriptions: [
+                "In the App.js file, import the LiveMonitoringPage component.",
                 "Render the LiveMonitoringPage inside your App component to display the live video monitoring interface.",
               ],
             },
-            
           ],
         },
-         {
+        {
           stepTitle: "Ensure Correct API and Video Format",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Make sure that the backend API /api/streams is correctly implemented and accessible. This API should return a list of valid video stream URLs (such as .m3u8 links).",
+              descriptions: [
+                "Make sure that the backend API /api/streams is correctly implemented and accessible. This API should return a list of valid video stream URLs (such as .m3u8 links).",
                 "Verify that the video stream URLs are in a format supported by video.js (e.g., .m3u8 for HLS streams).",
                 "Ensure that the video stream sources are correctly set up in the backend and are publicly accessible or configured for your application to access.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 9: Test and Debug",
           titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Run the application locally using: 'npm start'",
+              descriptions: [
+                "Run the application locally using: 'npm start'",
                 "Make sure the application can fetch the stream URLs from the API and render the video player with the corresponding video feed.",
                 "Debug any issues related to fetching the stream URLs or displaying the video player (e.g., CORS issues, invalid video formats, etc.).",
               ],
             },
-         
           ],
         },
-         {
+        {
           stepTitle: "Step 10: Deployment",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "When the development is complete, deploy your application to a web server or a hosting platform (e.g., Vercel, Netlify, AWS, etc.).",
+              descriptions: [
+                "When the development is complete, deploy your application to a web server or a hosting platform (e.g., Vercel, Netlify, AWS, etc.).",
                 "Ensure that the API is accessible in the production environment, and your video streams are available for users to view.",
               ],
             },
-          
           ],
         },
-       
       ],
       taskType: "Live",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/ymkqpv?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/ymkqpv?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons12.webp"),
     },
     {
       taskId: "Total-Compensation-Calculator",
       taskTitle: "Total Compensation Calculator",
-      introduction: "This project is a Total Compensation Calculator built with React, allowing users to input their salary, bonuses, benefits, RSUs, and ESPP contributions. It calculates the total compensation, displays a breakdown with a pie chart, and provides a detailed monthly compensation table with pagination and salary raise projections over a given date range.",
+      introduction:
+        "This project is a Total Compensation Calculator built with React, allowing users to input their salary, bonuses, benefits, RSUs, and ESPP contributions. It calculates the total compensation, displays a breakdown with a pie chart, and provides a detailed monthly compensation table with pagination and salary raise projections over a given date range.",
       task: {
-        taskDescription: "We are seeking a skilled frontend developer to create a clone of this compensation calculator: mytc.is using React and TypeScript (all client side). The project will involve building a user-friendly interface and ensuring code logic matches exactly mytc.is using tests! ",
-        platform: 'https://www.upwork.com/',
-        projectName: "Frontend Developer Needed for Compensation Calculator Clone",
-        requirements: [
-            "React",
-                "Chart.js",
-                "Accounting",
-       
-      ],
+        taskDescription:
+          "We are seeking a skilled frontend developer to create a clone of this compensation calculator: mytc.is using React and TypeScript (all client side). The project will involve building a user-friendly interface and ensuring code logic matches exactly mytc.is using tests! ",
+        platform: "https://www.upwork.com/",
+        projectName:
+          "Frontend Developer Needed for Compensation Calculator Clone",
+        requirements: ["React", "Chart.js", "Accounting"],
       },
       steps: [
         {
@@ -6828,12 +6601,11 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "",
-              descriptions: [ 
-              "Initialize a new React project using create-react-app.",
-              "Install necessary dependencies, such as 'react-chartjs-2' and 'chart.js' for the pie chart, and 'react-icons' for the info tooltips.",
+              descriptions: [
+                "Initialize a new React project using create-react-app.",
+                "Install necessary dependencies, such as 'react-chartjs-2' and 'chart.js' for the pie chart, and 'react-icons' for the info tooltips.",
               ],
             },
-           
           ],
         },
         {
@@ -6842,235 +6614,243 @@ const tasksData = {
           sections: [
             {
               subtitleDescription: "Set up state variables for the form fields",
-             descriptions: [ 
-              "Use 'useState' hooks for each field (e.g., baseSalary, bonusRate, foodAllowance, etc.).",
-              "Create a 'setError' state variable for displaying error messages if the user provides invalid input.",
+              descriptions: [
+                "Use 'useState' hooks for each field (e.g., baseSalary, bonusRate, foodAllowance, etc.).",
+                "Create a 'setError' state variable for displaying error messages if the user provides invalid input.",
               ],
             },
             {
               subtitleDescription: "Build the form structure",
-              descriptions: [ 
-              "For each compensation field (base salary, bonus rate, etc.), create an HTML <label> and corresponding <input> for data entry.",
-              "Use type='number' for numeric inputs like salary, bonus rate, and allowances to ensure users input numbers.",
-              "Use type='month' for start and end date fields so that the user can select a month and year.",
+              descriptions: [
+                "For each compensation field (base salary, bonus rate, etc.), create an HTML <label> and corresponding <input> for data entry.",
+                "Use type='number' for numeric inputs like salary, bonus rate, and allowances to ensure users input numbers.",
+                "Use type='month' for start and end date fields so that the user can select a month and year.",
               ],
             },
             {
               subtitleDescription: "Create a validation function",
-            descriptions: [ 
-              "Check if all fields have been filled in. If any are missing, set an error message.",
-              "Ensure that the values are positive numbers (e.g., check for baseSalary > 0, bonusRate >= 0).",
-              "If validation fails, prevent form submission and display the error message.",
+              descriptions: [
+                "Check if all fields have been filled in. If any are missing, set an error message.",
+                "Ensure that the values are positive numbers (e.g., check for baseSalary > 0, bonusRate >= 0).",
+                "If validation fails, prevent form submission and display the error message.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Handle form submission",
-            descriptions: [ 
-              "When the user clicks the submit button, run the 'handleSubmit' function.",
-              "Inside 'handleSubmit', validate the form data. If valid, create an object (compensationData) that holds all the form values.",
-              "Call the 'onSubmit' function (passed as a prop from the parent component), passing 'compensationData' to it.",
+              descriptions: [
+                "When the user clicks the submit button, run the 'handleSubmit' function.",
+                "Inside 'handleSubmit', validate the form data. If valid, create an object (compensationData) that holds all the form values.",
+                "Call the 'onSubmit' function (passed as a prop from the parent component), passing 'compensationData' to it.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Info tooltip (optional)",
-            descriptions: [ 
-              "Create a small information tooltip next to each input field. When the user hovers over the icon (e.g., using react-icons), show a brief description of the field (e.g., 'Enter your basic monthly salary before bonuses').",
-              
+              descriptions: [
+                "Create a small information tooltip next to each input field. When the user hovers over the icon (e.g., using react-icons), show a brief description of the field (e.g., 'Enter your basic monthly salary before bonuses').",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 3: Create TotalCompensationResult Component",
           titleDescription: "TotalCompensationResult.js",
           sections: [
             {
               subtitleDescription: "Props and state setup",
-            descriptions: [ 
-              "Accept 'totalCompensation', 'breakdown', and 'compensationData' as props from the parent component (App).",
-              "Destructure these props to extract data such as base salary, bonus rate, and RSUs, which will be displayed in the breakdown and chart.",
+              descriptions: [
+                "Accept 'totalCompensation', 'breakdown', and 'compensationData' as props from the parent component (App).",
+                "Destructure these props to extract data such as base salary, bonus rate, and RSUs, which will be displayed in the breakdown and chart.",
               ],
             },
             {
               subtitleDescription: "Generate pie chart data",
-             descriptions: [ 
-              "Use Chart.js (through react-chartjs-2) to display a pie chart. Prepare the 'chartData' object, which contains labels (e.g., 'Salary', 'Bonus', 'RSUs', 'ESPP') and 'datasets' containing the 'breakdown' array.",
-              "Set the background colors and hover effects for each pie slice.",
+              descriptions: [
+                "Use Chart.js (through react-chartjs-2) to display a pie chart. Prepare the 'chartData' object, which contains labels (e.g., 'Salary', 'Bonus', 'RSUs', 'ESPP') and 'datasets' containing the 'breakdown' array.",
+                "Set the background colors and hover effects for each pie slice.",
               ],
             },
             {
               subtitleDescription: "Configure chart options",
-            descriptions: [ 
-              "Customize the chart to display the total breakdown with tooltips showing the breakdown values.",
-              "Use a callback function in the tooltip configuration to display the label and value in a readable format (e.g., 'Salary: 12,000').",
+              descriptions: [
+                "Customize the chart to display the total breakdown with tooltips showing the breakdown values.",
+                "Use a callback function in the tooltip configuration to display the label and value in a readable format (e.g., 'Salary: 12,000').",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Generate the date range",
-            descriptions: [ 
-              "Use the start and end dates from 'compensationData' to create an array of months between the two dates.",
-              "Create a function (generateDateRange) that loops through the start and end dates, adding each month to an array.",
+              descriptions: [
+                "Use the start and end dates from 'compensationData' to create an array of months between the two dates.",
+                "Create a function (generateDateRange) that loops through the start and end dates, adding each month to an array.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Calculate monthly data",
-            descriptions: [ 
-              "For each month, calculate the salary and benefits based on the form values. Ensure the base salary increases according to the expected salary raise.",
-              "Create an object for each month that includes: Base salary, Salary after raises, Bonus, Benefits, RSU Grants, SPP, Total compensation for that month.",
+              descriptions: [
+                "For each month, calculate the salary and benefits based on the form values. Ensure the base salary increases according to the expected salary raise.",
+                "Create an object for each month that includes: Base salary, Salary after raises, Bonus, Benefits, RSU Grants, SPP, Total compensation for that month.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Render a table",
-            descriptions: [ 
-              "Map over the generated data and render a row for each month in the table.",
-              "Display all the compensation details (e.g., salary, bonus, RSUs, ESPP) in the respective columns.",
+              descriptions: [
+                "Map over the generated data and render a row for each month in the table.",
+                "Display all the compensation details (e.g., salary, bonus, RSUs, ESPP) in the respective columns.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Pagination setup",
-            descriptions: [ 
-              "Create state variables to manage the current page (currentPage).",
-              "Calculate the total number of pages based on the number of rows in the data (totalPages).",
-              "Display 5 items per page (itemsPerPage), and create pagination controls (Previous, Next) to navigate between pages.",
+              descriptions: [
+                "Create state variables to manage the current page (currentPage).",
+                "Calculate the total number of pages based on the number of rows in the data (totalPages).",
+                "Display 5 items per page (itemsPerPage), and create pagination controls (Previous, Next) to navigate between pages.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Pagination logic",
-            descriptions: [ 
-              "When the user clicks the 'Previous' or 'Next' button, update the 'currentPage' state.",
-              "Slice the data to display only the items corresponding to the current page, using the 'currentPage' and 'itemsPerPage'.",
+              descriptions: [
+                "When the user clicks the 'Previous' or 'Next' button, update the 'currentPage' state.",
+                "Slice the data to display only the items corresponding to the current page, using the 'currentPage' and 'itemsPerPage'.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 4: Create the App.js Component",
           titleDescription: "App.js",
           sections: [
             {
               subtitleDescription: "Set up the App.js file",
-            descriptions: [ 
-              "This is the parent component that will manage state and handle data flow.",
-              "Create the initial App.js file, where you will define state for the total compensation, breakdown, and the compensation data.",
+              descriptions: [
+                "This is the parent component that will manage state and handle data flow.",
+                "Create the initial App.js file, where you will define state for the total compensation, breakdown, and the compensation data.",
               ],
             },
             {
               subtitleDescription: "Use useState to create variables for:",
-             descriptions: [ 
-               "'totalCompensation': To store the calculated total compensation.",
+              descriptions: [
+                "'totalCompensation': To store the calculated total compensation.",
                 "'breakdown': To store the compensation breakdown for the pie chart.",
                 "'compensationData': To store all the form data for potential updates.",
               ],
-            }, {
+            },
+            {
               subtitleDescription: "Render child components",
-             descriptions: [ 
-               "Render the CompensationForm component to collect user input.",
+              descriptions: [
+                "Render the CompensationForm component to collect user input.",
                 "Pass the handleFormSubmit function to CompensationForm to handle form submissions.",
                 "Conditionally render the TotalCompensationResult component to display the calculated results once the form is submitted.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 5: Add the calculateTotalCompensation Functionality",
           titleDescription: "App.js",
           sections: [
             {
               subtitleDescription: "Extract form data",
-             descriptions: [ 
-               "Inside App.js, create the calculateTotalCompensation function after App.js is set up.",
+              descriptions: [
+                "Inside App.js, create the calculateTotalCompensation function after App.js is set up.",
                 "This function will accept the data from CompensationForm (passed as an object with values like baseSalary, bonusRate, etc.).",
               ],
             },
             {
               subtitleDescription: "Convert data to numbers",
-             descriptions: [ 
-               "Use Number() to convert all form inputs to numbers to avoid errors in calculations.",
+              descriptions: [
+                "Use Number() to convert all form inputs to numbers to avoid errors in calculations.",
                 "Example: const baseSalaryNumber = Number(baseSalary);",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Perform the calculations",
-             descriptions: [ 
-               "Annual Base Salary: Multiply baseSalary by 12 to calculate the yearly base salary.",
+              descriptions: [
+                "Annual Base Salary: Multiply baseSalary by 12 to calculate the yearly base salary.",
                 "Annual Bonus: Calculate the bonus as a percentage of the annual base salary.",
                 "Total Salary: Add the annual base salary, bonus, food allowance, and benefits to calculate the total salary.",
                 "Annual ESPP: Multiply espp by 12 to get the total ESPP contribution for the year.",
                 "RSU Grants: Add rsuGrants to the total compensation.",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Create a breakdown for the pie chart",
-             descriptions: [ 
-               "Create an array with the values to display in the pie chart (e.g., total salary, bonus amount, RSU grants, ESPP contribution).",
+              descriptions: [
+                "Create an array with the values to display in the pie chart (e.g., total salary, bonus amount, RSU grants, ESPP contribution).",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Return an object containing:",
-             descriptions: [ 
-               "'totalCompensation': The sum of all calculated values.",
+              descriptions: [
+                "'totalCompensation': The sum of all calculated values.",
                 "'breakdown': The array to be used for the pie chart.",
               ],
             },
           ],
         },
-         {
+        {
           stepTitle: "Step 6: Integrate the Components",
           titleDescription: "App.js",
           sections: [
             {
               subtitleDescription: "Define 'handleFormSubmit' function",
-             descriptions: [ 
-               "This function will call 'calculateTotalCompensation' with the form data when the user submits the form.",
+              descriptions: [
+                "This function will call 'calculateTotalCompensation' with the form data when the user submits the form.",
                 "The results (total compensation and breakdown) will be set in the state using 'setTotalCompensation' and 'setBreakdown'.",
               ],
             },
             {
               subtitleDescription: "Pass data between components",
-              descriptions: [ 
-               "Pass the 'handleFormSubmit' function as a prop to the CompensationForm component.",
+              descriptions: [
+                "Pass the 'handleFormSubmit' function as a prop to the CompensationForm component.",
                 "After the form is submitted, pass the 'totalCompensation', 'breakdown', and 'compensationData' to 'TotalCompensationResult' for displaying the results.",
               ],
             },
             {
               subtitleDescription: "Test the integration",
-             descriptions: [ 
-               "After submission, check that the data flows correctly from CompensationForm to App.js and then to TotalCompensationResult.",
+              descriptions: [
+                "After submission, check that the data flows correctly from CompensationForm to App.js and then to TotalCompensationResult.",
                 "Ensure the total compensation and pie chart update accordingly.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 7: Style the Components",
           titleDescription: "index.css",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Add CSS styles for the form and result display, ensuring a clean and professional layout.",
+              descriptions: [
+                "Add CSS styles for the form and result display, ensuring a clean and professional layout.",
                 "Style the pie chart, tables, and pagination controls to make the user interface user-friendly.",
                 "Include responsive design to ensure the calculator works well on both desktop and mobile devices.",
               ],
             },
-           
           ],
         },
-         {
+        {
           stepTitle: "Step 8: Test the Application",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Test the form validation to ensure that invalid or incomplete data is not submitted.",
+              descriptions: [
+                "Test the form validation to ensure that invalid or incomplete data is not submitted.",
                 "Test the total compensation calculation and ensure the results are accurate.",
                 "Verify that the pie chart is correctly rendered with the breakdown data.",
                 "Test pagination to ensure that the compensation details table can be navigated correctly.",
               ],
             },
-          
           ],
         },
-         {
-          stepTitle: "Step 9: Steps to Improve the Total Compensation Calculator",
+        {
+          stepTitle:
+            "Step 9: Steps to Improve the Total Compensation Calculator",
           titleDescription: "Leve Up",
           sections: [
             {
               subtitleDescription: "Implement Multi-Currency Support",
-             descriptions: [ 
-               "Add a dropdown to select the desired currency (e.g., USD, EUR, GBP).",
+              descriptions: [
+                "Add a dropdown to select the desired currency (e.g., USD, EUR, GBP).",
                 "Integrate a currency conversion API (e.g., Open Exchange Rates or XE) to fetch real-time exchange rates.",
                 "Modify the calculation logic to factor in currency conversion based on the selected currency.",
                 "Update the UI to display the selected currency symbol alongside the values.",
@@ -7078,8 +6858,8 @@ const tasksData = {
             },
             {
               subtitleDescription: "Add Date Range for RSU Vesting",
-             descriptions: [ 
-               "Add start and end date fields for RSU grants in the form.",
+              descriptions: [
+                "Add start and end date fields for RSU grants in the form.",
                 "Enable users to specify the percentage or number of shares vested per year/month.",
                 "Update the calculation logic to distribute RSU values across the vesting period.",
                 "Display a breakdown of RSU contributions over the date range in the results table.",
@@ -7087,48 +6867,47 @@ const tasksData = {
             },
             {
               subtitleDescription: "Enhance ESPP Calculations",
-             descriptions: [ 
-               "Add input fields to capture the ESPP discount rate and market price.",
+              descriptions: [
+                "Add input fields to capture the ESPP discount rate and market price.",
                 "Implement options to calculate ESPP based on: Minimum price during the purchase period; Market price at purchase time minus the discount. ",
               ],
-            },  {
+            },
+            {
               subtitleDescription: "Add Date Range for Salary Rises",
-             descriptions: [ 
-               "Add start and end date fields for expected salary raises in the form.",
+              descriptions: [
+                "Add start and end date fields for expected salary raises in the form.",
                 "Allow users to input different raise percentages for multiple date ranges.",
                 "Update the calculation logic to apply raises incrementally across the specified periods.",
                 "Display the salary progression over time in the results table.",
               ],
-            }, 
+            },
           ],
         },
-         {
+        {
           stepTitle: "Step 10: Deploy the Application",
-           titleDescription: "",
+          titleDescription: "",
           sections: [
             {
               subtitleDescription: "",
-             descriptions: [ 
-               "Once the application is fully functional and tested, deploy it to a hosting platform like Netlify or Vercel.",
+              descriptions: [
+                "Once the application is fully functional and tested, deploy it to a hosting platform like Netlify or Vercel.",
                 "Ensure that the app is accessible and works seamlessly in a production environment.",
                 "Contact the client to review the final product and make any necessary adjustments.",
               ],
             },
-           
           ],
         },
-       
       ],
       taskType: "Live",
       difficulty: "Easy",
       authorIndex: 0,
       prerequisites: ["Live Projects"],
       completed: false,
-      codesandboxUrl: "https://codesandbox.io/embed/rhqqk8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      codesandboxUrl:
+        "https://codesandbox.io/embed/rhqqk8?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
       img: require("../images/livelessons13.webp"),
       videoLink: "",
     },
-
   ],
   React: [
     {
@@ -9050,7 +8829,6 @@ const tasksData = {
       taskTitle: "Dropdown",
       introduction:
         "This project is a React application that implements a dropdown menu for selecting programming languages. Users can click on an input field, triggering the appearance of a dropdown menu containing a list of programming languages. They can then select a language from the list, and the selected language will be displayed in the input field. The dropdown menu can be toggled open and closed by clicking on the input field. Overall, this project provides a user-friendly interface for selecting programming languages within a React environment.",
-
       steps: [
         {
           stepTitle: "Step 1: Import CSS File",
@@ -9201,11 +8979,9 @@ const tasksData = {
       taskTitle: "Sidebar",
       introduction:
         "This is a React-based web application featuring a dynamic sidebar navigation menu, offering users easy access to various sections and functionalities. With a customizable and expandable structure, it enhances user experience by providing seamless navigation within the application.",
-
       steps: [
         {
           stepTitle: "Step 1: Setup your React project",
-
           sections: [
             {
               descriptions: [
@@ -9217,7 +8993,6 @@ const tasksData = {
         },
         {
           stepTitle: "Step 2: Create Components",
-
           sections: [
             {
               descriptions: [

@@ -1,0 +1,83 @@
+/* ES6Cheatsheet.css */
+
+.cheatsheet-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.categories-grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.75rem;
+  margin: 1.5rem;
+}
+
+.reference-card {
+    position: relative;
+    background: #151515;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    animation: cardAppear 0.6s ease backwards;
+    
+  }
+  
+  .reference-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 40px rgba(255, 192, 203, 0.15);
+    border-color: rgba(245, 192, 255, 0.4);
+  }
+  
+  .reference-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 192, 203, 0.03));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .reference-card:hover::before {
+    opacity: 1;
+  }
+
+.reference-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.reference-header .icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.reference-content {
+  padding: 1rem;
+}
+
+.reference-description {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
