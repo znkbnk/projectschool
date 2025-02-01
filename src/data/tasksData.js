@@ -9199,7 +9199,7 @@ const tasksData = {
     {
       taskId: "Sidebar",
       taskTitle: "Sidebar",
-      introductions:
+      introduction:
         "This is a React-based web application featuring a dynamic sidebar navigation menu, offering users easy access to various sections and functionalities. With a customizable and expandable structure, it enhances user experience by providing seamless navigation within the application.",
 
       steps: [
