@@ -19,6 +19,7 @@ const solutionCode2 = `
 // TherapistScheduler.js
 
 import React, { useState, useMemo, useEffect } from "react";
+import './styles.css'
 import {
   Clock,
   ChevronLeft,
