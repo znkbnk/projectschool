@@ -6908,6 +6908,369 @@ const tasksData = {
       img: require("../images/livelessons13.webp"),
       videoLink: "",
     },
+    {
+      taskId: "Therapist-Calendar-App",
+      taskTitle: "Therapist Calendar App",
+      introduction: "A modern and user-friendly ( responsive ) calendar app built with React, designed to help clients schedule and manage their therapy appointments. Users can select dates, choose available time slots, and track upcoming sessions, with all appointments securely saved in local storage. The app also includes email notifications to confirm appointments, ensuring clients stay updated.",
+      task: {
+        taskDescription: "I'm seeking a seasoned developer with expertise in React and Next.js to assist in integrating a Calendar/Calendly code into our platform marketplace for therapists.",
+        platform: 'Freelancer',
+        projectName: "Calendar Integration in Therapist Marketplace",
+        biddingEnds: "Friday, 7 of February, 2025",
+        requirements: [
+            "React",
+                "UI/UX design understanding",
+                "Calendar Intergration",
+       
+      ],
+      },
+      steps: [
+        {
+          stepTitle: "Step 1: Set up a React Project",
+          titleDescription: "First, create a new React project (if you don't already have one)",
+          sections: [
+            {
+              subtitleDescription: "In your Terminal type:",
+              descriptions: [ 
+              "npx create-react-app therapist-scheduler",
+              "cd therapist-scheduler",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Install Required Packages",
+              descriptions: [ 
+              "date-fns",
+              "lucide-react",
+              "emailjs",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Import React and Necessary Hooks",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Hooks",
+             descriptions: [ 
+              "'useState': For managing states like selected date, time slot, and appointments.",
+              "'useMemo': To memoize expensive calculations, such as generating the calendar days.",
+              "'useEffect': For side effects, like saving and loading appointments from localStorage.",
+              ],
+            },
+            {
+              subtitleDescription: "Icons from lucide-react",
+              descriptions: [ 
+              "Import the 'Clock', 'ChevronLeft', 'ChevronRight', 'CalendarIcon', and 'Check' components from 'lucide-react' to use as UI icons in the calendar and scheduler UI.",
+             
+              ],
+            },
+            {
+              subtitleDescription: "Date Functions from date-fns",
+            descriptions: [ 
+              "Import specific date functions such as 'format', 'addMonths', 'subMonths', 'startOfMonth', 'endOfMonth', 'eachDayOfInterval', 'isSameMonth', 'isSameDay', and 'isToday' from the 'date-fns' library to handle date calculations and comparisons.",
+           
+              ],
+            },
+            {
+              subtitleDescription: "emailjs-com for Sending Emails",
+            descriptions: [ 
+              "Import the emailjs-com package to send scheduling notifications or appointment confirmations via email.",
+              
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 3: Define the TherapistScheduler component and its states",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the TherapistScheduler component.",
+            descriptions: [ 
+              "Create a functional component TherapistScheduler.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Define state for the component.",
+             descriptions: [ 
+              "'selectedDate' state to store the currently selected date (use 'useState' with new Date() as the default value).",
+              "'currentMonth' state to store the currently displayed month (use 'useState' with new Date()).",
+              "'timeSlot' state to store the selected time slot (use 'useState' with an empty string '' as default).",
+              "'appointments' state to store all scheduled appointments (use 'useState' with an empty array [] as default).",
+              "'animatingMonth' state to manage the animation of the calendar month (use 'useState' with false as default).",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Setup useEffect for loading appointments from localStorage",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "Create a 'useEffect' hook to check if there are saved appointments in 'localStorage'.",
+              "If there are, update 'appointments' state with the parsed value from 'localStorage'.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 5: Setup useEffect for saving appointments to localStorage",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Create a 'useEffect' that listens for changes in 'appointments'.",
+                "Every time 'appointments' changes, store the updated appointments in 'localStorage'.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 6: Define available time slots for scheduling",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Create an array 'availableSlots' containing all the available time slots for scheduling (e.g., '09:00 AM', '10:00 AM', etc.).",
+               
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 7: Create a useMemo hook to calculate calendar days",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Define a 'calendarDays' variable that calculates all the days of the current month using 'startOfMonth', 'endOfMonth', and 'eachDayOfInterval'.",
+                
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 8: Create a useMemo hook to filter selected date appointments",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Create 'selectedDateAppointments' to filter out appointments that match the 'selectedDate'. If no date is selected, return an empty array.",
+                
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 9: Define the handlePrevMonth function to navigate to the previous month.",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Set 'animatingMonth' to 'true' to indicate that the month is changing.",
+                "Use 'setTimeout' to change the 'currentMonth' by subtracting one month using 'subMonths' after 300ms.",
+                "Set 'animatingMonth' to 'false' to indicate the end of the month change animation.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 10: Define the handleNextMonth function to navigate to the next month",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Similar to 'handlePrevMonth', but use 'addMonths' to move the 'currentMonth' forward by one month.",
+               
+              ],
+            },
+          
+          ],
+        }, {
+          stepTitle: "Step 11: Define the handleDateSelect function to select a date",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Update 'selectedDate' with the chosen date when a user clicks on a date cell in the calendar.",
+               
+              ],
+            },
+           
+          ],
+        }, {
+          stepTitle: "Step 12: Define the handleSchedule function to schedule an appointment.",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "First, check if both a date and time slot are selected. If not, show a notification with an error message and return early.",
+                "Check if the selected time slot is already taken on that day by filtering 'selectedDateAppointments'.",
+                "If the time slot is already taken, show a notification with an error message and return early.",
+                "If the time slot is available, create a new appointment object with the selected date and time.",
+                "Update the appointments state by adding the new appointment to the existing appointments.",
+                "Immediately save the updated appointments to localStorage.",
+                "Show a confirmation animation and a success notification.",
+                "Once a new appointment is scheduled, call the 'sendEmailNotification' function with the newly created appointment as an argument.",
+                "Clear the timeSlot state after scheduling the appointment.",
+                
+              ],
+            },
+           
+          ],
+        }, {
+          stepTitle: "Step 13: Send Email Notification on Appointment Scheduling",
+           titleDescription: "Use emailjs",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "To implement the fully functioning EmailJS feature in your project, refer to the 'Built With Me' section in Day 6 of the lessons. This section will walk you through the detailed process of integrating email notifications using EmailJS, ensuring your app can send emails automatically whenever an appointment is scheduled.",
+               
+              ],
+            },
+           
+          ],
+        }, {
+          stepTitle: "Step 14: Create showConfirmation function to show a confirmation animation",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Create a 'div' element for the confirmation animation and add it to the 'body'.",
+                "Set a 'setTimeout' to remove the confirmation element after 1500ms.",
+                "Show a success notification after the animation finishes.",
+              ],
+            },
+            
+          ],
+        }, {
+          stepTitle: "Step 15: Create showNotification function to show a notification",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Create a 'div' for the notification and add it to the 'body'.",
+                "Add different classes based on the notification type (success/error).",
+                "Set a 'setTimeout' to remove the notification after 3000ms.",
+              ],
+            },
+           
+          ],
+        }, {
+          stepTitle: "Step 16: Return the JSX structure of the component",
+           titleDescription: "Inside the return statement:",
+          sections: [
+            {
+              subtitleDescription: "Wrap the Return in the Main Container (ultra-modern-scheduler)",
+             descriptions: [ 
+               "Create a 'div' with the class name 'ultra-modern-scheduler', which will hold the entire layout and structure of the scheduler.",
+              
+              ],
+            },  {
+              subtitleDescription: "Create the Glass Effect for the Scheduler",
+             descriptions: [ 
+               "Inside the main 'div', create another 'div' with the class name 'scheduler-glass' to apply a glass-like effect for the design. This provides a modern aesthetic.",
+              
+              ],
+            },  {
+              subtitleDescription: "Create the Header Section",
+             descriptions: [ 
+               "Define a 'header' with the class 'scheduler-header'.",
+                "Inside the header, add a 'div' with the class 'header-title' to hold the title and icon.",
+                "Place the 'CalendarIcon' from 'lucide-react' (with a size of 28) inside the 'header-title'.",
+                "Add a 'h1' with the text 'Schedule Your Session'.",
+                "Add another 'div' with the class 'current-date' to display the current month and year using the format(currentMonth, 'MMMM yyyy') method.",
+              ],
+            },  {
+              subtitleDescription: "Set Up the Content Section",
+             descriptions: [ 
+               "Inside the 'div' with the class 'scheduler-content', start with the 'calendar-section'.",
+                "Create a 'div' with the class 'calendar-navigation' to contain two buttons.",
+                "The first button will have the 'ChevronLeft' icon (to navigate to the previous month).",
+                "The second button will have the 'ChevronRight' icon (to navigate to the next month).",
+                "Each button should trigger the 'handlePrevMonth' and 'handleNextMonth' functions, respectively, when clicked.",
+              ],
+            },  {
+              subtitleDescription: "Set Up the Calendar Grid for the Current Month",
+             descriptions: [ 
+               "Create a div with the class calendar-grid to hold the calendar days.",
+                "Inside it, create another div with the class weekdays.",
+                "Map over an array ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] to render each weekday name as a div element.",
+                "Inside the 'div' with the class 'days-grid', map over 'calendarDays' (an array of days for the current month) to render each day.",
+                "Each day will be displayed in a 'button' with the class 'day-cell'.",
+                "Add classes conditionally for styling.",
+                "If the day belongs to the current month, add the class 'other-month'.",
+                "If the day is selected, add the class 'selected'.",
+                "If the day is today, add the class 'today'.",
+                "If the day has an appointment, add the class 'has-appointment'.",
+                "Inside the 'button', render the day number using format(date, 'd').",
+                "Display an appointment indicator usingclass if the day has an appointment.",
+                "",
+              ],
+            },  {
+              subtitleDescription: "Create the Time Slots Section",
+             descriptions: [ 
+               "Create a 'div' with the class 'time-slots' to display available time slots for appointments.",
+                "Map over 'availableSlots' to render each time slot as a 'button'.",
+                "Add conditional classes like 'selected' for the selected time and 'booked' if the time slot is already taken for the selected date.",
+                "When a slot is clicked, update the 'timeSlot' state with the selected slot.",
+                
+              ],
+            },  {
+              subtitleDescription: "Add the Schedule Appointment Button",
+             descriptions: [ 
+               "Below the time slots, add a 'button' with the class 'schedule-btn' to trigger the appointment scheduling.",
+                "Set the button to be disabled if no date or time slot is selected.",
+                "When clicked, trigger the 'handleSchedule' function to book the appointment and handle necessary validations.",
+              
+              ],
+            },  {
+              subtitleDescription: "Create the Appointments Section",
+             descriptions: [ 
+               "After the calendar, create a section for displaying upcoming appointments.",
+                "Add a 'h2' with the title 'Upcoming Sessions'",
+                "Create a 'div' with the class 'appointments-grid'.",
+                "Map over the 'appointments' array to render each appointment as a card.",
+                "Inside each 'appointment-card', display: The appointment date formatted as format(new Date(appt.date), 'EEEE, MMM dd'); and the appointment time along with a 'Clock' icon.",
+              ],
+            }, 
+           
+          ],
+        },
+       
+      ],
+      taskType: "Live",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Live Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/qgm3vt?view=editor+%2B+preview&module=%2Fsrc%2FApp.js",
+      img: require("../images/livelessons14.webp"),
+      videoLink: "",
+    },
   ],
   React: [
     {

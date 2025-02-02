@@ -11994,6 +11994,481 @@ body {
     }
     `
   },
+  {
+    taskId: "Therapist-Calendar-App",
+    title: "TherapistScheduler",
+    css: `
+    .ultra-modern-scheduler {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #2980b9 0, #00ced1 100%);
+      font-family: "Inter", -apple-system, system-ui, sans-serif;
+      color: #1a1f36;
+    }
+    
+    .scheduler-glass {
+      background: rgba(255, 255, 255, 0.815);
+      backdrop-filter: blur(20px);
+      border-radius: 32px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      width: 100%;
+      max-width: 1000px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .scheduler-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    .header-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .header-title h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #4649e5 0%, #3a6aed 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0;
+    }
+    
+    .header-icon {
+      color: #466be5;
+    }
+    
+    .current-date {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #468be5;
+    }
+    
+    .scheduler-content {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 3rem;
+    }
+    
+    /* Calendar Styles */
+    .calendar-section {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    
+    .calendar-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+    }
+    
+    .nav-btn {
+      background: none;
+      border: none;
+      color: #468be5;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-btn:hover {
+      background: #f5f3ff;
+    }
+    
+    .calendar-grid {
+      margin-bottom: 2rem;
+    }
+    
+    .weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    
+    .weekday {
+      font-weight: 600;
+      color: #6b7280;
+      font-size: 0.875rem;
+      padding: 0.5rem;
+    }
+    
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.5rem;
+      transition: opacity 0.3s ease;
+    }
+    
+    .days-grid.animating {
+      opacity: 0;
+    }
+    
+    .day-cell {
+      aspect-ratio: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.875rem;
+      color: #1f2937;
+    }
+    
+    .day-cell:hover:not(:disabled) {
+      background: #f5f3ff;
+    }
+    
+    .day-cell.other-month {
+      opacity: 0.3;
+    }
+    
+    .day-cell.today {
+      font-weight: 600;
+      color: #468be5;
+    }
+    
+    .day-cell.selected {
+      background: #468be5;
+      color: white;
+      font-weight: 600;
+    }
+    
+    .day-cell.has-appointment::after {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 4px;
+      background: #468be5;
+      border-radius: 50%;
+    }
+    
+    .day-cell.selected.has-appointment::after {
+      background: white;
+    }
+    
+    .selection-indicator {
+      position: absolute;
+      inset: 2px;
+      border-radius: 10px;
+      border: 2px solid #468be5;
+      pointer-events: none;
+      opacity: 0;
+      animation: pulseSelect 2s infinite;
+    }
+    
+    @keyframes pulseSelect {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.6;
+      }
+      50% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(0.95);
+        opacity: 0.6;
+      }
+    }
+    
+    .time-slots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    
+    .time-slot {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      background: #f8fafc;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      color: #4a5568;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .time-slot:hover:not(:disabled) {
+      border-color: #468be5;
+      background: #f5f3ff;
+    }
+    
+    .time-slot.selected {
+      background: #468be5;
+      border-color: #468be5;
+      color: white;
+      transform: scale(1.05);
+    }
+    
+    .time-slot.selected svg {
+      color: white;
+    }
+    
+    .time-slot.booked {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .schedule-btn {
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, #46b8e5 0%, #3a79ed 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    
+    .schedule-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.4);
+    }
+    
+    .schedule-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    /* Appointments Section */
+    .appointments-section {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    
+    .appointments-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1a1f36;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #46e5dd 0%, #3ab4ed 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .appointments-grid {
+      display: grid;
+      gap: 1rem;
+    }
+    
+    .appointment-card {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 1.25rem;
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+      animation: slideIn 0.5s ease-out;
+    }
+    
+    .appointment-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-color: #468be5;
+    }
+    
+    .appointment-date {
+      font-weight: 600;
+      color: #1a1f36;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+    }
+    
+    .appointment-time {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #468be5;
+      font-size: 0.875rem;
+    }
+    
+    /* Confirmation Animation */
+    .confirmation-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(79, 70, 229, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeInOut 1.5s ease-in-out;
+    }
+    
+    .confirmation-animation::after {
+      content: "✓";
+      font-size: 8rem;
+      color: #468be5;
+      animation: checkmark 1.5s ease-out;
+    }
+    
+    /* Notification Styles */
+    .notification {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      padding: 1rem 1.5rem;
+      border-radius: 16px;
+      color: white;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      animation: slideInRight 0.3s ease-out;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .notification.success {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    }
+    
+    .notification.error {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    }
+    
+    .check-icon {
+      width: 20px;
+      height: 20px;
+      animation: checkBounce 0.5s ease-out;
+    }
+    
+    /* Animations */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    @keyframes checkmark {
+      0% {
+        transform: scale(0) rotate(-45deg);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.2) rotate(0deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes checkBounce {
+      0% {
+        transform: scale(0);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .scheduler-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    
+      .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .ultra-modern-scheduler {
+        padding: 1rem;
+      }
+    
+      .scheduler-glass {
+        padding: 1.5rem;
+        border-radius: 24px;
+      }
+    
+      .header-title h1 {
+        font-size: 1.5rem;
+      }
+    
+      .time-slots {
+        grid-template-columns: 1fr;
+      }
+    
+      .calendar-section,
+      .appointments-section {
+        padding: 1.5rem;
+      }
+    }
+    
+    `
+  },
 
 
 
