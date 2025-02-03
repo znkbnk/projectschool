@@ -493,7 +493,7 @@ const articles = [
   },
   {
     id: "Localhost-Port-Fixer",
-    title: "Localhost Port Fixer",
+    title: "EADDRINUSE error",
     image: "/images/articleImg/6/blog1.webp",
     paragraphs: [
       {
