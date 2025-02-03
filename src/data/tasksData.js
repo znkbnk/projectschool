@@ -3145,8 +3145,8 @@ const tasksData = {
             {
               subtitleDescription: "",
               descriptions: [
-                "Inside your backend folder, within the routes folder, create a paymentRoutes.js file.",
-                "Also in your backend folder, create a midddlware folder and inside it, create an authMiddleware.js file.",
+                "Inside your backend folder, within the routes folder, create a testimonialRoutes.js file.",
+                "On top of the testimonialRoutes.js file, import express and messageSchema.",
               ],
             },
           ],
@@ -3275,6 +3275,256 @@ const tasksData = {
       codesandboxUrl:
         "https://codesandbox.io/embed/wfq7kh?view=editor+%2B+preview&module=%2Fbackend%2FApp.js",
       img: require("../images/musicacademy/day15.webp"),
+      videoLink: "",
+    },
+    {
+      taskId: "day16",
+      taskTitle: "Auth API",
+      introduction: "This code defines user authentication routes in an Express app, including registration, login, and a protected route for retrieving user profile information. It uses MongoDB with Mongoose for data storage, bcrypt for password hashing, and JWT for secure user authentication.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Set Up the folder structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Inside your backend folder, within the routes folder, create a testimonialRoutes.js file.",
+                "On top of the testimonialRoutes.js file, import express and messageSchema.",
+              ],
+            },
+          ],
+        },
+        {
+          stepTitle: "Step 2: Install the required dependencies",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+              "'express': A web framework for Node.js.",
+              "'bcryptjs': A library for hashing and comparing passwords.",
+              "'jsonwebtoken': A library for generating and verifying JSON Web Tokens (JWT).",
+              "'mongoose': An ODM (Object Data Modeling) library for MongoDB to interact with the database.",
+              "'dotenv': For managing environment variables.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 3: Update .env file",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+            descriptions: [ 
+              "To generate a JWT secret key, you can use a secure random string generator or a command like openssl rand -base64 32 in your terminal.",
+           "Copy the generated key and open your project's .env file.",
+              "Paste the JWT secret key as a new line, for example: JWT_SECRET=your_secret_key.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 4: Create the /register POST route",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the route that will handle user registration requests.",
+            descriptions: [ 
+              "Use router.post('/register') to handle POST requests to the /register endpoint.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Get the user's data sent in the request (name, email, password, and role).",
+             descriptions: [ 
+               "Use const { name, email, password, role } = req.body to destructure the values from the req.body object.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Start a try block to handle asynchronous operations that may throw errors.",
+             descriptions: [ 
+               "Wrap the following logic in a try...catch block to catch any errors.",
+              
+              ],
+            }, {
+              subtitleDescription: "Ensure a user does not already exist in the database.",
+             descriptions: [ 
+               "Use User.findOne({ email }) to check if the user with the provided email already exists. If so, respond with a 400 status and a message like 'User already exists.'",
+               
+              ],
+            }, {
+              subtitleDescription: "Handle the case when a user already exists.",
+             descriptions: [ 
+               "Use res.status(400).json({ message: 'User already exists' }) to send a response with status 400 if the user is found.",
+               
+              ],
+            }, {
+              subtitleDescription: "Use bcrypt to generate a salt for password hashing.",
+             descriptions: [ 
+               "Use const salt = await bcrypt.genSalt(10) to generate a salt with a strength of 10.",
+              
+              ],
+            }, {
+              subtitleDescription: "Hash the user's password using the salt.",
+             descriptions: [ 
+               "Use const hashedPassword = await bcrypt.hash(password, salt) to hash the password.",
+                
+              ],
+            }, {
+              subtitleDescription: "Create a new user object with the provided data and hashed password.",
+             descriptions: [ 
+               "Use const user = await User.create({ name, email, password: hashedPassword, role }) to create a new user entry. This method saves the user directly to the database.",
+               
+              ],
+            }, {
+              subtitleDescription: "Respond to the client upon successful user registration.",
+             descriptions: [ 
+               "If the user is created successfully, send a 201 status response along with a success message and the user details (excluding the password). The response should include the user's ID, name, email, and role.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Handle any errors that occur during the registration process.",
+             descriptions: [ 
+               "Use catch to handle any errors that arise and send a 400 response with an error message: res.status(400).json({ message: error.message }).",
+                
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Create the /login POST route",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the route that will handle user login requests.",
+             descriptions: [ 
+               "Use router.post('/login') to handle POST requests to the /login endpoint.",
+            
+              ],
+            },
+            {
+              subtitleDescription: "Get the user's credentials from the request body.",
+             descriptions: [ 
+               "Use const { email, password } = req.body to destructure the values from the request.",
+              
+              ],
+            }, {
+              subtitleDescription: "Start a try block to handle asynchronous operations, just like in the registration route.",
+             descriptions: [ 
+               "Wrap the following logic in a try...catch block.",
+              
+              ],
+            }, {
+              subtitleDescription: "Retrieve the user from the database based on the email provided.",
+             descriptions: [ 
+               "Use const user = await User.findOne({ email }) to find the user by email.",
+                
+              ],
+            }, {
+              subtitleDescription: "Check if the user exists and handle the case when the user is not found.",
+             descriptions: [ 
+               "Use if (!user) to check if the user exists. If the user does not exist, send a 404 status with the message 'User not found.'",
+             
+              ],
+            }, {
+              subtitleDescription: "Compare the provided password with the stored hashed password.",
+             descriptions: [ 
+               "Use const isMatch = await bcrypt.compare(password, user.password) to compare the hashed password with the user's stored password.",
+                
+              ],
+            }, {
+              subtitleDescription: "If the password does not match, respond with an error.",
+             descriptions: [ 
+               "Use if (!isMatch) to check if the password matches. If not, send a 400 status with the message 'Invalid credentials.'",
+              
+              ],
+            }, {
+              subtitleDescription: "Generate a JSON Web Token (JWT) to authenticate the user for future requests.",
+             descriptions: [ 
+               "Use const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1h' }) to create a token that includes the user's id and role.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Send the generated token back to the user.",
+             descriptions: [ 
+               "Use res.json({ token }) to send the token to the client as a response.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Handle any errors during the login process.",
+
+             descriptions: [ 
+                "Use catch to handle any errors and send a 500 response with the error message: res.status(500).json({ message: error.message }).",
+              ],
+            },  
+          ],
+        },
+         {
+          stepTitle: "Step 6: Create the /me GET route (Protected)",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Define the route to fetch the authenticated user's profile.",
+             descriptions: [ 
+               "Use router.get('/me', protect) to handle GET requests to the /me endpoint. The protect middleware will ensure that the route is accessible only to authenticated users. In this lesson, we're just setting up the route; the details of the protect middleware will be explained in the next lesson.",
+              
+              ],
+            },
+            {
+              subtitleDescription: "Fetch the user's profile data using the user's ID from the decoded token.",
+              descriptions: [ 
+               "Use const user = await User.findById(req.user.id).select('-password') to find the user by their ID (which is now available in req.user.id after protect middleware). Exclude the password field from the response by using .select('-password').",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Send the authenticated user's profile data as a response.",
+             descriptions: [ 
+               
+                "Use res.json(user) to return the user's profile data in the response.",
+                
+              ],
+            },
+            {
+              subtitleDescription: "Handle any errors that occur during the user lookup process.",
+             descriptions: [ 
+               "Use a try...catch block to handle any errors, and respond with a 500 status if an error occurs when fetching the user, using res.status(500).json({ message: 'Error fetching user: ' + error.message }).",
+                
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 8: Integrate Routes into the Server",
+          titleDescription: "server.js",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Import the authRoutes in server.js.",
+                "Use your auth router for API requests",
+              ],
+            },
+          ],
+        },
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "https://codesandbox.io/embed/n33xl8?view=editor+%2B+preview",
+      img: require("../images/musicacademy/day16.webp"),
       videoLink: "",
     },
   ],

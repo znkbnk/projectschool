@@ -5871,6 +5871,264 @@ const cheatsheetData = [
       },
     ],
    },
+   {
+    taskId: "day16",
+    content: [
+      {
+        title: "Authentication vs. Authorization",
+        subtitle: "Authentication",
+        details: [
+          "The process of verifying a user's identity (e.g., through email and password). It answers the question, 'Who are you?'",
+        
+        ],
+        
+      },
+         {
+        title: "",
+        subtitle: "Authorization",
+        details: [
+          " The process of determining what an authenticated user is allowed to do. It answers the question, 'What are you allowed to do?'",
+        
+        ],
+      },
+         {
+        title: "",
+        subtitle: "",
+        details: [
+          "In this API, authentication is handled during login (via JWT), while authorization is managed by checking the user's role (e.g., admin, user) in protected routes.",
+         
+        ],
+      },
+         {
+        title: "JSON Web Tokens (JWT)",
+        subtitle: "A JWT is a compact, URL-safe token that consists of three parts:",
+        details: [
+          "A JWT typically looks like this:"
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/1.webp",
+
+      },
+         {
+        title: "",
+        subtitle: "Header",
+        details: [
+          "Contains metadata about the token, such as the signing algorithm.",
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/2.webp",
+
+      },
+         {
+        title: "",
+        subtitle: "Payload",
+        details: [
+          "Contains claims (e.g., user ID, role, expiration time).",
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/3.webp",
+
+      },
+      {
+        title: "",
+        subtitle: "Signature",
+        details: [
+          "Ensures the token's integrity by combining the header, payload, and a secret key.",
+          
+        ],
+      }, {
+        title: "",
+        subtitle: "",
+        details: [
+          "WTs are stateless, meaning the server does not need to store session data. Instead, the token itself contains all the necessary information for authentication.",
+        
+        ],
+      }, {
+        title: "Password Hashing",
+        subtitle: "Why Hash Passwords?",
+        details: [
+          "Storing plain-text passwords is a security risk. If the database is compromised, attackers can easily access user credentials.",
+          "Hashing converts passwords into a fixed-length string of characters, making it nearly impossible to reverse-engineer the original password.",
+        ],
+      }, {
+        title: "",
+        subtitle: "Salt",
+        details: [
+          "A random string added to the password before hashing. It ensures that even if two users have the same password, their hashed values will be different.",
+         
+        ],
+      }, {
+        title: "",
+        subtitle: "bcrypt",
+        details: [
+          "A popular hashing algorithm that automatically handles salting and is computationally intensive, making it resistant to brute-force attacks.",
+        
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/4.webp",
+
+      }, {
+        title: "Middleware in Authentication",
+        subtitle: "",
+        details: [
+          "Middleware functions act as gatekeepers for your routes.",
+          
+        ],
+      }, {
+        title: "",
+        subtitle: "Protect Middleware",
+        details: [
+          "Verifies the JWT sent by the client.",
+          "Decodes the token to extract the user's ID and role.",
+          "Attaches the user's information to the req object, making it available to subsequent route handlers.",
+          "If the token is invalid or expired, the middleware denies access and returns an error response."
+        ],
+      }, {
+        title: "",
+        subtitle: "",
+        details: [
+          "Middleware ensures that authentication logic is centralized and reusable across multiple routes.",
+       
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/5.webp",
+      }, {
+        title: "Role-Based Access Control (RBAC)",
+        subtitle: "",
+        details: [
+          "RBAC is a method of restricting system access based on user roles.",
+          "In this API, the role field in the user schema determines what actions a user can perform.",
+         
+        ],
+      }, {
+        title: "",
+        subtitle: "For example:",
+        details: [
+          "An admin might have access to all routes.",
+          "A user might only have access to their own profile or limited resources.",
+        ],
+      }, {
+        title: "",
+        subtitle: "",
+        details: [
+          "Protected routes can use the user's role (from the JWT payload) to enforce these restrictions.",
+         
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/6.webp",
+
+      }, {
+        title: "Environment Variables and Security",
+        subtitle: "Why Use Environment Variables?",
+        details: [
+          "They keep sensitive information (e.g., API keys, database credentials) out of the codebase.",
+          "They allow configuration to vary between environments (e.g., development, production) without changing the code.",
+        ],
+      }, {
+        title: "",
+        subtitle: "Security Best Practices:",
+        details: [
+          "Never hardcode secrets in your code.",
+          "Use a .env file for local development but ensure it is added to .gitignore to avoid exposing secrets in version control.",
+          "In production, use secure methods (e.g., cloud provider secrets manager) to manage environment variables.",
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/7.webp",
+      }, {
+        title: "Error Handling",
+        subtitle: "Proper error handling ensures that the API responds gracefully to issues such as:",
+        details: [
+          "Invalid user input (e.g., missing fields, incorrect email format).",
+          "Database errors (e.g., connection issues, duplicate entries).",
+          "Authentication failures (e.g., invalid credentials, expired tokens).",
+        ],
+      }, {
+        title: "",
+        subtitle: "",
+        details: [
+          "Error responses should include a clear message and an appropriate HTTP status code (e.g., 400 for bad requests, 401 for unauthorized access).",
+          
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/8.webp",
+      }, {
+        title: "Scalability and Modularity",
+        subtitle: "Scalability",
+        details: [
+          "The API should be designed to handle increasing numbers of users and requests. Techniques like caching, load balancing, and database optimization can help.",
+          
+        ],
+      }, {
+        title: "",
+        subtitle: "Modularity",
+        details: [
+          "Breaking the application into smaller, reusable components (e.g., routes, middleware, models) makes the codebase easier to maintain and extend.",
+          
+        ],
+      }, {
+        title: "Statelessness in REST APIs",
+        subtitle: "",
+        details: [
+          "REST APIs are stateless, meaning each request from the client must contain all the information needed to process it.",
+          "JWTs align with this principle because they contain all the necessary authentication data, eliminating the need for server-side session storage.",
+        ],
+      }, {
+        title: "Security Considerations",
+        subtitle: "HTTPS",
+        details: [
+          "Always use HTTPS to encrypt data transmitted between the client and server.",
+          
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/9.webp",
+      }, {
+        title: "",
+        subtitle: "Token Expiry",
+        details: [
+          "JWTs should have an expiration time (e.g., 1 hour) to limit their validity and reduce the risk of misuse.",
+          
+        ],
+      }, {
+        title: "",
+        subtitle: "Password Policies",
+        details: [
+          "Enforce strong password requirements (e.g., minimum length, special characters) to enhance security.",
+         
+        ],
+      }, {
+        title: "",
+        subtitle: "Rate Limiting",
+        details: [
+          "Prevent brute-force attacks by limiting the number of login attempts from a single IP address.",
+         
+        ],
+      }, {
+        title: "Real-World Flow",
+        subtitle: "Registration",
+        details: [
+          "User provides name, email, password, and role.",
+          "Server hashes the password and saves the user to the database.",
+          "Response: 201 Created with user details (excluding password).",
+        ],
+      }, {
+        title: "",
+        subtitle: "Login",
+        details: [
+          "User provides email and password.",
+          "Server verifies credentials and generates a JWT.",
+          "Response: 200 OK with the JWT.",
+        ],
+      }, {
+        title: "",
+        subtitle: "Protected Route",
+        details: [
+          "User includes the JWT in the Authorization header.",
+          "Server verifies the token and grants access if valid.",
+          "Response: 200 OK with the requested data.",
+        ],
+      }, {
+        title: "Diagrams",
+        subtitle: "Authentication Flow Diagram",
+        details: [
+        
+        ],
+        image: "/images/musicAcademyCheatsheet/day16/10.webp",
+      },
+    ],
+  },
 
 
 
