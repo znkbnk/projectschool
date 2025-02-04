@@ -35,8 +35,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import InterviewCorrectCode from "./Interview/InterviewCorrectCode";
 import WorkshopList from "./Exercises/WorkshopList";
 import MusicAcademy from "./Exercises/MusicAcademy";
-import Reference from "./Reference/Reference";
-import ReactReference from "./Reference/ReactReference";
+
 
 
 function ScrollToTopOnNavigation() {
