@@ -11,7 +11,6 @@ import { tasksData } from "../data/tasksData";
 import Navbar from "../components/Navbar";
 import "../styles/editor.css";
 import "react-toastify/dist/ReactToastify.css";
-import CodeBlock from "../Exercises/CodeBlock.js";
 import { auth } from "../components/firebase";
 import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
@@ -19,6 +18,10 @@ import "../styles/cheatsheet.css";
 import "../styles/showStyles.css";
 import cheatsheetData from "../data/cheatsheetData.js";
 import stylesData from "../data/stylesData.js";
+import CheatsheetPopup from "./CheatsheetPopup";
+import StylesPopup from "./StylesPopup";
+import SolutionPopup from "./SolutionPopup";
+import VideoPopup from "./VideoPopup";
 
 const LiveEditor = ({ tasks }) => {
   const { lessonType, taskId } = useParams();
@@ -35,15 +38,13 @@ const LiveEditor = ({ tasks }) => {
   const [selectedStyle, setSelectedStyle] = useState(null);
   const [copied, setCopied] = useState(false);
   const [buttonText, setButtonText] = useState("Solution");
-
-  // eslint-disable-next-line no-unused-vars
-  const [loading, setLoading] = useState(false);
+  const [loadingSolution, setLoadingSolution] = useState(false);
   const taskContainerRef = useRef(null);
   const navigate = useNavigate();
 
+  // Fetch subscription status
   useEffect(() => {
     const fetchSubscriptionStatus = async () => {
-      setLoading(true);
       try {
         const user = auth.currentUser;
         if (user) {
@@ -58,49 +59,71 @@ const LiveEditor = ({ tasks }) => {
         toast.error(
           "Failed to fetch subscription status. Please try again later."
         );
-      } finally {
-        setLoading(false);
       }
     };
 
     fetchSubscriptionStatus();
   }, []);
 
+  // Initialize task state
   useEffect(() => {
+    if (!lessonType || !taskId) {
+      console.error("Lesson type or task ID is missing.");
+      toast.error("Invalid lesson or task. Please check the URL.");
+      navigate("/");
+      return;
+    }
+
     const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
     const completedTasks =
       JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
     setIsCompleted(completedTasks[taskId] || false);
 
-    if (lessonType && taskId) {
-      const index = tasksData[lessonType]?.findIndex(
-        (task) => task.taskId === taskId
-      );
-      if (index !== undefined && index >= 0) {
-        setCurrentTaskIndex(index);
-        const storedCheckboxStates =
-          JSON.parse(localStorage.getItem(taskId)) || {};
-        setCheckboxStates(storedCheckboxStates);
-      } else {
-        console.error(`Task with ID ${taskId} not found.`);
-      }
-      setShowSolution(false);
+    const tasksForLesson = tasksData[lessonType];
+    if (!tasksForLesson) {
+      console.error(`No tasks found for lesson type: ${lessonType}`);
+      toast.error(`No tasks available for lesson: ${lessonType}`);
+      navigate("/");
+      return;
     }
-  }, [lessonType, taskId]);
 
+    const index = tasksForLesson.findIndex((task) => task.taskId === taskId);
+    if (index === -1) {
+      console.error(`Task with ID ${taskId} not found.`);
+      toast.error(`Task not found: ${taskId}`);
+      navigate("/");
+      return;
+    }
+
+    setCurrentTaskIndex(index);
+    const storedCheckboxStates = JSON.parse(localStorage.getItem(taskId)) || {};
+    setCheckboxStates(storedCheckboxStates);
+    setShowSolution(false);
+  }, [lessonType, taskId, navigate]);
+
+  // Load solution codes
   useEffect(() => {
-    import(`./solutions/${taskId}`)
-      .then((module) => {
+    const loadSolutionCodes = async () => {
+      setLoadingSolution(true);
+      try {
+        const module = await import(`./solutions/${taskId}`);
         setSolutionCodes(
           Array.isArray(module.default) ? module.default : [module.default]
         );
-      })
-      .catch((error) => {
+      } catch (error) {
         console.error("Error loading solution:", error);
         setSolutionCodes(["Solution not found"]);
-      });
+      } finally {
+        setLoadingSolution(false);
+      }
+    };
+
+    if (taskId) {
+      loadSolutionCodes();
+    }
   }, [taskId]);
 
+  // Handle checkbox change
   const handleCheckboxChange = useCallback((stepId) => {
     setCheckboxStates((prevState) => ({
       ...prevState,
@@ -108,38 +131,57 @@ const LiveEditor = ({ tasks }) => {
     }));
   }, []);
 
+  // Persist checkbox states to localStorage
   useEffect(() => {
     localStorage.setItem(taskId, JSON.stringify(checkboxStates));
   }, [taskId, checkboxStates]);
 
+  // Scroll to top on task change
   useEffect(() => {
     if (taskContainerRef.current) {
       taskContainerRef.current.scrollTop = 0;
     }
   }, [taskId]);
 
-  const handleNext = () => {
-    // Check if the current task is completed and navigate to the next one
+  // Handle next task
+  const handleNext = useCallback(() => {
+    try {
+      const tasksForLesson = tasksData[lessonType];
+      if (!tasksForLesson) {
+        toast.error("No tasks found for the current lesson.");
+        return;
+      }
 
-    // Navigate to the next task in the list
-    if (currentTaskIndex < tasksData[lessonType]?.length - 1) {
-      const nextTaskId = tasksData[lessonType][currentTaskIndex + 1].taskId;
-      navigate(`/editor/${lessonType}/${nextTaskId}`);
-    } else {
-      toast.info("You have reached the last task.");
+      if (currentTaskIndex < tasksForLesson.length - 1) {
+        const nextTaskId = tasksForLesson[currentTaskIndex + 1].taskId;
+        navigate(`/editor/${lessonType}/${nextTaskId}`);
+      } else {
+        toast.info("You have reached the last task.");
+      }
+    } catch (error) {
+      console.error("Error navigating to next task:", error);
+      toast.error("Failed to navigate to the next task.");
     }
-  };
+  }, [lessonType, currentTaskIndex, navigate]);
 
-  const handlePrevious = () => {
-    if (currentTaskIndex > 0) {
-      const previousTaskId = tasksData[lessonType][currentTaskIndex - 1].taskId;
-      navigate(`/editor/${lessonType}/${previousTaskId}`);
-    } else {
-      toast.info("You are on the first task.");
+  // Handle previous task
+  const handlePrevious = useCallback(() => {
+    try {
+      if (currentTaskIndex > 0) {
+        const previousTaskId =
+          tasksData[lessonType][currentTaskIndex - 1].taskId;
+        navigate(`/editor/${lessonType}/${previousTaskId}`);
+      } else {
+        toast.info("You are on the first task.");
+      }
+    } catch (error) {
+      console.error("Error navigating to previous task:", error);
+      toast.error("Failed to navigate to the previous task.");
     }
-  };
+  }, [lessonType, currentTaskIndex, navigate]);
 
-  const handleComplete = useCallback(() => {
+  // Handle task completion
+  const handleComplete = useCallback(async () => {
     if (isCompleted) {
       toast.info("This task is already completed.");
       return;
@@ -148,132 +190,129 @@ const LiveEditor = ({ tasks }) => {
     if (
       window.confirm("Are you sure you want to mark this task as completed?")
     ) {
-      const taskIndex = tasksData[lessonType]?.findIndex(
-        (task) => task.taskId === taskId
-      );
+      try {
+        const taskIndex = tasksData[lessonType]?.findIndex(
+          (task) => task.taskId === taskId
+        );
 
-      if (taskIndex === -1) {
-        console.error(`Task ${taskId} not found.`);
-        return;
+        if (taskIndex === -1) {
+          console.error(`Task ${taskId} not found.`);
+          return;
+        }
+
+        const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
+        const completedTasks =
+          JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
+
+        // Mark this task as completed
+        completedTasks[taskId] = true;
+        localStorage.setItem(
+          lessonCompletedTasksKey,
+          JSON.stringify(completedTasks)
+        );
+
+        setIsCompleted(true);
+        toast.success(`Lesson ${lessonType} is completed!`);
+      } catch (error) {
+        console.error("Error marking task as completed:", error);
+        toast.error("Failed to mark task as completed.");
       }
-
-      const lessonCompletedTasksKey = `${lessonType}_completedTasks`;
-      const completedTasks =
-        JSON.parse(localStorage.getItem(lessonCompletedTasksKey)) || {};
-
-      // Mark this task as completed
-      completedTasks[taskId] = true;
-      localStorage.setItem(
-        lessonCompletedTasksKey,
-        JSON.stringify(completedTasks)
-      );
-
-      setIsCompleted(true);
-      toast.success(`Lesson ${lessonType} is completed!`);
     }
   }, [isCompleted, lessonType, taskId]);
 
-  const handleToggleSolution = () => {
+  // Handle solution toggle
+  const handleToggleSolution = useCallback(async () => {
     if (subscriptionStatus === "subscribed") {
-      const newSolutionState = !showSolution;
-      setShowSolution(newSolutionState);
+      try {
+        const newSolutionState = !showSolution;
+        setShowSolution(newSolutionState);
 
-      if (newSolutionState) {
-        setButtonText("Scroll Down ↓");
+        if (newSolutionState) {
+          setButtonText("Scroll Down ↓");
 
-        setTimeout(() => {
+          setTimeout(() => {
+            setButtonText("Solution");
+          }, 1500);
+        } else {
           setButtonText("Solution");
-        }, 1500);
-      } else {
-        setButtonText("Solution");
+        }
+      } catch (error) {
+        console.error("Error toggling solution:", error);
+        toast.error("Failed to toggle solution.");
       }
     } else {
       toast.info(
         "Access to solutions requires an active subscription. Please subscribe to unlock this feature."
       );
     }
-  };
+  }, [subscriptionStatus, showSolution]);
 
-  const handleToggleCheatsheet = () => {
-    const currentCheatsheet = cheatsheetData.find(
-      (cheat) => cheat.taskId === taskId
-    );
-    if (!currentCheatsheet) {
-      toast.error("Cheatsheet not available for this task.");
-      setShowCheatsheet(false);
-      return;
-    }
-    setCheatsheetContent(currentCheatsheet);
-    setShowCheatsheet((prev) => !prev);
-  };
-
-  const handleToggleStyles = () => {
-    // Filter styles based on the current taskId
-    const currentStyles = stylesData.filter((style) => style.taskId === taskId);
-
-    if (currentStyles.length === 0) {
-      toast.error("No styles available for this task.");
-      setShowStyles(false);
-      return;
-    }
-
-    setSelectedStyle(currentStyles);
-    setShowStyles((prev) => !prev);
-  };
-
-  const handleCloseStyles = () => {
+  // Handle closing styles popup
+  const handleCloseStyles = useCallback(() => {
     setShowStyles(false);
-  };
+  }, []);
 
-  const handleCopyToClipboard = (css) => {
-    navigator.clipboard.writeText(css).then(() => {
-      setCopied(true); // Set copied state to true
+  // Handle copying to clipboard
+  const handleCopyToClipboard = useCallback(async (css) => {
+    try {
+      await navigator.clipboard.writeText(css);
+      setCopied(true);
 
-      // Reset copied state after 2 seconds
       setTimeout(() => {
-        setCopied(false); // Reset copied state back to false
+        setCopied(false);
       }, 2000);
-    });
-  };
-
-  const handleCloseCheatsheet = () => {
-    setShowCheatsheet(false);
-  };
-
-  const handleToggleVideoPopup = () => {
-    setShowVideoPopup((prev) => !prev);
-  };
-
-  const getEmbedLink = (videoLink) => {
-    // Check if it's a short youtu.be link
-    if (videoLink.includes("youtu.be")) {
-      // Extract the video ID after 'youtu.be/'
-      const videoId = videoLink.split("/").pop();
-      // Return the embed URL format
-      return `https://www.youtube.com/embed/${videoId}`;
-    } else {
-      // If it's already an embed link, return it as is
-      return videoLink;
+    } catch (error) {
+      console.error("Error copying to clipboard:", error);
+      toast.error("Failed to copy to clipboard.");
     }
-  };
+  }, []);
 
-  // Add this useEffect to handle clicks outside the cheatsheet popup
+  // Handle closing cheatsheet popup
+  const handleCloseCheatsheet = useCallback(() => {
+    setShowCheatsheet(false);
+  }, []);
+
+  // Handle toggling video popup
+  const handleToggleVideoPopup = useCallback(() => {
+    setShowVideoPopup((prev) => !prev);
+  }, []);
+
+  // Handle toggling cheatsheet popup
+  const handleToggleCheatsheet = useCallback(() => {
+    const currentCheatsheet = cheatsheetData.find(
+      (cheatsheet) => cheatsheet.taskId === taskId
+    );
+
+    if (currentCheatsheet) {
+      setCheatsheetContent(currentCheatsheet);
+      setShowCheatsheet((prev) => !prev);
+    } else {
+      toast.error("No cheatsheet available for this task.");
+      setShowCheatsheet(false);
+    }
+  }, [taskId]);
+
+  // Handle click outside popups
   useEffect(() => {
     const handleClickOutside = (event) => {
-      const cheatsheetPopup = document.querySelector(".cheatsheet-popup");
-      const videoPopup = document.querySelector(".video-popup-window");
-      const showStyles = document.querySelector(".styles-popup");
-      if (cheatsheetPopup && !cheatsheetPopup.contains(event.target)) {
-        handleCloseCheatsheet();
-      }
+      try {
+        const cheatsheetPopup = document.querySelector(".cheatsheet-popup");
+        const videoPopup = document.querySelector(".video-popup-window");
+        const stylesPopup = document.querySelector(".styles-popup");
 
-      // Check if the video popup is open and if the click was outside of it
-      if (videoPopup && !videoPopup.contains(event.target)) {
-        handleToggleVideoPopup(); // Close the video popup
-      }
+        if (cheatsheetPopup && !cheatsheetPopup.contains(event.target)) {
+          handleCloseCheatsheet();
+        }
 
-      if (showStyles && !showStyles.contains(event.target)) {
-        handleCloseStyles(); // Close the video popup
+        if (videoPopup && !videoPopup.contains(event.target)) {
+          handleToggleVideoPopup();
+        }
+
+        if (stylesPopup && !stylesPopup.contains(event.target)) {
+          handleCloseStyles();
+        }
+      } catch (error) {
+        console.error("Error handling click outside:", error);
       }
     };
 
@@ -281,13 +320,36 @@ const LiveEditor = ({ tasks }) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [handleCloseCheatsheet, handleToggleVideoPopup, handleCloseStyles]);
 
+  // Memoize current task
   const currentTask = useMemo(() => {
     return tasksData[lessonType]?.[currentTaskIndex] || {};
   }, [lessonType, currentTaskIndex]);
 
   const { taskTitle, task, steps, videoLink, codesandboxUrl } = currentTask;
+
+  if (!currentTask || !taskTitle) {
+    return (
+      <div>
+        <Navbar />
+        <div className='editor-container'>
+          <div className='task-container'>
+            <div className='task'>
+              <div className='text-window'>
+                <h6>Task Not Found</h6>
+                <p>
+                  The task you are looking for does not exist. Please check the
+                  URL or go back to the home page.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ToastContainer />
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -352,13 +414,7 @@ const LiveEditor = ({ tasks }) => {
                 >
                   Cheatsheet
                 </button>
-                <button
-                  className='button-84'
-                  onClick={handleToggleStyles}
-                  aria-label='Toggle Styles'
-                >
-                  Show Styles
-                </button>
+                <StylesPopup taskId={taskId} stylesData={stylesData} />
                 <button
                   className='button-84'
                   onClick={handleToggleSolution}
@@ -376,32 +432,12 @@ const LiveEditor = ({ tasks }) => {
                   </button>
                 )}
               </div>
-              <AnimatePresence>
-                {showVideoPopup && (
-                  <motion.div
-                    className='video-popup-window'
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                  >
-                    <button
-                      className='video-close-button'
-                      onClick={handleToggleVideoPopup}
-                    >
-                      &times;
-                    </button>
-                    <div className='video-container'>
-                      <iframe
-                        src={getEmbedLink(videoLink)}
-                        title='Video Lesson'
-                        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                        allowFullScreen
-                        style={{ border: "none" }}
-                      ></iframe>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+
+              <VideoPopup
+                showVideoPopup={showVideoPopup}
+                videoLink={videoLink}
+                onClose={handleToggleVideoPopup}
+              />
 
               <AnimatePresence>
                 {showStyles && selectedStyle && (
@@ -415,7 +451,7 @@ const LiveEditor = ({ tasks }) => {
                       <div className='styles-text'>
                         {selectedStyle.map((style, index) => (
                           <div key={index} className='style-item'>
-                            <div >
+                            <div>
                               <h3>{style.title}</h3>
                               <button
                                 className={`styles-copy-button ${
@@ -437,7 +473,7 @@ const LiveEditor = ({ tasks }) => {
                             </pre>
 
                             {style.css2 && (
-                              <div >
+                              <div>
                                 {style.title2 && <h3>{style.title2}</h3>}{" "}
                                 <button
                                   className={`styles-copy-button ${
@@ -470,66 +506,20 @@ const LiveEditor = ({ tasks }) => {
 
               <AnimatePresence>
                 {showCheatsheet && cheatsheetContent && (
-                  <motion.div
-                    className='cheatsheet-popup'
-                    initial={{ opacity: 0, x: "-50%" }}
-                    animate={{ opacity: 1, x: "0%" }}
-                    exit={{ opacity: 0, x: "50%" }}
-                  >
-                    <div className='cheatsheet-content'>
-                      <div className='cheatsheet-text'>
-                        {cheatsheetContent.content?.map((section, index) => (
-                          <div key={index}>
-                            <h3>{section.title}</h3>
-                            {section.subtitle && <h2>{section.subtitle}</h2>}
-                            <ul>
-                              {section.details?.map((detail, idx) => (
-                                <li key={idx}>{detail}</li>
-                              ))}
-                            </ul>
-                            {section.image && (
-                              <img
-                                src={section.image}
-                                alt={`cheatsheet-${index}`}
-                                className='cheatsheet-image'
-                              />
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <button
-                      className='cheatsheet-close-button'
-                      onClick={handleToggleCheatsheet}
-                    >
-                      Close
-                    </button>
-                  </motion.div>
+                  <CheatsheetPopup
+                    cheatsheetContent={cheatsheetContent}
+                    onClose={handleToggleCheatsheet}
+                  />
                 )}
               </AnimatePresence>
 
-              {showSolution && (
-                <div className='solution-popup'>
-                  <div className='solution-container'>
-                    <h2 className='solution-title'>
-                      Solution code for: {taskTitle || "Task Title"}
-                    </h2>
-                    {solutionCodes.map((code, index) => (
-                      <CodeBlock
-                        key={index}
-                        code={code}
-                        className='code-block'
-                      />
-                    ))}
-                    <button
-                      className='close-button button-84'
-                      onClick={handleToggleSolution}
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              )}
+              <SolutionPopup
+                showSolution={showSolution}
+                taskTitle={taskTitle}
+                loadingSolution={loadingSolution}
+                solutionCodes={solutionCodes}
+                onClose={handleToggleSolution}
+              />
             </div>
           </div>
           {lessonType && tasksData[lessonType]?.length > 0 && (
@@ -554,7 +544,7 @@ const LiveEditor = ({ tasks }) => {
         <iframe
           src={codesandboxUrl}
           title='React'
-          allow='accelerometer; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb;'
+          allow='accelerometer; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; xr-spatial-tracking'
           sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
         ></iframe>
       </div>
