@@ -6,9 +6,7 @@ import Welcome from "./components/Welcome";
 import Login from "./Login/Login";
 import Signup from "./Login/Signup";
 import Exercises from "./Exercises/Exercises";
-import JsLessons from "./Exercises/JsLessons";
 import ReactLessons from "./Exercises/ReactLessons";
-import CssLessons from "./Exercises/CssLessons";
 import LiveChat from "./Chat/LiveChat";
 import ResetPassword from "./Login/ResetPassword";
 import LiveEditor from "./Exercises/LiveEditor";
@@ -20,7 +18,6 @@ import Privacy from "./components/Privacy";
 import Success from "./Stripe/Success";
 import Cancel from "./Stripe/Cancel";
 import Articles from "./Blog/Articles";
-import LaravelLessons from "./Exercises/LaravelLessons";
 import MobileMessage from "./Exercises/MobileMessage";
 import LiveLessons from "./Exercises/LiveLessons";
 import useAuth from "./Login/useAuth";
@@ -38,6 +35,9 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import InterviewCorrectCode from "./Interview/InterviewCorrectCode";
 import WorkshopList from "./Exercises/WorkshopList";
 import MusicAcademy from "./Exercises/MusicAcademy";
+import Reference from "./Reference/Reference";
+import ReactReference from "./Reference/ReactReference";
+
 
 function ScrollToTopOnNavigation() {
   window.scrollTo(0, 0);
@@ -192,22 +192,6 @@ const App = () => {
             }
           />
           <Route
-            path='/jslessons'
-            element={
-              <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
-                <JsLessons />
-              </ProtectedRouteWrapper>
-            }
-          />
-          <Route
-            path='/csslessons'
-            element={
-              <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
-                <CssLessons />
-              </ProtectedRouteWrapper>
-            }
-          />
-          <Route
             path='/exercises/reactlessons'
             element={
               <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
@@ -223,7 +207,7 @@ const App = () => {
               </ProtectedRouteWrapper>
             }
           />
-           <Route
+          <Route
             path='/exercises/musicacademy'
             element={
               <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
@@ -231,7 +215,7 @@ const App = () => {
               </ProtectedRouteWrapper>
             }
           />
-           <Route
+          <Route
             path='/exercises/workshoplist'
             element={
               <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
@@ -239,14 +223,7 @@ const App = () => {
               </ProtectedRouteWrapper>
             }
           />
-          <Route
-            path='/laravellessons'
-            element={
-              <ProtectedRouteWrapper isLoggedIn={isLoggedIn} isAdmin={isAdmin}>
-                <LaravelLessons />
-              </ProtectedRouteWrapper>
-            }
-          />
+
           <Route
             path='/livechat'
             element={
