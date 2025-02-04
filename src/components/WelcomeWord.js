@@ -11,6 +11,7 @@ import CrazyScrollPhrase from "./CrazyScrollPhrase";
 
 const WelcomeComponent = () => {
   const logo = useRef(null);
+  const pslogosmallRef = useRef(null); // New ref for pslogosmall
   const sectionImg3Ref = useRef(null);
   const sectionImg7Ref = useRef(null);
   const sectionImg4Ref = useRef(null);
@@ -21,21 +22,17 @@ const WelcomeComponent = () => {
   }, []);
 
   const animation = () => {
-    const picture = logo.current;
     const sectionImg3Element = sectionImg3Ref.current;
     const sectionImg4Element = sectionImg4Ref.current;
     const sectionImg2Element = sectionImg2Ref.current;
     const sectionImg7Element = sectionImg7Ref.current;
 
     if (
-      picture &&
       sectionImg3Element &&
       sectionImg4Element &&
       sectionImg2Element &&
       sectionImg7Element
     ) {
-      
-
       gsap.set(sectionImg2Element, {
         opacity: 0.7,
       });
@@ -44,13 +41,11 @@ const WelcomeComponent = () => {
       const screenWidth = window.innerWidth;
 
       tl.to(sectionImg4Element, {
-        visibility: "visible",
         opacity: 1,
       })
         .to(
           sectionImg3Element,
           {
-            visibility: "visible",
             opacity: 1,
             top: "50%",
             duration: 1,
@@ -61,7 +56,6 @@ const WelcomeComponent = () => {
         .to(
           sectionImg7Element,
           {
-            visibility: "visible",
             opacity: 1,
           },
           "-=0"
@@ -69,7 +63,6 @@ const WelcomeComponent = () => {
         .to(
           sectionImg2Element,
           {
-            visibility: "visible",
             opacity: 1,
             x: screenWidth,
             y: 360,
@@ -89,7 +82,7 @@ const WelcomeComponent = () => {
     <div className="word-container">
       <img
         src={sectionImg4}
-        alt="logo"
+        alt="section 4"
         className="sectionImg4"
         ref={sectionImg4Ref}
       />
@@ -97,26 +90,26 @@ const WelcomeComponent = () => {
       <div className="sectionImages-container">
         <img
           src={sectionImg7}
-          alt="logo"
+          alt="section 7"
           className="sectionImg7"
           ref={sectionImg7Ref}
         />
         <img
           src={sectionImg2}
-          alt="logo"
+          alt="section 2"
           className="sectionImg2"
           ref={sectionImg2Ref}
         />
         <img
           src={sectionImg3}
-          alt="logo"
+          alt="section 3"
           className="sectionImg3"
           ref={sectionImg3Ref}
         />
         <img
           className="projectschoolImg"
           src={image1}
-          alt="logo"
+          alt="Project School logo"
           ref={logo}
         />
       </div>
@@ -124,9 +117,9 @@ const WelcomeComponent = () => {
       {/* Preloaded and eagerly loaded pslogosmall */}
       <img
         src={pslogosmall}
-        alt="pslogo small"
+        alt="Project School logo small"
         className="pslogosmall"
-        ref={logo}
+        ref={pslogosmallRef}
       />
 
       <CrazyScrollPhrase />
