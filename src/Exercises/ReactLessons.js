@@ -13,7 +13,6 @@ function ReactLessons() {
   const [showHard, setShowHard] = useState(false);
   const [showCompleted, setShowCompleted] = useState(false);
   const [showNotCompleted, setShowNotCompleted] = useState(false);
-  // eslint-disable-next-line
   const [filters, setFilters] = useState([
     "All",
     "Easy",
@@ -23,19 +22,33 @@ function ReactLessons() {
   ]);
 
   const handleFilterClick = (filterType) => {
+    // Update the filters state and show/hide conditions based on the clicked filter
     if (filterType === "Easy") {
+      setFilters(["Easy"]);
       setShowEasy(true);
       setShowHard(false);
+      setShowCompleted(false);
+      setShowNotCompleted(false);
     } else if (filterType === "Hard") {
+      setFilters(["Hard"]);
       setShowHard(true);
       setShowEasy(false);
+      setShowCompleted(false);
+      setShowNotCompleted(false);
     } else if (filterType === "Completed") {
+      setFilters(["Completed"]);
       setShowCompleted(true);
       setShowNotCompleted(false);
+      setShowEasy(false);
+      setShowHard(false);
     } else if (filterType === "Not Completed") {
+      setFilters(["Not Completed"]);
       setShowNotCompleted(true);
       setShowCompleted(false);
+      setShowEasy(false);
+      setShowHard(false);
     } else {
+      setFilters(["All"]);
       setShowEasy(false);
       setShowHard(false);
       setShowCompleted(false);
@@ -58,23 +71,23 @@ function ReactLessons() {
   return (
     <>
       <Navbar />
-      <div className='header'>
+      <div className="header">
         <ReactTitle />
       </div>
       <ProgressBar
         numStages={tasksData.React.length}
         completedTasks={getCompletedTasks()}
-        taskType='React' // Pass "React" as taskType
+        taskType="React" // Pass "React" as taskType
       />
       <FilterSortButtons
         filters={filters}
         handleFilterClick={handleFilterClick}
       />
 
-      <div className='lessons-cards'>
+      <div className="lessons-cards">
         <FilteredTasks
           tasks={tasksData.React}
-          completedTasksKey='React_completedTasks'
+          completedTasksKey="React_completedTasks"
           showEasy={showEasy}
           showHard={showHard}
           showCompleted={showCompleted}
