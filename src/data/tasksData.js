@@ -3289,8 +3289,8 @@ const tasksData = {
             {
               subtitleDescription: "",
               descriptions: [
-                "Inside your backend folder, within the routes folder, create a testimonialRoutes.js file.",
-                "On top of the testimonialRoutes.js file, import express and messageSchema.",
+                "Inside your backend folder, within the routes folder, create a authRoutes.js file.",
+                "On top of the authRoutes.js file, import express, userSchema, bcrypt, and jwt.",
               ],
             },
           ],
@@ -3525,6 +3525,273 @@ const tasksData = {
       completed: false,
       codesandboxUrl: "https://codesandbox.io/embed/n33xl8?view=editor+%2B+preview",
       img: require("../images/musicacademy/day16.webp"),
+      videoLink: "",
+    },
+    {
+      taskId: "day17",
+      taskTitle: "JWT AuthGuard",
+      introduction: "This guide walks you through implementing authentication and role-based authorization in an Express.js application using JWT. By following these steps, you'll secure your routes by requiring users to be authenticated and ensure that only admins can access specific endpoints.",      
+      steps: [
+        {
+          stepTitle: "Step 1: Install Required Packages",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "Ensure you have the necessary dependencies installed.",
+              descriptions: [ 
+              "jsonwebtoken for generating and verifying tokens",
+              "express-async-handler for handling async errors",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 2: Set Up the folder structure",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+              descriptions: [
+                "Inside your backend folder, create a middleware folder.",
+                "Then in your newly created folder, create a authMiddleware.js file.",
+                "On top of the authMiddleware.js file, import jwt, asyncHandler, and userSchema.js.",
+              ],
+            },
+          
+          ],
+        },
+         {
+          stepTitle: "Step 3: Create Middleware for Authentication (protect)",
+          titleDescription: "The protect middleware ensures that only authenticated users can access certain routes.",
+          sections: [
+            {
+              subtitleDescription: "Extract Token from the Request Header",
+            descriptions: [ 
+              "Check if the Authorization header exists.",
+              "Ensure it starts with 'Bearer' (e.g., Authorization: Bearer <token>).",
+              "If no token is provided, return a 401 Unauthorized response.",
+              ],
+            },
+            {
+              subtitleDescription: "Verify the Token",
+             descriptions: [ 
+              "Use jwt.verify(token, JWT_SECRET) to decode and validate the token.",
+              "Extract the id and role from the decoded token.",
+              "Wrap this process inside a try...catch block to handle invalid tokens.",
+              ],
+            },
+            {
+              subtitleDescription: "Retrieve the User from the Database",
+            descriptions: [ 
+              "Query the database to find the user using decoded.id.",
+              "Exclude the password field for security.",
+              "If the user doesn't exist, return a 401 Unauthorized error.",
+              ],
+            },
+            {
+              subtitleDescription: "Attach User Information to req Object",
+            descriptions: [ 
+              "Store the retrieved user details in req.user.",
+              "Attach the role extracted from the token to req.user.",
+              "Call next() to allow the request to proceed.",
+              ],
+            },
+            {
+              subtitleDescription: "Handle Errors",
+            descriptions: [ 
+              "If the token is missing or invalid, return an error response.",
+              "Always wrap the function in a try...catch block to prevent crashes.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 4: Create Middleware for Admin Authorization (admin)",
+          titleDescription: "The admin middleware ensures that only users with an admin role can access specific routes.",
+          sections: [
+            {
+              subtitleDescription: "Check if req.user Exists",
+            descriptions: [ 
+              "The protect middleware must be applied before this one.",
+              "Ensure req.user is available (meaning authentication was successful).",
+              "If req.user is not set, return a 401 Unauthorized response.",
+              ],
+            },
+            {
+              subtitleDescription: "Check User Role",
+             descriptions: [ 
+               "Confirm if req.user.role is 'admin'.",
+                "If the role is 'admin', call next() to proceed.",
+                "If the user is not an admin, return a 403 Forbidden response.",
+              ],
+            },
+            {
+              subtitleDescription: "Handle Errors",
+             descriptions: [ 
+               "If req.user is missing or invalid, return an error.",
+                "Ensure the function is properly structured to prevent issues.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 5: Test Authentication",
+          titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Use Postman or a similar tool to send a login request and obtain a JWT token.",
+                "Use this token in the Authorization header (Bearer <token>) to access protected routes.",
+                "Ensure unauthorized requests are properly blocked.",
+              ],
+            },
+           
+          ],
+        },
+         {
+          stepTitle: "Step 6: Apply protect Middleware to Secure Routes",
+          titleDescription: "The protect middleware checks if a valid JWT token is provided and verifies the user's identity before granting access.",
+          sections: [
+            {
+              subtitleDescription: "Example Use Cases",
+             descriptions: [ 
+              "User Profile Route: A user should only be able to access their own profile.",
+                "Order History: Users should see only their past orders.",
+                "Private Dashboard: Users must log in before accessing it",
+              ],
+            },
+            {
+              subtitleDescription: "How to Apply",
+              descriptions: [ 
+               "Add protect middleware to routes that require authentication ( e.g., app.get('/api/profile', protect, (req, res) => {} ).",
+                "If a user is not logged in, they will receive a 401 Unauthorized error.",
+              ],
+            },
+         
+          ],
+        },
+        {
+          stepTitle: "Step 7: Apply admin Middleware to Restrict Admin Routes",
+          titleDescription: "The admin middleware ensures that only users with an admin role can access certain routes.",
+          sections: [
+            {
+              subtitleDescription: "Example Use Cases",
+             descriptions: [ 
+              "Manage Users: Only admins should create, update, or delete users.",
+                "Manage Products: Admins should be able to add or remove products.",
+                "View System Logs: Admins can access application logs for debugging.",
+              ],
+            },
+            {
+              subtitleDescription: "How to Apply",
+              descriptions: [ 
+               "Add both protect and admin middleware to admin-only routes ( e.g., app.get('/api/admin/dashboard', protect, admin, (req, res) => {} ).",
+                "If a user is not logged in, they receive a 401 Unauthorized error.",
+                "If a user is logged in but not an admin, they receive a 403 Forbidden error.",
+                "Always ensure protect runs before admin, or req.user won't be available.",
+              ],
+            },
+           
+          ],
+        },
+        {
+          stepTitle: "Step 8: Generate JWT Token in User Controller",
+          titleDescription: "Bonus Step!",
+          sections: [
+            {
+              subtitleDescription: "Create a Utility Function for Token Generation",
+             descriptions: [ 
+              "Inside your project, create a new utility file, e.g., utils/generateToken.js.",
+                "This function will generate a JWT token using the user's id and role.",
+                "The token is signed using process.env.JWT_SECRET and will expire in 30 days.",
+              ],
+            },
+            {
+              subtitleDescription: "Define the generateToken Function",
+             descriptions: [ 
+               "This function takes id (user's unique identifier) and role (admin/user).",
+                "Uses jwt.sign() to create a token with embedded user information.",
+                "Sets an expiration time of 30 days (expiresIn: '30d').",
+              ],
+            },
+            {
+              subtitleDescription: "Export and Use the Function",
+             descriptions: [ 
+               "Export generateToken so it can be used in authentication-related files.",
+                "Import it into your login controller or authentication route.",
+              ],
+            },
+            {
+              subtitleDescription: " Implement Token Generation in Authentication",
+             descriptions: [ 
+               "When a user successfully logs in, generate a token using this function.",
+                "Send the token in the response so the frontend can store it (e.g., in localStorage or HTTP-only cookies).",
+              ],
+            },
+            {
+              subtitleDescription: "Example Usage in Login Controller",
+             descriptions: [ 
+               "Authenticate user (validate email & password).",
+                "If valid, generate a JWT token using generateToken(user._id, user.role).",
+                "Return the token along with user details.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 9: Update your authentication system and integrate the generateToken utility",
+          titleDescription: "authRoutes.js",
+          sections: [
+            {
+              subtitleDescription: "Import the generateToken Utility",
+             descriptions: [ 
+               "Instead of generating tokens directly in authRoutes.js, use the generateToken.js utility function.",
+               
+              ],
+            },
+            {
+              subtitleDescription: "Update the Register Route",
+             descriptions: [ 
+               "Modify the Register route to generate a JWT token immediately after a user is created.",
+                "Include the token in the response along with user details.",
+              ],
+            },
+            {
+              subtitleDescription: "Update the Login Route",
+             descriptions: [ 
+               "Replace the manual token generation inside the Login route.",
+                "Use the generateToken function to create the JWT token after successful authentication.",
+                "Ensure the token is included in the response.",
+              ],
+            },
+          ],
+        },
+         {
+          stepTitle: "Step 10: Test Authentication Flow",
+           titleDescription: "",
+          sections: [
+            {
+              subtitleDescription: "",
+             descriptions: [ 
+               "Register a new user and confirm that a token is returned.",
+                "Log in with an existing user and verify that the token is generated and sent in the response.",
+                "Try accessing protected routes using the generated token to confirm that authentication works properly.",
+              ],
+            },
+           
+          ],
+        },
+       
+      ],
+      taskType: "Workshop",
+      difficulty: "Easy",
+      authorIndex: 0,
+      prerequisites: ["Workshop Projects"],
+      completed: false,
+      codesandboxUrl: "/notavailable",
+      img: require("../images/musicacademy/day17.webp"),
       videoLink: "",
     },
   ],
