@@ -1,65 +1,46 @@
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import "../styles/welcomeWord.css";
+import React, {  useRef } from "react";
+import "../styles/mobileMessage.css";
 import image1 from "../images/pslogosmall.webp";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import { useNavigate } from "react-router-dom";
 
 const MobileMessage = () => {
   const logo = useRef(null);
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    window.addEventListener("load", animation);
-    return () => {
-      window.removeEventListener("load", animation);
-    };
-  }, []);
-
-  const animation = () => {
-    const picture = logo.current;
-
-    if (picture) {
-      gsap.set(picture, {
-        opacity: 0,
-        visibility: "hidden",
-      });
-
-      const tl = gsap.timeline();
-
-      tl.to(picture, {
-        visibility: "visible",
-        opacity: 1,
-        duration: 0.5,
-      });
-    }
-  };
-
-  // Function to handle the "Back" button click
+  
   const handleBackClick = () => {
-    navigate(-1); // Navigate to the previous page
+    navigate('/');
   };
 
   return (
-    <div className='word-container'>
-      <button className='button-84' onClick={handleBackClick}>
+    <div className="mobile-message-container">
+      <div className="glow-effect"></div>
+      
+      <button
+        className="back-button"
+        onClick={handleBackClick}
+        aria-label="Go back"
+      >
         Back
       </button>
 
-      <div
-        style={{ textAlign: "center", padding: "50px", fontSize: "1rem" }}
-        className='important-red'
-      >
-        <h3>
-          Please use a desktop or laptop for a better learning experience.
+      {/* Text Container */}
+      <div className="text-container">
+        <h2>Desktop Experience Required</h2>
+        <h3 className="message-heading">
+        
+        This learning platform is optimized for desktop viewing to ensure the best possible experience.
         </h3>
       </div>
 
-      <img
-        className='pslogosmall'
-        src={image1}
-        alt='projectschool.dev Logo'
-        ref={logo}
-      ></img>
+      {/* Logo Container */}
+      <div className="mobile-logo-container">
+        <img
+          src={image1}
+          alt="projectschool.dev Logo"
+          ref={logo}
+        />
+      </div>
     </div>
   );
 };

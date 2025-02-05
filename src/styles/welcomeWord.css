@@ -1,12 +1,9 @@
-
-
 .word-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  
 }
 
 .twoWords {
@@ -72,13 +69,31 @@
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0);
   }
-  5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
+  5%,
+  15%,
+  25%,
+  35%,
+  45%,
+  55%,
+  65%,
+  75%,
+  85%,
+  95% {
     transform: rotate(15deg);
   }
-  10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90% {
     transform: rotate(-15deg);
   }
 }
@@ -111,16 +126,12 @@
 
 .pslogosmall {
   display: none;
- 
 }
-
 
 .important-red h3 {
   font-size: 1rem;
   color: #e60023; /* Dark red color */
 }
-
-
 
 /* Combined Media Queries to Reduce Repetition */
 @media only screen and (max-width: 1024px) {
@@ -172,9 +183,8 @@
     top: 30%;
     position: absolute;
     width: 80%;
-    
-    z-index: 5;
 
+    z-index: 5;
   }
 }
 
@@ -190,7 +200,6 @@
   .sectionImg4 {
     width: 60%;
   }
- 
 }
 
 @media only screen and (max-width: 375px) {
@@ -201,8 +210,6 @@
   .sectionImg4 {
     width: 60%;
   }
-
- 
 }
 
 @media only screen and (max-width: 320px) {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import "../styles/lessons.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -7,62 +7,53 @@ import { tasksData, authorsData } from "../data/tasksData";
 import FilterSortButtons from "./FilterSortButtons";
 import FilteredTasks from "./FilteredTasks";
 import ReactTitle from "./ReactTitle";
+import MobileMessage from "./MobileMessage";
 
 function ReactLessons() {
-  const [showEasy, setShowEasy] = useState(false);
-  const [showHard, setShowHard] = useState(false);
-  const [showCompleted, setShowCompleted] = useState(false);
-  const [showNotCompleted, setShowNotCompleted] = useState(false);
-  const [filters, setFilters] = useState([
-    "All",
-    "Easy",
-    "Hard",
-    "Completed",
-    "Not Completed",
-  ]);
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the screen is mobile-sized
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    };
+
+    checkIsMobile(); // Check on mount
+    window.addEventListener("resize", checkIsMobile); // Check on resize
+
+    return () => {
+      window.removeEventListener("resize", checkIsMobile); // Cleanup
+    };
+  }, []);
+
+  // Fetch completed tasks from localStorage
+  const completedTasks = useMemo(() => {
+    try {
+      const storedTasks = JSON.parse(localStorage.getItem("React_completedTasks")) || {};
+      return Object.keys(storedTasks).filter((taskId) => storedTasks[taskId]);
+    } catch (error) {
+      console.error("Error reading from localStorage:", error);
+      return [];
+    }
+  }, []);
+
+  // If mobile, show the MobileMessage component
+  if (isMobile) {
+    return <MobileMessage />;
+  }
 
   const handleFilterClick = (filterType) => {
-    // Update the filters state and show/hide conditions based on the clicked filter
-    if (filterType === "Easy") {
-      setFilters(["Easy"]);
-      setShowEasy(true);
-      setShowHard(false);
-      setShowCompleted(false);
-      setShowNotCompleted(false);
-    } else if (filterType === "Hard") {
-      setFilters(["Hard"]);
-      setShowHard(true);
-      setShowEasy(false);
-      setShowCompleted(false);
-      setShowNotCompleted(false);
-    } else if (filterType === "Completed") {
-      setFilters(["Completed"]);
-      setShowCompleted(true);
-      setShowNotCompleted(false);
-      setShowEasy(false);
-      setShowHard(false);
-    } else if (filterType === "Not Completed") {
-      setFilters(["Not Completed"]);
-      setShowNotCompleted(true);
-      setShowCompleted(false);
-      setShowEasy(false);
-      setShowHard(false);
-    } else {
-      setFilters(["All"]);
-      setShowEasy(false);
-      setShowHard(false);
-      setShowCompleted(false);
-      setShowNotCompleted(false);
-    }
+    setActiveFilter(filterType);
   };
 
-  const getCompletedTasks = () => {
-    const completedTasks =
-      JSON.parse(localStorage.getItem("React_completedTasks")) || {};
-    return Object.keys(completedTasks).filter(
-      (taskId) => completedTasks[taskId]
-    );
-  };
+  const filteredTasks = tasksData.React.filter((task) => {
+    if (activeFilter === "Easy") return task.difficulty === "Easy";
+    if (activeFilter === "Hard") return task.difficulty === "Hard";
+    if (activeFilter === "Completed") return completedTasks.includes(task.id);
+    if (activeFilter === "Not Completed") return !completedTasks.includes(task.id);
+    return true; // "All" filter
+  });
 
   const getAuthorInfo = (authorIndex) => {
     return authorsData[authorIndex];
@@ -76,24 +67,18 @@ function ReactLessons() {
       </div>
       <ProgressBar
         numStages={tasksData.React.length}
-        completedTasks={getCompletedTasks()}
-        taskType="React" // Pass "React" as taskType
+        completedTasks={completedTasks}
+        taskType="React"
       />
       <FilterSortButtons
-        filters={filters}
+        filters={["All", "Easy", "Hard", "Completed", "Not Completed"]}
         handleFilterClick={handleFilterClick}
       />
-
       <div className="lessons-cards">
         <FilteredTasks
-          tasks={tasksData.React}
-          completedTasksKey="React_completedTasks"
-          showEasy={showEasy}
-          showHard={showHard}
-          showCompleted={showCompleted}
-          showNotCompleted={showNotCompleted}
+          tasks={filteredTasks}
           getAuthorInfo={getAuthorInfo}
-          showDifficulty={true} // Show difficulty
+          showDifficulty={true}
         />
       </div>
       <Footer />
