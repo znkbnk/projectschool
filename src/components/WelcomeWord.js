@@ -11,7 +11,7 @@ import CrazyScrollPhrase from "./CrazyScrollPhrase";
 
 const WelcomeComponent = () => {
   const logo = useRef(null);
-  const pslogosmallRef = useRef(null); // New ref for pslogosmall
+  const pslogosmallRef = useRef(null); 
   const sectionImg3Ref = useRef(null);
   const sectionImg7Ref = useRef(null);
   const sectionImg4Ref = useRef(null);
