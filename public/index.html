@@ -7,15 +7,10 @@
     <link rel="icon" href="/pslogosmallico.ico" />
 
     <!-- Preload Images -->
-    <link  href="../src/images/pslogosmall.webp" as="image" type="image/webp" />
-   
+    <link rel="preload" href="../src/images/pslogosmall.webp" as="image" type="image/webp" />
+
     <link
-      
-      href="/static/media/pslogosmall.fce9914b8e6c359c4f7c.webp"
-      as="image"
-    />
-    <link
-      
+    rel="preload"
       href="/static/media/sectionImg4.43ee3af5302370a4d230.webp"
       as="image"
     />
@@ -30,10 +25,9 @@
 
     <!-- Preload and Load Fonts Asynchronously -->
     <link
-      
+      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;700&display=swap"
       as="style"
-      type="text/css"
       crossorigin="anonymous"
       onload="this.onload=null;this.rel='stylesheet'"
     />
@@ -46,7 +40,6 @@
 
     <!-- Optional: Additional fonts for non-critical content -->
     <link
-      
       href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&family=Lato:wght@100;300;400;700;900&family=Piazzolla:wght@300&family=Ubuntu&display=swap"
       as="style"
       type="text/css"
@@ -60,12 +53,19 @@
       />
     </noscript>
     <script src="https://cdn.jsdelivr.net/npm/browserfs/dist/browserfs.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
+      defer
+    ></script>
 
     <!-- Google Analytics -->
     <script
       async
+      defer
       src="https://www.googletagmanager.com/gtag/js?id=G-7L2NMEJKB6"
     ></script>
     <script>
@@ -86,7 +86,7 @@
         const structuredDataFiles = [
           "./structured-data.json",
           "./structured-data-question-quiz.json",
-          "./structured.data-reactExplained.json"
+          "./structured.data-reactExplained.json",
         ];
         structuredDataFiles.forEach((file) => {
           fetch(file)
@@ -106,6 +106,7 @@
             })
             .catch((error) => {
               console.error("Error loading JSON-LD data:", error.message);
+              // Optionally, log the error to an error tracking service
             });
         });
       });
@@ -123,6 +124,5 @@
         "sameAs": ["https://www.instagram.com/reactlessons"]
       }
     </script>
-    
   </body>
 </html>
